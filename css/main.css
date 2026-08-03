@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v46_14 {
+  width: 100%;
+  height: 363px;
+  background: url("../images/v46_14.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v12_4 {
+  width: 129px;
+  height: 129px;
+  background: url("../images/v12_4.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 11px;
+  overflow: hidden;
+}
+.v18_4 {
+  width: 342px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 37px;
+  left: 148px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 32px;
+  opacity: 1;
+  text-align: center;
+}
+.v20_2 {
+  width: 164px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 77px;
+  left: 148px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v21_12 {
+  width: 719px;
+  height: 64px;
+  background: rgba(217,217,217,1);
+  opacity: 1;
+  position: absolute;
+  top: 142px;
+  left: 130px;
+  border: 1px solid rgba(0,0,0,1);
+}
+.v21_10 {
+  width: 192px;
+  height: 20px;
+  background: rgba(255,255,255,1);
+  padding: 10px 10px;
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 195px;
+  left: 181px;
+  overflow: hidden;
+}
+.v21_11 {
+  width: 26px;
+  height: 24px;
+  background: rgba(0,0,0,1);
+  opacity: 1;
+  position: absolute;
+  top: 162px;
+  left: 145px;
+}
+.v21_13 {
+  width: 158px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 249px;
+  left: 0px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v21_14 {
+  width: 194px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 352px;
+  left: 5px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v21_15 {
+  width: 152px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 288px;
+  left: 324px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v21_16 {
+  width: 184px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 249px;
+  left: 329px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v21_17 {
+  width: 223px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 247px;
+  left: 703px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v21_18 {
+  width: 185px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 247px;
+  left: 927px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v21_19 {
+  width: 128px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 281px;
+  left: 490px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v22_20 {
+  width: 102px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 289px;
+  left: 10px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v22_21 {
+  width: 163px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 249px;
+  left: 159px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v22_22 {
+  width: 182px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 247px;
+  left: 521px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v22_23 {
+  width: 210px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 293px;
+  left: 112px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v32_12 {
+  width: 144px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 285px;
+  left: 620px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v32_13 {
+  width: 219px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 281px;
+  left: 778px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v32_14 {
+  width: 182px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 328px;
+  left: 215px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.v37_34 {
+  width: 69px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 19px;
+  left: 1011px;
+  font-family: IBM Plex Sans JP;
+  font-weight: Medium;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
