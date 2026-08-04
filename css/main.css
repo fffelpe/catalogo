@@ -402,3 +402,169 @@ a {
   color: #666;
   font-family: "IBM Plex Sans JP", sans-serif;
 }
+.resultado-frame {
+  position: relative;
+  width: 1113px;
+  min-height: 560px;
+  margin: 32px auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+.resultado-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 111px;
+  height: 111px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.resultado-title {
+  position: absolute;
+  left: 122px;
+  top: 27px;
+  width: 341px;
+  margin: 0;
+  color: #000;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.resultado-subtitle {
+  position: absolute;
+  left: 122px;
+  top: 68px;
+  width: 160px;
+  margin: 0;
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.resultado-search-box {
+  position: absolute;
+  left: 122px;
+  top: 140px;
+  width: 721px;
+  height: 54px;
+  border: 1px solid #000;
+  background: #e4e4e4;
+}
+
+.resultado-search-icon {
+  position: absolute;
+  left: 138px;
+  top: 154px;
+  width: 29px;
+  height: 27px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.resultado-search-input {
+  position: absolute;
+  left: 178px;
+  top: 156px;
+  width: 630px;
+  height: 22px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #000;
+  font-size: 16px;
+}
+
+.resultado-search-input::placeholder {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.resultado-label {
+  position: absolute;
+  left: 16px;
+  top: 229px;
+  width: 260px;
+  margin: 0;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.resultado-table-wrap {
+  position: absolute;
+  left: 16px;
+  top: 279px;
+  width: 1097px;
+  overflow: hidden;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.resultado-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000;
+  font-size: 16px;
+  text-align: left;
+}
+
+.resultado-table th,
+.resultado-table td {
+  border-left: 1px solid #b9b9b9;
+  border-top: 1px solid #b9b9b9;
+  padding: 10px 12px;
+  font-weight: 400;
+  vertical-align: top;
+}
+
+.resultado-table th:first-child,
+.resultado-table td:first-child {
+  border-left: 0;
+}
+
+.resultado-table thead th {
+  border-top: 0;
+  background: #f0f0f0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.resultado-col-id {
+  width: 136px;
+}
+
+.resultado-col-decupagem {
+  width: 589px;
+}
+
+.resultado-col-duracao {
+  width: 176px;
+}
+
+.resultado-col-data {
+  width: 140px;
+}
+
+.resultado-col-reporter {
+  width: 256px;
+}
+
+.resultado-login {
+  position: absolute;
+  left: 1044px;
+  top: 18px;
+  width: 69px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
