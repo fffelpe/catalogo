@@ -1,274 +1,331 @@
 * {
   box-sizing: border-box;
 }
+
 body {
+  margin: 0;
   font-size: 14px;
+  background: #ffffff;
+  color: rgba(0, 0, 0, 1);
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
 }
+
+a {
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
+
 .v46_14 {
-  width: 100%;
+  width: 1112px;
   height: 363px;
-  background: url("../images/v46_14.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background: #ffffff;
   opacity: 1;
   position: relative;
-  top: 0px;
-  left: 0px;
+  margin: 0 auto;
   overflow: hidden;
 }
+
 .v12_4 {
- .v12_4 {
   position: absolute;
   left: 11px;
   top: 0;
   width: 129px;
   height: 129px;
-  object-fit: contain; /* ou cover, dependendo do formato do seu logo.png */
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
-}
+
 .v18_4 {
   width: 342px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 37px;
   left: 148px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 32px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v20_2 {
   width: 164px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 77px;
   left: 148px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v21_12 {
   width: 719px;
   height: 64px;
-  background: rgba(217,217,217,1);
+  background: rgba(217, 217, 217, 1);
   opacity: 1;
   position: absolute;
   top: 142px;
   left: 130px;
-  border: 1px solid rgba(0,0,0,1);
+  border: 1px solid rgba(0, 0, 0, 1);
 }
+
 .v21_10 {
-  width: 192px;
-  height: 20px;
-  background: rgba(255,255,255,1);
-  padding: 10px 10px;
-  margin: 10px;
+  width: 620px;
+  height: 24px;
+  background: transparent;
+  border: 0;
+  outline: 0;
   opacity: 1;
   position: absolute;
-  top: 195px;
+  top: 162px;
   left: 181px;
   overflow: hidden;
+  color: rgba(0, 0, 0, 1);
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-size: 16px;
 }
+
+.v21_10::placeholder {
+  color: rgba(0, 0, 0, 1);
+  opacity: 1;
+}
+
 .v21_11 {
   width: 26px;
   height: 24px;
-  background: rgba(0,0,0,1);
   opacity: 1;
   position: absolute;
   top: 162px;
   left: 145px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
+
 .v21_13 {
   width: 158px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 249px;
-  left: 0px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  left: 0;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v21_14 {
   width: 194px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 352px;
   left: 5px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v21_15 {
   width: 152px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 288px;
   left: 324px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v21_16 {
   width: 184px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 249px;
   left: 329px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v21_17 {
   width: 223px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 247px;
   left: 703px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v21_18 {
   width: 185px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 247px;
   left: 927px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v21_19 {
   width: 128px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 281px;
   left: 490px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v22_20 {
   width: 102px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 289px;
   left: 10px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v22_21 {
   width: 163px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 249px;
   left: 159px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v22_22 {
   width: 182px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 247px;
   left: 521px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v22_23 {
   width: 210px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 293px;
   left: 112px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v32_12 {
   width: 144px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 285px;
   left: 620px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v32_13 {
   width: 219px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 281px;
   left: 778px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v32_14 {
   width: 182px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 328px;
   left: 215px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Regular;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 400;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: center;
 }
+
 .v37_34 {
   width: 69px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 19px;
   left: 1011px;
-  font-family: IBM Plex Sans JP;
-  font-weight: Medium;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  font-weight: 500;
   font-size: 24px;
+  line-height: normal;
   opacity: 1;
   text-align: left;
 }
+
+/* PÁGINAS INTERNAS */
 
 .programa-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
-  font-family: 'IBM Plex Sans JP', sans-serif;
+  font-family: "IBM Plex Sans JP", sans-serif;
 }
 
 .programa-logo {
@@ -282,15 +339,22 @@ body {
 .logo-icon {
   width: 48px;
   height: 48px;
-  background-color: #00953B; /* confirme o tom exato no Figma */
+  background-color: #00953b;
   border-radius: 8px;
 }
 
-.logo-titulo { display: block; font-size: 20px; }
-.logo-subtitulo { display: block; font-size: 16px; }
+.logo-titulo {
+  display: block;
+  font-size: 20px;
+}
+
+.logo-subtitulo {
+  display: block;
+  font-size: 16px;
+}
 
 .programa-login {
-  font-family: 'IBM Plex Sans JP', sans-serif;
+  font-family: "IBM Plex Sans JP", sans-serif;
   color: black;
   text-decoration: none;
 }
@@ -299,7 +363,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   border-radius: 24px;
   padding: 10px 20px;
   margin: 0 32px 24px;
@@ -310,7 +374,7 @@ body {
   background: transparent;
   outline: none;
   width: 100%;
-  font-family: 'IBM Plex Sans JP', sans-serif;
+  font-family: "IBM Plex Sans JP", sans-serif;
   font-size: 16px;
 }
 
@@ -318,7 +382,7 @@ body {
   display: flex;
   gap: 32px;
   padding: 0 32px 16px;
-  font-family: 'IBM Plex Sans JP', sans-serif;
+  font-family: "IBM Plex Sans JP", sans-serif;
 }
 
 .programa-menu-admin a,
@@ -336,5 +400,5 @@ body {
 .programa-lista-vazio {
   padding: 0 32px;
   color: #666;
-  font-family: 'IBM Plex Sans JP', sans-serif;
+  font-family: "IBM Plex Sans JP", sans-serif;
 }
