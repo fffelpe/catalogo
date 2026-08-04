@@ -14,15 +14,13 @@
         <span class="v18_4">CATÁLOGO DE MÍDIAS</span>
         <span class="v20_2">JORNALISMO</span>
 
-    <form action="./pages/resultado-busca.html" method="get"></form>
-        <div class="v21_12"></div>
-        <img src="./images/lupa.png" class="v21_11" alt="" />
-        <input type="search" name="q" class="v21_10" placeholder="Pesquisar EX: queimadas"  aria-label="Pesquisar"/>
+    <form action="./pages/resultado-busca.html" method="get" aria-label="Pesquisar no catálogo">
+       <div class="search-box" aria-hidden="true"></div>
+       <img src="./images/lupa.png" class="search-icon" width="26" height="24" alt="" />
+       <label for="search" class="sr-only">Pesquisar</label>
+       <input id="search" name="q" type="search" class="search-input" placeholder="Pesquisar EX: queimadas" />
     </form>
-        <div class="v21_11">
-            
-        </div>
-
+    
        <!-- PROGRAMAS-->
 <a href="pages/agrocultura.html" class="v21_13">Agrocultura</a>
 <a href="pages/mdc.html" class="v21_14">Matéria de Capa</a>
