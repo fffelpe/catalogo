@@ -18,17 +18,14 @@ body {
   overflow: hidden;
 }
 .v12_4 {
+ .v12_4 {
+  position: absolute;
+  left: 11px;
+  top: 0;
   width: 129px;
   height: 129px;
-  background: url("../images/v12_4.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 11px;
-  overflow: hidden;
+  object-fit: contain; /* ou cover, dependendo do formato do seu logo.png */
+}
 }
 .v18_4 {
   width: 342px;
