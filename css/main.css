@@ -265,3 +265,79 @@ body {
   opacity: 1;
   text-align: left;
 }
+
+.programa-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  font-family: 'IBM Plex Sans JP', sans-serif;
+}
+
+.programa-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #00953B; /* confirme o tom exato no Figma */
+  border-radius: 8px;
+}
+
+.logo-titulo { display: block; font-size: 20px; }
+.logo-subtitulo { display: block; font-size: 16px; }
+
+.programa-login {
+  font-family: 'IBM Plex Sans JP', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.programa-busca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #E5E5E5;
+  border-radius: 24px;
+  padding: 10px 20px;
+  margin: 0 32px 24px;
+}
+
+.programa-busca input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-family: 'IBM Plex Sans JP', sans-serif;
+  font-size: 16px;
+}
+
+.programa-menu-admin {
+  display: flex;
+  gap: 32px;
+  padding: 0 32px 16px;
+  font-family: 'IBM Plex Sans JP', sans-serif;
+}
+
+.programa-menu-admin a,
+.programa-acervo {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.programa-acervo {
+  display: block;
+  padding: 0 32px 24px;
+}
+
+.programa-lista-vazio {
+  padding: 0 32px;
+  color: #666;
+  font-family: 'IBM Plex Sans JP', sans-serif;
+}

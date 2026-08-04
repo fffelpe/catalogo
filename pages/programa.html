@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet" />
+  <link href="../css/main.css" rel="stylesheet" />
+  <title>Catálogo de Mídias</title>
+</head>
+<body>
+  <header class="programa-header">
+    <a href="../index.html" class="programa-logo">
+      <div class="logo-icon"></div>
+      <div class="logo-text">
+        <span class="logo-titulo">CATÁLOGO DE MÍDIAS</span>
+        <span class="logo-subtitulo">JORNALISMO</span>
+      </div>
+    </a>
+    <a href="login.html" class="programa-login">Login</a>
+  </header>
+
+  <div class="programa-busca">
+    <span class="icone-lupa">🔍</span>
+    <input type="text" id="campoBusca" placeholder="Pesquisar EX: queimadas" />
+  </div>
+
+  <nav class="programa-menu-admin">
+    <a href="#" data-acao="aprovar">Aprovar ID's</a>
+    <a href="#" data-acao="brutos">ID's brutos</a>
+    <a href="#" data-acao="editados">ID'S Editados</a>
+    <a href="#" data-acao="exclusao">Exclusão ID's</a>
+    <a href="#" data-acao="relatorio">Relatório de programas</a>
+  </nav>
+  <a href="#" class="programa-acervo">Acervo de Imagens</a>
+
+  <main>
+    <h1 id="tituloPrograma">Programa</h1>
+
+    <section id="listaConteudo" class="programa-lista">
+      <p class="programa-lista-vazio">Conteúdo deste programa ainda não cadastrado.</p>
+    </section>
+  </main>
+
+  <script>
+    // Nome de exibição de cada programa a partir do slug na URL
+    const NOMES_PROGRAMAS = {
+      "agrocultura": "Agrocultura",
+      "mdc": "Matéria de Capa",
+      "reporter-eco": "Repórter Eco",
+      "documentarios": "Documentários",
+      "jornal-da-cultura": "Jornal da Cultura",
+      "jornal-da-tarde": "Jornal da Tarde",
+      "roda-viva": "Roda Viva",
+      "opiniao": "Opinião",
+      "cartao-verde": "Cartão Verde",
+      "de-olho-no-voto": "De olho no voto",
+      "linhas-cruzadas": "Linhas Cruzadas",
+      "esta-manha": "Esta Manhã",
+      "legiao-estrangeira": "Legião Estrangeira",
+      "giro-economico": "Giro Econômico"
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("programa");
+    const nomePrograma = NOMES_PROGRAMAS[slug] || "Programa não encontrado";
+
+    document.title = `${nomePrograma} — Catálogo de Mídias`;
+    document.getElementById("tituloPrograma").textContent = nomePrograma;
+
+    // Quando você tiver os dados reais (API, JSON, etc.), troque essa função
+    // para buscar e renderizar a lista de conteúdo de cada programa.
+    function carregarConteudo(slugPrograma) {
+      const container = document.getElementById("listaConteudo");
+      // Exemplo de estrutura futura:
+      // const itens = await fetch(`/api/programas/${slugPrograma}/conteudo`).then(r => r.json());
+      // container.innerHTML = itens.map(item => `<article>...</article>`).join("");
+    }
+    carregarConteudo(slug);
+  </script>
+</body>
+</html>
