@@ -1,10 +1,9 @@
 {
-  "name": "catalogo-midias-tv-cultura",
+  "name": "catalogo",
   "version": "0.1.0",
   "private": true,
-  "description": "Catálogo de mídias para o jornalismo da TV Cultura",
-  "private": true
-  },
+  "description": "Catálogo de mídias para o jornalismo da TV Cultura"
+},
   "dependencies": {
     "next": "14.2.5",
     "react": "^18.3.1",
