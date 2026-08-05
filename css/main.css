@@ -549,8 +549,12 @@ a {
   width: 589px;
 }
 
-.resultado-col-duracao {
-  width: 176px;
+.resultado-col-local {
+  width: 160px;
+}
+
+.resultado-col-programa {
+  width: 170px;
 }
 
 .resultado-col-data {

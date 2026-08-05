@@ -1,22 +1,35 @@
-// Configure aqui cada aba publicada e o tipo de conteúdo que ela representa.
-const FONTES_DADOS = [
-  // --- Matérias que foram ao ar (uma linha por aba/ano) ---
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1685526249&single=true&output=csv", tipo: "materia" },
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1257444550&single=true&output=csv", tipo: "materia" },
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1171982976&single=true&output=csv", tipo: "materia" },
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=796043664&single=true&output=csv", tipo: "materia" },
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1173010890&single=true&output=csv", tipo: "materia" },
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1458299234&single=true&output=csv", tipo: "materia" },
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1109137516&single=true&output=csv", tipo: "materia" },
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=261089273&single=true&output=csv", tipo: "materia" },
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1910417967&single=true&output=csv", tipo: "materia" },
+// Nome de exibição de cada programa a partir do slug
+const NOMES_PROGRAMAS = {
+  "agrocultura": "Agrocultura",
+  "mdc": "Matéria de Capa",
+  "reporter-eco": "Repórter Eco",
+  "documentarios": "Documentários",
+  "jornal-da-cultura": "Jornal da Cultura",
+  "jornal-da-tarde": "Jornal da Tarde",
+  "roda-viva": "Roda Viva",
+  "opiniao": "Opinião",
+  "cartao-verde": "Cartão Verde",
+  "de-olho-no-voto": "De olho no voto",
+  "linhas-cruzadas": "Linhas Cruzadas",
+  "esta-manha": "Esta Manhã",
+  "legiao-estrangeira": "Legião Estrangeira",
+  "giro-economico": "Giro Econômico",
+};
 
-  // --- Imagens gerais ---
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbj8sKo4fUnZtcuZ9xHqAR_IfU1W1qQUoPXGJ5CkA6SZftl_eJe2VbZ_-9h0_oimiag1iy0GNV0cmc/pub?gid=2024290431&single=true&output=csv", tipo: "imagem" },
+// Prefixo do ID -> slug do programa
+const MAPA_PREFIXO_PROGRAMA = {
+  "1452B": "agrocultura",
+  "1452E": "agrocultura",
+  "2457B": "jornal-da-cultura",
+  "2457E": "jornal-da-cultura",
+  "2822B": "jornal-da-tarde",
+  "2822E": "jornal-da-tarde",
+};
 
-  // --- Notícias e stand-ups ---
-  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSX3y6fM1xsCVo8wEeWucqSqULseoVsImz18IqlxHv0daSoVhWc2nVT4_RulI60F0-LkFxbRofoyqj-/pub?gid=2130460378&single=true&output=csv", tipo: "noticia" },
-];
+function programaPorId(id) {
+  const prefixo = (id || "").toUpperCase().slice(0, 5);
+  return MAPA_PREFIXO_PROGRAMA[prefixo] || null;
+}
 
 function normalizarMateria(row) {
   const id = (row.ID || "").trim();
@@ -24,7 +37,7 @@ function normalizarMateria(row) {
   return [{
     id,
     tipo: "materia",
-    programa: "agrocultura",
+    programa: programaPorId(id),
     pgm: (row.PGM || "").trim(),
     data: (row.DATA || "").trim(),
     reporter: (row.REPORTER || "").trim(),
@@ -36,14 +49,13 @@ function normalizarMateria(row) {
 function normalizarImagem(row) {
   const idsBrutos = (row.ID || "").trim();
   if (!idsBrutos) return [];
-  // separa células com mais de um ID (espaço ou barra "/")
   const ids = idsBrutos.split(/[\s/]+/).map(s => s.trim()).filter(Boolean);
   return ids.map(id => ({
     id,
     tipo: "imagem",
-    programa: "agrocultura",
+    programa: programaPorId(id),
     pgm: "",
-    data: (row.DATA || "").trim(),
+    data: (row.DATA || row["DATA "] || "").trim(),
     reporter: "",
     local: (row.ESTADO || "").trim(),
     assunto: (row.DETALHES || "").trim(),
@@ -53,12 +65,11 @@ function normalizarImagem(row) {
 function normalizarNoticia(row) {
   const id = (row.ID || "").trim();
   const idUpper = id.toUpperCase();
-  // ignora linhas placeholder ("REPÓRTER CHAMA") e linhas vazias
   if (!id || idUpper.includes("REPÓRTER CHAMA") || idUpper.includes("REPORTER CHAMA")) return [];
   return [{
     id,
     tipo: "noticia",
-    programa: "agrocultura",
+    programa: programaPorId(id),
     pgm: (row.PGM || "").trim(),
     data: (row.DATA || "").trim(),
     reporter: (row["REPÓRTER"] || "").trim(),
@@ -73,6 +84,20 @@ const NORMALIZADORES = {
   noticia: normalizarNoticia,
 };
 
+const FONTES_DADOS = [
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1685526249&single=true&output=csv", tipo: "materia" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1257444550&single=true&output=csv", tipo: "materia" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1171982976&single=true&output=csv", tipo: "materia" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=796043664&single=true&output=csv", tipo: "materia" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1173010890&single=true&output=csv", tipo: "materia" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1458299234&single=true&output=csv", tipo: "materia" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1109137516&single=true&output=csv", tipo: "materia" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=261089273&single=true&output=csv", tipo: "materia" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub?gid=1910417967&single=true&output=csv", tipo: "materia" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbj8sKo4fUnZtcuZ9xHqAR_IfU1W1qQUoPXGJ5CkA6SZftl_eJe2VbZ_-9h0_oimiag1iy0GNV0cmc/pub?gid=2024290431&single=true&output=csv", tipo: "imagem" },
+  { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSX3y6fM1xsCVo8wEeWucqSqULseoVsImz18IqlxHv0daSoVhWc2nVT4_RulI60F0-LkFxbRofoyqj-/pub?gid=2130460378&single=true&output=csv", tipo: "noticia" },
+];
+
 function buscarFonte(fonte) {
   return new Promise((resolve) => {
     Papa.parse(fonte.url, {
@@ -83,7 +108,7 @@ function buscarFonte(fonte) {
         const normalizador = NORMALIZADORES[fonte.tipo];
         resolve(results.data.flatMap(row => normalizador(row)));
       },
-      error: () => resolve([]), // uma fonte falhando não derruba as outras
+      error: () => resolve([]),
     });
   });
 }

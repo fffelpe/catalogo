@@ -26,19 +26,20 @@
     <p class="resultado-label">Resultado da Busca:</p>
 
     <section class="resultado-table-wrap" aria-label="Tabela de resultados da busca">
-      <table class="resultado-table">
-        <thead>
-          <tr>
-            <th class="resultado-col-id">ID</th>
-            <th class="resultado-col-decupagem">Assunto</th>
-            <th class="resultado-col-duracao">Tipo</th>
-            <th class="resultado-col-data">Data</th>
-            <th class="resultado-col-reporter">Repórter / Local</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
+  <table class="resultado-table">
+    <thead>
+      <tr>
+        <th class="resultado-col-id">ID</th>
+        <th class="resultado-col-data">Data</th>
+        <th class="resultado-col-local">Local</th>
+        <th class="resultado-col-reporter">Repórter</th>
+        <th class="resultado-col-decupagem">Descrição da Imagem</th>
+        <th class="resultado-col-programa">Programa</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
 
     <a href="login.html" class="resultado-login">Login</a>
   </main>
@@ -52,29 +53,36 @@
 
     document.getElementById("search").value = params.get("q") || "";
 
-    carregarTodosOsDados().then(todos => {
-      const encontrados = todos.filter(item =>
-        item.assunto.toLowerCase().includes(query) ||
-        item.id.toLowerCase().includes(query) ||
-        item.reporter.toLowerCase().includes(query) ||
-        item.local.toLowerCase().includes(query)
-      );
+ carregarTodosOsDados().then(todos => {
+  const encontrados = todos.filter(item =>
+    item.assunto.toLowerCase().includes(query) ||
+    item.id.toLowerCase().includes(query) ||
+    item.reporter.toLowerCase().includes(query) ||
+    item.local.toLowerCase().includes(query)
+  );
 
-      if (encontrados.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5">Nenhum resultado encontrado para "${query}".</td></tr>`;
-        return;
-      }
+  if (encontrados.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6">Nenhum resultado encontrado para "${query}".</td></tr>`;
+    return;
+  }
 
-      tbody.innerHTML = encontrados.map(item => `
-        <tr>
-          <td><a href="programa.html?programa=${item.programa}">${item.id}</a></td>
-          <td>${item.assunto}</td>
-          <td>${item.tipo}</td>
-          <td>${item.data}</td>
-          <td>${item.reporter || item.local}</td>
-        </tr>
-      `).join("");
-    });
+  tbody.innerHTML = encontrados.map(item => {
+    const nomePrograma = NOMES_PROGRAMAS[item.programa] || "Não identificado";
+    const link = item.programa
+      ? `<a href="programa.html?programa=${item.programa}">${item.id}</a>`
+      : item.id;
+    return `
+      <tr>
+        <td>${link}</td>
+        <td>${item.data}</td>
+        <td>${item.local}</td>
+        <td>${item.reporter}</td>
+        <td>${item.assunto}</td>
+        <td>${nomePrograma}</td>
+      </tr>
+    `;
+  }).join("");
+});
   </script>
 </body>
 </html>
