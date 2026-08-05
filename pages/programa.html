@@ -40,6 +40,8 @@
     </section>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="../js/dados.js"></script>
   <script>
     const NOMES_PROGRAMAS = {
       "agrocultura": "Agrocultura",
@@ -65,12 +67,42 @@
     document.title = `${nomePrograma} — Catálogo de Mídias`;
     document.getElementById("tituloPrograma").textContent = nomePrograma;
 
-    function carregarConteudo(slugPrograma) {
-      const container = document.getElementById("listaConteudo");
-      // Quando o banco de dados estiver pronto, troca aqui por um fetch()
-      // buscando os itens do programa pelo slug.
-    }
-    carregarConteudo(slug);
+    async function carregarConteudo(slugPrograma) {
+  const container = document.getElementById("listaConteudo");
+  const todos = await carregarTodosOsDados();
+  const itens = todos.filter(item => item.programa === slugPrograma);
+
+  if (itens.length === 0) {
+    container.innerHTML = '<p class="programa-lista-vazio">Conteúdo deste programa ainda não cadastrado.</p>';
+    return;
+  }
+
+  container.innerHTML = `
+    <table class="resultado-table">
+      <thead>
+        <tr>
+          <th class="resultado-col-id">ID</th>
+          <th>Tipo</th>
+          <th class="resultado-col-decupagem">Assunto</th>
+          <th class="resultado-col-data">Data</th>
+          <th class="resultado-col-reporter">Repórter / Local</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${itens.map(item => `
+          <tr>
+            <td>${item.id}</td>
+            <td>${item.tipo}</td>
+            <td>${item.assunto}</td>
+            <td>${item.data}</td>
+            <td>${item.reporter || item.local}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+}
+carregarConteudo(slug);
   </script>
 </body>
 </html>
