@@ -21,6 +21,8 @@ const MAPA_PREFIXO_PROGRAMA = {
   "1452B": "agrocultura",
   "1452E": "agrocultura",
   "2457B": "jornal-da-cultura",
+  "1009B": "jornal-da-cultura",
+  "1009E": "jornal-da-cultura",
   "2457E": "jornal-da-cultura",
   "2822B": "jornal-da-tarde",
   "2822E": "jornal-da-tarde",
