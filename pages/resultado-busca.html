@@ -43,6 +43,36 @@
 
     <a href="login.html" class="resultado-login">Login</a>
   </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="../js/dados.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const query = (params.get("q") || "").toLowerCase();
+  const tbody = document.querySelector(".resultado-table tbody");
 
+  carregarTodosOsDados().then(todos => {
+    const encontrados = todos.filter(item =>
+      item.assunto.toLowerCase().includes(query) ||
+      item.id.toLowerCase().includes(query) ||
+      item.reporter.toLowerCase().includes(query) ||
+      item.local.toLowerCase().includes(query)
+    );
+
+    if (encontrados.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="5">Nenhum resultado encontrado para "${query}".</td></tr>`;
+      return;
+    }
+
+    tbody.innerHTML = encontrados.map(item => `
+      <tr>
+        <td><a href="programa.html?programa=${item.programa}">${item.id}</a></td>
+        <td>${item.assunto}</td>
+        <td>${item.data}</td>
+        <td>${item.data}</td>
+        <td>${item.reporter || item.local}</td>
+      </tr>
+    `).join("");
+  });
+</script>
 </body>
 </html>
