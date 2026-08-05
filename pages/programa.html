@@ -9,7 +9,7 @@
 <body>
   <header class="programa-header">
     <a href="../index.html" class="programa-logo">
-      <div class="logo-icon"></div>
+      <img src="../images/logo.png" class="logo-icon" width="48" height="48" alt="Catálogo de Mídias" />
       <div class="logo-text">
         <span class="logo-titulo">CATÁLOGO DE MÍDIAS</span>
         <span class="logo-subtitulo">JORNALISMO</span>
@@ -19,7 +19,7 @@
   </header>
 
   <div class="programa-busca">
-    <span class="icone-lupa">🔍</span>
+    <img src="../images/lupa.png" width="23" height="22" alt="" class="icone-lupa" />
     <input type="text" id="campoBusca" placeholder="Pesquisar EX: queimadas" />
   </div>
 
@@ -41,7 +41,6 @@
   </main>
 
   <script>
-    // Nome de exibição de cada programa a partir do slug na URL
     const NOMES_PROGRAMAS = {
       "agrocultura": "Agrocultura",
       "mdc": "Matéria de Capa",
@@ -66,13 +65,10 @@
     document.title = `${nomePrograma} — Catálogo de Mídias`;
     document.getElementById("tituloPrograma").textContent = nomePrograma;
 
-    // Quando você tiver os dados reais (API, JSON, etc.), troque essa função
-    // para buscar e renderizar a lista de conteúdo de cada programa.
     function carregarConteudo(slugPrograma) {
       const container = document.getElementById("listaConteudo");
-      // Exemplo de estrutura futura:
-      // const itens = await fetch(`/api/programas/${slugPrograma}/conteudo`).then(r => r.json());
-      // container.innerHTML = itens.map(item => `<article>...</article>`).join("");
+      // Quando o banco de dados estiver pronto, troca aqui por um fetch()
+      // buscando os itens do programa pelo slug.
     }
     carregarConteudo(slug);
   </script>

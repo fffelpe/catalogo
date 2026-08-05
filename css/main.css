@@ -339,8 +339,11 @@ a {
 .logo-icon {
   width: 48px;
   height: 48px;
-  background-color: #00953b;
   border-radius: 8px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background-color: #00953b; /* fica como fallback enquanto a imagem carrega */
 }
 
 .logo-titulo {
