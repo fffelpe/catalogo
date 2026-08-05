@@ -30,49 +30,51 @@
         <thead>
           <tr>
             <th class="resultado-col-id">ID</th>
-            <th class="resultado-col-decupagem">Decupagem / Transcrição</th>
-            <th class="resultado-col-duracao">Duração</th>
+            <th class="resultado-col-decupagem">Assunto</th>
+            <th class="resultado-col-duracao">Tipo</th>
             <th class="resultado-col-data">Data</th>
-            <th class="resultado-col-reporter">Repórter</th>
+            <th class="resultado-col-reporter">Repórter / Local</th>
           </tr>
         </thead>
-        
-        </tbody>
+        <tbody></tbody>
       </table>
     </section>
 
     <a href="login.html" class="resultado-login">Login</a>
   </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-<script src="../js/dados.js"></script>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const query = (params.get("q") || "").toLowerCase();
-  const tbody = document.querySelector(".resultado-table tbody");
 
-  carregarTodosOsDados().then(todos => {
-    const encontrados = todos.filter(item =>
-      item.assunto.toLowerCase().includes(query) ||
-      item.id.toLowerCase().includes(query) ||
-      item.reporter.toLowerCase().includes(query) ||
-      item.local.toLowerCase().includes(query)
-    );
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="../js/dados.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const query = (params.get("q") || "").toLowerCase();
+    const tbody = document.querySelector(".resultado-table tbody");
 
-    if (encontrados.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="5">Nenhum resultado encontrado para "${query}".</td></tr>`;
-      return;
-    }
+    document.getElementById("search").value = params.get("q") || "";
 
-    tbody.innerHTML = encontrados.map(item => `
-      <tr>
-        <td><a href="programa.html?programa=${item.programa}">${item.id}</a></td>
-        <td>${item.assunto}</td>
-        <td>${item.data}</td>
-        <td>${item.data}</td>
-        <td>${item.reporter || item.local}</td>
-      </tr>
-    `).join("");
-  });
-</script>
+    carregarTodosOsDados().then(todos => {
+      const encontrados = todos.filter(item =>
+        item.assunto.toLowerCase().includes(query) ||
+        item.id.toLowerCase().includes(query) ||
+        item.reporter.toLowerCase().includes(query) ||
+        item.local.toLowerCase().includes(query)
+      );
+
+      if (encontrados.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5">Nenhum resultado encontrado para "${query}".</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = encontrados.map(item => `
+        <tr>
+          <td><a href="programa.html?programa=${item.programa}">${item.id}</a></td>
+          <td>${item.assunto}</td>
+          <td>${item.tipo}</td>
+          <td>${item.data}</td>
+          <td>${item.reporter || item.local}</td>
+        </tr>
+      `).join("");
+    });
+  </script>
 </body>
 </html>
