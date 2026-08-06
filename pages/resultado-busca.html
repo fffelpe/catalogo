@@ -6,84 +6,52 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:400,500,600&display=swap" rel="stylesheet" />
   <link href="../css/main.css" rel="stylesheet" />
   <title>Resultado da Busca — Catálogo de Mídias</title>
-  <link rel="icon" href="images/favicon.ico" type="image/png">
 </head>
 <body>
-  <main class="resultado-frame" aria-label="Resultado da busca no catálogo">
-    <a href="../index.html" aria-label="Voltar para a home">
-      <img src="../images/logo.png" class="resultado-logo" width="111" height="111" alt="Catálogo de Mídias" />
+  <header class="pagina-cabecalho">
+    <a href="../index.html" class="pagina-logo">
+      <img src="../img/logo.png" alt="" />
+      <span>
+        <span class="pagina-logo-titulo">CATÁLOGO DE MÍDIAS</span>
+        <span class="pagina-logo-subtitulo">Jornalismo</span>
+      </span>
     </a>
+    <a href="login.html">Login</a>
+  </header>
 
-    <h1 class="resultado-title">CATÁLOGO DE MÍDIAS</h1>
-    <p class="resultado-subtitle">JORNALISMO</p>
+  <form class="pagina-busca" action="resultado-busca.html" method="get">
+    <label for="q" class="sr-only">Pesquisar</label>
+    <input type="search" id="q" name="q" placeholder="Pesquisar EX: queimadas" />
+  </form>
 
-    <form action="resultado-busca.html" method="get" aria-label="Pesquisar no catálogo">
-      <div class="resultado-search-box" aria-hidden="true"></div>
-      <img src="../images/lupa.png" class="resultado-search-icon" width="29" height="27" alt="" />
-      <label for="search" class="sr-only">Pesquisar</label>
-      <input id="search" name="q" type="search" class="resultado-search-input" placeholder="Pesquisar EX: queimadas" />
-    </form>
+  <h1 class="pagina-titulo" id="tituloResultado">Resultado da busca</h1>
+  <p class="pagina-status" id="statusResultado">Carregando…</p>
+  <ul class="lista-itens" id="listaResultados" aria-live="polite"></ul>
 
-    <p class="resultado-label">Resultado da Busca:</p>
-
-    <section class="resultado-table-wrap" aria-label="Tabela de resultados da busca">
-  <table class="resultado-table">
-    <thead>
-      <tr>
-        <th class="resultado-col-id">ID</th>
-        <th class="resultado-col-data">Data</th>
-        <th class="resultado-col-local">Local</th>
-        <th class="resultado-col-reporter">Repórter</th>
-        <th class="resultado-col-decupagem">Descrição da Imagem</th>
-        <th class="resultado-col-programa">Programa</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-</section>
-
-    <a href="login.html" class="resultado-login">Login</a>
-  </main>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <!-- Papa Parse: necessário para dados.js ler as planilhas em CSV -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="../js/dados.js"></script>
+  <script src="../js/catalogo-ui.js"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
-    const query = (params.get("q") || "").toLowerCase();
-    const tbody = document.querySelector(".resultado-table tbody");
+    const termo = params.get("q") || "";
 
-    document.getElementById("search").value = params.get("q") || "";
+    document.getElementById("tituloResultado").textContent = termo
+      ? `Resultado da busca: "${termo}"`
+      : "Resultado da busca";
 
- carregarTodosOsDados().then(todos => {
-  const encontrados = todos.filter(item =>
-    item.assunto.toLowerCase().includes(query) ||
-    item.id.toLowerCase().includes(query) ||
-    item.reporter.toLowerCase().includes(query) ||
-    item.local.toLowerCase().includes(query)
-  );
+    const statusEl = document.getElementById("statusResultado");
+    const listaEl = document.getElementById("listaResultados");
 
-  if (encontrados.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="6">Nenhum resultado encontrado para "${query}".</td></tr>`;
-    return;
-  }
-
-  tbody.innerHTML = encontrados.map(item => {
-    const nomePrograma = NOMES_PROGRAMAS[item.programa] || "Não identificado";
-    const link = item.programa
-      ? `<a href="programa.html?programa=${item.programa}">${item.id}</a>`
-      : item.id;
-    return `
-      <tr>
-        <td>${link}</td>
-        <td>${item.data}</td>
-        <td>${item.local}</td>
-        <td>${item.reporter}</td>
-        <td>${item.assunto}</td>
-        <td>${nomePrograma}</td>
-      </tr>
-    `;
-  }).join("");
-});
+    carregarTodosOsDados()
+      .then((todos) => {
+        const filtrados = filtrarItens(todos, termo);
+        statusEl.textContent = `${filtrados.length} resultado(s) encontrado(s).`;
+        renderizarLista(listaEl, filtrados);
+      })
+      .catch(() => {
+        statusEl.textContent = "Não foi possível carregar os dados agora. Tente novamente em instantes.";
+      });
   </script>
 </body>
 </html>

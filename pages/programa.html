@@ -2,48 +2,38 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet" />
   <link href="../css/main.css" rel="stylesheet" />
   <title>Catálogo de Mídias</title>
-  <link rel="icon" href="images/favicon.ico" type="image/png">
 </head>
 <body>
-  <header class="programa-header">
-    <a href="../index.html" class="programa-logo">
-      <img src="../images/logo.png" class="logo-icon" width="48" height="48" alt="Catálogo de Mídias" />
-      <div class="logo-text">
-        <span class="logo-titulo">CATÁLOGO DE MÍDIAS</span>
-        <span class="logo-subtitulo">JORNALISMO</span>
-      </div>
+  <header class="pagina-cabecalho">
+    <a href="../index.html" class="pagina-logo">
+      <img src="../img/logo.png" alt="" />
+      <span>
+        <span class="pagina-logo-titulo">CATÁLOGO DE MÍDIAS</span>
+        <span class="pagina-logo-subtitulo">Jornalismo</span>
+      </span>
     </a>
-    <a href="login.html" class="programa-login">Login</a>
+    <a href="login.html">Login</a>
   </header>
 
-  <div class="programa-busca">
-    <img src="../images/lupa.png" width="23" height="22" alt="" class="icone-lupa" />
-    <input type="text" id="campoBusca" placeholder="Pesquisar EX: queimadas" />
-  </div>
+  <form class="pagina-busca" action="resultado-busca.html" method="get">
+    <label for="q" class="sr-only">Pesquisar</label>
+    <input type="search" id="q" name="q" placeholder="Pesquisar EX: queimadas" />
+  </form>
 
-  <nav class="programa-menu-admin">
-    <a href="#" data-acao="aprovar">Aprovar ID's</a>
-    <a href="#" data-acao="brutos">ID's brutos</a>
-    <a href="#" data-acao="editados">ID'S Editados</a>
-    <a href="#" data-acao="exclusao">Exclusão ID's</a>
-    <a href="#" data-acao="relatorio">Relatório de programas</a>
-  </nav>
-  <a href="#" class="programa-acervo">Acervo de Imagens</a>
+  <h1 class="pagina-titulo" id="tituloPrograma">Programa</h1>
+  <p class="pagina-status" id="statusPrograma">Carregando…</p>
+  <ul class="lista-itens" id="listaConteudo" aria-live="polite"></ul>
 
-  <main>
-    <h1 id="tituloPrograma">Programa</h1>
-
-    <section id="listaConteudo" class="programa-lista">
-      <p class="programa-lista-vazio">Conteúdo deste programa ainda não cadastrado.</p>
-    </section>
-  </main>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-    <script src="../js/dados.js"></script>
+  <!-- Papa Parse: necessário para dados.js ler as planilhas em CSV -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="../js/dados.js"></script>
+  <script src="../js/catalogo-ui.js"></script>
   <script>
+    // Nome de exibição de cada programa a partir do slug na URL
     const NOMES_PROGRAMAS = {
       "agrocultura": "Agrocultura",
       "mdc": "Matéria de Capa",
@@ -58,52 +48,37 @@
       "linhas-cruzadas": "Linhas Cruzadas",
       "esta-manha": "Esta Manhã",
       "legiao-estrangeira": "Legião Estrangeira",
-      "giro-economico": "Giro Econômico"
+      "giro-economico": "Giro Econômico",
     };
 
     const params = new URLSearchParams(window.location.search);
     const slug = params.get("programa");
+    const idFoco = params.get("id");
     const nomePrograma = NOMES_PROGRAMAS[slug] || "Programa não encontrado";
 
     document.title = `${nomePrograma} — Catálogo de Mídias`;
     document.getElementById("tituloPrograma").textContent = nomePrograma;
 
-    async function carregarConteudo(slugPrograma) {
-  const container = document.getElementById("listaConteudo");
-  const todos = await carregarTodosOsDados();
-  const itens = todos.filter(item => item.programa === slugPrograma);
+    const statusEl = document.getElementById("statusPrograma");
+    const listaEl = document.getElementById("listaConteudo");
 
-  if (itens.length === 0) {
-    container.innerHTML = '<p class="programa-lista-vazio">Conteúdo deste programa ainda não cadastrado.</p>';
-    return;
-  }
-
-  container.innerHTML = `
-    <table class="resultado-table">
-      <thead>
-        <tr>
-          <th class="resultado-col-id">ID</th>
-          <th>Tipo</th>
-          <th class="resultado-col-decupagem">Assunto</th>
-          <th class="resultado-col-data">Data</th>
-          <th class="resultado-col-reporter">Repórter / Local</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${itens.map(item => `
-          <tr>
-            <td>${item.id}</td>
-            <td>${item.tipo}</td>
-            <td>${item.assunto}</td>
-            <td>${item.data}</td>
-            <td>${item.reporter || item.local}</td>
-          </tr>
-        `).join("")}
-      </tbody>
-    </table>
-  `;
-}
-carregarConteudo(slug);
+    if (!slug || !NOMES_PROGRAMAS[slug]) {
+      statusEl.textContent = "Programa não encontrado.";
+    } else {
+      carregarTodosOsDados()
+        .then((todos) => {
+          const itensDoPrograma = todos.filter((item) => item.programa === slug);
+          statusEl.textContent = `${itensDoPrograma.length} item(ns) neste programa.`;
+          renderizarLista(listaEl, itensDoPrograma);
+          if (idFoco) {
+            const alvo = document.getElementById(`item-${idFoco}`);
+            if (alvo) alvo.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        })
+        .catch(() => {
+          statusEl.textContent = "Não foi possível carregar os dados agora. Tente novamente em instantes.";
+        });
+    }
   </script>
 </body>
 </html>
