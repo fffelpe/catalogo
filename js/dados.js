@@ -18,12 +18,27 @@ const FONTES_DADOS = [
   { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSX3y6fM1xsCVo8wEeWucqSqULseoVsImz18IqlxHv0daSoVhWc2nVT4_RulI60F0-LkFxbRofoyqj-/pub?gid=2130460378&single=true&output=csv", tipo: "noticia" },
 ];
 
-// TODO: hoje todo item normalizado abaixo recebe programa fixo "agrocultura".
-// Enquanto isso não mudar, a busca por outros programas (Roda Viva, Jornal
-// da Cultura etc.) sempre vai voltar vazia. Quando cada aba/planilha tiver
-// uma coluna (ou fonte separada) indicando o programa, troque a linha
-// `programa: "agrocultura"` de cada função normalizar* para ler esse valor,
-// ex.: `programa: (row.PROGRAMA || "").trim().toLowerCase()`.
+// Mapeamento dos programas por prefixo de ID
+const PREFIXOS_PROGRAMA = [
+  { programa: "agrocultura", prefixos: ["1452B", "1452E"] },
+  { programa: "jornal da cultura", prefixos: ["2457B", "2457E", "100B", "1009E"] },
+  { programa: "jornal da tarde", prefixos: ["2822B", "2822E"] }
+];
+
+// Função auxiliar para identificar o programa com base no ID (insensível a maiúsculas/minúsculas)
+function identificarProgramaPorId(id) {
+  if (!id) return "desconhecido";
+  const idUpper = String(id).trim().toUpperCase();
+
+  for (const item of PREFIXOS_PROGRAMA) {
+    if (item.prefixos.some(prefixo => idUpper.startsWith(prefixo))) {
+      return item.programa;
+    }
+  }
+
+  // Retorna "agrocultura" ou "desconhecido" caso o ID não bata com nenhum prefixo específico
+  return "desconhecido";
+}
 
 function normalizarMateria(row) {
   const id = (row.ID || "").trim();
@@ -31,7 +46,7 @@ function normalizarMateria(row) {
   return [{
     id,
     tipo: "materia",
-    programa: "agrocultura",
+    programa: identificarProgramaPorId(id),
     pgm: (row.PGM || "").trim(),
     data: (row.DATA || "").trim(),
     reporter: (row.REPORTER || "").trim(),
@@ -48,7 +63,7 @@ function normalizarImagem(row) {
   return ids.map(id => ({
     id,
     tipo: "imagem",
-    programa: "agrocultura",
+    programa: identificarProgramaPorId(id),
     pgm: "",
     data: (row.DATA || "").trim(),
     reporter: "",
@@ -65,7 +80,7 @@ function normalizarNoticia(row) {
   return [{
     id,
     tipo: "noticia",
-    programa: "agrocultura",
+    programa: identificarProgramaPorId(id),
     pgm: (row.PGM || "").trim(),
     data: (row.DATA || "").trim(),
     reporter: (row["REPÓRTER"] || "").trim(),

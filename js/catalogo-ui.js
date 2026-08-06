@@ -1,75 +1,125 @@
-// Funções usadas tanto em resultado-busca.html quanto em programa.html.
-// Depende de dados.js (carregarTodosOsDados) já ter sido carregado antes.
+// ============================================================
+// CATALOGO-UI.JS - Lógica de Interface e Filtros
+// ============================================================
 
-const RÓTULOS_TIPO = {
-  materia: "Matéria",
-  imagem: "Imagem bruta",
-  noticia: "Notícia",
-};
+// Variável global para armazenar a lista completa vinda do dados.js
+let dadosCompletos = [];
 
-// Filtra a lista de itens por um texto de busca livre, comparando com os
-// principais campos (id, assunto, programa, repórter, local).
-function filtrarItens(itens, textoBusca) {
-  const termo = (textoBusca || "").trim().toLowerCase();
-  if (!termo) return itens;
-  return itens.filter((item) => {
-    const alvo = [item.id, item.assunto, item.programa, item.pgm, item.reporter, item.local]
-      .join(" ")
-      .toLowerCase();
-    return alvo.includes(termo);
+// Helper para normalizar textos (remove acentos, espaços extras e converte para maiúsculas)
+function normalizarTexto(texto) {
+  if (!texto) return "";
+  return String(texto)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // Remove acentos
+    .trim()
+    .toUpperCase();
+}
+
+// ------------------------------------------------------------
+// 1. Inicialização e Carga dos Dados
+// ------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    // Carrega os dados processados pelo dados.js
+    if (typeof carregarTodosOsDados === "function") {
+      dadosCompletos = await carregarTodosOsDados();
+      console.log(`[Catalogo] ${dadosCompletos.length} itens carregados.`);
+    } else {
+      console.error("[Catalogo] Função carregarTodosOsDados não encontrada.");
+    }
+  } catch (erro) {
+    console.error("[Catalogo] Erro ao carregar dados:", erro);
+  }
+
+  // Configura os ouvintes de evento nos botões/links de programas
+  configurarFiltrosPrograma();
+});
+
+// ------------------------------------------------------------
+// 2. Filtro por Programa (Clique na Home / Menu)
+// ------------------------------------------------------------
+function filtrarPorPrograma(nomePrograma) {
+  if (!dadosCompletos || dadosCompletos.length === 0) return [];
+
+  const programaBuscado = normalizarTexto(nomePrograma);
+
+  return dadosCompletos.filter(item => {
+    if (!item.programa) return false;
+    // Compara o programa do item com o termo clicado (ambos normalizados)
+    return normalizarTexto(item.programa) === programaBuscado;
   });
 }
 
-// Cria o HTML de uma linha/item da lista, com os botões Assistir e Copiar Media ID.
-function criarItemHtml(item) {
-  const linkPrograma = `programa.html?programa=${encodeURIComponent(item.programa)}&id=${encodeURIComponent(item.id)}`;
-  const tipoLabel = RÓTULOS_TIPO[item.tipo] || item.tipo;
-  return `
-    <li class="item-midia" id="item-${item.id}">
-      <span class="item-id">${item.id}</span>
-      <span class="item-assunto">${item.assunto || "—"}</span>
-      <span class="item-meta">${tipoLabel}${item.data ? " · " + item.data : ""}${item.local ? " · " + item.local : ""}${item.reporter ? " · " + item.reporter : ""}</span>
-      <span class="item-acoes">
-        <a href="${linkPrograma}">Assistir</a>
-        <button type="button" data-copiar-id="${item.id}">Copiar Media ID</button>
-      </span>
-    </li>
-  `;
-}
+// Configura os cliques nos cards/botões de programas
+function configurarFiltrosPrograma() {
+  // Captura qualquer elemento com a classe de clique do programa
+  // (Adapte '.btn-programa' para a classe usada nas suas tags de link/card se for diferente)
+  const botoes = document.querySelectorAll(".btn-programa, [data-programa]");
 
-// Renderiza uma lista de itens dentro de um elemento <ul>/<ol>/<section>.
-function renderizarLista(container, itens) {
-  if (!itens.length) {
-    container.innerHTML = `<p class="pagina-status">Nenhum item encontrado.</p>`;
-    return;
-  }
-  container.innerHTML = itens.map(criarItemHtml).join("");
-  ativarBotoesCopiar(container);
-}
+  botoes.forEach(elemento => {
+    elemento.addEventListener("click", (event) => {
+      event.preventDefault();
 
-// Liga o clique de todo botão "Copiar Media ID" dentro de um container.
-function ativarBotoesCopiar(container) {
-  container.querySelectorAll("[data-copiar-id]").forEach((botao) => {
-    botao.addEventListener("click", async () => {
-      const id = botao.getAttribute("data-copiar-id");
-      try {
-        await navigator.clipboard.writeText(id);
-      } catch (erro) {
-        // Fallback para navegadores/contextos sem permissão de clipboard.
-        const campo = document.createElement("textarea");
-        campo.value = id;
-        document.body.appendChild(campo);
-        campo.select();
-        document.execCommand("copy");
-        document.body.removeChild(campo);
-      }
-      const textoOriginal = botao.textContent;
-      botao.textContent = "Copiado!";
-      botao.classList.add("copiado");
-      setTimeout(() => {
-        botao.textContent = textoOriginal;
-        botao.classList.remove("copiado");
-      }, 1500);
+      // Pega a informação do atributo data-programa ou do texto do próprio elemento
+      const programaClicado = elemento.dataset.programa || elemento.textContent;
+
+      // Executa a busca
+      const resultados = filtrarPorPrograma(programaClicado);
+
+      console.log(`[Busca] Resultados para "${programaClicado}":`, resultados.length);
+
+      // Renderiza os resultados na tela
+      exibirResultados(resultados, programaClicado);
     });
   });
+}
+
+// ------------------------------------------------------------
+// 3. Renderização dos Resultados na Tela
+// ------------------------------------------------------------
+function exibirResultados(lista, tituloFiltro = "") {
+  // Ajuste o ID do container conforme o elemento existente no seu HTML
+  const container = document.getElementById("resultados-container") || document.getElementById("resultados");
+  
+  if (!container) {
+    console.warn("[Catalogo] Container de resultados não encontrado no HTML.");
+    return;
+  }
+
+  container.innerHTML = ""; // Limpa os resultados anteriores
+
+  if (!lista || lista.length === 0) {
+    container.innerHTML = `
+      <div class="sem-resultados">
+        <p>Nenhum registro encontrado para <strong>${tituloFiltro}</strong>.</p>
+      </div>
+    `;
+    return;
+  }
+
+  // Cria a listagem mantendo as classes compatíveis com o main.css
+  const fragmento = document.createDocumentFragment();
+
+  lista.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card-item"; // Mantém a classe original para herdar o main.css
+
+    card.innerHTML = `
+      <div class="card-header">
+        <span class="badge-tipo">${item.tipo ? item.tipo.toUpperCase() : "MATÉRIA"}</span>
+        <span class="card-id">ID: ${item.id}</span>
+      </div>
+      <div class="card-body">
+        <h4>${item.assunto || "Sem assunto"}</h4>
+        <p><strong>Programa:</strong> ${(item.programa || "").toUpperCase()}</p>
+        ${item.reporter ? `<p><strong>Repórter:</strong> ${item.reporter}</p>` : ""}
+        ${item.data ? `<p><strong>Data:</strong> ${item.data}</p>` : ""}
+        ${item.local ? `<p><strong>Local:</strong> ${item.local}</p>` : ""}
+      </div>
+    `;
+
+    fragmento.appendChild(card);
+  });
+
+  container.appendChild(fragmento);
 }
