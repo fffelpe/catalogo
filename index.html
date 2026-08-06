@@ -8,42 +8,77 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:400,500,600&display=swap" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
-<body class="resultado-page">
-  <main class="resultado-frame" aria-label="Pesquisa no catálogo de mídias">
-    
-    <!-- Cabeçalho idêntico ao das páginas internas -->
-    <header class="resultado-header">
-      <a href="index.html" aria-label="Catálogo de Mídias">
-        <img src="images/logo.png" class="resultado-logo" width="111" height="111" alt="Catálogo de Mídias" />
-      </a>
-      <div class="resultado-titles">
-        <h1 class="resultado-title">CATÁLOGO DE MÍDIAS</h1>
-        <p class="resultado-subtitle">JORNALISMO</p>
+<body class="home-page">
+  <main class="home-frame" aria-label="Catálogo de mídias de jornalismo">
+
+    <!-- Cabeçalho -->
+    <header class="home-header">
+      <div class="home-brand">
+        <a href="index.html" aria-label="Catálogo de Mídias">
+          <img src="images/logo.png" class="home-logo" width="64" height="64" alt="Catálogo de Mídias" />
+        </a>
+        <div class="home-titles">
+          <h1 class="home-title">CATÁLOGO DE MÍDIAS</h1>
+          <p class="home-subtitle">JORNALISMO</p>
+        </div>
       </div>
+      <a href="pages/login.html" class="home-login">Login</a>
     </header>
 
-    <!-- Formulário usando exatamente as mesmas classes do resultado-busca.html -->
-    <section class="resultado-search-container">
+    <!-- Busca -->
+    <section class="home-search-container">
       <form action="pages/resultado-busca.html" method="get" aria-label="Pesquisar no catálogo">
-        <div class="resultado-search-box" aria-hidden="true"></div>
-        <img src="images/lupa.png" class="resultado-search-icon" width="29" height="27" alt="" />
-        <label for="search" class="sr-only">Pesquisar</label>
-        <input 
-          id="search" 
-          name="q" 
-          type="search" 
-          class="resultado-search-input" 
-          placeholder="Pesquisar EX: queimadas" 
-          required
-        />
+        <div class="home-search-box">
+          <img src="images/lupa.png" class="home-search-icon" width="24" height="24" alt="" />
+          <label for="search" class="sr-only">Pesquisar</label>
+          <input
+            id="search"
+            name="q"
+            type="search"
+            class="home-search-input"
+            placeholder="Pesquisar EX: queimadas"
+            required
+          />
+        </div>
       </form>
     </section>
 
-    <!-- Rodapé de Login -->
-    <footer style="margin-top: 40px; text-align: center;">
-      <a href="pages/login.html" class="resultado-login">Login</a>
-    </footer>
+    <!-- Menu de navegação dos programas -->
+    <nav class="home-nav" aria-label="Programas do catálogo">
+      <ul class="home-nav-list" id="programasNav">
+        <!-- Preenchido via JS a partir de dados.js (ver script abaixo) -->
+      </ul>
+    </nav>
 
   </main>
+
+  <script src="js/dados.js"></script>
+  <script>
+    // Monta o menu de programas dinamicamente a partir de dados.js.
+    // Espera que dados.js exponha um array (ex: `programas`) com
+    // objetos no formato { nome: "Agrocultura", slug: "agrocultura" }.
+    // Caso o nome da variável em dados.js seja diferente, ajuste a
+    // linha abaixo (`const listaProgramas = programas;`).
+    (function montarMenuHome() {
+      const nav = document.getElementById('programasNav');
+      if (!nav) return;
+
+      const listaProgramas = (typeof programas !== 'undefined') ? programas : null;
+
+      if (!listaProgramas) {
+        console.warn('dados.js não encontrado ou variável "programas" ausente — menu não pôde ser montado.');
+        return;
+      }
+
+      listaProgramas.forEach((programa) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `pages/programa.html?programa=${programa.slug}`;
+        a.textContent = programa.nome;
+        li.appendChild(a);
+        nav.appendChild(li);
+      });
+    })();
+  </script>
 </body>
 </html>
