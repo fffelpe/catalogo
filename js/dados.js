@@ -26,17 +26,29 @@ const MAPA_PREFIXO_PROGRAMA = {
   "2457E": "jornal-da-cultura",
   "2822B": "jornal-da-tarde",
   "2822E": "jornal-da-tarde",
+  // Adicione outros prefixos das planilhas caso existam
 };
 
+// Retorna o slug do programa com base no prefixo
 function programaPorId(id) {
   const prefixo = (id || "").toUpperCase().slice(0, 5);
   return MAPA_PREFIXO_PROGRAMA[prefixo] || null;
 }
 
+// Auxiliar para separar múltiplos IDs (ex: "1452B001 / 1452B002")
+function extrairIds(idBruto) {
+  if (!idBruto) return [];
+  return String(idBruto)
+    .split(/[\s/]+/)
+    .map(s => s.trim())
+    .filter(Boolean);
+}
+
 function normalizarMateria(row) {
-  const id = (row.ID || "").trim();
-  if (!id) return [];
-  return [{
+  const ids = extrairIds(row.ID);
+  if (ids.length === 0) return [];
+
+  return ids.map(id => ({
     id,
     tipo: "materia",
     programa: programaPorId(id),
@@ -45,13 +57,13 @@ function normalizarMateria(row) {
     reporter: (row.REPORTER || "").trim(),
     local: "",
     assunto: (row.VT || "").trim(),
-  }];
+  }));
 }
 
 function normalizarImagem(row) {
-  const idsBrutos = (row.ID || "").trim();
-  if (!idsBrutos) return [];
-  const ids = idsBrutos.split(/[\s/]+/).map(s => s.trim()).filter(Boolean);
+  const ids = extrairIds(row.ID);
+  if (ids.length === 0) return [];
+
   return ids.map(id => ({
     id,
     tipo: "imagem",
@@ -65,19 +77,27 @@ function normalizarImagem(row) {
 }
 
 function normalizarNoticia(row) {
-  const id = (row.ID || "").trim();
-  const idUpper = id.toUpperCase();
-  if (!id || idUpper.includes("REPÓRTER CHAMA") || idUpper.includes("REPORTER CHAMA")) return [];
-  return [{
-    id,
-    tipo: "noticia",
-    programa: programaPorId(id),
-    pgm: (row.PGM || "").trim(),
-    data: (row.DATA || "").trim(),
-    reporter: (row["REPÓRTER"] || "").trim(),
-    local: (row.UF || "").trim(),
-    assunto: (row.ASSUNTO || "").trim(),
-  }];
+  const ids = extrairIds(row.ID);
+  if (ids.length === 0) return [];
+
+  const resultados = [];
+  for (const id of ids) {
+    const idUpper = id.toUpperCase();
+    if (idUpper.includes("REPÓRTER CHAMA") || idUpper.includes("REPORTER CHAMA")) {
+      continue;
+    }
+    resultados.push({
+      id,
+      tipo: "noticia",
+      programa: programaPorId(id),
+      pgm: (row.PGM || "").trim(),
+      data: (row.DATA || "").trim(),
+      reporter: (row["REPÓRTER"] || row.REPORTER || "").trim(),
+      local: (row.UF || "").trim(),
+      assunto: (row.ASSUNTO || "").trim(),
+    });
+  }
+  return resultados;
 }
 
 const NORMALIZADORES = {
@@ -116,7 +136,53 @@ function buscarFonte(fonte) {
   });
 }
 
+/**
+ * Carrega todos os dados de todas as planilhas.
+ */
 async function carregarTodosOsDados() {
   const resultados = await Promise.all(FONTES_DADOS.map(buscarFonte));
   return resultados.flat();
+}
+
+/**
+ * Realiza a busca por um termo digitado no campo de pesquisa.
+ * @param {Array} todosOsDados - O array completo retornado por carregarTodosOsDados()
+ * @param {string} termo - A palavra ou frase digitada pelo usuário (ex: "fachada")
+ * @param {string|null} tipoFiltro - Opcional: "imagem", "materia" ou "noticia"
+ */
+function buscarTermo(todosOsDados, termo, tipoFiltro = null) {
+  if (!termo || !termo.trim()) return todosOsDados;
+
+  // Normaliza o termo para minúsculas e remove acentos
+  const termoFormatado = termo
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  return todosOsDados.filter(item => {
+    // Caso queira filtrar por tipo específico (ex: apenas 'imagem')
+    if (tipoFiltro && item.tipo !== tipoFiltro) {
+      return false;
+    }
+
+    // Pega o nome do programa correspondente
+    const nomePrograma = NOMES_PROGRAMAS[item.programa] || "";
+
+    // Agrupa todos os campos relevantes em um único texto para verificação
+    const textoCompleto = `
+      ${item.id} 
+      ${item.assunto} 
+      ${item.reporter} 
+      ${item.local} 
+      ${item.pgm} 
+      ${nomePrograma}
+    `
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+    // Verifica se o termo digitado está presente no texto
+    return textoCompleto.includes(termoFormatado);
+  });
 }
