@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catálogo de Mídias — Jornalismo TV Cultura</title>
-  <link rel="stylesheet" href="css/main.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Mídias - Início</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header class="cabecalho">
-    <div class="marca-titulo">
-      <span class="titulo">Catálogo de Mídias</span>
-      <span class="subtitulo">Jornalismo — TV Cultura</span>
-    </div>
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Catálogo de Mídias - Início">
+      <svg class="logo-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="20" y="0" width="24" height="64" fill="#00953B"/>
+        <rect x="0" y="40" width="64" height="24" fill="#00953B"/>
+      </svg>
+      <span class="logo-text">
+        <span class="titulo">CATÁLOGO DE MÍDIAS</span>
+        <span class="subtitulo">JORNALISMO</span>
+      </span>
+    </a>
+    <a href="pages/login.html" class="login-link">Login</a>
   </header>
 
-  <main>
-    <form action="pages/resultado-busca.html" method="GET" class="busca" role="search">
-      <span class="busca-icone" aria-hidden="true">🔍</span>
-      <label for="campoBusca" class="sr-only">Buscar no acervo</label>
+  <main class="pagina-inicial">
+    <form action="pages/resultado-busca.html" method="GET" class="search-bar" role="search">
+      <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" fill="none" stroke="#000" stroke-width="2"/>
+        <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#000" stroke-width="2"/>
+      </svg>
       <input
         type="text"
-        id="campoBusca"
         name="q"
-        placeholder="Digite a palavra-chave, ID ou repórter…"
+        placeholder="Buscar por ID, palavra-chave ou repórter..."
+        class="search-input"
         required
-        class="input-busca"
-      />
-      <button type="submit" class="btn-buscar sr-only">Buscar</button>
+      >
     </form>
 
-    <!--
-      Menu de programas: cada item aponta para pages/programa.html?programa=NOME
-      O valor de "programa" precisa ser IDÊNTICO (sem diferenciar maiúsculas/minúsculas)
-      ao texto que aparece na coluna PROGRAMA da planilha, para o filtro funcionar.
-      Complete a lista abaixo com os ~14 programas do departamento de jornalismo.
-    -->
-    <nav class="menu-programas" aria-label="Programas">
-      <a href="pages/programa.html?programa=AGROCULTURA">Agrocultura</a>
-      <a href="pages/programa.html?programa=RODA VIVA">Roda Viva</a>
-      <a href="pages/programa.html?programa=JORNAL DA CULTURA">Jornal da Cultura</a>
-      <a href="pages/programa.html?programa=REPÓRTER ECO">Repórter Eco</a>
-      <a href="pages/programa.html?programa=JORNAL DA TARDE">Jornal da Tarde</a>
-      <!-- adicione aqui os demais programas -->
+    <nav class="programs-nav" aria-label="Programas">
+      <a href="pages/programa.html?programa=Agrocultura">Agrocultura</a>
+      <a href="pages/programa.html?programa=Cartão Verde">Cartão Verde</a>
+      <a href="pages/programa.html?programa=Documentários">Documentários</a>
+      <a href="pages/programa.html?programa=De olho no voto">De olho no voto</a>
+      <a href="pages/programa.html?programa=Jornal da Cultura">Jornal da Cultura</a>
+      <a href="pages/programa.html?programa=Jornal da Tarde">Jornal da Tarde</a>
+      <a href="pages/programa.html?programa=Opinião">Opinião</a>
+      <a href="pages/programa.html?programa=Linhas Cruzadas">Linhas Cruzadas</a>
+      <a href="pages/programa.html?programa=Repórter Eco">Repórter Eco</a>
+      <a href="pages/programa.html?programa=Roda Viva">Roda Viva</a>
+      <a href="pages/programa.html?programa=Esta Manhã">Esta Manhã</a>
+      <a href="pages/programa.html?programa=Legião Estrangeira">Legião Estrangeira</a>
+      <a href="pages/programa.html?programa=Matéria de Capa">Matéria de Capa</a>
+      <a href="pages/programa.html?programa=Giro Econômico">Giro Econômico</a>
     </nav>
   </main>
-
-  <footer class="footer-principal">
-    <p>Sistema de Catálogo Jornalístico — TV Cultura</p>
-  </footer>
 </body>
 </html>

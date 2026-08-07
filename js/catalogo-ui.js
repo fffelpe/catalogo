@@ -1,78 +1,59 @@
-// catalogo-ui.js — Gerencia a renderização no DOM
-// Funciona tanto em pages/resultado-busca.html (busca por ?q=) quanto em
-// pages/programa.html (filtro por ?programa=, com refino opcional por ?q=)
+// catalogo-ui.js - Gerencia a renderização da tabela de resultados no DOM
+// Funciona tanto em pages/resultado-busca.html quanto em pages/programa.html
 
 let resultadosAtuais = [];
 let paginaAtual = 0;
 const ITENS_POR_PAGINA = 50;
 
-const CAMPOS_DETALHE = [
-  { chave: "DATA", rotulo: "Data" },
-  { chave: "LOCAL", rotulo: "Local" },
-  { chave: "REPÓRTER", rotulo: "Repórter" },
-  { chave: "AFILIADA", rotulo: "Afiliada" },
-  { chave: "EMISSORA", rotulo: "Emissora" },
-  { chave: "PROGRAMA", rotulo: "Programa" },
-  { chave: "EDITORIA", rotulo: "Editoria" },
-];
-
 function debounce(func, timeout = 300) {
   let timer;
   return (...args) => {
     clearTimeout(timer);
-    timer = setTimeout(() => {
-      func.apply(this, args);
-    }, timeout);
+    timer = setTimeout(() => func.apply(this, args), timeout);
   };
 }
 
-function escapeHTML(valor) {
-  const div = document.createElement("div");
-  div.textContent = valor ?? "";
-  return div.innerHTML;
+function setStatus(msg) {
+  const el = document.getElementById("statusBusca");
+  if (el) el.textContent = msg;
+}
+
+function escapeHtml(str) {
+  return (str || "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
 }
 
 async function inicializarBusca() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const query = urlParams.get("q") || "";
-  const programa = urlParams.get("programa") || "";
+  const params = new URLSearchParams(window.location.search);
+  const termoInicial = params.get("q") || "";
+  const programa = params.get("programa") || "";
 
   const searchInput = document.getElementById("searchInput");
-  if (searchInput) searchInput.value = query;
+  const tituloPrograma = document.getElementById("tituloPrograma");
 
-  // Título/estado da página, quando existirem os elementos
-  const titulo = document.getElementById("pageTitle");
-  const status = document.getElementById("pageStatus");
-  if (titulo && programa) {
-    titulo.textContent = programa;
+  if (searchInput) searchInput.value = termoInicial;
+  if (tituloPrograma) {
+    tituloPrograma.textContent = programa
+      ? decodeURIComponent(programa)
+      : "Todos os Programas";
   }
 
-  const container = document.getElementById("resultsContainer");
-  if (container) container.innerHTML = "<p>Carregando acervo da planilha…</p>";
+  setStatus("Carregando acervo...");
 
   try {
     await DadosMedia.carregarCSV();
   } catch (err) {
-    if (container) {
-      container.innerHTML =
-        "<p>Não foi possível carregar a planilha. Verifique se ela ainda está publicada em Arquivo &gt; Compartilhar &gt; Publicar na Web.</p>";
-    }
-    if (status) status.textContent = "Erro ao carregar dados.";
+    setStatus("Não foi possível carregar o acervo. Verifique sua conexão e tente novamente.");
     return;
   }
 
-  executarBusca(query, programa);
+  executarBusca(termoInicial, programa);
 
   if (searchInput) {
-    searchInput.addEventListener(
-      "input",
-      debounce((e) => {
-        const novoPrograma = new URLSearchParams(window.location.search).get(
-          "programa"
-        );
-        executarBusca(e.target.value, novoPrograma || "");
-      })
-    );
+    searchInput.addEventListener("input", debounce((e) => {
+      executarBusca(e.target.value, programa);
+    }));
   }
 
   const loadMoreBtn = document.getElementById("loadMoreBtn");
@@ -82,91 +63,56 @@ async function inicializarBusca() {
 }
 
 function executarBusca(termo, programa) {
-  resultadosAtuais = DadosMedia.buscarComPrograma(termo, programa);
+  resultadosAtuais = programa
+    ? DadosMedia.buscarPorPrograma(programa, termo)
+    : DadosMedia.buscar(termo);
+
   paginaAtual = 0;
 
-  const container = document.getElementById("resultsContainer");
-  if (container) container.innerHTML = "";
+  const tbody = document.getElementById("resultsBody");
+  if (tbody) tbody.innerHTML = "";
 
-  const status = document.getElementById("pageStatus");
-  if (status) {
-    const quantidade = resultadosAtuais.length;
-    status.textContent =
-      quantidade === 1
-        ? "1 resultado encontrado"
-        : `${quantidade} resultados encontrados`;
-  }
+  setStatus(`${resultadosAtuais.length} resultado(s) encontrado(s).`);
 
   renderizarProximaPagina();
 }
 
-function renderizarItem(item) {
-  const li = document.createElement("li");
-  li.className = "item-midia";
-  li.id = `item-${item.ID}`;
-
-  const camposHtml = CAMPOS_DETALHE.map(
-    ({ chave, rotulo }) => `
-      <div class="item-campo">
-        <span class="item-campo-rotulo">${rotulo}</span>
-        <span class="item-campo-valor">${escapeHTML(item[chave]) || "—"}</span>
-      </div>`
-  ).join("");
-
-  li.innerHTML = `
-    <div class="item-cabecalho">
-      <span class="item-id">${escapeHTML(item.ID)}</span>
-      <span class="item-assunto">${escapeHTML(item["DESCRIÇÃO"]) || "Sem descrição"}</span>
-      <div class="item-acoes">
-        <button type="button" class="btn-copiar-id" data-id="${escapeHTML(item.ID)}">
-          Copiar ID
-        </button>
-      </div>
-    </div>
-    <div class="item-corpo">${camposHtml}</div>
-  `;
-
-  const btnCopiar = li.querySelector(".btn-copiar-id");
-  btnCopiar.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(item.ID);
-      btnCopiar.textContent = "Copiado!";
-      btnCopiar.classList.add("copiado");
-      setTimeout(() => {
-        btnCopiar.textContent = "Copiar ID";
-        btnCopiar.classList.remove("copiado");
-      }, 1500);
-    } catch (err) {
-      console.error("Não foi possível copiar o ID:", err);
-    }
-  });
-
-  return li;
-}
-
 function renderizarProximaPagina() {
-  const container = document.getElementById("resultsContainer");
+  const tbody = document.getElementById("resultsBody");
   const loadMoreBtn = document.getElementById("loadMoreBtn");
-  if (!container) return;
+  if (!tbody) return;
 
   const inicio = paginaAtual * ITENS_POR_PAGINA;
   const fim = inicio + ITENS_POR_PAGINA;
   const itensParaRenderizar = resultadosAtuais.slice(inicio, fim);
 
   if (itensParaRenderizar.length === 0 && paginaAtual === 0) {
-    container.innerHTML = "<p>Nenhum resultado encontrado no acervo.</p>";
+    tbody.innerHTML = '<tr><td colspan="8">Nenhum resultado encontrado.</td></tr>';
     if (loadMoreBtn) loadMoreBtn.style.display = "none";
     return;
   }
 
-  const fragmento = document.createDocumentFragment();
-  itensParaRenderizar.forEach((item) => fragmento.appendChild(renderizarItem(item)));
-  container.appendChild(fragmento);
+  const frag = document.createDocumentFragment();
+  itensParaRenderizar.forEach((item) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${escapeHtml(item.ID)}</td>
+      <td>${escapeHtml(item.DESCRICAO)}</td>
+      <td>${escapeHtml(item.DATA)}</td>
+      <td>${escapeHtml(item.LOCAL)}</td>
+      <td>${escapeHtml(item.REPORTER)}</td>
+      <td>${escapeHtml(item.AFILIADA_EMISSORA)}</td>
+      <td>${escapeHtml(item.PROGRAMA)}</td>
+      <td>${escapeHtml(item.EDITORIA)}</td>
+    `;
+    frag.appendChild(tr);
+  });
+  tbody.appendChild(frag);
 
   paginaAtual++;
 
   if (loadMoreBtn) {
-    loadMoreBtn.style.display = fim < resultadosAtuais.length ? "block" : "none";
+    loadMoreBtn.style.display = fim < resultadosAtuais.length ? "inline-block" : "none";
   }
 }
 

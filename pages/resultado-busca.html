@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resultados da Busca — Catálogo de Mídias</title>
-  <link rel="stylesheet" href="../css/main.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados da Busca - Catálogo de Mídias</title>
+  <link rel="stylesheet" href="../css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
-  <header class="pagina-cabecalho">
-    <div class="pagina-logo">
-      <div>
-        <span class="pagina-logo-titulo">Catálogo de Mídias</span>
-        <span class="pagina-logo-subtitulo">Resultado da busca</span>
-      </div>
-    </div>
-    <a href="../index.html">Voltar para o início</a>
+  <header class="site-header">
+    <a href="../index.html" class="logo" aria-label="Catálogo de Mídias - Início">
+      <svg class="logo-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="20" y="0" width="24" height="64" fill="#00953B"/>
+        <rect x="0" y="40" width="64" height="24" fill="#00953B"/>
+      </svg>
+      <span class="logo-text">
+        <span class="titulo">CATÁLOGO DE MÍDIAS</span>
+        <span class="subtitulo">JORNALISMO</span>
+      </span>
+    </a>
+    <a href="login.html" class="login-link">Login</a>
   </header>
 
-  <div class="pagina-busca">
-    <label for="searchInput" class="sr-only">Refinar busca</label>
-    <input type="text" id="searchInput" placeholder="Refinar busca atual…" />
-  </div>
+  <main class="pagina-resultados">
+    <div class="search-bar">
+      <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" fill="none" stroke="#000" stroke-width="2"/>
+        <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#000" stroke-width="2"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Refinar busca atual..." class="search-input">
+    </div>
 
-  <h2 id="pageTitle" class="pagina-titulo">Resultados</h2>
-  <p id="pageStatus" class="pagina-status">Carregando…</p>
+    <h2 class="page-title">Resultado da Busca:</h2>
+    <p id="statusBusca" class="status-busca"></p>
 
-  <ul id="resultsContainer" class="lista-itens">
-    <p>Carregando acervo…</p>
-  </ul>
+    <div class="table-wrap">
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>DESCRIÇÃO</th>
+            <th>DATA</th>
+            <th>LOCAL</th>
+            <th>REPÓRTER</th>
+            <th>AFILIADA / EMISSORA</th>
+            <th>PROGRAMA</th>
+            <th>EDITORIA</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody">
+          <tr><td colspan="8">Carregando acervo...</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-  <div class="paginacao">
-    <button id="loadMoreBtn" class="btn-carregar-mais" style="display: none">
-      Carregar mais resultados
-    </button>
-  </div>
+    <div class="paginacao">
+      <button id="loadMoreBtn" class="btn-carregar-mais" style="display:none;">
+        Carregar mais resultados
+      </button>
+    </div>
+  </main>
 
   <script src="../js/dados.js"></script>
   <script src="../js/catalogo-ui.js"></script>

@@ -1,131 +1,82 @@
-// dados.js — Responsável por carregar e gerenciar os dados do acervo (Google Sheets)
-//
-// IMPORTANTE: o arquivo imgs.csv que existia no repositório continha o link da versão
-// "/pubhtml" da planilha, que devolve uma página HTML — não dados. O PapaParse precisa
-// da versão "/pub?output=csv". A URL abaixo já está no formato correto (mesma planilha,
-// mesmo gid, apenas trocando pubhtml -> pub&output=csv).
-//
-// Se você publicar a planilha novamente (Arquivo > Compartilhar > Publicar na Web),
-// o Google gera uma URL parecida com:
-//   https://docs.google.com/spreadsheets/d/e/XXXXXXXX/pubhtml?gid=0&single=true
-// Para usar aqui, troque "pubhtml" por "pub" e acrescente "&output=csv" no final.
-
-const CSV_URL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vR2OEG80BFtybMx8s_f8LQBcFB0ABufM9eVtLNEyRbqndaKdXEozzt_A969NEX_Iv2vdPYSvQU_P2FP/pub?gid=0&single=true&output=csv";
-
-// Colunas oficiais da planilha, na ordem em que devem ser exibidas nos resultados.
-const COLUNAS = [
-  "ID",
-  "DESCRIÇÃO",
-  "DATA",
-  "LOCAL",
-  "REPÓRTER",
-  "AFILIADA",
-  "EMISSORA",
-  "PROGRAMA",
-  "EDITORIA",
-];
-
-// Colunas usadas na busca por palavra-chave (tudo, exceto ID e DATA, que têm buscas próprias).
-const COLUNAS_BUSCA_TEXTO = [
-  "DESCRIÇÃO",
-  "LOCAL",
-  "REPÓRTER",
-  "AFILIADA",
-  "EMISSORA",
-  "PROGRAMA",
-  "EDITORIA",
-];
+// dados.js - Carrega e gerencia os dados da planilha do Google Sheets (imgs.csv)
 
 const DadosMedia = {
   registros: [],
   carregado: false,
-  erro: null,
 
-  // Normaliza um nome de cabeçalho: remove espaços nas pontas, colapsa espaços internos,
-  // e deixa em maiúsculas — protege contra cabeçalhos como "DATA " (com espaço sobrando)
-  // ou variações de acentuação vindas do Sheets.
-  _normalizarChave(chave) {
-    return String(chave || "")
-      .normalize("NFC")
-      .trim()
-      .toUpperCase();
-  },
-
-  // Recebe uma linha crua do PapaParse (chaves podem ter espaços/variações) e devolve
-  // um objeto só com as chaves oficiais de COLUNAS, sempre presentes (mesmo que vazias).
-  _normalizarLinha(linhaCrua) {
-    const mapa = {};
-    for (const chaveOriginal of Object.keys(linhaCrua)) {
-      mapa[this._normalizarChave(chaveOriginal)] = linhaCrua[chaveOriginal];
-    }
-    const linha = {};
-    for (const coluna of COLUNAS) {
-      linha[coluna] = (mapa[coluna] ?? "").toString().trim();
-    }
-    return linha;
-  },
+  // URL de exportação em CSV da planilha "imgs" (compartilhada como "Qualquer pessoa com o link pode ver").
+  // Padrão: /spreadsheets/d/ID_DA_PLANILHA/export?format=csv&gid=ID_DA_ABA
+  CSV_URL: "https://docs.google.com/spreadsheets/d/1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs/export?format=csv&gid=0",
 
   async carregarCSV() {
     if (this.carregado) return this.registros;
 
     return new Promise((resolve, reject) => {
-      Papa.parse(CSV_URL, {
+      Papa.parse(this.CSV_URL, {
         download: true,
         header: true,
         skipEmptyLines: true,
         complete: (results) => {
-          this.registros = (results.data || [])
-            .map((linha) => this._normalizarLinha(linha))
-            // descarta linhas totalmente vazias (linhas em branco na planilha)
-            .filter((linha) => COLUNAS.some((c) => linha[c] !== ""));
+          this.registros = results.data.map(this._normalizar);
           this.carregado = true;
-          this.erro = null;
           resolve(this.registros);
         },
         error: (err) => {
-          console.error("Erro ao carregar a planilha (CSV):", err);
-          this.erro = err;
+          console.error("Erro ao carregar a planilha:", err);
           reject(err);
-        },
+        }
       });
     });
   },
 
-  // Busca por palavra-chave em todas as colunas de texto relevantes + ID.
-  buscar(termo) {
-    if (!termo || !termo.trim()) return this.registros;
-    const query = termo.trim().toLowerCase();
-
-    return this.registros.filter((item) => {
-      if ((item.ID || "").toLowerCase().includes(query)) return true;
-      return COLUNAS_BUSCA_TEXTO.some((coluna) =>
-        (item[coluna] || "").toLowerCase().includes(query)
-      );
+  // Normaliza cada linha para nomes de campo fixos, tolerando cabeçalhos com
+  // espaços extras, maiúsculas/minúsculas diferentes ou pequenas variações de acentuação.
+  // Colunas reais da planilha "imgs": ID, DESCRIÇÃO, DATA, LOCAL, REPÓRTER,
+  // AFILIADA / EMISSORA (uma coluna só), PROGRAMA, EDITORIA.
+  _normalizar(item) {
+    const mapa = {};
+    Object.keys(item).forEach((chaveOriginal) => {
+      const chave = chaveOriginal.trim().toUpperCase();
+      mapa[chave] = (item[chaveOriginal] || "").toString().trim();
     });
+
+    const chaveAfiliada = Object.keys(mapa).find((k) => k.includes("AFILIADA"));
+
+    return {
+      ID: mapa["ID"] || "",
+      DESCRICAO: mapa["DESCRIÇÃO"] || mapa["DESCRICAO"] || "",
+      DATA: mapa["DATA"] || "",
+      LOCAL: mapa["LOCAL"] || "",
+      REPORTER: mapa["REPÓRTER"] || mapa["REPORTER"] || "",
+      AFILIADA_EMISSORA: chaveAfiliada ? mapa[chaveAfiliada] : "",
+      PROGRAMA: mapa["PROGRAMA"] || "",
+      EDITORIA: mapa["EDITORIA"] || ""
+    };
   },
 
-  // Filtra por programa (usado em pages/programa.html?programa=SLUG).
-  // Aceita nome exato (ex.: "AGROCULTURA") ou slug com hífen/underline.
-  filtrarPorPrograma(programa) {
-    if (!programa) return this.registros;
-    const alvo = programa.trim().toLowerCase().replace(/[-_]+/g, " ");
-    return this.registros.filter(
-      (item) => (item.PROGRAMA || "").trim().toLowerCase() === alvo
+  // Busca livre em todas as colunas
+  buscar(termo) {
+    if (!termo) return this.registros;
+    const q = termo.toLowerCase();
+    return this.registros.filter((r) =>
+      Object.values(r).some((v) => v.toLowerCase().includes(q))
     );
   },
 
-  // Combina filtro de programa + busca textual (usado quando a página de resultados
-  // recebe tanto ?programa= quanto ?q=).
-  buscarComPrograma(termo, programa) {
-    const base = programa ? this.filtrarPorPrograma(programa) : this.registros;
-    if (!termo || !termo.trim()) return base;
-    const query = termo.trim().toLowerCase();
-    return base.filter((item) => {
-      if ((item.ID || "").toLowerCase().includes(query)) return true;
-      return COLUNAS_BUSCA_TEXTO.some((coluna) =>
-        (item[coluna] || "").toLowerCase().includes(query)
-      );
-    });
-  },
+  // Filtra por programa (nome exato ou parcial) e, opcionalmente, por um termo adicional
+  buscarPorPrograma(programaNome, termo) {
+    let base = this.registros;
+
+    if (programaNome) {
+      const p = decodeURIComponent(programaNome).toLowerCase().trim();
+      base = base.filter((r) => r.PROGRAMA.toLowerCase().includes(p));
+    }
+
+    if (!termo) return base;
+
+    const q = termo.toLowerCase();
+    return base.filter((r) =>
+      Object.values(r).some((v) => v.toLowerCase().includes(q))
+    );
+  }
 };
