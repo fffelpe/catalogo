@@ -1,125 +1,79 @@
-// ============================================================
-// CATALOGO-UI.JS - Lógica de Interface e Filtros
-// ============================================================
+// js/catalogo-ui.js
+import { buscarTodasAsMidias, filtrarMidias } from './dados.js';
 
-// Variável global para armazenar a lista completa vinda do dados.js
-let dadosCompletos = [];
-
-// Helper para normalizar textos (remove acentos, espaços extras e converte para maiúsculas)
-function normalizarTexto(texto) {
-  if (!texto) return "";
-  return String(texto)
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // Remove acentos
-    .trim()
-    .toUpperCase();
-}
-
-// ------------------------------------------------------------
-// 1. Inicialização e Carga dos Dados
-// ------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    // Carrega os dados processados pelo dados.js
-    if (typeof carregarTodosOsDados === "function") {
-      dadosCompletos = await carregarTodosOsDados();
-      console.log(`[Catalogo] ${dadosCompletos.length} itens carregados.`);
-    } else {
-      console.error("[Catalogo] Função carregarTodosOsDados não encontrada.");
-    }
-  } catch (erro) {
-    console.error("[Catalogo] Erro ao carregar dados:", erro);
-  }
-
-  // Configura os ouvintes de evento nos botões/links de programas
-  configurarFiltrosPrograma();
-});
-
-// ------------------------------------------------------------
-// 2. Filtro por Programa (Clique na Home / Menu)
-// ------------------------------------------------------------
-function filtrarPorPrograma(nomePrograma) {
-  if (!dadosCompletos || dadosCompletos.length === 0) return [];
-
-  const programaBuscado = normalizarTexto(nomePrograma);
-
-  return dadosCompletos.filter(item => {
-    if (!item.programa) return false;
-    // Compara o programa do item com o termo clicado (ambos normalizados)
-    return normalizarTexto(item.programa) === programaBuscado;
-  });
-}
-
-// Configura os cliques nos cards/botões de programas
-function configurarFiltrosPrograma() {
-  // Captura qualquer elemento com a classe de clique do programa
-  // (Adapte '.btn-programa' para a classe usada nas suas tags de link/card se for diferente)
-  const botoes = document.querySelectorAll(".btn-programa, [data-programa]");
-
-  botoes.forEach(elemento => {
-    elemento.addEventListener("click", (event) => {
-      event.preventDefault();
-
-      // Pega a informação do atributo data-programa ou do texto do próprio elemento
-      const programaClicado = elemento.dataset.programa || elemento.textContent;
-
-      // Executa a busca
-      const resultados = filtrarPorPrograma(programaClicado);
-
-      console.log(`[Busca] Resultados para "${programaClicado}":`, resultados.length);
-
-      // Renderiza os resultados na tela
-      exibirResultados(resultados, programaClicado);
-    });
-  });
-}
-
-// ------------------------------------------------------------
-// 3. Renderização dos Resultados na Tela
-// ------------------------------------------------------------
-function exibirResultados(lista, tituloFiltro = "") {
-  // Ajuste o ID do container conforme o elemento existente no seu HTML
-  const container = document.getElementById("resultados-container") || document.getElementById("resultados");
+document.addEventListener('DOMContentLoaded', async () => {
+  const containerResultados = document.getElementById('lista-resultados') || document.getElementById('container-midias');
+  const loader = document.getElementById('loader') || document.getElementById('loading');
+  const inputBusca = document.getElementById('input-busca');
   
-  if (!container) {
-    console.warn("[Catalogo] Container de resultados não encontrado no HTML.");
-    return;
+  const params = new URLSearchParams(window.location.search);
+  const programaParam = params.get('programa') || params.get('nome');
+  const buscaParam = params.get('q') || params.get('busca');
+
+  function exibirLoader(ativo) {
+    if (loader) loader.style.display = ativo ? 'block' : 'none';
   }
 
-  container.innerHTML = ""; // Limpa os resultados anteriores
+  function renderizarItens(itens) {
+    if (!containerResultados) return;
+    containerResultados.innerHTML = '';
 
-  if (!lista || lista.length === 0) {
-    container.innerHTML = `
-      <div class="sem-resultados">
-        <p>Nenhum registro encontrado para <strong>${tituloFiltro}</strong>.</p>
-      </div>
-    `;
-    return;
+    if (itens.length === 0) {
+      containerResultados.innerHTML = `
+        <div class="sem-resultados">
+          <p>Nenhuma mídia ou ID foi localizado para esta pesquisa.</p>
+        </div>
+      `;
+      return;
+    }
+
+    itens.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'card-midia';
+      card.innerHTML = `
+        <div class="card-header">
+          <span class="badge-id">${item.id}</span>
+          <button class="btn-copiar" data-id="${item.id}">Copiar ID</button>
+        </div>
+        <h3>${item.titulo}</h3>
+        <p><strong>Programa:</strong> ${item.programa}</p>
+        ${item.data ? `<p><strong>Data:</strong> ${item.data}</p>` : ''}
+        ${item.link && item.link !== '#' ? `<a href="${item.link}" target="_blank" rel="noopener">Acessar Mídia</a>` : ''}
+      `;
+      containerResultados.appendChild(card);
+    });
+
+    // Evento de copiar ID
+    document.querySelectorAll('.btn-copiar').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = e.target.getAttribute('data-id');
+        navigator.clipboard.writeText(id);
+        e.target.innerText = 'Copiado!';
+        setTimeout(() => e.target.innerText = 'Copiar ID', 2000);
+      });
+    });
   }
 
-  // Cria a listagem mantendo as classes compatíveis com o main.css
-  const fragmento = document.createDocumentFragment();
+  exibirLoader(true);
+  try {
+    const todasAsMidias = await buscarTodasAsMidias();
+    const filtrados = filtrarMidias(todasAsMidias, buscaParam, programaParam);
+    renderizarItens(filtrados);
+  } catch (err) {
+    console.error("Erro na interface:", err);
+    if (containerResultados) {
+      containerResultados.innerHTML = '<p class="erro">Ocorreu um erro ao carregar os dados. Tente novamente.</p>';
+    }
+  } finally {
+    exibirLoader(false);
+  }
 
-  lista.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "card-item"; // Mantém a classe original para herdar o main.css
-
-    card.innerHTML = `
-      <div class="card-header">
-        <span class="badge-tipo">${item.tipo ? item.tipo.toUpperCase() : "MATÉRIA"}</span>
-        <span class="card-id">ID: ${item.id}</span>
-      </div>
-      <div class="card-body">
-        <h4>${item.assunto || "Sem assunto"}</h4>
-        <p><strong>Programa:</strong> ${(item.programa || "").toUpperCase()}</p>
-        ${item.reporter ? `<p><strong>Repórter:</strong> ${item.reporter}</p>` : ""}
-        ${item.data ? `<p><strong>Data:</strong> ${item.data}</p>` : ""}
-        ${item.local ? `<p><strong>Local:</strong> ${item.local}</p>` : ""}
-      </div>
-    `;
-
-    fragmento.appendChild(card);
-  });
-
-  container.appendChild(fragmento);
-}
+  if (inputBusca) {
+    inputBusca.addEventListener('input', async (e) => {
+      const termo = e.target.value;
+      const todasAsMidias = await buscarTodasAsMidias();
+      const filtrados = filtrarMidias(todasAsMidias, termo, programaParam);
+      renderizarItens(filtrados);
+    });
+  }
+});
