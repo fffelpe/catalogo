@@ -1,53 +1,67 @@
-// Substitua o conteúdo no seu arquivo js/catalogo-ui.js
-
-const URL_API_GOOGLE = "https://script.google.com/d/1a_iQeDkuS2OE--nFpY88qYkf3KHqD7l3d3R4LxgjaCqksJMHYqslmXpS/edit?usp=sharing";
+// Substitua pela URL gerada no seu Google Apps Script
+const URL_API_GOOGLE = "https://script.google.com/d/1a_iQeDkuS2OE--nFpY88qYkf3KHqD7l3d3R4LxgjaCqksJMHYqslmXpS/edit?usp=drive_link";
 
 document.addEventListener('DOMContentLoaded', () => {
   const inputBusca = document.getElementById('input-busca');
-  const container = document.getElementById('grid-resultados');
-  const loader = document.getElementById('loader');
-
-  async function pesquisarMídia(termo) {
+  const container = document.getElementById('grid-resultados') || document.getElementById('lista-resultados'); // Conforme o seu resultado-busca.html
+  const loader = document.getElementById('loader') || document.getElementById('loading');
+  
+  async function pesquisarMidia(termo) {
     if (loader) loader.style.display = 'block';
     
     try {
-      const resposta = await fetch(`${URL_API_GOOGLE}?q=${encodeURIComponent(termo)}`);
-      const dados = await resposta.json();
+      const resposta = await fetch(`${URL_API_GOOGLE}?q=${encodeURIComponent(termo)}`, {
+        method: 'GET',
+        redirect: 'follow' 
+      });
       
+      const dados = await resposta.json();
       renderizar(dados);
     } catch (erro) {
-      console.error("Erro ao buscar dados na API:", erro);
-      container.innerHTML = '<p>Erro ao carregar o catálogo. Tente novamente.</p>';
+      console.error("Erro na busca:", erro);
+      if (container) container.innerHTML = '<p class="erro">Falha ao se conectar com o banco de imagens. Tente novamente.</p>';
     } finally {
       if (loader) loader.style.display = 'none';
     }
   }
 
   function renderizar(itens) {
+    if (!container) return;
     container.innerHTML = '';
+    
     if (itens.length === 0) {
-      container.innerHTML = '<p>Nenhum resultado encontrado.</p>';
+      container.innerHTML = '<p class="aviso">Nenhuma mídia encontrada para os termos pesquisados.</p>';
       return;
     }
 
     itens.forEach(item => {
       const card = document.createElement('div');
-      card.className = 'card-midia';
+      card.className = 'card-midia'; // Classe baseada no seu main.css
       card.innerHTML = `
-        <div class="card-topo"><strong>ID:</strong> ${item.id} | <strong>Data:</strong> ${item.data}</div>
-        <div class="card-corpo"><p>${item.descricao}</p></div>
-        <div class="card-rodape"><strong>Repórter:</strong> ${item.reporter} | <strong>Local:</strong> ${item.local}</div>
+        <div class="card-topo">
+          <span class="badge id-badge"><strong>ID:</strong> ${item.id}</span>
+          <span class="badge data-badge"><strong>Data:</strong> ${item.data}</span>
+        </div>
+        <div class="card-corpo">
+          <p class="descricao-texto"><strong>Descrição:</strong> ${item.descricao}</p>
+        </div>
+        <div class="card-rodape">
+          <span><strong>Local:</strong> ${item.local}</span>
+          <span><strong>Repórter:</strong> ${item.reporter}</span>
+          <span class="badge programa-badge"><strong>Programa:</strong> ${item.programa}</span>
+        </div>
       `;
       container.appendChild(card);
     });
   }
 
-  // Pesquisa automaticamente ao digitar
-  let timeoutId;
-  inputBusca.addEventListener('input', (e) => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      pesquisarMídia(e.target.value);
-    }, 500); // Aguarda 500ms para evitar requisições desnecessárias enquanto o usuário digita
-  });
+  // Busca acionada ao apertar Enter
+  if (inputBusca) {
+    inputBusca.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        const termo = e.target.value.trim();
+        pesquisarMidia(termo);
+      }
+    });
+  }
 });
