@@ -1,5 +1,5 @@
 // Substitua pela URL gerada no seu Google Apps Script
-const URL_API_GOOGLE = "https://script.google.com/macros/s/AKfycbyf7WDCzVKOO9LwrBH0srARgeu1YgpPHPAQIS_AWlH9dboSJTN9kv3ZbkUWcnqCpw-l/exec";
+const URL_API_GOOGLE = "https://script.google.com/macros/s/AKfycbwI7WxYaycM0XhIMxPgCVlF4fP7jnGaQdbNvZMyrspiC4JPqBh_ufWmp3ItHJNrvL8v/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
   const inputBusca = document.getElementById('input-busca');
