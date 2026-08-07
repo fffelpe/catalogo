@@ -1,58 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:400,500,600&display=swap" rel="stylesheet" />
-  <link href="../css/main.css" rel="stylesheet" />
-  <title>Resultado da Busca — Catálogo de Mídias</title>
-  <link rel="icon" href="images/favicon.ico" type="image/png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Busca - Catálogo</title>
+    <link rel="stylesheet" href="../css/main.css">
+    
+    <!-- IMPORTANTE: Biblioteca para ler o imgs.csv de forma rápida e sem travar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
-  <header class="pagina-cabecalho">
-    <a href="../index.html" class="pagina-logo">
-      <img src="../images/logo.png" alt="" />
-      <span>
-        <span class="pagina-logo-titulo">CATÁLOGO DE MÍDIAS</span>
-        <span class="pagina-logo-subtitulo">Jornalismo</span>
-      </span>
-    </a>
-    <a href="login.html">Login</a>
-  </header>
+    <header class="header-principal">
+        <nav>
+            <a href="../index.html">Voltar para o Início</a>
+        </nav>
+        <h1>Resultados da Busca</h1>
+    </header>
 
-  <form class="pagina-busca" action="resultado-busca.html" method="get">
-    <label for="q" class="sr-only">Pesquisar</label>
-    <input type="search" id="q" name="q" placeholder="Pesquisar EX: queimadas" />
-  </form>
+    <main class="container-resultados">
+        <!-- Barra de nova busca na própria página de resultados (Note o id="searchInput") -->
+        <div class="busca-interna">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Refinar busca atual..." 
+                class="input-busca"
+            >
+        </div>
 
-  <h1 class="pagina-titulo" id="tituloResultado">Resultado da busca</h1>
-  <p class="pagina-status" id="statusResultado">Carregando…</p>
-  <ul class="lista-itens" id="listaResultados" aria-live="polite"></ul>
+        <!-- IMPORTANTE: A div com id="resultsContainer" é onde o JavaScript vai injetar os itens -->
+        <!-- Mantenha a sua classe de grid/layout original na tag class -->
+        <div id="resultsContainer" class="sua-classe-css-de-grid">
+            <p>Carregando acervo...</p>
+        </div>
 
-  <!-- Papa Parse: necessário para dados.js ler as planilhas em CSV -->
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <script src="../js/dados.js"></script>
-  <script src="../js/catalogo-ui.js"></script>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const termo = params.get("q") || "";
+        <!-- Botão para paginação (Evita travamentos renderizando tudo de uma vez) -->
+        <div class="paginacao">
+            <button id="loadMoreBtn" class="btn-carregar-mais" style="display:none;">
+                Carregar mais resultados
+            </button>
+        </div>
+    </main>
 
-    document.getElementById("tituloResultado").textContent = termo
-      ? `Resultado da busca: "${termo}"`
-      : "Resultado da busca";
-
-    const statusEl = document.getElementById("statusResultado");
-    const listaEl = document.getElementById("listaResultados");
-
-    carregarTodosOsDados()
-      .then((todos) => {
-        const filtrados = filtrarItens(todos, termo);
-        statusEl.textContent = `${filtrados.length} resultado(s) encontrado(s).`;
-        renderizarLista(listaEl, filtrados);
-      })
-      .catch(() => {
-        statusEl.textContent = "Não foi possível carregar os dados agora. Tente novamente em instantes.";
-      });
-  </script>
+    <!-- IMPORTANTE: Os scripts lógicos devem ser chamados no final do body -->
+    <script src="../js/dados.js"></script>
+    <script src="../js/catalogo-ui.js"></script>
 </body>
 </html>
