@@ -1,85 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet" />
-  <link href="../css/main.css" rel="stylesheet" />
-  <title>Catálogo de Mídias</title>
-  <link rel="icon" href="images/favicon.ico" type="image/png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Busca por Programa</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-  <header class="pagina-cabecalho">
-    <a href="../index.html" class="pagina-logo">
-      <img src="../images/logo.png" alt="" />
-      <span>
-        <span class="pagina-logo-titulo">CATÁLOGO DE MÍDIAS</span>
-        <span class="pagina-logo-subtitulo">Jornalismo</span>
-      </span>
-    </a>
-    <a href="login.html">Login</a>
-  </header>
+    <header class="header-principal">
+        <nav>
+            <a href="../index.html">Voltar para o Início</a>
+        </nav>
+        <h1>Filtro por Programa</h1>
+    </header>
 
-  <form class="pagina-busca" action="resultado-busca.html" method="get">
-    <label for="q" class="sr-only">Pesquisar</label>
-    <input type="search" id="q" name="q" placeholder="Pesquisar EX: queimadas" />
-  </form>
+    <main class="container-filtros">
+        <!-- O formulário envia os parâmetros para a página de resultados -->
+        <form action="resultado-busca.html" method="GET" class="form-busca-avancada">
+            
+            <div class="grupo-filtro">
+                <label for="programa">Selecione o Programa:</label>
+                <select name="programa" id="programa" class="select-programa">
+                    <option value="">Todos</option>
+                    <option value="JORNAL DA TARDE">Jornal da Tarde</option>
+                    <option value="AGROCULTURA">Agrocultura</option>
+                    <option value="JORNAL DA CULTURA">Jornal da Cultura</option>
+                </select>
+            </div>
 
-  <h1 class="pagina-titulo" id="tituloPrograma">Programa</h1>
-  <p class="pagina-status" id="statusPrograma">Carregando…</p>
-  <ul class="lista-itens" id="listaConteudo" aria-live="polite"></ul>
+            <div class="grupo-filtro">
+                <input 
+                    type="text" 
+                    name="q" 
+                    placeholder="Palavra-chave adicional (opcional)..." 
+                    class="input-busca"
+                >
+            </div>
 
-  <!-- Papa Parse: necessário para dados.js ler as planilhas em CSV -->
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <script src="../js/dados.js"></script>
-  <script src="../js/catalogo-ui.js"></script>
-  <script>
-    // Nome de exibição de cada programa a partir do slug na URL
-    const NOMES_PROGRAMAS = {
-      "agrocultura": "Agrocultura",
-      "mdc": "Matéria de Capa",
-      "reporter-eco": "Repórter Eco",
-      "documentarios": "Documentários",
-      "jornal-da-cultura": "Jornal da Cultura",
-      "jornal-da-tarde": "Jornal da Tarde",
-      "roda-viva": "Roda Viva",
-      "opiniao": "Opinião",
-      "cartao-verde": "Cartão Verde",
-      "de-olho-no-voto": "De olho no voto",
-      "linhas-cruzadas": "Linhas Cruzadas",
-      "esta-manha": "Esta Manhã",
-      "legiao-estrangeira": "Legião Estrangeira",
-      "giro-economico": "Giro Econômico",
-    };
-
-    const params = new URLSearchParams(window.location.search);
-    const slug = params.get("programa");
-    const idFoco = params.get("id");
-    const nomePrograma = NOMES_PROGRAMAS[slug] || "Programa não encontrado";
-
-    document.title = `${nomePrograma} — Catálogo de Mídias`;
-    document.getElementById("tituloPrograma").textContent = nomePrograma;
-
-    const statusEl = document.getElementById("statusPrograma");
-    const listaEl = document.getElementById("listaConteudo");
-
-    if (!slug || !NOMES_PROGRAMAS[slug]) {
-      statusEl.textContent = "Programa não encontrado.";
-    } else {
-      carregarTodosOsDados()
-        .then((todos) => {
-          const itensDoPrograma = todos.filter((item) => item.programa === slug);
-          statusEl.textContent = `${itensDoPrograma.length} item(ns) neste programa.`;
-          renderizarLista(listaEl, itensDoPrograma);
-          if (idFoco) {
-            const alvo = document.getElementById(`item-${idFoco}`);
-            if (alvo) alvo.scrollIntoView({ behavior: "smooth", block: "center" });
-          }
-        })
-        .catch(() => {
-          statusEl.textContent = "Não foi possível carregar os dados agora. Tente novamente em instantes.";
-        });
-    }
-  </script>
+            <button type="submit" class="btn-buscar">Filtrar Acervo</button>
+        </form>
+    </main>
 </body>
 </html>
