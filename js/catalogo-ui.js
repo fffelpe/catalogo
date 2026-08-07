@@ -1,4 +1,3 @@
-// js/catalogo-ui.js
 import { buscarTodasAsMidias, filtrarMidias } from './dados.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
