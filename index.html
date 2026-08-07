@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:400,500&display=swap" rel="stylesheet" />
-  <link href="./css/main.css" rel="stylesheet" />
-  <title>Catálogo de Mídias — Jornalismo</title>
-  <link rel="icon" href="images/favicon.ico" type="image/png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Mídias - Início</title>
+    <!-- Mantenha o caminho do seu CSS original -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header class="cabecalho">
-    <a href="./index.html" class="marca">
-      <img src="./images/logo.png" class="marca-logo" width="64" height="64" alt="" />
-    </a>
-    <div class="marca-titulo">
-      <span class="titulo">CATÁLOGO DE MÍDIAS</span>
-      <span class="subtitulo">JORNALISMO</span>
-    </div>
-    <a href="./pages/login.html" class="login">Login</a>
-  </header>
+    <!-- Substitua as classes abaixo pelas classes do seu layout original -->
+    <header class="header-principal">
+        <h1>Catálogo de Mídias</h1>
+        <p>Busque no acervo completo (imgs.csv)</p>
+    </header>
 
-  <form class="busca" action="./pages/resultado-busca.html" method="get">
-    <img src="./images/lupa.png" class="busca-icone" width="22" height="20" alt="" />
-    <label for="q" class="sr-only">Pesquisar</label>
-    <input type="search" id="q" name="q" placeholder="Pesquisar EX: queimadas" autocomplete="off" />
-  </form>
+    <main class="container-busca">
+        <!-- O formulário DEVE ter a action apontando para a página de resultados -->
+        <form action="pages/resultado-busca.html" method="GET" class="form-busca">
+            <input 
+                type="text" 
+                name="q" 
+                placeholder="Digite a palavra-chave, ID ou repórter..." 
+                required 
+                class="input-busca"
+            >
+            <button type="submit" class="btn-buscar">Buscar</button>
+        </form>
+    </main>
 
-  <nav class="menu-programas" aria-label="Programas">
-    <a href="./pages/programa.html?programa=agrocultura">Agrocultura</a>
-    <a href="./pages/programa.html?programa=mdc">Matéria de Capa</a>
-    <a href="./pages/programa.html?programa=reporter-eco">Repórter Eco</a>
-    <a href="./pages/programa.html?programa=documentarios">Documentários</a>
-    <a href="./pages/programa.html?programa=jornal-da-cultura">Jornal da Cultura</a>
-    <a href="./pages/programa.html?programa=jornal-da-tarde">Jornal da Tarde</a>
-    <a href="./pages/programa.html?programa=roda-viva">Roda Viva</a>
-    <a href="./pages/programa.html?programa=opiniao">Opinião</a>
-    <a href="./pages/programa.html?programa=cartao-verde">Cartão Verde</a>
-    <a href="./pages/programa.html?programa=de-olho-no-voto">De olho no voto</a>
-    <a href="./pages/programa.html?programa=linhas-cruzadas">Linhas Cruzadas</a>
-    <a href="./pages/programa.html?programa=esta-manha">Esta Manhã</a>
-    <a href="./pages/programa.html?programa=legiao-estrangeira">Legião Estrangeira</a>
-    <a href="./pages/programa.html?programa=giro-economico">Giro Econômico</a>
-  </nav>
+    <footer class="footer-principal">
+        <p>Sistema de Catálogo Jornalístico</p>
+    </footer>
 </body>
 </html>
