@@ -1,28 +1,32 @@
-import { buscarTodasAsMidias, filtrarMidias } from './dados.js';
+// Substitua o conteúdo no seu arquivo js/catalogo-ui.js
 
-document.addEventListener('DOMContentLoaded', async () => {
-  const containerResultados = document.getElementById('lista-resultados') || document.getElementById('container-midias');
-  const loader = document.getElementById('loader') || document.getElementById('loading');
+const URL_API_GOOGLE = "https://script.google.com/d/1a_iQeDkuS2OE--nFpY88qYkf3KHqD7l3d3R4LxgjaCqksJMHYqslmXpS/edit?usp=sharing";
+
+document.addEventListener('DOMContentLoaded', () => {
   const inputBusca = document.getElementById('input-busca');
-  
-  const params = new URLSearchParams(window.location.search);
-  const programaParam = params.get('programa') || params.get('nome');
-  const buscaParam = params.get('q') || params.get('busca');
+  const container = document.getElementById('grid-resultados');
+  const loader = document.getElementById('loader');
 
-  function exibirLoader(ativo) {
-    if (loader) loader.style.display = ativo ? 'block' : 'none';
+  async function pesquisarMídia(termo) {
+    if (loader) loader.style.display = 'block';
+    
+    try {
+      const resposta = await fetch(`${URL_API_GOOGLE}?q=${encodeURIComponent(termo)}`);
+      const dados = await resposta.json();
+      
+      renderizar(dados);
+    } catch (erro) {
+      console.error("Erro ao buscar dados na API:", erro);
+      container.innerHTML = '<p>Erro ao carregar o catálogo. Tente novamente.</p>';
+    } finally {
+      if (loader) loader.style.display = 'none';
+    }
   }
 
-  function renderizarItens(itens) {
-    if (!containerResultados) return;
-    containerResultados.innerHTML = '';
-
+  function renderizar(itens) {
+    container.innerHTML = '';
     if (itens.length === 0) {
-      containerResultados.innerHTML = `
-        <div class="sem-resultados">
-          <p>Nenhuma mídia ou ID foi localizado para esta pesquisa.</p>
-        </div>
-      `;
+      container.innerHTML = '<p>Nenhum resultado encontrado.</p>';
       return;
     }
 
@@ -30,49 +34,20 @@ document.addEventListener('DOMContentLoaded', async () => {
       const card = document.createElement('div');
       card.className = 'card-midia';
       card.innerHTML = `
-        <div class="card-header">
-          <span class="badge-id">${item.id}</span>
-          <button class="btn-copiar" data-id="${item.id}">Copiar ID</button>
-        </div>
-        <h3>${item.titulo}</h3>
-        <p><strong>Programa:</strong> ${item.programa}</p>
-        ${item.data ? `<p><strong>Data:</strong> ${item.data}</p>` : ''}
-        ${item.link && item.link !== '#' ? `<a href="${item.link}" target="_blank" rel="noopener">Acessar Mídia</a>` : ''}
+        <div class="card-topo"><strong>ID:</strong> ${item.id} | <strong>Data:</strong> ${item.data}</div>
+        <div class="card-corpo"><p>${item.descricao}</p></div>
+        <div class="card-rodape"><strong>Repórter:</strong> ${item.reporter} | <strong>Local:</strong> ${item.local}</div>
       `;
-      containerResultados.appendChild(card);
-    });
-
-    // Evento de copiar ID
-    document.querySelectorAll('.btn-copiar').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const id = e.target.getAttribute('data-id');
-        navigator.clipboard.writeText(id);
-        e.target.innerText = 'Copiado!';
-        setTimeout(() => e.target.innerText = 'Copiar ID', 2000);
-      });
+      container.appendChild(card);
     });
   }
 
-  exibirLoader(true);
-  try {
-    const todasAsMidias = await buscarTodasAsMidias();
-    const filtrados = filtrarMidias(todasAsMidias, buscaParam, programaParam);
-    renderizarItens(filtrados);
-  } catch (err) {
-    console.error("Erro na interface:", err);
-    if (containerResultados) {
-      containerResultados.innerHTML = '<p class="erro">Ocorreu um erro ao carregar os dados. Tente novamente.</p>';
-    }
-  } finally {
-    exibirLoader(false);
-  }
-
-  if (inputBusca) {
-    inputBusca.addEventListener('input', async (e) => {
-      const termo = e.target.value;
-      const todasAsMidias = await buscarTodasAsMidias();
-      const filtrados = filtrarMidias(todasAsMidias, termo, programaParam);
-      renderizarItens(filtrados);
-    });
-  }
+  // Pesquisa automaticamente ao digitar
+  let timeoutId;
+  inputBusca.addEventListener('input', (e) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      pesquisarMídia(e.target.value);
+    }, 500); // Aguarda 500ms para evitar requisições desnecessárias enquanto o usuário digita
+  });
 });
