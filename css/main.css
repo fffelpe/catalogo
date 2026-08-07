@@ -26,7 +26,7 @@ a {
   border: 0;
 }
 
-/* ---------- cabeçalho ---------- */
+/* ---------- cabeçalho (home) ---------- */
 .cabecalho {
   display: flex;
   align-items: center;
@@ -64,7 +64,7 @@ a {
   white-space: nowrap;
 }
 
-/* ---------- barra de busca ---------- */
+/* ---------- barra de busca (home) ---------- */
 .busca {
   display: flex;
   align-items: center;
@@ -96,7 +96,7 @@ a {
   opacity: 1;
 }
 
-/* ---------- menu de programas ---------- */
+/* ---------- menu de programas (home) ---------- */
 .menu-programas {
   display: flex;
   flex-wrap: wrap;
@@ -116,6 +116,13 @@ a {
 .menu-programas a:focus-visible {
   color: #00953b;
   text-decoration: underline;
+}
+
+.footer-principal {
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  padding: 24px clamp(16px, 4vw, 32px) 40px;
 }
 
 /* ==========================================================================
@@ -177,14 +184,16 @@ a {
   padding: 0 clamp(16px, 4vw, 32px);
   font-size: clamp(22px, 3vw, 28px);
   font-weight: 500;
+  margin: 8px 0 0;
 }
 
 .pagina-status {
   padding: 0 clamp(16px, 4vw, 32px);
   color: #666;
+  margin: 4px 0 0;
 }
 
-/* ---------- lista de resultados (sem cards: linhas simples separadas por régua) ---------- */
+/* ---------- lista de resultados (um "registro" por item, sem cards decorativos) ---------- */
 .lista-itens {
   list-style: none;
   margin: 16px clamp(16px, 4vw, 32px) 48px;
@@ -193,11 +202,7 @@ a {
 }
 
 .item-midia {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 16px;
-  padding: 14px 4px;
+  padding: 16px 4px;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -205,20 +210,23 @@ a {
   background: #f6fbf8;
 }
 
+.item-cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 16px;
+}
+
 .item-id {
   font-weight: 600;
+  color: #00953b;
   min-width: 90px;
 }
 
 .item-assunto {
   flex: 1 1 260px;
   min-width: 0;
-}
-
-.item-meta {
-  color: #666;
-  font-size: 14px;
-  white-space: nowrap;
+  font-weight: 500;
 }
 
 .item-acoes {
@@ -248,4 +256,97 @@ a {
 .item-acoes button.copiado {
   border-color: #00953b;
   color: #00953b;
+}
+
+/* Corpo do item: as 7 colunas restantes (DATA, LOCAL, REPÓRTER, AFILIADA,
+   EMISSORA, PROGRAMA, EDITORIA), em grade responsiva */
+.item-corpo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px 24px;
+  margin-top: 10px;
+}
+
+.item-campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.item-campo-rotulo {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #888;
+}
+
+.item-campo-valor {
+  font-size: 14px;
+  color: #222;
+  overflow-wrap: anywhere;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+
+.btn-carregar-mais {
+  font-family: inherit;
+  font-size: 15px;
+  border: 1px solid #00953b;
+  color: #00953b;
+  background: #fff;
+  border-radius: 24px;
+  padding: 10px 28px;
+  cursor: pointer;
+}
+
+.btn-carregar-mais:hover {
+  background: #00953b;
+  color: #fff;
+}
+
+/* ==========================================================================
+   Responsividade
+   ========================================================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .pagina-cabecalho {
+    flex-wrap: wrap;
+  }
+
+  .item-corpo {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .busca,
+  .pagina-busca {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .item-cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-acoes {
+    margin-left: 0;
+  }
+
+  .item-corpo {
+    grid-template-columns: 1fr 1fr;
+  }
 }

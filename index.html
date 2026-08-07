@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Mídias - Início</title>
-    <!-- Mantenha o caminho do seu CSS original -->
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Mídias — Jornalismo TV Cultura</title>
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <!-- Substitua as classes abaixo pelas classes do seu layout original -->
-    <header class="header-principal">
-        <h1>Catálogo de Mídias</h1>
-        <p>Busque no acervo completo (imgs.csv)</p>
-    </header>
+  <header class="cabecalho">
+    <div class="marca-titulo">
+      <span class="titulo">Catálogo de Mídias</span>
+      <span class="subtitulo">Jornalismo — TV Cultura</span>
+    </div>
+  </header>
 
-    <main class="container-busca">
-        <!-- O formulário DEVE ter a action apontando para a página de resultados -->
-        <form action="pages/resultado-busca.html" method="GET" class="form-busca">
-            <input 
-                type="text" 
-                name="q" 
-                placeholder="Digite a palavra-chave, ID ou repórter..." 
-                required 
-                class="input-busca"
-            >
-            <button type="submit" class="btn-buscar">Buscar</button>
-        </form>
-    </main>
+  <main>
+    <form action="pages/resultado-busca.html" method="GET" class="busca" role="search">
+      <span class="busca-icone" aria-hidden="true">🔍</span>
+      <label for="campoBusca" class="sr-only">Buscar no acervo</label>
+      <input
+        type="text"
+        id="campoBusca"
+        name="q"
+        placeholder="Digite a palavra-chave, ID ou repórter…"
+        required
+        class="input-busca"
+      />
+      <button type="submit" class="btn-buscar sr-only">Buscar</button>
+    </form>
 
-    <footer class="footer-principal">
-        <p>Sistema de Catálogo Jornalístico</p>
-    </footer>
+    <!--
+      Menu de programas: cada item aponta para pages/programa.html?programa=NOME
+      O valor de "programa" precisa ser IDÊNTICO (sem diferenciar maiúsculas/minúsculas)
+      ao texto que aparece na coluna PROGRAMA da planilha, para o filtro funcionar.
+      Complete a lista abaixo com os ~14 programas do departamento de jornalismo.
+    -->
+    <nav class="menu-programas" aria-label="Programas">
+      <a href="pages/programa.html?programa=AGROCULTURA">Agrocultura</a>
+      <a href="pages/programa.html?programa=RODA VIVA">Roda Viva</a>
+      <a href="pages/programa.html?programa=JORNAL DA CULTURA">Jornal da Cultura</a>
+      <a href="pages/programa.html?programa=REPÓRTER ECO">Repórter Eco</a>
+      <a href="pages/programa.html?programa=JORNAL DA TARDE">Jornal da Tarde</a>
+      <!-- adicione aqui os demais programas -->
+    </nav>
+  </main>
+
+  <footer class="footer-principal">
+    <p>Sistema de Catálogo Jornalístico — TV Cultura</p>
+  </footer>
 </body>
 </html>

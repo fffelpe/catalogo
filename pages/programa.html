@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo - Busca por Programa</title>
-    <link rel="stylesheet" href="../css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Mídias — Programa</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
-    <header class="header-principal">
-        <nav>
-            <a href="../index.html">Voltar para o Início</a>
-        </nav>
-        <h1>Filtro por Programa</h1>
-    </header>
+  <header class="pagina-cabecalho">
+    <div class="pagina-logo">
+      <div>
+        <span class="pagina-logo-titulo">Catálogo de Mídias</span>
+        <span class="pagina-logo-subtitulo">Acervo por programa</span>
+      </div>
+    </div>
+    <a href="../index.html">Voltar para o início</a>
+  </header>
 
-    <main class="container-filtros">
-        <!-- O formulário envia os parâmetros para a página de resultados -->
-        <form action="resultado-busca.html" method="GET" class="form-busca-avancada">
-            
-            <div class="grupo-filtro">
-                <label for="programa">Selecione o Programa:</label>
-                <select name="programa" id="programa" class="select-programa">
-                    <option value="">Todos</option>
-                    <option value="JORNAL DA TARDE">Jornal da Tarde</option>
-                    <option value="AGROCULTURA">Agrocultura</option>
-                    <option value="JORNAL DA CULTURA">Jornal da Cultura</option>
-                </select>
-            </div>
+  <div class="pagina-busca">
+    <label for="searchInput" class="sr-only">Refinar busca dentro do programa</label>
+    <input type="text" id="searchInput" placeholder="Refinar busca dentro do programa…" />
+  </div>
 
-            <div class="grupo-filtro">
-                <input 
-                    type="text" 
-                    name="q" 
-                    placeholder="Palavra-chave adicional (opcional)..." 
-                    class="input-busca"
-                >
-            </div>
+  <!-- pageTitle é preenchido dinamicamente com o nome do programa (via ?programa=) -->
+  <h2 id="pageTitle" class="pagina-titulo">Programa</h2>
+  <p id="pageStatus" class="pagina-status">Carregando…</p>
 
-            <button type="submit" class="btn-buscar">Filtrar Acervo</button>
-        </form>
-    </main>
+  <ul id="resultsContainer" class="lista-itens">
+    <p>Carregando acervo…</p>
+  </ul>
+
+  <div class="paginacao">
+    <button id="loadMoreBtn" class="btn-carregar-mais" style="display: none">
+      Carregar mais resultados
+    </button>
+  </div>
+
+  <script src="../js/dados.js"></script>
+  <script src="../js/catalogo-ui.js"></script>
 </body>
 </html>

@@ -1,49 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados da Busca - Catálogo</title>
-    <link rel="stylesheet" href="../css/main.css">
-    
-    <!-- IMPORTANTE: Biblioteca para ler o imgs.csv de forma rápida e sem travar -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resultados da Busca — Catálogo de Mídias</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
-    <header class="header-principal">
-        <nav>
-            <a href="../index.html">Voltar para o Início</a>
-        </nav>
-        <h1>Resultados da Busca</h1>
-    </header>
+  <header class="pagina-cabecalho">
+    <div class="pagina-logo">
+      <div>
+        <span class="pagina-logo-titulo">Catálogo de Mídias</span>
+        <span class="pagina-logo-subtitulo">Resultado da busca</span>
+      </div>
+    </div>
+    <a href="../index.html">Voltar para o início</a>
+  </header>
 
-    <main class="container-resultados">
-        <!-- Barra de nova busca na própria página de resultados (Note o id="searchInput") -->
-        <div class="busca-interna">
-            <input 
-                type="text" 
-                id="searchInput" 
-                placeholder="Refinar busca atual..." 
-                class="input-busca"
-            >
-        </div>
+  <div class="pagina-busca">
+    <label for="searchInput" class="sr-only">Refinar busca</label>
+    <input type="text" id="searchInput" placeholder="Refinar busca atual…" />
+  </div>
 
-        <!-- IMPORTANTE: A div com id="resultsContainer" é onde o JavaScript vai injetar os itens -->
-        <!-- Mantenha a sua classe de grid/layout original na tag class -->
-        <div id="resultsContainer" class="sua-classe-css-de-grid">
-            <p>Carregando acervo...</p>
-        </div>
+  <h2 id="pageTitle" class="pagina-titulo">Resultados</h2>
+  <p id="pageStatus" class="pagina-status">Carregando…</p>
 
-        <!-- Botão para paginação (Evita travamentos renderizando tudo de uma vez) -->
-        <div class="paginacao">
-            <button id="loadMoreBtn" class="btn-carregar-mais" style="display:none;">
-                Carregar mais resultados
-            </button>
-        </div>
-    </main>
+  <ul id="resultsContainer" class="lista-itens">
+    <p>Carregando acervo…</p>
+  </ul>
 
-    <!-- IMPORTANTE: Os scripts lógicos devem ser chamados no final do body -->
-    <script src="../js/dados.js"></script>
-    <script src="../js/catalogo-ui.js"></script>
+  <div class="paginacao">
+    <button id="loadMoreBtn" class="btn-carregar-mais" style="display: none">
+      Carregar mais resultados
+    </button>
+  </div>
+
+  <script src="../js/dados.js"></script>
+  <script src="../js/catalogo-ui.js"></script>
 </body>
 </html>

@@ -1,96 +1,173 @@
-// catalogo-ui.js - Gerencia a renderização no DOM
+// catalogo-ui.js — Gerencia a renderização no DOM
+// Funciona tanto em pages/resultado-busca.html (busca por ?q=) quanto em
+// pages/programa.html (filtro por ?programa=, com refino opcional por ?q=)
 
 let resultadosAtuais = [];
 let paginaAtual = 0;
 const ITENS_POR_PAGINA = 50;
 
-// Função Debounce para não travar enquanto o usuário digita
-function debounce(func, timeout = 300){
+const CAMPOS_DETALHE = [
+  { chave: "DATA", rotulo: "Data" },
+  { chave: "LOCAL", rotulo: "Local" },
+  { chave: "REPÓRTER", rotulo: "Repórter" },
+  { chave: "AFILIADA", rotulo: "Afiliada" },
+  { chave: "EMISSORA", rotulo: "Emissora" },
+  { chave: "PROGRAMA", rotulo: "Programa" },
+  { chave: "EDITORIA", rotulo: "Editoria" },
+];
+
+function debounce(func, timeout = 300) {
   let timer;
   return (...args) => {
     clearTimeout(timer);
-    timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
   };
 }
 
-async function inicializarBusca() {
-    // Pega o termo da URL (ex: resultado-busca.html?q=capivara)
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('q') || '';
-    
-    const searchInput = document.getElementById('searchInput');
-    if(searchInput) searchInput.value = query;
-
-    // Mostra um loading visual (se existir a div)
-    const container = document.getElementById('resultsContainer');
-    if(container) container.innerHTML = '<p>Carregando acervo do imgs.csv...</p>';
-
-    // Carrega os dados
-    await DadosMedia.carregarCSV();
-    
-    // Faz a busca inicial
-    executarBusca(query);
-
-    // Configura o evento de digitação na barra de busca (se ela existir na página de resultados)
-    if(searchInput) {
-        searchInput.addEventListener('input', debounce((e) => {
-            executarBusca(e.target.value);
-        }));
-    }
-    
-    // Configura o botão de "Carregar Mais"
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    if(loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', renderizarProximaPagina);
-    }
+function escapeHTML(valor) {
+  const div = document.createElement("div");
+  div.textContent = valor ?? "";
+  return div.innerHTML;
 }
 
-function executarBusca(termo) {
-    resultadosAtuais = DadosMedia.buscar(termo);
-    paginaAtual = 0;
-    
-    const container = document.getElementById('resultsContainer');
-    if(container) container.innerHTML = ''; // Limpa os resultados anteriores
-    
-    renderizarProximaPagina();
+async function inicializarBusca() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get("q") || "";
+  const programa = urlParams.get("programa") || "";
+
+  const searchInput = document.getElementById("searchInput");
+  if (searchInput) searchInput.value = query;
+
+  // Título/estado da página, quando existirem os elementos
+  const titulo = document.getElementById("pageTitle");
+  const status = document.getElementById("pageStatus");
+  if (titulo && programa) {
+    titulo.textContent = programa;
+  }
+
+  const container = document.getElementById("resultsContainer");
+  if (container) container.innerHTML = "<p>Carregando acervo da planilha…</p>";
+
+  try {
+    await DadosMedia.carregarCSV();
+  } catch (err) {
+    if (container) {
+      container.innerHTML =
+        "<p>Não foi possível carregar a planilha. Verifique se ela ainda está publicada em Arquivo &gt; Compartilhar &gt; Publicar na Web.</p>";
+    }
+    if (status) status.textContent = "Erro ao carregar dados.";
+    return;
+  }
+
+  executarBusca(query, programa);
+
+  if (searchInput) {
+    searchInput.addEventListener(
+      "input",
+      debounce((e) => {
+        const novoPrograma = new URLSearchParams(window.location.search).get(
+          "programa"
+        );
+        executarBusca(e.target.value, novoPrograma || "");
+      })
+    );
+  }
+
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", renderizarProximaPagina);
+  }
+}
+
+function executarBusca(termo, programa) {
+  resultadosAtuais = DadosMedia.buscarComPrograma(termo, programa);
+  paginaAtual = 0;
+
+  const container = document.getElementById("resultsContainer");
+  if (container) container.innerHTML = "";
+
+  const status = document.getElementById("pageStatus");
+  if (status) {
+    const quantidade = resultadosAtuais.length;
+    status.textContent =
+      quantidade === 1
+        ? "1 resultado encontrado"
+        : `${quantidade} resultados encontrados`;
+  }
+
+  renderizarProximaPagina();
+}
+
+function renderizarItem(item) {
+  const li = document.createElement("li");
+  li.className = "item-midia";
+  li.id = `item-${item.ID}`;
+
+  const camposHtml = CAMPOS_DETALHE.map(
+    ({ chave, rotulo }) => `
+      <div class="item-campo">
+        <span class="item-campo-rotulo">${rotulo}</span>
+        <span class="item-campo-valor">${escapeHTML(item[chave]) || "—"}</span>
+      </div>`
+  ).join("");
+
+  li.innerHTML = `
+    <div class="item-cabecalho">
+      <span class="item-id">${escapeHTML(item.ID)}</span>
+      <span class="item-assunto">${escapeHTML(item["DESCRIÇÃO"]) || "Sem descrição"}</span>
+      <div class="item-acoes">
+        <button type="button" class="btn-copiar-id" data-id="${escapeHTML(item.ID)}">
+          Copiar ID
+        </button>
+      </div>
+    </div>
+    <div class="item-corpo">${camposHtml}</div>
+  `;
+
+  const btnCopiar = li.querySelector(".btn-copiar-id");
+  btnCopiar.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(item.ID);
+      btnCopiar.textContent = "Copiado!";
+      btnCopiar.classList.add("copiado");
+      setTimeout(() => {
+        btnCopiar.textContent = "Copiar ID";
+        btnCopiar.classList.remove("copiado");
+      }, 1500);
+    } catch (err) {
+      console.error("Não foi possível copiar o ID:", err);
+    }
+  });
+
+  return li;
 }
 
 function renderizarProximaPagina() {
-    const container = document.getElementById('resultsContainer');
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    if(!container) return;
+  const container = document.getElementById("resultsContainer");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  if (!container) return;
 
-    const inicio = paginaAtual * ITENS_POR_PAGINA;
-    const fim = inicio + ITENS_POR_PAGINA;
-    const itensParaRenderizar = resultadosAtuais.slice(inicio, fim);
+  const inicio = paginaAtual * ITENS_POR_PAGINA;
+  const fim = inicio + ITENS_POR_PAGINA;
+  const itensParaRenderizar = resultadosAtuais.slice(inicio, fim);
 
-    if (itensParaRenderizar.length === 0 && paginaAtual === 0) {
-        container.innerHTML = '<p>Nenhum resultado encontrado no imgs.csv.</p>';
-        if(loadMoreBtn) loadMoreBtn.style.display = 'none';
-        return;
-    }
+  if (itensParaRenderizar.length === 0 && paginaAtual === 0) {
+    container.innerHTML = "<p>Nenhum resultado encontrado no acervo.</p>";
+    if (loadMoreBtn) loadMoreBtn.style.display = "none";
+    return;
+  }
 
-    // AQUI VOCÊ MANTÉM SUA ESTRUTURA DE CLASSES CSS INTACTA
-    // Substitua as classes abaixo pelas classes reais que você usa no seu layout
-    itensParaRenderizar.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'seu-card-css-aqui'; // <-- Mantenha a classe original do seu layout
-        
-        card.innerHTML = `
-            <h3>ID: ${item.ID}</h3>
-            <p>${item.DESCRIÇÃO}</p>
-            <small>Data: ${item.DATA} | Programa: ${item.PROGRAMA}</small>
-        `;
-        container.appendChild(card);
-    });
+  const fragmento = document.createDocumentFragment();
+  itensParaRenderizar.forEach((item) => fragmento.appendChild(renderizarItem(item)));
+  container.appendChild(fragmento);
 
-    paginaAtual++;
+  paginaAtual++;
 
-    // Mostra ou esconde o botão de carregar mais
-    if(loadMoreBtn) {
-        loadMoreBtn.style.display = (fim < resultadosAtuais.length) ? 'block' : 'none';
-    }
+  if (loadMoreBtn) {
+    loadMoreBtn.style.display = fim < resultadosAtuais.length ? "block" : "none";
+  }
 }
 
-// Inicia o script quando a página carregar
-document.addEventListener('DOMContentLoaded', inicializarBusca);
+document.addEventListener("DOMContentLoaded", inicializarBusca);
