@@ -6,7 +6,7 @@ const DadosMedia = {
 
   // URL de exportação em CSV da planilha "imgs" (compartilhada como "Qualquer pessoa com o link pode ver").
   // Padrão: /spreadsheets/d/ID_DA_PLANILHA/export?format=csv&gid=ID_DA_ABA
-  CSV_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR2OEG80BFtybMx8s_f8LQBcFB0ABufM9eVtLNEyRbqndaKdXEozzt_A969NEX_Iv2vdPYSvQU_P2FP/pub?gid=0&single=true&output=csv",
+  CSV_URL: "https://docs.google.com/spreadsheets/d/1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs/export?format=csv&gid=0",
 
   async carregarCSV() {
     if (this.carregado) return this.registros;
@@ -17,7 +17,9 @@ const DadosMedia = {
         header: true,
         skipEmptyLines: true,
         complete: (results) => {
-          this.registros = results.data.map(this._normalizar);
+          this.registros = results.data
+            .map(this._normalizar)
+            .sort(this._compararPorDataDesc);
           this.carregado = true;
           resolve(this.registros);
         },
@@ -54,7 +56,43 @@ const DadosMedia = {
     };
   },
 
-  // Busca livre em todas as colunas
+  // Converte o texto da coluna DATA em um objeto Date, aceitando DD/MM/AAAA,
+  // DD-MM-AAAA e AAAA-MM-DD (com ano de 2 ou 4 dígitos). Retorna null se não
+  // conseguir interpretar, para que o registro não quebre a ordenação.
+  _parseData(dataStr) {
+    if (!dataStr) return null;
+    const str = dataStr.trim();
+
+    let m = str.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})/);
+    if (m) {
+      let [, d, mo, y] = m;
+      if (y.length === 2) y = (Number(y) < 50 ? "20" : "19") + y;
+      const date = new Date(Number(y), Number(mo) - 1, Number(d));
+      if (!isNaN(date.getTime())) return date;
+    }
+
+    m = str.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+    if (m) {
+      const [, y, mo, d] = m;
+      const date = new Date(Number(y), Number(mo) - 1, Number(d));
+      if (!isNaN(date.getTime())) return date;
+    }
+
+    const fallback = new Date(str);
+    return isNaN(fallback.getTime()) ? null : fallback;
+  },
+
+  // Ordena do mais recente para o mais antigo. Datas inválidas/vazias vão para o final.
+  _compararPorDataDesc(a, b) {
+    const da = DadosMedia._parseData(a.DATA);
+    const db = DadosMedia._parseData(b.DATA);
+    if (da && db) return db - da;
+    if (da && !db) return -1;
+    if (!da && db) return 1;
+    return 0;
+  },
+
+  // Busca livre em todas as colunas (mantém a ordem por data já aplicada em registros)
   buscar(termo) {
     if (!termo) return this.registros;
     const q = termo.toLowerCase();

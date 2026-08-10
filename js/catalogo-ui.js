@@ -92,18 +92,19 @@ function renderizarProximaPagina() {
     return;
   }
 
+  // data-label em cada <td> permite empilhar a tabela em telas pequenas (ver main.css)
   const frag = document.createDocumentFragment();
   itensParaRenderizar.forEach((item) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${escapeHtml(item.ID)}</td>
-      <td>${escapeHtml(item.DESCRICAO)}</td>
-      <td>${escapeHtml(item.DATA)}</td>
-      <td>${escapeHtml(item.LOCAL)}</td>
-      <td>${escapeHtml(item.REPORTER)}</td>
-      <td>${escapeHtml(item.AFILIADA_EMISSORA)}</td>
-      <td>${escapeHtml(item.PROGRAMA)}</td>
-      <td>${escapeHtml(item.EDITORIA)}</td>
+      <td data-label="ID">${escapeHtml(item.ID)}</td>
+      <td data-label="Descrição">${escapeHtml(item.DESCRICAO)}</td>
+      <td data-label="Data">${escapeHtml(item.DATA)}</td>
+      <td data-label="Local">${escapeHtml(item.LOCAL)}</td>
+      <td data-label="Repórter">${escapeHtml(item.REPORTER)}</td>
+      <td data-label="Afiliada / Emissora">${escapeHtml(item.AFILIADA_EMISSORA)}</td>
+      <td data-label="Programa">${escapeHtml(item.PROGRAMA)}</td>
+      <td data-label="Editoria">${escapeHtml(item.EDITORIA)}</td>
     `;
     frag.appendChild(tr);
   });

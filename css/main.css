@@ -194,7 +194,57 @@ a { color: #000; text-decoration: none; }
 }
 
 /* ---------- responsividade ---------- */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .site-header { flex-wrap: wrap; }
-  .results-table { min-width: 700px; }
+
+  /* Em telas pequenas a tabela vira uma lista empilhada (rótulo: valor)
+     em vez de rolar horizontalmente — mais fácil de ler no celular,
+     sem virar "card" decorativo (mesma paleta, só sem grade). */
+  .table-wrap { overflow-x: visible; }
+
+  .results-table { min-width: 0; width: 100%; }
+
+  .results-table thead { display: none; }
+
+  .results-table,
+  .results-table tbody,
+  .results-table tr,
+  .results-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .results-table tr {
+    border: 1px solid #000;
+    margin-bottom: 14px;
+  }
+
+  .results-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: right;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 12px;
+  }
+
+  .results-table td:last-child { border-bottom: none; }
+
+  .results-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    text-align: left;
+    flex-shrink: 0;
+  }
+
+  /* Linha "Nenhum resultado" / "Carregando" não deve virar rótulo:valor */
+  .results-table td[colspan] {
+    display: block;
+    text-align: left;
+  }
+  .results-table td[colspan]::before {
+    content: "";
+  }
 }
