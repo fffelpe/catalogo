@@ -6,7 +6,7 @@ const DadosMedia = {
 
   // URL de exportação em CSV da planilha "imgs" (compartilhada como "Qualquer pessoa com o link pode ver").
   // Padrão: /spreadsheets/d/ID_DA_PLANILHA/export?format=csv&gid=ID_DA_ABA
-  CSV_URL: "https://docs.google.com/spreadsheets/d/1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs/export?format=csv&gid=0",
+  CSV_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR2OEG80BFtybMx8s_f8LQBcFB0ABufM9eVtLNEyRbqndaKdXEozzt_A969NEX_Iv2vdPYSvQU_P2FP/pub?gid=0&single=true&output=csv",
 
   async carregarCSV() {
     if (this.carregado) return this.registros;
