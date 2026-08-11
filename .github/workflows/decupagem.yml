@@ -1,0 +1,27 @@
+name: Decupagem Automática
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'   # roda a cada 2 horas
+  workflow_dispatch:          # permite rodar manualmente pelo botão no GitHub
+
+jobs:
+  decupar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: pip install -r automation/requirements.txt
+
+      - name: Rodar decupagem
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: python automation/decupagem.py
