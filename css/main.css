@@ -1,3 +1,176 @@
+/* ==========================================================================
+   Catálogo de Mídias — TV Cultura
+   Fiel ao layout das telas: início, resultado da busca e página de programa.
+   ========================================================================== */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans JP", Arial, sans-serif;
+  color: #000;
+  background: #fff;
+}
+
+a { color: #000; text-decoration: none; }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* ---------- cabeçalho (comum a todas as páginas) ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px clamp(16px, 4vw, 48px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-icon {
+  width: clamp(40px, 6vw, 56px);
+  height: auto;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.titulo {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 500;
+}
+
+.subtitulo {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+}
+
+.login-link {
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.login-link:hover,
+.login-link:focus-visible {
+  color: #00953b;
+}
+
+/* ---------- conteúdo das páginas ---------- */
+.pagina-inicial,
+.pagina-resultados {
+  padding: 0 clamp(16px, 4vw, 48px) 48px;
+}
+
+/* ---------- barra de busca (arredondada, cinza clara) ---------- */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 720px;
+  margin: 0 auto 32px;
+  padding: 14px 22px;
+  background: #e4e4e4;
+  border: 1px solid #000;
+  border-radius: 28px;
+}
+
+.search-icon { flex-shrink: 0; }
+
+.search-input {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  outline: 0;
+  font-family: inherit;
+  font-size: 16px;
+  color: #000;
+  min-width: 0;
+}
+
+.search-input::placeholder {
+  color: #444;
+  opacity: 1;
+}
+
+/* ---------- menu de programas (página inicial) ---------- */
+.programs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px clamp(20px, 3vw, 40px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.programs-nav a {
+  font-size: clamp(16px, 1.8vw, 20px);
+  padding: 4px 2px;
+}
+
+.programs-nav a:hover,
+.programs-nav a:focus-visible {
+  color: #00953b;
+  text-decoration: underline;
+}
+
+/* ---------- título e status (resultado-busca.html / programa.html) ---------- */
+.page-title {
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 500;
+  margin: 24px 0 4px;
+}
+
+.status-busca {
+  color: #666;
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+
+/* ---------- tabela de resultados (8 colunas da planilha) ---------- */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid #000;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.results-table thead th {
+  background: #d9d9d9;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.results-table tbody tr:hover {
+  background: #f6fbf8;
+}
+
 /* ---------- abas "VT'S + ano" (página do Agrocultura) ---------- */
 .secao-vts-agro {
   margin: 8px 0 32px;
@@ -36,4 +209,82 @@
 
 .vts-dinamica-table {
   min-width: 600px;
+}
+
+/* ---------- paginação ---------- */
+.paginacao {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-carregar-mais {
+  font-family: inherit;
+  font-size: 14px;
+  border: 1px solid #00953b;
+  background: #fff;
+  color: #00953b;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-carregar-mais:hover {
+  background: #00953b;
+  color: #fff;
+}
+
+/* ---------- responsividade ---------- */
+@media (max-width: 700px) {
+  .site-header { flex-wrap: wrap; }
+
+  /* Em telas pequenas a tabela vira uma lista empilhada (rótulo: valor)
+     em vez de rolar horizontalmente — mais fácil de ler no celular,
+     sem virar "card" decorativo (mesma paleta, só sem grade). */
+  .table-wrap { overflow-x: visible; }
+
+  .results-table { min-width: 0; width: 100%; }
+
+  .results-table thead { display: none; }
+
+  .results-table,
+  .results-table tbody,
+  .results-table tr,
+  .results-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .results-table tr {
+    border: 1px solid #000;
+    margin-bottom: 14px;
+  }
+
+  .results-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: right;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 12px;
+  }
+
+  .results-table td:last-child { border-bottom: none; }
+
+  .results-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    text-align: left;
+    flex-shrink: 0;
+  }
+
+  /* Linha "Nenhum resultado" / "Carregando" não deve virar rótulo:valor */
+  .results-table td[colspan] {
+    display: block;
+    text-align: left;
+  }
+  .results-table td[colspan]::before {
+    content: "";
+  }
 }
