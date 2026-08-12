@@ -1,7 +1,9 @@
 // vts-agrocultura.js - Abas "VT'S + ano" na página do Agrocultura.
 // Cada aba aponta para a aba (gid) correspondente na planilha de VTs do
-// Agrocultura, publicada em CSV. Ao clicar, a tabela abaixo é montada
-// dinamicamente com as colunas que existirem naquela planilha específica.
+// Agrocultura, publicada em CSV. Comportamento de toggle:
+//   - clique numa aba fechada  -> abre e carrega a tabela daquele ano
+//   - clique na mesma aba já aberta -> fecha a tabela
+//   - clique em outra aba enquanto uma está aberta -> troca para a nova
 
 const VTS_AGROCULTURA_BASE_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub";
@@ -29,6 +31,7 @@ function _urlVtsAgro(gid) {
 function inicializarVtsAgricultura(programaParam) {
   const secao = document.getElementById("secaoVTsAgro");
   const tabsEl = document.getElementById("tabsVts");
+  const wrapTabela = document.getElementById("wrapTabelaVtsAgro");
   if (!secao || !tabsEl || !programaParam) return;
 
   const nomePrograma = decodeURIComponent(programaParam).toLowerCase().trim();
@@ -40,27 +43,49 @@ function inicializarVtsAgricultura(programaParam) {
   secao.hidden = false;
   tabsEl.innerHTML = "";
 
+  // Nenhuma aba fica selecionada nem tabela visível ao abrir a página.
+  // O usuário precisa clicar para abrir; os "materiais brutos" abaixo
+  // continuam sempre visíveis, independente disso.
+  if (wrapTabela) wrapTabela.hidden = true;
+
   VTS_AGROCULTURA_ABAS.forEach((aba) => {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "tab-vt";
     btn.textContent = aba.label;
     btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-selected", "false");
     btn.dataset.gid = aba.gid;
-    btn.addEventListener("click", () => _selecionarAbaVt(aba, btn));
+    btn.addEventListener("click", () => _alternarAbaVt(aba, btn));
     tabsEl.appendChild(btn);
   });
-
-  // Aba selecionada por padrão ao abrir a página: o ano mais recente da lista.
-  const abaPadrao = VTS_AGROCULTURA_ABAS[VTS_AGROCULTURA_ABAS.length - 2]; // último ano (não conta "Bruno Faustino")
-  const btnPadrao = tabsEl.querySelector(`[data-gid="${abaPadrao.gid}"]`);
-  if (btnPadrao) _selecionarAbaVt(abaPadrao, btnPadrao);
 }
 
-function _selecionarAbaVt(aba, btnEl) {
-  document.querySelectorAll(".tab-vt").forEach((b) => b.classList.remove("ativa"));
-  btnEl.classList.add("ativa");
+function _alternarAbaVt(aba, btnEl) {
+  const wrapTabela = document.getElementById("wrapTabelaVtsAgro");
+  const jaEstaAberta = btnEl.classList.contains("ativa");
 
+  // Sempre desmarca todas as abas antes de decidir o novo estado.
+  document.querySelectorAll(".tab-vt").forEach((b) => {
+    b.classList.remove("ativa");
+    b.setAttribute("aria-selected", "false");
+  });
+
+  if (jaEstaAberta) {
+    // Clicou de novo na aba que já estava aberta: fecha a tabela.
+    if (wrapTabela) wrapTabela.hidden = true;
+    return;
+  }
+
+  // Abre a aba clicada (e troca automaticamente se outra estava aberta).
+  btnEl.classList.add("ativa");
+  btnEl.setAttribute("aria-selected", "true");
+  if (wrapTabela) wrapTabela.hidden = false;
+
+  _carregarAbaVt(aba);
+}
+
+function _carregarAbaVt(aba) {
   const thead = document.getElementById("theadVtsAgro");
   const tbody = document.getElementById("tbodyVtsAgro");
   if (!thead || !tbody) return;

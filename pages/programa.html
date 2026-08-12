@@ -30,10 +30,12 @@
     </div>
 
     <!-- Abas "VT'S + ano", exibidas via JS só na página do Agrocultura.
-         Em qualquer outro programa a seção fica escondida (hidden). -->
+         Em qualquer outro programa a seção fica escondida (hidden).
+         Cada aba funciona como um toggle: clique para abrir a tabela,
+         clique de novo na mesma aba para fechar. -->
     <section id="secaoVTsAgro" class="secao-vts-agro" hidden>
       <div id="tabsVts" class="tabs-vts" role="tablist" aria-label="VTs do Agrocultura por ano"></div>
-      <div class="table-wrap">
+      <div id="wrapTabelaVtsAgro" class="table-wrap" hidden>
         <table class="results-table vts-dinamica-table">
           <thead id="theadVtsAgro"></thead>
           <tbody id="tbodyVtsAgro">
@@ -46,6 +48,7 @@
     <h2 class="page-title" id="tituloPrograma">Programa</h2>
     <p id="statusBusca" class="status-busca"></p>
 
+    <!-- Materiais brutos (imgs.csv) — sempre visível, independente das abas de VT's. -->
     <div class="table-wrap">
       <table class="results-table">
         <thead>
