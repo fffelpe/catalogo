@@ -50,6 +50,12 @@ async function inicializarBusca() {
 
   executarBusca(termoInicial, programa);
 
+  // Abas "VT'S + ano" (só aparecem/funcionam na página do Agrocultura).
+  // Independem do imgs.csv principal — carregam direto das planilhas por ano.
+  if (typeof inicializarVtsAgricultura === "function") {
+    inicializarVtsAgricultura(programa);
+  }
+
   if (searchInput) {
     searchInput.addEventListener("input", debounce((e) => {
       executarBusca(e.target.value, programa);
