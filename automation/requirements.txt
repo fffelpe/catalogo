@@ -1,4 +1,0 @@
-google-generativeai
-gspread
-google-auth
-requests
