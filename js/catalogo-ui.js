@@ -24,6 +24,61 @@ function escapeHtml(str) {
   }[c]));
 }
 
+function separarIds(valor) {
+  return String(valor || "")
+    .split(/[\r\n,;]+/)
+    .map((id) => id.trim())
+    .filter(Boolean);
+}
+
+function formatarIds(valor) {
+  return separarIds(valor)
+    .map((id) => escapeHtml(id))
+    .join("<br>");
+}
+
+function copiarTextoAlternativo(texto) {
+  const textarea = document.createElement("textarea");
+  textarea.value = texto;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  textarea.style.pointerEvents = "none";
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  const copiou = document.execCommand("copy");
+  textarea.remove();
+
+  if (!copiou) throw new Error("O navegador não permitiu copiar o texto.");
+}
+
+async function copiarIds(valor, botao) {
+  const ids = separarIds(valor).join("\n");
+  if (!ids) return;
+
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(ids);
+    } else {
+      copiarTextoAlternativo(ids);
+    }
+
+    botao.classList.add("copiado");
+    botao.title = "ID copiado";
+    botao.setAttribute("aria-label", "ID copiado");
+
+    window.setTimeout(() => {
+      botao.classList.remove("copiado");
+      botao.title = "Copiar ID";
+      botao.setAttribute("aria-label", "Copiar ID");
+    }, 1200);
+  } catch (err) {
+    console.error("Erro ao copiar ID:", err);
+    botao.title = "Não foi possível copiar o ID";
+  }
+}
+
 async function inicializarBusca() {
   const params = new URLSearchParams(window.location.search);
   const termoInicial = params.get("q") || "";
@@ -66,6 +121,13 @@ async function inicializarBusca() {
   if (loadMoreBtn) {
     loadMoreBtn.addEventListener("click", renderizarProximaPagina);
   }
+
+  document.addEventListener("click", (event) => {
+    const botao = event.target.closest(".btn-copiar-id");
+    if (!botao) return;
+
+    copiarIds(botao.dataset.ids, botao);
+  });
 }
 
 function executarBusca(termo, programa) {
@@ -103,7 +165,25 @@ function renderizarProximaPagina() {
   itensParaRenderizar.forEach((item) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td data-label="ID">${escapeHtml(item.ID)}</td>
+      <td data-label="ID" class="id-cell">
+        <span class="id-cell-content">
+          <span class="id-text">${formatarIds(item.ID)}</span>
+          <button
+            type="button"
+            class="btn-copiar-id"
+            data-ids="${escapeHtml(item.ID)}"
+            title="Copiar ID"
+            aria-label="Copiar ID"
+          >
+            <img
+              src="../images/copiar.png"
+              alt=""
+              class="icone-copiar"
+              aria-hidden="true"
+            >
+          </button>
+        </span>
+      </td>
       <td data-label="Descrição">${escapeHtml(item.DESCRICAO)}</td>
       <td data-label="Data">${escapeHtml(item.DATA)}</td>
       <td data-label="Local">${escapeHtml(item.LOCAL)}</td>
