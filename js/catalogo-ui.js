@@ -37,6 +37,32 @@ function formatarIds(valor) {
     .join("<br>");
 }
 
+function renderizarCelulaId(valor, rotulo = "ID") {
+  const valorSeguro = escapeHtml(String(valor || ""));
+
+  return `
+    <td data-label="${escapeHtml(rotulo)}" class="id-cell">
+      <span class="id-cell-content">
+        <span class="id-text">${formatarIds(valor)}</span>
+        <button
+          type="button"
+          class="btn-copiar-id"
+          data-ids="${valorSeguro}"
+          title="Copiar ID"
+          aria-label="Copiar ID"
+        >
+          <img
+            src="../images/copiar.png?v=2"
+            alt=""
+            class="icone-copiar"
+            aria-hidden="true"
+          >
+        </button>
+      </span>
+    </td>
+  `;
+}
+
 function copiarTextoAlternativo(texto) {
   const textarea = document.createElement("textarea");
   textarea.value = texto;
@@ -165,25 +191,7 @@ function renderizarProximaPagina() {
   itensParaRenderizar.forEach((item) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td data-label="ID" class="id-cell">
-        <span class="id-cell-content">
-          <span class="id-text">${formatarIds(item.ID)}</span>
-          <button
-            type="button"
-            class="btn-copiar-id"
-            data-ids="${escapeHtml(item.ID)}"
-            title="Copiar ID"
-            aria-label="Copiar ID"
-          >
-            <img
-              src="../images/copiar.png"
-              alt=""
-              class="icone-copiar"
-              aria-hidden="true"
-            >
-          </button>
-        </span>
-      </td>
+      ${renderizarCelulaId(item.ID)}
       <td data-label="Descrição">${escapeHtml(item.DESCRICAO)}</td>
       <td data-label="Data">${escapeHtml(item.DATA)}</td>
       <td data-label="Local">${escapeHtml(item.LOCAL)}</td>

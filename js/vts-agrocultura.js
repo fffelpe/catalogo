@@ -133,7 +133,12 @@ function _renderizarTabelaVtsAgro(linhas) {
   tbody.innerHTML = linhas
     .map((linha) => {
       const celulas = colunas
-        .map((c) => `<td data-label="${escapeHtml(c)}">${escapeHtml((linha[c] || "").toString().trim())}</td>`)
+        .map((c) => {
+          const valor = (linha[c] || "").toString().trim();
+          return c.toUpperCase() === "ID"
+            ? renderizarCelulaId(valor, c)
+            : `<td data-label="${escapeHtml(c)}">${escapeHtml(valor)}</td>`;
+        })
         .join("");
       return `<tr>${celulas}</tr>`;
     })
