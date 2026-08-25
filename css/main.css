@@ -15,9 +15,49 @@ a { color: #000; text-decoration: none; }
 .login-link:hover, .login-link:focus-visible { color: #00953b; }
 .pagina-inicial, .pagina-resultados { padding: 0 clamp(16px, 4vw, 48px) 48px; }
 .search-bar { display: flex; align-items: center; gap: 12px; max-width: 720px; margin: 0 auto 12px; padding: 14px 22px; background: #e4e4e4; border: 1px solid #000; border-radius: 28px; }
+.search-bar-autocomplete { position: relative; }
 .search-icon { flex-shrink: 0; }
 .search-input { flex: 1; border: 0; background: transparent; outline: 0; font-family: inherit; font-size: 16px; color: #000; min-width: 0; }
 .search-input::placeholder { color: #444; opacity: 1; }
+
+/* ---------- autocomplete / sugestões ---------- */
+.sugestoes-busca {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  border: 1px solid #bdbdbd;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+.sugestoes-busca[hidden] { display: none; }
+.sugestao-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid #ececec;
+  background: #fff;
+  color: #222;
+  text-align: left;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.sugestao-item:last-child { border-bottom: 0; }
+.sugestao-item:hover,
+.sugestao-item:focus-visible,
+.sugestao-item.ativa { background: #f0f8f3; outline: none; }
+.sugestao-item.ativa { box-shadow: inset 3px 0 0 #00953b; }
+.sugestao-texto { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sugestao-texto strong { color: #007d32; font-weight: 700; }
+.sugestao-tipo { flex: 0 0 auto; font-size: 11px; color: #666; border: 1px solid #ddd; border-radius: 12px; padding: 3px 7px; background: #fafafa; }
 
 /* ---------- histórico de pesquisas ---------- */
 .historico-busca { max-width: 720px; margin: 0 auto 28px; padding: 10px 4px 0; }
@@ -62,6 +102,8 @@ a { color: #000; text-decoration: none; }
   .site-header { flex-wrap: wrap; }
   .historico-cabecalho { align-items: flex-start; }
   .historico-item { max-width: calc(50% - 4px); }
+  .sugestao-item { padding: 12px; gap: 10px; }
+  .sugestao-tipo { font-size: 10px; }
   .table-wrap { overflow-x: visible; }
   .results-table { min-width: 0; width: 100%; }
   .results-table thead { display: none; }
