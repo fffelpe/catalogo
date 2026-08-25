@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
   <title>Resultados da Busca - Catálogo de Mídias</title>
-  <link rel="stylesheet" href="../css/main.css?v=2">
+  <link rel="stylesheet" href="../css/main.css?v=3">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
   <header class="site-header">
     <a href="../index.html" class="logo" aria-label="Catálogo de Mídias - Início">
-    <img src="../images/logo.png" alt="Logo TV Cultura" class="logo-icon">
+      <img src="../images/logo.png" alt="Logo TV Cultura" class="logo-icon">
       <span class="logo-text">
         <span class="titulo">CATÁLOGO DE MÍDIAS</span>
         <span class="subtitulo">JORNALISMO</span>
@@ -25,40 +25,33 @@
         <circle cx="11" cy="11" r="7" fill="none" stroke="#000" stroke-width="2"/>
         <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#000" stroke-width="2"/>
       </svg>
-      <input type="text" id="searchInput" placeholder="Refinar busca atual..." class="search-input">
+      <input type="text" id="searchInput" placeholder="Refinar busca atual..." class="search-input" autocomplete="off">
     </div>
+
+    <section id="historicoBusca" class="historico-busca" aria-label="Pesquisas recentes" hidden>
+      <div class="historico-cabecalho">
+        <span class="historico-titulo">Pesquisas recentes</span>
+        <button type="button" id="limparHistoricoBtn" class="btn-limpar-historico">Limpar histórico</button>
+      </div>
+      <div id="listaHistoricoBusca" class="historico-lista"></div>
+    </section>
 
     <h2 class="page-title">Resultado da Busca:</h2>
     <p id="statusBusca" class="status-busca"></p>
 
     <div class="table-wrap">
       <table class="results-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>DESCRIÇÃO</th>
-            <th>DATA</th>
-            <th>LOCAL</th>
-            <th>REPÓRTER</th>
-            <th>AFILIADA / EMISSORA</th>
-            <th>PROGRAMA</th>
-            <th>EDITORIA</th>
-          </tr>
-        </thead>
-        <tbody id="resultsBody">
-          <tr><td colspan="8">Carregando acervo...</td></tr>
-        </tbody>
+        <thead><tr><th>ID</th><th>DESCRIÇÃO</th><th>DATA</th><th>LOCAL</th><th>REPÓRTER</th><th>AFILIADA / EMISSORA</th><th>PROGRAMA</th><th>EDITORIA</th></tr></thead>
+        <tbody id="resultsBody"><tr><td colspan="8">Carregando acervo...</td></tr></tbody>
       </table>
     </div>
 
     <div class="paginacao">
-      <button id="loadMoreBtn" class="btn-carregar-mais" style="display:none;">
-        Carregar mais resultados
-      </button>
+      <button id="loadMoreBtn" class="btn-carregar-mais" style="display:none;">Carregar mais resultados</button>
     </div>
   </main>
 
   <script src="../js/dados.js"></script>
-  <script src="../js/catalogo-ui.js?v=2"></script>
+  <script src="../js/catalogo-ui.js?v=3"></script>
 </body>
 </html>
