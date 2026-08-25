@@ -4,6 +4,8 @@
 let resultadosAtuais = [];
 let paginaAtual = 0;
 const ITENS_POR_PAGINA = 50;
+const CHAVE_HISTORICO_BUSCA = "catalogoMidiasHistoricoBusca";
+const LIMITE_HISTORICO_BUSCA = 8;
 
 function debounce(func, timeout = 300) {
   let timer;
@@ -44,19 +46,8 @@ function renderizarCelulaId(valor, rotulo = "ID") {
     <td data-label="${escapeHtml(rotulo)}" class="id-cell">
       <span class="id-cell-content">
         <span class="id-text">${formatarIds(valor)}</span>
-        <button
-          type="button"
-          class="btn-copiar-id"
-          data-ids="${valorSeguro}"
-          title="Copiar ID"
-          aria-label="Copiar ID"
-        >
-          <img
-            src="../images/copiar.png?v=2"
-            alt=""
-            class="icone-copiar"
-            aria-hidden="true"
-          >
+        <button type="button" class="btn-copiar-id" data-ids="${valorSeguro}" title="Copiar ID" aria-label="Copiar ID">
+          <img src="../images/copiar.png?v=2" alt="" class="icone-copiar" aria-hidden="true">
         </button>
       </span>
     </td>
@@ -72,10 +63,8 @@ function copiarTextoAlternativo(texto) {
   textarea.style.pointerEvents = "none";
   document.body.appendChild(textarea);
   textarea.select();
-
   const copiou = document.execCommand("copy");
   textarea.remove();
-
   if (!copiou) throw new Error("O navegador não permitiu copiar o texto.");
 }
 
@@ -84,16 +73,12 @@ async function copiarIds(valor, botao) {
   if (!ids) return;
 
   try {
-    if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(ids);
-    } else {
-      copiarTextoAlternativo(ids);
-    }
+    if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(ids);
+    else copiarTextoAlternativo(ids);
 
     botao.classList.add("copiado");
     botao.title = "ID copiado";
     botao.setAttribute("aria-label", "ID copiado");
-
     window.setTimeout(() => {
       botao.classList.remove("copiado");
       botao.title = "Copiar ID";
@@ -105,21 +90,83 @@ async function copiarIds(valor, botao) {
   }
 }
 
+function obterHistoricoBusca() {
+  try {
+    const historico = JSON.parse(localStorage.getItem(CHAVE_HISTORICO_BUSCA) || "[]");
+    return Array.isArray(historico) ? historico : [];
+  } catch (err) {
+    console.warn("Não foi possível ler o histórico de busca:", err);
+    return [];
+  }
+}
+
+function salvarTermoNoHistorico(termo) {
+  const termoLimpo = String(termo || "").trim();
+  if (termoLimpo.length < 2) return;
+
+  const historico = obterHistoricoBusca().filter(
+    (item) => item.toLocaleLowerCase("pt-BR") !== termoLimpo.toLocaleLowerCase("pt-BR")
+  );
+  historico.unshift(termoLimpo);
+
+  try {
+    localStorage.setItem(CHAVE_HISTORICO_BUSCA, JSON.stringify(historico.slice(0, LIMITE_HISTORICO_BUSCA)));
+  } catch (err) {
+    console.warn("Não foi possível salvar o histórico de busca:", err);
+  }
+
+  renderizarHistoricoBusca();
+}
+
+function limparHistoricoBusca() {
+  try {
+    localStorage.removeItem(CHAVE_HISTORICO_BUSCA);
+  } catch (err) {
+    console.warn("Não foi possível limpar o histórico de busca:", err);
+  }
+  renderizarHistoricoBusca();
+}
+
+function renderizarHistoricoBusca() {
+  const container = document.getElementById("historicoBusca");
+  const lista = document.getElementById("listaHistoricoBusca");
+  if (!container || !lista) return;
+
+  const historico = obterHistoricoBusca();
+  lista.innerHTML = "";
+  container.hidden = historico.length === 0;
+
+  historico.forEach((termo) => {
+    const botao = document.createElement("button");
+    botao.type = "button";
+    botao.className = "historico-item";
+    botao.dataset.termo = termo;
+    botao.textContent = termo;
+    botao.title = `Pesquisar novamente por ${termo}`;
+    lista.appendChild(botao);
+  });
+}
+
+function aplicarTermoDoHistorico(termo, programa) {
+  const searchInput = document.getElementById("searchInput");
+  if (searchInput) {
+    searchInput.value = termo;
+    searchInput.focus();
+  }
+  executarBusca(termo, programa, false);
+}
+
 async function inicializarBusca() {
   const params = new URLSearchParams(window.location.search);
   const termoInicial = params.get("q") || "";
   const programa = params.get("programa") || "";
-
   const searchInput = document.getElementById("searchInput");
   const tituloPrograma = document.getElementById("tituloPrograma");
 
   if (searchInput) searchInput.value = termoInicial;
-  if (tituloPrograma) {
-    tituloPrograma.textContent = programa
-      ? decodeURIComponent(programa)
-      : "Todos os Programas";
-  }
+  if (tituloPrograma) tituloPrograma.textContent = programa ? decodeURIComponent(programa) : "Todos os Programas";
 
+  renderizarHistoricoBusca();
   setStatus("Carregando acervo...");
 
   try {
@@ -129,45 +176,50 @@ async function inicializarBusca() {
     return;
   }
 
-  executarBusca(termoInicial, programa);
+  executarBusca(termoInicial, programa, Boolean(termoInicial));
 
-  // Abas "VT'S + ano" (só aparecem/funcionam na página do Agrocultura).
-  // Independem do imgs.csv principal — carregam direto das planilhas por ano.
-  if (typeof inicializarVtsAgricultura === "function") {
-    inicializarVtsAgricultura(programa);
-  }
+  if (typeof inicializarVtsAgricultura === "function") inicializarVtsAgricultura(programa);
 
   if (searchInput) {
-    searchInput.addEventListener("input", debounce((e) => {
-      executarBusca(e.target.value, programa);
-    }));
+    searchInput.addEventListener("input", debounce((e) => executarBusca(e.target.value, programa, false)));
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        executarBusca(e.target.value, programa, true);
+      }
+    });
+    searchInput.addEventListener("change", (e) => {
+      if (e.target.value.trim()) salvarTermoNoHistorico(e.target.value);
+    });
   }
 
   const loadMoreBtn = document.getElementById("loadMoreBtn");
-  if (loadMoreBtn) {
-    loadMoreBtn.addEventListener("click", renderizarProximaPagina);
-  }
+  if (loadMoreBtn) loadMoreBtn.addEventListener("click", renderizarProximaPagina);
+
+  const limparHistoricoBtn = document.getElementById("limparHistoricoBtn");
+  if (limparHistoricoBtn) limparHistoricoBtn.addEventListener("click", limparHistoricoBusca);
 
   document.addEventListener("click", (event) => {
-    const botao = event.target.closest(".btn-copiar-id");
-    if (!botao) return;
+    const botaoCopiar = event.target.closest(".btn-copiar-id");
+    if (botaoCopiar) {
+      copiarIds(botaoCopiar.dataset.ids, botaoCopiar);
+      return;
+    }
 
-    copiarIds(botao.dataset.ids, botao);
+    const itemHistorico = event.target.closest(".historico-item");
+    if (itemHistorico) aplicarTermoDoHistorico(itemHistorico.dataset.termo, programa);
   });
 }
 
-function executarBusca(termo, programa) {
-  resultadosAtuais = programa
-    ? DadosMedia.buscarPorPrograma(programa, termo)
-    : DadosMedia.buscar(termo);
-
+function executarBusca(termo, programa, registrarHistorico = false) {
+  resultadosAtuais = programa ? DadosMedia.buscarPorPrograma(programa, termo) : DadosMedia.buscar(termo);
   paginaAtual = 0;
 
   const tbody = document.getElementById("resultsBody");
   if (tbody) tbody.innerHTML = "";
 
   setStatus(`${resultadosAtuais.length} resultado(s) encontrado(s).`);
-
+  if (registrarHistorico) salvarTermoNoHistorico(termo);
   renderizarProximaPagina();
 }
 
@@ -186,7 +238,6 @@ function renderizarProximaPagina() {
     return;
   }
 
-  // data-label em cada <td> permite empilhar a tabela em telas pequenas (ver main.css)
   const frag = document.createDocumentFragment();
   itensParaRenderizar.forEach((item) => {
     const tr = document.createElement("tr");
@@ -203,12 +254,9 @@ function renderizarProximaPagina() {
     frag.appendChild(tr);
   });
   tbody.appendChild(frag);
-
   paginaAtual++;
 
-  if (loadMoreBtn) {
-    loadMoreBtn.style.display = fim < resultadosAtuais.length ? "inline-block" : "none";
-  }
+  if (loadMoreBtn) loadMoreBtn.style.display = fim < resultadosAtuais.length ? "inline-block" : "none";
 }
 
 document.addEventListener("DOMContentLoaded", inicializarBusca);
