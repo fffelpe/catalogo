@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
   <title>Catálogo de Mídias - Programa</title>
-  <link rel="stylesheet" href="../css/main.css?v=3">
+  <link rel="stylesheet" href="../css/main.css?v=4">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
@@ -19,14 +19,23 @@
     </a>
   </header>
 
-  <main class="pagina-resultados">
-    <div class="search-bar">
-      <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-        <circle cx="11" cy="11" r="7" fill="none" stroke="#000" stroke-width="2"/>
-        <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#000" stroke-width="2"/>
-      </svg>
-      <input type="text" id="searchInput" placeholder="Buscar dentro deste programa..." class="search-input" autocomplete="off">
-    </div>
+  <main class="pagina-resultados pagina-programa">
+    <section class="cabecalho-programa" aria-labelledby="tituloPrograma">
+      <span class="eyebrow">Acervo por programa</span>
+      <h1 class="page-title page-title-principal" id="tituloPrograma">Programa</h1>
+
+      <div class="search-bar">
+        <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+          <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <input type="search" id="searchInput" placeholder="Buscar dentro deste programa..." class="search-input" autocomplete="off" aria-label="Buscar dentro deste programa">
+      </div>
+
+      <p class="busca-inteligente-aviso">A busca inteligente amplia a pesquisa com sinônimos jornalísticos e termos relacionados.</p>
+    </section>
+
+    <!-- Mais buscados neste programa são inseridos aqui pelo buscas-populares.js -->
 
     <section id="historicoBusca" class="historico-busca" aria-label="Pesquisas recentes" hidden>
       <div class="historico-cabecalho">
@@ -46,12 +55,25 @@
       </div>
     </section>
 
-    <h2 class="page-title" id="tituloPrograma">Programa</h2>
-    <p id="statusBusca" class="status-busca"></p>
+    <div class="resultados-cabecalho">
+      <h2 class="page-title">Mídias do programa</h2>
+      <p id="statusBusca" class="status-busca"></p>
+    </div>
 
     <div class="table-wrap">
       <table class="results-table">
-        <thead><tr><th>ID</th><th>DESCRIÇÃO</th><th>DATA</th><th>LOCAL</th><th>REPÓRTER</th><th>AFILIADA / EMISSORA</th><th>PROGRAMA</th><th>EDITORIA</th></tr></thead>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>DESCRIÇÃO</th>
+            <th>DATA</th>
+            <th>LOCAL</th>
+            <th>REPÓRTER</th>
+            <th>AFILIADA / EMISSORA</th>
+            <th>PROGRAMA</th>
+            <th>EDITORIA</th>
+          </tr>
+        </thead>
         <tbody id="resultsBody"><tr><td colspan="8">Carregando acervo...</td></tr></tbody>
       </table>
     </div>
@@ -62,7 +84,12 @@
   </main>
 
   <script src="../js/dados.js"></script>
+  <script src="../js/sinonimos.js"></script>
+  <script src="../js/search-engine.js"></script>
+  <script src="../js/historico-busca.js"></script>
+  <script src="../js/buscas-populares.js"></script>
+  <script src="../js/autocomplete.js"></script>
   <script src="../js/vts-agrocultura.js?v=2"></script>
-  <script src="../js/catalogo-ui.js?v=3"></script>
+  <script src="../js/catalogo-ui.js?v=4"></script>
 </body>
 </html>
