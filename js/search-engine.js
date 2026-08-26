@@ -2,7 +2,6 @@
 // Motor de pesquisa inteligente com ranking por relevância.
 
 const SearchEngine = (() => {
-
   const PESOS_CAMPOS = {
     ID: 100,
     DESCRICAO: 40,
@@ -14,6 +13,10 @@ const SearchEngine = (() => {
     DATA: 5
   };
 
+  const STOPWORDS = new Set([
+    "a", "o", "as", "os", "de", "da", "do", "das", "dos", "e", "em", "na", "no",
+    "nas", "nos", "um", "uma", "uns", "umas", "para", "por", "com", "sem", "que"
+  ]);
 
   function normalizar(texto) {
     if (
@@ -27,9 +30,20 @@ const SearchEngine = (() => {
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLocaleLowerCase("pt-BR")
+      .replace(/[^\p{L}\p{N}\s-]/gu, " ")
+      .replace(/\s+/g, " ")
       .trim();
   }
 
+  function escaparRegex(texto) {
+    return texto.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function contemTermo(texto, termo) {
+    if (!texto || !termo) return false;
+    const padrao = new RegExp(`(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`, "u");
+    return padrao.test(texto);
+  }
 
   function separarIds(valor) {
     return String(valor || "")
@@ -38,21 +52,11 @@ const SearchEngine = (() => {
       .filter(Boolean);
   }
 
-
   function contarOcorrencias(texto, termo) {
     if (!texto || !termo) return 0;
-
-    let contador = 0;
-    let posicao = 0;
-
-    while ((posicao = texto.indexOf(termo, posicao)) !== -1) {
-      contador++;
-      posicao += termo.length;
-    }
-
-    return contador;
+    const padrao = new RegExp(`(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`, "gu");
+    return [...texto.matchAll(padrao)].length;
   }
-
 
   function calcularScoreCampo(valor, expansao, pesoCampo) {
     const texto = normalizar(valor);
@@ -64,14 +68,13 @@ const SearchEngine = (() => {
 
     if (texto === termo) {
       score += pesoCampo * 2;
-    } else if (texto.includes(termo)) {
+    } else if (contemTermo(texto, termo)) {
       score += pesoCampo;
     } else {
       return 0;
     }
 
     const ocorrencias = contarOcorrencias(texto, termo);
-
     if (ocorrencias > 1) {
       score += Math.min(ocorrencias - 1, 4) * (pesoCampo * 0.08);
     }
@@ -79,68 +82,42 @@ const SearchEngine = (() => {
     return score * expansao.peso;
   }
 
-
   function detectarMediaIdExato(registro, consulta) {
     const idsRegistro = separarIds(registro.ID);
     const consultaNormalizada = normalizar(consulta);
-
     return idsRegistro.includes(consultaNormalizada);
   }
-
 
   function calcularRelevancia(registro, consulta) {
     const consultaNormalizada = normalizar(consulta);
 
     if (!consultaNormalizada) {
-      return {
-        score: 0,
-        correspondencias: []
-      };
+      return { score: 0, correspondencias: [] };
     }
 
     if (detectarMediaIdExato(registro, consulta)) {
       return {
         score: 10000,
-        correspondencias: [{
-          campo: "ID",
-          termo: consulta,
-          tipo: "id-exato"
-        }]
+        correspondencias: [{ campo: "ID", termo: consulta, tipo: "id-exato" }]
       };
     }
 
-    const expansoes =
-      typeof VocabularioJornalistico !== "undefined"
-        ? VocabularioJornalistico.expandirConsulta(consulta)
-        : [{
-            termo: consultaNormalizada,
-            original: consulta,
-            tipo: "original",
-            peso: 1
-          }];
+    const expansoes = typeof VocabularioJornalistico !== "undefined"
+      ? VocabularioJornalistico.expandirConsulta(consulta)
+      : [{ termo: consultaNormalizada, original: consulta, tipo: "original", peso: 1 }];
 
     let score = 0;
     const correspondencias = [];
 
     Object.entries(PESOS_CAMPOS).forEach(([campo, pesoCampo]) => {
-
       const valorCampo = registro[campo] || "";
-      const valorNormalizado = normalizar(valorCampo);
-
-      if (!valorNormalizado) return;
+      if (!valorCampo) return;
 
       expansoes.forEach((expansao) => {
-
-        const pontos = calcularScoreCampo(
-          valorCampo,
-          expansao,
-          pesoCampo
-        );
-
+        const pontos = calcularScoreCampo(valorCampo, expansao, pesoCampo);
         if (pontos <= 0) return;
 
         score += pontos;
-
         correspondencias.push({
           campo,
           termo: expansao.original || expansao.termo,
@@ -150,28 +127,19 @@ const SearchEngine = (() => {
       });
     });
 
-    // Bônus caso a frase completa esteja na descrição.
     const descricao = normalizar(registro.DESCRICAO);
-
-    if (
-      consultaNormalizada.length >= 3 &&
-      descricao.includes(consultaNormalizada)
-    ) {
+    if (consultaNormalizada.length >= 3 && contemTermo(descricao, consultaNormalizada)) {
       score += 120;
     }
 
-    // Bônus por todas as palavras originais estarem presentes.
     const palavrasOriginais = consultaNormalizada
       .split(" ")
-      .filter((palavra) => palavra.length >= 2);
+      .filter((palavra) => palavra.length >= 2 && !STOPWORDS.has(palavra));
 
     if (palavrasOriginais.length > 1) {
-      const textoCompleto = normalizar(
-        Object.values(registro).join(" ")
-      );
-
+      const textoCompleto = normalizar(Object.values(registro).join(" "));
       const quantidadeEncontrada = palavrasOriginais.filter(
-        (palavra) => textoCompleto.includes(palavra)
+        (palavra) => contemTermo(textoCompleto, palavra)
       ).length;
 
       if (quantidadeEncontrada === palavrasOriginais.length) {
@@ -181,49 +149,28 @@ const SearchEngine = (() => {
       }
     }
 
-    return {
-      score,
-      correspondencias
-    };
+    return { score, correspondencias };
   }
-
 
   function filtrarPrograma(registros, programa) {
     if (!programa) return registros;
-
-    const programaNormalizado = normalizar(
-      decodeURIComponent(programa)
-    );
+    const programaNormalizado = normalizar(programa);
 
     return registros.filter((registro) =>
       normalizar(registro.PROGRAMA).includes(programaNormalizado)
     );
   }
 
-
   function pesquisar(registros, consulta, opcoes = {}) {
     const lista = Array.isArray(registros) ? registros : [];
-
-    const base = filtrarPrograma(
-      lista,
-      opcoes.programa || ""
-    );
-
+    const base = filtrarPrograma(lista, opcoes.programa || "");
     const termo = String(consulta || "").trim();
 
-    // Sem busca: preserva a ordem original, atualmente por data.
-    if (!termo) {
-      return base;
-    }
+    if (!termo) return base;
 
     return base
       .map((registro, indiceOriginal) => {
-
-        const relevancia = calcularRelevancia(
-          registro,
-          termo
-        );
-
+        const relevancia = calcularRelevancia(registro, termo);
         return {
           registro,
           indiceOriginal,
@@ -232,24 +179,13 @@ const SearchEngine = (() => {
         };
       })
       .filter((item) => item.score > 0)
-      .sort((a, b) => {
-
-        if (b.score !== a.score) {
-          return b.score - a.score;
-        }
-
-        return a.indiceOriginal - b.indiceOriginal;
-      })
+      .sort((a, b) => b.score - a.score || a.indiceOriginal - b.indiceOriginal)
       .map((item) => ({
         ...item.registro,
-
-        // Metadados internos da busca.
-        // Não aparecem na tabela.
         _SEARCH_SCORE: item.score,
         _SEARCH_MATCHES: item.correspondencias
       }));
   }
-
 
   function explicarResultado(registro) {
     return {
@@ -258,12 +194,10 @@ const SearchEngine = (() => {
     };
   }
 
-
   return {
     pesquisar,
     calcularRelevancia,
     explicarResultado,
     normalizar
   };
-
 })();
