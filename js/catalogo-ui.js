@@ -42,7 +42,7 @@ function renderizarCelulaId(valor, rotulo = "ID") {
       <span class="id-cell-content">
         <span class="id-text">${formatarIds(valor)}</span>
         <button type="button" class="btn-copiar-id" data-ids="${valorSeguro}" title="Copiar ID" aria-label="Copiar ID">
-          <img src="../images/copiar.png?v=3" alt="" class="icone-copiar" aria-hidden="true">
+          <img src="../images/copiar.png?v=4" alt="" class="icone-copiar" aria-hidden="true">
         </button>
       </span>
     </td>
@@ -55,6 +55,7 @@ function copiarTextoAlternativo(texto) {
   textarea.setAttribute("readonly", "");
   textarea.style.position = "fixed";
   textarea.style.opacity = "0";
+  textarea.style.pointerEvents = "none";
   document.body.appendChild(textarea);
   textarea.select();
   const copiou = document.execCommand("copy");
@@ -177,14 +178,11 @@ async function inicializarPaginaInicial() {
     console.warn("Autocomplete indisponível na página inicial:", err);
   }
 
+  // A pesquisa é registrada apenas na página de destino. Isso evita que uma
+  // busca iniciada na home seja contabilizada duas vezes em buscas populares.
   form.addEventListener("submit", (event) => {
     const termo = input.value.trim();
-    if (!termo) {
-      event.preventDefault();
-      return;
-    }
-    HistoricoBusca.registrar(termo);
-    BuscasPopulares.registrar(termo, "");
+    if (!termo) event.preventDefault();
   });
 
   return true;
@@ -198,21 +196,20 @@ async function inicializarPaginaResultados() {
   const params = new URLSearchParams(window.location.search);
   const termoInicial = params.get("q") || "";
   const programa = params.get("programa") || "";
-  const programaDecodificado = programa ? decodeURIComponent(programa) : "";
   const tituloPrograma = document.getElementById("tituloPrograma");
 
   input.value = termoInicial;
-  if (tituloPrograma) tituloPrograma.textContent = programaDecodificado || "Todos os Programas";
+  if (tituloPrograma) tituloPrograma.textContent = programa || "Todos os Programas";
 
   HistoricoBusca.inicializar({
     onSelecionar: (termo) => {
       input.value = termo;
-      executarBusca(termo, programaDecodificado, true);
+      executarBusca(termo, programa, true);
       input.focus();
     }
   });
 
-  if (programaDecodificado) BuscasPopulares.renderizarPrograma(programaDecodificado);
+  if (programa) BuscasPopulares.renderizarPrograma(programa);
 
   setStatus("Carregando acervo...");
 
@@ -227,36 +224,34 @@ async function inicializarPaginaResultados() {
   AutocompleteBusca.inicializar({
     input,
     registros: DadosMedia.registros,
-    onSelecionar: (termo) => executarBusca(termo, programaDecodificado, true)
+    onSelecionar: (termo) => executarBusca(termo, programa, true)
   });
 
-  executarBusca(termoInicial, programaDecodificado, Boolean(termoInicial));
+  executarBusca(termoInicial, programa, Boolean(termoInicial));
 
   if (typeof inicializarVtsAgricultura === "function") {
-    inicializarVtsAgricultura(programaDecodificado);
+    inicializarVtsAgricultura(programa);
   }
 
   const buscaIncremental = debounce((valor) => {
-    executarBusca(valor, programaDecodificado, false);
+    executarBusca(valor, programa, false);
   }, 250);
 
   input.addEventListener("input", (event) => buscaIncremental(event.target.value));
 
   input.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-      window.setTimeout(() => {
-        if (document.activeElement === input) {
-          executarBusca(input.value, programaDecodificado, true);
-        }
-      }, 0);
-    }
+    if (event.key !== "Enter" || event.defaultPrevented) return;
+
+    window.setTimeout(() => {
+      executarBusca(input.value, programa, true);
+    }, 0);
   });
 
   document.addEventListener("catalogo:busca-popular", (event) => {
     const termo = event.detail?.termo || "";
     if (!termo) return;
     input.value = termo;
-    executarBusca(termo, programaDecodificado, true);
+    executarBusca(termo, programa, true);
     input.focus();
   });
 
