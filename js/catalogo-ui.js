@@ -143,6 +143,14 @@ async function inicializarBusca() {
     }));
   }
 
+  const searchForm = document.getElementById("searchForm");
+  if (searchForm && searchInput) {
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      executarBusca(searchInput.value, programa);
+    });
+  }
+
   const loadMoreBtn = document.getElementById("loadMoreBtn");
   if (loadMoreBtn) {
     loadMoreBtn.addEventListener("click", renderizarProximaPagina);
