@@ -86,83 +86,6 @@ async function copiarIds(valor, botao) {
   }
 }
 
-<<<<<<< HEAD
-async function inicializarBusca() {
-  const params = new URLSearchParams(window.location.search);
-  const termoInicial = params.get("q") || "";
-  const programa = params.get("programa") || "";
-
-  const searchInput = document.getElementById("searchInput");
-  const tituloPrograma = document.getElementById("tituloPrograma");
-
-  if (searchInput) searchInput.value = termoInicial;
-  if (tituloPrograma) {
-    tituloPrograma.textContent = programa
-      ? decodeURIComponent(programa)
-      : "Todos os Programas";
-  }
-
-  setStatus("Carregando acervo...");
-
-  try {
-    await DadosMedia.carregarCSV();
-  } catch (err) {
-    setStatus("Não foi possível carregar o acervo. Verifique sua conexão e tente novamente.");
-    return;
-  }
-
-  executarBusca(termoInicial, programa);
-
-  // Abas "VT'S + ano" (só aparecem/funcionam na página do Agrocultura).
-  // Independem do imgs.csv principal — carregam direto das planilhas por ano.
-  if (typeof inicializarVtsAgricultura === "function") {
-    inicializarVtsAgricultura(programa);
-  }
-
-  if (searchInput) {
-    searchInput.addEventListener("input", debounce((e) => {
-      executarBusca(e.target.value, programa);
-    }));
-  }
-
-  const searchForm = document.getElementById("searchForm");
-  if (searchForm && searchInput) {
-    searchForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      executarBusca(searchInput.value, programa);
-    });
-  }
-
-  const loadMoreBtn = document.getElementById("loadMoreBtn");
-  if (loadMoreBtn) {
-    loadMoreBtn.addEventListener("click", renderizarProximaPagina);
-  }
-
-  document.addEventListener("click", (event) => {
-    const botao = event.target.closest(".btn-copiar-id");
-    if (!botao) return;
-
-    copiarIds(botao.dataset.ids, botao);
-  });
-}
-
-function executarBusca(termo, programa) {
-  resultadosAtuais = programa
-    ? DadosMedia.buscarPorPrograma(programa, termo)
-    : DadosMedia.buscar(termo);
-
-  paginaAtual = 0;
-
-  const tbody = document.getElementById("resultsBody");
-  if (tbody) tbody.innerHTML = "";
-
-  setStatus(`${resultadosAtuais.length} resultado(s) encontrado(s).`);
-
-  renderizarProximaPagina();
-}
-
-=======
->>>>>>> b4952d6fe1d623bc0eec70072d715171dc6b200a
 function renderizarProximaPagina() {
   const tbody = document.getElementById("resultsBody");
   const loadMoreBtn = document.getElementById("loadMoreBtn");
@@ -316,13 +239,13 @@ async function inicializarPaginaResultados() {
 
   input.addEventListener("input", (event) => buscaIncremental(event.target.value));
 
-  input.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter" || event.defaultPrevented) return;
-
-    window.setTimeout(() => {
+  const form = document.getElementById("searchForm");
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
       executarBusca(input.value, programa, true);
-    }, 0);
-  });
+    });
+  }
 
   document.addEventListener("catalogo:busca-popular", (event) => {
     const termo = event.detail?.termo || "";
