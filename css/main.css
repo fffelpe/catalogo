@@ -64,6 +64,9 @@ button, input { font: inherit; }
 .programs-nav a:hover, .programs-nav a:focus-visible { color: #00953b; border-color: #00953b; outline: none; }
 
 /* Resultados */
+.carregamento-resultados { display: flex; min-height: 220px; align-items: center; justify-content: center; padding: 32px 16px; }
+.carregamento-resultados[hidden], .area-resultados[hidden] { display: none; }
+.carregamento-resultados img { display: block; width: clamp(72px, 18vw, 120px); height: auto; }
 .resultados-cabecalho { margin-top: 28px; }
 .page-title { font-size: clamp(18px, 2.2vw, 22px); font-weight: 500; margin: 24px 0 4px; }
 .status-busca { color: #666; margin: 0 0 16px; font-size: 14px; }

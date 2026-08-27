@@ -18,6 +18,15 @@ function setStatus(msg) {
   if (el) el.textContent = msg;
 }
 
+function definirCarregamentoResultados(carregando) {
+  const carregamento = document.getElementById("carregamentoResultados");
+
+  if (carregamento) carregamento.hidden = !carregando;
+  document.querySelectorAll(".area-resultados").forEach((elemento) => {
+    if (elemento.id !== "secaoVTsAgro") elemento.hidden = carregando;
+  });
+}
+
 function escapeHtml(str) {
   return String(str || "").replace(/[&<>"']/g, (c) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -209,13 +218,15 @@ async function inicializarPaginaResultados() {
 
   if (programa) BuscasPopulares.renderizarPrograma(programa);
 
-  setStatus("Carregando acervo...");
+  definirCarregamentoResultados(true);
 
   try {
     await DadosMedia.carregarCSV();
   } catch (err) {
     console.error(err);
     setStatus("Não foi possível carregar o acervo. Verifique sua conexão e tente novamente.");
+    tbody.innerHTML = '<tr><td colspan="8">N&atilde;o foi poss&iacute;vel carregar os resultados.</td></tr>';
+    definirCarregamentoResultados(false);
     return true;
   }
 
@@ -226,6 +237,7 @@ async function inicializarPaginaResultados() {
   });
 
   executarBusca(termoInicial, programa, Boolean(termoInicial));
+  definirCarregamentoResultados(false);
 
   if (typeof inicializarVtsAgricultura === "function") {
     inicializarVtsAgricultura(programa);
