@@ -1,5 +1,5 @@
-// catalogo-ui.js - Gerencia a renderização da tabela de resultados no DOM
-// Funciona tanto em pages/resultado-busca.html quanto em pages/programa.html
+// catalogo-ui.js - Integra a interface com busca inteligente, autocomplete,
+// histórico, buscas populares, paginação e cópia de Media IDs.
 
 let resultadosAtuais = [];
 let paginaAtual = 0;
@@ -9,7 +9,7 @@ function debounce(func, timeout = 300) {
   let timer;
   return (...args) => {
     clearTimeout(timer);
-    timer = setTimeout(() => func.apply(this, args), timeout);
+    timer = setTimeout(() => func(...args), timeout);
   };
 }
 
@@ -19,7 +19,7 @@ function setStatus(msg) {
 }
 
 function escapeHtml(str) {
-  return (str || "").replace(/[&<>"']/g, (c) => ({
+  return String(str || "").replace(/[&<>"']/g, (c) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
   }[c]));
 }
@@ -32,31 +32,17 @@ function separarIds(valor) {
 }
 
 function formatarIds(valor) {
-  return separarIds(valor)
-    .map((id) => escapeHtml(id))
-    .join("<br>");
+  return separarIds(valor).map((id) => escapeHtml(id)).join("<br>");
 }
 
 function renderizarCelulaId(valor, rotulo = "ID") {
   const valorSeguro = escapeHtml(String(valor || ""));
-
   return `
     <td data-label="${escapeHtml(rotulo)}" class="id-cell">
       <span class="id-cell-content">
         <span class="id-text">${formatarIds(valor)}</span>
-        <button
-          type="button"
-          class="btn-copiar-id"
-          data-ids="${valorSeguro}"
-          title="Copiar ID"
-          aria-label="Copiar ID"
-        >
-          <img
-            src="../images/copiar.png?v=2"
-            alt=""
-            class="icone-copiar"
-            aria-hidden="true"
-          >
+        <button type="button" class="btn-copiar-id" data-ids="${valorSeguro}" title="Copiar ID" aria-label="Copiar ID">
+          <img src="../images/copiar.png?v=4" alt="" class="icone-copiar" aria-hidden="true">
         </button>
       </span>
     </td>
@@ -72,10 +58,8 @@ function copiarTextoAlternativo(texto) {
   textarea.style.pointerEvents = "none";
   document.body.appendChild(textarea);
   textarea.select();
-
   const copiou = document.execCommand("copy");
   textarea.remove();
-
   if (!copiou) throw new Error("O navegador não permitiu copiar o texto.");
 }
 
@@ -84,11 +68,8 @@ async function copiarIds(valor, botao) {
   if (!ids) return;
 
   try {
-    if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(ids);
-    } else {
-      copiarTextoAlternativo(ids);
-    }
+    if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(ids);
+    else copiarTextoAlternativo(ids);
 
     botao.classList.add("copiado");
     botao.title = "ID copiado";
@@ -105,6 +86,7 @@ async function copiarIds(valor, botao) {
   }
 }
 
+<<<<<<< HEAD
 async function inicializarBusca() {
   const params = new URLSearchParams(window.location.search);
   const termoInicial = params.get("q") || "";
@@ -179,6 +161,8 @@ function executarBusca(termo, programa) {
   renderizarProximaPagina();
 }
 
+=======
+>>>>>>> b4952d6fe1d623bc0eec70072d715171dc6b200a
 function renderizarProximaPagina() {
   const tbody = document.getElementById("resultsBody");
   const loadMoreBtn = document.getElementById("loadMoreBtn");
@@ -186,17 +170,17 @@ function renderizarProximaPagina() {
 
   const inicio = paginaAtual * ITENS_POR_PAGINA;
   const fim = inicio + ITENS_POR_PAGINA;
-  const itensParaRenderizar = resultadosAtuais.slice(inicio, fim);
+  const itens = resultadosAtuais.slice(inicio, fim);
 
-  if (itensParaRenderizar.length === 0 && paginaAtual === 0) {
+  if (!itens.length && paginaAtual === 0) {
     tbody.innerHTML = '<tr><td colspan="8">Nenhum resultado encontrado.</td></tr>';
     if (loadMoreBtn) loadMoreBtn.style.display = "none";
     return;
   }
 
-  // data-label em cada <td> permite empilhar a tabela em telas pequenas (ver main.css)
   const frag = document.createDocumentFragment();
-  itensParaRenderizar.forEach((item) => {
+
+  itens.forEach((item) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       ${renderizarCelulaId(item.ID)}
@@ -210,8 +194,8 @@ function renderizarProximaPagina() {
     `;
     frag.appendChild(tr);
   });
-  tbody.appendChild(frag);
 
+  tbody.appendChild(frag);
   paginaAtual++;
 
   if (loadMoreBtn) {
@@ -219,4 +203,149 @@ function renderizarProximaPagina() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", inicializarBusca);
+function executarBusca(termo, programa = "", registrar = false) {
+  const consulta = String(termo || "").trim();
+
+  resultadosAtuais = SearchEngine.pesquisar(
+    DadosMedia.registros,
+    consulta,
+    { programa }
+  );
+
+  paginaAtual = 0;
+  const tbody = document.getElementById("resultsBody");
+  if (tbody) tbody.innerHTML = "";
+
+  if (consulta) {
+    setStatus(`${resultadosAtuais.length} resultado(s) encontrado(s) para “${consulta}”.`);
+  } else {
+    setStatus(`${resultadosAtuais.length} item(ns) no acervo.`);
+  }
+
+  if (registrar && consulta) {
+    HistoricoBusca.registrar(consulta);
+    HistoricoBusca.renderizar();
+    BuscasPopulares.registrar(consulta, programa);
+    if (programa) BuscasPopulares.renderizarPrograma(programa);
+  }
+
+  renderizarProximaPagina();
+}
+
+async function inicializarPaginaInicial() {
+  const form = document.getElementById("homeSearchForm");
+  const input = document.getElementById("searchInput");
+  if (!form || !input) return false;
+
+  BuscasPopulares.renderizarHome();
+
+  try {
+    await DadosMedia.carregarCSV();
+
+    AutocompleteBusca.inicializar({
+      input,
+      registros: DadosMedia.registros,
+      containerId: "sugestoesBuscaHome",
+      onSelecionar: (termo) => {
+        input.value = termo;
+        form.requestSubmit();
+      }
+    });
+  } catch (err) {
+    console.warn("Autocomplete indisponível na página inicial:", err);
+  }
+
+  // A pesquisa é registrada apenas na página de destino. Isso evita que uma
+  // busca iniciada na home seja contabilizada duas vezes em buscas populares.
+  form.addEventListener("submit", (event) => {
+    const termo = input.value.trim();
+    if (!termo) event.preventDefault();
+  });
+
+  return true;
+}
+
+async function inicializarPaginaResultados() {
+  const input = document.getElementById("searchInput");
+  const tbody = document.getElementById("resultsBody");
+  if (!input || !tbody) return false;
+
+  const params = new URLSearchParams(window.location.search);
+  const termoInicial = params.get("q") || "";
+  const programa = params.get("programa") || "";
+  const tituloPrograma = document.getElementById("tituloPrograma");
+
+  input.value = termoInicial;
+  if (tituloPrograma) tituloPrograma.textContent = programa || "Todos os Programas";
+
+  HistoricoBusca.inicializar({
+    onSelecionar: (termo) => {
+      input.value = termo;
+      executarBusca(termo, programa, true);
+      input.focus();
+    }
+  });
+
+  if (programa) BuscasPopulares.renderizarPrograma(programa);
+
+  setStatus("Carregando acervo...");
+
+  try {
+    await DadosMedia.carregarCSV();
+  } catch (err) {
+    console.error(err);
+    setStatus("Não foi possível carregar o acervo. Verifique sua conexão e tente novamente.");
+    return true;
+  }
+
+  AutocompleteBusca.inicializar({
+    input,
+    registros: DadosMedia.registros,
+    onSelecionar: (termo) => executarBusca(termo, programa, true)
+  });
+
+  executarBusca(termoInicial, programa, Boolean(termoInicial));
+
+  if (typeof inicializarVtsAgricultura === "function") {
+    inicializarVtsAgricultura(programa);
+  }
+
+  const buscaIncremental = debounce((valor) => {
+    executarBusca(valor, programa, false);
+  }, 250);
+
+  input.addEventListener("input", (event) => buscaIncremental(event.target.value));
+
+  input.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" || event.defaultPrevented) return;
+
+    window.setTimeout(() => {
+      executarBusca(input.value, programa, true);
+    }, 0);
+  });
+
+  document.addEventListener("catalogo:busca-popular", (event) => {
+    const termo = event.detail?.termo || "";
+    if (!termo) return;
+    input.value = termo;
+    executarBusca(termo, programa, true);
+    input.focus();
+  });
+
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  if (loadMoreBtn) loadMoreBtn.addEventListener("click", renderizarProximaPagina);
+
+  document.addEventListener("click", (event) => {
+    const botaoCopiar = event.target.closest(".btn-copiar-id");
+    if (botaoCopiar) copiarIds(botaoCopiar.dataset.ids, botaoCopiar);
+  });
+
+  return true;
+}
+
+async function inicializarCatalogo() {
+  const inicial = await inicializarPaginaInicial();
+  if (!inicial) await inicializarPaginaResultados();
+}
+
+document.addEventListener("DOMContentLoaded", inicializarCatalogo);
