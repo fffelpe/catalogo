@@ -160,8 +160,6 @@ async function inicializarPaginaInicial() {
   const input = document.getElementById("searchInput");
   if (!form || !input) return false;
 
-  BuscasPopulares.renderizarHome();
-
   try {
     await DadosMedia.carregarCSV();
 
