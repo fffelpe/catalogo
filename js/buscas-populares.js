@@ -516,55 +516,6 @@ const BuscasPopulares = (() => {
 
     secao.appendChild(geral);
 
-
-    const tituloProgramas =
-      document.createElement("h2");
-
-    tituloProgramas.className =
-      "buscas-populares-programas-titulo";
-
-    tituloProgramas.textContent =
-      "Buscas populares por programa";
-
-    secao.appendChild(tituloProgramas);
-
-
-    const grade = document.createElement("div");
-
-    grade.className =
-      "buscas-populares-programas";
-
-    Object.keys(PADROES.programas)
-      .forEach((programa) => {
-
-        const bloco =
-          document.createElement("article");
-
-        bloco.className =
-          "busca-programa-card";
-
-        const nome =
-          document.createElement("h3");
-
-        nome.className =
-          "busca-programa-nome";
-
-        nome.textContent = programa;
-
-        bloco.appendChild(nome);
-
-        bloco.appendChild(
-          criarLista(
-            obterPorPrograma(programa),
-            programa
-          )
-        );
-
-        grade.appendChild(bloco);
-      });
-
-    secao.appendChild(grade);
-
     adicionarEventos(secao);
   }
 

@@ -38,15 +38,10 @@ button, input { font: inherit; }
 /* Buscas populares */
 .buscas-populares-home { max-width: 1100px; margin: 28px auto 42px; }
 .buscas-populares-geral { padding: 22px; border: 1px solid #e0e0e0; border-radius: 18px; background: #fafafa; }
-.buscas-populares-titulo, .buscas-populares-programas-titulo, .section-title { margin: 0 0 14px; font-size: clamp(17px, 2vw, 21px); font-weight: 600; }
-.buscas-populares-programas-titulo { margin-top: 28px; }
+.buscas-populares-titulo, .section-title { margin: 0 0 14px; font-size: clamp(17px, 2vw, 21px); font-weight: 600; }
 .buscas-populares-lista { display: flex; flex-wrap: wrap; gap: 8px; }
 .busca-popular-chip { border: 1px solid #bcbcbc; border-radius: 999px; background: #fff; color: #222; padding: 7px 13px; font-size: 13px; cursor: pointer; transition: border-color .15s ease, color .15s ease, background .15s ease, transform .15s ease; }
 .busca-popular-chip:hover, .busca-popular-chip:focus-visible { border-color: #00953b; color: #007d32; background: #f2faf5; outline: none; transform: translateY(-1px); }
-.buscas-populares-programas { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 14px; }
-.busca-programa-card { padding: 18px; border: 1px solid #dedede; border-radius: 14px; background: #fff; }
-.busca-programa-nome { margin: 0 0 12px; font-size: 15px; font-weight: 700; }
-.busca-programa-card .busca-popular-chip { font-size: 12px; padding: 6px 10px; }
 .buscas-populares-contexto { max-width: 720px; margin: 8px auto 22px; padding: 14px 16px; border: 1px solid #e0e0e0; border-radius: 14px; background: #fafafa; }
 .buscas-populares-contexto-titulo { display: block; margin-bottom: 10px; font-size: 13px; font-weight: 700; color: #444; }
 
@@ -101,7 +96,6 @@ button, input { font: inherit; }
   .search-bar .btn { flex-shrink: 0; }
   .buscas-populares-home { margin-top: 22px; }
   .buscas-populares-geral { padding: 16px; }
-  .buscas-populares-programas { grid-template-columns: 1fr; }
   .historico-cabecalho { align-items: flex-start; }
   .historico-item { max-width: calc(50% - 4px); }
   .sugestao-item { padding: 12px; gap: 10px; }
