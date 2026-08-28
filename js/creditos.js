@@ -26,6 +26,13 @@ const CreditosMedia = {
       .toUpperCase();
   },
 
+  separarIds(valor) {
+    return String(valor || "")
+      .split(/[\r\n,;]+/)
+      .map((id) => this.normalizarId(id))
+      .filter(Boolean);
+  },
+
   obter(id) {
     return this.registros[this.normalizarId(id)] || null;
   },
@@ -34,5 +41,39 @@ const CreditosMedia = {
     return ids
       .map((id) => ({ id: this.normalizarId(id), dados: this.obter(id) }))
       .filter((item) => item.id && item.dados);
+  },
+
+  obterPorValorIds(valor) {
+    return this.obterVarios(this.separarIds(valor));
+  },
+
+  camposPesquisa(valorIds) {
+    const encontrados = this.obterPorValorIds(valorIds);
+    const materias = [];
+    const fontes = [];
+    const cargos = [];
+    const equipe = [];
+
+    encontrados.forEach(({ dados }) => {
+      if (dados.materia) materias.push(dados.materia);
+
+      const listaFontes = Array.isArray(dados.fontes) ? dados.fontes : [];
+      listaFontes.forEach((fonte) => {
+        if (fonte?.nome) fontes.push(fonte.nome);
+        if (fonte?.cargo) cargos.push(fonte.cargo);
+      });
+
+      Object.values(dados.creditos || {}).forEach((valor) => {
+        if (Array.isArray(valor)) equipe.push(...valor.filter(Boolean));
+        else if (valor) equipe.push(valor);
+      });
+    });
+
+    return {
+      CREDITOS_MATERIA: materias.join(" "),
+      CREDITOS_FONTES: fontes.join(" "),
+      CREDITOS_CARGOS: cargos.join(" "),
+      CREDITOS_EQUIPE: equipe.join(" ")
+    };
   }
 };
