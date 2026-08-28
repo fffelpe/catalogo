@@ -1,0 +1,49 @@
+name: Sincronizar créditos
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sincronizar-creditos
+  cancel-in-progress: false
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm install --no-audit --no-fund
+
+      - name: Sincronizar créditos do Google Drive
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          DRIVE_CREDITOS_FOLDER_ID: "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik"
+        run: npm run sync:creditos
+
+      - name: Publicar alterações
+        run: |
+          if git diff --quiet -- data/creditos.json data/creditos-status.json; then
+            echo "Nenhuma alteração nos créditos."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/creditos.json data/creditos-status.json
+          git commit -m "chore: sincroniza créditos do Google Drive"
+          git push
