@@ -24,7 +24,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: npm
 
       - name: Instalar dependências
         run: npm install --no-audit --no-fund
@@ -37,7 +36,7 @@ jobs:
 
       - name: Publicar alterações
         run: |
-          if git diff --quiet -- data/creditos.json data/creditos-status.json; then
+          if [ -z "$(git status --porcelain -- data/creditos.json data/creditos-status.json)" ]; then
             echo "Nenhuma alteração nos créditos."
             exit 0
           fi
