@@ -1,0 +1,12 @@
+{
+  "name": "catalogo-midias-jornalismo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:creditos": "node scripts/sincronizar-creditos.mjs"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
