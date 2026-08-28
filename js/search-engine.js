@@ -10,6 +10,10 @@ const SearchEngine = (() => {
     REPORTER: 18,
     PROGRAMA: 18,
     AFILIADA_EMISSORA: 12,
+    CREDITOS_MATERIA: 30,
+    CREDITOS_FONTES: 24,
+    CREDITOS_EQUIPE: 20,
+    CREDITOS_CARGOS: 12,
     DATA: 5
   };
 
@@ -88,7 +92,22 @@ const SearchEngine = (() => {
     return idsRegistro.includes(consultaNormalizada);
   }
 
-  function calcularRelevancia(registro, consulta) {
+  function enriquecerComCreditos(registro) {
+    if (
+      typeof CreditosMedia === "undefined" ||
+      typeof CreditosMedia.camposPesquisa !== "function"
+    ) {
+      return registro;
+    }
+
+    return {
+      ...registro,
+      ...CreditosMedia.camposPesquisa(registro.ID)
+    };
+  }
+
+  function calcularRelevancia(registroOriginal, consulta) {
+    const registro = enriquecerComCreditos(registroOriginal);
     const consultaNormalizada = normalizar(consulta);
 
     if (!consultaNormalizada) {
