@@ -230,6 +230,14 @@ async function inicializarPaginaResultados() {
     return true;
   }
 
+  if (typeof CreditosMedia !== "undefined") {
+    try {
+      await CreditosMedia.carregar();
+    } catch (err) {
+      console.warn("Busca por créditos indisponível nesta execução:", err);
+    }
+  }
+
   AutocompleteBusca.inicializar({
     input,
     registros: DadosMedia.registros,
