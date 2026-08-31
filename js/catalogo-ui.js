@@ -4,7 +4,7 @@
 let resultadosAtuais = [];
 let paginaAtual = 0;
 const ITENS_POR_PAGINA = 50;
-const MEDIA_BASE_URL = "http://lowres.tvcultura.com.br/";
+const MEDIA_BASE_URL = "https://lowres.tvcultura.com.br/";
 let ultimoBotaoPlayer = null;
 
 function debounce(func, timeout = 300) {
