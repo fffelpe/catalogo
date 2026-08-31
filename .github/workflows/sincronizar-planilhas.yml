@@ -1,0 +1,40 @@
+name: Sincronizar planilhas do catálogo
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sincronizar-planilhas
+  cancel-in-progress: false
+
+jobs:
+
+  sincronizar:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Baixar repositório
+        uses: actions/checkout@v7
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v7
+
+        with:
+          node-version: "24"
+
+      - name: Instalar dependências
+        run: npm install --no-audit --no-fund
+
+      - name: Sincronizar planilhas
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+
+        run: npm run sync:planilhas

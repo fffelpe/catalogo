@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "sync:creditos": "node scripts/sincronizar-creditos.mjs"
+    "sync:creditos": "node scripts/sincronizar-creditos.mjs",
+    "sync:planilhas": "node scripts/sincronizar-planilhas.mjs"
   },
   "dependencies": {
     "googleapis": "^144.0.0",
