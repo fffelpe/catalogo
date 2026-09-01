@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css?v=6">
   <link rel="stylesheet" href="../css/creditos.css?v=1">
+  <link rel="stylesheet" href="../css/search-highlight.css?v=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
@@ -28,7 +29,7 @@
         <input type="search" id="searchInput" placeholder="Refinar busca por assunto, local, repórter ou ID..." class="form-control me-2 rounded-pill" autocomplete="off" aria-label="Refinar busca">
         <button class="btn btn-outline-success rounded-pill" type="submit">Buscar</button>
       </form>
-      <p class="busca-inteligente-aviso">A busca considera correspondências exatas, sinônimos jornalísticos e termos relacionados, ordenando os resultados por relevância.</p>
+      <p class="busca-inteligente-aviso">A busca considera correspondências exatas, sinônimos jornalísticos, termos relacionados e metadados de créditos, ordenando os resultados por relevância.</p>
     </section>
 
     <section id="historicoBusca" class="historico-busca" aria-label="Pesquisas recentes" hidden>
@@ -80,5 +81,6 @@
   <script src="../js/creditos.js?v=2"></script>
   <script src="../js/catalogo-ui.js?v=7"></script>
   <script src="../js/creditos-ui.js?v=1"></script>
+  <script src="../js/search-highlight.js?v=1"></script>
 </body>
 </html>
