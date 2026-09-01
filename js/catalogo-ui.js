@@ -20,12 +20,29 @@ function setStatus(msg) {
   if (el) el.textContent = msg;
 }
 
+function programaAtualEhAgrocultura() {
+  const params = new URLSearchParams(window.location.search);
+  return (params.get("programa") || "").trim().toLowerCase() === "agrocultura";
+}
+
 function definirCarregamentoResultados(carregando) {
   const carregamento = document.getElementById("carregamentoResultados");
+  const ehAgrocultura = programaAtualEhAgrocultura();
 
   if (carregamento) carregamento.hidden = !carregando;
+
   document.querySelectorAll(".area-resultados").forEach((elemento) => {
-    if (elemento.id !== "secaoVTsAgro") elemento.hidden = carregando;
+    const exclusivoAgro = elemento.hasAttribute("data-agro-only");
+
+    // Componentes exclusivos do painel nunca devem aparecer em outros programas.
+    if (exclusivoAgro && !ehAgrocultura) {
+      elemento.hidden = true;
+      return;
+    }
+
+    if (elemento.id !== "secaoVTsAgro") {
+      elemento.hidden = carregando;
+    }
   });
 }
 
@@ -270,8 +287,6 @@ async function inicializarPaginaInicial() {
     console.warn("Autocomplete indisponível na página inicial:", err);
   }
 
-  // A pesquisa é registrada apenas na página de destino. Isso evita que uma
-  // busca iniciada na home seja contabilizada duas vezes em buscas populares.
   form.addEventListener("submit", (event) => {
     const termo = input.value.trim();
     if (!termo) event.preventDefault();
