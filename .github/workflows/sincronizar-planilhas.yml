@@ -7,26 +7,22 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: sincronizar-planilhas
   cancel-in-progress: false
 
 jobs:
-
   sincronizar:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Baixar repositório
         uses: actions/checkout@v7
 
       - name: Configurar Node.js
         uses: actions/setup-node@v7
-
         with:
           node-version: "24"
 
@@ -36,5 +32,22 @@ jobs:
       - name: Sincronizar planilhas
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-
         run: npm run sync:planilhas
+
+      - name: Gerar acervo estruturado do AgroCultura
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: npm run sync:agrocultura
+
+      - name: Publicar acervo do AgroCultura
+        run: |
+          if [ -z "$(git status --porcelain -- data/agrocultura-acervo.json)" ]; then
+            echo "Nenhuma alteração no acervo do AgroCultura."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/agrocultura-acervo.json
+          git commit -m "chore: atualiza acervo do AgroCultura"
+          git push
