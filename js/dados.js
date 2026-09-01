@@ -3,9 +3,6 @@
 const DadosMedia = {
   registros: [],
   carregado: false,
-
-  // URL de exportação em CSV da planilha "imgs" (compartilhada como "Qualquer pessoa com o link pode ver").
-  // Padrão: /spreadsheets/d/ID_DA_PLANILHA/export?format=csv&gid=ID_DA_ABA
   CSV_URL: "https://docs.google.com/spreadsheets/d/1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs/export?format=csv&gid=0",
 
   async carregarCSV() {
@@ -31,10 +28,6 @@ const DadosMedia = {
     });
   },
 
-  // Normaliza cada linha para nomes de campo fixos, tolerando cabeçalhos com
-  // espaços extras, maiúsculas/minúsculas diferentes ou pequenas variações de acentuação.
-  // Colunas reais da planilha "imgs": ID, DESCRIÇÃO, DATA, LOCAL, REPÓRTER,
-  // AFILIADA / EMISSORA (uma coluna só), PROGRAMA, EDITORIA.
   _normalizar(item) {
     const mapa = {};
     Object.keys(item).forEach((chaveOriginal) => {
@@ -52,13 +45,11 @@ const DadosMedia = {
       REPORTER: mapa["REPÓRTER"] || mapa["REPORTER"] || "",
       AFILIADA_EMISSORA: chaveAfiliada ? mapa[chaveAfiliada] : "",
       PROGRAMA: mapa["PROGRAMA"] || "",
-      EDITORIA: mapa["EDITORIA"] || ""
+      EDITORIA: mapa["EDITORIA"] || "",
+      PGM: mapa["PGM"] || ""
     };
   },
 
-  // Converte o texto da coluna DATA em um objeto Date, aceitando DD/MM/AAAA,
-  // DD-MM-AAAA e AAAA-MM-DD (com ano de 2 ou 4 dígitos). Retorna null se não
-  // conseguir interpretar, para que o registro não quebre a ordenação.
   _parseData(dataStr) {
     if (!dataStr) return null;
     const str = dataStr.trim();
@@ -82,7 +73,6 @@ const DadosMedia = {
     return isNaN(fallback.getTime()) ? null : fallback;
   },
 
-  // Ordena do mais recente para o mais antigo. Datas inválidas/vazias vão para o final.
   _compararPorDataDesc(a, b) {
     const da = DadosMedia._parseData(a.DATA);
     const db = DadosMedia._parseData(b.DATA);
@@ -92,7 +82,6 @@ const DadosMedia = {
     return 0;
   },
 
-  // Busca livre em todas as colunas (mantém a ordem por data já aplicada em registros)
   buscar(termo) {
     if (!termo) return this.registros;
     const q = termo.toLowerCase();
@@ -101,7 +90,6 @@ const DadosMedia = {
     );
   },
 
-  // Filtra por programa (nome exato ou parcial) e, opcionalmente, por um termo adicional
   buscarPorPrograma(programaNome, termo) {
     let base = this.registros;
 
