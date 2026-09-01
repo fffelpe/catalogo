@@ -5,6 +5,11 @@
     .replace(/[\u0300-\u036f]/g, "")
     .toLocaleLowerCase("pt-BR");
 
+  function estaNoAgrocultura() {
+    const params = new URLSearchParams(window.location.search);
+    return normalizar(params.get("programa") || params.get("p") || "") === "agrocultura";
+  }
+
   function escapeHtml(valor) {
     return texto(valor)
       .replaceAll("&", "&amp;")
@@ -14,49 +19,11 @@
       .replaceAll("'", "&#039;");
   }
 
-  function estaNoAgrocultura() {
-    const params = new URLSearchParams(window.location.search);
-    return normalizar(params.get("programa") || params.get("p") || "") === "agrocultura";
-  }
-
   function idsDoRegistro(registro) {
-    if (typeof CreditosMedia !== "undefined" && CreditosMedia.separarIds) {
-      return CreditosMedia.separarIds(registro.ID || "");
+    if (Array.isArray(registro.ids) && registro.ids.length) {
+      return registro.ids.map((id) => texto(id).toUpperCase()).filter(Boolean);
     }
-    return texto(registro.ID)
-      .split(/[\r\n,;]+/)
-      .map((id) => id.trim().replace(/\.mp4$/i, "").toUpperCase())
-      .filter(Boolean);
-  }
-
-  function identificarTipo(registro) {
-    const base = normalizar(`${registro.DESCRICAO || ""} ${registro.EDITORIA || ""}`);
-
-    // Registros com PGM vindos da planilha "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR"
-    // pertencem exclusivamente à categoria Notícias e stand-ups, mesmo quando a descrição
-    // contém palavras como "cobertura" ou "imagens de cobertura".
-    if (texto(registro.PGM)) return "noticias";
-
-    if (
-      base.includes("imagens de cobertura") ||
-      base.includes("imagem de cobertura") ||
-      /\bcobertura\b/.test(base)
-    ) return "cobertura";
-
-    if (
-      /\bstand[ -]?up(s)?\b/.test(base) ||
-      /\bnoticia(s)?\b/.test(base) ||
-      /\bnota\b/.test(base) ||
-      /\bpassagem\b/.test(base)
-    ) return "noticias";
-
-    return "vt";
-  }
-
-  function analisarCreditos(registro) {
-    const ids = idsDoRegistro(registro);
-    const semCreditos = ids.filter((id) => !CreditosMedia.obter(id));
-    return { ids, semCreditos };
+    return texto(registro.id || registro.ID).toUpperCase().match(/\d{4}B\d{6}/g) || [];
   }
 
   function idsUnicos(registros) {
@@ -65,19 +32,22 @@
     return conjunto;
   }
 
-  function idsPorTipo(registros, tipo) {
-    return idsUnicos(registros.filter((registro) => identificarTipo(registro) === tipo));
+  function vtsSemCreditos(vts) {
+    const faltantes = new Set();
+    vts.forEach((registro) => {
+      idsDoRegistro(registro).forEach((id) => {
+        if (!CreditosMedia.obter(id)) faltantes.add(id);
+      });
+    });
+    return faltantes;
   }
 
-  function atualizarResumo(registros) {
-    const vts = registros.filter((registro) => identificarTipo(registro) === "vt");
-    const vtsSemCreditos = new Set();
-    vts.forEach((registro) => analisarCreditos(registro).semCreditos.forEach((id) => vtsSemCreditos.add(id)));
-
-    document.getElementById("mamIngestados").textContent = idsUnicos(registros).size;
-    document.getElementById("mamTotalVts").textContent = idsPorTipo(registros, "vt").size;
-    document.getElementById("mamTotalNoticias").textContent = idsPorTipo(registros, "noticias").size;
-    document.getElementById("mamVtsSemCreditos").textContent = vtsSemCreditos.size;
+  function atualizarResumo(acervo) {
+    const todos = [...acervo.vts, ...acervo.noticias, ...acervo.coberturas];
+    document.getElementById("mamIngestados").textContent = idsUnicos(todos).size;
+    document.getElementById("mamTotalVts").textContent = idsUnicos(acervo.vts).size;
+    document.getElementById("mamTotalNoticias").textContent = idsUnicos(acervo.noticias).size;
+    document.getElementById("mamVtsSemCreditos").textContent = vtsSemCreditos(acervo.vts).size;
   }
 
   function renderizarMaisBuscados() {
@@ -97,49 +67,49 @@
     });
   }
 
-  function filtrar(registros, filtro) {
-    if (filtro === "todos") return registros;
-    return registros.filter((registro) => identificarTipo(registro) === filtro);
+  function celulaId(registro) {
+    const valor = idsDoRegistro(registro).join("\n");
+    if (typeof renderizarCelulaId === "function") return renderizarCelulaId(valor, "ID");
+    return `<td data-label="ID">${escapeHtml(valor)}</td>`;
   }
 
-  function renderizarTabela(registros, filtro = "vt") {
+  function renderizarTabela(acervo, filtro = "vt") {
     const tbody = document.getElementById("mamAgroBody");
     const titulo = document.getElementById("agroListaTitulo");
     if (!tbody) return;
 
-    const labels = {
-      vt: "VT'S",
-      noticias: "Notícias e stand-ups",
-      cobertura: "Imagens de coberturas"
+    const mapa = {
+      vt: { titulo: "VT'S", registros: acervo.vts },
+      noticias: { titulo: "Notícias e stand-ups", registros: acervo.noticias },
+      cobertura: { titulo: "Imagens de coberturas", registros: acervo.coberturas },
     };
-    if (titulo) titulo.textContent = labels[filtro] || "Materiais";
 
-    const filtrados = filtrar(registros, filtro);
-    if (!filtrados.length) {
+    const selecao = mapa[filtro] || mapa.vt;
+    if (titulo) titulo.textContent = selecao.titulo;
+
+    const registros = Array.isArray(selecao.registros) ? selecao.registros : [];
+    if (!registros.length) {
       tbody.innerHTML = '<tr><td colspan="6">Nenhum material encontrado nesta categoria.</td></tr>';
       return;
     }
 
-    tbody.innerHTML = filtrados.map((registro) => {
-      const ids = idsDoRegistro(registro).join(", ") || "—";
-      return `
-        <tr>
-          <td data-label="ID">${escapeHtml(ids)}</td>
-          <td data-label="Descrição">${escapeHtml(registro.DESCRICAO || "—")}</td>
-          <td data-label="Repórter">${escapeHtml(registro.REPORTER || "—")}</td>
-          <td data-label="Data">${escapeHtml(registro.DATA || "—")}</td>
-          <td data-label="Local">${escapeHtml(registro.LOCAL || "—")}</td>
-          <td data-label="PGM">${escapeHtml(registro.PGM || "—")}</td>
-        </tr>`;
-    }).join("");
+    tbody.innerHTML = registros.map((registro) => `
+      <tr>
+        ${celulaId(registro)}
+        <td data-label="Descrição">${escapeHtml(registro.descricao)}</td>
+        <td data-label="Repórter">${escapeHtml(registro.reporter)}</td>
+        <td data-label="Data">${escapeHtml(registro.data)}</td>
+        <td data-label="Local">${escapeHtml(registro.local)}</td>
+        <td data-label="PGM">${escapeHtml(registro.pgm)}</td>
+      </tr>`).join("");
   }
 
-  function ativarNavbar(registros) {
+  function ativarNavbar(acervo) {
     document.querySelectorAll("[data-agro-tipo]").forEach((botao) => {
       botao.addEventListener("click", () => {
         document.querySelectorAll("[data-agro-tipo]").forEach((b) => b.classList.remove("ativo"));
         botao.classList.add("ativo");
-        renderizarTabela(registros, botao.dataset.agroTipo);
+        renderizarTabela(acervo, botao.dataset.agroTipo);
       });
     });
   }
@@ -154,6 +124,18 @@
     atualizar();
   }
 
+  async function carregarAcervo() {
+    const resposta = await fetch(`../data/agrocultura-acervo.json?v=${Date.now()}`, { cache: "no-store" });
+    if (!resposta.ok) throw new Error(`Falha ao carregar acervo AgroCultura (${resposta.status}).`);
+    const dados = await resposta.json();
+    return {
+      vts: Array.isArray(dados.vts) ? dados.vts : [],
+      noticias: Array.isArray(dados.noticias) ? dados.noticias : [],
+      coberturas: Array.isArray(dados.coberturas) ? dados.coberturas : [],
+      generatedAt: dados.generatedAt || null,
+    };
+  }
+
   async function iniciar() {
     if (!estaNoAgrocultura()) return;
 
@@ -161,19 +143,25 @@
     document.getElementById("secaoMamAgro")?.removeAttribute("hidden");
     document.getElementById("secaoVTsAgro")?.setAttribute("hidden", "");
 
-    try {
-      await Promise.all([DadosMedia.carregarCSV(), CreditosMedia.carregar()]);
-      const registros = DadosMedia.buscarPorPrograma("agrocultura", "");
+    const tbody = document.getElementById("mamAgroBody");
+    if (tbody) tbody.innerHTML = '<tr><td colspan="6">Carregando acervo do AgroCultura...</td></tr>';
 
-      atualizarResumo(registros);
+    try {
+      const [acervo] = await Promise.all([
+        carregarAcervo(),
+        CreditosMedia.carregar(),
+      ]);
+
+      atualizarResumo(acervo);
       renderizarMaisBuscados();
-      ativarNavbar(registros);
-      renderizarTabela(registros, "vt");
+      ativarNavbar(acervo);
+      renderizarTabela(acervo, "vt");
       controlarModoHome();
     } catch (erro) {
       console.error("Erro ao montar a página do AgroCultura:", erro);
-      const tbody = document.getElementById("mamAgroBody");
-      if (tbody) tbody.innerHTML = '<tr><td colspan="6">Não foi possível carregar os dados do AgroCultura.</td></tr>';
+      if (tbody) {
+        tbody.innerHTML = '<tr><td colspan="6">O acervo do AgroCultura ainda não foi sincronizado. Execute a sincronização das planilhas.</td></tr>';
+      }
     }
   }
 
