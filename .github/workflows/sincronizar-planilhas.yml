@@ -6,6 +6,16 @@ on:
 
   workflow_dispatch:
 
+  # Garante a primeira geração do JSON logo após alterações no sincronizador,
+  # sem depender de esperar o próximo ciclo de 15 minutos.
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/gerar-acervo-agrocultura.mjs"
+      - "package.json"
+      - ".github/workflows/sincronizar-planilhas.yml"
+
 permissions:
   contents: write
 
