@@ -72,6 +72,18 @@ async function ler(spreadsheetId, range) {
   return resposta.data.values || [];
 }
 
+async function tentarCarregar(rotulo, funcao) {
+  try {
+    const registros = await funcao();
+    console.log(`${rotulo}: ${registros.length} registros carregados.`);
+    return { registros, erro: null };
+  } catch (erro) {
+    const status = erro?.response?.status || erro?.code || "erro";
+    console.warn(`${rotulo}: fonte indisponível (${status}). O restante do acervo continuará sendo gerado.`);
+    return { registros: [], erro: String(erro?.message || erro) };
+  }
+}
+
 function registroBase({ tipo, origem, aba, id, descricao, reporter, data, local, pgm, formatoData = "dmy" }) {
   const listaIds = ids(id);
   if (!listaIds.length) return null;
@@ -152,10 +164,10 @@ async function carregarNoticias() {
   return registros;
 }
 
-async function carregarCoberturas() {
+async function carregarImagensCobertura() {
   const registros = [];
-
   const imagens = await ler(PLANILHAS.imagens, `'${ABA_IMAGENS}'!A2:D`);
+
   for (const linha of imagens) {
     const registro = registroBase({
       tipo: "cobertura",
@@ -171,8 +183,14 @@ async function carregarCoberturas() {
     if (registro) registros.push(registro);
   }
 
-  const naoExibidas = await ler(PLANILHAS.naoExibidas, `'${ABA_NAO_EXIBIDAS}'!A2:E`);
-  for (const linha of naoExibidas) {
+  return registros;
+}
+
+async function carregarMateriasNaoExibidas() {
+  const registros = [];
+  const linhas = await ler(PLANILHAS.naoExibidas, `'${ABA_NAO_EXIBIDAS}'!A2:E`);
+
+  for (const linha of linhas) {
     const registro = registroBase({
       tipo: "cobertura",
       origem: "MATÉRIAS QUE NÃO FORAM AO AR",
@@ -201,11 +219,20 @@ function limparInternos(registro) {
 }
 
 async function main() {
-  const [vts, noticias, coberturas] = await Promise.all([
-    carregarVts(),
-    carregarNoticias(),
-    carregarCoberturas(),
+  const [vtsFonte, noticiasFonte, imagensFonte, naoExibidasFonte] = await Promise.all([
+    tentarCarregar("VTs", carregarVts),
+    tentarCarregar("Notícias/stand-ups", carregarNoticias),
+    tentarCarregar("Imagens de cobertura", carregarImagensCobertura),
+    tentarCarregar("Matérias não exibidas", carregarMateriasNaoExibidas),
   ]);
+
+  const vts = vtsFonte.registros;
+  const noticias = noticiasFonte.registros;
+  const coberturas = [...imagensFonte.registros, ...naoExibidasFonte.registros];
+
+  if (!vts.length && !noticias.length && !coberturas.length) {
+    throw new Error("Nenhuma fonte do AgroCultura pôde ser lida. Verifique as permissões da conta de serviço.");
+  }
 
   vts.sort(ordenarMaisNovo);
   noticias.sort(ordenarMaisNovo);
@@ -215,6 +242,13 @@ async function main() {
 
   const payload = {
     generatedAt: new Date().toISOString(),
+    parcial: Boolean(vtsFonte.erro || noticiasFonte.erro || imagensFonte.erro || naoExibidasFonte.erro),
+    errosFontes: {
+      vts: vtsFonte.erro,
+      noticias: noticiasFonte.erro,
+      imagens: imagensFonte.erro,
+      naoExibidas: naoExibidasFonte.erro,
+    },
     fontes: {
       vts: ["MATÉRIAS QUE FORAM AO AR_ / 2019-2026", "MATÉRIAS QUE FORAM AO AR_ / VTS FAUSTINO"],
       noticias: ["NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR"],
@@ -236,6 +270,7 @@ async function main() {
 
   console.log(`AgroCultura: ${payload.resumo.materiais} IDs únicos.`);
   console.log(`VTs: ${payload.resumo.vts}; notícias/stand-ups: ${payload.resumo.noticias}; coberturas: ${payload.resumo.coberturas}.`);
+  if (payload.parcial) console.warn("Acervo gerado parcialmente porque uma ou mais fontes estão sem permissão para a conta de serviço.");
 }
 
 main().catch((erro) => {
