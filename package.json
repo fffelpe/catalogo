@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "sync:creditos": "node scripts/sincronizar-creditos.mjs",
-    "sync:planilhas": "node scripts/sincronizar-planilhas.mjs"
+    "sync:planilhas": "node scripts/sincronizar-planilhas.mjs && node scripts/sincronizar-noticias-agrocultura.mjs"
   },
   "dependencies": {
     "googleapis": "^144.0.0",
