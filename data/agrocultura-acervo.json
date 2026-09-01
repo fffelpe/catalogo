@@ -1,0 +1,25 @@
+{
+  "generatedAt": null,
+  "fontes": {
+    "vts": [
+      "MATÉRIAS QUE FORAM AO AR_ / 2019-2026",
+      "MATÉRIAS QUE FORAM AO AR_ / VTS FAUSTINO"
+    ],
+    "noticias": [
+      "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR"
+    ],
+    "coberturas": [
+      "IMAGENS AGROCULTURA 15.07.2026",
+      "MATÉRIAS QUE NÃO FORAM AO AR"
+    ]
+  },
+  "resumo": {
+    "materiais": 0,
+    "vts": 0,
+    "noticias": 0,
+    "coberturas": 0
+  },
+  "vts": [],
+  "noticias": [],
+  "coberturas": []
+}
