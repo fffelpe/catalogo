@@ -143,17 +143,24 @@
     if (!tbody || !input) return;
 
     let agendado = false;
+    let observer;
+
+    const observar = () => observer.observe(tbody, { childList: true, subtree: true });
+
     const agendar = () => {
       if (agendado) return;
       agendado = true;
       requestAnimationFrame(() => {
         agendado = false;
+        observer.disconnect();
         aplicarDestaques();
+        observar();
       });
     };
 
-    const observer = new MutationObserver(agendar);
-    observer.observe(tbody, { childList: true, subtree: true });
+    observer = new MutationObserver(agendar);
+    observar();
+
     input.addEventListener("input", agendar);
     document.getElementById("searchForm")?.addEventListener("submit", () => setTimeout(agendar, 0));
     document.getElementById("loadMoreBtn")?.addEventListener("click", () => setTimeout(agendar, 0));
