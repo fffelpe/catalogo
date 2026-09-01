@@ -73,10 +73,18 @@
     return `<td data-label="ID">${escapeHtml(valor)}</td>`;
   }
 
-  function renderizarTabela(acervo, filtro = "vt") {
+  function definirTabelaVisivel(visivel) {
+    const topo = document.querySelector(".agro-lista-topo");
+    const tabela = document.querySelector(".mam-agro-table-wrap");
+
+    if (topo) topo.hidden = !visivel;
+    if (tabela) tabela.hidden = !visivel;
+  }
+
+  function renderizarTabela(acervo, filtro) {
     const tbody = document.getElementById("mamAgroBody");
     const titulo = document.getElementById("agroListaTitulo");
-    if (!tbody) return;
+    if (!tbody || !filtro) return;
 
     const mapa = {
       vt: { titulo: "VT'S", registros: acervo.vts },
@@ -84,8 +92,11 @@
       cobertura: { titulo: "Imagens de coberturas", registros: acervo.coberturas },
     };
 
-    const selecao = mapa[filtro] || mapa.vt;
+    const selecao = mapa[filtro];
+    if (!selecao) return;
+
     if (titulo) titulo.textContent = selecao.titulo;
+    definirTabelaVisivel(true);
 
     const registros = Array.isArray(selecao.registros) ? selecao.registros : [];
     if (!registros.length) {
@@ -105,10 +116,20 @@
   }
 
   function ativarNavbar(acervo) {
-    document.querySelectorAll("[data-agro-tipo]").forEach((botao) => {
+    const botoes = document.querySelectorAll("[data-agro-tipo]");
+
+    botoes.forEach((botao) => {
+      botao.classList.remove("ativo");
+      botao.setAttribute("aria-pressed", "false");
+
       botao.addEventListener("click", () => {
-        document.querySelectorAll("[data-agro-tipo]").forEach((b) => b.classList.remove("ativo"));
+        botoes.forEach((b) => {
+          b.classList.remove("ativo");
+          b.setAttribute("aria-pressed", "false");
+        });
+
         botao.classList.add("ativo");
+        botao.setAttribute("aria-pressed", "true");
         renderizarTabela(acervo, botao.dataset.agroTipo);
       });
     });
@@ -143,8 +164,11 @@
     document.getElementById("secaoMamAgro")?.removeAttribute("hidden");
     document.getElementById("secaoVTsAgro")?.setAttribute("hidden", "");
 
+    // A tabela começa fechada. Ela só é exibida depois que o usuário
+    // escolhe VT'S, Notícias e stand-ups ou Imagens de coberturas.
+    definirTabelaVisivel(false);
     const tbody = document.getElementById("mamAgroBody");
-    if (tbody) tbody.innerHTML = '<tr><td colspan="6">Carregando acervo do AgroCultura...</td></tr>';
+    if (tbody) tbody.innerHTML = "";
 
     try {
       const [acervo] = await Promise.all([
@@ -155,13 +179,10 @@
       atualizarResumo(acervo);
       renderizarMaisBuscados();
       ativarNavbar(acervo);
-      renderizarTabela(acervo, "vt");
       controlarModoHome();
     } catch (erro) {
       console.error("Erro ao montar a página do AgroCultura:", erro);
-      if (tbody) {
-        tbody.innerHTML = '<tr><td colspan="6">O acervo do AgroCultura ainda não foi sincronizado. Execute a sincronização das planilhas.</td></tr>';
-      }
+      definirTabelaVisivel(false);
     }
   }
 
