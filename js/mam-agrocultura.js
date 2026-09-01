@@ -3,6 +3,10 @@
 
   const normalizarStatus = (valor) => String(valor || "").trim().toLowerCase();
   const texto = (valor) => String(valor ?? "").trim();
+  const normalizar = (valor) => texto(valor)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
 
   function escapeHtml(valor) {
     return texto(valor)
@@ -20,6 +24,42 @@
     return programa === "agrocultura" || titulo === "agrocultura";
   }
 
+  function estaIngestado(item) {
+    return ["ingestado", "no mam"].includes(normalizarStatus(item.status));
+  }
+
+  function identificarTipo(item) {
+    const tipoInformado = normalizar(item.tipo || item.categoria || "");
+    const base = normalizar(`${item.material || ""} ${item.titulo || ""} ${item.descricao || ""}`);
+
+    if (tipoInformado.includes("stand") || /\bstand[ -]?up(s)?\b/.test(base)) {
+      return "standup";
+    }
+
+    if (
+      tipoInformado.includes("cobertura") ||
+      base.includes("imagens de cobertura") ||
+      base.includes("imagem de cobertura") ||
+      base.includes("imagens cobertura") ||
+      base.includes("cobertura pgm")
+    ) {
+      return "cobertura";
+    }
+
+    if (tipoInformado === "vt" || tipoInformado.includes("materia") || /(^|\s|_)vt(\s|_|$)/.test(base)) {
+      return "vt";
+    }
+
+    return "outro";
+  }
+
+  function labelTipo(tipo) {
+    if (tipo === "vt") return "VT";
+    if (tipo === "standup") return "STAND-UP";
+    if (tipo === "cobertura") return "IMAGENS DE COBERTURA";
+    return "OUTRO";
+  }
+
   function classeStatus(status) {
     if (status === "ingestado" || status === "no mam") return "mam-status-ingestado";
     if (status === "pendente") return "mam-status-pendente";
@@ -27,32 +67,37 @@
   }
 
   function labelStatus(status) {
-    if (status === "ingestado" || status === "no mam") return "No MAM";
+    if (status === "ingestado" || status === "no mam") return "Ingestado";
     if (status === "pendente") return "Pendente";
     return "Não encontrado";
   }
 
+  function semCreditosComId(item) {
+    return Boolean(texto(item.mediaId)) && !Boolean(item.creditos);
+  }
+
   function filtrar(items, filtro) {
     if (filtro === "todos") return items;
-    if (filtro === "sem-creditos") return items.filter((item) => !item.creditos);
-    if (filtro === "ingestado") {
-      return items.filter((item) => ["ingestado", "no mam"].includes(normalizarStatus(item.status)));
-    }
-    if (filtro === "pendente") {
-      return items.filter((item) => !["ingestado", "no mam"].includes(normalizarStatus(item.status)));
+    if (filtro === "sem-creditos") return items.filter(semCreditosComId);
+    if (filtro === "ingestado") return items.filter(estaIngestado);
+    if (["vt", "standup", "cobertura"].includes(filtro)) {
+      return items.filter((item) => identificarTipo(item) === filtro);
     }
     return items;
   }
 
   function atualizarResumo(items) {
-    const noMam = items.filter((item) => ["ingestado", "no mam"].includes(normalizarStatus(item.status))).length;
-    const pendentes = items.length - noMam;
-    const semCreditos = items.filter((item) => !item.creditos).length;
+    const ingestados = items.filter(estaIngestado).length;
+    const vts = items.filter((item) => identificarTipo(item) === "vt").length;
+    const standups = items.filter((item) => identificarTipo(item) === "standup").length;
+    const coberturas = items.filter((item) => identificarTipo(item) === "cobertura").length;
+    const idsSemCreditos = items.filter(semCreditosComId).length;
 
-    document.getElementById("mamTotal").textContent = items.length;
-    document.getElementById("mamIngestados").textContent = noMam;
-    document.getElementById("mamPendentes").textContent = pendentes;
-    document.getElementById("mamSemCreditos").textContent = semCreditos;
+    document.getElementById("mamIngestados").textContent = ingestados;
+    document.getElementById("mamTotalVts").textContent = vts;
+    document.getElementById("mamTotalStandups").textContent = standups;
+    document.getElementById("mamTotalCoberturas").textContent = coberturas;
+    document.getElementById("mamIdsSemCreditos").textContent = idsSemCreditos;
   }
 
   function renderizar(items, filtro = "todos") {
@@ -68,7 +113,7 @@
       wrap.hidden = true;
       mensagem.textContent = items.length
         ? "Nenhum material encontrado neste filtro."
-        : "A sincronização MAM ainda não gerou registros para exibir.";
+        : "O painel ainda não possui registros para exibir.";
       return;
     }
 
@@ -79,16 +124,18 @@
       const status = normalizarStatus(item.status);
       const mediaId = texto(item.mediaId);
       const creditos = Boolean(item.creditos);
+      const tipo = identificarTipo(item);
 
       return `
         <tr>
+          <td data-label="Tipo"><span class="mam-tipo mam-tipo-${tipo}">${labelTipo(tipo)}</span></td>
           <td data-label="Status"><span class="mam-status ${classeStatus(status)}">${labelStatus(status)}</span></td>
           <td data-label="Material">${escapeHtml(item.material || item.titulo || "—")}</td>
           <td data-label="Afiliada">${escapeHtml(item.afiliada || "—")}</td>
           <td data-label="Media ID">${mediaId ? escapeHtml(mediaId) : '<span class="mam-id-vazio">—</span>'}</td>
           <td data-label="Duração">${escapeHtml(item.duracao || "—")}</td>
           <td data-label="Cadastro MAM">${escapeHtml(item.dataCadastroMam || "—")}</td>
-          <td data-label="Créditos"><span class="${creditos ? "mam-creditos-ok" : "mam-creditos-nao"}">${creditos ? "Disponíveis" : "Não encontrados"}</span></td>
+          <td data-label="Créditos"><span class="${creditos ? "mam-creditos-ok" : "mam-creditos-nao"}">${creditos ? "Disponíveis" : (mediaId ? "ID sem créditos" : "Não encontrados")}</span></td>
         </tr>`;
     }).join("");
   }
@@ -128,9 +175,9 @@
       ativarFiltros(items);
       renderizar(items);
     } catch (erro) {
-      console.error("Erro ao carregar controle MAM do Agrocultura:", erro);
+      console.error("Erro ao carregar painel do acervo do Agrocultura:", erro);
       const mensagem = document.getElementById("mamAgroMensagem");
-      if (mensagem) mensagem.textContent = "Não foi possível carregar os dados do controle MAM.";
+      if (mensagem) mensagem.textContent = "Não foi possível carregar os dados do painel do acervo.";
     }
   }
 
