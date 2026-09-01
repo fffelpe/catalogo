@@ -32,6 +32,11 @@
   function identificarTipo(registro) {
     const base = normalizar(`${registro.DESCRICAO || ""} ${registro.EDITORIA || ""}`);
 
+    // Registros com PGM vindos da planilha "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR"
+    // pertencem exclusivamente à categoria Notícias e stand-ups, mesmo quando a descrição
+    // contém palavras como "cobertura" ou "imagens de cobertura".
+    if (texto(registro.PGM)) return "noticias";
+
     if (
       base.includes("imagens de cobertura") ||
       base.includes("imagem de cobertura") ||
