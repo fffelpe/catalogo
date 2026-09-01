@@ -3,7 +3,8 @@ import { google } from "googleapis";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const PLANILHA_NOTICIAS_ID = "1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw";
-const RANGE_IMGS = "imgs!A2:I";
+const ABA_IMGS = "imgs";
+const RANGE_IMGS = `${ABA_IMGS}!A2:I`;
 
 const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
 if (!credenciaisJson) throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
@@ -60,7 +61,6 @@ async function carregarNoticias() {
   const porId = new Map();
 
   for (const linha of resposta.data.values || []) {
-    // Origem: PGM, ID, DATA, ASSUNTO, UF, REPÓRTER, AFILIADA / EMISSORA, EDITORIA, PROGRAMA.
     const id = normalizarId(linha[1]);
     if (!id) continue;
 
@@ -73,7 +73,7 @@ async function carregarNoticias() {
       limparTexto(linha[6]),
       limparTexto(linha[8]) || "AGROCULTURA",
       limparTexto(linha[7]),
-      limparTexto(linha[0]), // PGM preservado em imgs!I
+      limparTexto(linha[0]),
     ];
 
     if (!porId.has(id)) porId.set(id, registro);
@@ -85,6 +85,39 @@ async function carregarNoticias() {
 
   console.log(`Notícias/stand-ups: ${porId.size} IDs únicos encontrados.`);
   return [...porId.values()];
+}
+
+async function garantirNoveColunasImgs() {
+  const resposta = await sheets.spreadsheets.get({
+    spreadsheetId: PLANILHA_IMGS_ID,
+    fields: "sheets.properties(sheetId,title,gridProperties(columnCount))",
+  });
+
+  const aba = (resposta.data.sheets || []).find(
+    (item) => item.properties?.title === ABA_IMGS
+  );
+
+  if (!aba?.properties) throw new Error(`Aba ${ABA_IMGS} não encontrada na planilha imgs.`);
+
+  const colunasAtuais = Number(aba.properties.gridProperties?.columnCount || 0);
+  if (colunasAtuais >= 9) return;
+
+  await sheets.spreadsheets.batchUpdate({
+    spreadsheetId: PLANILHA_IMGS_ID,
+    requestBody: {
+      requests: [
+        {
+          appendDimension: {
+            sheetId: aba.properties.sheetId,
+            dimension: "COLUMNS",
+            length: 9 - colunasAtuais,
+          },
+        },
+      ],
+    },
+  });
+
+  console.log(`Aba ${ABA_IMGS} expandida de ${colunasAtuais} para 9 colunas.`);
 }
 
 async function carregarImgs() {
@@ -102,9 +135,10 @@ function mesclar(atual, origem) {
 }
 
 async function garantirCabecalhoPgm() {
+  await garantirNoveColunasImgs();
   await sheets.spreadsheets.values.update({
     spreadsheetId: PLANILHA_IMGS_ID,
-    range: "imgs!I1",
+    range: `${ABA_IMGS}!I1`,
     valueInputOption: "USER_ENTERED",
     requestBody: { values: [["PGM"]] },
   });
@@ -136,7 +170,7 @@ async function main() {
       const dadosNovos = mesclar(existente.dados, noticia);
       if (JSON.stringify(dadosNovos) !== JSON.stringify(existente.dados)) {
         atualizacoes.push({
-          range: `imgs!A${existente.linhaPlanilha}:I${existente.linhaPlanilha}`,
+          range: `${ABA_IMGS}!A${existente.linhaPlanilha}:I${existente.linhaPlanilha}`,
           values: [dadosNovos],
         });
         existente.dados = dadosNovos;
@@ -160,7 +194,7 @@ async function main() {
   if (novasLinhas.length) {
     await sheets.spreadsheets.values.append({
       spreadsheetId: PLANILHA_IMGS_ID,
-      range: "imgs!A:I",
+      range: `${ABA_IMGS}!A:I`,
       valueInputOption: "USER_ENTERED",
       insertDataOption: "INSERT_ROWS",
       requestBody: { values: novasLinhas },

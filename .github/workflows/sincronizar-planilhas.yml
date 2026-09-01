@@ -6,13 +6,12 @@ on:
 
   workflow_dispatch:
 
-  # Garante a primeira geração do JSON logo após alterações no sincronizador,
-  # sem depender de esperar o próximo ciclo de 15 minutos.
   push:
     branches:
       - main
     paths:
       - "scripts/gerar-acervo-agrocultura.mjs"
+      - "scripts/sincronizar-noticias-agrocultura.mjs"
       - "package.json"
       - ".github/workflows/sincronizar-planilhas.yml"
 
@@ -39,11 +38,6 @@ jobs:
       - name: Instalar dependências
         run: npm install --no-audit --no-fund
 
-      - name: Sincronizar planilhas
-        env:
-          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-        run: npm run sync:planilhas
-
       - name: Gerar acervo estruturado do AgroCultura
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
@@ -53,11 +47,16 @@ jobs:
         run: |
           if [ -z "$(git status --porcelain -- data/agrocultura-acervo.json)" ]; then
             echo "Nenhuma alteração no acervo do AgroCultura."
-            exit 0
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/agrocultura-acervo.json
+            git commit -m "chore: atualiza acervo do AgroCultura"
+            git pull --rebase origin main
+            git push
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/agrocultura-acervo.json
-          git commit -m "chore: atualiza acervo do AgroCultura"
-          git push
+      - name: Sincronizar planilhas
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: npm run sync:planilhas
