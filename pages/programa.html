@@ -81,16 +81,16 @@
       </div>
 
       <nav class="agro-navbar" aria-label="Categorias do acervo AgroCultura">
-        <button type="button" class="agro-nav-item ativo" data-agro-tipo="vt">VT'S</button>
-        <button type="button" class="agro-nav-item" data-agro-tipo="noticias">Notícias e stand-ups</button>
-        <button type="button" class="agro-nav-item" data-agro-tipo="cobertura">Imagens de coberturas</button>
+        <button type="button" class="agro-nav-item" data-agro-tipo="vt" aria-pressed="false">VT'S</button>
+        <button type="button" class="agro-nav-item" data-agro-tipo="noticias" aria-pressed="false">Notícias e stand-ups</button>
+        <button type="button" class="agro-nav-item" data-agro-tipo="cobertura" aria-pressed="false">Imagens de coberturas</button>
       </nav>
 
-      <div class="agro-lista-topo">
-        <h3 id="agroListaTitulo">VT'S</h3>
+      <div class="agro-lista-topo" hidden>
+        <h3 id="agroListaTitulo"></h3>
       </div>
 
-      <div class="table-wrap mam-agro-table-wrap">
+      <div class="table-wrap mam-agro-table-wrap" hidden>
         <table class="results-table mam-agro-table">
           <thead>
             <tr>
@@ -155,7 +155,7 @@
   <script src="../js/creditos.js?v=2"></script>
   <script src="../js/catalogo-ui.js?v=9"></script>
   <script src="../js/creditos-ui.js?v=2"></script>
-  <script src="../js/mam-agrocultura.js?v=5"></script>
+  <script src="../js/mam-agrocultura.js?v=6"></script>
   <script src="../js/search-highlight.js?v=1"></script>
 </body>
 </html>
