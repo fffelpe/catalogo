@@ -1,4 +1,5 @@
-// creditos-ui.js - Exibe créditos no resultado da busca sem alterar o motor de pesquisa.
+// creditos-ui.js - Exibe créditos tanto na busca geral
+// quanto nas tabelas de VTs do AgroCultura.
 
 (function () {
   const ROTULOS_CREDITOS = {
@@ -36,6 +37,7 @@
     texto.textContent = valor;
 
     grupo.append(titulo, texto);
+
     return grupo;
   }
 
@@ -49,18 +51,23 @@
     const id = document.createElement("span");
     id.className = "credito-media-id";
     id.textContent = item.id;
+
     cabecalho.appendChild(id);
 
     if (item.dados.materia) {
       const materia = document.createElement("strong");
       materia.className = "credito-materia";
       materia.textContent = item.dados.materia;
+
       cabecalho.appendChild(materia);
     }
 
     bloco.appendChild(cabecalho);
 
-    const fontes = Array.isArray(item.dados.fontes) ? item.dados.fontes : [];
+    const fontes = Array.isArray(item.dados.fontes)
+      ? item.dados.fontes
+      : [];
+
     fontes.forEach((fonte) => {
       const fonteGrupo = document.createElement("div");
       fonteGrupo.className = "credito-fonte";
@@ -68,17 +75,20 @@
       const rotulo = document.createElement("strong");
       rotulo.className = "credito-rotulo";
       rotulo.textContent = "Fonte";
+
       fonteGrupo.appendChild(rotulo);
 
       const nome = document.createElement("span");
       nome.className = "credito-valor";
       nome.textContent = fonte.nome || "";
+
       fonteGrupo.appendChild(nome);
 
       if (fonte.cargo) {
         const cargo = document.createElement("small");
         cargo.className = "credito-cargo";
         cargo.textContent = fonte.cargo;
+
         fonteGrupo.appendChild(cargo);
       }
 
@@ -86,46 +96,122 @@
     });
 
     const creditos = item.dados.creditos || {};
+
     Object.entries(creditos).forEach(([chave, valor]) => {
-      const campo = criarCampo(ROTULOS_CREDITOS[chave] || chave, valor);
-      if (campo) bloco.appendChild(campo);
+      const campo = criarCampo(
+        ROTULOS_CREDITOS[chave] || chave,
+        valor
+      );
+
+      if (campo) {
+        bloco.appendChild(campo);
+      }
     });
 
     return bloco;
   }
 
+  function encontrarCelulaDescricao(tr) {
+    return (
+      tr.querySelector('td[data-label="Descrição"]') ||
+      tr.querySelector('td[data-label="DESCRIÇÃO"]') ||
+      tr.querySelector('td[data-label="Descricao"]') ||
+      tr.querySelector('td[data-label="DESCRICAO"]')
+    );
+  }
+
   function decorarLinha(tr) {
-    if (!tr || tr.dataset.creditosProcessados === "1") return;
-    tr.dataset.creditosProcessados = "1";
+    if (!tr) return;
+
+    if (tr.dataset.creditosProcessados === "1") {
+      return;
+    }
 
     const botaoCopiar = tr.querySelector(".btn-copiar-id");
-    const celulaDescricao = tr.querySelector('td[data-label="Descrição"]');
-    if (!botaoCopiar || !celulaDescricao) return;
+    const celulaDescricao = encontrarCelulaDescricao(tr);
+
+    /*
+     * Algumas linhas como "Carregando..." ou
+     * "Selecione um ano acima" não possuem ID/descrição.
+     */
+    if (!botaoCopiar || !celulaDescricao) {
+      return;
+    }
 
     const ids = separarIds(botaoCopiar.dataset.ids);
+
     const encontrados = CreditosMedia.obterVarios(ids);
-    if (!encontrados.length) return;
+
+    /*
+     * Marca como processado somente depois que sabemos
+     * que a linha realmente é uma linha de mídia.
+     */
+    tr.dataset.creditosProcessados = "1";
+
+    if (!encontrados.length) {
+      return;
+    }
 
     const detalhes = document.createElement("details");
     detalhes.className = "creditos-detalhes";
 
     const resumo = document.createElement("summary");
     resumo.className = "creditos-resumo";
-    resumo.textContent = encontrados.length > 1
-      ? `Ver créditos (${encontrados.length})`
-      : "Ver créditos";
+
+    resumo.textContent =
+      encontrados.length > 1
+        ? `Ver créditos (${encontrados.length})`
+        : "Ver créditos";
 
     const conteudo = document.createElement("div");
     conteudo.className = "creditos-conteudo";
-    encontrados.forEach((item) => conteudo.appendChild(criarBlocoCredito(item)));
+
+    encontrados.forEach((item) => {
+      conteudo.appendChild(criarBlocoCredito(item));
+    });
 
     detalhes.append(resumo, conteudo);
+
     celulaDescricao.appendChild(detalhes);
   }
 
+  function decorarTabela(tbody) {
+    if (!tbody) return;
+
+    tbody.querySelectorAll("tr").forEach(decorarLinha);
+  }
+
+  function observarTabela(tbody) {
+    if (!tbody) return;
+
+    decorarTabela(tbody);
+
+    const observer = new MutationObserver((mutacoes) => {
+      mutacoes.forEach((mutacao) => {
+        mutacao.addedNodes.forEach((node) => {
+          if (node.nodeType !== Node.ELEMENT_NODE) {
+            return;
+          }
+
+          if (node.matches?.("tr")) {
+            decorarLinha(node);
+          }
+
+          node.querySelectorAll?.("tr").forEach(decorarLinha);
+        });
+      });
+    });
+
+    observer.observe(tbody, {
+      childList: true,
+      subtree: true
+    });
+  }
+
   async function inicializarCreditos() {
-    const tbody = document.getElementById("resultsBody");
-    if (!tbody || typeof CreditosMedia === "undefined") return;
+    if (typeof CreditosMedia === "undefined") {
+      return;
+    }
 
     try {
       await CreditosMedia.carregar();
@@ -134,20 +220,29 @@
       return;
     }
 
-    tbody.querySelectorAll("tr").forEach(decorarLinha);
+    /*
+     * Resultado normal da busca.
+     */
+    const resultadosBody =
+      document.getElementById("resultsBody");
 
-    const observer = new MutationObserver((mutacoes) => {
-      mutacoes.forEach((mutacao) => {
-        mutacao.addedNodes.forEach((node) => {
-          if (node.nodeType !== Node.ELEMENT_NODE) return;
-          if (node.matches?.("tr")) decorarLinha(node);
-          node.querySelectorAll?.("tr").forEach(decorarLinha);
-        });
-      });
-    });
+    /*
+     * Tabela das abas:
+     * VT'S 2019
+     * VT'S 2020
+     * ...
+     * VT'S 2026
+     * VT'S BRUNO FAUSTINO
+     */
+    const vtsAgroBody =
+      document.getElementById("tbodyVtsAgro");
 
-    observer.observe(tbody, { childList: true });
+    observarTabela(resultadosBody);
+    observarTabela(vtsAgroBody);
   }
 
-  document.addEventListener("DOMContentLoaded", inicializarCreditos);
+  document.addEventListener(
+    "DOMContentLoaded",
+    inicializarCreditos
+  );
 })();
