@@ -14,13 +14,8 @@
   margin-bottom: 18px;
 }
 
-.mam-agro-eyebrow {
-  text-align: left;
-}
-
-.mam-agro-title {
-  margin: 2px 0 4px;
-}
+.mam-agro-eyebrow { text-align: left; }
+.mam-agro-title { margin: 2px 0 4px; }
 
 .mam-agro-descricao,
 .mam-agro-atualizado {
@@ -29,38 +24,60 @@
   font-size: 13px;
 }
 
-.mam-agro-atualizado {
-  white-space: nowrap;
-}
+.mam-agro-atualizado { white-space: nowrap; }
 
 .mam-agro-resumo {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
   margin-bottom: 16px;
 }
 
 .mam-agro-card {
+  min-width: 0;
   padding: 14px 16px;
   border: 1px solid #d6e5db;
   border-radius: 14px;
   background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .035);
+}
+
+.mam-agro-card-destaque {
+  border-color: #a9d5b8;
+  background: #f4fbf6;
+}
+
+.mam-agro-card-alerta {
+  border-color: #ead6ab;
+  background: #fffaf0;
 }
 
 .mam-agro-card-label {
   display: block;
   margin-bottom: 4px;
   color: #5f6b64;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .04em;
 }
 
 .mam-agro-card strong {
+  display: block;
   font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.1;
   font-weight: 700;
   color: #007d32;
+}
+
+.mam-agro-card-alerta strong { color: #a86d00; }
+
+.mam-agro-card small {
+  display: block;
+  margin-top: 5px;
+  color: #777;
+  font-size: 11px;
+  line-height: 1.3;
 }
 
 .mam-agro-filtros {
@@ -99,39 +116,42 @@
   font-size: 13px;
 }
 
-.mam-agro-table-wrap {
-  margin-top: 8px;
-}
+.mam-agro-table-wrap { margin-top: 8px; }
+.mam-agro-table { min-width: 920px; }
 
-.mam-agro-table {
-  min-width: 880px;
-}
-
-.mam-status {
+.mam-tipo {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
+  padding: 4px 8px;
+  border: 1px solid #d6e5db;
+  border-radius: 999px;
+  background: #f5faf7;
+  color: #126732;
 }
 
-.mam-status::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #8a8a8a;
+.mam-tipo-standup {
+  border-color: #d5dce9;
+  background: #f5f7fb;
+  color: #425a8a;
 }
 
-.mam-status-ingestado::before { background: #00953b; }
-.mam-status-pendente::before { background: #d79a00; }
-.mam-status-nao-encontrado::before { background: #b42318; }
+.mam-tipo-cobertura {
+  border-color: #eadfbd;
+  background: #fffaf0;
+  color: #8a6414;
+}
+
+.mam-tipo-outro {
+  border-color: #ddd;
+  background: #f7f7f7;
+  color: #666;
+}
 
 .mam-id-vazio,
-.mam-dado-vazio {
-  color: #8a8a8a;
-}
+.mam-dado-vazio { color: #8a8a8a; }
 
 .mam-creditos-ok {
   color: #007d32;
@@ -139,22 +159,25 @@
 }
 
 .mam-creditos-nao {
-  color: #8a8a8a;
+  color: #a56700;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .mam-agro-resumo {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 850px) {
-  .mam-agro {
-    padding: 16px;
-  }
+  .mam-agro { padding: 16px; }
 
   .mam-agro-cabecalho {
     align-items: flex-start;
     flex-direction: column;
   }
 
-  .mam-agro-atualizado {
-    white-space: normal;
-  }
+  .mam-agro-atualizado { white-space: normal; }
 
   .mam-agro-resumo {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -162,7 +185,5 @@
 }
 
 @media (max-width: 520px) {
-  .mam-agro-resumo {
-    grid-template-columns: 1fr;
-  }
+  .mam-agro-resumo { grid-template-columns: 1fr; }
 }
