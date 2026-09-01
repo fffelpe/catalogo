@@ -6,9 +6,9 @@
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
   <title>Catálogo de Mídias - Programa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css?v=6">
+  <link rel="stylesheet" href="../css/main.css?v=7">
   <link rel="stylesheet" href="../css/creditos.css?v=1">
-  <link rel="stylesheet" href="../css/mam-agrocultura.css?v=3">
+  <link rel="stylesheet" href="../css/mam-agrocultura.css?v=4">
   <link rel="stylesheet" href="../css/search-highlight.css?v=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
@@ -34,7 +34,12 @@
       </form>
     </section>
 
-    <!-- Mais buscados neste programa são inseridos aqui pelo buscas-populares.js -->
+    <section id="agroMaisBuscados" class="agro-mais-buscados area-resultados" hidden aria-labelledby="agroMaisBuscadosTitulo">
+      <div class="agro-secao-topo">
+        <h2 id="agroMaisBuscadosTitulo">Imagens mais buscadas</h2>
+      </div>
+      <div id="agroMaisBuscadosLista" class="agro-mais-buscados-lista"></div>
+    </section>
 
     <section id="historicoBusca" class="historico-busca" aria-label="Pesquisas recentes" hidden>
       <div class="historico-cabecalho">
@@ -53,60 +58,48 @@
         <div>
           <span class="eyebrow mam-agro-eyebrow">Resumo do acervo</span>
           <h2 id="tituloMamAgro" class="page-title mam-agro-title">Painel AgroCultura</h2>
-          <p class="mam-agro-descricao">Contagem automática a partir dos registros do AgroCultura na planilha imgs e dos créditos já sincronizados no catálogo.</p>
         </div>
-        <p id="mamAgroAtualizado" class="mam-agro-atualizado"></p>
       </div>
 
       <div class="mam-agro-resumo" aria-label="Resumo do acervo do AgroCultura">
-        <article class="mam-agro-card mam-agro-card-destaque">
-          <span class="mam-agro-card-label">Materiais ingestados</span>
+        <article class="mam-agro-card">
+          <span class="mam-agro-card-label">Material ingestados</span>
           <strong id="mamIngestados">0</strong>
-          <small>IDs únicos catalogados no AgroCultura</small>
         </article>
         <article class="mam-agro-card">
           <span class="mam-agro-card-label">VT'S</span>
           <strong id="mamTotalVts">0</strong>
-          <small>IDs classificados como VT</small>
         </article>
         <article class="mam-agro-card">
-          <span class="mam-agro-card-label">STAND-UPS</span>
-          <strong id="mamTotalStandups">0</strong>
-          <small>IDs classificados como stand-up</small>
-        </article>
-        <article class="mam-agro-card">
-          <span class="mam-agro-card-label">Imagens de cobertura</span>
-          <strong id="mamTotalCoberturas">0</strong>
-          <small>IDs de imagens/coberturas</small>
+          <span class="mam-agro-card-label">Notícias / stand-ups</span>
+          <strong id="mamTotalNoticias">0</strong>
         </article>
         <article class="mam-agro-card mam-agro-card-alerta">
-          <span class="mam-agro-card-label">IDs sem créditos</span>
-          <strong id="mamIdsSemCreditos">0</strong>
-          <small>IDs do AgroCultura sem crédito vinculado</small>
+          <span class="mam-agro-card-label">VT'S sem créditos</span>
+          <strong id="mamVtsSemCreditos">0</strong>
         </article>
       </div>
 
-      <div class="mam-agro-filtros" role="group" aria-label="Filtrar materiais do painel">
-        <button type="button" class="mam-filtro ativo" data-mam-filtro="todos">Todos</button>
-        <button type="button" class="mam-filtro" data-mam-filtro="vt">VT'S</button>
-        <button type="button" class="mam-filtro" data-mam-filtro="standup">STAND-UPS</button>
-        <button type="button" class="mam-filtro" data-mam-filtro="cobertura">Imagens de cobertura</button>
-        <button type="button" class="mam-filtro" data-mam-filtro="sem-creditos">IDs sem créditos</button>
+      <nav class="agro-navbar" aria-label="Categorias do acervo AgroCultura">
+        <button type="button" class="agro-nav-item ativo" data-agro-tipo="vt">VT'S</button>
+        <button type="button" class="agro-nav-item" data-agro-tipo="noticias">Notícias e stand-ups</button>
+        <button type="button" class="agro-nav-item" data-agro-tipo="cobertura">Imagens de coberturas</button>
+      </nav>
+
+      <div class="agro-lista-topo">
+        <h3 id="agroListaTitulo">VT'S</h3>
       </div>
 
-      <div id="mamAgroMensagem" class="mam-agro-mensagem" role="status" aria-live="polite"></div>
-
-      <div id="mamAgroTabelaWrap" class="table-wrap mam-agro-table-wrap" hidden>
+      <div class="table-wrap mam-agro-table-wrap">
         <table class="results-table mam-agro-table">
           <thead>
             <tr>
-              <th>Tipo</th>
               <th>ID</th>
-              <th>Descrição</th>
-              <th>Data</th>
-              <th>Repórter</th>
-              <th>Afiliada / Emissora</th>
-              <th>Créditos</th>
+              <th>DESCRIÇÃO</th>
+              <th>REPÓRTER</th>
+              <th>DATA</th>
+              <th>LOCAL</th>
+              <th>PGM</th>
             </tr>
           </thead>
           <tbody id="mamAgroBody"></tbody>
@@ -129,7 +122,7 @@
       <p id="statusBusca" class="status-busca"></p>
     </div>
 
-    <div class="table-wrap area-resultados" hidden>
+    <div class="table-wrap area-resultados resultados-gerais-wrap" hidden>
       <table class="results-table">
         <thead>
           <tr>
@@ -152,7 +145,7 @@
     </div>
   </main>
 
-  <script src="../js/dados.js"></script>
+  <script src="../js/dados.js?v=2"></script>
   <script src="../js/sinonimos.js"></script>
   <script src="../js/search-engine.js?v=2"></script>
   <script src="../js/historico-busca.js"></script>
@@ -160,9 +153,9 @@
   <script src="../js/autocomplete.js"></script>
   <script src="../js/vts-agrocultura.js?v=2"></script>
   <script src="../js/creditos.js?v=2"></script>
-  <script src="../js/catalogo-ui.js?v=7"></script>
+  <script src="../js/catalogo-ui.js?v=8"></script>
   <script src="../js/creditos-ui.js?v=2"></script>
-  <script src="../js/mam-agrocultura.js?v=3"></script>
+  <script src="../js/mam-agrocultura.js?v=4"></script>
   <script src="../js/search-highlight.js?v=1"></script>
 </body>
 </html>
