@@ -3,7 +3,16 @@ name: Sincronizar créditos
 on:
   schedule:
     - cron: "*/15 * * * *"
+
   workflow_dispatch:
+
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/sincronizar-creditos.mjs"
+      - "package.json"
+      - ".github/workflows/sincronizar-creditos.yml"
 
 permissions:
   contents: write
