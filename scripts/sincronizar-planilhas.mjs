@@ -1,12 +1,10 @@
 import process from "node:process";
 import { google } from "googleapis";
+import { extrairMediaIds, validarConteudoMediaIds } from "./media-id.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const NOME_ABA_IMGS = "imgs";
 const RANGE_IMGS = `${NOME_ABA_IMGS}!A2:H`;
-// Há registros históricos com 5 ou 6 dígitos após a letra do Media ID.
-const MEDIA_ID_RE = /^\d{4}[A-Z]\d{5,6}$/i;
-const MEDIA_ID_GLOBAL_RE = /\d{4}[A-Z]\d{5,6}/gi;
 
 const FONTES = [
   { nome: "Agrocultura", spreadsheetId: "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To", range: "fonte_agrocultura!A2:H" },
@@ -33,22 +31,18 @@ function limparTexto(valor) {
 }
 
 function separarIds(valor) {
-  return [...new Set((String(valor || "").toUpperCase().match(MEDIA_ID_GLOBAL_RE) || []))];
+  return extrairMediaIds(valor);
 }
 
 function normalizarCampoIds(valor, contexto) {
-  const original = String(valor || "").toUpperCase();
-  const ids = separarIds(original);
-  if (!ids.length) throw new Error(`${contexto}: nenhum Media ID reconhecido em "${limparTexto(valor)}"`);
-
-  const restante = original
-    .replace(MEDIA_ID_GLOBAL_RE, "")
-    .replace(/[\s,;+\/|&-]+/g, "");
-  if (restante) throw new Error(`${contexto}: conteúdo inesperado junto aos Media IDs: ${limparTexto(valor)}`);
-
-  const invalidos = ids.filter((id) => !MEDIA_ID_RE.test(id));
-  if (invalidos.length) throw new Error(`${contexto}: Media ID inválido: ${invalidos.join(", ")}`);
-  return ids.join("\n");
+  const analise = validarConteudoMediaIds(valor);
+  if (!analise.ids.length) {
+    throw new Error(`${contexto}: nenhum Media ID reconhecido em "${limparTexto(valor)}"`);
+  }
+  if (!analise.valido) {
+    throw new Error(`${contexto}: conteúdo inesperado junto aos Media IDs: ${limparTexto(valor)}`);
+  }
+  return analise.ids.join("\n");
 }
 
 function normalizarLinhaBase(linha = []) {
@@ -87,8 +81,6 @@ async function carregarImgs() {
     try {
       return normalizarLinha(linha, `imgs, linha ${indice + 2}`);
     } catch (erro) {
-      // Um ID legado/irregular já existente não pode derrubar a sincronização inteira.
-      // A linha é preservada como está e fica fora do mapa de atualizações automáticas.
       console.warn(`Linha existente preservada sem sincronização automática: ${erro.message}`);
       return normalizarLinhaBase(linha);
     }
@@ -105,16 +97,16 @@ async function obterSheetIdImgs() {
   return aba.properties.sheetId;
 }
 
-async function removerDuplicatasExatas(imgs) {
-  const primeiraLinhaPorChave = new Map();
+async function removerDuplicatasIdenticas(imgs) {
+  const primeiraLinhaPorConteudo = new Map();
   const linhasParaExcluir = [];
 
   imgs.forEach((linha, indice) => {
     const ids = separarIds(linha[0]);
     if (!ids.length) return;
-    const chave = ids.slice().sort().join("|");
-    if (primeiraLinhaPorChave.has(chave)) linhasParaExcluir.push(indice + 2);
-    else primeiraLinhaPorChave.set(chave, indice + 2);
+    const chave = JSON.stringify(linha);
+    if (primeiraLinhaPorConteudo.has(chave)) linhasParaExcluir.push(indice + 2);
+    else primeiraLinhaPorConteudo.set(chave, indice + 2);
   });
 
   if (!linhasParaExcluir.length) return 0;
@@ -126,7 +118,7 @@ async function removerDuplicatasExatas(imgs) {
   }));
 
   await sheets.spreadsheets.batchUpdate({ spreadsheetId: PLANILHA_IMGS_ID, requestBody: { requests } });
-  console.log(`Duplicatas exatas removidas: ${linhasParaExcluir.length}`);
+  console.log(`Linhas totalmente duplicadas removidas: ${linhasParaExcluir.length}`);
   return linhasParaExcluir.length;
 }
 
@@ -137,42 +129,57 @@ function mesclarRegistro(atual, fonte) {
   return resultado;
 }
 
-function registrarIdsNoMapa(mapa, registro, conflitos = null) {
-  separarIds(registro.dados[0]).forEach((id) => {
-    if (mapa.has(id) && mapa.get(id) !== registro) {
-      conflitos?.add(id);
-      return;
-    }
-    mapa.set(id, registro);
+function construirIndiceExistentes(imgs) {
+  const mapa = new Map();
+  const conflitos = new Set();
+
+  imgs.forEach((linha, indice) => {
+    const ids = separarIds(linha[0]);
+    if (!ids.length) return;
+    const registro = { tipo: "existente", linhaPlanilha: indice + 2, dados: linha };
+
+    ids.forEach((id) => {
+      const anterior = mapa.get(id);
+      if (anterior && anterior.linhaPlanilha !== registro.linhaPlanilha) conflitos.add(id);
+      else mapa.set(id, registro);
+    });
   });
+
+  return { mapa, conflitos };
+}
+
+function registrarIdsNoMapa(mapa, registro) {
+  separarIds(registro.dados[0]).forEach((id) => mapa.set(id, registro));
 }
 
 async function main() {
   console.log("Iniciando sincronização...");
 
   let imgs = await carregarImgs();
-  const removidas = await removerDuplicatasExatas(imgs);
+  const removidas = await removerDuplicatasIdenticas(imgs);
   if (removidas) imgs = await carregarImgs();
 
-  const existentesPorId = new Map();
-  const conflitosExistentes = new Set();
-  imgs.forEach((linha, indice) => {
-    if (!separarIds(linha[0]).length) return;
-    registrarIdsNoMapa(existentesPorId, { tipo: "existente", linhaPlanilha: indice + 2, dados: linha }, conflitosExistentes);
-  });
+  const { mapa: existentesPorId, conflitos: conflitosExistentes } = construirIndiceExistentes(imgs);
   if (conflitosExistentes.size) {
-    console.warn(`Media IDs repetidos em células diferentes preservados sem sobrescrita automática: ${[...conflitosExistentes].join(", ")}`);
+    console.warn(`Media IDs presentes em mais de uma linha foram bloqueados contra atualização automática: ${[...conflitosExistentes].join(", ")}`);
   }
 
   const pendentesPorId = new Map();
   const pendentes = [];
   const atualizacoesPorLinha = new Map();
-  const linhasAtualizadas = new Set();
   let conflitosFonte = 0;
+  let bloqueadosPorDuplicidade = 0;
 
   for (const fonte of FONTES) {
     for (const registro of await carregarFonte(fonte)) {
       const ids = separarIds(registro[0]);
+
+      if (ids.some((id) => conflitosExistentes.has(id))) {
+        bloqueadosPorDuplicidade++;
+        console.warn(`${fonte.nome}: registro ${ids.join(", ")} não atualizado porque um dos IDs aparece em mais de uma linha da imgs.`);
+        continue;
+      }
+
       const encontrados = [...new Set(ids.map((id) => existentesPorId.get(id) || pendentesPorId.get(id)).filter(Boolean))];
 
       if (encontrados.length > 1) {
@@ -186,10 +193,7 @@ async function main() {
         const dadosNovos = mesclarRegistro(alvo.dados, registro);
         if (JSON.stringify(dadosNovos) !== JSON.stringify(alvo.dados)) {
           alvo.dados = dadosNovos;
-          if (alvo.tipo === "existente") {
-            atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
-            linhasAtualizadas.add(alvo.linhaPlanilha);
-          }
+          if (alvo.tipo === "existente") atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
         }
         registrarIdsNoMapa(alvo.tipo === "existente" ? existentesPorId : pendentesPorId, alvo);
         continue;
@@ -225,10 +229,11 @@ async function main() {
   }
 
   console.log("Sincronização finalizada.");
-  console.log(`Duplicatas exatas removidas: ${removidas}`);
-  console.log(`Linhas atualizadas: ${linhasAtualizadas.size}`);
+  console.log(`Linhas totalmente duplicadas removidas: ${removidas}`);
+  console.log(`Linhas atualizadas: ${atualizacoesPorLinha.size}`);
   console.log(`Novos registros: ${pendentes.length}`);
   console.log(`Conflitos de fonte ignorados com segurança: ${conflitosFonte}`);
+  console.log(`Registros bloqueados por Media ID duplicado na imgs: ${bloqueadosPorDuplicidade}`);
   console.log(`Total de Media IDs indexados: ${new Set([...existentesPorId.keys(), ...pendentesPorId.keys()]).size}`);
 }
 
