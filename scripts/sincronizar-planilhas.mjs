@@ -4,8 +4,8 @@ import { google } from "googleapis";
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const NOME_ABA_IMGS = "imgs";
 const RANGE_IMGS = `${NOME_ABA_IMGS}!A2:H`;
-const MEDIA_ID_RE = /^\d{4}B\d{6}$/i;
-const MEDIA_ID_GLOBAL_RE = /\d{4}B\d{6}/gi;
+const MEDIA_ID_RE = /^\d{4}[A-Z]\d{6}$/i;
+const MEDIA_ID_GLOBAL_RE = /\d{4}[A-Z]\d{6}/gi;
 
 const FONTES = [
   { nome: "Agrocultura", spreadsheetId: "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To", range: "fonte_agrocultura!A2:H" },
@@ -55,8 +55,6 @@ function normalizarCampoIds(valor, contexto) {
     throw new Error(`${contexto}: campo de Media ID preenchido, mas nenhum ID válido foi reconhecido: ${limparTexto(valor)}`);
   }
 
-  // Depois de retirar os IDs, só podem restar separadores históricos aceitos.
-  // Isso cobre células como "ID1+ID2", "ID1 / ID2", vírgula, ponto e vírgula ou quebra de linha.
   const restante = original
     .replace(MEDIA_ID_GLOBAL_RE, "")
     .replace(/[\s,;+\/|&-]+/g, "");
@@ -132,18 +130,13 @@ async function removerDuplicatasExatas(imgs) {
     primeiraLinhaPorChave.set(chave, numeroLinha);
 
     ids.forEach((id) => {
-      if (idsVistos.has(id)) {
-        conflitos.push(`${id} nas linhas ${idsVistos.get(id)} e ${numeroLinha}`);
-      } else {
-        idsVistos.set(id, numeroLinha);
-      }
+      if (idsVistos.has(id)) conflitos.push(`${id} nas linhas ${idsVistos.get(id)} e ${numeroLinha}`);
+      else idsVistos.set(id, numeroLinha);
     });
   });
 
   if (conflitos.length) {
-    throw new Error(
-      `Há Media IDs repetidos em células diferentes e a remoção automática seria ambígua: ${conflitos.join("; ")}`
-    );
+    throw new Error(`Há Media IDs repetidos em células diferentes e a remoção automática seria ambígua: ${conflitos.join("; ")}`);
   }
 
   if (!linhasParaExcluir.length) return 0;
