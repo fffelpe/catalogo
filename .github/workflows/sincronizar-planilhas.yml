@@ -2,7 +2,7 @@ name: Sincronizar planilhas do catálogo
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/5 * * * *"
 
   workflow_dispatch:
 
