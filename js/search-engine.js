@@ -52,7 +52,7 @@ const SearchEngine = (() => {
   function separarIds(valor) {
     return String(valor || "")
       .split(/[\r\n,;]+/)
-      .map((id) => normalizar(id))
+      .map((id) => normalizar(id).replace(/\s+/g, ""))
       .filter(Boolean);
   }
 
@@ -64,16 +64,18 @@ const SearchEngine = (() => {
 
   function calcularScoreCampo(valor, expansao, pesoCampo) {
     const texto = normalizar(valor);
-    const termo = expansao.termo;
-
+    const termo = normalizar(expansao.termo);
     if (!texto || !termo) return 0;
 
     let score = 0;
-
     if (texto === termo) {
-      score += pesoCampo * 2;
+      score = pesoCampo * 2;
     } else if (contemTermo(texto, termo)) {
-      score += pesoCampo;
+      score = pesoCampo;
+    } else if (termo.length >= 3 && texto.includes(termo)) {
+      // Correspondência parcial útil para consultas como "agro" -> "agrocultura".
+      // Recebe peso menor para não superar palavras/frases completas.
+      score = pesoCampo * 0.55;
     } else {
       return 0;
     }
@@ -83,12 +85,12 @@ const SearchEngine = (() => {
       score += Math.min(ocorrencias - 1, 4) * (pesoCampo * 0.08);
     }
 
-    return score * expansao.peso;
+    return score * (Number(expansao.peso) || 1);
   }
 
   function detectarMediaIdExato(registro, consulta) {
     const idsRegistro = separarIds(registro.ID);
-    const consultaNormalizada = normalizar(consulta);
+    const consultaNormalizada = normalizar(consulta).replace(/\s+/g, "");
     return idsRegistro.includes(consultaNormalizada);
   }
 
@@ -157,8 +159,8 @@ const SearchEngine = (() => {
 
     if (palavrasOriginais.length > 1) {
       const textoCompleto = normalizar(Object.values(registro).join(" "));
-      const quantidadeEncontrada = palavrasOriginais.filter(
-        (palavra) => contemTermo(textoCompleto, palavra)
+      const quantidadeEncontrada = palavrasOriginais.filter((palavra) =>
+        contemTermo(textoCompleto, palavra) || (palavra.length >= 3 && textoCompleto.includes(palavra))
       ).length;
 
       if (quantidadeEncontrada === palavrasOriginais.length) {
