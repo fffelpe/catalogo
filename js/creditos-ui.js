@@ -1,5 +1,5 @@
-// creditos-ui.js - Exibe créditos tanto na busca geral
-// quanto nas tabelas de VTs do AgroCultura e demais programas.
+// creditos-ui.js - Exibe créditos na busca geral e nas tabelas específicas.
+// Qualquer programa pode receber créditos quando houver documento associado ao mesmo Media ID.
 
 (function () {
   const ROTULOS_CREDITOS = {
