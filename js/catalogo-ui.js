@@ -1,11 +1,9 @@
 // catalogo-ui.js - Integra a interface com busca inteligente, autocomplete,
-// histórico, buscas populares, paginação, cópia e reprodução de Media IDs.
+// histórico, buscas populares, paginação e cópia de Media IDs.
 
 let resultadosAtuais = [];
 let paginaAtual = 0;
 const ITENS_POR_PAGINA = 50;
-const MEDIA_BASE_URL = "http://lowres.tvcultura.com.br/";
-let ultimoBotaoPlayer = null;
 
 function debounce(func, timeout = 300) {
   let timer;
@@ -34,7 +32,6 @@ function definirCarregamentoResultados(carregando) {
   document.querySelectorAll(".area-resultados").forEach((elemento) => {
     const exclusivoAgro = elemento.hasAttribute("data-agro-only");
 
-    // Componentes exclusivos do painel nunca devem aparecer em outros programas.
     if (exclusivoAgro && !ehAgrocultura) {
       elemento.hidden = true;
       return;
@@ -59,23 +56,14 @@ function separarIds(valor) {
     .filter(Boolean);
 }
 
-function normalizarIdVideo(id) {
-  return String(id || "").replace(/\s+/g, "");
-}
-
-function criarUrlVideo(id) {
-  const idLimpo = normalizarIdVideo(id);
-  return idLimpo ? `${MEDIA_BASE_URL}${idLimpo}.mp4` : "";
-}
-
-function formatarIdsComPlayer(valor) {
+function formatarIdsComCopia(valor) {
   return separarIds(valor).map((id) => {
     const idSeguro = escapeHtml(id);
     return `
       <span class="id-item">
         <span class="id-text">${idSeguro}</span>
-        <button type="button" class="btn-play-id" data-id="${idSeguro}" title="Assistir vídeo" aria-label="Assistir vídeo do ID ${idSeguro}">
-          <span class="icone-play-id" aria-hidden="true">▶</span>
+        <button type="button" class="btn-copiar-id" data-ids="${idSeguro}" title="Copiar ID" aria-label="Copiar ID ${idSeguro}">
+          <img src="../images/copiar.png?v=4" alt="" class="icone-copiar" aria-hidden="true">
         </button>
       </span>
     `;
@@ -83,81 +71,13 @@ function formatarIdsComPlayer(valor) {
 }
 
 function renderizarCelulaId(valor, rotulo = "ID") {
-  const valorSeguro = escapeHtml(String(valor || ""));
   return `
     <td data-label="${escapeHtml(rotulo)}" class="id-cell">
       <span class="id-cell-content">
-        <span class="id-lista">${formatarIdsComPlayer(valor)}</span>
-        <button type="button" class="btn-copiar-id" data-ids="${valorSeguro}" title="Copiar ID" aria-label="Copiar ID">
-          <img src="../images/copiar.png?v=4" alt="" class="icone-copiar" aria-hidden="true">
-        </button>
+        <span class="id-lista">${formatarIdsComCopia(valor)}</span>
       </span>
     </td>
   `;
-}
-
-function garantirModalVideo() {
-  let modal = document.getElementById("modalVideoMedia");
-  if (modal) return modal;
-
-  modal = document.createElement("div");
-  modal.id = "modalVideoMedia";
-  modal.className = "player-modal";
-  modal.hidden = true;
-  modal.innerHTML = `
-    <div class="player-modal-dialog" role="dialog" aria-modal="true" aria-label="Player de vídeo">
-      <button type="button" class="player-modal-fechar" aria-label="Fechar player" title="Fechar">×</button>
-      <video class="player-video" controls playsinline preload="metadata"></video>
-    </div>
-  `;
-
-  document.body.appendChild(modal);
-
-  const botaoFechar = modal.querySelector(".player-modal-fechar");
-  botaoFechar.addEventListener("click", fecharPlayerVideo);
-
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) fecharPlayerVideo();
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !modal.hidden) fecharPlayerVideo();
-  });
-
-  return modal;
-}
-
-function abrirPlayerVideo(id, botaoOrigem) {
-  const url = criarUrlVideo(id);
-  if (!url) return;
-
-  const modal = garantirModalVideo();
-  const video = modal.querySelector(".player-video");
-  const botaoFechar = modal.querySelector(".player-modal-fechar");
-
-  ultimoBotaoPlayer = botaoOrigem || null;
-  video.src = url;
-  modal.hidden = false;
-  document.body.classList.add("modal-video-aberto");
-  video.load();
-  botaoFechar.focus();
-}
-
-function fecharPlayerVideo() {
-  const modal = document.getElementById("modalVideoMedia");
-  if (!modal || modal.hidden) return;
-
-  const video = modal.querySelector(".player-video");
-  video.pause();
-  video.removeAttribute("src");
-  video.load();
-  modal.hidden = true;
-  document.body.classList.remove("modal-video-aberto");
-
-  if (ultimoBotaoPlayer && document.contains(ultimoBotaoPlayer)) {
-    ultimoBotaoPlayer.focus();
-  }
-  ultimoBotaoPlayer = null;
 }
 
 function copiarTextoAlternativo(texto) {
@@ -189,7 +109,7 @@ async function copiarIds(valor, botao) {
     window.setTimeout(() => {
       botao.classList.remove("copiado");
       botao.title = "Copiar ID";
-      botao.setAttribute("aria-label", "Copiar ID");
+      botao.setAttribute("aria-label", `Copiar ID ${botao.dataset.ids || ""}`.trim());
     }, 1200);
   } catch (err) {
     console.error("Erro ao copiar ID:", err);
@@ -378,16 +298,9 @@ async function inicializarPaginaResultados() {
 
   document.addEventListener("click", (event) => {
     const botaoCopiar = event.target.closest(".btn-copiar-id");
-    if (botaoCopiar) {
-      copiarIds(botaoCopiar.dataset.ids, botaoCopiar);
-      return;
-    }
-
-    const botaoPlay = event.target.closest(".btn-play-id");
-    if (botaoPlay) abrirPlayerVideo(botaoPlay.dataset.id, botaoPlay);
+    if (botaoCopiar) copiarIds(botaoCopiar.dataset.ids, botaoCopiar);
   });
 
-  garantirModalVideo();
   return true;
 }
 
