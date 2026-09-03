@@ -1,6 +1,4 @@
 // vts-agrocultura.js - Abas "VT'S + ano" na página do Agrocultura.
-// Cada aba aponta para a aba (gid) correspondente na planilha de VTs do
-// Agrocultura, publicada em CSV.
 
 const VTS_AGROCULTURA_BASE_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvMKT9ycP6Bk66plwxEKwmjW_nvIRyDvMLbABB7mBbc_Z0Y2u-LaCGgYXHipyquWTyItoU3ZKydvYT/pub";
@@ -21,6 +19,18 @@ const _cacheVtsAgro = {};
 
 function _urlVtsAgro(gid) {
   return `${VTS_AGROCULTURA_BASE_URL}?gid=${gid}&single=true&output=csv`;
+}
+
+function _normalizarNomeColuna(valor) {
+  return String(valor || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toUpperCase()
+    .replace(/[^A-Z0-9]/g, "");
+}
+
+function _ehColunaId(coluna) {
+  return ["ID", "IDS", "MEDIAID", "MEDIAIDS"].includes(_normalizarNomeColuna(coluna));
 }
 
 function inicializarVtsAgricultura(programaParam) {
@@ -90,10 +100,15 @@ function _carregarAbaVt(aba) {
     header: true,
     skipEmptyLines: true,
     complete: (results) => {
+      if (results.errors?.length) {
+        console.warn(`A aba ${aba.label} contém avisos de CSV:`, results.errors);
+      }
+
       const linhas = (results.data || []).map((linha) => {
         const normalizada = {};
         Object.entries(linha).forEach(([chave, valor]) => {
-          normalizada[String(chave || "").trim()] = valor;
+          const nome = String(chave || "").trim();
+          if (nome) normalizada[nome] = valor;
         });
         return normalizada;
       });
@@ -113,15 +128,25 @@ function _renderizarTabelaVtsAgro(linhas) {
   const tbody = document.getElementById("tbodyVtsAgro");
   if (!thead || !tbody) return;
 
-  if (!linhas || linhas.length === 0) {
+  if (!linhas?.length) {
     thead.innerHTML = "";
     tbody.innerHTML = '<tr><td>Nenhum dado encontrado nesta aba.</td></tr>';
     return;
   }
 
-  const colunas = Object.keys(linhas[0])
-    .map((c) => c.trim())
-    .filter(Boolean);
+  // União das colunas de todas as linhas: nenhum campo válido fica invisível
+  // apenas porque não apareceu na primeira linha do CSV.
+  const colunas = [];
+  const vistas = new Set();
+  linhas.forEach((linha) => {
+    Object.keys(linha).forEach((coluna) => {
+      const nome = String(coluna || "").trim();
+      if (nome && !vistas.has(nome)) {
+        vistas.add(nome);
+        colunas.push(nome);
+      }
+    });
+  });
 
   if (!colunas.length) {
     thead.innerHTML = "";
@@ -130,18 +155,13 @@ function _renderizarTabelaVtsAgro(linhas) {
   }
 
   thead.innerHTML = `<tr>${colunas.map((c) => `<th>${escapeHtml(c)}</th>`).join("")}</tr>`;
-
-  tbody.innerHTML = linhas
-    .map((linha) => {
-      const celulas = colunas
-        .map((c) => {
-          const valor = (linha[c] || "").toString().trim();
-          return c.toUpperCase() === "ID"
-            ? renderizarCelulaId(valor, c)
-            : `<td data-label="${escapeHtml(c)}">${escapeHtml(valor)}</td>`;
-        })
-        .join("");
-      return `<tr>${celulas}</tr>`;
-    })
-    .join("");
+  tbody.innerHTML = linhas.map((linha) => {
+    const celulas = colunas.map((c) => {
+      const valor = (linha[c] || "").toString().trim();
+      return _ehColunaId(c)
+        ? renderizarCelulaId(valor, c)
+        : `<td data-label="${escapeHtml(c)}">${escapeHtml(valor)}</td>`;
+    }).join("");
+    return `<tr>${celulas}</tr>`;
+  }).join("");
 }
