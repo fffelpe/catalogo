@@ -1,0 +1,139 @@
+.ultimos-ids-section {
+  max-width: 1100px;
+  margin: 24px auto 30px;
+}
+
+.ultimos-ids-cabecalho {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.ultimos-ids-cabecalho .section-title {
+  margin-bottom: 2px;
+}
+
+.ultimos-ids-subtitulo,
+.ultimos-ids-status {
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.ultimos-ids-lista {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ultimo-id-card {
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #dfe5e1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .045);
+}
+
+.ultimo-id-topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ultimo-id-media {
+  min-width: 0;
+  color: #007d32;
+  font-size: 14px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.ultimo-id-media:hover,
+.ultimo-id-media:focus-visible {
+  color: #00953b;
+  text-decoration: underline;
+  outline: none;
+}
+
+.ultimo-id-programa {
+  flex: 0 1 auto;
+  max-width: 48%;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #eef8f1;
+  color: #27603d;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.ultimo-id-descricao {
+  display: -webkit-box;
+  min-height: 40px;
+  margin: 0 0 13px;
+  overflow: hidden;
+  color: #222;
+  font-size: 13px;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.ultimo-id-metadados {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid #edf0ee;
+}
+
+.ultimo-id-metadados div {
+  min-width: 0;
+}
+
+.ultimo-id-metadados dt {
+  margin-bottom: 2px;
+  color: #777;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.ultimo-id-metadados dd {
+  margin: 0;
+  color: #333;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.ultimos-ids-erro .ultimos-ids-status {
+  color: #9b2c2c;
+}
+
+@media (max-width: 850px) {
+  .ultimos-ids-lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .ultimos-ids-cabecalho {
+    display: block;
+  }
+
+  .ultimos-ids-status {
+    margin-top: 5px;
+  }
+
+  .ultimos-ids-lista {
+    grid-template-columns: 1fr;
+  }
+}
