@@ -5,6 +5,7 @@ const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const NOME_ABA_IMGS = "imgs";
 const RANGE_IMGS = `${NOME_ABA_IMGS}!A2:H`;
 const MEDIA_ID_RE = /^\d{4}B\d{6}$/i;
+const MEDIA_ID_GLOBAL_RE = /\d{4}B\d{6}/gi;
 
 const FONTES = [
   { nome: "Agrocultura", spreadsheetId: "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To", range: "fonte_agrocultura!A2:H" },
@@ -42,18 +43,33 @@ function normalizarId(valor) {
 }
 
 function separarIds(valor) {
-  return String(valor || "")
-    .split(/[\r\n,;]+/)
-    .map(normalizarId)
-    .filter(Boolean);
+  const original = String(valor || "").toUpperCase();
+  return [...new Set(original.match(MEDIA_ID_GLOBAL_RE) || [])].map(normalizarId);
 }
 
 function normalizarCampoIds(valor, contexto) {
-  const ids = [...new Set(separarIds(valor))];
+  const original = String(valor || "").toUpperCase();
+  const ids = separarIds(original);
+
+  if (!ids.length) {
+    throw new Error(`${contexto}: campo de Media ID preenchido, mas nenhum ID válido foi reconhecido: ${limparTexto(valor)}`);
+  }
+
+  // Depois de retirar os IDs, só podem restar separadores históricos aceitos.
+  // Isso cobre células como "ID1+ID2", "ID1 / ID2", vírgula, ponto e vírgula ou quebra de linha.
+  const restante = original
+    .replace(MEDIA_ID_GLOBAL_RE, "")
+    .replace(/[\s,;+\/|&-]+/g, "");
+
+  if (restante) {
+    throw new Error(`${contexto}: conteúdo inesperado junto aos Media IDs: ${limparTexto(valor)}`);
+  }
+
   const invalidos = ids.filter((id) => !MEDIA_ID_RE.test(id));
   if (invalidos.length) {
     throw new Error(`${contexto}: Media ID inválido: ${invalidos.join(", ")}`);
   }
+
   return ids.join("\n");
 }
 
@@ -157,7 +173,9 @@ async function removerDuplicatasExatas(imgs) {
 
 function mesclarRegistro(atual, fonte) {
   const resultado = [...atual];
-  resultado[0] = atual[0] || fonte[0];
+  const idsMesclados = [...new Set([...separarIds(atual[0]), ...separarIds(fonte[0])])];
+  resultado[0] = idsMesclados.join("\n");
+
   for (let indice = 1; indice < 8; indice++) {
     if (fonte[indice]) resultado[indice] = fonte[indice];
   }
@@ -188,7 +206,7 @@ async function main() {
   const pendentesPorId = new Map();
   const pendentes = [];
   const atualizacoesPorLinha = new Map();
-  let atualizados = 0;
+  const linhasAtualizadas = new Set();
 
   for (const fonte of FONTES) {
     const registros = await carregarFonte(fonte);
@@ -211,13 +229,11 @@ async function main() {
           alvo.dados = dadosNovos;
           if (alvo.tipo === "existente") {
             atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
-            atualizados++;
+            linhasAtualizadas.add(alvo.linhaPlanilha);
           }
         }
-        ids.forEach((id) => {
-          if (alvo.tipo === "existente") existentesPorId.set(id, alvo);
-          else pendentesPorId.set(id, alvo);
-        });
+
+        registrarIdsNoMapa(alvo.tipo === "existente" ? existentesPorId : pendentesPorId, alvo);
         continue;
       }
 
@@ -253,9 +269,9 @@ async function main() {
   console.log("");
   console.log("Sincronização finalizada.");
   console.log(`Duplicatas exatas removidas: ${removidas}`);
-  console.log(`Atualizados: ${atualizados}`);
-  console.log(`Novos: ${pendentes.length}`);
-  console.log(`Total de Media IDs existentes: ${existentesPorId.size + pendentesPorId.size}`);
+  console.log(`Linhas atualizadas: ${linhasAtualizadas.size}`);
+  console.log(`Novos registros: ${pendentes.length}`);
+  console.log(`Total de Media IDs indexados: ${new Set([...existentesPorId.keys(), ...pendentesPorId.keys()]).size}`);
 }
 
 main().catch((erro) => {
