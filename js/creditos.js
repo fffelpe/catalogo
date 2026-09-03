@@ -21,6 +21,7 @@ const CreditosMedia = {
   },
 
   normalizarId(valor) {
+    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.normalizar(valor);
     return String(valor || "")
       .trim()
       .replace(/\.mp4$/i, "")
@@ -29,14 +30,16 @@ const CreditosMedia = {
   },
 
   separarIds(valor) {
+    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(valor);
     return String(valor || "")
-      .split(/[\r\n,;]+/)
+      .split(/[\r\n,;+\/|&]+/)
       .map((id) => this.normalizarId(id))
       .filter(Boolean);
   },
 
   obter(id) {
-    return this.registros[this.normalizarId(id)] || null;
+    const normalizado = this.normalizarId(id);
+    return normalizado ? (this.registros[normalizado] || null) : null;
   },
 
   obterVarios(ids = []) {
