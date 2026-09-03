@@ -1,15 +1,45 @@
 {
-  "sincronizadoEm": "2026-09-03T22:01:08.133Z",
+  "sincronizadoEm": "2026-09-03T22:42:48.105Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
-  "totalArquivos": 164,
-  "totalIdsDetectados": 136,
-  "totalSincronizados": 136,
+  "totalArquivos": 176,
+  "totalIdsDetectados": 146,
+  "totalSincronizados": 146,
   "totalIgnorados": 0,
   "totalErros": 1,
-  "totalDuplicados": 26,
+  "totalDuplicados": 28,
   "totalPreservados": 1,
   "ignorados": [],
   "duplicados": [
+    {
+      "id": "2457B017799",
+      "escolhido": "2457B017799",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
+      "arquivos": [
+        {
+          "nome": "2457B017799",
+          "atualizadoEm": "2026-09-03T22:19:18.764Z"
+        },
+        {
+          "nome": "2457B017799",
+          "atualizadoEm": "2026-09-03T18:18:16.278Z"
+        }
+      ]
+    },
+    {
+      "id": "2457B017800",
+      "escolhido": "2457B017800",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
+      "arquivos": [
+        {
+          "nome": "2457B017800",
+          "atualizadoEm": "2026-09-03T22:19:18.422Z"
+        },
+        {
+          "nome": "2457B017800",
+          "atualizadoEm": "2026-09-03T18:18:16.469Z"
+        }
+      ]
+    },
     {
       "id": "1452B005181",
       "escolhido": "1452B005181",
