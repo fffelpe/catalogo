@@ -1,10 +1,426 @@
 {
-  "sincronizadoEm": "2026-09-03T19:26:43.012Z",
+  "sincronizadoEm": "2026-09-03T20:18:48.662Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
   "totalArquivos": 164,
+  "totalIdsDetectados": 136,
   "totalSincronizados": 136,
   "totalIgnorados": 0,
-  "totalErros": 0,
+  "totalErros": 1,
+  "totalDuplicados": 26,
+  "totalPreservados": 1,
   "ignorados": [],
-  "erros": []
+  "duplicados": [
+    {
+      "id": "1452B005181",
+      "escolhido": "1452B005181",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005181",
+          "atualizadoEm": "2026-09-03T18:47:31.865Z"
+        },
+        {
+          "nome": "1452B005181",
+          "atualizadoEm": "2026-09-03T18:41:56.315Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005086",
+      "escolhido": "1452B005086",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005086",
+          "atualizadoEm": "2026-09-03T18:47:26.745Z"
+        },
+        {
+          "nome": "1452B005086",
+          "atualizadoEm": "2026-09-03T18:34:06.406Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005185",
+      "escolhido": "1452B005185",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005185",
+          "atualizadoEm": "2026-09-03T18:47:21.162Z"
+        },
+        {
+          "nome": "1452B005185",
+          "atualizadoEm": "2026-09-03T18:41:24.374Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005084",
+      "escolhido": "1452B005084",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005084",
+          "atualizadoEm": "2026-09-03T18:47:13.464Z"
+        },
+        {
+          "nome": "1452B005084",
+          "atualizadoEm": "2026-09-03T18:32:25.537Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005085",
+      "escolhido": "1452B005085",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005085",
+          "atualizadoEm": "2026-09-03T18:47:06.994Z"
+        },
+        {
+          "nome": "1452B005085",
+          "atualizadoEm": "2026-09-03T18:32:48.903Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005087",
+      "escolhido": "1452B005087",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005087",
+          "atualizadoEm": "2026-09-03T18:47:02.110Z"
+        },
+        {
+          "nome": "1452B005087",
+          "atualizadoEm": "2026-09-03T18:33:52.393Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005160",
+      "escolhido": "1452B005160",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005160",
+          "atualizadoEm": "2026-09-03T18:46:57.735Z"
+        },
+        {
+          "nome": "1452B005160",
+          "atualizadoEm": "2026-09-03T18:38:15.833Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005150",
+      "escolhido": "1452B005150",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005150",
+          "atualizadoEm": "2026-09-03T18:46:53.429Z"
+        },
+        {
+          "nome": "1452B005150",
+          "atualizadoEm": "2026-09-03T18:37:17.189Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005089",
+      "escolhido": "1452B005089",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005089",
+          "atualizadoEm": "2026-09-03T18:46:48.787Z"
+        },
+        {
+          "nome": "1452B005089",
+          "atualizadoEm": "2026-09-03T18:34:18.678Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005092",
+      "escolhido": "1452B005092",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005092",
+          "atualizadoEm": "2026-09-03T18:46:44.377Z"
+        },
+        {
+          "nome": "1452B005092",
+          "atualizadoEm": "2026-09-03T18:34:40.217Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005088",
+      "escolhido": "1452B005088",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005088",
+          "atualizadoEm": "2026-09-03T18:46:38.856Z"
+        },
+        {
+          "nome": "1452B005088",
+          "atualizadoEm": "2026-09-03T18:33:40.223Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005138",
+      "escolhido": "1452B005138",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005138",
+          "atualizadoEm": "2026-09-03T18:46:34.483Z"
+        },
+        {
+          "nome": "1452B005138",
+          "atualizadoEm": "2026-09-03T18:35:41.012Z"
+        },
+        {
+          "nome": "1452B005138.pdf",
+          "atualizadoEm": "2026-09-02T22:09:35.466Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005157",
+      "escolhido": "1452B005157",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005157",
+          "atualizadoEm": "2026-09-03T18:46:29.756Z"
+        },
+        {
+          "nome": "1452B005157",
+          "atualizadoEm": "2026-09-03T18:37:31.719Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005177",
+      "escolhido": "1452B005177",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005177",
+          "atualizadoEm": "2026-09-03T18:46:24.929Z"
+        },
+        {
+          "nome": "1452B005177",
+          "atualizadoEm": "2026-09-03T18:43:19.081Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005184",
+      "escolhido": "1452B005184",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005184",
+          "atualizadoEm": "2026-09-03T18:46:20.374Z"
+        },
+        {
+          "nome": "1452B005184",
+          "atualizadoEm": "2026-09-03T18:41:42.160Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005211",
+      "escolhido": "1452B005211",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005211",
+          "atualizadoEm": "2026-09-03T18:46:15.730Z"
+        },
+        {
+          "nome": "1452B005211",
+          "atualizadoEm": "2026-09-03T18:39:34.630Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005209",
+      "escolhido": "1452B005209",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005209",
+          "atualizadoEm": "2026-09-03T18:46:11.077Z"
+        },
+        {
+          "nome": "1452B005209",
+          "atualizadoEm": "2026-09-03T18:40:13.611Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005208",
+      "escolhido": "1452B005208",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005208",
+          "atualizadoEm": "2026-09-03T18:46:06.172Z"
+        },
+        {
+          "nome": "1452B005208",
+          "atualizadoEm": "2026-09-03T18:39:19.800Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005210",
+      "escolhido": "1452B005210",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005210",
+          "atualizadoEm": "2026-09-03T18:46:01.675Z"
+        },
+        {
+          "nome": "1452B005210",
+          "atualizadoEm": "2026-09-03T18:39:56.889Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005213",
+      "escolhido": "1452B005213",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005213",
+          "atualizadoEm": "2026-09-03T18:45:56.823Z"
+        },
+        {
+          "nome": "1452B005213",
+          "atualizadoEm": "2026-09-03T18:40:29.782Z"
+        },
+        {
+          "nome": "1452B005213",
+          "atualizadoEm": "2026-08-14T19:48:26.159Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005186",
+      "escolhido": "1452B005186",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005186",
+          "atualizadoEm": "2026-09-03T18:41:02.731Z"
+        },
+        {
+          "nome": "1452B005186.pdf",
+          "atualizadoEm": "2026-04-28T18:05:54.000Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B004841",
+      "escolhido": "1452B004841",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B004841",
+          "atualizadoEm": "2026-09-02T22:10:56.985Z"
+        },
+        {
+          "nome": "1452B004841",
+          "atualizadoEm": "2026-08-14T19:23:52.678Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005447",
+      "escolhido": "1452B005447",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005447",
+          "atualizadoEm": "2026-09-02T22:06:43.900Z"
+        },
+        {
+          "nome": "1452B005447",
+          "atualizadoEm": "2026-09-01T18:33:27.952Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005296",
+      "escolhido": "1452B005296",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005296",
+          "atualizadoEm": "2026-08-14T20:37:31.839Z"
+        },
+        {
+          "nome": "1452B005296",
+          "atualizadoEm": "2026-08-14T19:45:55.334Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005308",
+      "escolhido": "1452B005308",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005308",
+          "atualizadoEm": "2026-08-14T20:36:00.167Z"
+        },
+        {
+          "nome": "1452B005308",
+          "atualizadoEm": "2026-08-14T19:38:45.432Z"
+        }
+      ]
+    },
+    {
+      "id": "1452B005353",
+      "escolhido": "1452B005353",
+      "criterio": "arquivo com modifiedTime mais recente",
+      "arquivos": [
+        {
+          "nome": "1452B005353",
+          "atualizadoEm": "2026-08-14T19:30:13.619Z"
+        },
+        {
+          "nome": "1452B005353",
+          "atualizadoEm": "2026-08-14T19:01:55.935Z"
+        }
+      ]
+    }
+  ],
+  "preservados": [
+    {
+      "id": "1452B005096",
+      "nome": "1452B005096",
+      "motivo": "erro de leitura; crédito anterior preservado: bad XRef entry"
+    }
+  ],
+  "erros": [
+    {
+      "nome": "1452B005096",
+      "id": "1452B005096",
+      "erro": "bad XRef entry"
+    }
+  ]
 }
