@@ -20,10 +20,12 @@
   }
 
   function idsDoRegistro(registro) {
-    if (Array.isArray(registro.ids) && registro.ids.length) {
-      return registro.ids.map((id) => texto(id).replace(/\s+/g, "").toUpperCase()).filter(Boolean);
-    }
-    return texto(registro.id || registro.ID).toUpperCase().match(/\d{4}B\d{6}/g) || [];
+    const bruto = Array.isArray(registro.ids) && registro.ids.length
+      ? registro.ids.join("\n")
+      : (registro.id || registro.ID || "");
+
+    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(bruto);
+    return texto(bruto).toUpperCase().match(/\d{4}[A-Z]\d{5,6}/g) || [];
   }
 
   function idsSemCreditos(registros) {
@@ -36,14 +38,14 @@
     return faltantes;
   }
 
-  function atualizarResumo(acervo) {
+  function atualizarResumo(acervo, creditosDisponiveis) {
     const todos = [...acervo.vts, ...acervo.noticias, ...acervo.coberturas];
     const valores = {
       mamIngestados: todos.length,
       mamTotalVts: acervo.vts.length,
       mamTotalNoticias: acervo.noticias.length,
       mamTotalCoberturas: acervo.coberturas.length,
-      mamIdsSemCreditos: idsSemCreditos(todos).size,
+      mamIdsSemCreditos: creditosDisponiveis ? idsSemCreditos(todos).size : "—",
     };
 
     Object.entries(valores).forEach(([id, valor]) => {
@@ -155,7 +157,20 @@
       noticias: Array.isArray(dados.noticias) ? dados.noticias : [],
       coberturas: Array.isArray(dados.coberturas) ? dados.coberturas : [],
       generatedAt: dados.generatedAt || null,
+      parcial: Boolean(dados.parcial),
+      errosFontes: dados.errosFontes || {},
     };
+  }
+
+  async function carregarCreditosOpcional() {
+    if (typeof CreditosMedia === "undefined") return false;
+    try {
+      await CreditosMedia.carregar();
+      return true;
+    } catch (erro) {
+      console.warn("Créditos indisponíveis no painel AgroCultura:", erro);
+      return false;
+    }
   }
 
   async function iniciar() {
@@ -163,15 +178,19 @@
 
     document.body.classList.add("pagina-agrocultura");
     document.getElementById("secaoMamAgro")?.removeAttribute("hidden");
-    document.getElementById("secaoVTsAgro")?.setAttribute("hidden", "");
     ocultarTabela();
 
     try {
-      const [acervo] = await Promise.all([carregarAcervo(), CreditosMedia.carregar()]);
-      atualizarResumo(acervo);
+      const acervo = await carregarAcervo();
+      const creditosDisponiveis = await carregarCreditosOpcional();
+      atualizarResumo(acervo, creditosDisponiveis);
       renderizarMaisBuscados();
       ativarNavbar(acervo);
       controlarModoHome();
+
+      if (acervo.parcial) {
+        console.warn("Painel AgroCultura carregado com fontes parciais:", acervo.errosFontes);
+      }
     } catch (erro) {
       console.error("Erro ao montar a página do AgroCultura:", erro);
       ocultarTabela();
