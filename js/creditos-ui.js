@@ -16,8 +16,9 @@
   };
 
   function separarIds(valor) {
+    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(valor);
     return String(valor || "")
-      .split(/[\r\n,;]+/)
+      .split(/[\r\n,;+\/|&]+/)
       .map((id) => id.trim())
       .filter(Boolean);
   }
