@@ -1,4 +1,5 @@
 // creditos.js - Carrega os metadados de créditos relacionados aos Media IDs.
+// A associação é feita pelo nome/Media ID do arquivo de crédito, independentemente do programa.
 
 const CreditosMedia = {
   registros: {},
