@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T21:20:35.299Z",
+  "generatedAt": "2026-09-03T21:50:27.806Z",
   "parcial": true,
   "errosFontes": {
     "vts": null,
@@ -21,10 +21,10 @@
     ]
   },
   "resumo": {
-    "materiais": 1772,
-    "vts": 726,
-    "noticias": 350,
-    "coberturas": 1085
+    "materiais": 1781,
+    "vts": 728,
+    "noticias": 355,
+    "coberturas": 1091
   },
   "vts": [
     {
@@ -5351,6 +5351,20 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2022",
+      "id": "1452P000279",
+      "ids": [
+        "1452P000279"
+      ],
+      "descricao": "VT NATAL AGRO",
+      "reporter": "FELIPE NEVES",
+      "data": "25/12/2022",
+      "local": "",
+      "pgm": "186"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "2023",
       "id": "1452B002555",
       "ids": [
@@ -7514,6 +7528,20 @@
       ],
       "descricao": "VT MEL SIBÉRIA",
       "reporter": "",
+      "data": "11/07/2021",
+      "local": "",
+      "pgm": "110"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452E000023",
+      "ids": [
+        "1452E000023"
+      ],
+      "descricao": "VT PANELA DE BARRO",
+      "reporter": "BRUNO FAUSTINO",
       "data": "11/07/2021",
       "local": "",
       "pgm": "110"
@@ -10960,6 +10988,20 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1009E105308",
+      "ids": [
+        "1009E105308"
+      ],
+      "descricao": "AGRO GUERRA",
+      "reporter": "ANTÔNIO FERREIRA",
+      "data": "24/05/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "364"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B005231",
       "ids": [
         "1452B005231"
@@ -12836,6 +12878,34 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1009E090025",
+      "ids": [
+        "1009E090025"
+      ],
+      "descricao": "MATÉRIA JORNAL DA CULTURA + MATÉRIA SOBRE ALGODÃO",
+      "reporter": "JERÔNIMO MORAES",
+      "data": "07/07/2024",
+      "local": "SÃO PAULO - SP",
+      "pgm": "266"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1009E090047",
+      "ids": [
+        "1009E090047"
+      ],
+      "descricao": "MATÉRIA SOBRE O PLANO SAFRA ( MATÉRIA DO JORNAL DA CULTURA)",
+      "reporter": "JERÔNIMO MORAES",
+      "data": "07/07/2024",
+      "local": "SÃO PAULO - SP",
+      "pgm": "266"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B003106",
       "ids": [
         "1452B003106"
@@ -12984,6 +13054,20 @@
       "reporter": "LÍLIAN RECH",
       "data": "09/06/2024",
       "local": "",
+      "pgm": "262"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "2822E022242",
+      "ids": [
+        "2822E022242"
+      ],
+      "descricao": "PINK FARM",
+      "reporter": "LUIZ TURATTI",
+      "data": "09/06/2024",
+      "local": "SÃO PAULO - SP",
       "pgm": "262"
     },
     {
@@ -13279,6 +13363,20 @@
       "data": "21/04/2024",
       "local": "CHAPADÃO DO SUL - MS",
       "pgm": "255"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B00276",
+      "ids": [
+        "1452B00276"
+      ],
+      "descricao": "ÓLEO DE GUAVIRA",
+      "reporter": "PRISCILLA TRAUER",
+      "data": "14/04/2024",
+      "local": "CAMPO GRANDE - MS",
+      "pgm": "254"
     },
     {
       "tipo": "noticias",
@@ -15521,20 +15619,6 @@
         "1452B002215"
       ],
       "descricao": "GERAIS CULTIVO DE CAFÉ",
-      "reporter": "",
-      "data": "09/08/2026",
-      "local": "RIO DE JANEIRO",
-      "pgm": ""
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "IMAGENS AGROCULTURA 15.07.2026",
-      "aba": "Página1",
-      "id": "1452B004498",
-      "ids": [
-        "1452B004498"
-      ],
-      "descricao": "GERAIS PLANTAÇÃO E CULTIVO DE ALFACES",
       "reporter": "",
       "data": "09/08/2026",
       "local": "RIO DE JANEIRO",
@@ -21670,6 +21754,34 @@
       "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
+      "id": "1009E090025",
+      "ids": [
+        "1009E090025"
+      ],
+      "descricao": "MATÉRIA JORNAL DA CULTURA + MATÉRIA SOBRE ALGODÃO",
+      "reporter": "",
+      "data": "07/07/2024",
+      "local": "SÃO PAULO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "IMAGENS AGROCULTURA 15.07.2026",
+      "aba": "Página1",
+      "id": "1009E090047",
+      "ids": [
+        "1009E090047"
+      ],
+      "descricao": "MATÉRIA SOBRE O PLANO SAFRA ( MATÉRIA DO JORNAL DA CULTURA)",
+      "reporter": "",
+      "data": "07/07/2024",
+      "local": "SÃO PAULO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "IMAGENS AGROCULTURA 15.07.2026",
+      "aba": "Página1",
       "id": "1452B003106",
       "ids": [
         "1452B003106"
@@ -21930,6 +22042,20 @@
       "reporter": "",
       "data": "09/06/2024",
       "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "IMAGENS AGROCULTURA 15.07.2026",
+      "aba": "Página1",
+      "id": "2822E022242",
+      "ids": [
+        "2822E022242"
+      ],
+      "descricao": "PINK FARM",
+      "reporter": "",
+      "data": "09/06/2024",
+      "local": "SÃO PAULO",
       "pgm": ""
     },
     {
@@ -22573,6 +22699,20 @@
       "descricao": "SAFRA CANA DE AÇÚCAR + PLANTAÇÃO DE CANA DE AÇÚCAR + USINA DE ETANOL",
       "reporter": "",
       "data": "21/04/2024",
+      "local": "MATO GROSSO DO SUL",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "IMAGENS AGROCULTURA 15.07.2026",
+      "aba": "Página1",
+      "id": "1452B00276",
+      "ids": [
+        "1452B00276"
+      ],
+      "descricao": "ÓLEO DE GUAVIRA + GABIROBA +",
+      "reporter": "",
+      "data": "14/04/2024",
       "local": "MATO GROSSO DO SUL",
       "pgm": ""
     },
@@ -29636,6 +29776,34 @@
       "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
+      "id": "1009E070831",
+      "ids": [
+        "1009E070831"
+      ],
+      "descricao": "AGRICULTURA FAMILIAR + FRUTAS",
+      "reporter": "",
+      "data": "02/01/2022",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "IMAGENS AGROCULTURA 15.07.2026",
+      "aba": "Página1",
+      "id": "1009E070679",
+      "ids": [
+        "1009E070679"
+      ],
+      "descricao": "CARROS + TRÂNSITO + CONGESTIONAMENTO + ENGARRAFAMENTO + TRATOR + AGRICULTURA",
+      "reporter": "",
+      "data": "23/12/2021",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "IMAGENS AGROCULTURA 15.07.2026",
+      "aba": "Página1",
       "id": "1452B001114",
       "ids": [
         "1452B001114"
@@ -29658,6 +29826,20 @@
       "reporter": "",
       "data": "29/11/2021",
       "local": "SÃO PAULO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "IMAGENS AGROCULTURA 15.07.2026",
+      "aba": "Página1",
+      "id": "1009E070086",
+      "ids": [
+        "1009E070086"
+      ],
+      "descricao": "AEROPORTO + AVIÃO + AVIÃO DECOLANDO + SONORA TEREZA CRISTINA MINISTRA DA AGRICULTURA",
+      "reporter": "",
+      "data": "25/11/2021",
+      "local": "BRASÍLIA",
       "pgm": ""
     },
     {
