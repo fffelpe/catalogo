@@ -4,8 +4,9 @@ import { google } from "googleapis";
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const NOME_ABA_IMGS = "imgs";
 const RANGE_IMGS = `${NOME_ABA_IMGS}!A2:H`;
-const MEDIA_ID_RE = /^\d{4}[A-Z]\d{6}$/i;
-const MEDIA_ID_GLOBAL_RE = /\d{4}[A-Z]\d{6}/gi;
+// Há registros históricos com 5 ou 6 dígitos após a letra do Media ID.
+const MEDIA_ID_RE = /^\d{4}[A-Z]\d{5,6}$/i;
+const MEDIA_ID_GLOBAL_RE = /\d{4}[A-Z]\d{5,6}/gi;
 
 const FONTES = [
   { nome: "Agrocultura", spreadsheetId: "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To", range: "fonte_agrocultura!A2:H" },
@@ -17,86 +18,81 @@ const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
 if (!credenciaisJson) throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
 
 let credentials;
-try {
-  credentials = JSON.parse(credenciaisJson);
-} catch {
-  throw new Error("GOOGLE_SERVICE_ACCOUNT_JSON não contém JSON válido.");
-}
+try { credentials = JSON.parse(credenciaisJson); }
+catch { throw new Error("GOOGLE_SERVICE_ACCOUNT_JSON não contém JSON válido."); }
 
-const auth = new google.auth.GoogleAuth({
-  credentials,
-  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-});
+const auth = new google.auth.GoogleAuth({ credentials, scopes: ["https://www.googleapis.com/auth/spreadsheets"] });
 const sheets = google.sheets({ version: "v4", auth });
 
 function limparTexto(valor) {
-  if (valor === null || valor === undefined) return "";
-  return String(valor)
+  return String(valor ?? "")
     .replace(/\u00A0/g, " ")
     .replace(/[\u200B-\u200D\uFEFF]/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-function normalizarId(valor) {
-  return limparTexto(valor).replace(/\s+/g, "").toUpperCase();
-}
-
 function separarIds(valor) {
-  const original = String(valor || "").toUpperCase();
-  return [...new Set(original.match(MEDIA_ID_GLOBAL_RE) || [])].map(normalizarId);
+  return [...new Set((String(valor || "").toUpperCase().match(MEDIA_ID_GLOBAL_RE) || []))];
 }
 
 function normalizarCampoIds(valor, contexto) {
   const original = String(valor || "").toUpperCase();
   const ids = separarIds(original);
-
-  if (!ids.length) {
-    throw new Error(`${contexto}: campo de Media ID preenchido, mas nenhum ID válido foi reconhecido: ${limparTexto(valor)}`);
-  }
+  if (!ids.length) throw new Error(`${contexto}: nenhum Media ID reconhecido em "${limparTexto(valor)}"`);
 
   const restante = original
     .replace(MEDIA_ID_GLOBAL_RE, "")
     .replace(/[\s,;+\/|&-]+/g, "");
-
-  if (restante) {
-    throw new Error(`${contexto}: conteúdo inesperado junto aos Media IDs: ${limparTexto(valor)}`);
-  }
+  if (restante) throw new Error(`${contexto}: conteúdo inesperado junto aos Media IDs: ${limparTexto(valor)}`);
 
   const invalidos = ids.filter((id) => !MEDIA_ID_RE.test(id));
-  if (invalidos.length) {
-    throw new Error(`${contexto}: Media ID inválido: ${invalidos.join(", ")}`);
-  }
-
+  if (invalidos.length) throw new Error(`${contexto}: Media ID inválido: ${invalidos.join(", ")}`);
   return ids.join("\n");
 }
 
+function normalizarLinhaBase(linha = []) {
+  return Array.from({ length: 8 }, (_, i) => limparTexto(linha[i]));
+}
+
 function normalizarLinha(linha = [], contexto = "registro") {
-  const resultado = Array.from({ length: 8 }, (_, indice) => limparTexto(linha[indice]));
+  const resultado = normalizarLinhaBase(linha);
   if (resultado[0]) resultado[0] = normalizarCampoIds(resultado[0], contexto);
   return resultado;
 }
 
 async function carregarFonte(fonte) {
-  const resposta = await sheets.spreadsheets.values.get({
-    spreadsheetId: fonte.spreadsheetId,
-    range: fonte.range,
-  });
+  const resposta = await sheets.spreadsheets.values.get({ spreadsheetId: fonte.spreadsheetId, range: fonte.range });
   const linhas = resposta.data.values || [];
-  console.log(`${fonte.nome}: ${linhas.length} linhas encontradas`);
-  return linhas
-    .map((linha, indice) => normalizarLinha(linha, `${fonte.nome}, linha ${indice + 2}`))
-    .filter((linha) => separarIds(linha[0]).length);
+  const validas = [];
+  let ignoradas = 0;
+
+  linhas.forEach((linha, indice) => {
+    try {
+      const normalizada = normalizarLinha(linha, `${fonte.nome}, linha ${indice + 2}`);
+      if (separarIds(normalizada[0]).length) validas.push(normalizada);
+    } catch (erro) {
+      ignoradas++;
+      console.warn(`Registro de fonte ignorado: ${erro.message}`);
+    }
+  });
+
+  console.log(`${fonte.nome}: ${validas.length} registros válidos; ${ignoradas} ignorados.`);
+  return validas;
 }
 
 async function carregarImgs() {
-  const resposta = await sheets.spreadsheets.values.get({
-    spreadsheetId: PLANILHA_IMGS_ID,
-    range: RANGE_IMGS,
+  const resposta = await sheets.spreadsheets.values.get({ spreadsheetId: PLANILHA_IMGS_ID, range: RANGE_IMGS });
+  return (resposta.data.values || []).map((linha, indice) => {
+    try {
+      return normalizarLinha(linha, `imgs, linha ${indice + 2}`);
+    } catch (erro) {
+      // Um ID legado/irregular já existente não pode derrubar a sincronização inteira.
+      // A linha é preservada como está e fica fora do mapa de atualizações automáticas.
+      console.warn(`Linha existente preservada sem sincronização automática: ${erro.message}`);
+      return normalizarLinhaBase(linha);
+    }
   });
-  return (resposta.data.values || []).map((linha, indice) =>
-    normalizarLinha(linha, `imgs, linha ${indice + 2}`)
-  );
 }
 
 async function obterSheetIdImgs() {
@@ -105,78 +101,50 @@ async function obterSheetIdImgs() {
     fields: "sheets(properties(sheetId,title))",
   });
   const aba = (resposta.data.sheets || []).find((item) => item.properties?.title === NOME_ABA_IMGS);
-  if (!aba?.properties?.sheetId && aba?.properties?.sheetId !== 0) {
-    throw new Error(`Aba ${NOME_ABA_IMGS} não encontrada.`);
-  }
+  if (!aba?.properties || aba.properties.sheetId === undefined) throw new Error(`Aba ${NOME_ABA_IMGS} não encontrada.`);
   return aba.properties.sheetId;
 }
 
 async function removerDuplicatasExatas(imgs) {
   const primeiraLinhaPorChave = new Map();
   const linhasParaExcluir = [];
-  const idsVistos = new Map();
-  const conflitos = [];
 
   imgs.forEach((linha, indice) => {
-    const numeroLinha = indice + 2;
     const ids = separarIds(linha[0]);
     if (!ids.length) return;
-
     const chave = ids.slice().sort().join("|");
-    if (primeiraLinhaPorChave.has(chave)) {
-      linhasParaExcluir.push(numeroLinha);
-      return;
-    }
-    primeiraLinhaPorChave.set(chave, numeroLinha);
-
-    ids.forEach((id) => {
-      if (idsVistos.has(id)) conflitos.push(`${id} nas linhas ${idsVistos.get(id)} e ${numeroLinha}`);
-      else idsVistos.set(id, numeroLinha);
-    });
+    if (primeiraLinhaPorChave.has(chave)) linhasParaExcluir.push(indice + 2);
+    else primeiraLinhaPorChave.set(chave, indice + 2);
   });
-
-  if (conflitos.length) {
-    throw new Error(`Há Media IDs repetidos em células diferentes e a remoção automática seria ambígua: ${conflitos.join("; ")}`);
-  }
 
   if (!linhasParaExcluir.length) return 0;
-
   const sheetId = await obterSheetIdImgs();
-  const requests = linhasParaExcluir
-    .sort((a, b) => b - a)
-    .map((numeroLinha) => ({
-      deleteDimension: {
-        range: {
-          sheetId,
-          dimension: "ROWS",
-          startIndex: numeroLinha - 1,
-          endIndex: numeroLinha,
-        },
-      },
-    }));
+  const requests = linhasParaExcluir.sort((a, b) => b - a).map((numeroLinha) => ({
+    deleteDimension: {
+      range: { sheetId, dimension: "ROWS", startIndex: numeroLinha - 1, endIndex: numeroLinha }
+    }
+  }));
 
-  await sheets.spreadsheets.batchUpdate({
-    spreadsheetId: PLANILHA_IMGS_ID,
-    requestBody: { requests },
-  });
-
+  await sheets.spreadsheets.batchUpdate({ spreadsheetId: PLANILHA_IMGS_ID, requestBody: { requests } });
   console.log(`Duplicatas exatas removidas: ${linhasParaExcluir.length}`);
   return linhasParaExcluir.length;
 }
 
 function mesclarRegistro(atual, fonte) {
   const resultado = [...atual];
-  const idsMesclados = [...new Set([...separarIds(atual[0]), ...separarIds(fonte[0])])];
-  resultado[0] = idsMesclados.join("\n");
-
-  for (let indice = 1; indice < 8; indice++) {
-    if (fonte[indice]) resultado[indice] = fonte[indice];
-  }
+  resultado[0] = [...new Set([...separarIds(atual[0]), ...separarIds(fonte[0])])].join("\n");
+  for (let i = 1; i < 8; i++) if (fonte[i]) resultado[i] = fonte[i];
   return resultado;
 }
 
-function registrarIdsNoMapa(mapa, registro) {
-  separarIds(registro.dados[0]).forEach((id) => mapa.set(id, registro));
+function registrarIdsNoMapa(mapa, registro, conflitos = null) {
+  separarIds(registro.dados[0]).forEach((id) => {
+    if (mapa.has(id) && mapa.get(id) !== registro) {
+      conflitos?.add(id);
+      return;
+    }
+    mapa.set(id, registro);
+  });
 }
 
 async function main() {
@@ -187,35 +155,33 @@ async function main() {
   if (removidas) imgs = await carregarImgs();
 
   const existentesPorId = new Map();
+  const conflitosExistentes = new Set();
   imgs.forEach((linha, indice) => {
     if (!separarIds(linha[0]).length) return;
-    registrarIdsNoMapa(existentesPorId, {
-      tipo: "existente",
-      linhaPlanilha: indice + 2,
-      dados: linha,
-    });
+    registrarIdsNoMapa(existentesPorId, { tipo: "existente", linhaPlanilha: indice + 2, dados: linha }, conflitosExistentes);
   });
+  if (conflitosExistentes.size) {
+    console.warn(`Media IDs repetidos em células diferentes preservados sem sobrescrita automática: ${[...conflitosExistentes].join(", ")}`);
+  }
 
   const pendentesPorId = new Map();
   const pendentes = [];
   const atualizacoesPorLinha = new Map();
   const linhasAtualizadas = new Set();
+  let conflitosFonte = 0;
 
   for (const fonte of FONTES) {
-    const registros = await carregarFonte(fonte);
-
-    for (const registro of registros) {
+    for (const registro of await carregarFonte(fonte)) {
       const ids = separarIds(registro[0]);
-      const encontrados = ids
-        .map((id) => existentesPorId.get(id) || pendentesPorId.get(id))
-        .filter(Boolean);
-      const unicos = [...new Set(encontrados)];
+      const encontrados = [...new Set(ids.map((id) => existentesPorId.get(id) || pendentesPorId.get(id)).filter(Boolean))];
 
-      if (unicos.length > 1) {
-        throw new Error(`${fonte.nome}: os IDs ${ids.join(", ")} apontam para registros diferentes; sincronização interrompida para evitar mesclagem incorreta.`);
+      if (encontrados.length > 1) {
+        conflitosFonte++;
+        console.warn(`${fonte.nome}: registro ${ids.join(", ")} ignorado porque aponta para linhas diferentes.`);
+        continue;
       }
 
-      const alvo = unicos[0];
+      const alvo = encontrados[0];
       if (alvo) {
         const dadosNovos = mesclarRegistro(alvo.dados, registro);
         if (JSON.stringify(dadosNovos) !== JSON.stringify(alvo.dados)) {
@@ -225,12 +191,11 @@ async function main() {
             linhasAtualizadas.add(alvo.linhaPlanilha);
           }
         }
-
         registrarIdsNoMapa(alvo.tipo === "existente" ? existentesPorId : pendentesPorId, alvo);
         continue;
       }
 
-      const pendente = { tipo: "pendente", dados: normalizarLinha(registro, fonte.nome) };
+      const pendente = { tipo: "pendente", dados: registro };
       pendentes.push(pendente);
       registrarIdsNoMapa(pendentesPorId, pendente);
     }
@@ -259,11 +224,11 @@ async function main() {
     });
   }
 
-  console.log("");
   console.log("Sincronização finalizada.");
   console.log(`Duplicatas exatas removidas: ${removidas}`);
   console.log(`Linhas atualizadas: ${linhasAtualizadas.size}`);
   console.log(`Novos registros: ${pendentes.length}`);
+  console.log(`Conflitos de fonte ignorados com segurança: ${conflitosFonte}`);
   console.log(`Total de Media IDs indexados: ${new Set([...existentesPorId.keys(), ...pendentesPorId.keys()]).size}`);
 }
 
