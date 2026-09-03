@@ -23,6 +23,7 @@ const CreditosMedia = {
     return String(valor || "")
       .trim()
       .replace(/\.mp4$/i, "")
+      .replace(/\s+/g, "")
       .toUpperCase();
   },
 
