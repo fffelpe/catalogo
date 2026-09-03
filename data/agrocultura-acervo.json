@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T21:59:28.935Z",
+  "generatedAt": "2026-09-03T22:00:48.692Z",
   "parcial": true,
   "errosFontes": {
     "vts": null,
@@ -21,10 +21,10 @@
     ]
   },
   "resumo": {
-    "materiais": 1782,
+    "materiais": 1781,
     "vts": 728,
     "noticias": 355,
-    "coberturas": 1092
+    "coberturas": 1091
   },
   "vts": [
     {
@@ -15619,20 +15619,6 @@
         "1452B002215"
       ],
       "descricao": "GERAIS CULTIVO DE CAFÉ",
-      "reporter": "",
-      "data": "09/08/2026",
-      "local": "RIO DE JANEIRO",
-      "pgm": ""
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "IMAGENS AGROCULTURA 15.07.2026",
-      "aba": "Página1",
-      "id": "1452B004498",
-      "ids": [
-        "1452B004498"
-      ],
-      "descricao": "GERAIS PLANTAÇÃO E CULTIVO DE ALFACES",
       "reporter": "",
       "data": "09/08/2026",
       "local": "RIO DE JANEIRO",
