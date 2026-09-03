@@ -4,14 +4,16 @@ const DadosMedia = {
   registros: [],
   registrosOrdemInsercao: [],
   carregado: false,
+  _carregamentoPromise: null,
   CSV_URL: "https://docs.google.com/spreadsheets/d/1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs/export?format=csv&gid=0",
 
   async carregarCSV() {
     if (this.carregado) return this.registros;
+    if (this._carregamentoPromise) return this._carregamentoPromise;
 
     const urlAtualizada = `${this.CSV_URL}&_=${Date.now()}`;
 
-    return new Promise((resolve, reject) => {
+    this._carregamentoPromise = new Promise((resolve, reject) => {
       Papa.parse(urlAtualizada, {
         download: true,
         header: true,
@@ -61,6 +63,12 @@ const DadosMedia = {
         }
       });
     });
+
+    try {
+      return await this._carregamentoPromise;
+    } finally {
+      this._carregamentoPromise = null;
+    }
   },
 
   _normalizar(item) {
