@@ -8,7 +8,7 @@ import pdfParse from "pdf-parse";
 const PASTA_CREDITOS_ID = process.env.DRIVE_CREDITOS_FOLDER_ID || "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik";
 const SAIDA = path.resolve("data/creditos.json");
 const STATUS = path.resolve("data/creditos-status.json");
-const MEDIA_ID_RE = /^\d{4}B\d{6}$/i;
+const MEDIA_ID_RE = /^\d{4}[A-Z]\d{6}$/i;
 
 const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
 if (!credenciaisJson) throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
@@ -189,7 +189,7 @@ async function main() {
   for (const arquivo of arquivos) {
     const id = normalizarId(arquivo.name);
     if (!id) {
-      ignorados.push({ nome: arquivo.name, motivo: "nome não corresponde ao padrão de Media ID (0000B000000)" });
+      ignorados.push({ nome: arquivo.name, motivo: "nome não corresponde ao padrão de Media ID (0000X000000)" });
       continue;
     }
     if (!grupos.has(id)) grupos.set(id, []);
