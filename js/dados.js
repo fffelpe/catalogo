@@ -15,7 +15,15 @@ const DadosMedia = {
         skipEmptyLines: true,
         complete: (results) => {
           const erros = Array.isArray(results.errors) ? results.errors : [];
-          const errosRelevantes = erros.filter((erro) => erro?.code !== "TooFewFields" || erro?.row !== undefined);
+          // PapaParse sinaliza TooFewFields quando as últimas células vazias de uma
+          // linha não vieram no CSV. Isso é comum e não desloca as colunas.
+          // Os demais erros continuam bloqueando o carregamento para evitar dados corrompidos.
+          const avisos = erros.filter((erro) => erro?.code === "TooFewFields");
+          const errosRelevantes = erros.filter((erro) => erro?.code !== "TooFewFields");
+
+          if (avisos.length) {
+            console.warn(`CSV carregado com ${avisos.length} aviso(s) de campos finais ausentes.`, avisos);
+          }
 
           if (errosRelevantes.length) {
             console.error("Erros detectados ao interpretar o CSV:", errosRelevantes);
