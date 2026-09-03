@@ -50,8 +50,11 @@ const SearchEngine = (() => {
   }
 
   function separarIds(valor) {
+    if (typeof MediaIdUtils !== "undefined") {
+      return MediaIdUtils.extrair(valor).map((id) => id.toLocaleLowerCase("pt-BR"));
+    }
     return String(valor || "")
-      .split(/[\r\n,;]+/)
+      .split(/[\r\n,;+\/|&]+/)
       .map((id) => normalizar(id).replace(/\s+/g, ""))
       .filter(Boolean);
   }
@@ -73,8 +76,6 @@ const SearchEngine = (() => {
     } else if (contemTermo(texto, termo)) {
       score = pesoCampo;
     } else if (termo.length >= 3 && texto.includes(termo)) {
-      // Correspondência parcial útil para consultas como "agro" -> "agrocultura".
-      // Recebe peso menor para não superar palavras/frases completas.
       score = pesoCampo * 0.55;
     } else {
       return 0;
@@ -90,8 +91,10 @@ const SearchEngine = (() => {
 
   function detectarMediaIdExato(registro, consulta) {
     const idsRegistro = separarIds(registro.ID);
-    const consultaNormalizada = normalizar(consulta).replace(/\s+/g, "");
-    return idsRegistro.includes(consultaNormalizada);
+    const idConsulta = typeof MediaIdUtils !== "undefined"
+      ? MediaIdUtils.normalizar(consulta).toLocaleLowerCase("pt-BR")
+      : normalizar(consulta).replace(/\s+/g, "");
+    return Boolean(idConsulta) && idsRegistro.includes(idConsulta);
   }
 
   function enriquecerComCreditos(registro) {
