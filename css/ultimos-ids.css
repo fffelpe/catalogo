@@ -1,55 +1,57 @@
 .ultimos-ids-section {
   max-width: 1100px;
-  margin: 24px auto 30px;
+  margin: 18px auto 28px;
 }
 
 .ultimos-ids-cabecalho {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 14px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .ultimos-ids-cabecalho .section-title {
-  margin-bottom: 2px;
+  margin-bottom: 1px;
+  font-size: 17px;
 }
 
 .ultimos-ids-subtitulo,
 .ultimos-ids-status {
   margin: 0;
-  color: #666;
-  font-size: 12px;
+  color: #6b6b6b;
+  font-size: 11px;
 }
 
 .ultimos-ids-lista {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 8px;
 }
 
 .ultimo-id-card {
   min-width: 0;
-  padding: 15px;
-  border: 1px solid #dfe5e1;
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .045);
+  padding: 9px 10px;
+  border: 1px solid #d8e8dd;
+  border-radius: 10px;
+  background: #fbfefc;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, .035);
 }
 
 .ultimo-id-topo {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 8px;
+  margin-bottom: 5px;
 }
 
 .ultimo-id-media {
   min-width: 0;
   color: #007d32;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
+  line-height: 1.2;
   overflow-wrap: anywhere;
 }
 
@@ -62,25 +64,26 @@
 
 .ultimo-id-programa {
   flex: 0 1 auto;
-  max-width: 48%;
-  padding: 3px 8px;
+  max-width: 50%;
+  padding: 2px 6px;
   border-radius: 999px;
-  background: #eef8f1;
+  background: #eaf7ee;
   color: #27603d;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
+  line-height: 1.2;
   text-align: right;
   overflow-wrap: anywhere;
 }
 
 .ultimo-id-descricao {
   display: -webkit-box;
-  min-height: 40px;
-  margin: 0 0 13px;
+  min-height: 0;
+  margin: 0 0 7px;
   overflow: hidden;
   color: #222;
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 11px;
+  line-height: 1.3;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
@@ -88,10 +91,10 @@
 .ultimo-id-metadados {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 10px;
+  gap: 7px;
   margin: 0;
-  padding-top: 10px;
-  border-top: 1px solid #edf0ee;
+  padding-top: 6px;
+  border-top: 1px solid #e7efe9;
 }
 
 .ultimo-id-metadados div {
@@ -99,18 +102,19 @@
 }
 
 .ultimo-id-metadados dt {
-  margin-bottom: 2px;
+  margin-bottom: 1px;
   color: #777;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .035em;
 }
 
 .ultimo-id-metadados dd {
   margin: 0;
   color: #333;
-  font-size: 12px;
+  font-size: 10px;
+  line-height: 1.25;
   overflow-wrap: anywhere;
 }
 
@@ -130,7 +134,7 @@
   }
 
   .ultimos-ids-status {
-    margin-top: 5px;
+    margin-top: 4px;
   }
 
   .ultimos-ids-lista {
