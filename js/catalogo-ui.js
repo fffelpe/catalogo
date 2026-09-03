@@ -20,7 +20,7 @@ function setStatus(msg) {
 
 function programaAtualEhAgrocultura() {
   const params = new URLSearchParams(window.location.search);
-  return (params.get("programa") || "").trim().toLowerCase() === "agrocultura";
+  return (params.get("programa") || params.get("p") || "").trim().toLowerCase() === "agrocultura";
 }
 
 function definirCarregamentoResultados(carregando) {
@@ -50,8 +50,9 @@ function escapeHtml(str) {
 }
 
 function separarIds(valor) {
+  if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(valor);
   return String(valor || "")
-    .split(/[\r\n,;]+/)
+    .split(/[\r\n,;+\/|&]+/)
     .map((id) => id.trim())
     .filter(Boolean);
 }
@@ -222,7 +223,7 @@ async function inicializarPaginaResultados() {
 
   const params = new URLSearchParams(window.location.search);
   const termoInicial = params.get("q") || "";
-  const programa = params.get("programa") || "";
+  const programa = params.get("programa") || params.get("p") || "";
   const tituloPrograma = document.getElementById("tituloPrograma");
 
   input.value = termoInicial;
