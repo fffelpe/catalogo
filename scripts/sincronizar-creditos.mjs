@@ -4,11 +4,11 @@ import process from "node:process";
 import { google } from "googleapis";
 import mammoth from "mammoth";
 import pdfParse from "pdf-parse";
+import { normalizarMediaId } from "./media-id.mjs";
 
 const PASTA_CREDITOS_ID = process.env.DRIVE_CREDITOS_FOLDER_ID || "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik";
 const SAIDA = path.resolve("data/creditos.json");
 const STATUS = path.resolve("data/creditos-status.json");
-const MEDIA_ID_RE = /^\d{4}[A-Z]\d{6}$/i;
 
 const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
 if (!credenciaisJson) throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
@@ -27,12 +27,7 @@ const auth = new google.auth.GoogleAuth({
 const drive = google.drive({ version: "v3", auth });
 
 function normalizarId(nome) {
-  const id = String(nome || "")
-    .replace(/\.[^.]+$/, "")
-    .replace(/\s+/g, "")
-    .trim()
-    .toUpperCase();
-  return MEDIA_ID_RE.test(id) ? id : "";
+  return normalizarMediaId(String(nome || "").replace(/\.[^.]+$/, ""));
 }
 
 function limparLinhas(texto) {
@@ -162,13 +157,13 @@ async function carregarRegistrosAnteriores() {
   }
 }
 
-function escolherMaisRecente(arquivos) {
+function ordenarMaisRecentes(arquivos) {
   return [...arquivos].sort((a, b) => {
     const ta = Date.parse(a.modifiedTime || "") || 0;
     const tb = Date.parse(b.modifiedTime || "") || 0;
     if (tb !== ta) return tb - ta;
     return String(a.name || "").localeCompare(String(b.name || ""), "pt-BR");
-  })[0];
+  });
 }
 
 async function escreverStatus(dados) {
@@ -189,56 +184,73 @@ async function main() {
   for (const arquivo of arquivos) {
     const id = normalizarId(arquivo.name);
     if (!id) {
-      ignorados.push({ nome: arquivo.name, motivo: "nome não corresponde ao padrão de Media ID (0000X000000)" });
+      ignorados.push({ nome: arquivo.name, motivo: "nome não corresponde ao padrão de Media ID (0000X00000 ou 0000X000000)" });
       continue;
     }
     if (!grupos.has(id)) grupos.set(id, []);
     grupos.get(id).push(arquivo);
   }
 
-  for (const [id, candidatos] of grupos.entries()) {
-    const arquivo = escolherMaisRecente(candidatos);
+  for (const [id, candidatosOriginais] of grupos.entries()) {
+    const candidatos = ordenarMaisRecentes(candidatosOriginais);
+    const falhasDoId = [];
+    let escolhido = null;
+    let textoEscolhido = "";
+
+    for (const arquivo of candidatos) {
+      try {
+        const texto = await extrairTexto(arquivo);
+        if (!texto.trim()) {
+          falhasDoId.push({ nome: arquivo.name, erro: `sem texto extraível (${arquivo.mimeType})` });
+          continue;
+        }
+        escolhido = arquivo;
+        textoEscolhido = texto;
+        break;
+      } catch (erro) {
+        falhasDoId.push({ nome: arquivo.name, erro: erro.message });
+      }
+    }
 
     if (candidatos.length > 1) {
       duplicados.push({
         id,
-        escolhido: arquivo.name,
-        criterio: "arquivo com modifiedTime mais recente",
+        escolhido: escolhido?.name || null,
+        criterio: "primeiro arquivo legível, do mais recente para o mais antigo",
         arquivos: candidatos.map((item) => ({ nome: item.name, atualizadoEm: item.modifiedTime || "" }))
       });
     }
 
-    try {
-      const texto = await extrairTexto(arquivo);
-      if (!texto.trim()) {
-        if (anteriores[id]) {
-          registros[id] = anteriores[id];
-          preservados.push({ id, nome: arquivo.name, motivo: `sem texto extraível (${arquivo.mimeType})` });
-        } else {
-          ignorados.push({ nome: arquivo.name, motivo: `formato sem extração de texto (${arquivo.mimeType})` });
-        }
-        continue;
-      }
+    falhasDoId.forEach((falha) => {
+      erros.push({ id, ...falha });
+      console.error(`Erro em ${falha.nome}:`, falha.erro);
+    });
 
+    if (escolhido) {
       registros[id] = {
-        ...interpretarTexto(texto),
+        ...interpretarTexto(textoEscolhido),
         arquivo: {
-          id: arquivo.id,
-          nome: arquivo.name,
-          mimeType: arquivo.mimeType,
-          atualizadoEm: arquivo.modifiedTime || "",
-          url: arquivo.webViewLink || `https://drive.google.com/open?id=${arquivo.id}`
+          id: escolhido.id,
+          nome: escolhido.name,
+          mimeType: escolhido.mimeType,
+          atualizadoEm: escolhido.modifiedTime || "",
+          url: escolhido.webViewLink || `https://drive.google.com/open?id=${escolhido.id}`
         },
         origem: "Google Drive"
       };
-    } catch (erro) {
-      erros.push({ nome: arquivo.name, id, erro: erro.message });
-      console.error(`Erro em ${arquivo.name}:`, erro.message);
+      continue;
+    }
 
-      if (anteriores[id]) {
-        registros[id] = anteriores[id];
-        preservados.push({ id, nome: arquivo.name, motivo: `erro de leitura; crédito anterior preservado: ${erro.message}` });
-      }
+    if (anteriores[id]) {
+      registros[id] = anteriores[id];
+      preservados.push({
+        id,
+        motivo: falhasDoId.length
+          ? `todos os documentos atuais falharam; crédito anterior preservado`
+          : "nenhum documento atual legível; crédito anterior preservado"
+      });
+    } else {
+      ignorados.push({ nome: candidatos[0]?.name || id, motivo: "nenhuma versão legível do documento" });
     }
   }
 
@@ -267,9 +279,9 @@ async function main() {
   await escreverStatus(status);
 
   console.log(`Créditos disponíveis: ${Object.keys(registros).length}/${grupos.size} Media IDs.`);
-  if (duplicados.length) console.warn(`Duplicidades resolvidas pela versão mais recente: ${duplicados.length}.`);
-  if (preservados.length) console.warn(`Créditos anteriores preservados por falha individual: ${preservados.length}.`);
-  if (erros.length) console.warn(`Arquivos com erro individual de leitura: ${erros.length}.`);
+  if (duplicados.length) console.warn(`IDs com documentos duplicados: ${duplicados.length}.`);
+  if (preservados.length) console.warn(`Créditos anteriores preservados: ${preservados.length}.`);
+  if (erros.length) console.warn(`Tentativas de leitura com erro: ${erros.length}.`);
 }
 
 main().catch((erro) => {
