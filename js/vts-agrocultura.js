@@ -16,6 +16,7 @@ const VTS_AGROCULTURA_ABAS = [
 ];
 
 const _cacheVtsAgro = {};
+let _requisicaoVtAtual = 0;
 
 function _urlVtsAgro(gid) {
   return `${VTS_AGROCULTURA_BASE_URL}?gid=${gid}&single=true&output=csv`;
@@ -48,6 +49,7 @@ function inicializarVtsAgricultura(programaParam) {
   secao.hidden = false;
   tabsEl.innerHTML = "";
   if (wrapTabela) wrapTabela.hidden = true;
+  _requisicaoVtAtual++;
 
   VTS_AGROCULTURA_ABAS.forEach((aba) => {
     const btn = document.createElement("button");
@@ -71,6 +73,8 @@ function _alternarAbaVt(aba, btnEl) {
     b.setAttribute("aria-selected", "false");
   });
 
+  _requisicaoVtAtual++;
+
   if (jaEstaAberta) {
     if (wrapTabela) wrapTabela.hidden = true;
     return;
@@ -79,10 +83,16 @@ function _alternarAbaVt(aba, btnEl) {
   btnEl.classList.add("ativa");
   btnEl.setAttribute("aria-selected", "true");
   if (wrapTabela) wrapTabela.hidden = false;
-  _carregarAbaVt(aba);
+  _carregarAbaVt(aba, _requisicaoVtAtual);
 }
 
-function _carregarAbaVt(aba) {
+function _abaAindaAtiva(gid, token) {
+  if (token !== _requisicaoVtAtual) return false;
+  const ativo = document.querySelector(".tab-vt.ativa");
+  return ativo?.dataset.gid === String(gid);
+}
+
+function _carregarAbaVt(aba, token) {
   const thead = document.getElementById("theadVtsAgro");
   const tbody = document.getElementById("tbodyVtsAgro");
   if (!thead || !tbody) return;
@@ -91,7 +101,7 @@ function _carregarAbaVt(aba) {
   tbody.innerHTML = '<tr><td>Carregando...</td></tr>';
 
   if (_cacheVtsAgro[aba.gid]) {
-    _renderizarTabelaVtsAgro(_cacheVtsAgro[aba.gid]);
+    if (_abaAindaAtiva(aba.gid, token)) _renderizarTabelaVtsAgro(_cacheVtsAgro[aba.gid]);
     return;
   }
 
@@ -114,11 +124,13 @@ function _carregarAbaVt(aba) {
       });
 
       _cacheVtsAgro[aba.gid] = linhas;
-      _renderizarTabelaVtsAgro(linhas);
+      if (_abaAindaAtiva(aba.gid, token)) _renderizarTabelaVtsAgro(linhas);
     },
     error: (err) => {
       console.error(`Erro ao carregar a aba ${aba.label}:`, err);
-      tbody.innerHTML = '<tr><td>Não foi possível carregar esta planilha.</td></tr>';
+      if (_abaAindaAtiva(aba.gid, token)) {
+        tbody.innerHTML = '<tr><td>Não foi possível carregar esta planilha.</td></tr>';
+      }
     }
   });
 }
@@ -134,8 +146,6 @@ function _renderizarTabelaVtsAgro(linhas) {
     return;
   }
 
-  // União das colunas de todas as linhas: nenhum campo válido fica invisível
-  // apenas porque não apareceu na primeira linha do CSV.
   const colunas = [];
   const vistas = new Set();
   linhas.forEach((linha) => {
