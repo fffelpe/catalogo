@@ -21,20 +21,14 @@
 
   function idsDoRegistro(registro) {
     if (Array.isArray(registro.ids) && registro.ids.length) {
-      return registro.ids.map((id) => texto(id).toUpperCase()).filter(Boolean);
+      return registro.ids.map((id) => texto(id).replace(/\s+/g, "").toUpperCase()).filter(Boolean);
     }
     return texto(registro.id || registro.ID).toUpperCase().match(/\d{4}B\d{6}/g) || [];
   }
 
-  function idsUnicos(registros) {
-    const conjunto = new Set();
-    registros.forEach((registro) => idsDoRegistro(registro).forEach((id) => conjunto.add(id)));
-    return conjunto;
-  }
-
-  function vtsSemCreditos(vts) {
+  function idsSemCreditos(registros) {
     const faltantes = new Set();
-    vts.forEach((registro) => {
+    registros.forEach((registro) => {
       idsDoRegistro(registro).forEach((id) => {
         if (!CreditosMedia.obter(id)) faltantes.add(id);
       });
@@ -44,10 +38,18 @@
 
   function atualizarResumo(acervo) {
     const todos = [...acervo.vts, ...acervo.noticias, ...acervo.coberturas];
-    document.getElementById("mamIngestados").textContent = idsUnicos(todos).size;
-    document.getElementById("mamTotalVts").textContent = idsUnicos(acervo.vts).size;
-    document.getElementById("mamTotalNoticias").textContent = idsUnicos(acervo.noticias).size;
-    document.getElementById("mamVtsSemCreditos").textContent = vtsSemCreditos(acervo.vts).size;
+    const valores = {
+      mamIngestados: todos.length,
+      mamTotalVts: acervo.vts.length,
+      mamTotalNoticias: acervo.noticias.length,
+      mamTotalCoberturas: acervo.coberturas.length,
+      mamIdsSemCreditos: idsSemCreditos(todos).size,
+    };
+
+    Object.entries(valores).forEach(([id, valor]) => {
+      const elemento = document.getElementById(id);
+      if (elemento) elemento.textContent = String(valor);
+    });
   }
 
   function renderizarMaisBuscados() {
@@ -99,7 +101,6 @@
       noticias: { titulo: "Notícias e stand-ups", registros: acervo.noticias },
       cobertura: { titulo: "Imagens de coberturas", registros: acervo.coberturas },
     };
-
     const selecao = mapa[filtro];
     if (!selecao) return;
 
@@ -146,7 +147,7 @@
   }
 
   async function carregarAcervo() {
-    const resposta = await fetch(`../data/agrocultura-acervo.json?v=${Date.now()}`, { cache: "no-store" });
+    const resposta = await fetch("../data/agrocultura-acervo.json", { cache: "no-store" });
     if (!resposta.ok) throw new Error(`Falha ao carregar acervo AgroCultura (${resposta.status}).`);
     const dados = await resposta.json();
     return {
@@ -166,11 +167,7 @@
     ocultarTabela();
 
     try {
-      const [acervo] = await Promise.all([
-        carregarAcervo(),
-        CreditosMedia.carregar(),
-      ]);
-
+      const [acervo] = await Promise.all([carregarAcervo(), CreditosMedia.carregar()]);
       atualizarResumo(acervo);
       renderizarMaisBuscados();
       ativarNavbar(acervo);
