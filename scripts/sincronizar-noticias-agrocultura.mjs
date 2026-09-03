@@ -1,5 +1,6 @@
 import process from "node:process";
 import { google } from "googleapis";
+import { extrairMediaIds } from "./media-id.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const PLANILHA_NOTICIAS_ID = "1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw";
@@ -31,12 +32,15 @@ function limparTexto(valor) {
     .trim();
 }
 
-function normalizarId(valor) {
-  return limparTexto(valor).replace(/\.mp4$/i, "").replace(/\s+/g, "").toUpperCase();
+function idsDoValor(valor) {
+  return extrairMediaIds(valor);
 }
 
 function normalizarLinhaImgs(linha = []) {
-  return Array.from({ length: 9 }, (_, i) => limparTexto(linha[i]));
+  const resultado = Array.from({ length: 9 }, (_, i) => limparTexto(linha[i]));
+  const ids = idsDoValor(resultado[0]);
+  if (ids.length) resultado[0] = ids.join("\n");
+  return resultado;
 }
 
 async function descobrirAbaNoticias() {
@@ -58,14 +62,14 @@ async function carregarNoticias() {
   const aba = await descobrirAbaNoticias();
   const range = `'${aba.replaceAll("'", "''")}'!A2:I`;
   const resposta = await sheets.spreadsheets.values.get({ spreadsheetId: PLANILHA_NOTICIAS_ID, range });
-  const porId = new Map();
+  const registros = [];
 
   for (const linha of resposta.data.values || []) {
-    const id = normalizarId(linha[1]);
-    if (!id) continue;
+    const ids = idsDoValor(linha[1]);
+    if (!ids.length) continue;
 
-    const registro = [
-      id,
+    registros.push([
+      ids.join("\n"),
       limparTexto(linha[3]),
       limparTexto(linha[2]),
       limparTexto(linha[4]),
@@ -74,17 +78,11 @@ async function carregarNoticias() {
       limparTexto(linha[8]) || "AGROCULTURA",
       limparTexto(linha[7]),
       limparTexto(linha[0]),
-    ];
-
-    if (!porId.has(id)) porId.set(id, registro);
-    else {
-      const atual = porId.get(id);
-      porId.set(id, atual.map((valor, indice) => registro[indice] || valor));
-    }
+    ]);
   }
 
-  console.log(`Notícias/stand-ups: ${porId.size} IDs únicos encontrados.`);
-  return [...porId.values()];
+  console.log(`Notícias/stand-ups: ${registros.length} registros com Media ID encontrados.`);
+  return registros;
 }
 
 async function garantirNoveColunasImgs() {
@@ -127,11 +125,16 @@ async function carregarImgs() {
 
 function mesclar(atual, origem) {
   const resultado = [...atual];
-  resultado[0] = normalizarId(atual[0] || origem[0]);
+  const ids = [...new Set([...idsDoValor(atual[0]), ...idsDoValor(origem[0])])];
+  resultado[0] = ids.join("\n");
   for (let i = 1; i < 9; i += 1) {
     if (origem[i]) resultado[i] = origem[i];
   }
   return resultado;
+}
+
+function registrarIds(mapa, registro) {
+  idsDoValor(registro.dados[0]).forEach((id) => mapa.set(id, registro));
 }
 
 async function garantirCabecalhoPgm() {
@@ -149,59 +152,75 @@ async function main() {
   await garantirCabecalhoPgm();
 
   const [imgs, noticias] = await Promise.all([carregarImgs(), carregarNoticias()]);
-  const mapaImgs = new Map();
+  const existentesPorId = new Map();
 
   imgs.forEach((linha, indice) => {
-    const id = normalizarId(linha[0]);
-    if (!id || mapaImgs.has(id)) return;
-    mapaImgs.set(id, { linhaPlanilha: indice + 2, dados: linha });
+    if (!idsDoValor(linha[0]).length) return;
+    registrarIds(existentesPorId, {
+      tipo: "existente",
+      linhaPlanilha: indice + 2,
+      dados: linha,
+    });
   });
 
-  const atualizacoes = [];
-  const novasLinhas = [];
-  let atualizados = 0;
-  let novos = 0;
+  const pendentesPorId = new Map();
+  const pendentes = [];
+  const atualizacoesPorLinha = new Map();
 
   for (const noticia of noticias) {
-    const id = normalizarId(noticia[0]);
-    const existente = mapaImgs.get(id);
+    const ids = idsDoValor(noticia[0]);
+    const alvos = [...new Set(
+      ids.map((id) => existentesPorId.get(id) || pendentesPorId.get(id)).filter(Boolean)
+    )];
 
-    if (existente) {
-      const dadosNovos = mesclar(existente.dados, noticia);
-      if (JSON.stringify(dadosNovos) !== JSON.stringify(existente.dados)) {
-        atualizacoes.push({
-          range: `${ABA_IMGS}!A${existente.linhaPlanilha}:I${existente.linhaPlanilha}`,
-          values: [dadosNovos],
-        });
-        existente.dados = dadosNovos;
-        atualizados += 1;
-      }
+    if (alvos.length > 1) {
+      throw new Error(`Os IDs ${ids.join(", ")} da mesma notícia já pertencem a linhas diferentes na imgs.`);
+    }
+
+    let alvo = alvos[0];
+    if (!alvo) {
+      alvo = { tipo: "pendente", linhaPlanilha: null, dados: noticia };
+      pendentes.push(alvo);
+      registrarIds(pendentesPorId, alvo);
       continue;
     }
 
-    novasLinhas.push(noticia);
-    mapaImgs.set(id, { linhaPlanilha: null, dados: noticia });
-    novos += 1;
+    const dadosNovos = mesclar(alvo.dados, noticia);
+    if (JSON.stringify(dadosNovos) === JSON.stringify(alvo.dados)) continue;
+
+    alvo.dados = dadosNovos;
+    if (alvo.tipo === "existente") {
+      atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
+      registrarIds(existentesPorId, alvo);
+    } else {
+      registrarIds(pendentesPorId, alvo);
+    }
   }
 
-  if (atualizacoes.length) {
+  if (atualizacoesPorLinha.size) {
     await sheets.spreadsheets.values.batchUpdate({
       spreadsheetId: PLANILHA_IMGS_ID,
-      requestBody: { valueInputOption: "USER_ENTERED", data: atualizacoes },
+      requestBody: {
+        valueInputOption: "USER_ENTERED",
+        data: [...atualizacoesPorLinha.entries()].map(([linha, values]) => ({
+          range: `${ABA_IMGS}!A${linha}:I${linha}`,
+          values: [values],
+        })),
+      },
     });
   }
 
-  if (novasLinhas.length) {
+  if (pendentes.length) {
     await sheets.spreadsheets.values.append({
       spreadsheetId: PLANILHA_IMGS_ID,
       range: `${ABA_IMGS}!A:I`,
       valueInputOption: "USER_ENTERED",
       insertDataOption: "INSERT_ROWS",
-      requestBody: { values: novasLinhas },
+      requestBody: { values: pendentes.map((item) => item.dados) },
     });
   }
 
-  console.log(`Integração concluída. Atualizados: ${atualizados}; novos: ${novos}; total origem: ${noticias.length}.`);
+  console.log(`Integração concluída. Linhas atualizadas: ${atualizacoesPorLinha.size}; novos registros: ${pendentes.length}; total origem: ${noticias.length}.`);
 }
 
 main().catch((erro) => {
