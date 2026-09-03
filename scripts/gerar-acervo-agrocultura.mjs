@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import process from "node:process";
 import { google } from "googleapis";
+import { extrairMediaIds } from "./media-id.mjs";
 
 const PLANILHAS = {
   vts: "1Ny0gjt-4du7cJ-ejgahfhdplnCBl58d6RV7kfuLjKM0",
@@ -40,15 +41,31 @@ function texto(valor) {
 }
 
 function ids(valor) {
-  const encontrados = texto(valor).toUpperCase().match(/\d{4}B\d{6}/g) || [];
-  return [...new Set(encontrados)];
+  return extrairMediaIds(valor);
+}
+
+function timestampValido(ano, mes, dia) {
+  const a = Number(ano);
+  const m = Number(mes);
+  const d = Number(dia);
+  if (!Number.isInteger(a) || !Number.isInteger(m) || !Number.isInteger(d)) return 0;
+  if (m < 1 || m > 12 || d < 1 || d > 31) return 0;
+
+  const data = new Date(Date.UTC(a, m - 1, d));
+  if (
+    data.getUTCFullYear() !== a ||
+    data.getUTCMonth() !== m - 1 ||
+    data.getUTCDate() !== d
+  ) return 0;
+
+  return data.getTime();
 }
 
 function dataParaTimestamp(valor, formato = "dmy") {
   const s = texto(valor);
   if (!s) return 0;
 
-  let m = s.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})/);
+  let m = s.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})(?:\D|$)/);
   if (m) {
     let a;
     let mes;
@@ -59,11 +76,11 @@ function dataParaTimestamp(valor, formato = "dmy") {
       [, dia, mes, a] = m;
     }
     if (a.length === 2) a = `${Number(a) < 50 ? "20" : "19"}${a}`;
-    return Date.UTC(Number(a), Number(mes) - 1, Number(dia));
+    return timestampValido(a, mes, dia);
   }
 
-  m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
-  if (m) return Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+  m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})(?:\D|$)/);
+  if (m) return timestampValido(m[1], m[2], m[3]);
   return 0;
 }
 
