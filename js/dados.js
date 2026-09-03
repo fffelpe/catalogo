@@ -2,14 +2,17 @@
 
 const DadosMedia = {
   registros: [],
+  registrosOrdemInsercao: [],
   carregado: false,
   CSV_URL: "https://docs.google.com/spreadsheets/d/1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs/export?format=csv&gid=0",
 
   async carregarCSV() {
     if (this.carregado) return this.registros;
 
+    const urlAtualizada = `${this.CSV_URL}&_=${Date.now()}`;
+
     return new Promise((resolve, reject) => {
-      Papa.parse(this.CSV_URL, {
+      Papa.parse(urlAtualizada, {
         download: true,
         header: true,
         skipEmptyLines: true,
@@ -40,10 +43,15 @@ const DadosMedia = {
             return;
           }
 
-          this.registros = results.data
+          const normalizados = results.data
             .map(this._normalizar)
-            .filter((registro) => registro.ID)
-            .sort(this._compararPorDataDesc);
+            .filter((registro) => registro.ID);
+
+          // A ordem do CSV representa a ordem física da planilha imgs. Mantemos uma
+          // cópia sem ordenação para recursos que precisam saber quais registros foram
+          // inseridos por último, sem alterar a ordenação por data usada nas buscas.
+          this.registrosOrdemInsercao = [...normalizados];
+          this.registros = [...normalizados].sort(this._compararPorDataDesc);
           this.carregado = true;
           resolve(this.registros);
         },
