@@ -1,17 +1,7 @@
 .pagina-agrocultura .cabecalho-programa { max-width: 820px; }
 
-.agro-mais-buscados {
-  max-width: 980px;
-  margin: 18px auto 26px;
-}
-
-.agro-secao-topo h2,
-.agro-lista-topo h3 {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 700;
-  color: #2f3a33;
-}
+.agro-mais-buscados { max-width: 980px; margin: 18px auto 26px; }
+.agro-secao-topo h2, .agro-lista-topo h3 { margin: 0; font-size: 15px; font-weight: 700; color: #2f3a33; }
 
 .agro-mais-buscados-lista {
   display: grid;
@@ -31,42 +21,27 @@
   cursor: pointer;
 }
 
-.agro-busca-popular:hover,
-.agro-busca-popular:focus-visible {
+.agro-busca-popular:hover, .agro-busca-popular:focus-visible {
   border-color: #00953b;
   background: #f3faf5;
   color: #007d32;
   outline: none;
 }
 
-.mam-agro {
-  max-width: 1180px;
-  margin: 0 auto 36px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
+.mam-agro { max-width: 1180px; margin: 0 auto 36px; padding: 0; border: 0; background: transparent; }
 .mam-agro-cabecalho { margin-bottom: 12px; }
 .mam-agro-eyebrow { text-align: left; }
 .mam-agro-title { margin: 2px 0 0; }
 
 .mam-agro-resumo {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 10px;
   margin-bottom: 22px;
 }
 
-.mam-agro-card {
-  padding: 16px;
-  border: 1px solid #e1e8e3;
-  border-radius: 14px;
-  background: #fff;
-}
-
+.mam-agro-card { padding: 16px; border: 1px solid #e1e8e3; border-radius: 14px; background: #fff; }
 .mam-agro-card-alerta { background: #fffdf6; }
-
 .mam-agro-card-label {
   display: block;
   margin-bottom: 7px;
@@ -76,14 +51,7 @@
   text-transform: uppercase;
   letter-spacing: .04em;
 }
-
-.mam-agro-card strong {
-  display: block;
-  color: #007d32;
-  font-size: clamp(26px, 3vw, 34px);
-  line-height: 1;
-}
-
+.mam-agro-card strong { display: block; color: #007d32; font-size: clamp(26px, 3vw, 34px); line-height: 1; }
 .mam-agro-card-alerta strong { color: #a86d00; }
 
 .agro-navbar {
@@ -107,18 +75,8 @@
   font-weight: 600;
   cursor: pointer;
 }
-
-.agro-nav-item:hover,
-.agro-nav-item:focus-visible {
-  color: #007d32;
-  background: #eef7f1;
-  outline: none;
-}
-
-.agro-nav-item.ativo {
-  background: #00953b;
-  color: #fff;
-}
+.agro-nav-item:hover, .agro-nav-item:focus-visible { color: #007d32; background: #eef7f1; outline: none; }
+.agro-nav-item.ativo { background: #00953b; color: #fff; }
 
 .agro-lista-topo { margin: 0 0 8px; }
 .mam-agro-table-wrap { margin-top: 0; }
@@ -135,8 +93,7 @@
 .pagina-agrocultura #secaoMamAgro { display: block; }
 
 @media (max-width: 900px) {
-  .agro-mais-buscados-lista,
-  .mam-agro-resumo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .agro-mais-buscados-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .agro-navbar { flex-direction: column; }
   .agro-nav-item { text-align: left; }
 }
