@@ -8,11 +8,10 @@ import pdfParse from "pdf-parse";
 const PASTA_CREDITOS_ID = process.env.DRIVE_CREDITOS_FOLDER_ID || "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik";
 const SAIDA = path.resolve("data/creditos.json");
 const STATUS = path.resolve("data/creditos-status.json");
+const MEDIA_ID_RE = /^\d{4}B\d{6}$/i;
 
 const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
-if (!credenciaisJson) {
-  throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
-}
+if (!credenciaisJson) throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
 
 let credentials;
 try {
@@ -25,7 +24,6 @@ const auth = new google.auth.GoogleAuth({
   credentials,
   scopes: ["https://www.googleapis.com/auth/drive.readonly"]
 });
-
 const drive = google.drive({ version: "v3", auth });
 
 function normalizarId(nome) {
@@ -34,8 +32,7 @@ function normalizarId(nome) {
     .replace(/\s+/g, "")
     .trim()
     .toUpperCase();
-
-  return /^[A-Z0-9]{8,20}$/.test(id) ? id : "";
+  return MEDIA_ID_RE.test(id) ? id : "";
 }
 
 function limparLinhas(texto) {
@@ -68,9 +65,7 @@ function interpretarTexto(texto) {
 
   let materia = "";
   if (linhas.length) {
-    materia = linhas[0]
-      .replace(/^mat[eé]ria\s*\d*\s*[-–—:]?\s*/i, "")
-      .trim();
+    materia = linhas[0].replace(/^mat[eé]ria\s*\d*\s*[-–—:]?\s*/i, "").trim();
     consumidas.add(0);
   }
 
@@ -107,22 +102,15 @@ function interpretarTexto(texto) {
   for (let i = 0; i < candidatosFonte.length; i += 2) {
     const nome = candidatosFonte[i]?.linha || "";
     const cargo = candidatosFonte[i + 1]?.linha || "";
-    if (!nome) continue;
-    fontes.push({ nome, ...(cargo ? { cargo } : {}) });
+    if (nome) fontes.push({ nome, ...(cargo ? { cargo } : {}) });
   }
 
-  return {
-    materia,
-    fontes,
-    creditos,
-    textoCompleto: linhas.join(" | ")
-  };
+  return { materia, fontes, creditos, textoCompleto: linhas.join(" | ") };
 }
 
 async function listarArquivos() {
   const arquivos = [];
   let pageToken;
-
   do {
     const resposta = await drive.files.list({
       q: `'${PASTA_CREDITOS_ID}' in parents and trashed = false`,
@@ -130,11 +118,9 @@ async function listarArquivos() {
       pageSize: 1000,
       pageToken
     });
-
     arquivos.push(...(resposta.data.files || []));
     pageToken = resposta.data.nextPageToken || undefined;
   } while (pageToken);
-
   return arquivos;
 }
 
@@ -143,7 +129,6 @@ async function baixarArquivo(arquivo) {
     { fileId: arquivo.id, alt: "media" },
     { responseType: "arraybuffer" }
   );
-
   return Buffer.from(resposta.data);
 }
 
@@ -153,42 +138,50 @@ async function extrairTexto(arquivo) {
       { fileId: arquivo.id, mimeType: "text/plain" },
       { responseType: "arraybuffer" }
     );
-
     return Buffer.from(resposta.data).toString("utf8");
   }
 
   if (arquivo.mimeType === "application/pdf") {
-    const buffer = await baixarArquivo(arquivo);
-    const resultado = await pdfParse(buffer);
+    const resultado = await pdfParse(await baixarArquivo(arquivo));
     return resultado.text || "";
   }
 
   if (arquivo.mimeType === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
-    const buffer = await baixarArquivo(arquivo);
-    const resultado = await mammoth.extractRawText({ buffer });
+    const resultado = await mammoth.extractRawText({ buffer: await baixarArquivo(arquivo) });
     return resultado.value || "";
   }
 
   return "";
 }
 
+async function escreverStatus(dados) {
+  await fs.mkdir(path.dirname(STATUS), { recursive: true });
+  await fs.writeFile(STATUS, `${JSON.stringify(dados, null, 2)}\n`, "utf8");
+}
+
 async function main() {
   const arquivos = await listarArquivos();
   const registros = {};
+  const arquivoPorId = new Map();
   const ignorados = [];
   const erros = [];
+  const duplicados = [];
 
   for (const arquivo of arquivos) {
     const id = normalizarId(arquivo.name);
-
     if (!id) {
-      ignorados.push({ nome: arquivo.name, motivo: "nome não corresponde a um Media ID" });
+      ignorados.push({ nome: arquivo.name, motivo: "nome não corresponde ao padrão de Media ID (0000B000000)" });
       continue;
     }
 
+    if (arquivoPorId.has(id)) {
+      duplicados.push({ id, arquivos: [arquivoPorId.get(id), arquivo.name] });
+      continue;
+    }
+    arquivoPorId.set(id, arquivo.name);
+
     try {
       const texto = await extrairTexto(arquivo);
-
       if (!texto.trim()) {
         ignorados.push({ nome: arquivo.name, motivo: `formato sem extração de texto (${arquivo.mimeType})` });
         continue;
@@ -211,27 +204,32 @@ async function main() {
     }
   }
 
+  const status = {
+    sincronizadoEm: new Date().toISOString(),
+    pastaDrive: PASTA_CREDITOS_ID,
+    totalArquivos: arquivos.length,
+    totalSincronizados: Object.keys(registros).length,
+    totalIgnorados: ignorados.length,
+    totalErros: erros.length,
+    totalDuplicados: duplicados.length,
+    ignorados,
+    duplicados,
+    erros
+  };
+  await escreverStatus(status);
+
+  if (duplicados.length) {
+    throw new Error(`Há ${duplicados.length} Media ID(s) com mais de um documento na pasta de créditos. O creditos.json foi preservado.`);
+  }
+  if (erros.length) {
+    throw new Error(`Falha ao processar ${erros.length} documento(s). O creditos.json foi preservado.`);
+  }
   if (!Object.keys(registros).length) {
     throw new Error("Nenhum crédito válido foi extraído; o JSON existente foi preservado.");
   }
 
   await fs.mkdir(path.dirname(SAIDA), { recursive: true });
   await fs.writeFile(SAIDA, `${JSON.stringify(registros, null, 2)}\n`, "utf8");
-  await fs.writeFile(
-    STATUS,
-    `${JSON.stringify({
-      sincronizadoEm: new Date().toISOString(),
-      pastaDrive: PASTA_CREDITOS_ID,
-      totalArquivos: arquivos.length,
-      totalSincronizados: Object.keys(registros).length,
-      totalIgnorados: ignorados.length,
-      totalErros: erros.length,
-      ignorados,
-      erros
-    }, null, 2)}\n`,
-    "utf8"
-  );
-
   console.log(`Créditos sincronizados: ${Object.keys(registros).length}/${arquivos.length}`);
 }
 
