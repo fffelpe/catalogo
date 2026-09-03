@@ -16,10 +16,7 @@
   <header class="site-header">
     <a href="../index.html" class="logo" aria-label="Catálogo de Mídias - Início">
       <img src="../images/logo.png" alt="Logo TV Cultura" class="logo-icon">
-      <span class="logo-text">
-        <span class="titulo">CATÁLOGO DE MÍDIAS</span>
-        <span class="subtitulo">JORNALISMO</span>
-      </span>
+      <span class="logo-text"><span class="titulo">CATÁLOGO DE MÍDIAS</span><span class="subtitulo">JORNALISMO</span></span>
     </a>
   </header>
 
@@ -30,7 +27,7 @@
         <input type="search" id="searchInput" placeholder="Refinar busca por assunto, local, repórter ou ID..." class="form-control me-2 rounded-pill" autocomplete="off" aria-label="Refinar busca">
         <button class="btn btn-outline-success rounded-pill" type="submit">Buscar</button>
       </form>
-      <p class="busca-inteligente-aviso">A busca considera correspondências exatas, sinônimos jornalísticos, termos relacionados e metadados de créditos, ordenando os resultados por relevância.</p>
+      <p class="busca-inteligente-aviso">A busca considera correspondências exatas, parciais, sinônimos jornalísticos, termos relacionados e metadados de créditos, ordenando os resultados por relevância.</p>
     </section>
 
     <section id="historicoBusca" class="historico-busca" aria-label="Pesquisas recentes" hidden>
@@ -46,24 +43,12 @@
     </div>
 
     <div class="resultados-cabecalho area-resultados" hidden>
-      <h2 class="page-title">Resultados</h2>
-      <p id="statusBusca" class="status-busca"></p>
+      <h2 class="page-title">Resultados</h2><p id="statusBusca" class="status-busca"></p>
     </div>
 
     <div class="table-wrap area-resultados" hidden>
       <table class="results-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>DESCRIÇÃO</th>
-            <th>DATA</th>
-            <th>LOCAL</th>
-            <th>REPÓRTER</th>
-            <th>AFILIADA / EMISSORA</th>
-            <th>PROGRAMA</th>
-            <th>EDITORIA</th>
-          </tr>
-        </thead>
+        <thead><tr><th>ID</th><th>DESCRIÇÃO</th><th>DATA</th><th>LOCAL</th><th>REPÓRTER</th><th>AFILIADA / EMISSORA</th><th>PROGRAMA</th><th>EDITORIA</th></tr></thead>
         <tbody id="resultsBody"></tbody>
       </table>
     </div>
@@ -73,9 +58,9 @@
     </div>
   </main>
 
-  <script src="../js/dados.js"></script>
+  <script src="../js/dados.js?v=3"></script>
   <script src="../js/sinonimos.js"></script>
-  <script src="../js/search-engine.js?v=2"></script>
+  <script src="../js/search-engine.js?v=3"></script>
   <script src="../js/historico-busca.js"></script>
   <script src="../js/buscas-populares.js"></script>
   <script src="../js/autocomplete.js"></script>
