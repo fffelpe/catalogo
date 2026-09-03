@@ -14,8 +14,27 @@ const DadosMedia = {
         header: true,
         skipEmptyLines: true,
         complete: (results) => {
+          const erros = Array.isArray(results.errors) ? results.errors : [];
+          const errosRelevantes = erros.filter((erro) => erro?.code !== "TooFewFields" || erro?.row !== undefined);
+
+          if (errosRelevantes.length) {
+            console.error("Erros detectados ao interpretar o CSV:", errosRelevantes);
+            reject(new Error(`A planilha contém ${errosRelevantes.length} erro(s) de estrutura no CSV.`));
+            return;
+          }
+
+          const campos = Array.isArray(results.meta?.fields) ? results.meta.fields : [];
+          const obrigatorios = ["ID", "DATA", "PROGRAMA"];
+          const camposNormalizados = campos.map((campo) => String(campo || "").trim().toUpperCase());
+          const ausentes = obrigatorios.filter((campo) => !camposNormalizados.includes(campo));
+          if (ausentes.length) {
+            reject(new Error(`Colunas obrigatórias ausentes na planilha: ${ausentes.join(", ")}.`));
+            return;
+          }
+
           this.registros = results.data
             .map(this._normalizar)
+            .filter((registro) => registro.ID)
             .sort(this._compararPorDataDesc);
           this.carregado = true;
           resolve(this.registros);
@@ -30,8 +49,8 @@ const DadosMedia = {
 
   _normalizar(item) {
     const mapa = {};
-    Object.keys(item).forEach((chaveOriginal) => {
-      const chave = chaveOriginal.trim().toUpperCase();
+    Object.keys(item || {}).forEach((chaveOriginal) => {
+      const chave = String(chaveOriginal || "").trim().toUpperCase();
       mapa[chave] = (item[chaveOriginal] || "").toString().trim();
     });
 
@@ -50,27 +69,40 @@ const DadosMedia = {
     };
   },
 
+  _criarDataValida(ano, mes, dia) {
+    const y = Number(ano);
+    const m = Number(mes);
+    const d = Number(dia);
+    if (!Number.isInteger(y) || !Number.isInteger(m) || !Number.isInteger(d)) return null;
+    if (m < 1 || m > 12 || d < 1 || d > 31) return null;
+
+    const data = new Date(y, m - 1, d);
+    if (
+      data.getFullYear() !== y ||
+      data.getMonth() !== m - 1 ||
+      data.getDate() !== d
+    ) return null;
+    return data;
+  },
+
   _parseData(dataStr) {
     if (!dataStr) return null;
-    const str = dataStr.trim();
+    const str = String(dataStr).trim();
 
-    let m = str.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})/);
+    let m = str.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})(?:\D|$)/);
     if (m) {
       let [, d, mo, y] = m;
       if (y.length === 2) y = (Number(y) < 50 ? "20" : "19") + y;
-      const date = new Date(Number(y), Number(mo) - 1, Number(d));
-      if (!isNaN(date.getTime())) return date;
+      return this._criarDataValida(y, mo, d);
     }
 
-    m = str.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+    m = str.match(/^(\d{4})-(\d{1,2})-(\d{1,2})(?:\D|$)/);
     if (m) {
       const [, y, mo, d] = m;
-      const date = new Date(Number(y), Number(mo) - 1, Number(d));
-      if (!isNaN(date.getTime())) return date;
+      return this._criarDataValida(y, mo, d);
     }
 
-    const fallback = new Date(str);
-    return isNaN(fallback.getTime()) ? null : fallback;
+    return null;
   },
 
   _compararPorDataDesc(a, b) {
@@ -83,26 +115,31 @@ const DadosMedia = {
   },
 
   buscar(termo) {
+    if (typeof SearchEngine !== "undefined") {
+      return SearchEngine.pesquisar(this.registros, termo || "");
+    }
     if (!termo) return this.registros;
-    const q = termo.toLowerCase();
+    const q = String(termo).toLocaleLowerCase("pt-BR");
     return this.registros.filter((r) =>
-      Object.values(r).some((v) => v.toLowerCase().includes(q))
+      Object.values(r).some((v) => String(v || "").toLocaleLowerCase("pt-BR").includes(q))
     );
   },
 
   buscarPorPrograma(programaNome, termo) {
-    let base = this.registros;
-
-    if (programaNome) {
-      const p = decodeURIComponent(programaNome).toLowerCase().trim();
-      base = base.filter((r) => r.PROGRAMA.toLowerCase().includes(p));
+    if (typeof SearchEngine !== "undefined") {
+      return SearchEngine.pesquisar(this.registros, termo || "", { programa: programaNome || "" });
     }
 
+    let base = this.registros;
+    if (programaNome) {
+      const p = decodeURIComponent(programaNome).toLocaleLowerCase("pt-BR").trim();
+      base = base.filter((r) => String(r.PROGRAMA || "").toLocaleLowerCase("pt-BR").includes(p));
+    }
     if (!termo) return base;
 
-    const q = termo.toLowerCase();
+    const q = String(termo).toLocaleLowerCase("pt-BR");
     return base.filter((r) =>
-      Object.values(r).some((v) => v.toLowerCase().includes(q))
+      Object.values(r).some((v) => String(v || "").toLocaleLowerCase("pt-BR").includes(q))
     );
   }
 };
