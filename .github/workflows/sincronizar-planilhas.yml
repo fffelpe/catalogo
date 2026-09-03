@@ -11,6 +11,7 @@ on:
       - main
     paths:
       - "scripts/gerar-acervo-agrocultura.mjs"
+      - "scripts/sincronizar-planilhas.mjs"
       - "scripts/sincronizar-noticias-agrocultura.mjs"
       - "package.json"
       - ".github/workflows/sincronizar-planilhas.yml"
@@ -38,25 +39,29 @@ jobs:
       - name: Instalar dependências
         run: npm install --no-audit --no-fund
 
+      # Gera o JSON primeiro, mas só o publica se toda a sincronização das
+      # planilhas terminar com sucesso. Isso evita publicar um painel novo
+      # quando a atualização da planilha imgs falhou no mesmo workflow.
       - name: Gerar acervo estruturado do AgroCultura
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:agrocultura
 
-      - name: Publicar acervo do AgroCultura
-        run: |
-          if [ -z "$(git status --porcelain -- data/agrocultura-acervo.json)" ]; then
-            echo "Nenhuma alteração no acervo do AgroCultura."
-          else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/agrocultura-acervo.json
-            git commit -m "chore: atualiza acervo do AgroCultura"
-            git pull --rebase origin main
-            git push
-          fi
-
       - name: Sincronizar planilhas
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:planilhas
+
+      - name: Publicar acervo do AgroCultura
+        run: |
+          if [ -z "$(git status --porcelain -- data/agrocultura-acervo.json)" ]; then
+            echo "Nenhuma alteração no acervo do AgroCultura."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/agrocultura-acervo.json
+          git commit -m "chore: atualiza acervo do AgroCultura"
+          git pull --rebase origin main
+          git push
