@@ -1,0 +1,36 @@
+/* MEDIA IDs: cada ID possui seu próprio botão de copiar. */
+.id-cell-content {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.id-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.id-item {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.id-text {
+  display: inline-block;
+  min-width: 0;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.id-item .btn-copiar-id {
+  margin: 0;
+  flex: 0 0 28px;
+}
