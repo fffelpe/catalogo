@@ -1,5 +1,5 @@
 export const MEDIA_ID_EXATO_RE = /^\d{4}[A-Z]\d{5,6}$/i;
-const MEDIA_ID_GLOBAL_RE = /\d{4}[A-Z]\d{5,6}/gi;
+const MEDIA_ID_GLOBAL_RE = /(?<![A-Z0-9])\d{4}[A-Z]\d{5,6}(?![A-Z0-9])/gi;
 
 export function normalizarMediaId(valor) {
   const limpo = String(valor ?? "")
