@@ -154,6 +154,23 @@ async function extrairTexto(arquivo) {
   return "";
 }
 
+async function carregarRegistrosAnteriores() {
+  try {
+    return JSON.parse(await fs.readFile(SAIDA, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+function escolherMaisRecente(arquivos) {
+  return [...arquivos].sort((a, b) => {
+    const ta = Date.parse(a.modifiedTime || "") || 0;
+    const tb = Date.parse(b.modifiedTime || "") || 0;
+    if (tb !== ta) return tb - ta;
+    return String(a.name || "").localeCompare(String(b.name || ""), "pt-BR");
+  })[0];
+}
+
 async function escreverStatus(dados) {
   await fs.mkdir(path.dirname(STATUS), { recursive: true });
   await fs.writeFile(STATUS, `${JSON.stringify(dados, null, 2)}\n`, "utf8");
@@ -161,29 +178,45 @@ async function escreverStatus(dados) {
 
 async function main() {
   const arquivos = await listarArquivos();
+  const anteriores = await carregarRegistrosAnteriores();
   const registros = {};
-  const arquivoPorId = new Map();
   const ignorados = [];
   const erros = [];
   const duplicados = [];
+  const preservados = [];
 
+  const grupos = new Map();
   for (const arquivo of arquivos) {
     const id = normalizarId(arquivo.name);
     if (!id) {
       ignorados.push({ nome: arquivo.name, motivo: "nome não corresponde ao padrão de Media ID (0000B000000)" });
       continue;
     }
+    if (!grupos.has(id)) grupos.set(id, []);
+    grupos.get(id).push(arquivo);
+  }
 
-    if (arquivoPorId.has(id)) {
-      duplicados.push({ id, arquivos: [arquivoPorId.get(id), arquivo.name] });
-      continue;
+  for (const [id, candidatos] of grupos.entries()) {
+    const arquivo = escolherMaisRecente(candidatos);
+
+    if (candidatos.length > 1) {
+      duplicados.push({
+        id,
+        escolhido: arquivo.name,
+        criterio: "arquivo com modifiedTime mais recente",
+        arquivos: candidatos.map((item) => ({ nome: item.name, atualizadoEm: item.modifiedTime || "" }))
+      });
     }
-    arquivoPorId.set(id, arquivo.name);
 
     try {
       const texto = await extrairTexto(arquivo);
       if (!texto.trim()) {
-        ignorados.push({ nome: arquivo.name, motivo: `formato sem extração de texto (${arquivo.mimeType})` });
+        if (anteriores[id]) {
+          registros[id] = anteriores[id];
+          preservados.push({ id, nome: arquivo.name, motivo: `sem texto extraível (${arquivo.mimeType})` });
+        } else {
+          ignorados.push({ nome: arquivo.name, motivo: `formato sem extração de texto (${arquivo.mimeType})` });
+        }
         continue;
       }
 
@@ -201,36 +234,42 @@ async function main() {
     } catch (erro) {
       erros.push({ nome: arquivo.name, id, erro: erro.message });
       console.error(`Erro em ${arquivo.name}:`, erro.message);
+
+      if (anteriores[id]) {
+        registros[id] = anteriores[id];
+        preservados.push({ id, nome: arquivo.name, motivo: `erro de leitura; crédito anterior preservado: ${erro.message}` });
+      }
     }
   }
+
+  if (!Object.keys(registros).length) {
+    throw new Error("Nenhum crédito válido foi extraído e não havia registros anteriores para preservar.");
+  }
+
+  await fs.mkdir(path.dirname(SAIDA), { recursive: true });
+  await fs.writeFile(SAIDA, `${JSON.stringify(registros, null, 2)}\n`, "utf8");
 
   const status = {
     sincronizadoEm: new Date().toISOString(),
     pastaDrive: PASTA_CREDITOS_ID,
     totalArquivos: arquivos.length,
+    totalIdsDetectados: grupos.size,
     totalSincronizados: Object.keys(registros).length,
     totalIgnorados: ignorados.length,
     totalErros: erros.length,
     totalDuplicados: duplicados.length,
+    totalPreservados: preservados.length,
     ignorados,
     duplicados,
+    preservados,
     erros
   };
   await escreverStatus(status);
 
-  if (duplicados.length) {
-    throw new Error(`Há ${duplicados.length} Media ID(s) com mais de um documento na pasta de créditos. O creditos.json foi preservado.`);
-  }
-  if (erros.length) {
-    throw new Error(`Falha ao processar ${erros.length} documento(s). O creditos.json foi preservado.`);
-  }
-  if (!Object.keys(registros).length) {
-    throw new Error("Nenhum crédito válido foi extraído; o JSON existente foi preservado.");
-  }
-
-  await fs.mkdir(path.dirname(SAIDA), { recursive: true });
-  await fs.writeFile(SAIDA, `${JSON.stringify(registros, null, 2)}\n`, "utf8");
-  console.log(`Créditos sincronizados: ${Object.keys(registros).length}/${arquivos.length}`);
+  console.log(`Créditos disponíveis: ${Object.keys(registros).length}/${grupos.size} Media IDs.`);
+  if (duplicados.length) console.warn(`Duplicidades resolvidas pela versão mais recente: ${duplicados.length}.`);
+  if (preservados.length) console.warn(`Créditos anteriores preservados por falha individual: ${preservados.length}.`);
+  if (erros.length) console.warn(`Arquivos com erro individual de leitura: ${erros.length}.`);
 }
 
 main().catch((erro) => {
