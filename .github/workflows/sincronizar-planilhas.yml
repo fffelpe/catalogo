@@ -10,6 +10,7 @@ on:
     branches:
       - main
     paths:
+      - "scripts/media-id.mjs"
       - "scripts/gerar-acervo-agrocultura.mjs"
       - "scripts/sincronizar-planilhas.mjs"
       - "scripts/sincronizar-noticias-agrocultura.mjs"
@@ -39,9 +40,6 @@ jobs:
       - name: Instalar dependências
         run: npm install --no-audit --no-fund
 
-      # Gera o JSON primeiro, mas só o publica se toda a sincronização das
-      # planilhas terminar com sucesso. Isso evita publicar um painel novo
-      # quando a atualização da planilha imgs falhou no mesmo workflow.
       - name: Gerar acervo estruturado do AgroCultura
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
