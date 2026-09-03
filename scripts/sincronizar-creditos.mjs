@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import { google } from "googleapis";
+import mammoth from "mammoth";
 import pdfParse from "pdf-parse";
 
 const PASTA_CREDITOS_ID = process.env.DRIVE_CREDITOS_FOLDER_ID || "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik";
@@ -30,8 +31,10 @@ const drive = google.drive({ version: "v3", auth });
 function normalizarId(nome) {
   const id = String(nome || "")
     .replace(/\.[^.]+$/, "")
+    .replace(/\s+/g, "")
     .trim()
     .toUpperCase();
+
   return /^[A-Z0-9]{8,20}$/.test(id) ? id : "";
 }
 
@@ -119,6 +122,7 @@ function interpretarTexto(texto) {
 async function listarArquivos() {
   const arquivos = [];
   let pageToken;
+
   do {
     const resposta = await drive.files.list({
       q: `'${PASTA_CREDITOS_ID}' in parents and trashed = false`,
@@ -126,10 +130,21 @@ async function listarArquivos() {
       pageSize: 1000,
       pageToken
     });
+
     arquivos.push(...(resposta.data.files || []));
     pageToken = resposta.data.nextPageToken || undefined;
   } while (pageToken);
+
   return arquivos;
+}
+
+async function baixarArquivo(arquivo) {
+  const resposta = await drive.files.get(
+    { fileId: arquivo.id, alt: "media" },
+    { responseType: "arraybuffer" }
+  );
+
+  return Buffer.from(resposta.data);
 }
 
 async function extrairTexto(arquivo) {
@@ -138,16 +153,20 @@ async function extrairTexto(arquivo) {
       { fileId: arquivo.id, mimeType: "text/plain" },
       { responseType: "arraybuffer" }
     );
+
     return Buffer.from(resposta.data).toString("utf8");
   }
 
   if (arquivo.mimeType === "application/pdf") {
-    const resposta = await drive.files.get(
-      { fileId: arquivo.id, alt: "media" },
-      { responseType: "arraybuffer" }
-    );
-    const resultado = await pdfParse(Buffer.from(resposta.data));
+    const buffer = await baixarArquivo(arquivo);
+    const resultado = await pdfParse(buffer);
     return resultado.text || "";
+  }
+
+  if (arquivo.mimeType === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+    const buffer = await baixarArquivo(arquivo);
+    const resultado = await mammoth.extractRawText({ buffer });
+    return resultado.value || "";
   }
 
   return "";
@@ -161,6 +180,7 @@ async function main() {
 
   for (const arquivo of arquivos) {
     const id = normalizarId(arquivo.name);
+
     if (!id) {
       ignorados.push({ nome: arquivo.name, motivo: "nome não corresponde a um Media ID" });
       continue;
@@ -168,6 +188,7 @@ async function main() {
 
     try {
       const texto = await extrairTexto(arquivo);
+
       if (!texto.trim()) {
         ignorados.push({ nome: arquivo.name, motivo: `formato sem extração de texto (${arquivo.mimeType})` });
         continue;
