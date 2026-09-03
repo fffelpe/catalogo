@@ -1,5 +1,5 @@
 {
-  "sincronizadoEm": "2026-09-03T20:18:48.662Z",
+  "sincronizadoEm": "2026-09-03T21:56:10.344Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
   "totalArquivos": 164,
   "totalIdsDetectados": 136,
@@ -13,7 +13,7 @@
     {
       "id": "1452B005181",
       "escolhido": "1452B005181",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005181",
@@ -28,7 +28,7 @@
     {
       "id": "1452B005086",
       "escolhido": "1452B005086",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005086",
@@ -43,7 +43,7 @@
     {
       "id": "1452B005185",
       "escolhido": "1452B005185",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005185",
@@ -58,7 +58,7 @@
     {
       "id": "1452B005084",
       "escolhido": "1452B005084",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005084",
@@ -73,7 +73,7 @@
     {
       "id": "1452B005085",
       "escolhido": "1452B005085",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005085",
@@ -88,7 +88,7 @@
     {
       "id": "1452B005087",
       "escolhido": "1452B005087",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005087",
@@ -103,7 +103,7 @@
     {
       "id": "1452B005160",
       "escolhido": "1452B005160",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005160",
@@ -118,7 +118,7 @@
     {
       "id": "1452B005150",
       "escolhido": "1452B005150",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005150",
@@ -133,7 +133,7 @@
     {
       "id": "1452B005089",
       "escolhido": "1452B005089",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005089",
@@ -148,7 +148,7 @@
     {
       "id": "1452B005092",
       "escolhido": "1452B005092",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005092",
@@ -163,7 +163,7 @@
     {
       "id": "1452B005088",
       "escolhido": "1452B005088",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005088",
@@ -178,7 +178,7 @@
     {
       "id": "1452B005138",
       "escolhido": "1452B005138",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005138",
@@ -197,7 +197,7 @@
     {
       "id": "1452B005157",
       "escolhido": "1452B005157",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005157",
@@ -212,7 +212,7 @@
     {
       "id": "1452B005177",
       "escolhido": "1452B005177",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005177",
@@ -227,7 +227,7 @@
     {
       "id": "1452B005184",
       "escolhido": "1452B005184",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005184",
@@ -242,7 +242,7 @@
     {
       "id": "1452B005211",
       "escolhido": "1452B005211",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005211",
@@ -257,7 +257,7 @@
     {
       "id": "1452B005209",
       "escolhido": "1452B005209",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005209",
@@ -272,7 +272,7 @@
     {
       "id": "1452B005208",
       "escolhido": "1452B005208",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005208",
@@ -287,7 +287,7 @@
     {
       "id": "1452B005210",
       "escolhido": "1452B005210",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005210",
@@ -302,7 +302,7 @@
     {
       "id": "1452B005213",
       "escolhido": "1452B005213",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005213",
@@ -321,7 +321,7 @@
     {
       "id": "1452B005186",
       "escolhido": "1452B005186",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005186",
@@ -336,7 +336,7 @@
     {
       "id": "1452B004841",
       "escolhido": "1452B004841",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B004841",
@@ -351,7 +351,7 @@
     {
       "id": "1452B005447",
       "escolhido": "1452B005447",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005447",
@@ -366,7 +366,7 @@
     {
       "id": "1452B005296",
       "escolhido": "1452B005296",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005296",
@@ -381,7 +381,7 @@
     {
       "id": "1452B005308",
       "escolhido": "1452B005308",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005308",
@@ -396,7 +396,7 @@
     {
       "id": "1452B005353",
       "escolhido": "1452B005353",
-      "criterio": "arquivo com modifiedTime mais recente",
+      "criterio": "primeiro arquivo legível, do mais recente para o mais antigo",
       "arquivos": [
         {
           "nome": "1452B005353",
@@ -412,14 +412,13 @@
   "preservados": [
     {
       "id": "1452B005096",
-      "nome": "1452B005096",
-      "motivo": "erro de leitura; crédito anterior preservado: bad XRef entry"
+      "motivo": "todos os documentos atuais falharam; crédito anterior preservado"
     }
   ],
   "erros": [
     {
-      "nome": "1452B005096",
       "id": "1452B005096",
+      "nome": "1452B005096",
       "erro": "bad XRef entry"
     }
   ]
