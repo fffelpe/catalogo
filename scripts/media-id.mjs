@@ -1,4 +1,4 @@
-const MEDIA_ID_EXATO_RE = /^\d{4}[A-Z]\d{5,6}$/i;
+export const MEDIA_ID_EXATO_RE = /^\d{4}[A-Z]\d{5,6}$/i;
 const MEDIA_ID_NO_TEXTO_RE = /(?:^|[^A-Z0-9])(\d{4}[A-Z]\d{5,6})(?=$|[^0-9])/gi;
 
 export function normalizarMediaId(valor) {
@@ -47,5 +47,3 @@ export function validarConteudoMediaIds(valor) {
 
   return { ids, valido: !restante, restante };
 }
-
-export const MEDIA_ID_EXATO_RE = MEDIA_ID_EXATO_RE;
