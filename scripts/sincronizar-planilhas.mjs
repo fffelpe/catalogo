@@ -1,82 +1,35 @@
 import process from "node:process";
 import { google } from "googleapis";
 
-// ========================================================
-// CONFIGURAÇÃO
-// ========================================================
-
-const PLANILHA_IMGS_ID =
-  "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
+const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
+const NOME_ABA_IMGS = "imgs";
+const RANGE_IMGS = `${NOME_ABA_IMGS}!A2:H`;
+const MEDIA_ID_RE = /^\d{4}B\d{6}$/i;
 
 const FONTES = [
-  {
-    nome: "Agrocultura",
-    spreadsheetId:
-      "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To",
-    range: "fonte_agrocultura!A2:H",
-  },
-
-  {
-    nome: "Repórter Eco",
-    spreadsheetId:
-      "18svdvx85wPpKOhkBlFPr0zRATZ4AFu2TdEO4y4WgkWc",
-    range: "fonte_reporter_eco!A2:H",
-  },
-
-  {
-    nome: "Jornal da Cultura",
-    spreadsheetId:
-      "1dDqdYeslxm0CE_gZkC3nH7sNmUfh4JQry981VSYXmuk",
-    range: "fonte_jc!A2:H",
-  },
+  { nome: "Agrocultura", spreadsheetId: "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To", range: "fonte_agrocultura!A2:H" },
+  { nome: "Repórter Eco", spreadsheetId: "18svdvx85wPpKOhkBlFPr0zRATZ4AFu2TdEO4y4WgkWc", range: "fonte_reporter_eco!A2:H" },
+  { nome: "Jornal da Cultura", spreadsheetId: "1dDqdYeslxm0CE_gZkC3nH7sNmUfh4JQry981VSYXmuk", range: "fonte_jc!A2:H" },
 ];
 
-const RANGE_IMGS = "imgs!A2:H";
-
-// ========================================================
-// AUTENTICAÇÃO
-// ========================================================
-
-const credenciaisJson =
-  process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
-
-if (!credenciaisJson) {
-  throw new Error(
-    "Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado."
-  );
-}
+const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+if (!credenciaisJson) throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
 
 let credentials;
-
 try {
   credentials = JSON.parse(credenciaisJson);
 } catch {
-  throw new Error(
-    "GOOGLE_SERVICE_ACCOUNT_JSON não contém JSON válido."
-  );
+  throw new Error("GOOGLE_SERVICE_ACCOUNT_JSON não contém JSON válido.");
 }
 
 const auth = new google.auth.GoogleAuth({
   credentials,
-  scopes: [
-    "https://www.googleapis.com/auth/spreadsheets",
-  ],
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
-
-const sheets = google.sheets({
-  version: "v4",
-  auth,
-});
-
-// ========================================================
-// NORMALIZAÇÃO
-// ========================================================
+const sheets = google.sheets({ version: "v4", auth });
 
 function limparTexto(valor) {
-  if (valor === null || valor === undefined) {
-    return "";
-  }
-
+  if (valor === null || valor === undefined) return "";
   return String(valor)
     .replace(/\u00A0/g, " ")
     .replace(/[\u200B-\u200D\uFEFF]/g, "")
@@ -85,252 +38,227 @@ function limparTexto(valor) {
 }
 
 function normalizarId(valor) {
-  return limparTexto(valor).toUpperCase();
+  return limparTexto(valor).replace(/\s+/g, "").toUpperCase();
 }
 
-function normalizarLinha(linha = []) {
-  return Array.from(
-    { length: 8 },
-    (_, indice) => limparTexto(linha[indice])
-  );
+function separarIds(valor) {
+  return String(valor || "")
+    .split(/[\r\n,;]+/)
+    .map(normalizarId)
+    .filter(Boolean);
 }
 
-// ========================================================
-// LEITURA
-// ========================================================
-
-async function carregarFonte(fonte) {
-  const resposta =
-    await sheets.spreadsheets.values.get({
-      spreadsheetId: fonte.spreadsheetId,
-      range: fonte.range,
-    });
-
-  const linhas = resposta.data.values || [];
-
-  console.log(
-    `${fonte.nome}: ${linhas.length} linhas encontradas`
-  );
-
-  return linhas
-    .map(normalizarLinha)
-    .filter((linha) => normalizarId(linha[0]));
+function normalizarCampoIds(valor, contexto) {
+  const ids = [...new Set(separarIds(valor))];
+  const invalidos = ids.filter((id) => !MEDIA_ID_RE.test(id));
+  if (invalidos.length) {
+    throw new Error(`${contexto}: Media ID inválido: ${invalidos.join(", ")}`);
+  }
+  return ids.join("\n");
 }
 
-async function carregarImgs() {
-  const resposta =
-    await sheets.spreadsheets.values.get({
-      spreadsheetId: PLANILHA_IMGS_ID,
-      range: RANGE_IMGS,
-    });
-
-  return (resposta.data.values || [])
-    .map(normalizarLinha);
-}
-
-// ========================================================
-// MESCLAGEM
-// ========================================================
-
-function mesclarRegistro(atual, fonte) {
-  const resultado = [...atual];
-
-  // ID
-  resultado[0] = normalizarId(
-    atual[0] || fonte[0]
-  );
-
-  // DESCRIÇÃO
-  if (fonte[1]) {
-    resultado[1] = fonte[1];
-  }
-
-  // DATA
-  if (fonte[2]) {
-    resultado[2] = fonte[2];
-  }
-
-  // LOCAL
-  if (fonte[3]) {
-    resultado[3] = fonte[3];
-  }
-
-  // REPÓRTER
-  if (fonte[4]) {
-    resultado[4] = fonte[4];
-  }
-
-  // EMISSORA
-  if (fonte[5]) {
-    resultado[5] = fonte[5];
-  }
-
-  // PROGRAMA
-  if (fonte[6]) {
-    resultado[6] = fonte[6];
-  }
-
-  // EDITORIA
-  if (fonte[7]) {
-    resultado[7] = fonte[7];
-  }
-
+function normalizarLinha(linha = [], contexto = "registro") {
+  const resultado = Array.from({ length: 8 }, (_, indice) => limparTexto(linha[indice]));
+  if (resultado[0]) resultado[0] = normalizarCampoIds(resultado[0], contexto);
   return resultado;
 }
 
-// ========================================================
-// SINCRONIZAÇÃO
-// ========================================================
+async function carregarFonte(fonte) {
+  const resposta = await sheets.spreadsheets.values.get({
+    spreadsheetId: fonte.spreadsheetId,
+    range: fonte.range,
+  });
+  const linhas = resposta.data.values || [];
+  console.log(`${fonte.nome}: ${linhas.length} linhas encontradas`);
+  return linhas
+    .map((linha, indice) => normalizarLinha(linha, `${fonte.nome}, linha ${indice + 2}`))
+    .filter((linha) => separarIds(linha[0]).length);
+}
+
+async function carregarImgs() {
+  const resposta = await sheets.spreadsheets.values.get({
+    spreadsheetId: PLANILHA_IMGS_ID,
+    range: RANGE_IMGS,
+  });
+  return (resposta.data.values || []).map((linha, indice) =>
+    normalizarLinha(linha, `imgs, linha ${indice + 2}`)
+  );
+}
+
+async function obterSheetIdImgs() {
+  const resposta = await sheets.spreadsheets.get({
+    spreadsheetId: PLANILHA_IMGS_ID,
+    fields: "sheets(properties(sheetId,title))",
+  });
+  const aba = (resposta.data.sheets || []).find((item) => item.properties?.title === NOME_ABA_IMGS);
+  if (!aba?.properties?.sheetId && aba?.properties?.sheetId !== 0) {
+    throw new Error(`Aba ${NOME_ABA_IMGS} não encontrada.`);
+  }
+  return aba.properties.sheetId;
+}
+
+async function removerDuplicatasExatas(imgs) {
+  const primeiraLinhaPorChave = new Map();
+  const linhasParaExcluir = [];
+  const idsVistos = new Map();
+  const conflitos = [];
+
+  imgs.forEach((linha, indice) => {
+    const numeroLinha = indice + 2;
+    const ids = separarIds(linha[0]);
+    if (!ids.length) return;
+
+    const chave = ids.slice().sort().join("|");
+    if (primeiraLinhaPorChave.has(chave)) {
+      linhasParaExcluir.push(numeroLinha);
+      return;
+    }
+    primeiraLinhaPorChave.set(chave, numeroLinha);
+
+    ids.forEach((id) => {
+      if (idsVistos.has(id)) {
+        conflitos.push(`${id} nas linhas ${idsVistos.get(id)} e ${numeroLinha}`);
+      } else {
+        idsVistos.set(id, numeroLinha);
+      }
+    });
+  });
+
+  if (conflitos.length) {
+    throw new Error(
+      `Há Media IDs repetidos em células diferentes e a remoção automática seria ambígua: ${conflitos.join("; ")}`
+    );
+  }
+
+  if (!linhasParaExcluir.length) return 0;
+
+  const sheetId = await obterSheetIdImgs();
+  const requests = linhasParaExcluir
+    .sort((a, b) => b - a)
+    .map((numeroLinha) => ({
+      deleteDimension: {
+        range: {
+          sheetId,
+          dimension: "ROWS",
+          startIndex: numeroLinha - 1,
+          endIndex: numeroLinha,
+        },
+      },
+    }));
+
+  await sheets.spreadsheets.batchUpdate({
+    spreadsheetId: PLANILHA_IMGS_ID,
+    requestBody: { requests },
+  });
+
+  console.log(`Duplicatas exatas removidas: ${linhasParaExcluir.length}`);
+  return linhasParaExcluir.length;
+}
+
+function mesclarRegistro(atual, fonte) {
+  const resultado = [...atual];
+  resultado[0] = atual[0] || fonte[0];
+  for (let indice = 1; indice < 8; indice++) {
+    if (fonte[indice]) resultado[indice] = fonte[indice];
+  }
+  return resultado;
+}
+
+function registrarIdsNoMapa(mapa, registro) {
+  separarIds(registro.dados[0]).forEach((id) => mapa.set(id, registro));
+}
 
 async function main() {
   console.log("Iniciando sincronização...");
 
-  const imgs = await carregarImgs();
+  let imgs = await carregarImgs();
+  const removidas = await removerDuplicatasExatas(imgs);
+  if (removidas) imgs = await carregarImgs();
 
-  const mapa = new Map();
-
-  // -----------------------------------
-  // Dados existentes
-  // -----------------------------------
-
+  const existentesPorId = new Map();
   imgs.forEach((linha, indice) => {
-    const id = normalizarId(linha[0]);
-
-    if (!id) {
-      return;
-    }
-
-    if (!mapa.has(id)) {
-      mapa.set(id, {
-        linhaPlanilha: indice + 2,
-        dados: linha,
-      });
-    }
+    if (!separarIds(linha[0]).length) return;
+    registrarIdsNoMapa(existentesPorId, {
+      tipo: "existente",
+      linhaPlanilha: indice + 2,
+      dados: linha,
+    });
   });
 
+  const pendentesPorId = new Map();
+  const pendentes = [];
+  const atualizacoesPorLinha = new Map();
   let atualizados = 0;
-  let novos = 0;
-
-  const atualizacoes = [];
-  const novasLinhas = [];
-
-  // -----------------------------------
-  // Processar fontes
-  // -----------------------------------
 
   for (const fonte of FONTES) {
-    const registros =
-      await carregarFonte(fonte);
+    const registros = await carregarFonte(fonte);
 
     for (const registro of registros) {
-      const id = normalizarId(registro[0]);
+      const ids = separarIds(registro[0]);
+      const encontrados = ids
+        .map((id) => existentesPorId.get(id) || pendentesPorId.get(id))
+        .filter(Boolean);
+      const unicos = [...new Set(encontrados)];
 
-      if (!id) {
-        continue;
+      if (unicos.length > 1) {
+        throw new Error(`${fonte.nome}: os IDs ${ids.join(", ")} apontam para registros diferentes; sincronização interrompida para evitar mesclagem incorreta.`);
       }
 
-      const existente = mapa.get(id);
-
-      // ===================================
-      // ID EXISTE
-      // ===================================
-
-      if (existente) {
-        const dadosNovos =
-          mesclarRegistro(
-            existente.dados,
-            registro
-          );
-
-        const mudou =
-          JSON.stringify(dadosNovos) !==
-          JSON.stringify(existente.dados);
-
-        if (mudou) {
-          atualizacoes.push({
-            range:
-              `imgs!A${existente.linhaPlanilha}:H${existente.linhaPlanilha}`,
-            values: [dadosNovos],
-          });
-
-          existente.dados = dadosNovos;
-
-          atualizados++;
+      const alvo = unicos[0];
+      if (alvo) {
+        const dadosNovos = mesclarRegistro(alvo.dados, registro);
+        if (JSON.stringify(dadosNovos) !== JSON.stringify(alvo.dados)) {
+          alvo.dados = dadosNovos;
+          if (alvo.tipo === "existente") {
+            atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
+            atualizados++;
+          }
         }
-
+        ids.forEach((id) => {
+          if (alvo.tipo === "existente") existentesPorId.set(id, alvo);
+          else pendentesPorId.set(id, alvo);
+        });
         continue;
       }
 
-      // ===================================
-      // ID NOVO
-      // ===================================
-
-      const novaLinha =
-        normalizarLinha(registro);
-
-      novasLinhas.push(novaLinha);
-
-      mapa.set(id, {
-        linhaPlanilha: null,
-        dados: novaLinha,
-      });
-
-      novos++;
+      const pendente = { tipo: "pendente", dados: normalizarLinha(registro, fonte.nome) };
+      pendentes.push(pendente);
+      registrarIdsNoMapa(pendentesPorId, pendente);
     }
   }
 
-  // ========================================================
-  // ATUALIZAR REGISTROS EXISTENTES
-  // ========================================================
-
-  if (atualizacoes.length) {
+  if (atualizacoesPorLinha.size) {
     await sheets.spreadsheets.values.batchUpdate({
       spreadsheetId: PLANILHA_IMGS_ID,
-
       requestBody: {
         valueInputOption: "USER_ENTERED",
-        data: atualizacoes,
+        data: [...atualizacoesPorLinha.entries()].map(([linha, values]) => ({
+          range: `${NOME_ABA_IMGS}!A${linha}:H${linha}`,
+          values: [values],
+        })),
       },
     });
   }
 
-  // ========================================================
-  // ADICIONAR NOVOS IDs
-  // ========================================================
-
-  if (novasLinhas.length) {
+  if (pendentes.length) {
     await sheets.spreadsheets.values.append({
       spreadsheetId: PLANILHA_IMGS_ID,
-      range: "imgs!A:H",
-
+      range: `${NOME_ABA_IMGS}!A:H`,
       valueInputOption: "USER_ENTERED",
-
       insertDataOption: "INSERT_ROWS",
-
-      requestBody: {
-        values: novasLinhas,
-      },
+      requestBody: { values: pendentes.map((item) => item.dados) },
     });
   }
-
-  // ========================================================
-  // RESULTADO
-  // ========================================================
 
   console.log("");
   console.log("Sincronização finalizada.");
+  console.log(`Duplicatas exatas removidas: ${removidas}`);
   console.log(`Atualizados: ${atualizados}`);
-  console.log(`Novos: ${novos}`);
-  console.log(
-    `Total processado: ${mapa.size}`
-  );
+  console.log(`Novos: ${pendentes.length}`);
+  console.log(`Total de Media IDs existentes: ${existentesPorId.size + pendentesPorId.size}`);
 }
 
 main().catch((erro) => {
-  console.error(
-    "Erro na sincronização:",
-    erro
-  );
-
+  console.error("Erro na sincronização:", erro);
   process.exitCode = 1;
 });
