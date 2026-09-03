@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "googleapis": "^144.0.0",
+    "mammoth": "^1.9.1",
     "pdf-parse": "^1.1.1"
   }
 }
