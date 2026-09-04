@@ -66,6 +66,11 @@ function renderizarAfiliadaEmissora(valor) {
     return `<a class="link-afiliada" href="afiliada-tv-brasil-central.html">${escapeHtml(texto)}</a>`;
   }
 
+  const ehTveEs = /^TVE\s*(?:\/|-)?\s*ES$/.test(normalizado);
+  if (ehTveEs) {
+    return `<a class="link-afiliada" href="afiliada-tve-es.html">${escapeHtml(texto)}</a>`;
+  }
+
   return escapeHtml(texto);
 }
 
