@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <title>TVE Espírito Santo - Catálogo de Mídias</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css?v=7">
+  <link rel="stylesheet" href="../css/afiliada.css?v=3">
+  <link rel="stylesheet" href="../css/id-copy.css?v=1">
+  <link rel="stylesheet" href="../css/creditos.css?v=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="logo" aria-label="Catálogo de Mídias - Início">
+      <img src="../images/logo.png" alt="Logo TV Cultura" class="logo-icon">
+      <span class="logo-text">
+        <span class="titulo">CATÁLOGO DE MÍDIAS</span>
+        <span class="subtitulo">JORNALISMO</span>
+      </span>
+    </a>
+  </header>
+
+  <main class="pagina-afiliada">
+    <section class="afiliada-hero" aria-labelledby="afiliadaTitulo">
+      <div class="afiliada-logo-wrap">
+        <img src="../images/afiliadas/tve-es.jpg" alt="Logo TVE Espírito Santo" class="afiliada-logo">
+      </div>
+      <div class="afiliada-identidade">
+        <span class="eyebrow">Afiliada / Emissora</span>
+        <h1 id="afiliadaTitulo">TVE Espírito Santo</h1>
+        <p class="afiliada-localidade">Vitória, Espírito Santo - ES</p>
+      </div>
+    </section>
+
+    <section class="afiliada-resumo" aria-label="Resumo do acervo da TVE Espírito Santo">
+      <article class="afiliada-card"><span class="afiliada-card-label">IDs</span><strong id="afiliadaTotalIds">—</strong></article>
+      <article class="afiliada-card"><span class="afiliada-card-label">VT'S</span><strong id="afiliadaTotalVts">—</strong></article>
+      <article class="afiliada-card"><span class="afiliada-card-label">Notícias / stand-ups</span><strong id="afiliadaTotalNoticias">—</strong></article>
+      <article class="afiliada-card"><span class="afiliada-card-label">Repórteres</span><strong id="afiliadaTotalReporteres">—</strong></article>
+    </section>
+
+    <section class="afiliada-reporteres" aria-labelledby="reporteresTitulo">
+      <div class="afiliada-secao-topo">
+        <div>
+          <span class="eyebrow">Equipe identificada no catálogo</span>
+          <h2 id="reporteresTitulo">Repórteres</h2>
+        </div>
+        <p id="afiliadaStatus" class="afiliada-status" aria-live="polite">Carregando dados da afiliada...</p>
+      </div>
+      <div id="afiliadaReporteresLista" class="afiliada-reporteres-lista"></div>
+    </section>
+
+    <section class="afiliada-acervo" aria-labelledby="acervoTitulo">
+      <div class="afiliada-secao-topo">
+        <div>
+          <span class="eyebrow">Materiais vinculados à emissora</span>
+          <h2 id="acervoTitulo">Acervo da TVE Espírito Santo</h2>
+        </div>
+      </div>
+
+      <nav class="afiliada-filtros" aria-label="Filtrar materiais da afiliada">
+        <button type="button" class="afiliada-filtro ativo" data-filtro="todos">Todos</button>
+        <button type="button" class="afiliada-filtro" data-filtro="vt">VT'S</button>
+        <button type="button" class="afiliada-filtro" data-filtro="noticia">Notícias e stand-ups</button>
+      </nav>
+
+      <div class="afiliada-table-wrap">
+        <table class="afiliada-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>DESCRIÇÃO</th>
+              <th>REPÓRTER</th>
+              <th>DATA</th>
+              <th>LOCAL</th>
+              <th>EDITORIA</th>
+            </tr>
+          </thead>
+          <tbody id="afiliadaMateriaisBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/media-id.js?v=1"></script>
+  <script src="../js/dados.js?v=4"></script>
+  <script src="../js/creditos.js?v=4"></script>
+  <script src="../js/afiliada-tve-es.js?v=1"></script>
+  <script src="../js/creditos-ui.js?v=5"></script>
+</body>
+</html>
