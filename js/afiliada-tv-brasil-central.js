@@ -1,9 +1,5 @@
 (() => {
-  const ALIASES = [
-    "tv brasil central",
-    "tv brasil central / go",
-    "tv brasil central/go",
-  ];
+  const ALIASES = ["tv brasil central"];
 
   const normalizar = (valor) => String(valor || "")
     .normalize("NFD")
@@ -14,51 +10,44 @@
 
   const pertenceAfiliada = (valor) => {
     const n = normalizar(valor);
-    return ALIASES.some((alias) => n === alias || n.includes(alias));
+    return ALIASES.some((alias) => n.includes(alias));
   };
 
   const extrairIds = (valor) => String(valor || "").toUpperCase().match(/\d{4}B\d{6}/g) || [];
 
-  function criarIndiceAfiliada(registros) {
-    const mapa = new Map();
-    for (const registro of registros) {
-      if (!pertenceAfiliada(registro.AFILIADA_EMISSORA)) continue;
-      for (const id of extrairIds(registro.ID)) {
-        if (!mapa.has(id)) mapa.set(id, registro);
-      }
+  function classificarRegistro(registro) {
+    const base = normalizar([
+      registro.DESCRICAO,
+      registro.EDITORIA,
+      registro.PROGRAMA,
+      registro.PGM,
+    ].join(" "));
+
+    if (/\bstand\s*-?\s*up\b/.test(base) || /\bnoticia\b/.test(base) || /\bnota\b/.test(base) || /\bpassagem\b/.test(base)) {
+      return "noticia";
     }
-    return mapa;
+    return "vt";
   }
 
-  function idsDaLista(lista, indiceAfiliada) {
+  function registrosDaAfiliada(registros) {
+    return (registros || []).filter((registro) => pertenceAfiliada(registro.AFILIADA_EMISSORA));
+  }
+
+  function idsUnicos(registros, tipo = null) {
     const ids = new Set();
-    for (const item of lista || []) {
-      const candidatos = Array.isArray(item.ids) && item.ids.length ? item.ids : extrairIds(item.id);
-      candidatos.forEach((id) => {
-        const normalizado = String(id || "").toUpperCase().trim();
-        if (indiceAfiliada.has(normalizado)) ids.add(normalizado);
-      });
+    for (const registro of registros) {
+      if (tipo && classificarRegistro(registro) !== tipo) continue;
+      extrairIds(registro.ID).forEach((id) => ids.add(id));
     }
     return ids;
   }
 
-  function reporteresDaAfiliada(registros, acervo, indiceAfiliada) {
+  function reporteresDaAfiliada(registros) {
     const nomes = new Set();
-
-    registros.forEach((registro) => {
-      if (!pertenceAfiliada(registro.AFILIADA_EMISSORA)) return;
+    for (const registro of registros) {
       const nome = String(registro.REPORTER || "").trim();
       if (nome) nomes.add(nome);
-    });
-
-    [...(acervo.vts || []), ...(acervo.noticias || [])].forEach((item) => {
-      const candidatos = Array.isArray(item.ids) && item.ids.length ? item.ids : extrairIds(item.id);
-      const vinculado = candidatos.some((id) => indiceAfiliada.has(String(id || "").toUpperCase().trim()));
-      if (!vinculado) return;
-      const nome = String(item.reporter || "").trim();
-      if (nome) nomes.add(nome);
-    });
-
+    }
     return [...nomes].sort((a, b) => a.localeCompare(b, "pt-BR"));
   }
 
@@ -71,33 +60,62 @@
       return;
     }
 
-    lista.innerHTML = nomes.map((nome) => `<span class="afiliada-reporter">${nome}</span>`).join("");
+    lista.innerHTML = nomes
+      .map((nome) => `<span class="afiliada-reporter">${nome}</span>`)
+      .join("");
   }
 
-  async function carregarAcervoAgro() {
-    const resposta = await fetch(`../data/agrocultura-acervo.json?v=${Date.now()}`, { cache: "no-store" });
-    if (!resposta.ok) throw new Error(`Falha ao carregar acervo estruturado (${resposta.status}).`);
-    const dados = await resposta.json();
-    return {
-      vts: Array.isArray(dados.vts) ? dados.vts : [],
-      noticias: Array.isArray(dados.noticias) ? dados.noticias : [],
-      parcial: Boolean(dados.parcial),
-    };
+  async function carregarAcervoAgroOpcional() {
+    try {
+      const resposta = await fetch(`../data/agrocultura-acervo.json?v=${Date.now()}`, { cache: "no-store" });
+      if (!resposta.ok) return null;
+      const dados = await resposta.json();
+      return {
+        vts: Array.isArray(dados.vts) ? dados.vts : [],
+        noticias: Array.isArray(dados.noticias) ? dados.noticias : [],
+      };
+    } catch (erro) {
+      console.warn("Acervo estruturado do AgroCultura indisponível; usando somente a planilha imgs.", erro);
+      return null;
+    }
+  }
+
+  function complementarContagensComAcervo(acervo, registrosAfiliada, vts, noticias) {
+    if (!acervo) return;
+
+    const idsAfiliada = new Set();
+    registrosAfiliada.forEach((registro) => extrairIds(registro.ID).forEach((id) => idsAfiliada.add(id)));
+
+    for (const item of acervo.vts || []) {
+      const candidatos = Array.isArray(item.ids) && item.ids.length ? item.ids : extrairIds(item.id);
+      candidatos.forEach((id) => {
+        const normalizado = String(id || "").toUpperCase().trim();
+        if (idsAfiliada.has(normalizado)) vts.add(normalizado);
+      });
+    }
+
+    for (const item of acervo.noticias || []) {
+      const candidatos = Array.isArray(item.ids) && item.ids.length ? item.ids : extrairIds(item.id);
+      candidatos.forEach((id) => {
+        const normalizado = String(id || "").toUpperCase().trim();
+        if (idsAfiliada.has(normalizado)) noticias.add(normalizado);
+      });
+    }
   }
 
   async function iniciar() {
     const status = document.getElementById("afiliadaStatus");
 
     try {
-      const [registros, acervo] = await Promise.all([
-        DadosMedia.carregarCSV(),
-        carregarAcervoAgro(),
-      ]);
+      const registros = await DadosMedia.carregarCSV();
+      const afiliada = registrosDaAfiliada(registros);
 
-      const indiceAfiliada = criarIndiceAfiliada(registros);
-      const vts = idsDaLista(acervo.vts, indiceAfiliada);
-      const noticias = idsDaLista(acervo.noticias, indiceAfiliada);
-      const reporteres = reporteresDaAfiliada(registros, acervo, indiceAfiliada);
+      const vts = idsUnicos(afiliada, "vt");
+      const noticias = idsUnicos(afiliada, "noticia");
+      const reporteres = reporteresDaAfiliada(afiliada);
+
+      const acervo = await carregarAcervoAgroOpcional();
+      complementarContagensComAcervo(acervo, afiliada, vts, noticias);
 
       document.getElementById("afiliadaTotalVts").textContent = vts.size;
       document.getElementById("afiliadaTotalNoticias").textContent = noticias.size;
@@ -105,12 +123,15 @@
       renderizarReporteres(reporteres);
 
       if (status) {
-        status.textContent = acervo.parcial
-          ? "Dados disponíveis no catálogo; algumas fontes ainda estão em sincronização."
-          : "Dados atualizados automaticamente a partir do catálogo.";
+        status.textContent = afiliada.length
+          ? `${afiliada.length} registro(s) da TV Brasil Central encontrados no catálogo.`
+          : "Nenhum registro da TV Brasil Central foi encontrado na planilha imgs.";
       }
     } catch (erro) {
       console.error("Erro ao carregar página da TV Brasil Central:", erro);
+      document.getElementById("afiliadaTotalVts").textContent = "0";
+      document.getElementById("afiliadaTotalNoticias").textContent = "0";
+      document.getElementById("afiliadaTotalReporteres").textContent = "0";
       if (status) status.textContent = "Não foi possível carregar os dados da afiliada.";
       renderizarReporteres([]);
     }
