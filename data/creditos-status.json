@@ -1,13 +1,13 @@
 {
-  "sincronizadoEm": "2026-09-04T19:34:48.314Z",
+  "sincronizadoEm": "2026-09-04T21:50:23.464Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
-  "totalArquivos": 192,
-  "totalIdsDetectados": 162,
-  "totalSincronizados": 162,
+  "totalArquivos": 195,
+  "totalIdsDetectados": 165,
+  "totalSincronizados": 165,
   "totalIgnorados": 0,
-  "totalErros": 1,
+  "totalErros": 0,
   "totalDuplicados": 28,
-  "totalPreservados": 1,
+  "totalPreservados": 0,
   "ignorados": [],
   "duplicados": [
     {
@@ -439,17 +439,6 @@
       ]
     }
   ],
-  "preservados": [
-    {
-      "id": "1452B005096",
-      "motivo": "todos os documentos atuais falharam; crédito anterior preservado"
-    }
-  ],
-  "erros": [
-    {
-      "id": "1452B005096",
-      "nome": "1452B005096",
-      "erro": "bad XRef entry"
-    }
-  ]
+  "preservados": [],
+  "erros": []
 }
