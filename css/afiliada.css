@@ -1,0 +1,155 @@
+.pagina-afiliada {
+  width: min(1180px, calc(100% - 40px));
+  margin: 56px auto 80px;
+}
+
+.afiliada-hero {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 28px 0 34px;
+  border-bottom: 1px solid #e3e9e5;
+}
+
+.afiliada-logo-wrap {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #e3e9e5;
+  border-radius: 20px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.afiliada-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 14px;
+}
+
+.afiliada-identidade h1 {
+  margin: 6px 0 4px;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+.afiliada-localidade {
+  margin: 0;
+  color: #5f6b64;
+  font-size: 1rem;
+}
+
+.afiliada-resumo {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 28px 0 40px;
+}
+
+.afiliada-card {
+  min-height: 112px;
+  padding: 20px 22px;
+  border: 1px solid #dce5df;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.afiliada-card-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #4c5c52;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.afiliada-card strong {
+  color: #008a3f;
+  font-size: 2.1rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.afiliada-reporteres {
+  padding-top: 6px;
+}
+
+.afiliada-secao-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.afiliada-secao-topo h2 {
+  margin: 5px 0 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.afiliada-status {
+  margin: 0;
+  color: #68736c;
+  font-size: .9rem;
+}
+
+.afiliada-reporteres-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.afiliada-reporter {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid #dce5df;
+  border-radius: 999px;
+  background: #f8fbf9;
+  color: #1d2a22;
+  font-size: .95rem;
+}
+
+.afiliada-vazio {
+  width: 100%;
+  padding: 18px;
+  border: 1px dashed #cad6ce;
+  border-radius: 14px;
+  color: #68736c;
+  background: #fafcfb;
+}
+
+@media (max-width: 760px) {
+  .pagina-afiliada {
+    width: min(100% - 24px, 1180px);
+    margin-top: 30px;
+  }
+
+  .afiliada-hero {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .afiliada-logo-wrap {
+    width: 96px;
+    height: 96px;
+    border-radius: 16px;
+  }
+
+  .afiliada-resumo {
+    grid-template-columns: 1fr;
+  }
+
+  .afiliada-secao-topo {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
