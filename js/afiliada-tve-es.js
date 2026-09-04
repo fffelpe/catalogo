@@ -1,0 +1,218 @@
+(() => {
+  let materiaisAtuais = [];
+
+  const normalizar = (valor) => String(valor || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("pt-BR")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const escapeHtml = (valor) => String(valor ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+
+  const pertenceAfiliada = (valor) => {
+    const n = normalizar(valor);
+    return n === "tve es" || n.startsWith("tve es ") || n.includes(" tve es ");
+  };
+
+  const extrairIds = (valor) => String(valor || "").toUpperCase().match(/\d{4}B\d{6}/g) || [];
+
+  function registrosDaAfiliada(registros) {
+    return (registros || []).filter((registro) => pertenceAfiliada(registro.AFILIADA_EMISSORA));
+  }
+
+  function idsDeItens(lista) {
+    const ids = new Set();
+    for (const item of lista || []) {
+      const candidatos = Array.isArray(item.ids) && item.ids.length ? item.ids : extrairIds(item.id);
+      candidatos.forEach((id) => ids.add(String(id || "").toUpperCase().trim()));
+    }
+    return ids;
+  }
+
+  function classificarPorTexto(registro) {
+    const base = normalizar([registro.DESCRICAO, registro.EDITORIA, registro.PROGRAMA, registro.PGM].join(" "));
+    if (/\bstand\s*-?\s*up\b/.test(base) || /\bnoticia\b/.test(base) || /\bnota\b/.test(base) || /\bpassagem\b/.test(base)) return "noticia";
+    return "vt";
+  }
+
+  function classificarRegistro(registro, idsVts, idsNoticias) {
+    const ids = extrairIds(registro.ID);
+    if (ids.some((id) => idsNoticias.has(id))) return "noticia";
+    if (ids.some((id) => idsVts.has(id))) return "vt";
+    return classificarPorTexto(registro);
+  }
+
+  function reporteresDaAfiliada(registros) {
+    const nomes = new Set();
+    registros.forEach((registro) => {
+      const nome = String(registro.REPORTER || "").trim();
+      if (nome) nomes.add(nome);
+    });
+    return [...nomes].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }
+
+  function renderizarReporteres(nomes) {
+    const lista = document.getElementById("afiliadaReporteresLista");
+    if (!lista) return;
+    if (!nomes.length) {
+      lista.innerHTML = '<div class="afiliada-vazio">Nenhum repórter identificado para esta afiliada nos registros atuais.</div>';
+      return;
+    }
+    lista.innerHTML = nomes.map((nome) => `<span class="afiliada-reporter">${escapeHtml(nome)}</span>`).join("");
+  }
+
+  function renderizarIds(valor) {
+    const ids = extrairIds(valor);
+    if (!ids.length) return escapeHtml(valor);
+
+    return ids.map((id) => `
+      <span class="id-item">
+        <span class="id-text">${escapeHtml(id)}</span>
+        <button type="button" class="btn-copiar-id" data-ids="${escapeHtml(id)}" title="Copiar ID" aria-label="Copiar ID ${escapeHtml(id)}">
+          <img src="../images/copiar.png?v=4" alt="" class="icone-copiar" aria-hidden="true">
+        </button>
+      </span>
+    `).join("");
+  }
+
+  function renderizarMateriais(filtro = "todos") {
+    const tbody = document.getElementById("afiliadaMateriaisBody");
+    if (!tbody) return;
+
+    const lista = filtro === "todos"
+      ? materiaisAtuais
+      : materiaisAtuais.filter((item) => item._tipoAfiliada === filtro);
+
+    if (!lista.length) {
+      tbody.innerHTML = '<tr><td colspan="6">Nenhum material encontrado nesta categoria.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = lista.map((item) => `
+      <tr>
+        <td data-label="ID" class="id-cell"><span class="id-lista">${renderizarIds(item.ID)}</span></td>
+        <td data-label="Descrição">${escapeHtml(item.DESCRICAO)}</td>
+        <td data-label="Repórter">${escapeHtml(item.REPORTER)}</td>
+        <td data-label="Data">${escapeHtml(item.DATA)}</td>
+        <td data-label="Local">${escapeHtml(item.LOCAL)}</td>
+        <td data-label="Editoria">${escapeHtml(item.EDITORIA)}</td>
+      </tr>`).join("");
+  }
+
+  async function copiarId(id, botao) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(id);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = id;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+      }
+
+      botao.classList.add("copiado");
+      botao.title = "ID copiado";
+      setTimeout(() => {
+        botao.classList.remove("copiado");
+        botao.title = "Copiar ID";
+      }, 1200);
+    } catch (erro) {
+      console.error("Erro ao copiar ID:", erro);
+    }
+  }
+
+  function ativarInteracoes() {
+    document.querySelectorAll("[data-filtro]").forEach((botao) => {
+      botao.addEventListener("click", () => {
+        document.querySelectorAll("[data-filtro]").forEach((b) => b.classList.remove("ativo"));
+        botao.classList.add("ativo");
+        renderizarMateriais(botao.dataset.filtro);
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const botao = event.target.closest(".btn-copiar-id");
+      if (botao) copiarId(botao.dataset.ids || "", botao);
+    });
+  }
+
+  async function carregarAcervoAgroOpcional() {
+    try {
+      const resposta = await fetch(`../data/agrocultura-acervo.json?v=${Date.now()}`, { cache: "no-store" });
+      if (!resposta.ok) return null;
+      const dados = await resposta.json();
+      return {
+        vts: Array.isArray(dados.vts) ? dados.vts : [],
+        noticias: Array.isArray(dados.noticias) ? dados.noticias : [],
+      };
+    } catch (erro) {
+      console.warn("Acervo estruturado do AgroCultura indisponível; usando somente a planilha imgs.", erro);
+      return null;
+    }
+  }
+
+  async function iniciar() {
+    const status = document.getElementById("afiliadaStatus");
+
+    try {
+      const [registros, acervo] = await Promise.all([
+        DadosMedia.carregarCSV(),
+        carregarAcervoAgroOpcional(),
+      ]);
+
+      const afiliada = registrosDaAfiliada(registros);
+      const idsVts = idsDeItens(acervo?.vts || []);
+      const idsNoticias = idsDeItens(acervo?.noticias || []);
+
+      materiaisAtuais = afiliada.map((registro) => ({
+        ...registro,
+        _tipoAfiliada: classificarRegistro(registro, idsVts, idsNoticias),
+      }));
+
+      const todosIds = new Set();
+      materiaisAtuais.forEach((registro) => extrairIds(registro.ID).forEach((id) => todosIds.add(id)));
+      const vts = new Set();
+      const noticias = new Set();
+      materiaisAtuais.forEach((registro) => {
+        const destino = registro._tipoAfiliada === "noticia" ? noticias : vts;
+        extrairIds(registro.ID).forEach((id) => destino.add(id));
+      });
+      const reporteres = reporteresDaAfiliada(materiaisAtuais);
+
+      document.getElementById("afiliadaTotalIds").textContent = todosIds.size;
+      document.getElementById("afiliadaTotalVts").textContent = vts.size;
+      document.getElementById("afiliadaTotalNoticias").textContent = noticias.size;
+      document.getElementById("afiliadaTotalReporteres").textContent = reporteres.length;
+
+      renderizarReporteres(reporteres);
+      renderizarMateriais("todos");
+      ativarInteracoes();
+
+      if (status) {
+        status.textContent = afiliada.length
+          ? `${afiliada.length} registro(s) vinculados à TVE Espírito Santo no catálogo.`
+          : "Nenhum registro da TVE Espírito Santo foi encontrado na planilha imgs.";
+      }
+    } catch (erro) {
+      console.error("Erro ao carregar página da TVE Espírito Santo:", erro);
+      ["afiliadaTotalIds", "afiliadaTotalVts", "afiliadaTotalNoticias", "afiliadaTotalReporteres"].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = "0";
+      });
+      if (status) status.textContent = "Não foi possível carregar os dados da afiliada.";
+      renderizarReporteres([]);
+      renderizarMateriais("todos");
+    }
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar);
+  else iniciar();
+})();
