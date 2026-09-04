@@ -49,6 +49,26 @@ function escapeHtml(str) {
   }[c]));
 }
 
+function normalizarTexto(valor) {
+  return String(valor || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim()
+    .toUpperCase();
+}
+
+function renderizarAfiliadaEmissora(valor) {
+  const texto = String(valor || "").trim();
+  if (!texto) return "";
+
+  const normalizado = normalizarTexto(texto);
+  if (normalizado.includes("TV BRASIL CENTRAL")) {
+    return `<a class="link-afiliada" href="afiliada-tv-brasil-central.html">${escapeHtml(texto)}</a>`;
+  }
+
+  return escapeHtml(texto);
+}
+
 function separarIds(valor) {
   if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(valor);
   return String(valor || "")
@@ -143,7 +163,7 @@ function renderizarProximaPagina() {
       <td data-label="Data">${escapeHtml(item.DATA)}</td>
       <td data-label="Local">${escapeHtml(item.LOCAL)}</td>
       <td data-label="Repórter">${escapeHtml(item.REPORTER)}</td>
-      <td data-label="Afiliada / Emissora">${escapeHtml(item.AFILIADA_EMISSORA)}</td>
+      <td data-label="Afiliada / Emissora">${renderizarAfiliadaEmissora(item.AFILIADA_EMISSORA)}</td>
       <td data-label="Programa">${escapeHtml(item.PROGRAMA)}</td>
       <td data-label="Editoria">${escapeHtml(item.EDITORIA)}</td>
     `;
