@@ -46,31 +46,34 @@
 .afiliada-resumo {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin: 28px 0 40px;
+  gap: 10px;
+  margin: 20px 0 28px;
 }
 
 .afiliada-card {
-  min-height: 112px;
-  padding: 20px 22px;
+  min-height: 82px;
+  padding: 13px 16px;
   border: 1px solid #dce5df;
-  border-radius: 16px;
+  border-radius: 12px;
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .afiliada-card-label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: #4c5c52;
-  font-size: .78rem;
+  font-size: .7rem;
   font-weight: 700;
-  letter-spacing: .04em;
+  letter-spacing: .035em;
   text-transform: uppercase;
 }
 
 .afiliada-card strong {
   color: #008a3f;
-  font-size: 2.1rem;
+  font-size: 1.65rem;
   line-height: 1;
   font-weight: 700;
 }
@@ -223,7 +226,17 @@
   }
 
   .afiliada-resumo {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .afiliada-card {
+    min-height: 74px;
+    padding: 11px 13px;
+  }
+
+  .afiliada-card strong {
+    font-size: 1.45rem;
   }
 
   .afiliada-secao-topo {
