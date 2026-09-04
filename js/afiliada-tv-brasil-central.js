@@ -1,5 +1,4 @@
 (() => {
-  const ALIASES = ["tv brasil central"];
   let materiaisAtuais = [];
 
   const normalizar = (valor) => String(valor || "")
@@ -61,8 +60,18 @@
     lista.innerHTML = nomes.map((nome) => `<span class="afiliada-reporter">${escapeHtml(nome)}</span>`).join("");
   }
 
-  function nomeTipo(tipo) {
-    return tipo === "noticia" ? "Notícia / stand-up" : "VT";
+  function renderizarIds(valor) {
+    const ids = extrairIds(valor);
+    if (!ids.length) return escapeHtml(valor);
+
+    return ids.map((id) => `
+      <span class="id-item">
+        <span class="id-text">${escapeHtml(id)}</span>
+        <button type="button" class="btn-copiar-id" data-ids="${escapeHtml(id)}" title="Copiar ID" aria-label="Copiar ID ${escapeHtml(id)}">
+          <img src="../images/copiar.png?v=4" alt="" class="icone-copiar" aria-hidden="true">
+        </button>
+      </span>
+    `).join("");
   }
 
   function renderizarMateriais(filtro = "todos") {
@@ -74,30 +83,59 @@
       : materiaisAtuais.filter((item) => item._tipoAfiliada === filtro);
 
     if (!lista.length) {
-      tbody.innerHTML = '<tr><td colspan="8">Nenhum material encontrado nesta categoria.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6">Nenhum material encontrado nesta categoria.</td></tr>';
       return;
     }
 
     tbody.innerHTML = lista.map((item) => `
       <tr>
-        <td>${escapeHtml(extrairIds(item.ID).join(" / ") || item.ID)}</td>
-        <td><span class="afiliada-tipo">${escapeHtml(nomeTipo(item._tipoAfiliada))}</span></td>
-        <td>${escapeHtml(item.DESCRICAO)}</td>
-        <td>${escapeHtml(item.REPORTER)}</td>
-        <td>${escapeHtml(item.DATA)}</td>
-        <td>${escapeHtml(item.LOCAL)}</td>
-        <td>${escapeHtml(item.PROGRAMA)}</td>
-        <td>${escapeHtml(item.EDITORIA)}</td>
+        <td data-label="ID" class="id-cell"><span class="id-lista">${renderizarIds(item.ID)}</span></td>
+        <td data-label="Descrição">${escapeHtml(item.DESCRICAO)}</td>
+        <td data-label="Repórter">${escapeHtml(item.REPORTER)}</td>
+        <td data-label="Data">${escapeHtml(item.DATA)}</td>
+        <td data-label="Local">${escapeHtml(item.LOCAL)}</td>
+        <td data-label="Editoria">${escapeHtml(item.EDITORIA)}</td>
       </tr>`).join("");
   }
 
-  function ativarFiltros() {
+  async function copiarId(id, botao) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(id);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = id;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+      }
+
+      botao.classList.add("copiado");
+      botao.title = "ID copiado";
+      setTimeout(() => {
+        botao.classList.remove("copiado");
+        botao.title = "Copiar ID";
+      }, 1200);
+    } catch (erro) {
+      console.error("Erro ao copiar ID:", erro);
+    }
+  }
+
+  function ativarInteracoes() {
     document.querySelectorAll("[data-filtro]").forEach((botao) => {
       botao.addEventListener("click", () => {
         document.querySelectorAll("[data-filtro]").forEach((b) => b.classList.remove("ativo"));
         botao.classList.add("ativo");
         renderizarMateriais(botao.dataset.filtro);
       });
+    });
+
+    document.addEventListener("click", (event) => {
+      const botao = event.target.closest(".btn-copiar-id");
+      if (botao) copiarId(botao.dataset.ids || "", botao);
     });
   }
 
@@ -151,7 +189,7 @@
 
       renderizarReporteres(reporteres);
       renderizarMateriais("todos");
-      ativarFiltros();
+      ativarInteracoes();
 
       if (status) {
         status.textContent = afiliada.length
