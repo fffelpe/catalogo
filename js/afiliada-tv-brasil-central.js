@@ -1,5 +1,6 @@
 (() => {
   const ALIASES = ["tv brasil central"];
+  let materiaisAtuais = [];
 
   const normalizar = (valor) => String(valor || "")
     .normalize("NFD")
@@ -8,61 +9,96 @@
     .replace(/\s+/g, " ")
     .trim();
 
-  const pertenceAfiliada = (valor) => {
-    const n = normalizar(valor);
-    return ALIASES.some((alias) => n.includes(alias));
-  };
+  const escapeHtml = (valor) => String(valor ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
 
+  const pertenceAfiliada = (valor) => normalizar(valor).includes("tv brasil central");
   const extrairIds = (valor) => String(valor || "").toUpperCase().match(/\d{4}B\d{6}/g) || [];
-
-  function classificarRegistro(registro) {
-    const base = normalizar([
-      registro.DESCRICAO,
-      registro.EDITORIA,
-      registro.PROGRAMA,
-      registro.PGM,
-    ].join(" "));
-
-    if (/\bstand\s*-?\s*up\b/.test(base) || /\bnoticia\b/.test(base) || /\bnota\b/.test(base) || /\bpassagem\b/.test(base)) {
-      return "noticia";
-    }
-    return "vt";
-  }
 
   function registrosDaAfiliada(registros) {
     return (registros || []).filter((registro) => pertenceAfiliada(registro.AFILIADA_EMISSORA));
   }
 
-  function idsUnicos(registros, tipo = null) {
+  function idsDeItens(lista) {
     const ids = new Set();
-    for (const registro of registros) {
-      if (tipo && classificarRegistro(registro) !== tipo) continue;
-      extrairIds(registro.ID).forEach((id) => ids.add(id));
+    for (const item of lista || []) {
+      const candidatos = Array.isArray(item.ids) && item.ids.length ? item.ids : extrairIds(item.id);
+      candidatos.forEach((id) => ids.add(String(id || "").toUpperCase().trim()));
     }
     return ids;
   }
 
+  function classificarPorTexto(registro) {
+    const base = normalizar([registro.DESCRICAO, registro.EDITORIA, registro.PROGRAMA, registro.PGM].join(" "));
+    if (/\bstand\s*-?\s*up\b/.test(base) || /\bnoticia\b/.test(base) || /\bnota\b/.test(base) || /\bpassagem\b/.test(base)) return "noticia";
+    return "vt";
+  }
+
+  function classificarRegistro(registro, idsVts, idsNoticias) {
+    const ids = extrairIds(registro.ID);
+    if (ids.some((id) => idsNoticias.has(id))) return "noticia";
+    if (ids.some((id) => idsVts.has(id))) return "vt";
+    return classificarPorTexto(registro);
+  }
+
   function reporteresDaAfiliada(registros) {
     const nomes = new Set();
-    for (const registro of registros) {
+    registros.forEach((registro) => {
       const nome = String(registro.REPORTER || "").trim();
       if (nome) nomes.add(nome);
-    }
+    });
     return [...nomes].sort((a, b) => a.localeCompare(b, "pt-BR"));
   }
 
   function renderizarReporteres(nomes) {
     const lista = document.getElementById("afiliadaReporteresLista");
     if (!lista) return;
-
     if (!nomes.length) {
       lista.innerHTML = '<div class="afiliada-vazio">Nenhum repórter identificado para esta afiliada nos registros atuais.</div>';
       return;
     }
+    lista.innerHTML = nomes.map((nome) => `<span class="afiliada-reporter">${escapeHtml(nome)}</span>`).join("");
+  }
 
-    lista.innerHTML = nomes
-      .map((nome) => `<span class="afiliada-reporter">${nome}</span>`)
-      .join("");
+  function nomeTipo(tipo) {
+    return tipo === "noticia" ? "Notícia / stand-up" : "VT";
+  }
+
+  function renderizarMateriais(filtro = "todos") {
+    const tbody = document.getElementById("afiliadaMateriaisBody");
+    if (!tbody) return;
+
+    const lista = filtro === "todos"
+      ? materiaisAtuais
+      : materiaisAtuais.filter((item) => item._tipoAfiliada === filtro);
+
+    if (!lista.length) {
+      tbody.innerHTML = '<tr><td colspan="8">Nenhum material encontrado nesta categoria.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = lista.map((item) => `
+      <tr>
+        <td>${escapeHtml(extrairIds(item.ID).join(" / ") || item.ID)}</td>
+        <td><span class="afiliada-tipo">${escapeHtml(nomeTipo(item._tipoAfiliada))}</span></td>
+        <td>${escapeHtml(item.DESCRICAO)}</td>
+        <td>${escapeHtml(item.REPORTER)}</td>
+        <td>${escapeHtml(item.DATA)}</td>
+        <td>${escapeHtml(item.LOCAL)}</td>
+        <td>${escapeHtml(item.PROGRAMA)}</td>
+        <td>${escapeHtml(item.EDITORIA)}</td>
+      </tr>`).join("");
+  }
+
+  function ativarFiltros() {
+    document.querySelectorAll("[data-filtro]").forEach((botao) => {
+      botao.addEventListener("click", () => {
+        document.querySelectorAll("[data-filtro]").forEach((b) => b.classList.remove("ativo"));
+        botao.classList.add("ativo");
+        renderizarMateriais(botao.dataset.filtro);
+      });
+    });
   }
 
   async function carregarAcervoAgroOpcional() {
@@ -80,60 +116,57 @@
     }
   }
 
-  function complementarContagensComAcervo(acervo, registrosAfiliada, vts, noticias) {
-    if (!acervo) return;
-
-    const idsAfiliada = new Set();
-    registrosAfiliada.forEach((registro) => extrairIds(registro.ID).forEach((id) => idsAfiliada.add(id)));
-
-    for (const item of acervo.vts || []) {
-      const candidatos = Array.isArray(item.ids) && item.ids.length ? item.ids : extrairIds(item.id);
-      candidatos.forEach((id) => {
-        const normalizado = String(id || "").toUpperCase().trim();
-        if (idsAfiliada.has(normalizado)) vts.add(normalizado);
-      });
-    }
-
-    for (const item of acervo.noticias || []) {
-      const candidatos = Array.isArray(item.ids) && item.ids.length ? item.ids : extrairIds(item.id);
-      candidatos.forEach((id) => {
-        const normalizado = String(id || "").toUpperCase().trim();
-        if (idsAfiliada.has(normalizado)) noticias.add(normalizado);
-      });
-    }
-  }
-
   async function iniciar() {
     const status = document.getElementById("afiliadaStatus");
 
     try {
-      const registros = await DadosMedia.carregarCSV();
+      const [registros, acervo] = await Promise.all([
+        DadosMedia.carregarCSV(),
+        carregarAcervoAgroOpcional(),
+      ]);
+
       const afiliada = registrosDaAfiliada(registros);
+      const idsVts = idsDeItens(acervo?.vts || []);
+      const idsNoticias = idsDeItens(acervo?.noticias || []);
 
-      const vts = idsUnicos(afiliada, "vt");
-      const noticias = idsUnicos(afiliada, "noticia");
-      const reporteres = reporteresDaAfiliada(afiliada);
+      materiaisAtuais = afiliada.map((registro) => ({
+        ...registro,
+        _tipoAfiliada: classificarRegistro(registro, idsVts, idsNoticias),
+      }));
 
-      const acervo = await carregarAcervoAgroOpcional();
-      complementarContagensComAcervo(acervo, afiliada, vts, noticias);
+      const todosIds = new Set();
+      materiaisAtuais.forEach((registro) => extrairIds(registro.ID).forEach((id) => todosIds.add(id)));
+      const vts = new Set();
+      const noticias = new Set();
+      materiaisAtuais.forEach((registro) => {
+        const destino = registro._tipoAfiliada === "noticia" ? noticias : vts;
+        extrairIds(registro.ID).forEach((id) => destino.add(id));
+      });
+      const reporteres = reporteresDaAfiliada(materiaisAtuais);
 
+      document.getElementById("afiliadaTotalIds").textContent = todosIds.size;
       document.getElementById("afiliadaTotalVts").textContent = vts.size;
       document.getElementById("afiliadaTotalNoticias").textContent = noticias.size;
       document.getElementById("afiliadaTotalReporteres").textContent = reporteres.length;
+
       renderizarReporteres(reporteres);
+      renderizarMateriais("todos");
+      ativarFiltros();
 
       if (status) {
         status.textContent = afiliada.length
-          ? `${afiliada.length} registro(s) da TV Brasil Central encontrados no catálogo.`
+          ? `${afiliada.length} registro(s) vinculados à TV Brasil Central no catálogo.`
           : "Nenhum registro da TV Brasil Central foi encontrado na planilha imgs.";
       }
     } catch (erro) {
       console.error("Erro ao carregar página da TV Brasil Central:", erro);
-      document.getElementById("afiliadaTotalVts").textContent = "0";
-      document.getElementById("afiliadaTotalNoticias").textContent = "0";
-      document.getElementById("afiliadaTotalReporteres").textContent = "0";
+      ["afiliadaTotalIds", "afiliadaTotalVts", "afiliadaTotalNoticias", "afiliadaTotalReporteres"].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = "0";
+      });
       if (status) status.textContent = "Não foi possível carregar os dados da afiliada.";
       renderizarReporteres([]);
+      renderizarMateriais("todos");
     }
   }
 
