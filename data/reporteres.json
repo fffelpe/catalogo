@@ -1,6 +1,6 @@
 {
   "ultimaAtualizacao": "2026-09-04",
-  "observacao": "Cadastro inicial de repórteres por estado e afiliada/emissora. Casos ainda sem estado confirmado foram deixados de fora desta versão.",
+  "observacao": "Cadastro inicial de repórteres por estado e afiliada/emissora. Casos sem estado confirmado ou apenas provável foram deixados de fora desta versão.",
   "reporteres": [
     {"nome":"Mayana Leocádio","uf":"SP","estado":"São Paulo","afiliadaEmissora":"TV Cultura","status":"confirmado"},
     {"nome":"Luiza Moraes","uf":"SP","estado":"São Paulo","afiliadaEmissora":"TV Cultura","status":"confirmado"},
@@ -17,7 +17,6 @@
     {"nome":"Evandro Cláudio","uf":"SC","estado":"Santa Catarina","afiliadaEmissora":"","status":"estado-identificado"},
     {"nome":"Caio Marçani","uf":"SC","estado":"Santa Catarina","afiliadaEmissora":"","status":"estado-identificado"},
     {"nome":"Amanda Dalla Costa","uf":"PR","estado":"Paraná","afiliadaEmissora":"","status":"estado-identificado"},
-    {"nome":"Samuel Rocha","uf":"PR","estado":"Paraná","afiliadaEmissora":"","status":"estado-provavel"},
     {"nome":"Elaine Silva","uf":"MS","estado":"Mato Grosso do Sul","afiliadaEmissora":"","status":"estado-identificado"},
     {"nome":"Fabiano Pereira","uf":"SP","estado":"São Paulo","afiliadaEmissora":"TV USP / SP","status":"confirmado"},
     {"nome":"Júlio Penariol","uf":"SP","estado":"São Paulo","afiliadaEmissora":"","status":"estado-identificado"},
