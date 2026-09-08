@@ -155,7 +155,10 @@ const ReporteresMedia = (() => {
     }
 
     // Alguns registros trazem o crédito diretamente na descrição da planilha.
-    extrairDoTexto(registro.DESCRICAO).forEach((nome) => adicionar(encontrados, nome));
+    const descricao = String(registro.DESCRICAO || "");
+    if (/REP[ÓO]RTER|REPORTAGEM|TRAZ\s+TODOS\s+OS\s+DETALHES|FOI\s+CONFERIR/i.test(descricao)) {
+      extrairDoTexto(descricao).forEach((nome) => adicionar(encontrados, nome));
+    }
 
     return encontrados.join(" / ");
   }
@@ -176,11 +179,8 @@ const ReporteresMedia = (() => {
     return registros;
   }
 
-  async function preparar(registros) {
-    if (preparacaoPromise) {
-      await preparacaoPromise;
-      return aplicar(registros);
-    }
+  async function preparar() {
+    if (preparacaoPromise) return preparacaoPromise;
 
     preparacaoPromise = (async () => {
       const tarefas = [carregarCadastro()];
@@ -188,15 +188,14 @@ const ReporteresMedia = (() => {
         tarefas.push(CreditosMedia.carregar());
       }
       await Promise.all(tarefas);
+      return true;
     })();
 
     try {
-      await preparacaoPromise;
+      return await preparacaoPromise;
     } finally {
       preparacaoPromise = null;
     }
-
-    return aplicar(registros);
   }
 
   return { carregarCadastro, identificar, aplicar, preparar };
@@ -211,9 +210,8 @@ if (typeof DadosMedia !== "undefined" && typeof DadosMedia.carregarCSV === "func
     const registros = await carregarCSVOriginal(...args);
 
     try {
-      await ReporteresMedia.preparar(registros);
+      await ReporteresMedia.preparar();
       ReporteresMedia.aplicar(this.registros);
-      ReporteresMedia.aplicar(this.registrosOrdemInsercao);
     } catch (erro) {
       console.warn("Não foi possível enriquecer os repórteres nesta execução:", erro);
     }
