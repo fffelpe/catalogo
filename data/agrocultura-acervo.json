@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T17:47:40.440Z",
+  "generatedAt": "2026-09-08T20:20:19.775Z",
   "parcial": true,
   "errosFontes": {
     "vts": null,
@@ -21,12 +21,26 @@
     ]
   },
   "resumo": {
-    "materiais": 1781,
-    "vts": 728,
-    "noticias": 355,
+    "materiais": 1784,
+    "vts": 729,
+    "noticias": 357,
     "coberturas": 1091
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005415",
+      "ids": [
+        "1452B005415"
+      ],
+      "descricao": "VT AÇUDES AUTOMAÇÃO",
+      "reporter": "ANTONIELLA ORLANDI",
+      "data": "06/09/2026",
+      "local": "",
+      "pgm": "379"
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -10438,6 +10452,34 @@
     }
   ],
   "noticias": [
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005441",
+      "ids": [
+        "1452B005441"
+      ],
+      "descricao": "EXPOFLORA",
+      "reporter": "PAULA PARTIKA",
+      "data": "06/09/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "379"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005447",
+      "ids": [
+        "1452B005447"
+      ],
+      "descricao": "IDENTIFICAÇÃO CARNES",
+      "reporter": "ELAINE SILVA",
+      "data": "06/09/2026",
+      "local": "MATO GROSSO DO SUL - MS",
+      "pgm": "379"
+    },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
