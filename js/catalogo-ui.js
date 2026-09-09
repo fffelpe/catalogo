@@ -217,6 +217,15 @@ async function inicializarPaginaInicial() {
   const input = document.getElementById("searchInput");
   if (!form || !input) return false;
 
+  // As buscas populares gerais devem aparecer imediatamente abaixo da busca da home,
+  // mesmo antes do carregamento da planilha terminar.
+  if (
+    typeof BuscasPopulares !== "undefined" &&
+    typeof BuscasPopulares.renderizarHome === "function"
+  ) {
+    BuscasPopulares.renderizarHome();
+  }
+
   try {
     await DadosMedia.carregarCSV();
 
