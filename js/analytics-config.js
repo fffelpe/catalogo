@@ -1,11 +1,10 @@
 // analytics-config.js
-// Configure estes dois valores depois de criar o projeto no Supabase.
-// A chave publishable/anon pode ser usada no navegador desde que as permissoes
-// do banco estejam protegidas conforme supabase/analytics.sql.
+// Configuração pública do analytics global do Catálogo de Mídias.
+// A publishable key pode ficar no navegador; a segurança real está nos grants/RLS do banco.
 window.CATALOGO_ANALYTICS_CONFIG = Object.freeze({
-  enabled: false,
-  supabaseUrl: "",
-  supabasePublishableKey: "",
+  enabled: true,
+  supabaseUrl: "https://ckusrqrktummrxtayrcd.supabase.co",
+  supabasePublishableKey: "sb_publishable_lXYd0ZJFgd6kSlMHzMm49g_vX3Cgllf",
   windowDays: 30,
   requestTimeoutMs: 5000
 });
