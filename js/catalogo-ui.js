@@ -1,5 +1,5 @@
 // catalogo-ui.js - Integra a interface com busca inteligente, autocomplete,
-// histórico, buscas populares, paginação e cópia de Media IDs.
+// histórico, buscas populares, paginação, analytics global e cópia de Media IDs.
 
 let resultadosAtuais = [];
 let paginaAtual = 0;
@@ -183,6 +183,25 @@ function renderizarProximaPagina() {
   }
 }
 
+function registrarAnalyticsGlobal(consulta, programa) {
+  if (
+    typeof AnalyticsGlobal === "undefined" ||
+    typeof AnalyticsGlobal.registrarBusca !== "function" ||
+    !AnalyticsGlobal.estaConfigurado()
+  ) {
+    return;
+  }
+
+  AnalyticsGlobal.registrarBusca(consulta, programa, resultadosAtuais.length)
+    .then((gravou) => {
+      // Atualiza o ranking do programa depois que a nova busca foi persistida.
+      if (gravou && programa && typeof BuscasPopulares !== "undefined") {
+        BuscasPopulares.renderizarPrograma(programa);
+      }
+    })
+    .catch((erro) => console.warn("Nao foi possivel registrar analytics global:", erro));
+}
+
 function executarBusca(termo, programa = "", registrar = false) {
   const consulta = String(termo || "").trim();
 
@@ -206,6 +225,7 @@ function executarBusca(termo, programa = "", registrar = false) {
     HistoricoBusca.registrar(consulta);
     HistoricoBusca.renderizar();
     BuscasPopulares.registrar(consulta, programa);
+    registrarAnalyticsGlobal(consulta, programa);
     if (programa) BuscasPopulares.renderizarPrograma(programa);
   }
 
@@ -217,8 +237,6 @@ async function inicializarPaginaInicial() {
   const input = document.getElementById("searchInput");
   if (!form || !input) return false;
 
-  // As buscas populares gerais devem aparecer imediatamente abaixo da busca da home,
-  // mesmo antes do carregamento da planilha terminar.
   if (
     typeof BuscasPopulares !== "undefined" &&
     typeof BuscasPopulares.renderizarHome === "function"
