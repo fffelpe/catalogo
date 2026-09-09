@@ -1,5 +1,6 @@
 // buscas-populares.js
-// Registra e exibe buscas populares gerais e por programa.
+// Exibe buscas populares globais quando o AnalyticsGlobal estiver configurado.
+// localStorage permanece como fallback para manter o catalogo resiliente.
 
 const BuscasPopulares = (() => {
   const CHAVE = "catalogoMidiasBuscasPopularesV1";
@@ -7,14 +8,7 @@ const BuscasPopulares = (() => {
   const LIMITE_PROGRAMA = 5;
 
   const PADROES = {
-    geral: [
-      "Agricultura",
-      "Economia",
-      "Chuva",
-      "Política",
-      "Saúde",
-      "Trânsito"
-    ],
+    geral: ["Agricultura", "Economia", "Chuva", "Política", "Saúde", "Trânsito"],
     programas: {
       "Agrocultura": ["Soja", "Café", "Pecuária", "Safra", "Colheita"],
       "Cartão Verde": ["Futebol", "Campeonato", "Jogadores", "Estádio", "Treino"],
@@ -41,10 +35,11 @@ const BuscasPopulares = (() => {
       .trim();
   }
 
-  function nomeProgramaSeguro(programa) {
-    // URLSearchParams.get() já devolve o valor decodificado. Evitamos um novo
-    // decodeURIComponent(), que poderia lançar erro com '%' literal no nome.
-    return String(programa || "").trim();
+  function pareceMediaId(termo) {
+    if (typeof MediaIdUtils !== "undefined" && MediaIdUtils.EXATO) {
+      return MediaIdUtils.EXATO.test(String(termo || "").trim());
+    }
+    return /^\d{4}[A-Z]\d{5,6}$/i.test(String(termo || "").trim());
   }
 
   function carregarDados() {
@@ -55,7 +50,7 @@ const BuscasPopulares = (() => {
         programas: dados.programas && typeof dados.programas === "object" ? dados.programas : {}
       };
     } catch (erro) {
-      console.warn("Erro ao carregar buscas populares:", erro);
+      console.warn("Erro ao carregar buscas populares locais:", erro);
       return { geral: {}, programas: {} };
     }
   }
@@ -64,20 +59,12 @@ const BuscasPopulares = (() => {
     try {
       localStorage.setItem(CHAVE, JSON.stringify(dados));
     } catch (erro) {
-      console.warn("Erro ao salvar buscas populares:", erro);
+      console.warn("Erro ao salvar buscas populares locais:", erro);
     }
   }
 
-  function pareceMediaId(termo) {
-    return /^[A-Z0-9]{7,}$/i.test(String(termo || "").replace(/\s+/g, ""));
-  }
-
-  function chaveTermo(termo) {
-    return normalizar(termo);
-  }
-
   function incrementarColecao(colecao, termo) {
-    const chave = chaveTermo(termo);
+    const chave = normalizar(termo);
     if (!chave) return;
 
     if (!colecao[chave]) {
@@ -99,7 +86,7 @@ const BuscasPopulares = (() => {
     const dados = carregarDados();
     incrementarColecao(dados.geral, texto);
 
-    const nomePrograma = nomeProgramaSeguro(programa);
+    const nomePrograma = String(programa || "").trim();
     if (nomePrograma) {
       if (!dados.programas[nomePrograma]) dados.programas[nomePrograma] = {};
       incrementarColecao(dados.programas[nomePrograma], texto);
@@ -111,7 +98,7 @@ const BuscasPopulares = (() => {
   function ordenarColecao(colecao) {
     return Object.values(colecao || {}).sort((a, b) => {
       if (b.quantidade !== a.quantidade) return b.quantidade - a.quantidade;
-      return b.atualizadoEm - a.atualizadoEm;
+      return (b.atualizadoEm || 0) - (a.atualizadoEm || 0);
     });
   }
 
@@ -122,7 +109,6 @@ const BuscasPopulares = (() => {
     for (const termo of padroes) {
       if (final.length >= limite) break;
       if (existentes.has(normalizar(termo))) continue;
-
       final.push({ termo, quantidade: 0, padrao: true });
       existentes.add(normalizar(termo));
     }
@@ -131,18 +117,27 @@ const BuscasPopulares = (() => {
   }
 
   function obterGerais(limite = LIMITE_GERAL) {
-    const dados = carregarDados();
-    const dinamicas = ordenarColecao(dados.geral).slice(0, limite);
+    const dinamicas = ordenarColecao(carregarDados().geral).slice(0, limite);
     return completarComPadrao(dinamicas, PADROES.geral, limite);
   }
 
   function obterPorPrograma(programa, limite = LIMITE_PROGRAMA) {
-    const nome = nomeProgramaSeguro(programa);
+    const nome = String(programa || "").trim();
     const dados = carregarDados();
-    const colecao = dados.programas[nome] || {};
-    const dinamicas = ordenarColecao(colecao).slice(0, limite);
-    const padroes = PADROES.programas[nome] || [];
-    return completarComPadrao(dinamicas, padroes, limite);
+    const dinamicas = ordenarColecao(dados.programas[nome] || {}).slice(0, limite);
+    return completarComPadrao(dinamicas, PADROES.programas[nome] || [], limite);
+  }
+
+  function normalizarRespostaGlobal(dados, padroes, limite) {
+    const itens = (Array.isArray(dados) ? dados : [])
+      .map((item) => ({
+        termo: String(item?.termo || "").trim(),
+        quantidade: Number(item?.quantidade) || 0,
+        global: true
+      }))
+      .filter((item) => item.termo && !pareceMediaId(item.termo));
+
+    return completarComPadrao(itens, padroes, limite);
   }
 
   function criarChip(termo, programa = "") {
@@ -150,9 +145,7 @@ const BuscasPopulares = (() => {
     botao.type = "button";
     botao.className = "busca-popular-chip";
     botao.dataset.termo = termo;
-
     if (programa) botao.dataset.programa = programa;
-
     botao.textContent = termo;
     botao.setAttribute(
       "aria-label",
@@ -164,11 +157,7 @@ const BuscasPopulares = (() => {
   function criarLista(termos, programa = "") {
     const lista = document.createElement("div");
     lista.className = "buscas-populares-lista";
-
-    termos.forEach((item) => {
-      lista.appendChild(criarChip(item.termo, programa));
-    });
-
+    termos.forEach((item) => lista.appendChild(criarChip(item.termo, programa)));
     return lista;
   }
 
@@ -177,11 +166,9 @@ const BuscasPopulares = (() => {
     const estamosNoIndex = paginaAtual.endsWith("/") || paginaAtual.endsWith("/index.html");
 
     if (estamosNoIndex) {
-      if (programa) {
-        window.location.href = `pages/programa.html?programa=${encodeURIComponent(programa)}&q=${encodeURIComponent(termo)}`;
-      } else {
-        window.location.href = `pages/resultado-busca.html?q=${encodeURIComponent(termo)}`;
-      }
+      window.location.href = programa
+        ? `pages/programa.html?programa=${encodeURIComponent(programa)}&q=${encodeURIComponent(termo)}`
+        : `pages/resultado-busca.html?q=${encodeURIComponent(termo)}`;
       return;
     }
 
@@ -191,7 +178,7 @@ const BuscasPopulares = (() => {
   }
 
   function adicionarEventos(container) {
-    if (container.dataset.buscasPopularesEventos === "1") return;
+    if (!container || container.dataset.buscasPopularesEventos === "1") return;
     container.dataset.buscasPopularesEventos = "1";
 
     container.addEventListener("click", (event) => {
@@ -217,31 +204,51 @@ const BuscasPopulares = (() => {
     return secao;
   }
 
-  function renderizarHome() {
-    const secao = criarSecaoInicial();
-    if (!secao) return;
-
+  function renderizarConteudoHome(secao, itens, global = false) {
     secao.innerHTML = "";
-
     const geral = document.createElement("div");
     geral.className = "buscas-populares-geral";
 
     const titulo = document.createElement("h2");
     titulo.className = "buscas-populares-titulo";
     titulo.textContent = "Buscas populares";
-
     geral.appendChild(titulo);
-    geral.appendChild(criarLista(obterGerais()));
+
+    const subtitulo = document.createElement("span");
+    subtitulo.className = "buscas-populares-origem";
+    subtitulo.textContent = global
+      ? "Mais pesquisados no catálogo nos últimos 30 dias"
+      : "Sugestões e buscas deste navegador";
+    geral.appendChild(subtitulo);
+
+    geral.appendChild(criarLista(itens));
     secao.appendChild(geral);
-    adicionarEventos(secao);
   }
 
-  function renderizarPrograma(programa) {
-    const nomePrograma = nomeProgramaSeguro(programa);
-    if (!nomePrograma) return;
+  function renderizarHome() {
+    const secao = criarSecaoInicial();
+    if (!secao) return;
 
+    adicionarEventos(secao);
+    renderizarConteudoHome(secao, obterGerais(), false);
+
+    if (typeof AnalyticsGlobal === "undefined" || !AnalyticsGlobal.estaConfigurado()) return;
+
+    AnalyticsGlobal.obterPopularesGerais(LIMITE_GERAL)
+      .then((dados) => {
+        if (!dados?.length) return;
+        renderizarConteudoHome(
+          secao,
+          normalizarRespostaGlobal(dados, PADROES.geral, LIMITE_GERAL),
+          true
+        );
+      })
+      .catch((erro) => console.warn("Nao foi possivel atualizar buscas populares globais:", erro));
+  }
+
+  function garantirSecaoPrograma() {
     const searchBar = document.querySelector(".pagina-resultados .search-bar");
-    if (!searchBar) return;
+    if (!searchBar) return null;
 
     let secao = document.getElementById("buscasPopularesPrograma");
     if (!secao) {
@@ -249,17 +256,44 @@ const BuscasPopulares = (() => {
       secao.id = "buscasPopularesPrograma";
       secao.className = "buscas-populares-contexto";
       searchBar.insertAdjacentElement("afterend", secao);
-      adicionarEventos(secao);
     }
+    adicionarEventos(secao);
+    return secao;
+  }
 
+  function renderizarConteudoPrograma(secao, programa, itens, global = false) {
     secao.innerHTML = "";
-
     const titulo = document.createElement("span");
     titulo.className = "buscas-populares-contexto-titulo";
-    titulo.textContent = `Mais buscados em ${nomePrograma}`;
-
+    titulo.textContent = global
+      ? `Mais buscados em ${programa} nos últimos 30 dias`
+      : `Mais buscados em ${programa}`;
     secao.appendChild(titulo);
-    secao.appendChild(criarLista(obterPorPrograma(nomePrograma), nomePrograma));
+    secao.appendChild(criarLista(itens, programa));
+  }
+
+  function renderizarPrograma(programa) {
+    const nome = String(programa || "").trim();
+    if (!nome) return;
+
+    const secao = garantirSecaoPrograma();
+    if (!secao) return;
+
+    renderizarConteudoPrograma(secao, nome, obterPorPrograma(nome), false);
+
+    if (typeof AnalyticsGlobal === "undefined" || !AnalyticsGlobal.estaConfigurado()) return;
+
+    AnalyticsGlobal.obterPopularesPrograma(nome, LIMITE_PROGRAMA)
+      .then((dados) => {
+        if (!dados?.length) return;
+        renderizarConteudoPrograma(
+          secao,
+          nome,
+          normalizarRespostaGlobal(dados, PADROES.programas[nome] || [], LIMITE_PROGRAMA),
+          true
+        );
+      })
+      .catch((erro) => console.warn("Nao foi possivel atualizar buscas populares do programa:", erro));
   }
 
   return {
