@@ -43,10 +43,32 @@ const SearchEngine = (() => {
     return texto.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
 
+  // Correspondência por palavra/expressão completa. Evita falsos positivos como
+  // "sus" em "sustentabilidade" e "ato" em "candidato".
   function contemTermo(texto, termo) {
     if (!texto || !termo) return false;
-    const padrao = new RegExp(`(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`, "u");
+    const padrao = new RegExp(
+      `(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`,
+      "u"
+    );
     return padrao.test(texto);
+  }
+
+  // Aceita somente prefixo de palavra para o texto que o usuário realmente digitou.
+  // Isso mantém buscas como "agricult" -> "agricultura", sem aplicar aproximação
+  // a sinônimos e termos relacionados.
+  function contemPrefixoPalavra(texto, termo) {
+    if (!texto || !termo || termo.length < 4) return false;
+    const padrao = new RegExp(
+      `(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}`,
+      "u"
+    );
+    return padrao.test(texto);
+  }
+
+  function podeUsarPrefixo(expansao, termo) {
+    const tipo = String(expansao?.tipo || "").toLowerCase();
+    return termo.length >= 4 && (tipo === "original" || tipo === "frase");
   }
 
   function separarIds(valor) {
@@ -61,7 +83,10 @@ const SearchEngine = (() => {
 
   function contarOcorrencias(texto, termo) {
     if (!texto || !termo) return 0;
-    const padrao = new RegExp(`(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`, "gu");
+    const padrao = new RegExp(
+      `(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`,
+      "gu"
+    );
     return [...texto.matchAll(padrao)].length;
   }
 
@@ -71,11 +96,12 @@ const SearchEngine = (() => {
     if (!texto || !termo) return 0;
 
     let score = 0;
+
     if (texto === termo) {
       score = pesoCampo * 2;
     } else if (contemTermo(texto, termo)) {
       score = pesoCampo;
-    } else if (termo.length >= 3 && texto.includes(termo)) {
+    } else if (podeUsarPrefixo(expansao, termo) && contemPrefixoPalavra(texto, termo)) {
       score = pesoCampo * 0.55;
     } else {
       return 0;
@@ -163,7 +189,8 @@ const SearchEngine = (() => {
     if (palavrasOriginais.length > 1) {
       const textoCompleto = normalizar(Object.values(registro).join(" "));
       const quantidadeEncontrada = palavrasOriginais.filter((palavra) =>
-        contemTermo(textoCompleto, palavra) || (palavra.length >= 3 && textoCompleto.includes(palavra))
+        contemTermo(textoCompleto, palavra) ||
+        (palavra.length >= 4 && contemPrefixoPalavra(textoCompleto, palavra))
       ).length;
 
       if (quantidadeEncontrada === palavrasOriginais.length) {
