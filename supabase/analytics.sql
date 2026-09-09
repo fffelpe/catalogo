@@ -227,7 +227,7 @@ as $$
   limit greatest(1, least(coalesce(p_limite, 20), 100));
 $$;
 
--- Remove permissoes implicitas de PUBLIC e libera somente EXECUTE das RPCs necessarias.
+-- Remove permissoes implicitas de PUBLIC.
 revoke all on function public.catalogo_normalizar_texto(text) from public, anon, authenticated;
 revoke all on function public.registrar_busca_catalogo(text, text, integer, text) from public;
 revoke all on function public.catalogo_populares_geral(integer, integer) from public;
@@ -235,8 +235,11 @@ revoke all on function public.catalogo_populares_programa(text, integer, integer
 revoke all on function public.catalogo_buscas_sem_resultado(integer, integer) from public;
 revoke all on function public.catalogo_programas_mais_consultados(integer, integer) from public;
 
+-- Visitantes anonimos podem somente registrar buscas e ler rankings agregados.
 grant execute on function public.registrar_busca_catalogo(text, text, integer, text) to anon, authenticated;
 grant execute on function public.catalogo_populares_geral(integer, integer) to anon, authenticated;
 grant execute on function public.catalogo_populares_programa(text, integer, integer) to anon, authenticated;
-grant execute on function public.catalogo_buscas_sem_resultado(integer, integer) to anon, authenticated;
-grant execute on function public.catalogo_programas_mais_consultados(integer, integer) to anon, authenticated;
+
+-- Relatorios editoriais mais sensiveis ficam reservados para area autenticada futura.
+grant execute on function public.catalogo_buscas_sem_resultado(integer, integer) to authenticated, service_role;
+grant execute on function public.catalogo_programas_mais_consultados(integer, integer) to authenticated, service_role;
