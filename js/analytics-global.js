@@ -124,7 +124,8 @@ const AnalyticsGlobal = (() => {
       p_dedupe_token: token
     });
 
-    return retorno !== null;
+    // A RPC retorna false quando a mesma sessao repete o mesmo termo na janela de 10 min.
+    return retorno === true;
   }
 
   async function obterPopularesGerais(limite = 6, dias) {
@@ -147,28 +148,10 @@ const AnalyticsGlobal = (() => {
     return Array.isArray(dados) ? dados : [];
   }
 
-  async function obterBuscasSemResultado(limite = 20, dias) {
-    const dados = await rpc("catalogo_buscas_sem_resultado", {
-      p_dias: Number(dias) || Number(config().windowDays) || 30,
-      p_limite: Math.max(1, Math.min(Number(limite) || 20, 100))
-    });
-    return Array.isArray(dados) ? dados : [];
-  }
-
-  async function obterProgramasMaisConsultados(limite = 20, dias) {
-    const dados = await rpc("catalogo_programas_mais_consultados", {
-      p_dias: Number(dias) || Number(config().windowDays) || 30,
-      p_limite: Math.max(1, Math.min(Number(limite) || 20, 100))
-    });
-    return Array.isArray(dados) ? dados : [];
-  }
-
   return {
     estaConfigurado,
     registrarBusca,
     obterPopularesGerais,
-    obterPopularesPrograma,
-    obterBuscasSemResultado,
-    obterProgramasMaisConsultados
+    obterPopularesPrograma
   };
 })();
