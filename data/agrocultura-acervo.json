@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T13:56:31.418Z",
+  "generatedAt": "2026-09-14T19:07:27.971Z",
   "parcial": true,
   "errosFontes": {
     "vts": null,
@@ -21,12 +21,40 @@
     ]
   },
   "resumo": {
-    "materiais": 1784,
-    "vts": 729,
-    "noticias": 357,
+    "materiais": 1788,
+    "vts": 731,
+    "noticias": 359,
     "coberturas": 1091
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B004318",
+      "ids": [
+        "1452B004318"
+      ],
+      "descricao": "VT DESCASCADOR DE CAFÉ",
+      "reporter": "LARISSA BARCELOS",
+      "data": "13/09/2026",
+      "local": "",
+      "pgm": "380"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005456",
+      "ids": [
+        "1452B005456"
+      ],
+      "descricao": "VT EXPOINTER",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "13/09/2026",
+      "local": "",
+      "pgm": "380"
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -10452,6 +10480,34 @@
     }
   ],
   "noticias": [
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005425",
+      "ids": [
+        "1452B005425"
+      ],
+      "descricao": "APICULTURA",
+      "reporter": "KAROL VIEIRA",
+      "data": "13/09/2026",
+      "local": "PERNAMBUCO - PE",
+      "pgm": "380"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005432",
+      "ids": [
+        "1452B005432"
+      ],
+      "descricao": "CLIMA SAFRA CAFÉ",
+      "reporter": "JOÃO RAFAEL",
+      "data": "13/09/2026",
+      "local": "ANDRADAS - MG",
+      "pgm": "380"
+    },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
