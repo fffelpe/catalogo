@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-15T15:10:55.116Z",
-  "parcial": true,
+  "generatedAt": "2026-09-15T19:01:10.619Z",
+  "parcial": false,
   "errosFontes": {
     "vts": null,
     "noticias": null,
     "imagens": null,
-    "naoExibidas": "The caller does not have permission"
+    "naoExibidas": null
   },
   "fontes": {
     "vts": [
@@ -21,10 +21,10 @@
     ]
   },
   "resumo": {
-    "materiais": 1788,
+    "materiais": 2016,
     "vts": 731,
     "noticias": 359,
-    "coberturas": 1091
+    "coberturas": 1352
   },
   "vts": [
     {
@@ -15899,6 +15899,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005138",
+      "ids": [
+        "1452B005138"
+      ],
+      "descricao": "compostagem",
+      "reporter": "CAROLINA VIGNALI",
+      "data": "4/17/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B005100",
@@ -15909,6 +15923,20 @@
       "reporter": "",
       "data": "12/04/2026",
       "local": "PARANÁ - PR / RIO GRANDE DO SUL - RS",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005120",
+      "ids": [
+        "1452B005120"
+      ],
+      "descricao": "MIX FOR CARBON",
+      "reporter": "FABIANO PEREIRA",
+      "data": "4/12/2026",
+      "local": "",
       "pgm": ""
     },
     {
@@ -15927,6 +15955,202 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005110",
+      "ids": [
+        "1452B005110"
+      ],
+      "descricao": "estação experimental salmonicultura",
+      "reporter": "FABIANO PEREIRA",
+      "data": "4/2/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005111",
+      "ids": [
+        "1452B005111"
+      ],
+      "descricao": "pesquisa queijo artesanal serrano",
+      "reporter": "FABIANO PEREIRA",
+      "data": "4/2/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005108",
+      "ids": [
+        "1452B005108"
+      ],
+      "descricao": "dona maria reliquias",
+      "reporter": "",
+      "data": "4/1/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005092",
+      "ids": [
+        "1452B005092"
+      ],
+      "descricao": "pastel torta capixaba",
+      "reporter": "",
+      "data": "3/30/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005084",
+      "ids": [
+        "1452B005084"
+      ],
+      "descricao": "dia de campo_arroz mirim doce",
+      "reporter": "",
+      "data": "3/25/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005085",
+      "ids": [
+        "1452B005085"
+      ],
+      "descricao": "experience day soja",
+      "reporter": "",
+      "data": "3/25/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005079",
+      "ids": [
+        "1452B005079"
+      ],
+      "descricao": "hortaliças dona emma",
+      "reporter": "",
+      "data": "3/25/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005091",
+      "ids": [
+        "1452B005091"
+      ],
+      "descricao": "palestra escola_abelhas sem ferrão",
+      "reporter": "",
+      "data": "3/25/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005082",
+      "ids": [
+        "1452B005082"
+      ],
+      "descricao": "pepino gigante 2",
+      "reporter": "",
+      "data": "3/25/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005083",
+      "ids": [
+        "1452B005083"
+      ],
+      "descricao": "projeto flor e ser",
+      "reporter": "",
+      "data": "3/25/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005059",
+      "ids": [
+        "1452B005059"
+      ],
+      "descricao": "agroecologia",
+      "reporter": "",
+      "data": "3/23/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005060",
+      "ids": [
+        "1452B005060"
+      ],
+      "descricao": "papel de inhame e gengibre",
+      "reporter": "",
+      "data": "3/23/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005051",
+      "ids": [
+        "1452B005051"
+      ],
+      "descricao": "galinha dos ovos de ouro",
+      "reporter": "",
+      "data": "3/19/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005050",
+      "ids": [
+        "1452B005050"
+      ],
+      "descricao": "queijaria drive thru",
+      "reporter": "",
+      "data": "3/18/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004948",
@@ -15937,6 +16161,62 @@
       "reporter": "",
       "data": "08/03/2026",
       "local": "ESPÍRITO SANTO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005022",
+      "ids": [
+        "1452B005022"
+      ],
+      "descricao": "gamelas sell horst",
+      "reporter": "",
+      "data": "2/27/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005018",
+      "ids": [
+        "1452B005018"
+      ],
+      "descricao": "herbicida natural tomate",
+      "reporter": "",
+      "data": "2/27/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005019",
+      "ids": [
+        "1452B005019"
+      ],
+      "descricao": "petrolandia",
+      "reporter": "",
+      "data": "2/27/2026",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005017",
+      "ids": [
+        "1452B005017"
+      ],
+      "descricao": "vinicola thera",
+      "reporter": "",
+      "data": "2/27/2026",
+      "local": "",
       "pgm": ""
     },
     {
@@ -16021,6 +16301,20 @@
       "reporter": "",
       "data": "09/02/2026",
       "local": "ESPÍRITO SANTO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005063",
+      "ids": [
+        "1452B005063"
+      ],
+      "descricao": "limão siciliano",
+      "reporter": "",
+      "data": "1/26/2026",
+      "local": "",
       "pgm": ""
     },
     {
@@ -16473,6 +16767,90 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004733",
+      "ids": [
+        "1452B004733"
+      ],
+      "descricao": "abelhas primavera",
+      "reporter": "",
+      "data": "10/27/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004732",
+      "ids": [
+        "1452B004732"
+      ],
+      "descricao": "jatobá cultivo",
+      "reporter": "",
+      "data": "10/27/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004735",
+      "ids": [
+        "1452B004735"
+      ],
+      "descricao": "juventude rural",
+      "reporter": "",
+      "data": "10/27/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004736",
+      "ids": [
+        "1452B004736"
+      ],
+      "descricao": "nova variedade cana",
+      "reporter": "",
+      "data": "10/27/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004734",
+      "ids": [
+        "1452B004734"
+      ],
+      "descricao": "plantio abacaxi",
+      "reporter": "",
+      "data": "10/27/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B005022",
+      "ids": [
+        "1452B005022"
+      ],
+      "descricao": "receita de familia_taiadella",
+      "reporter": "",
+      "data": "10/27/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004723",
@@ -16483,6 +16861,146 @@
       "reporter": "",
       "data": "24/10/2025",
       "local": "RIO GRANDE DO SUL",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004733",
+      "ids": [
+        "1452B004733"
+      ],
+      "descricao": "festa do pequi",
+      "reporter": "",
+      "data": "10/23/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004721",
+      "ids": [
+        "1452B004721"
+      ],
+      "descricao": "apiario sustentavel",
+      "reporter": "",
+      "data": "10/22/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004720",
+      "ids": [
+        "1452B004720"
+      ],
+      "descricao": "palmeira juçara parte 2",
+      "reporter": "",
+      "data": "10/22/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004722",
+      "ids": [
+        "1452B004722"
+      ],
+      "descricao": "produção urbana de baunilha",
+      "reporter": "",
+      "data": "10/22/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004715",
+      "ids": [
+        "1452B004715"
+      ],
+      "descricao": "abertura colheita cebola",
+      "reporter": "",
+      "data": "10/21/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004718",
+      "ids": [
+        "1452B004718"
+      ],
+      "descricao": "arroz safra alta preço baixo",
+      "reporter": "",
+      "data": "10/21/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004714",
+      "ids": [
+        "1452B004714"
+      ],
+      "descricao": "casamento copo de leite",
+      "reporter": "",
+      "data": "10/21/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004716",
+      "ids": [
+        "1452B004716"
+      ],
+      "descricao": "colheita copo de leite",
+      "reporter": "",
+      "data": "10/21/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004729",
+      "ids": [
+        "1452B004729"
+      ],
+      "descricao": "crianças mercado publico",
+      "reporter": "",
+      "data": "10/21/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004717",
+      "ids": [
+        "1452B004717"
+      ],
+      "descricao": "crianças mercado publico",
+      "reporter": "",
+      "data": "10/21/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -16553,6 +17071,34 @@
       "reporter": "",
       "data": "14/10/2025",
       "local": "ESPÍRITO SANTO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004705",
+      "ids": [
+        "1452B004705"
+      ],
+      "descricao": "agnolini receita de familia",
+      "reporter": "",
+      "data": "10/13/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004706",
+      "ids": [
+        "1452B004706"
+      ],
+      "descricao": "palmeira juçara",
+      "reporter": "",
+      "data": "10/13/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -16641,6 +17187,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004702",
+      "ids": [
+        "1452B004702"
+      ],
+      "descricao": "boi de estimação",
+      "reporter": "",
+      "data": "10/8/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004684",
@@ -16711,6 +17271,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004692",
+      "ids": [
+        "1452B004692"
+      ],
+      "descricao": "piá do boi",
+      "reporter": "",
+      "data": "10/8/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004681",
@@ -16735,6 +17309,20 @@
       "reporter": "",
       "data": "08/10/2025",
       "local": "MATO GROSSO DO SUL",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004665",
+      "ids": [
+        "1452B004665"
+      ],
+      "descricao": "florada de café",
+      "reporter": "JOÃO RAFAEL",
+      "data": "10/7/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -16777,6 +17365,20 @@
       "reporter": "",
       "data": "06/10/2025",
       "local": "BAHIA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004658",
+      "ids": [
+        "1452B004658"
+      ],
+      "descricao": "juventude rural",
+      "reporter": "VERONICA SALAZAR",
+      "data": "10/6/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -16837,6 +17439,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004621",
+      "ids": [
+        "1452B004621"
+      ],
+      "descricao": "frutas da primavera",
+      "reporter": "",
+      "data": "9/23/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004623",
@@ -16847,6 +17463,48 @@
       "reporter": "",
       "data": "23/09/2025",
       "local": "MINAS GERAIS",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004622",
+      "ids": [
+        "1452B004622"
+      ],
+      "descricao": "especial jabuticabas",
+      "reporter": "",
+      "data": "9/22/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004624",
+      "ids": [
+        "1452B004624"
+      ],
+      "descricao": "mulheres no agro",
+      "reporter": "",
+      "data": "9/22/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004623",
+      "ids": [
+        "1452B004623"
+      ],
+      "descricao": "produção bananas",
+      "reporter": "",
+      "data": "9/22/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -17355,6 +18013,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004544",
+      "ids": [
+        "1452B004544"
+      ],
+      "descricao": "adubação verde epagri",
+      "reporter": "",
+      "data": "9/9/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004537",
+      "ids": [
+        "1452B004537"
+      ],
+      "descricao": "atafona em ibirama",
+      "reporter": "",
+      "data": "9/9/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004543",
@@ -17365,6 +18051,48 @@
       "reporter": "",
       "data": "09/09/2025",
       "local": "SÃO PAULO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004538",
+      "ids": [
+        "1452B004538"
+      ],
+      "descricao": "chimarrão bom retiro",
+      "reporter": "",
+      "data": "9/9/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004539",
+      "ids": [
+        "1452B004539"
+      ],
+      "descricao": "estação experimental itajaí",
+      "reporter": "",
+      "data": "9/9/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004540",
+      "ids": [
+        "1452B004540"
+      ],
+      "descricao": "flor e ser",
+      "reporter": "",
+      "data": "9/9/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -17481,6 +18209,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004541",
+      "ids": [
+        "1452B004541"
+      ],
+      "descricao": "produção de flores trombudo central",
+      "reporter": "",
+      "data": "9/9/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004542",
@@ -17491,6 +18233,20 @@
       "reporter": "",
       "data": "09/09/2025",
       "local": "SANTA CATARINA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004542",
+      "ids": [
+        "1452B004542"
+      ],
+      "descricao": "produção trigo_ queda",
+      "reporter": "",
+      "data": "9/9/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -17635,6 +18391,76 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004492",
+      "ids": [
+        "1452B004492"
+      ],
+      "descricao": "batata doce gigante",
+      "reporter": "",
+      "data": "8/20/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004493",
+      "ids": [
+        "1452B004493"
+      ],
+      "descricao": "curso ovos caipiras",
+      "reporter": "",
+      "data": "8/20/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004495",
+      "ids": [
+        "1452B004495"
+      ],
+      "descricao": "extengrao presidente getulio",
+      "reporter": "",
+      "data": "8/20/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004496",
+      "ids": [
+        "1452B004496"
+      ],
+      "descricao": "pratos duralex coleção",
+      "reporter": "",
+      "data": "8/20/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004497",
+      "ids": [
+        "1452B004497"
+      ],
+      "descricao": "tarifaço madeiras",
+      "reporter": "",
+      "data": "8/20/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004468",
@@ -17719,6 +18545,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004398",
+      "ids": [
+        "1452B004398"
+      ],
+      "descricao": "alerta produtores de açai",
+      "reporter": "",
+      "data": "8/1/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004396",
@@ -17743,6 +18583,20 @@
       "reporter": "",
       "data": "01/08/2025",
       "local": "MINAS GERAIS",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004397",
+      "ids": [
+        "1452B004397"
+      ],
+      "descricao": "preço da carne deve baixar",
+      "reporter": "",
+      "data": "8/1/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -17775,6 +18629,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004399",
+      "ids": [
+        "1452B004399"
+      ],
+      "descricao": "tarifaço",
+      "reporter": "",
+      "data": "8/1/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004396",
+      "ids": [
+        "1452B004396"
+      ],
+      "descricao": "tarifaço_laranjas",
+      "reporter": "",
+      "data": "8/1/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "2457B015432",
@@ -17784,6 +18666,34 @@
       "descricao": "PLANTAÇAO DE CAFE + SAFRA DE CAFE + COLHEITA DE CAFE",
       "reporter": "",
       "data": "31/07/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004392",
+      "ids": [
+        "1452B004392"
+      ],
+      "descricao": "morango do amor",
+      "reporter": "",
+      "data": "7/30/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004381",
+      "ids": [
+        "1452B004381"
+      ],
+      "descricao": "casa do imigrante",
+      "reporter": "",
+      "data": "7/29/2025",
       "local": "",
       "pgm": ""
     },
@@ -17799,6 +18709,146 @@
       "reporter": "",
       "data": "29/07/2025",
       "local": "MATO GROSSO DO SUL",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004383",
+      "ids": [
+        "1452B004383"
+      ],
+      "descricao": "festa agricultor ibirama",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004385",
+      "ids": [
+        "1452B004385"
+      ],
+      "descricao": "festa do agricultor ituporanga",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004384",
+      "ids": [
+        "1452B004384"
+      ],
+      "descricao": "festa do agricultor laurentino",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004378",
+      "ids": [
+        "1452B004378"
+      ],
+      "descricao": "influencer rural",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004387",
+      "ids": [
+        "1452B004387"
+      ],
+      "descricao": "mão de obra legal cebola",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004388",
+      "ids": [
+        "1452B004388"
+      ],
+      "descricao": "orquidário zink",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004389",
+      "ids": [
+        "1452B004389"
+      ],
+      "descricao": "plantio cebola",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004390",
+      "ids": [
+        "1452B004390"
+      ],
+      "descricao": "produção leite_presidente nereu",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004391",
+      "ids": [
+        "1452B004391"
+      ],
+      "descricao": "produção melado",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004380",
+      "ids": [
+        "1452B004380"
+      ],
+      "descricao": "produtor de leite aurora",
+      "reporter": "",
+      "data": "7/29/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -17841,6 +18891,20 @@
       "reporter": "",
       "data": "25/07/2025",
       "local": "SÃO PAULO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004362",
+      "ids": [
+        "1452B004362"
+      ],
+      "descricao": "cacau combu",
+      "reporter": "",
+      "data": "7/24/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -17910,6 +18974,20 @@
       "descricao": "SUSPENSÃO PRODUÇÃO CARNE",
       "reporter": "",
       "data": "16/07/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004350",
+      "ids": [
+        "1452B004350"
+      ],
+      "descricao": "encontro produtores nogueira noz pecan",
+      "reporter": "",
+      "data": "7/15/2025",
       "local": "",
       "pgm": ""
     },
@@ -18036,6 +19114,62 @@
       "descricao": "EXPOQUEIJO PREMIAÇÃO",
       "reporter": "",
       "data": "01/07/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004284",
+      "ids": [
+        "1452B004284"
+      ],
+      "descricao": "bar dona alzira",
+      "reporter": "",
+      "data": "6/26/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004286",
+      "ids": [
+        "1452B004286"
+      ],
+      "descricao": "cavalgada aparecida",
+      "reporter": "",
+      "data": "6/26/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004288",
+      "ids": [
+        "1452B004288"
+      ],
+      "descricao": "produção morangos",
+      "reporter": "",
+      "data": "6/26/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004289",
+      "ids": [
+        "1452B004289"
+      ],
+      "descricao": "produção tangerinas",
+      "reporter": "",
+      "data": "6/26/2025",
       "local": "",
       "pgm": ""
     },
@@ -18573,6 +19707,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004157",
+      "ids": [
+        "1452B004157"
+      ],
+      "descricao": "rota turistica das cervejas artesanais",
+      "reporter": "",
+      "data": "6/3/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004134",
@@ -18657,6 +19805,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004085",
+      "ids": [
+        "1452B004085"
+      ],
+      "descricao": "carne na lata",
+      "reporter": "",
+      "data": "5/19/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B004071",
@@ -18667,6 +19829,20 @@
       "reporter": "",
       "data": "16/05/2025",
       "local": "ESPÍRITO SANTO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B004072",
+      "ids": [
+        "1452B004072"
+      ],
+      "descricao": "agroalambique cachaçaria",
+      "reporter": "",
+      "data": "5/14/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -19035,6 +20211,104 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003996",
+      "ids": [
+        "1452B003996"
+      ],
+      "descricao": "filme degradavel a partir de residuos de uva",
+      "reporter": "",
+      "data": "4/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003997",
+      "ids": [
+        "1452B003997"
+      ],
+      "descricao": "monitoramente peixes rio são francisco",
+      "reporter": "",
+      "data": "4/29/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003990",
+      "ids": [
+        "1452B003990"
+      ],
+      "descricao": "agricultura edelin schlesser",
+      "reporter": "",
+      "data": "4/28/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003991",
+      "ids": [
+        "1452B003991"
+      ],
+      "descricao": "balanço safra arroz",
+      "reporter": "",
+      "data": "4/28/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003992",
+      "ids": [
+        "1452B003992"
+      ],
+      "descricao": "economia no campo",
+      "reporter": "",
+      "data": "4/28/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003993",
+      "ids": [
+        "1452B003993"
+      ],
+      "descricao": "manejo no pasto inverno",
+      "reporter": "",
+      "data": "4/28/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003994",
+      "ids": [
+        "1452B003994"
+      ],
+      "descricao": "opa 94 anos",
+      "reporter": "",
+      "data": "4/28/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003991",
@@ -19045,6 +20319,48 @@
       "reporter": "",
       "data": "28/04/2025",
       "local": "SANTA CATARINA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003995",
+      "ids": [
+        "1452B003995"
+      ],
+      "descricao": "schuatz pudim banho maria",
+      "reporter": "",
+      "data": "4/28/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003985",
+      "ids": [
+        "1452B003985"
+      ],
+      "descricao": "expogrande",
+      "reporter": "",
+      "data": "4/24/2025",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003984",
+      "ids": [
+        "1452B003984"
+      ],
+      "descricao": "marketing dos feirantes",
+      "reporter": "",
+      "data": "4/24/2025",
+      "local": "",
       "pgm": ""
     },
     {
@@ -21149,6 +22465,48 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003322",
+      "ids": [
+        "1452B003322"
+      ],
+      "descricao": "A++ tve es_vt abacate do espirito santo_19_08",
+      "reporter": "",
+      "data": "8/19/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003325",
+      "ids": [
+        "1452B003325"
+      ],
+      "descricao": "B tve ms_vt leite do ms_19_08_ing",
+      "reporter": "",
+      "data": "8/19/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003326",
+      "ids": [
+        "1452B003326"
+      ],
+      "descricao": "b tve ms_vt semi_confinamento_ms_19_08_ing",
+      "reporter": "",
+      "data": "8/19/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003324",
@@ -21186,6 +22544,62 @@
       "descricao": "PÃO DE QUEIJO",
       "reporter": "",
       "data": "19/08/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003319",
+      "ids": [
+        "1452B003319"
+      ],
+      "descricao": "A- rba tv _vt atafonas_sc_16_08_ing",
+      "reporter": "",
+      "data": "8/16/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003321",
+      "ids": [
+        "1452B003321"
+      ],
+      "descricao": "A++ rba tv _ vt farinha santos_sc_16_08_ing",
+      "reporter": "",
+      "data": "8/16/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003298",
+      "ids": [
+        "1452B003298"
+      ],
+      "descricao": "rit tv_vt quebra safra de graos_14_08_ing",
+      "reporter": "",
+      "data": "8/14/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003304",
+      "ids": [
+        "1452B003304"
+      ],
+      "descricao": "rit tv_vt quebra safra de graos_14_08_ing",
+      "reporter": "",
+      "data": "8/14/2024",
       "local": "",
       "pgm": ""
     },
@@ -21233,6 +22647,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003276",
+      "ids": [
+        "1452B003276"
+      ],
+      "descricao": "tv ulbra_vt lançamento exponter_12_08",
+      "reporter": "",
+      "data": "8/12/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003277",
+      "ids": [
+        "1452B003277"
+      ],
+      "descricao": "tv ulbra_vt preparativos expointer_12_08_ing",
+      "reporter": "",
+      "data": "8/12/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003264",
@@ -21257,6 +22699,48 @@
       "reporter": "",
       "data": "11/08/2024",
       "local": "SANTA CATARINA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003273",
+      "ids": [
+        "1452B003273"
+      ],
+      "descricao": "BA ba tv_vt criadouro rieger_09_08_ing",
+      "reporter": "",
+      "data": "8/9/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003272",
+      "ids": [
+        "1452B003272"
+      ],
+      "descricao": "BA rba tv _ vt rota cachaças_09_08_ing",
+      "reporter": "",
+      "data": "8/9/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003275",
+      "ids": [
+        "1452B003275"
+      ],
+      "descricao": "rba tv_vt gansos_09_08_ing",
+      "reporter": "",
+      "data": "8/9/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -21289,6 +22773,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003258",
+      "ids": [
+        "1452B003258"
+      ],
+      "descricao": "tv rit_ vt dolar soja_ms_05_08_ing",
+      "reporter": "",
+      "data": "8/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003259",
+      "ids": [
+        "1452B003259"
+      ],
+      "descricao": "tv rit_vt robotica_escola agropecuária_05_08_ing",
+      "reporter": "",
+      "data": "8/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003189",
@@ -21313,6 +22825,62 @@
       "reporter": "",
       "data": "04/08/2024",
       "local": "SANTA CATARINA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003243",
+      "ids": [
+        "1452B003243"
+      ],
+      "descricao": "tv rba_plano safra_rio do sul_02_08_ing",
+      "reporter": "",
+      "data": "8/2/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003244",
+      "ids": [
+        "1452B003244"
+      ],
+      "descricao": "tv rba_vt batata doce gigante_02_08_ing",
+      "reporter": "",
+      "data": "8/2/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003245",
+      "ids": [
+        "1452B003245"
+      ],
+      "descricao": "tv rba_vt bike de madeira_02_08_ing",
+      "reporter": "",
+      "data": "8/2/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003246",
+      "ids": [
+        "1452B003246"
+      ],
+      "descricao": "tv rba_vt carro movido a lenha_02_08_ing",
+      "reporter": "",
+      "data": "8/2/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -21425,6 +22993,118 @@
       "reporter": "",
       "data": "24/07/2024",
       "local": "SANTA CATARINA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003222",
+      "ids": [
+        "1452B003222"
+      ],
+      "descricao": "tv rba_vt coelha gigante_24_07_ing",
+      "reporter": "",
+      "data": "7/24/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003223",
+      "ids": [
+        "1452B003223"
+      ],
+      "descricao": "tv rba_vt drone imbuia_24_07_ing",
+      "reporter": "",
+      "data": "7/24/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003224",
+      "ids": [
+        "1452B003224"
+      ],
+      "descricao": "tv rba_vt porcos gigantes_24_07_ing",
+      "reporter": "",
+      "data": "7/24/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003225",
+      "ids": [
+        "1452B003225"
+      ],
+      "descricao": "tv rba_vt tomates na palmeira_24_07_ing",
+      "reporter": "",
+      "data": "7/24/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003221",
+      "ids": [
+        "1452B003221"
+      ],
+      "descricao": "tv rba_vt urubu no galinheiro_24_07_ing",
+      "reporter": "",
+      "data": "7/24/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003227",
+      "ids": [
+        "1452B003227"
+      ],
+      "descricao": "tve es_vt cafés especiais_24_07_ing",
+      "reporter": "",
+      "data": "7/24/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003228",
+      "ids": [
+        "1452B003228"
+      ],
+      "descricao": "tve es_vt gengibre_24_07_ing",
+      "reporter": "",
+      "data": "7/24/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003226",
+      "ids": [
+        "1452B003226"
+      ],
+      "descricao": "tve es_vt inhame_24_07_ing",
+      "reporter": "",
+      "data": "7/24/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -21794,6 +23474,118 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003189",
+      "ids": [
+        "1452B003189"
+      ],
+      "descricao": "tv rba_vt biocarvao_15_07_ING",
+      "reporter": "",
+      "data": "7/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003190",
+      "ids": [
+        "1452B003190"
+      ],
+      "descricao": "tv rba_vt colecao camelias_15_07_ING",
+      "reporter": "",
+      "data": "7/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003191",
+      "ids": [
+        "1452B003191"
+      ],
+      "descricao": "tv rba_vt urubu no galinheiro_15_07_ING",
+      "reporter": "",
+      "data": "7/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003192",
+      "ids": [
+        "1452B003192"
+      ],
+      "descricao": "tve ms_vt app iagro_15_07_ING",
+      "reporter": "",
+      "data": "7/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003193",
+      "ids": [
+        "1452B003193"
+      ],
+      "descricao": "tve ms_vt biogas_15_07_ING",
+      "reporter": "",
+      "data": "7/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003194",
+      "ids": [
+        "1452B003194"
+      ],
+      "descricao": "tve ms_vt confinamento_15_07_ING",
+      "reporter": "",
+      "data": "7/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003195",
+      "ids": [
+        "1452B003195"
+      ],
+      "descricao": "tve ms_vt feno de capim_15_07_ING",
+      "reporter": "",
+      "data": "7/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003188",
+      "ids": [
+        "1452B003188"
+      ],
+      "descricao": "tve ms_vt motorista app_15_07_ING",
+      "reporter": "",
+      "data": "7/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003127",
@@ -21836,6 +23628,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003146",
+      "ids": [
+        "1452B003146"
+      ],
+      "descricao": "catve_vt preparativos show rural de inverno_pr_12_07_ing",
+      "reporter": "",
+      "data": "7/12/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003127",
@@ -21846,6 +23652,20 @@
       "reporter": "",
       "data": "08/07/2024",
       "local": "PARANÁ",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003136",
+      "ids": [
+        "1452B003136"
+      ],
+      "descricao": "tv cultura paulista_vt ferrovia e café_chico lourenço_08_07_ing",
+      "reporter": "",
+      "data": "7/8/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -21892,6 +23712,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003127",
+      "ids": [
+        "1452B003127"
+      ],
+      "descricao": "catve_vt_quebra safra de milho_pr_05_07_ing",
+      "reporter": "",
+      "data": "7/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003125",
@@ -21906,6 +23740,146 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003129",
+      "ids": [
+        "1452B003129"
+      ],
+      "descricao": "tv rit_vt assessoria rural_05_07_ing",
+      "reporter": "",
+      "data": "7/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003130",
+      "ids": [
+        "1452B003130"
+      ],
+      "descricao": "tv rit_vt dia do chocolate_05_07_ing",
+      "reporter": "",
+      "data": "7/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003131",
+      "ids": [
+        "1452B003131"
+      ],
+      "descricao": "tv rit_vt piscicultura_ms_05_07_ing",
+      "reporter": "",
+      "data": "7/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003132",
+      "ids": [
+        "1452B003132"
+      ],
+      "descricao": "tv surui_ vt novo frigorifico_aumento exportação de carne_rondonia_matheus afonso_05_07_ing",
+      "reporter": "",
+      "data": "7/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003121",
+      "ids": [
+        "1452B003121"
+      ],
+      "descricao": "COM GC _ tv usp_vt sequestro carboco_fabiano pereira_04_07",
+      "reporter": "",
+      "data": "7/4/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003122",
+      "ids": [
+        "1452B003122"
+      ],
+      "descricao": "COM GC_ tv usp_vt sub-produtos uva_fabiano pereira_04_07",
+      "reporter": "",
+      "data": "7/4/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003124",
+      "ids": [
+        "1452B003124"
+      ],
+      "descricao": "tv usp_vt flores do futuro_fabiano pereira_04_07",
+      "reporter": "",
+      "data": "7/4/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003116",
+      "ids": [
+        "1452B003116"
+      ],
+      "descricao": "B - ROTACAO - tv rit_vt agroshow_ms_01_07_ing",
+      "reporter": "",
+      "data": "7/1/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003118",
+      "ids": [
+        "1452B003118"
+      ],
+      "descricao": "N tv rit_vt horto medicinal_01_07_ing",
+      "reporter": "",
+      "data": "7/1/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003128",
+      "ids": [
+        "1452B003128"
+      ],
+      "descricao": "N tv rit_vt horto medicinal_01_07_ing",
+      "reporter": "",
+      "data": "7/1/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003103",
@@ -21916,6 +23890,104 @@
       "reporter": "",
       "data": "28/06/2024",
       "local": "SÃO PAULO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003120",
+      "ids": [
+        "1452B003120"
+      ],
+      "descricao": "A - CAPITAL DA CEBOLA - tv rba_vt inicio semeadura cebola_27_06_ING",
+      "reporter": "",
+      "data": "6/27/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003104",
+      "ids": [
+        "1452B003104"
+      ],
+      "descricao": "tv rba_ vt casal rural_bodas de vinho_27_06_ING",
+      "reporter": "",
+      "data": "6/27/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003105",
+      "ids": [
+        "1452B003105"
+      ],
+      "descricao": "tv rba_vt casa azul agrolandia_27_06_ING",
+      "reporter": "",
+      "data": "6/27/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003107",
+      "ids": [
+        "1452B003107"
+      ],
+      "descricao": "tv rba_vt colheita tangerina_27_06_ING",
+      "reporter": "",
+      "data": "6/27/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003108",
+      "ids": [
+        "1452B003108"
+      ],
+      "descricao": "tv rba_vt equinos_27_06_ING",
+      "reporter": "",
+      "data": "6/27/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003109",
+      "ids": [
+        "1452B003109"
+      ],
+      "descricao": "tv rba_vt inicio semEadura safra cebola_27_06_ING",
+      "reporter": "",
+      "data": "6/27/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003106",
+      "ids": [
+        "1452B003106"
+      ],
+      "descricao": "tv rba_vt prejuizos agricultura_27_06_ING",
+      "reporter": "",
+      "data": "6/27/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -22004,6 +24076,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003088",
+      "ids": [
+        "1452B003088"
+      ],
+      "descricao": "tv rit_vt_milho queda_ms_21_06_ing",
+      "reporter": "",
+      "data": "6/21/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003085",
+      "ids": [
+        "1452B003085"
+      ],
+      "descricao": "tv ulbra_vt enoturismo_rs_20_06_ing",
+      "reporter": "",
+      "data": "6/20/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003078",
@@ -22041,6 +24141,118 @@
       "descricao": "RECEITA SABÃO CASEIRO",
       "reporter": "",
       "data": "18/06/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003078",
+      "ids": [
+        "1452B003078"
+      ],
+      "descricao": "tv rit_vt rally da safra_milho_ms_18_06_ING",
+      "reporter": "",
+      "data": "6/18/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003075",
+      "ids": [
+        "1452B003075"
+      ],
+      "descricao": "tve ms_vt caminhoneiros_18_06_ING",
+      "reporter": "",
+      "data": "6/18/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003079",
+      "ids": [
+        "1452B003079"
+      ],
+      "descricao": "tve ms_vt feno de capim_18_06_ING",
+      "reporter": "",
+      "data": "6/18/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003070",
+      "ids": [
+        "1452B003070"
+      ],
+      "descricao": "OK tv rba_vt plantio direto_17_06_ING",
+      "reporter": "",
+      "data": "6/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003071",
+      "ids": [
+        "1452B003071"
+      ],
+      "descricao": "tv rba_vt festa do leite_17_06_ING",
+      "reporter": "",
+      "data": "6/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003072",
+      "ids": [
+        "1452B003072"
+      ],
+      "descricao": "tv rba_vt maçã gourmet_17_06_ING",
+      "reporter": "",
+      "data": "6/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003073",
+      "ids": [
+        "1452B003073"
+      ],
+      "descricao": "tv rba_vt receita sabao de caseiro_17_06_ING",
+      "reporter": "",
+      "data": "6/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003074",
+      "ids": [
+        "1452B003074"
+      ],
+      "descricao": "tvf rba_vt turismo rural_17_06_ING",
+      "reporter": "",
+      "data": "6/17/2024",
       "local": "",
       "pgm": ""
     },
@@ -22116,6 +24328,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003059",
+      "ids": [
+        "1452B003059"
+      ],
+      "descricao": "tve rs_vt estragos agricultura_13_06_ing",
+      "reporter": "",
+      "data": "6/13/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003015",
@@ -22158,6 +24384,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003042",
+      "ids": [
+        "1452B003042"
+      ],
+      "descricao": "tv rit_vt capim elefante_ms_07_06_ing",
+      "reporter": "",
+      "data": "6/7/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003043",
+      "ids": [
+        "1452B003043"
+      ],
+      "descricao": "tv rit_vt rota rural_ms_07_06_ing",
+      "reporter": "",
+      "data": "6/7/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003037",
@@ -22167,6 +24421,48 @@
       "descricao": "PÃO DE QUEIJO",
       "reporter": "",
       "data": "04/06/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003035",
+      "ids": [
+        "1452B003035"
+      ],
+      "descricao": "tv rba_vt hortaliças inverno_04_06_ing",
+      "reporter": "",
+      "data": "6/4/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003036",
+      "ids": [
+        "1452B003036"
+      ],
+      "descricao": "tv rba_vt produtos coloniais_04_06_ing",
+      "reporter": "",
+      "data": "6/4/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003040",
+      "ids": [
+        "1452B003040"
+      ],
+      "descricao": "tv surui_vt premio cafeicultor_aroldo tavares_04_06_ing",
+      "reporter": "",
+      "data": "6/4/2024",
       "local": "",
       "pgm": ""
     },
@@ -22228,6 +24524,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003029",
+      "ids": [
+        "1452B003029"
+      ],
+      "descricao": "tv unesp_vt cultivo cogumelos_29_05_ing",
+      "reporter": "",
+      "data": "5/29/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003030",
+      "ids": [
+        "1452B003030"
+      ],
+      "descricao": "tv unesp_vt pesquisas gramas_29_05_ing",
+      "reporter": "",
+      "data": "5/29/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B003025",
@@ -22266,6 +24590,62 @@
       "reporter": "",
       "data": "27/05/2024",
       "local": "PARANÁ",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003011",
+      "ids": [
+        "1452B003011"
+      ],
+      "descricao": "tv rba_vt bananeira_arte_27_05_ing",
+      "reporter": "",
+      "data": "5/27/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003012",
+      "ids": [
+        "1452B003012"
+      ],
+      "descricao": "tv rba_vt cultivo de morangos_27_05_ing",
+      "reporter": "",
+      "data": "5/27/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003013",
+      "ids": [
+        "1452B003013"
+      ],
+      "descricao": "tv rba_vt vinho colonial_27_05_ing",
+      "reporter": "",
+      "data": "5/27/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003014",
+      "ids": [
+        "1452B003014"
+      ],
+      "descricao": "tv rit_vt algodão colorido_27_05_ing",
+      "reporter": "",
+      "data": "5/27/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -22354,6 +24734,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003015",
+      "ids": [
+        "1452B003015"
+      ],
+      "descricao": "tve ms_vt degradação pastagens_24_05_ing",
+      "reporter": "",
+      "data": "5/24/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003009",
+      "ids": [
+        "1452B003009"
+      ],
+      "descricao": "tve ms_vt manejo garanhões_24_05_ing",
+      "reporter": "",
+      "data": "5/24/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002990",
@@ -22410,6 +24818,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B003337",
+      "ids": [
+        "1452B003337"
+      ],
+      "descricao": "rit tv _vt agricultura regenerativa_20_08_ing",
+      "reporter": "",
+      "data": "5/20/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002956",
@@ -22434,6 +24856,34 @@
       "reporter": "",
       "data": "19/05/2024",
       "local": "PARÁ",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002977",
+      "ids": [
+        "1452B002977"
+      ],
+      "descricao": "tv rit_fazendinha dia campo_17_05_ing",
+      "reporter": "",
+      "data": "5/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002976",
+      "ids": [
+        "1452B002976"
+      ],
+      "descricao": "tv rit_ovinocultura_17_05_ing",
+      "reporter": "",
+      "data": "5/17/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -22536,6 +24986,76 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002944",
+      "ids": [
+        "1452B002944"
+      ],
+      "descricao": "tv rba_vt chacara miana_0-05_ing",
+      "reporter": "",
+      "data": "5/8/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002945",
+      "ids": [
+        "1452B002945"
+      ],
+      "descricao": "tv rba_vt colheita arroz_sc_08_05_ing",
+      "reporter": "",
+      "data": "5/8/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002946",
+      "ids": [
+        "1452B002946"
+      ],
+      "descricao": "tv rba_vt encantos do varjedo_08_05_ing",
+      "reporter": "",
+      "data": "5/8/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002947",
+      "ids": [
+        "1452B002947"
+      ],
+      "descricao": "tv rba_vt pesca artesanal da tainha_08_05_ing",
+      "reporter": "",
+      "data": "5/8/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002943",
+      "ids": [
+        "1452B002943"
+      ],
+      "descricao": "rede ita_vt criação camarões_paraíba_07_05_ing",
+      "reporter": "",
+      "data": "5/7/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002878",
@@ -22616,6 +25136,48 @@
       "reporter": "",
       "data": "28/04/2024",
       "local": "RORAIMA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002879",
+      "ids": [
+        "1452B002879"
+      ],
+      "descricao": "tv rba_vt caminhada da terra rural_26_04_ing",
+      "reporter": "",
+      "data": "4/26/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002880",
+      "ids": [
+        "1452B002880"
+      ],
+      "descricao": "tv rba_vt colheita do abacate_sc_26_04_ing",
+      "reporter": "",
+      "data": "4/26/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002881",
+      "ids": [
+        "1452B002881"
+      ],
+      "descricao": "tv rba_vt roteiro turistico encantos do varjedo_sc_26_04_ing",
+      "reporter": "",
+      "data": "4/26/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -22718,6 +25280,62 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002858",
+      "ids": [
+        "1452B002858"
+      ],
+      "descricao": "tv chapadao_vt perdas soja e algodão_ms_rafael ferreira_23_04_ing",
+      "reporter": "",
+      "data": "4/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002859",
+      "ids": [
+        "1452B002859"
+      ],
+      "descricao": "tv cultura do pará_vt hidromel_23_04_ing",
+      "reporter": "",
+      "data": "4/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002860",
+      "ids": [
+        "1452B002860"
+      ],
+      "descricao": "tv rit_vt estudos fertilizantes e algas_23_04_ing",
+      "reporter": "",
+      "data": "4/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002861",
+      "ids": [
+        "1452B002861"
+      ],
+      "descricao": "D - tv rit_vt avanço suinocultura_ms_22_04_ing",
+      "reporter": "",
+      "data": "4/22/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002836",
@@ -22742,6 +25360,48 @@
       "reporter": "",
       "data": "22/04/2024",
       "local": "SÃO PAULO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002838",
+      "ids": [
+        "1452B002838"
+      ],
+      "descricao": "tv brasil central_vt empregos agro_goias_22_04_ing",
+      "reporter": "",
+      "data": "4/22/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002839",
+      "ids": [
+        "1452B002839"
+      ],
+      "descricao": "tv ulbra_vt estancia das oliveiras_rs_22_04_ing",
+      "reporter": "",
+      "data": "4/22/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002840",
+      "ids": [
+        "1452B002840"
+      ],
+      "descricao": "tve ms_vt citricultura_ms_22_04_ing",
+      "reporter": "",
+      "data": "4/22/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -22802,6 +25462,118 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002841",
+      "ids": [
+        "1452B002841"
+      ],
+      "descricao": "tv rit_ vt tecnofam_piscicultura_ms19_04_ing",
+      "reporter": "",
+      "data": "4/19/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002937",
+      "ids": [
+        "1452B002937"
+      ],
+      "descricao": "tv unesp_vt pesquisas cana-de-açucar_sp_19_04_ing",
+      "reporter": "",
+      "data": "4/19/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002843",
+      "ids": [
+        "1452B002843"
+      ],
+      "descricao": "tv rit_vt tecnofam artesanal_ms_18_04_ing",
+      "reporter": "",
+      "data": "4/18/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002820",
+      "ids": [
+        "1452B002820"
+      ],
+      "descricao": "rba_vt adubação verde_17_04_ing",
+      "reporter": "",
+      "data": "4/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002821",
+      "ids": [
+        "1452B002821"
+      ],
+      "descricao": "rba_vt cultivo de maracaujá_17_04_ing",
+      "reporter": "",
+      "data": "4/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002822",
+      "ids": [
+        "1452B002822"
+      ],
+      "descricao": "rba_vt goiabeiras e abacateiros_17_04_ing",
+      "reporter": "",
+      "data": "4/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002842",
+      "ids": [
+        "1452B002842"
+      ],
+      "descricao": "tv rit_vt tecnofam_ms_17_04_ing",
+      "reporter": "",
+      "data": "4/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002811",
+      "ids": [
+        "1452B002811"
+      ],
+      "descricao": "escola de rodeio",
+      "reporter": "",
+      "data": "4/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B00276",
@@ -22840,6 +25612,20 @@
       "reporter": "",
       "data": "11/04/2024",
       "local": "MATO GROSSO DO SUL",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002786",
+      "ids": [
+        "1452B002786"
+      ],
+      "descricao": "A - vt soja melhorias_ms_10_04_ing",
+      "reporter": "",
+      "data": "4/10/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -22886,6 +25672,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002766",
+      "ids": [
+        "1452B002766"
+      ],
+      "descricao": "mercado ver o peso",
+      "reporter": "LUIZ OCTÁVIO LUCAS",
+      "data": "4/1/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002764",
@@ -22910,6 +25710,20 @@
       "reporter": "",
       "data": "01/04/2024",
       "local": "PARANÁ",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002767",
+      "ids": [
+        "1452B002767"
+      ],
+      "descricao": "vt oleo de guavira_ms_27_03_ing",
+      "reporter": "",
+      "data": "4/1/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -23040,6 +25854,90 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002767",
+      "ids": [
+        "1452B002767"
+      ],
+      "descricao": "tv rba_ vt curso flor e ser_ing",
+      "reporter": "",
+      "data": "3/19/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002719",
+      "ids": [
+        "1452B002719"
+      ],
+      "descricao": "tv rba_ vt rosas laurentino_ing",
+      "reporter": "",
+      "data": "3/19/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002812",
+      "ids": [
+        "1452B002812"
+      ],
+      "descricao": "vts especiais_jacaré_ms_15_03_ing",
+      "reporter": "",
+      "data": "3/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002935",
+      "ids": [
+        "1452B002935"
+      ],
+      "descricao": "vts especiais_jacaré_ms_15_03_jacaré 1",
+      "reporter": "",
+      "data": "3/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002936",
+      "ids": [
+        "1452B002936"
+      ],
+      "descricao": "vts especiais_jacaré_ms_15_03_jacaré 2",
+      "reporter": "",
+      "data": "3/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002937",
+      "ids": [
+        "1452B002937"
+      ],
+      "descricao": "vts especiais_jacaré_ms_15_03_jacaré 3",
+      "reporter": "",
+      "data": "3/15/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002694",
@@ -23078,6 +25976,104 @@
       "reporter": "",
       "data": "08/03/2024",
       "local": "MATO GROSSO DO SUL",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002677",
+      "ids": [
+        "1452B002677"
+      ],
+      "descricao": "tv rba_ vt experience day cravil soja_05_03",
+      "reporter": "",
+      "data": "3/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002720",
+      "ids": [
+        "1452B002720"
+      ],
+      "descricao": "tv rba_ vt experience day cravil soja_limpo_05_03_ing",
+      "reporter": "",
+      "data": "3/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002678",
+      "ids": [
+        "1452B002678"
+      ],
+      "descricao": "tv rba_ vt pncf jovem_05_03",
+      "reporter": "",
+      "data": "3/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002721",
+      "ids": [
+        "1452B002721"
+      ],
+      "descricao": "tv rba_ vt pncf jovem_05_03)logo na tela_ing",
+      "reporter": "",
+      "data": "3/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002679",
+      "ids": [
+        "1452B002679"
+      ],
+      "descricao": "tv rba_ vt silo secador_05_03",
+      "reporter": "",
+      "data": "3/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002723",
+      "ids": [
+        "1452B002723"
+      ],
+      "descricao": "tv rba_ vt silo secador_05_03_ logo na tela_ing",
+      "reporter": "",
+      "data": "3/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002724",
+      "ids": [
+        "1452B002724"
+      ],
+      "descricao": "tv rba_vt colheita de maçã_05_03_ing",
+      "reporter": "",
+      "data": "3/5/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -23278,6 +26274,48 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002642",
+      "ids": [
+        "1452B002642"
+      ],
+      "descricao": "produção pitaya",
+      "reporter": "",
+      "data": "2/9/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002641",
+      "ids": [
+        "1452B002641"
+      ],
+      "descricao": "rba_vt produção pepino_sc_09_02_ing",
+      "reporter": "",
+      "data": "2/9/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002636",
+      "ids": [
+        "1452B002636"
+      ],
+      "descricao": "pecuária show rural",
+      "reporter": "",
+      "data": "2/8/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002637",
@@ -23302,6 +26340,34 @@
       "reporter": "",
       "data": "07/02/2024",
       "local": "SANTA CATARINA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002629",
+      "ids": [
+        "1452B002629"
+      ],
+      "descricao": "qualidade uvas no show rural",
+      "reporter": "",
+      "data": "2/7/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002630",
+      "ids": [
+        "1452B002630"
+      ],
+      "descricao": "receita torresmo",
+      "reporter": "",
+      "data": "2/7/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -23334,6 +26400,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002625",
+      "ids": [
+        "1452B002625"
+      ],
+      "descricao": "produção café",
+      "reporter": "JULIO PENARIOL",
+      "data": "2/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002626",
+      "ids": [
+        "1452B002626"
+      ],
+      "descricao": "show rural",
+      "reporter": "",
+      "data": "2/5/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002595",
@@ -23358,6 +26452,34 @@
       "reporter": "",
       "data": "04/02/2024",
       "local": "CUIABÁ - MT",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002624",
+      "ids": [
+        "1452B002624"
+      ],
+      "descricao": "café do brasil",
+      "reporter": "",
+      "data": "2/2/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002604",
+      "ids": [
+        "1452B002604"
+      ],
+      "descricao": "produção leite de ovelha",
+      "reporter": "",
+      "data": "1/29/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -23418,6 +26540,118 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002588",
+      "ids": [
+        "1452B002588"
+      ],
+      "descricao": "abertura oficial colheita de arroz",
+      "reporter": "",
+      "data": "1/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002589",
+      "ids": [
+        "1452B002589"
+      ],
+      "descricao": "cadastro ferrugem asiatica soja",
+      "reporter": "",
+      "data": "1/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002590",
+      "ids": [
+        "1452B002590"
+      ],
+      "descricao": "cigarinha do milho",
+      "reporter": "",
+      "data": "1/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002591",
+      "ids": [
+        "1452B002591"
+      ],
+      "descricao": "influencer rural",
+      "reporter": "",
+      "data": "1/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002592",
+      "ids": [
+        "1452B002592"
+      ],
+      "descricao": "melancia amarela",
+      "reporter": "",
+      "data": "1/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002593",
+      "ids": [
+        "1452B002593"
+      ],
+      "descricao": "nova praga pastagens",
+      "reporter": "",
+      "data": "1/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002595",
+      "ids": [
+        "1452B002595"
+      ],
+      "descricao": "sitio cobra no catuto",
+      "reporter": "",
+      "data": "1/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002594",
+      "ids": [
+        "1452B002594"
+      ],
+      "descricao": "sitio turismo rural",
+      "reporter": "",
+      "data": "1/23/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002573",
@@ -23470,6 +26704,118 @@
       "reporter": "",
       "data": "22/01/2024",
       "local": "SANTA CATARINA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002585",
+      "ids": [
+        "1452B002585"
+      ],
+      "descricao": "pitaya",
+      "reporter": "",
+      "data": "1/18/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002578",
+      "ids": [
+        "1452B002578"
+      ],
+      "descricao": "prejuizos safra de arroz",
+      "reporter": "",
+      "data": "1/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002581",
+      "ids": [
+        "1452B002581"
+      ],
+      "descricao": "uvas_meneguelli",
+      "reporter": "",
+      "data": "1/17/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002575",
+      "ids": [
+        "1452B002575"
+      ],
+      "descricao": "bella brutinha do agro",
+      "reporter": "",
+      "data": "1/12/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002576",
+      "ids": [
+        "1452B002576"
+      ],
+      "descricao": "colheita uvas estancia vinho",
+      "reporter": "",
+      "data": "1/8/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002577",
+      "ids": [
+        "1452B002577"
+      ],
+      "descricao": "jardim da dona uta_agrolandia_08_01_ing",
+      "reporter": "",
+      "data": "1/8/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002579",
+      "ids": [
+        "1452B002579"
+      ],
+      "descricao": "recanto familia aguida ibirama",
+      "reporter": "",
+      "data": "1/8/2024",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002580",
+      "ids": [
+        "1452B002580"
+      ],
+      "descricao": "sitio barnabé",
+      "reporter": "",
+      "data": "1/8/2024",
+      "local": "",
       "pgm": ""
     },
     {
@@ -23586,6 +26932,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002540",
+      "ids": [
+        "1452B002540"
+      ],
+      "descricao": "agrodefesa",
+      "reporter": "",
+      "data": "12/8/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002534",
@@ -23595,6 +26955,34 @@
       "descricao": "SAFRA CANA DE AÇÚCAR",
       "reporter": "",
       "data": "07/12/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002524",
+      "ids": [
+        "1452B002524"
+      ],
+      "descricao": "encontro das aguas",
+      "reporter": "",
+      "data": "12/1/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002520",
+      "ids": [
+        "1452B002520"
+      ],
+      "descricao": "produção organicos imbuia",
+      "reporter": "",
+      "data": "12/1/2023",
       "local": "",
       "pgm": ""
     },
@@ -23642,6 +27030,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002508",
+      "ids": [
+        "1452B002508"
+      ],
+      "descricao": "vt impacto clima na safra_goias_28_11_ing",
+      "reporter": "",
+      "data": "11/28/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002495",
@@ -23666,6 +27068,48 @@
       "reporter": "",
       "data": "26/11/2023",
       "local": "MATO GROSSO DO SUL",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002495",
+      "ids": [
+        "1452B002495"
+      ],
+      "descricao": "vt boi_florestas_ms_24_11_ing",
+      "reporter": "",
+      "data": "11/24/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002496",
+      "ids": [
+        "1452B002496"
+      ],
+      "descricao": "vt lenda do guaraná_23_11_ing",
+      "reporter": "",
+      "data": "11/23/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002497",
+      "ids": [
+        "1452B002497"
+      ],
+      "descricao": "vt prejuizos chuvas agricultura_sc_23_11_ing",
+      "reporter": "",
+      "data": "11/23/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -23866,6 +27310,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002467",
+      "ids": [
+        "1452B002467"
+      ],
+      "descricao": "tve ms_vt_guavira_10_11",
+      "reporter": "",
+      "data": "11/10/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002469",
@@ -23880,6 +27338,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002466",
+      "ids": [
+        "1452B002466"
+      ],
+      "descricao": "morangos serra tomio",
+      "reporter": "",
+      "data": "11/9/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002457",
@@ -23889,6 +27361,48 @@
       "descricao": "PROVISORIO QUEIJO",
       "reporter": "",
       "data": "09/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002465",
+      "ids": [
+        "1452B002465"
+      ],
+      "descricao": "tv rba vt chalé rustico_ibirama_sc_09_11_ing",
+      "reporter": "",
+      "data": "11/9/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002454",
+      "ids": [
+        "1452B002454"
+      ],
+      "descricao": "banco de alimentos",
+      "reporter": "",
+      "data": "11/8/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002455",
+      "ids": [
+        "1452B002455"
+      ],
+      "descricao": "frigorifico verdi",
+      "reporter": "",
+      "data": "11/8/2023",
       "local": "",
       "pgm": ""
     },
@@ -24076,6 +27590,62 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002408",
+      "ids": [
+        "1452B002408"
+      ],
+      "descricao": "braquiaria manejo",
+      "reporter": "",
+      "data": "11/1/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002409",
+      "ids": [
+        "1452B002409"
+      ],
+      "descricao": "cigarinha africana",
+      "reporter": "",
+      "data": "11/1/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002406",
+      "ids": [
+        "1452B002406"
+      ],
+      "descricao": "prejuizos arroz",
+      "reporter": "",
+      "data": "11/1/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002407",
+      "ids": [
+        "1452B002407"
+      ],
+      "descricao": "prejuizos chuvas",
+      "reporter": "",
+      "data": "11/1/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002406",
@@ -24086,6 +27656,20 @@
       "reporter": "",
       "data": "01/11/2023",
       "local": "SANTA CATARINA",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002410",
+      "ids": [
+        "1452B002410"
+      ],
+      "descricao": "seminario embrapa cana",
+      "reporter": "",
+      "data": "11/1/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -24174,6 +27758,48 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002374",
+      "ids": [
+        "1452B002374"
+      ],
+      "descricao": "engenho de melado",
+      "reporter": "",
+      "data": "10/23/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002376",
+      "ids": [
+        "1452B002376"
+      ],
+      "descricao": "horta escola",
+      "reporter": "",
+      "data": "10/23/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002375",
+      "ids": [
+        "1452B002375"
+      ],
+      "descricao": "leite prejuizos chuvas",
+      "reporter": "",
+      "data": "10/23/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002377",
@@ -24197,6 +27823,20 @@
       "descricao": "SUÍNOS NUTRIÇÃO",
       "reporter": "",
       "data": "23/10/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002377",
+      "ids": [
+        "1452B002377"
+      ],
+      "descricao": "trigo e outras perdas",
+      "reporter": "",
+      "data": "10/23/2023",
       "local": "",
       "pgm": ""
     },
@@ -24846,6 +28486,48 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002292",
+      "ids": [
+        "1452B002292"
+      ],
+      "descricao": "cão de pastoreio",
+      "reporter": "",
+      "data": "9/27/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002291",
+      "ids": [
+        "1452B002291"
+      ],
+      "descricao": "erva mate",
+      "reporter": "",
+      "data": "9/27/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002293",
+      "ids": [
+        "1452B002293"
+      ],
+      "descricao": "produção de morango",
+      "reporter": "",
+      "data": "9/27/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002288",
@@ -25150,6 +28832,20 @@
       "reporter": "",
       "data": "18/09/2023",
       "local": "SERGIPE",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002250",
+      "ids": [
+        "1452B002250"
+      ],
+      "descricao": "vt personagem agricultor_rio do campo_sc_15_09",
+      "reporter": "",
+      "data": "9/18/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -25742,6 +29438,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002165",
+      "ids": [
+        "1452B002165"
+      ],
+      "descricao": "rba vt colheita melancia_01_09_ing",
+      "reporter": "",
+      "data": "9/1/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002166",
+      "ids": [
+        "1452B002166"
+      ],
+      "descricao": "rba vt vaca amamenta porco_01_09_ing",
+      "reporter": "",
+      "data": "9/1/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002168",
@@ -25877,6 +29601,48 @@
       "descricao": "TORTA DE QUEIJINHO",
       "reporter": "",
       "data": "29/08/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002150",
+      "ids": [
+        "1452B002150"
+      ],
+      "descricao": "RBA vt engenho de farinha_sc_28_08_ing",
+      "reporter": "",
+      "data": "8/28/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002152",
+      "ids": [
+        "1452B002152"
+      ],
+      "descricao": "RBA vt receita torta de queijinho_sc_28_08_ing",
+      "reporter": "",
+      "data": "8/28/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002158",
+      "ids": [
+        "1452B002158"
+      ],
+      "descricao": "vt expoqueijo 1 mil exemplares_28_08_ing",
+      "reporter": "",
+      "data": "8/28/2023",
       "local": "",
       "pgm": ""
     },
@@ -26036,6 +29802,132 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002149",
+      "ids": [
+        "1452B002149"
+      ],
+      "descricao": "cará gigante",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002143",
+      "ids": [
+        "1452B002143"
+      ],
+      "descricao": "jovem cantor area rural",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002147",
+      "ids": [
+        "1452B002147"
+      ],
+      "descricao": "pitayas morangos",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002101",
+      "ids": [
+        "1452B002101"
+      ],
+      "descricao": "R RBA vt pitayas morangos_21_08",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002102",
+      "ids": [
+        "1452B002102"
+      ],
+      "descricao": "R RBA vt recanto das abelhas_ 21_08",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002103",
+      "ids": [
+        "1452B002103"
+      ],
+      "descricao": "RBA vt cará gigante_21_08",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002104",
+      "ids": [
+        "1452B002104"
+      ],
+      "descricao": "RBA vt sitio raizes_ 21-08",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002148",
+      "ids": [
+        "1452B002148"
+      ],
+      "descricao": "recanto das abelhas",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002153",
+      "ids": [
+        "1452B002153"
+      ],
+      "descricao": "sitio raizes",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002137",
@@ -26050,6 +29942,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002105",
+      "ids": [
+        "1452B002105"
+      ],
+      "descricao": "turismo rural",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002155",
+      "ids": [
+        "1452B002155"
+      ],
+      "descricao": "turismo rural",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002136",
@@ -26060,6 +29980,34 @@
       "reporter": "",
       "data": "21/08/2023",
       "local": "PARÁ",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002106",
+      "ids": [
+        "1452B002106"
+      ],
+      "descricao": "videira encanto",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002156",
+      "ids": [
+        "1452B002156"
+      ],
+      "descricao": "videira encanto",
+      "reporter": "",
+      "data": "8/21/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -26120,6 +30068,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002157",
+      "ids": [
+        "1452B002157"
+      ],
+      "descricao": "preço do frango",
+      "reporter": "CAROL SOARES",
+      "data": "8/16/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002127",
@@ -26162,6 +30124,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002085",
+      "ids": [
+        "1452B002085"
+      ],
+      "descricao": "hortaliças merenda escolar",
+      "reporter": "",
+      "data": "8/15/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002151",
+      "ids": [
+        "1452B002151"
+      ],
+      "descricao": "hortaliças merenda escolar",
+      "reporter": "",
+      "data": "8/15/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002089",
@@ -26185,6 +30175,76 @@
       "descricao": "PRODUTORES DE CAFÉ + SACAS DE CAFÉ + PLANTAÇÃO DE CAFÉ",
       "reporter": "",
       "data": "15/08/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002088",
+      "ids": [
+        "1452B002088"
+      ],
+      "descricao": "viola caipira",
+      "reporter": "",
+      "data": "8/15/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002154",
+      "ids": [
+        "1452B002154"
+      ],
+      "descricao": "viola caipira",
+      "reporter": "",
+      "data": "8/15/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002144",
+      "ids": [
+        "1452B002144"
+      ],
+      "descricao": "café rural",
+      "reporter": "",
+      "data": "8/14/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002083",
+      "ids": [
+        "1452B002083"
+      ],
+      "descricao": "chuvas de agosto prejudicam plantio de algodão",
+      "reporter": "",
+      "data": "8/14/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002145",
+      "ids": [
+        "1452B002145"
+      ],
+      "descricao": "chuvas de agosto prejudicam plantio de algodão",
+      "reporter": "",
+      "data": "8/14/2023",
       "local": "",
       "pgm": ""
     },
@@ -26228,6 +30288,132 @@
       "reporter": "",
       "data": "13/08/2023",
       "local": "MATO GROSSO DO SUL",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002142",
+      "ids": [
+        "1452B002142"
+      ],
+      "descricao": "cuia gigante",
+      "reporter": "",
+      "data": "8/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002084",
+      "ids": [
+        "1452B002084"
+      ],
+      "descricao": "festa das origens",
+      "reporter": "",
+      "data": "8/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002141",
+      "ids": [
+        "1452B002141"
+      ],
+      "descricao": "festa das origens",
+      "reporter": "",
+      "data": "8/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002071",
+      "ids": [
+        "1452B002071"
+      ],
+      "descricao": "nematoide cebola",
+      "reporter": "",
+      "data": "8/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002069",
+      "ids": [
+        "1452B002069"
+      ],
+      "descricao": "ordenha robotizada",
+      "reporter": "",
+      "data": "8/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002086",
+      "ids": [
+        "1452B002086"
+      ],
+      "descricao": "ordenha robotizada",
+      "reporter": "",
+      "data": "8/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002070",
+      "ids": [
+        "1452B002070"
+      ],
+      "descricao": "pesquisador drone agricultura",
+      "reporter": "JULIO PENARIOL",
+      "data": "8/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002087",
+      "ids": [
+        "1452B002087"
+      ],
+      "descricao": "vazio sanitario da soja",
+      "reporter": "",
+      "data": "8/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002140",
+      "ids": [
+        "1452B002140"
+      ],
+      "descricao": "vazio sanitario da soja",
+      "reporter": "",
+      "data": "8/11/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -26288,6 +30474,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002059",
+      "ids": [
+        "1452B002059"
+      ],
+      "descricao": "equoterapia",
+      "reporter": "",
+      "data": "8/9/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002060",
+      "ids": [
+        "1452B002060"
+      ],
+      "descricao": "ordenha robotizada",
+      "reporter": "",
+      "data": "8/9/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002054",
@@ -26316,6 +30530,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002043",
+      "ids": [
+        "1452B002043"
+      ],
+      "descricao": "equinos manejo ms",
+      "reporter": "",
+      "data": "8/7/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002052",
@@ -26325,6 +30553,48 @@
       "descricao": "GADO CONFINADO",
       "reporter": "",
       "data": "07/08/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002044",
+      "ids": [
+        "1452B002044"
+      ],
+      "descricao": "produção abacaxi ms",
+      "reporter": "",
+      "data": "8/7/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002045",
+      "ids": [
+        "1452B002045"
+      ],
+      "descricao": "produção bananas rs",
+      "reporter": "",
+      "data": "8/7/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002089",
+      "ids": [
+        "1452B002089"
+      ],
+      "descricao": "produção bananas rs",
+      "reporter": "",
+      "data": "8/7/2023",
       "local": "",
       "pgm": ""
     },
@@ -26340,6 +30610,20 @@
       "reporter": "",
       "data": "07/08/2023",
       "local": "RIO GRANDE DO SUL",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B002046",
+      "ids": [
+        "1452B002046"
+      ],
+      "descricao": "produção queijo ms",
+      "reporter": "",
+      "data": "8/7/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -27058,6 +31342,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001961",
+      "ids": [
+        "1452B001961"
+      ],
+      "descricao": "cooperativa agricola ms",
+      "reporter": "",
+      "data": "7/24/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B002030",
@@ -27156,6 +31454,48 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001935",
+      "ids": [
+        "1452B001935"
+      ],
+      "descricao": "leiloeiro de gado ms",
+      "reporter": "",
+      "data": "7/13/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001936",
+      "ids": [
+        "1452B001936"
+      ],
+      "descricao": "producao feno ms",
+      "reporter": "",
+      "data": "7/13/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001930",
+      "ids": [
+        "1452B001930"
+      ],
+      "descricao": "laboratorio agrodefesa goias",
+      "reporter": "",
+      "data": "7/11/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B001930",
@@ -27221,6 +31561,20 @@
       "descricao": "EMBARQUE GADO",
       "reporter": "",
       "data": "05/07/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001914",
+      "ids": [
+        "1452B001914"
+      ],
+      "descricao": "projeto cemeia",
+      "reporter": "JULIO PENARIOL",
+      "data": "7/5/2023",
       "local": "",
       "pgm": ""
     },
@@ -27310,6 +31664,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001909",
+      "ids": [
+        "1452B001909"
+      ],
+      "descricao": "produção de vinho",
+      "reporter": "",
+      "data": "6/30/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B001900",
@@ -27334,6 +31702,20 @@
       "reporter": "",
       "data": "29/06/2023",
       "local": "ESPÍRITO SANTO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001904",
+      "ids": [
+        "1452B001904"
+      ],
+      "descricao": "juros do plano safra preocupam",
+      "reporter": "GISLAINE VIDAL",
+      "data": "6/29/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -27390,6 +31772,20 @@
       "reporter": "",
       "data": "25/06/2023",
       "local": "PARANÁ",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001884",
+      "ids": [
+        "1452B001884"
+      ],
+      "descricao": "precocidade gado",
+      "reporter": "",
+      "data": "6/23/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -27464,6 +31860,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001892",
+      "ids": [
+        "1452B001892"
+      ],
+      "descricao": "preço da carne cai",
+      "reporter": "",
+      "data": "6/20/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B001867",
@@ -27473,6 +31883,20 @@
       "descricao": "pesca tainha liberada_isadora zarbato_16_06",
       "reporter": "",
       "data": "19/06/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001870",
+      "ids": [
+        "1452B001870"
+      ],
+      "descricao": "pesquisa febre maculosa",
+      "reporter": "",
+      "data": "6/19/2023",
       "local": "",
       "pgm": ""
     },
@@ -27530,6 +31954,48 @@
       "reporter": "",
       "data": "18/06/2023",
       "local": "SÃO PAULO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001858",
+      "ids": [
+        "1452B001858"
+      ],
+      "descricao": "doce de leite viçosa",
+      "reporter": "",
+      "data": "6/14/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001859",
+      "ids": [
+        "1452B001859"
+      ],
+      "descricao": "venda produtos juninos",
+      "reporter": "",
+      "data": "6/13/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001855",
+      "ids": [
+        "1452B001855"
+      ],
+      "descricao": "exposul rafael ferreira",
+      "reporter": "RAFAEL FERREIRA",
+      "data": "6/12/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -27600,6 +32066,20 @@
       "reporter": "",
       "data": "08/06/2023",
       "local": "MINAS GERAIS",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001856",
+      "ids": [
+        "1452B001856"
+      ],
+      "descricao": "mercado do leite mg",
+      "reporter": "",
+      "data": "6/8/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -27940,6 +32420,34 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001797",
+      "ids": [
+        "1452B001797"
+      ],
+      "descricao": "oficina de biscoitos",
+      "reporter": "",
+      "data": "5/26/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001798",
+      "ids": [
+        "1452B001798"
+      ],
+      "descricao": "expo pecuaria goias",
+      "reporter": "",
+      "data": "5/25/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B001792",
@@ -27978,6 +32486,20 @@
       "reporter": "",
       "data": "23/05/2023",
       "local": "SÃO PAULO",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001773",
+      "ids": [
+        "1452B001773"
+      ],
+      "descricao": "silvicultura ganha espaço",
+      "reporter": "RAFAEL FERREIRA",
+      "data": "5/22/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -28104,6 +32626,34 @@
       "reporter": "",
       "data": "18/05/2023",
       "local": "GOIÁS",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001765",
+      "ids": [
+        "1452B001765"
+      ],
+      "descricao": "expoleite",
+      "reporter": "CAROL SOARES",
+      "data": "5/18/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001766",
+      "ids": [
+        "1452B001766"
+      ],
+      "descricao": "febre aftosa",
+      "reporter": "",
+      "data": "5/18/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -28300,6 +32850,34 @@
       "reporter": "",
       "data": "14/05/2023",
       "local": "PARÁ",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001857",
+      "ids": [
+        "1452B001857"
+      ],
+      "descricao": "crescimento safra",
+      "reporter": "",
+      "data": "5/13/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001747",
+      "ids": [
+        "1452B001747"
+      ],
+      "descricao": "irrigacao bananeira",
+      "reporter": "",
+      "data": "5/12/2023",
+      "local": "",
       "pgm": ""
     },
     {
@@ -28696,6 +33274,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001924",
+      "ids": [
+        "1452B001924"
+      ],
+      "descricao": "dia mundial chocolate",
+      "reporter": "",
+      "data": "5/7/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B001620",
@@ -28850,6 +33442,20 @@
     },
     {
       "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001611",
+      "ids": [
+        "1452B001611"
+      ],
+      "descricao": "pamonha",
+      "reporter": "",
+      "data": "4/27/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
       "origem": "IMAGENS AGROCULTURA 15.07.2026",
       "aba": "Página1",
       "id": "1452B001609",
@@ -28901,6 +33507,20 @@
       "descricao": "SEMANA DO CAVALO",
       "reporter": "",
       "data": "27/04/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001602",
+      "ids": [
+        "1452B001602"
+      ],
+      "descricao": "caminhos lomba grande",
+      "reporter": "CAROL SOARES",
+      "data": "4/24/2023",
       "local": "",
       "pgm": ""
     },
@@ -29027,6 +33647,20 @@
       "descricao": "PREPARO DO FEIJÃO + PLANTAÇÃO DE FEIJÃO + SACO DE FEIJÃO",
       "reporter": "",
       "data": "19/04/2023",
+      "local": "",
+      "pgm": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "aba": "MATÉRIAS QUE NÃO FORAM AO AR",
+      "id": "1452B001603",
+      "ids": [
+        "1452B001603"
+      ],
+      "descricao": "semana do cavalo",
+      "reporter": "",
+      "data": "4/19/2023",
       "local": "",
       "pgm": ""
     },
