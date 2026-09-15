@@ -2,6 +2,7 @@ import process from "node:process";
 import { google } from "googleapis";
 import { extrairMediaIds, validarConteudoMediaIds } from "./media-id.mjs";
 import { normalizarMediaId, programaPorListaDeIds } from "./programa-por-prefixo.mjs";
+import { ehErroPermissaoGoogle } from "./google-sheets-errors.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const NOME_ABA_IMGS = "imgs";
@@ -393,7 +394,15 @@ async function main() {
 
   // A fonte AgroCultura é estoque. Só removemos depois de garantir que os registros
   // foram preservados/atualizados na imgs, que funciona como índice histórico geral.
-  const removidosDoEstoqueAgro = await removerAgroculturaJaUtilizados();
+  let removidosDoEstoqueAgro = 0;
+  try {
+    removidosDoEstoqueAgro = await removerAgroculturaJaUtilizados();
+  } catch (erro) {
+    if (!ehErroPermissaoGoogle(erro)) throw erro;
+    console.warn(
+      "Agrocultura: não foi possível remover automaticamente IDs já utilizados porque a conta de serviço não tem permissão de edição na fonte_agrocultura. A sincronização de imgs continuará."
+    );
+  }
 
   console.log("Sincronização finalizada.");
   console.log(`Linhas totalmente duplicadas removidas: ${removidas}`);
