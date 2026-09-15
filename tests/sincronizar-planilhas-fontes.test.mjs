@@ -17,7 +17,18 @@ test("inclui documentos do jornalismo e matérias não exibidas como fontes perm
   const conteudo = await readFile(SCRIPT, "utf8");
 
   assert.match(conteudo, /nome:\s*["']Documentos Jornalismo["']/);
+  assert.match(conteudo, /spreadsheetId:\s*["']1-HU6N_9OVWiNkPAMuevUcyFa32ocDA_uFMyAh7m9PTo["']/);
   assert.match(conteudo, /nome:\s*["']Matérias que não foram ao ar["']/);
+  assert.match(conteudo, /spreadsheetId:\s*["']1snKWDdgFQ1T-AXdEU6Hof9V2B56v5qkQKfUjrzobtGU["']/);
+});
+
+test("remove da fonte Agrocultura IDs que já foram usados em matérias ou notícias", async () => {
+  const conteudo = await readFile(SCRIPT, "utf8");
+
+  assert.match(conteudo, /PLANILHA_MATERIAS_ID\s*=\s*["']1Ny0gjt-4du7cJ-ejgahfhdplnCBl58d6RV7kfuLjKM0["']/);
+  assert.match(conteudo, /PLANILHA_NOTICIAS_ID\s*=\s*["']1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw["']/);
+  assert.match(conteudo, /async function removerAgroculturaJaUtilizados/);
+  assert.match(conteudo, /deleteDimension/);
 });
 
 test("normaliza Media ID para maiúsculas", () => {
