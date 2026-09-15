@@ -11,11 +11,15 @@ on:
       - main
     paths:
       - "scripts/media-id.mjs"
+      - "scripts/programa-por-prefixo.mjs"
+      - "scripts/google-sheets-errors.mjs"
       - "scripts/agrocultura-local.mjs"
       - "scripts/gerar-acervo-agrocultura.mjs"
       - "scripts/sincronizar-planilhas.mjs"
       - "scripts/sincronizar-noticias-agrocultura.mjs"
       - "tests/agrocultura-local.test.mjs"
+      - "tests/programa-por-prefixo.test.mjs"
+      - "tests/google-sheets-errors.test.mjs"
       - "tests/sincronizar-planilhas-fontes.test.mjs"
       - "package.json"
       - ".github/workflows/sincronizar-planilhas.yml"
@@ -46,8 +50,8 @@ jobs:
       - name: Testar enriquecimento de LOCAL do AgroCultura
         run: node --test tests/agrocultura-local.test.mjs
 
-      - name: Testar fontes permanentes de sincronização
-        run: node --test tests/sincronizar-planilhas-fontes.test.mjs
+      - name: Testar sincronização, prefixos e erros de permissão
+        run: node --test tests/programa-por-prefixo.test.mjs tests/google-sheets-errors.test.mjs tests/sincronizar-planilhas-fontes.test.mjs
 
       - name: Sincronizar planilhas
         env:
