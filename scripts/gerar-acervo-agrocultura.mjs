@@ -2,12 +2,14 @@ import fs from "node:fs/promises";
 import process from "node:process";
 import { google } from "googleapis";
 import { extrairMediaIds } from "./media-id.mjs";
+import { construirIndiceLocais, resolverLocal } from "./agrocultura-local.mjs";
 
 const PLANILHAS = {
   vts: "1Ny0gjt-4du7cJ-ejgahfhdplnCBl58d6RV7kfuLjKM0",
   noticias: "1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw",
   imagens: "1M4ZVI_ax1ziVttl87FxFC0xxs7zRtVhj9yoIFFUb1aI",
   naoExibidas: "1snKWDdgFQ1T-AXdEU6Hof9V2B56v5qkQKfUjrzobtGU",
+  imgs: "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs",
 };
 
 const ABAS_VTS = ["2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"];
@@ -119,8 +121,22 @@ function registroBase({ tipo, origem, aba, id, descricao, reporter, data, local,
   };
 }
 
+async function carregarLocaisVts() {
+  try {
+    const linhas = await ler(PLANILHAS.imgs, "'imgs'!A2:D");
+    const locaisPorId = construirIndiceLocais(linhas, ids);
+    console.log(`Locais dos VTs: ${locaisPorId.size} Media IDs indexados a partir da planilha imgs.`);
+    return locaisPorId;
+  } catch (erro) {
+    const status = erro?.response?.status || erro?.code || "erro";
+    console.warn(`Locais dos VTs: lookup da planilha imgs indisponível (${status}); os VTs continuarão sendo gerados sem enriquecimento de local.`);
+    return new Map();
+  }
+}
+
 async function carregarVts() {
   const registros = [];
+  const locaisPorId = await carregarLocaisVts();
 
   for (const aba of ABAS_VTS) {
     const linhas = await ler(PLANILHAS.vts, `'${aba}'!A2:E`);
@@ -134,7 +150,7 @@ async function carregarVts() {
         reporter: linha[2],
         id: linha[3],
         data: linha[4],
-        local: "",
+        local: resolverLocal(ids(linha[3]), locaisPorId),
       });
       if (registro) registros.push(registro);
     }
@@ -151,7 +167,7 @@ async function carregarVts() {
       reporter: "BRUNO FAUSTINO",
       id: linha[2],
       data: linha[3],
-      local: "",
+      local: resolverLocal(ids(linha[2]), locaisPorId),
     });
     if (registro) registros.push(registro);
   }
@@ -267,7 +283,11 @@ async function main() {
       naoExibidas: naoExibidasFonte.erro,
     },
     fontes: {
-      vts: ["MATÉRIAS QUE FORAM AO AR_ / 2019-2026", "MATÉRIAS QUE FORAM AO AR_ / VTS FAUSTINO"],
+      vts: [
+        "MATÉRIAS QUE FORAM AO AR_ / 2019-2026",
+        "MATÉRIAS QUE FORAM AO AR_ / VTS FAUSTINO",
+        "imgs / LOCAL por Media ID",
+      ],
       noticias: ["NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR"],
       coberturas: ["IMAGENS AGROCULTURA 15.07.2026", "MATÉRIAS QUE NÃO FORAM AO AR"],
     },
