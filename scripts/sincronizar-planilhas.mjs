@@ -10,6 +10,7 @@ const FONTES = [
   { nome: "Agrocultura", spreadsheetId: "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To", range: "fonte_agrocultura!A2:H" },
   { nome: "Repórter Eco", spreadsheetId: "18svdvx85wPpKOhkBlFPr0zRATZ4AFu2TdEO4y4WgkWc", range: "fonte_reporter_eco!A2:H" },
   { nome: "Jornal da Cultura", spreadsheetId: "1dDqdYeslxm0CE_gZkC3nH7sNmUfh4JQry981VSYXmuk", range: "fonte_jc!A2:H" },
+  { nome: "De Olho no Voto", spreadsheetId: "1R6vI1r78DoXykV_5oGu_uVq1MVf6lmpEx_XZ8eM1Lbs", range: "Página1!A2:H" },
 ];
 
 const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
