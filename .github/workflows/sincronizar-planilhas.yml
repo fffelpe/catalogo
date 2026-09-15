@@ -11,9 +11,11 @@ on:
       - main
     paths:
       - "scripts/media-id.mjs"
+      - "scripts/agrocultura-local.mjs"
       - "scripts/gerar-acervo-agrocultura.mjs"
       - "scripts/sincronizar-planilhas.mjs"
       - "scripts/sincronizar-noticias-agrocultura.mjs"
+      - "tests/agrocultura-local.test.mjs"
       - "package.json"
       - ".github/workflows/sincronizar-planilhas.yml"
 
@@ -40,15 +42,18 @@ jobs:
       - name: Instalar dependências
         run: npm install --no-audit --no-fund
 
-      - name: Gerar acervo estruturado do AgroCultura
-        env:
-          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-        run: npm run sync:agrocultura
+      - name: Testar enriquecimento de LOCAL do AgroCultura
+        run: node --test tests/agrocultura-local.test.mjs
 
       - name: Sincronizar planilhas
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:planilhas
+
+      - name: Gerar acervo estruturado do AgroCultura
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: npm run sync:agrocultura
 
       - name: Publicar acervo do AgroCultura
         run: |
