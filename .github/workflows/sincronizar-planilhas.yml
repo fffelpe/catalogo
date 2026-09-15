@@ -16,6 +16,7 @@ on:
       - "scripts/sincronizar-planilhas.mjs"
       - "scripts/sincronizar-noticias-agrocultura.mjs"
       - "tests/agrocultura-local.test.mjs"
+      - "tests/sincronizar-planilhas-fontes.test.mjs"
       - "package.json"
       - ".github/workflows/sincronizar-planilhas.yml"
 
@@ -44,6 +45,9 @@ jobs:
 
       - name: Testar enriquecimento de LOCAL do AgroCultura
         run: node --test tests/agrocultura-local.test.mjs
+
+      - name: Testar fontes permanentes de sincronização
+        run: node --test tests/sincronizar-planilhas-fontes.test.mjs
 
       - name: Sincronizar planilhas
         env:
