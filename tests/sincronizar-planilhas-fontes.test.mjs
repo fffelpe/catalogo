@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { programaPorMediaId, normalizarMediaId } from "../scripts/programa-por-prefixo.mjs";
 
 const SCRIPT = new URL("../scripts/sincronizar-planilhas.mjs", import.meta.url);
+const GERADOR_AGRO = new URL("../scripts/gerar-acervo-agrocultura.mjs", import.meta.url);
 
 test("inclui De Olho no Voto como fonte permanente de sincronização", async () => {
   const conteudo = await readFile(SCRIPT, "utf8");
@@ -60,4 +61,18 @@ test("mapeia todos os prefixos conhecidos para o programa correto", () => {
 
 test("usa PROGRAMA NAO DEFINIDO quando o prefixo não está mapeado", () => {
   assert.equal(programaPorMediaId("9999B001234"), "PROGRAMA NAO DEFINIDO");
+});
+
+
+test("preserva o programa existente quando não consegue inferir pelo Media ID", async () => {
+  const conteudo = await readFile(SCRIPT, "utf8");
+  assert.match(conteudo, /programaPorListaDeIds\(ids,\s*resultado\[6\]\)/);
+  assert.match(conteudo, /programaPorListaDeIds\(separarIds\(resultado\[0\]\),\s*resultado\[6\]\)/);
+});
+
+test("bloqueia a geração do snapshot AgroCultura quando qualquer fonte principal falha", async () => {
+  const conteudo = await readFile(GERADOR_AGRO, "utf8");
+  assert.match(conteudo, /falhasFontes/);
+  assert.match(conteudo, /Snapshot AgroCultura não publicado/);
+  assert.match(conteudo, /parcial:\s*false/);
 });
