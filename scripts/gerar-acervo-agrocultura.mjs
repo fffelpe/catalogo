@@ -98,7 +98,7 @@ async function tentarCarregar(rotulo, funcao) {
     return { registros, erro: null };
   } catch (erro) {
     const status = erro?.response?.status || erro?.code || "erro";
-    console.warn(`${rotulo}: fonte indisponível (${status}). O restante do acervo continuará sendo gerado.`);
+    console.warn(`${rotulo}: fonte indisponível (${status}). A publicação deste snapshot será bloqueada.`);
     return { registros: [], erro: String(erro?.message || erro) };
   }
 }
@@ -259,6 +259,22 @@ async function main() {
     tentarCarregar("Matérias não exibidas", carregarMateriasNaoExibidas),
   ]);
 
+  const falhasFontes = [
+    ["VTs", vtsFonte.erro],
+    ["Notícias/stand-ups", noticiasFonte.erro],
+    ["Imagens de cobertura", imagensFonte.erro],
+    ["Matérias não exibidas", naoExibidasFonte.erro],
+  ].filter(([, erro]) => erro);
+
+  if (falhasFontes.length) {
+    const detalhes = falhasFontes
+      .map(([rotulo, erro]) => `${rotulo}: ${erro}`)
+      .join(" | ");
+    throw new Error(
+      `Snapshot AgroCultura não publicado porque uma ou mais fontes falharam. ${detalhes}`
+    );
+  }
+
   const vts = vtsFonte.registros;
   const noticias = noticiasFonte.registros;
   const coberturas = [...imagensFonte.registros, ...naoExibidasFonte.registros];
@@ -275,7 +291,7 @@ async function main() {
 
   const payload = {
     generatedAt: new Date().toISOString(),
-    parcial: Boolean(vtsFonte.erro || noticiasFonte.erro || imagensFonte.erro || naoExibidasFonte.erro),
+    parcial: false,
     errosFontes: {
       vts: vtsFonte.erro,
       noticias: noticiasFonte.erro,
@@ -307,7 +323,6 @@ async function main() {
 
   console.log(`AgroCultura: ${payload.resumo.materiais} IDs únicos.`);
   console.log(`VTs: ${payload.resumo.vts}; notícias/stand-ups: ${payload.resumo.noticias}; coberturas: ${payload.resumo.coberturas}.`);
-  if (payload.parcial) console.warn("Acervo gerado parcialmente porque uma ou mais fontes estão sem permissão para a conta de serviço.");
 }
 
 main().catch((erro) => {
