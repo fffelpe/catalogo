@@ -11,7 +11,9 @@ on:
       - main
     paths:
       - "scripts/media-id.mjs"
+      - "scripts/creditos-conflitos.mjs"
       - "scripts/sincronizar-creditos.mjs"
+      - "tests/creditos-conflitos.test.mjs"
       - "package.json"
       - ".github/workflows/sincronizar-creditos.yml"
 
@@ -37,6 +39,9 @@ jobs:
 
       - name: Instalar dependências
         run: npm install --no-audit --no-fund
+
+      - name: Testar resolução de conflitos de créditos
+        run: node --test tests/creditos-conflitos.test.mjs
 
       - name: Sincronizar créditos do Google Drive
         env:
