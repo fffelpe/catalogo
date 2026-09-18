@@ -79,7 +79,7 @@ function normalizarLinha(linha = [], contexto = "registro") {
 
   resultado[0] = normalizarCampoIds(resultado[0], contexto);
   const ids = separarIds(resultado[0]);
-  resultado[6] = programaPorListaDeIds(ids);
+  resultado[6] = programaPorListaDeIds(ids, resultado[6]);
   return resultado;
 }
 
@@ -178,7 +178,7 @@ function mesclarRegistro(atual, fonte) {
   const resultado = [...atual];
   resultado[0] = [...new Set([...separarIds(atual[0]), ...separarIds(fonte[0])])].join("\n");
   for (let i = 1; i < 8; i++) if (fonte[i]) resultado[i] = fonte[i];
-  resultado[6] = programaPorListaDeIds(separarIds(resultado[0]));
+  resultado[6] = programaPorListaDeIds(separarIds(resultado[0]), resultado[6]);
   return resultado;
 }
 
