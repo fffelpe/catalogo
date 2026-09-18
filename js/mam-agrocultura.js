@@ -38,13 +38,27 @@
     return faltantes;
   }
 
+  function contarIdsUnicos(registros) {
+    const ids = new Set();
+    (Array.isArray(registros) ? registros : []).forEach((registro) => {
+      idsDoRegistro(registro).forEach((id) => ids.add(id));
+    });
+    return ids.size;
+  }
+
+  function valorResumo(resumo, chave, fallback) {
+    const valor = Number(resumo?.[chave]);
+    return Number.isInteger(valor) && valor >= 0 ? valor : fallback;
+  }
+
   function atualizarResumo(acervo, creditosDisponiveis) {
     const todos = [...acervo.vts, ...acervo.noticias, ...acervo.coberturas];
+    const resumo = acervo.resumo || {};
     const valores = {
-      mamIngestados: todos.length,
-      mamTotalVts: acervo.vts.length,
-      mamTotalNoticias: acervo.noticias.length,
-      mamTotalCoberturas: acervo.coberturas.length,
+      mamIngestados: valorResumo(resumo, "materiais", contarIdsUnicos(todos)),
+      mamTotalVts: valorResumo(resumo, "vts", contarIdsUnicos(acervo.vts)),
+      mamTotalNoticias: valorResumo(resumo, "noticias", contarIdsUnicos(acervo.noticias)),
+      mamTotalCoberturas: valorResumo(resumo, "coberturas", contarIdsUnicos(acervo.coberturas)),
       mamIdsSemCreditos: creditosDisponiveis ? idsSemCreditos(todos).size : "—",
     };
 
@@ -152,12 +166,16 @@
     const resposta = await fetch("../data/agrocultura-acervo.json", { cache: "no-store" });
     if (!resposta.ok) throw new Error(`Falha ao carregar acervo AgroCultura (${resposta.status}).`);
     const dados = await resposta.json();
+    if (dados?.parcial) {
+      throw new Error("O snapshot do AgroCultura está marcado como parcial e não será exibido.");
+    }
     return {
       vts: Array.isArray(dados.vts) ? dados.vts : [],
       noticias: Array.isArray(dados.noticias) ? dados.noticias : [],
       coberturas: Array.isArray(dados.coberturas) ? dados.coberturas : [],
+      resumo: dados.resumo && typeof dados.resumo === "object" ? dados.resumo : {},
       generatedAt: dados.generatedAt || null,
-      parcial: Boolean(dados.parcial),
+      parcial: false,
       errosFontes: dados.errosFontes || {},
     };
   }
@@ -194,6 +212,7 @@
     } catch (erro) {
       console.error("Erro ao montar a página do AgroCultura:", erro);
       ocultarTabela();
+      document.getElementById("secaoMamAgro")?.setAttribute("hidden", "");
     }
   }
 
