@@ -4,7 +4,13 @@ import process from "node:process";
 import { google } from "googleapis";
 import mammoth from "mammoth";
 import pdfParse from "pdf-parse";
-import { extrairMediaIdDoNome, resolverCandidatosCredito, arquivoEhOficial } from "./creditos-conflitos.mjs";
+import {
+  extrairMediaIdDoNome,
+  resolverCandidatosCredito,
+  arquivoEhOficial,
+  avaliarNovidadeConflito,
+  instrucoesParaConflito
+} from "./creditos-conflitos.mjs";
 
 const PASTA_CREDITOS_ID = process.env.DRIVE_CREDITOS_FOLDER_ID || "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik";
 const SAIDA = path.resolve("data/creditos.json");
@@ -157,6 +163,14 @@ async function carregarRegistrosAnteriores() {
   }
 }
 
+async function carregarStatusAnterior() {
+  try {
+    return JSON.parse(await fs.readFile(STATUS, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
 function ordenarMaisRecentes(arquivos) {
   return [...arquivos].sort((a, b) => {
     const ta = Date.parse(a.modifiedTime || "") || 0;
@@ -173,12 +187,16 @@ async function escreverStatus(dados) {
 
 async function main() {
   const arquivos = await listarArquivos();
-  const anteriores = await carregarRegistrosAnteriores();
+  const [anteriores, statusAnterior] = await Promise.all([
+    carregarRegistrosAnteriores(),
+    carregarStatusAnterior()
+  ]);
   const registros = {};
   const ignorados = [];
   const erros = [];
   const duplicados = [];
   const conflitos = [];
+  const rejeitadosNovos = [];
   const preservados = [];
 
   const grupos = new Map();
@@ -216,21 +234,49 @@ async function main() {
     }
 
     if (resolucao.tipo === "conflito") {
+      const novidade = avaliarNovidadeConflito(id, candidatos, statusAnterior, anteriores[id]);
+      const instrucoes = instrucoesParaConflito(id, resolucao);
+      const arquivosDetalhados = candidatos.map((item) => ({
+        id: item.id,
+        nome: item.name,
+        atualizadoEm: item.modifiedTime || ""
+      }));
+      const novosArquivos = novidade.novosArquivos.map((item) => ({
+        id: item.id,
+        nome: item.name,
+        atualizadoEm: item.modifiedTime || ""
+      }));
+
       const conflito = {
         id,
         motivo: resolucao.motivo,
+        tipo: novidade.novo ? "novo-ou-agravado" : "existente",
+        bloqueante: novidade.bloqueante,
+        rejeitado: novidade.bloqueante,
         acao: anteriores[id]
-          ? "crédito anterior preservado"
-          : "nenhum crédito publicado até existir uma versão oficial",
+          ? "crédito anterior preservado; documentos conflitantes não foram aceitos pela sincronização"
+          : "nenhum crédito publicado até existir exatamente uma versão oficial",
         oficiais: resolucao.oficiais.map((item) => item.name),
-        arquivos: candidatos.map((item) => ({
-          id: item.id,
-          nome: item.name,
-          atualizadoEm: item.modifiedTime || ""
-        }))
+        novosArquivos,
+        arquivos: arquivosDetalhados,
+        exemploNomeOficial: `${id} - OFICIAL`,
+        instrucoes
       };
       conflitos.push(conflito);
-      console.warn(`Conflito de crédito em ${id}: ${resolucao.motivo}.`);
+
+      if (novidade.bloqueante) {
+        rejeitadosNovos.push({
+          id,
+          motivo: resolucao.motivo,
+          novosArquivos,
+          instrucoes
+        });
+      }
+
+      console.warn(
+        `Conflito de crédito em ${id}: ${resolucao.motivo}. `
+        + (novidade.bloqueante ? "Validação bloqueante ativa." : "Conflito legado preservado.")
+      );
 
       if (anteriores[id]) {
         registros[id] = anteriores[id];
@@ -319,11 +365,21 @@ async function main() {
     totalErros: erros.length,
     totalDuplicados: duplicados.length,
     totalConflitos: conflitos.length,
+    totalConflitosBloqueantes: conflitos.filter((item) => item.bloqueante).length,
+    totalNovosDuplicadosRejeitados: rejeitadosNovos.length,
     totalPreservados: preservados.length,
-    regraDuplicidade: "Quando há dois ou mais documentos para o mesmo Media ID, exatamente um arquivo deve conter a palavra OFICIAL no nome. Sem isso, nenhuma versão é escolhida automaticamente.",
+    validacaoBloqueante: rejeitadosNovos.length > 0,
+    regraDuplicidade: "Quando há dois ou mais documentos para o mesmo Media ID, exatamente um arquivo deve conter a palavra OFICIAL no nome. Novos conflitos são rejeitados e permanecem bloqueantes até serem resolvidos.",
+    comoResolverConflitos: [
+      "Escolha uma única versão correta para cada Media ID em conflito.",
+      "Inclua a palavra OFICIAL somente no nome dessa versão, por exemplo: 1452B005138 - OFICIAL.docx.",
+      "Remova OFICIAL das demais versões ou mova/exclua os arquivos obsoletos da pasta de créditos.",
+      "Execute novamente a sincronização; a versão anterior permanece preservada enquanto o conflito existir."
+    ],
     ignorados,
     duplicados,
     conflitos,
+    rejeitadosNovos,
     preservados,
     erros
   };
@@ -332,6 +388,9 @@ async function main() {
   console.log(`Créditos disponíveis: ${Object.keys(registros).length}/${grupos.size} Media IDs.`);
   if (duplicados.length) console.warn(`IDs com documentos duplicados: ${duplicados.length}.`);
   if (conflitos.length) console.warn(`Conflitos sem seleção automática: ${conflitos.length}.`);
+  if (rejeitadosNovos.length) {
+    console.error(`Novos documentos duplicados rejeitados: ${rejeitadosNovos.length}. Consulte data/creditos-status.json para instruções.`);
+  }
   if (preservados.length) console.warn(`Créditos anteriores preservados: ${preservados.length}.`);
   if (erros.length) console.warn(`Tentativas de leitura com erro: ${erros.length}.`);
 }

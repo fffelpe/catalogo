@@ -62,3 +62,23 @@ jobs:
           git commit -m "chore: sincroniza créditos do Google Drive"
           git pull --rebase origin main
           git push
+
+      - name: Rejeitar novos conflitos de créditos
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const status = JSON.parse(fs.readFileSync("data/creditos-status.json", "utf8"));
+          const rejeitados = Array.isArray(status.rejeitadosNovos) ? status.rejeitadosNovos : [];
+
+          if (!rejeitados.length) {
+            console.log("Nenhum novo conflito bloqueante de créditos.");
+            process.exit(0);
+          }
+
+          console.error(`Validação rejeitou ${rejeitados.length} Media ID(s) com duplicidade não resolvida.`);
+          for (const item of rejeitados) {
+            console.error(`\n${item.id}: ${item.motivo}`);
+            for (const passo of item.instrucoes || []) console.error(`  - ${passo}`);
+          }
+          process.exit(1);
+          NODE
