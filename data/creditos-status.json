@@ -1,16 +1,16 @@
 {
-  "sincronizadoEm": "2026-09-21T19:27:01.999Z",
+  "sincronizadoEm": "2026-09-21T22:43:36.408Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
-  "totalArquivos": 274,
-  "totalIdsDetectados": 243,
-  "totalSincronizados": 243,
+  "totalArquivos": 277,
+  "totalIdsDetectados": 246,
+  "totalSincronizados": 246,
   "totalIgnorados": 0,
-  "totalErros": 0,
+  "totalErros": 1,
   "totalDuplicados": 29,
   "totalConflitos": 29,
   "totalConflitosBloqueantes": 0,
   "totalNovosDuplicadosRejeitados": 0,
-  "totalPreservados": 29,
+  "totalPreservados": 30,
   "validacaoBloqueante": false,
   "regraDuplicidade": "Quando há dois ou mais documentos para o mesmo Media ID, exatamente um arquivo deve conter a palavra OFICIAL no nome. Novos conflitos são rejeitados e permanecem bloqueantes até serem resolvidos.",
   "comoResolverConflitos": [
@@ -1439,6 +1439,10 @@
   "rejeitadosNovos": [],
   "preservados": [
     {
+      "id": "2457B017929",
+      "motivo": "documento atual não pôde ser lido; crédito anterior preservado"
+    },
+    {
       "id": "2457B017842",
       "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
     },
@@ -1555,5 +1559,11 @@
       "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
     }
   ],
-  "erros": []
+  "erros": [
+    {
+      "id": "2457B017929",
+      "nome": "2457B017929.pdf",
+      "erro": "Illegal character: 41"
+    }
+  ]
 }
