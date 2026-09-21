@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T15:56:58.285Z",
+  "generatedAt": "2026-09-21T20:19:57.772Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -22,12 +22,40 @@
     ]
   },
   "resumo": {
-    "materiais": 2016,
-    "vts": 731,
-    "noticias": 359,
+    "materiais": 2020,
+    "vts": 733,
+    "noticias": 361,
     "coberturas": 1352
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005479",
+      "ids": [
+        "1452B005479"
+      ],
+      "descricao": "AVIAÇÃO AGRÍCOLA",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "19/09/2026",
+      "local": "",
+      "pgm": "381"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005453",
+      "ids": [
+        "1452B005453"
+      ],
+      "descricao": "VT CURRAL PRODUTIVO",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "19/09/2026",
+      "local": "",
+      "pgm": "381"
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -10481,6 +10509,34 @@
     }
   ],
   "noticias": [
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005418",
+      "ids": [
+        "1452B005418"
+      ],
+      "descricao": "COUVES COLORIDAS",
+      "reporter": "AMANDA DALLA COSTA",
+      "data": "19/09/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "381"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B004843",
+      "ids": [
+        "1452B004843"
+      ],
+      "descricao": "SISTEMA ANTIGRANIZO",
+      "reporter": "CAIO MARÇANI",
+      "data": "19/09/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "381"
+    },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
