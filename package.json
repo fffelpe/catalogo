@@ -5,7 +5,8 @@
   "scripts": {
     "sync:creditos": "node scripts/sincronizar-creditos.mjs",
     "sync:planilhas": "node scripts/sincronizar-planilhas.mjs && node scripts/sincronizar-noticias-agrocultura.mjs",
-    "sync:agrocultura": "node scripts/gerar-acervo-agrocultura.mjs"
+    "sync:agrocultura": "node scripts/gerar-acervo-agrocultura.mjs",
+    "sync:catalogo": "node scripts/gerar-snapshot-catalogo.mjs"
   },
   "dependencies": {
     "googleapis": "^144.0.0",
