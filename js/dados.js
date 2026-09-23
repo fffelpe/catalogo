@@ -1,4 +1,6 @@
-// dados.js - Carrega e gerencia os dados da planilha do Google Sheets (imgs.csv)
+// dados.js - Carrega e gerencia o acervo principal do catálogo.
+// Fonte primária: snapshot JSON versionado no próprio GitHub Pages.
+// Fallback temporário: CSV público do Google Sheets.
 
 const DadosMedia = {
   registros: [],
@@ -6,14 +8,73 @@ const DadosMedia = {
   carregado: false,
   _carregamentoPromise: null,
   CSV_URL: "https://docs.google.com/spreadsheets/d/1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs/export?format=csv&gid=0",
+  SNAPSHOT_URL: (() => {
+    const scriptSrc = typeof document !== "undefined" ? document.currentScript?.src : "";
+    if (scriptSrc) {
+      return new URL("../data/catalogo-acervo.json", scriptSrc).href;
+    }
+
+    if (typeof window !== "undefined" && window.location?.href) {
+      const caminho = window.location.pathname.includes("/pages/")
+        ? "../data/catalogo-acervo.json"
+        : "data/catalogo-acervo.json";
+      return new URL(caminho, window.location.href).href;
+    }
+
+    return "data/catalogo-acervo.json";
+  })(),
 
   async carregarCSV() {
     if (this.carregado) return this.registros;
     if (this._carregamentoPromise) return this._carregamentoPromise;
 
+    this._carregamentoPromise = (async () => {
+      try {
+        const registrosSnapshot = await this._carregarSnapshotLocal();
+        return this._aplicarRegistros(registrosSnapshot);
+      } catch (erroSnapshot) {
+        console.warn(
+          "Snapshot local do catálogo indisponível; usando Google Sheets como fallback.",
+          erroSnapshot
+        );
+
+        const registrosCsv = await this._carregarGoogleSheets();
+        return this._aplicarRegistros(registrosCsv);
+      }
+    })();
+
+    try {
+      return await this._carregamentoPromise;
+    } finally {
+      this._carregamentoPromise = null;
+    }
+  },
+
+  async _carregarSnapshotLocal() {
+    if (typeof fetch !== "function") {
+      throw new Error("Fetch indisponível para carregar o snapshot local.");
+    }
+
+    const resposta = await fetch(this.SNAPSHOT_URL, { cache: "no-cache" });
+    if (!resposta.ok) {
+      throw new Error(`Snapshot local respondeu HTTP ${resposta.status}.`);
+    }
+
+    const payload = await resposta.json();
+    if (payload?.schemaVersion !== 1) {
+      throw new Error("Versão do snapshot local não reconhecida.");
+    }
+    if (!Array.isArray(payload.registros)) {
+      throw new Error("Snapshot local sem a lista de registros esperada.");
+    }
+
+    return payload.registros;
+  },
+
+  _carregarGoogleSheets() {
     const urlAtualizada = `${this.CSV_URL}&_=${Date.now()}`;
 
-    this._carregamentoPromise = new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       Papa.parse(urlAtualizada, {
         download: true,
         header: true,
@@ -45,17 +106,7 @@ const DadosMedia = {
             return;
           }
 
-          const normalizados = results.data
-            .map(this._normalizar)
-            .filter((registro) => registro.ID);
-
-          // A ordem do CSV representa a ordem física da planilha imgs. Mantemos uma
-          // cópia sem ordenação para recursos que precisam saber quais registros foram
-          // inseridos por último, sem alterar a ordenação por data usada nas buscas.
-          this.registrosOrdemInsercao = [...normalizados];
-          this.registros = [...normalizados].sort(this._compararPorDataDesc);
-          this.carregado = true;
-          resolve(this.registros);
+          resolve(Array.isArray(results.data) ? results.data : []);
         },
         error: (err) => {
           console.error("Erro ao carregar a planilha:", err);
@@ -63,12 +114,24 @@ const DadosMedia = {
         }
       });
     });
+  },
 
-    try {
-      return await this._carregamentoPromise;
-    } finally {
-      this._carregamentoPromise = null;
+  _aplicarRegistros(registros) {
+    const normalizados = (Array.isArray(registros) ? registros : [])
+      .map((registro) => this._normalizar(registro))
+      .filter((registro) => registro.ID);
+
+    if (!normalizados.length) {
+      throw new Error("A fonte do catálogo não contém registros válidos com ID.");
     }
+
+    // A ordem da fonte representa a ordem física da planilha imgs. Mantemos uma
+    // cópia sem ordenação para recursos que precisam saber quais registros foram
+    // inseridos por último, sem alterar a ordenação por data usada nas buscas.
+    this.registrosOrdemInsercao = [...normalizados];
+    this.registros = [...normalizados].sort(this._compararPorDataDesc);
+    this.carregado = true;
+    return this.registros;
   },
 
   _normalizar(item) {
