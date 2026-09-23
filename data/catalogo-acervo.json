@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-23T18:56:50.610Z",
-  "total": 41061,
+  "generatedAt": "2026-09-23T19:11:50.746Z",
+  "total": 41068,
   "registros": [
     {
       "ID": "2822B019835",
@@ -451672,6 +451672,83 @@
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018073",
+      "DESCRICAO": "BOSQUE ANIMAIS SILVESTRES",
+      "DATA": "20/08/2029",
+      "LOCAL": "BELÉM - PA",
+      "REPORTER": "LANA OLIVEIRA",
+      "AFILIADA_EMISSORA": "TV CULTURA DO PARÁ",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018074",
+      "DESCRICAO": "CATALOGAÇÃO FAUNA E FLORA",
+      "DATA": "02/09/2026",
+      "LOCAL": "BELÉM - PA",
+      "REPORTER": "MAURÍCIO BESSA",
+      "AFILIADA_EMISSORA": "TV CULTURA DO PARÁ",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018075",
+      "DESCRICAO": "FESTIVAL DE CIRCO",
+      "DATA": "28/07/2026",
+      "LOCAL": "BELÉM - PA",
+      "REPORTER": "MAYARA ALMEIDA",
+      "AFILIADA_EMISSORA": "TV CULTURA DO PARÁ",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018076",
+      "DESCRICAO": "JOGOS INDÍGENAS",
+      "DATA": "27/07/2026",
+      "LOCAL": "BELÉM - PA",
+      "REPORTER": "MAYARA ALMEIDA",
+      "AFILIADA_EMISSORA": "TV CULTURA DO PARÁ",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ESPORTE",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018077",
+      "DESCRICAO": "CHUVAS",
+      "DATA": "20/04/2026",
+      "LOCAL": "BELÉM - PA",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO PARÁ",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "COTIDIANO",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018078",
+      "DESCRICAO": "ERVEIRAS DO VER O PESO",
+      "DATA": "16/04/2026",
+      "LOCAL": "BELÉM - PA",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO PARÁ",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018079",
+      "DESCRICAO": "SÉRIE ESPECIAL DO BURITI",
+      "DATA": "01/07/2026",
+      "LOCAL": "BELÉM - PA",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO PARÁ",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": ""
     }
   ]
