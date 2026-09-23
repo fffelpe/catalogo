@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+  workflow_run:
+    workflows:
+      - "Sincronizar planilhas do catálogo"
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
@@ -18,6 +23,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -26,6 +32,8 @@ jobs:
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v7
+        with:
+          ref: main
 
       - name: Configurar Node.js
         uses: actions/setup-node@v7
