@@ -15,12 +15,15 @@ on:
       - "scripts/google-sheets-errors.mjs"
       - "scripts/agrocultura-local.mjs"
       - "scripts/catalogo-snapshot.mjs"
+      - "scripts/snapshot-freshness.mjs"
+      - "scripts/verificar-frescor-snapshot.mjs"
       - "scripts/gerar-snapshot-catalogo.mjs"
       - "scripts/gerar-acervo-agrocultura.mjs"
       - "scripts/sincronizar-planilhas.mjs"
       - "scripts/sincronizar-noticias-agrocultura.mjs"
       - "tests/agrocultura-local.test.mjs"
       - "tests/catalogo-snapshot.test.mjs"
+      - "tests/snapshot-freshness.test.mjs"
       - "tests/dados-local-first.test.mjs"
       - "tests/programa-por-prefixo.test.mjs"
       - "tests/google-sheets-errors.test.mjs"
@@ -57,6 +60,9 @@ jobs:
       - name: Testar snapshot local do catálogo
         run: node --test tests/catalogo-snapshot.test.mjs tests/dados-local-first.test.mjs
 
+      - name: Testar frescor do snapshot
+        run: node --test tests/snapshot-freshness.test.mjs
+
       - name: Testar sincronização, prefixos e erros de permissão
         run: node --test tests/programa-por-prefixo.test.mjs tests/google-sheets-errors.test.mjs tests/sincronizar-planilhas-fontes.test.mjs
 
@@ -69,6 +75,11 @@ jobs:
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:catalogo
+
+      - name: Validar frescor do snapshot principal
+        env:
+          SNAPSHOT_MAX_AGE_MINUTES: "20"
+        run: npm run check:snapshot
 
       - name: Gerar acervo estruturado do AgroCultura
         env:
