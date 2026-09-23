@@ -1,5 +1,5 @@
 {
-  "sincronizadoEm": "2026-09-22T22:08:14.968Z",
+  "sincronizadoEm": "2026-09-23T00:31:19.421Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
   "totalArquivos": 280,
   "totalIdsDetectados": 249,
@@ -1563,7 +1563,7 @@
     {
       "id": "2457B017929",
       "nome": "2457B017929.pdf",
-      "erro": "End of file inside array"
+      "erro": "Illegal character: 41"
     }
   ]
 }
