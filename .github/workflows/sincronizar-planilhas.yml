@@ -82,14 +82,29 @@ jobs:
             exit 0
           fi
 
+          mkdir -p /tmp/catalogo-snapshots
+          cp data/catalogo-acervo.json /tmp/catalogo-snapshots/catalogo-acervo.json
+          cp data/agrocultura-acervo.json /tmp/catalogo-snapshots/agrocultura-acervo.json
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/catalogo-acervo.json data/agrocultura-acervo.json
-          git commit -m "chore: atualiza snapshots do catálogo"
 
           for tentativa in 1 2 3 4 5; do
             echo "Tentativa ${tentativa}/5 de publicar os snapshots..."
-            git pull --rebase origin main
+
+            git fetch origin main
+            git reset --hard origin/main
+
+            cp /tmp/catalogo-snapshots/catalogo-acervo.json data/catalogo-acervo.json
+            cp /tmp/catalogo-snapshots/agrocultura-acervo.json data/agrocultura-acervo.json
+            git add data/catalogo-acervo.json data/agrocultura-acervo.json
+
+            if git diff --cached --quiet; then
+              echo "Os snapshots já estão atualizados na branch main."
+              exit 0
+            fi
+
+            git commit -m "chore: atualiza snapshots do catálogo"
 
             if git push origin HEAD:main; then
               echo "Snapshots publicados com sucesso."
@@ -97,7 +112,7 @@ jobs:
             fi
 
             if [ "$tentativa" -lt 5 ]; then
-              echo "A branch main mudou durante o push; tentando novamente..."
+              echo "A branch main mudou durante o push; reaplicando os snapshots sobre a versão mais recente..."
               sleep 2
             fi
           done
