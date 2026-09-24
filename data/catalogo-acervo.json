@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T19:17:51.020Z",
-  "total": 41073,
+  "generatedAt": "2026-09-24T19:55:14.825Z",
+  "total": 41074,
   "registros": [
     {
       "ID": "2822B019835",
@@ -450599,10 +450599,10 @@
     {
       "ID": "1452B005485",
       "DESCRICAO": "FLORADA DO CAFÉ",
-      "DATA": "18/09/2026",
+      "DATA": "26/09/2026",
       "LOCAL": "MINAS GERAIS - MG",
       "REPORTER": "JOÃO RAFAEL",
-      "AFILIADA_EMISSORA": "ANTV - MG",
+      "AFILIADA_EMISSORA": "ANTV / MG",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": ""
@@ -450610,10 +450610,10 @@
     {
       "ID": "1452B005484",
       "DESCRICAO": "PRIMEIROS SOCORROS BOVINOS",
-      "DATA": "18/09/2026",
+      "DATA": "26/09/2026",
       "LOCAL": "ESPÍRITO SANTO - ES",
-      "REPORTER": "",
-      "AFILIADA_EMISSORA": "TVE - ES",
+      "REPORTER": "VERÔNICA SALAZAR",
+      "AFILIADA_EMISSORA": "TVE / ES",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": ""
@@ -451583,7 +451583,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "POLÍTICA",
+      "EDITORIA": "AGRONEGÓCIO",
       "PGM": ""
     },
     {
@@ -451753,56 +451753,67 @@
     },
     {
       "ID": "2457B018080",
-      "DESCRICAO": "",
+      "DESCRICAO": "ALERTA SAÚDE PRIMAVERA",
       "DATA": "23/09/2026",
       "LOCAL": "GOIÁS - GO",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "AGRONEGÓCIO",
+      "EDITORIA": "SAÚDE",
       "PGM": ""
     },
     {
       "ID": "2457B018081",
-      "DESCRICAO": "",
+      "DESCRICAO": "GERAÇÃO DE MÍDIAS URNAS ELETRÔNICAS",
       "DATA": "23/09/2026",
       "LOCAL": "GOIÁS - GO",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "AGRONEGÓCIO",
+      "EDITORIA": "POLÍTICA",
       "PGM": ""
     },
     {
       "ID": "2457B018082",
-      "DESCRICAO": "",
+      "DESCRICAO": "LACRE DAS URNAS ELETRÔNICAS",
       "DATA": "23/09/2026",
       "LOCAL": "GOIÁS - GO",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "AGRONEGÓCIO",
+      "EDITORIA": "POLÍTICA",
       "PGM": ""
     },
     {
       "ID": "2457B018083",
-      "DESCRICAO": "",
+      "DESCRICAO": "NEGATIVAÇÃO INDEVIDA CPF",
       "DATA": "22/09/2026",
       "LOCAL": "GOIÁS - GO",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "AGRONEGÓCIO",
+      "EDITORIA": "ECONOMIA",
       "PGM": ""
     },
     {
       "ID": "2457B018084",
-      "DESCRICAO": "",
+      "DESCRICAO": "PERFIL ELEITORADO GOIÁS",
       "DATA": "23/09/2026",
       "LOCAL": "GOIÁS - GO",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
       "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": ""
+    },
+    {
+      "ID": "1452B004847",
+      "DESCRICAO": "BOSQUE SUCULENTAS",
+      "DATA": "26/09/2026",
+      "LOCAL": "SANTA CATARINA - SC",
+      "REPORTER": "GREICE SAUER",
+      "AFILIADA_EMISSORA": "RBA TV / SC",
+      "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": ""
     }

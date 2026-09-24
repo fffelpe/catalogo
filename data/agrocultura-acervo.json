@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T19:17:54.403Z",
+  "generatedAt": "2026-09-24T19:55:20.903Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -22,12 +22,40 @@
     ]
   },
   "resumo": {
-    "materiais": 2020,
-    "vts": 733,
-    "noticias": 361,
+    "materiais": 2025,
+    "vts": 735,
+    "noticias": 364,
     "coberturas": 1352
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005488",
+      "ids": [
+        "1452B005488"
+      ],
+      "descricao": "VT CAFÉ REGENERATIVO",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "26/09/2026",
+      "local": "",
+      "pgm": "382"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005409",
+      "ids": [
+        "1452B005409"
+      ],
+      "descricao": "VT MORANGOS PLANTIO",
+      "reporter": "AMANDA DALLA COSTA",
+      "data": "26/09/2026",
+      "local": "",
+      "pgm": "382"
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -10509,6 +10537,48 @@
     }
   ],
   "noticias": [
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B004847",
+      "ids": [
+        "1452B004847"
+      ],
+      "descricao": "BOSQUE SUCULENTAS",
+      "reporter": "GREICE SAUER",
+      "data": "26/09/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "382"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005485",
+      "ids": [
+        "1452B005485"
+      ],
+      "descricao": "FLORADA DO CAFÉ",
+      "reporter": "JOÃO RAFAEL",
+      "data": "26/09/2026",
+      "local": "MINAS GERAIS - MG",
+      "pgm": "382"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005484",
+      "ids": [
+        "1452B005484"
+      ],
+      "descricao": "PRIMEIROS SOCORROS BOVINOS",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "26/09/2026",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "382"
+    },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
