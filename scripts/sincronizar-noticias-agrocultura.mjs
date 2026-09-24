@@ -4,6 +4,9 @@ import { extrairMediaIds } from "./media-id.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const PLANILHA_NOTICIAS_ID = "1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw";
+const PLANILHA_MATERIAS_ID = "1Ny0gjt-4du7cJ-ejgahfhdplnCBl58d6RV7kfuLjKM0";
+const ABAS_MATERIAS = ["2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"];
+const ABA_FAUSTINO = "VTS FAUSTINO";
 const ABA_IMGS = "imgs";
 const RANGE_IMGS = `${ABA_IMGS}!A2:I`;
 
@@ -85,6 +88,59 @@ async function carregarNoticias() {
   return registros;
 }
 
+async function carregarMateriasExibidas() {
+  const registros = [];
+
+  for (const aba of ABAS_MATERIAS) {
+    const resposta = await sheets.spreadsheets.values.get({
+      spreadsheetId: PLANILHA_MATERIAS_ID,
+      range: `'${aba}'!A2:E`,
+    });
+
+    for (const linha of resposta.data.values || []) {
+      const ids = idsDoValor(linha[3]);
+      if (!ids.length) continue;
+
+      registros.push([
+        ids.join("\n"),
+        limparTexto(linha[1]),
+        limparTexto(linha[4]),
+        "",
+        limparTexto(linha[2]),
+        "",
+        "AGROCULTURA",
+        "",
+        limparTexto(linha[0]),
+      ]);
+    }
+  }
+
+  const respostaFaustino = await sheets.spreadsheets.values.get({
+    spreadsheetId: PLANILHA_MATERIAS_ID,
+    range: `'${ABA_FAUSTINO}'!A2:D`,
+  });
+
+  for (const linha of respostaFaustino.data.values || []) {
+    const ids = idsDoValor(linha[2]);
+    if (!ids.length) continue;
+
+    registros.push([
+      ids.join("\n"),
+      limparTexto(linha[1]),
+      limparTexto(linha[3]),
+      "",
+      "BRUNO FAUSTINO",
+      "",
+      "AGROCULTURA",
+      "",
+      limparTexto(linha[0]),
+    ]);
+  }
+
+  console.log(`Matérias exibidas: ${registros.length} registros com Media ID encontrados.`);
+  return registros;
+}
+
 async function garantirNoveColunasImgs() {
   const resposta = await sheets.spreadsheets.get({
     spreadsheetId: PLANILHA_IMGS_ID,
@@ -123,12 +179,14 @@ async function carregarImgs() {
   return (resposta.data.values || []).map(normalizarLinhaImgs);
 }
 
-function mesclar(atual, origem) {
+function mesclar(atual, origem, { somentePreencherVazios = false } = {}) {
   const resultado = [...atual];
   const ids = [...new Set([...idsDoValor(atual[0]), ...idsDoValor(origem[0])])];
   resultado[0] = ids.join("\n");
   for (let i = 1; i < 9; i += 1) {
-    if (origem[i]) resultado[i] = origem[i];
+    if (!origem[i]) continue;
+    if (somentePreencherVazios && resultado[i]) continue;
+    resultado[i] = origem[i];
   }
   return resultado;
 }
@@ -148,10 +206,14 @@ async function garantirCabecalhoPgm() {
 }
 
 async function main() {
-  console.log("Iniciando integração de notícias/stand-ups do AgroCultura...");
+  console.log("Iniciando integração de notícias e matérias exibidas do AgroCultura...");
   await garantirCabecalhoPgm();
 
-  const [imgs, noticias] = await Promise.all([carregarImgs(), carregarNoticias()]);
+  const [imgs, noticias, materias] = await Promise.all([
+    carregarImgs(),
+    carregarNoticias(),
+    carregarMateriasExibidas(),
+  ]);
   const existentesPorId = new Map();
 
   imgs.forEach((linha, indice) => {
@@ -167,35 +229,40 @@ async function main() {
   const pendentes = [];
   const atualizacoesPorLinha = new Map();
 
-  for (const noticia of noticias) {
-    const ids = idsDoValor(noticia[0]);
-    const alvos = [...new Set(
-      ids.map((id) => existentesPorId.get(id) || pendentesPorId.get(id)).filter(Boolean)
-    )];
+  function integrar(registros, opcoesMesclagem = {}) {
+    for (const registroOrigem of registros) {
+      const ids = idsDoValor(registroOrigem[0]);
+      const alvos = [...new Set(
+        ids.map((id) => existentesPorId.get(id) || pendentesPorId.get(id)).filter(Boolean)
+      )];
 
-    if (alvos.length > 1) {
-      throw new Error(`Os IDs ${ids.join(", ")} da mesma notícia já pertencem a linhas diferentes na imgs.`);
-    }
+      if (alvos.length > 1) {
+        throw new Error(`Os IDs ${ids.join(", ")} do mesmo registro já pertencem a linhas diferentes na imgs.`);
+      }
 
-    let alvo = alvos[0];
-    if (!alvo) {
-      alvo = { tipo: "pendente", linhaPlanilha: null, dados: noticia };
-      pendentes.push(alvo);
-      registrarIds(pendentesPorId, alvo);
-      continue;
-    }
+      let alvo = alvos[0];
+      if (!alvo) {
+        alvo = { tipo: "pendente", linhaPlanilha: null, dados: registroOrigem };
+        pendentes.push(alvo);
+        registrarIds(pendentesPorId, alvo);
+        continue;
+      }
 
-    const dadosNovos = mesclar(alvo.dados, noticia);
-    if (JSON.stringify(dadosNovos) === JSON.stringify(alvo.dados)) continue;
+      const dadosNovos = mesclar(alvo.dados, registroOrigem, opcoesMesclagem);
+      if (JSON.stringify(dadosNovos) === JSON.stringify(alvo.dados)) continue;
 
-    alvo.dados = dadosNovos;
-    if (alvo.tipo === "existente") {
-      atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
-      registrarIds(existentesPorId, alvo);
-    } else {
-      registrarIds(pendentesPorId, alvo);
+      alvo.dados = dadosNovos;
+      if (alvo.tipo === "existente") {
+        atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
+        registrarIds(existentesPorId, alvo);
+      } else {
+        registrarIds(pendentesPorId, alvo);
+      }
     }
   }
+
+  integrar(noticias);
+  integrar(materias, { somentePreencherVazios: true });
 
   if (atualizacoesPorLinha.size) {
     await sheets.spreadsheets.values.batchUpdate({
@@ -220,10 +287,13 @@ async function main() {
     });
   }
 
-  console.log(`Integração concluída. Linhas atualizadas: ${atualizacoesPorLinha.size}; novos registros: ${pendentes.length}; total origem: ${noticias.length}.`);
+  console.log(
+    `Integração concluída. Linhas atualizadas: ${atualizacoesPorLinha.size}; ` +
+    `novos registros: ${pendentes.length}; notícias: ${noticias.length}; matérias: ${materias.length}.`
+  );
 }
 
 main().catch((erro) => {
-  console.error("Erro na integração de notícias:", erro);
+  console.error("Erro na integração de notícias/matérias:", erro);
   process.exitCode = 1;
 });
