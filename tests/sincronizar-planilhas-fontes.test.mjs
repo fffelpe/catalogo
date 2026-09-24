@@ -44,6 +44,13 @@ test("integra MATÉRIAS QUE FORAM AO AR no índice global sem sobrescrever metad
   assert.match(conteudo, /somentePreencherVazios:\s*true/);
 });
 
+test("conflito de múltiplos IDs já distribuídos não pode abortar toda a integração", async () => {
+  const conteudo = await readFile(INTEGRACAO_AGRO, "utf8");
+  assert.doesNotMatch(conteudo, /throw new Error\(`Os IDs \$\{ids\.join\(", "\)\} do mesmo registro já pertencem a linhas diferentes na imgs\.`\)/);
+  assert.match(conteudo, /conflitosDistribuidos/);
+  assert.match(conteudo, /preservarIdsDoAlvo/);
+});
+
 test("preserva PGM de NOTÍCIAS no snapshot e permite pesquisar pelo número do programa", async () => {
   const [integracao, gerador, busca] = await Promise.all([
     readFile(INTEGRACAO_AGRO, "utf8"),
