@@ -15,7 +15,7 @@ function linhaParaRegistro(linha = []) {
     AFILIADA_EMISSORA: limparCelula(linha[5]),
     PROGRAMA: limparCelula(linha[6]),
     EDITORIA: limparCelula(linha[7]),
-    PGM: "",
+    PGM: limparCelula(linha[8]),
   };
 }
 
