@@ -15,6 +15,7 @@ async function carregar(payload) {
   const sandbox = {
     console,
     URL,
+    URLSearchParams,
     fetch: async () => ({ ok: true, json: async () => payload })
   };
   vm.createContext(sandbox);
