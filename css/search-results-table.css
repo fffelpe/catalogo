@@ -156,6 +156,46 @@
   white-space: nowrap;
 }
 
+.pagina-busca .media-id-link {
+  color: #15743b;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.pagina-busca .media-id-link:hover,
+.pagina-busca .media-id-link:focus-visible {
+  color: #0b5d2a;
+}
+
+.pagina-busca .descricao-texto {
+  display: block;
+}
+
+.pagina-busca .trecho-encontrado {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 5px;
+  padding: 3px 7px;
+  border: 1px solid #bfe4ca;
+  border-radius: 6px;
+  background: #e8f7ed;
+  color: #176a37;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.pagina-busca .trecho-encontrado:hover,
+.pagina-busca .trecho-encontrado:focus-visible {
+  border-color: #82c69a;
+  background: #dbf1e2;
+  color: #0b5d2a;
+}
+
 .pagina-busca .btn-copiar-id,
 .pagina-programa .resultados-gerais-wrap .btn-copiar-id {
   width: 22px;
