@@ -2,24 +2,24 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
-const SINCRONIZACAO = new URL("../scripts/sincronizar-planilhas.mjs", import.meta.url);
-const INTEGRACAO_AGRO = new URL("../scripts/sincronizar-noticias-agrocultura.mjs", import.meta.url);
+const PREPARACAO = new URL("../scripts/preparar-colunas-media-id.mjs", import.meta.url);
+const PACKAGE = new URL("../package.json", import.meta.url);
 
-test("grava linhas com Media ID usando RAW para preservar IDs da família E", async () => {
-  const [sincronizacao, integracao] = await Promise.all([
-    readFile(SINCRONIZACAO, "utf8"),
-    readFile(INTEGRACAO_AGRO, "utf8"),
+test("configura a coluna A como texto antes de sincronizar Media IDs", async () => {
+  const [preparacao, packageJson] = await Promise.all([
+    readFile(PREPARACAO, "utf8"),
+    readFile(PACKAGE, "utf8"),
   ]);
 
-  assert.match(sincronizacao, /valueInputOption:\s*["']RAW["']/);
-  assert.doesNotMatch(
-    sincronizacao,
-    /spreadsheetId:\s*PLANILHA_IMGS_ID[\s\S]{0,500}?valueInputOption:\s*["']USER_ENTERED["']/
-  );
+  assert.match(preparacao, /numberFormat:\s*\{\s*type:\s*["']TEXT["']/s);
+  assert.match(preparacao, /startColumnIndex:\s*0/);
+  assert.match(preparacao, /endColumnIndex:\s*1/);
 
-  assert.match(integracao, /valueInputOption:\s*["']RAW["']/);
-  assert.doesNotMatch(
-    integracao,
-    /spreadsheetId:\s*PLANILHA_IMGS_ID[\s\S]{0,500}?valueInputOption:\s*["']USER_ENTERED["']/
+  const pkg = JSON.parse(packageJson);
+  assert.match(pkg.scripts["sync:planilhas"], /preparar-colunas-media-id\.mjs/);
+  assert.ok(
+    pkg.scripts["sync:planilhas"].indexOf("preparar-colunas-media-id.mjs") <
+      pkg.scripts["sync:planilhas"].indexOf("sincronizar-planilhas.mjs"),
+    "a coluna deve ser preparada antes de qualquer escrita de sincronização"
   );
 });
