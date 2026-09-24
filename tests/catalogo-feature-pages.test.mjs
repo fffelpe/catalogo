@@ -57,6 +57,21 @@ test("painel de qualidade carrega motor antes da UI", () => {
   ]);
 });
 
+test("páginas principais oferecem navegação visível entre busca e qualidade", () => {
+  const paginas = [
+    ler("../index.html"),
+    ler("../pages/resultado-busca.html"),
+    ler("../pages/media.html"),
+    ler("../pages/qualidade.html")
+  ];
+
+  paginas.forEach((html) => {
+    assert.match(html, /class="catalogo-section-nav"/);
+    assert.match(html, />Buscar<\/a>/);
+    assert.match(html, />Qualidade<\/a>/);
+  });
+});
+
 test("somente o módulo de player conhece o host lowres", () => {
   const player = ler("../js/media-player.js");
   const busca = [
