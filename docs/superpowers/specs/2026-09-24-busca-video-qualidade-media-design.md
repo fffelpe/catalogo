@@ -37,7 +37,7 @@ O catálogo terá duas camadas locais de dados:
 - `data/catalogo-acervo.json`: campos editoriais principais vindos da planilha `imgs`;
 - `data/media-enrichment.json`: campos derivados ou enriquecidos do Media ID.
 
-O navegador carrega o acervo principal por `DadosMedia` e, quando necessário, carrega o enriquecimento uma única vez por `MediaEnrichment`.
+O navegador carrega o acervo principal por `DadosMedia` e os metadados enriquecidos por `MediaEnrichment`.
 
 Fluxo:
 
@@ -55,7 +55,20 @@ data/media-enrichment.json ────────────┘
 
 O Supabase atual continua responsável pelo analytics global. Esta entrega não adiciona uma nova dependência de banco para a consulta do acervo.
 
-### 3.2 Formato do enriquecimento
+### 3.2 Ordem de carregamento
+
+Na página de resultados:
+
+1. carregar `DadosMedia`;
+2. carregar `MediaEnrichment` e `CreditosMedia` em paralelo;
+3. falha em enrichment ou créditos é tolerada;
+4. executar a primeira busca somente depois que essas cargas opcionais forem concluídas ou falharem.
+
+Isso garante que a primeira busca já use timecodes e campos enriquecidos quando disponíveis, sem tornar esses dados obrigatórios para o funcionamento básico.
+
+Na ficha e no painel de qualidade, o acervo principal é obrigatório; enrichment e créditos são opcionais e usam a mesma estratégia tolerante a falhas.
+
+### 3.3 Formato do enriquecimento
 
 `data/media-enrichment.json` terá envelope versionado:
 
@@ -106,7 +119,23 @@ API pública prevista:
 
 O carregamento deve ser memoizado para evitar requisições repetidas.
 
-### 4.2 `js/search-engine.js`
+### 4.2 `js/dados.js`
+
+O módulo atual permanece responsável pelo acervo principal e ganha uma busca exata por token de Media ID:
+
+- `buscarPorMediaId(mediaId)`.
+
+Essa busca deve normalizar o ID consultado e comparar contra cada ID retornado por `MediaIdUtils.extrair(registro.ID)`, em vez de comparar a célula inteira.
+
+Isso é necessário para registros cuja célula contém múltiplos IDs, por exemplo:
+
+```text
+1452B004869 / 1452B004870
+```
+
+A ficha de qualquer um desses IDs deve localizar o mesmo registro editorial.
+
+### 4.3 `js/search-engine.js`
 
 O motor atual será estendido, não substituído.
 
@@ -120,31 +149,33 @@ Novos campos internos de ranking:
 
 Os pesos existentes continuam válidos, incluindo prioridade máxima para ID exato.
 
+Para cada registro, o motor extrai todos os Media IDs da célula e agrega os campos de enrichment desses IDs para fins de busca. Correspondências de segmento devem preservar qual `mediaId` originou o trecho.
+
 Regras adicionais:
 
 - correspondência de frase completa recebe bônus;
 - correspondência em múltiplos campos recebe bônus moderado;
 - encontrar todos os termos relevantes da consulta recebe bônus;
 - segmentos participam do ranking apenas quando possuem texto válido;
-- o resultado pode carregar `_SEARCH_SEGMENT_MATCHES` com os melhores trechos encontrados;
+- o resultado pode carregar `_SEARCH_SEGMENT_MATCHES` com os melhores trechos encontrados, incluindo `mediaId`, `start`, `end`, `text` e score;
 - score permanece interno e não será apresentado como uma porcentagem de precisão artificial.
 
 A ordenação continua sendo `score desc` e, em empate, ordem original estável.
 
-### 4.3 `js/media-segments.js`
+### 4.4 `js/media-segments.js`
 
 Responsabilidade: pesquisar segmentos e preparar navegação por timecode.
 
 API prevista:
 
 - `buscar(mediaId, consulta)`;
-- `buscarEmTodos(registros, consulta)`;
+- `buscarEmRegistro(registro, consulta)`;
 - `formatarTimecode(segundos)`;
 - `criarUrlFicha(mediaId, start)`.
 
-Ao encontrar um segmento, o catálogo deve guardar `start`, `end`, `text` e score do trecho.
+Ao encontrar um segmento, o catálogo deve guardar `mediaId`, `start`, `end`, `text` e score do trecho.
 
-### 4.4 `js/media-player.js`
+### 4.5 `js/media-player.js`
 
 Responsabilidade: construir e controlar o player da ficha.
 
@@ -164,7 +195,7 @@ O módulo deve:
 
 A página não fará varredura de disponibilidade de todos os vídeos em massa. Verificação de vídeo será feita apenas quando o usuário abrir a ficha/player, evitando centenas ou milhares de requisições HTTP.
 
-### 4.5 `js/catalogo-quality.js`
+### 4.6 `js/catalogo-quality.js`
 
 Responsabilidade: avaliar qualidade dos metadados sem confundir campo opcional com erro obrigatório.
 
@@ -178,16 +209,18 @@ Problemas detectáveis na primeira versão:
 - `PROGRAMA_AUSENTE`;
 - `LOCAL_AUSENTE` como aviso contextual;
 - `REPORTER_AUSENTE` como aviso contextual;
-- `CREDITOS_AUSENTES` como aviso quando a integração de créditos estiver carregada;
+- `CREDITOS_AUSENTES` como informação de completude quando a integração de créditos estiver carregada;
 - `SEM_SEGMENTOS` como indicador de enriquecimento, não erro editorial.
 
 Severidades:
 
 - `critical`: impede identificação/confiabilidade do registro;
 - `warning`: metadado incompleto que pode reduzir encontrabilidade;
-- `info`: oportunidade de enriquecimento.
+- `info`: oportunidade de enriquecimento ou dado opcional ausente.
 
 Campos `LOCAL` e `REPORTER` não são obrigatórios universalmente. Sua ausência deve ser `warning`, nunca `critical`, porque imagens brutas ou registros específicos podem legitimamente não possuir esses dados.
+
+`CREDITOS_AUSENTES` será `info` na primeira versão, pois o catálogo não possui uma regra confiável que determine quais registros obrigatoriamente deveriam ter um documento de créditos.
 
 API prevista:
 
@@ -195,7 +228,7 @@ API prevista:
 - `avaliarAcervo(registros, contexto)`;
 - `resumir(relatorio)`.
 
-### 4.6 `js/related-media.js`
+### 4.7 `js/related-media.js`
 
 Responsabilidade: calcular similaridade entre um item aberto e os demais registros.
 
@@ -219,7 +252,7 @@ Regras:
 - em empate, priorizar data mais próxima e depois ordem estável;
 - o score de similaridade não será mostrado ao usuário na primeira versão.
 
-### 4.7 `js/media-detail.js`
+### 4.8 `js/media-detail.js`
 
 Responsabilidade: montar a ficha individual usando os módulos acima.
 
@@ -248,13 +281,13 @@ A ausência de enriquecimento não bloqueia a ficha.
 
 Na tabela atual:
 
-- o texto do Media ID se torna link para `media.html?id=...`;
+- o texto de cada Media ID se torna link para `media.html?id=...`;
 - o botão de copiar ID permanece independente;
 - quando a busca encontrar texto dentro de um segmento, a linha recebe uma pequena ação `Trecho encontrado · 00:28`;
-- clicar nessa ação abre `media.html?id=...&t=28`;
+- clicar nessa ação abre `media.html?id=MEDIA_ID_DO_TRECHO&t=28`;
 - nenhuma nova coluna obrigatória será adicionada à tabela, preservando sua largura responsiva.
 
-Para registros que contêm múltiplos IDs, cada ID terá sua própria ligação para ficha. A linha editorial continua única.
+Para registros que contêm múltiplos IDs, cada ID terá sua própria ligação para ficha. A linha editorial continua única. Se a correspondência de segmento pertencer somente a um dos IDs, a ação de trecho aponta especificamente para esse ID.
 
 ### 5.2 Ficha do Media ID
 
@@ -274,6 +307,8 @@ Ordem dos blocos:
 10. indicador resumido de completude do registro.
 
 O player e os segmentos devem ser utilizáveis por teclado. Botões terão `aria-label` apropriado.
+
+Quando a célula editorial tiver múltiplos IDs, a ficha mostra o ID solicitado como principal e pode listar os demais como IDs associados.
 
 ### 5.3 Painel de qualidade
 
@@ -316,7 +351,7 @@ Se um registro não tiver a frase na descrição, mas possuir:
 
 esse registro entra no resultado e recebe metadado interno de correspondência de segmento.
 
-A interface mostra apenas o melhor trecho por linha. A ficha mostra todos os segmentos relevantes do vídeo.
+A interface mostra apenas o melhor trecho por linha. A ficha mostra todos os segmentos relevantes do Media ID aberto.
 
 Segmentos nunca substituem descrição, local ou demais metadados editoriais; eles apenas enriquecem a encontrabilidade.
 
@@ -329,6 +364,8 @@ Para não gerar custo quadrático durante a busca geral, a similaridade só é c
 Tokenização de descrição deve reutilizar normalização compatível com `SearchEngine`, removendo stopwords e acentos para comparação, mas preservando texto original para exibição.
 
 Datas inválidas simplesmente não recebem bônus temporal.
+
+Para uma ficha de ID pertencente a um registro com múltiplos IDs, o próprio registro editorial e seus IDs associados não podem aparecer como conteúdo relacionado.
 
 ## 8. Qualidade e duplicidade
 
@@ -349,7 +386,9 @@ Quando `CreditosMedia` estiver disponível, a ficha deve reutilizar a integraç�
 
 O SearchEngine continuará incorporando `CREDITOS_MATERIA`, `CREDITOS_FONTES`, `CREDITOS_EQUIPE` e `CREDITOS_CARGOS`.
 
-O painel de qualidade só avalia ausência de créditos depois que a fonte de créditos tiver terminado de carregar. Falha da fonte deve gerar estado "não verificado", e não marcar todo o catálogo como sem créditos.
+O painel de qualidade só avalia a presença de créditos depois que a fonte tiver terminado de carregar. Falha da fonte deve gerar estado "não verificado", e não marcar todo o catálogo como sem créditos.
+
+Ausência de créditos é `info`, não `warning`, até existir uma regra editorial que determine quais tipos de registro exigem créditos.
 
 ## 10. Compatibilidade com Analytics
 
@@ -423,6 +462,7 @@ tests/media-detail.test.mjs
 Alterados:
 
 ```text
+js/dados.js
 js/search-engine.js
 js/catalogo-ui.js
 pages/resultado-busca.html
@@ -442,9 +482,19 @@ Cobrir:
 - ID exato permanece acima de qualquer resultado textual;
 - termo em descrição ranqueia corretamente;
 - termo apenas em segmento encontra o registro;
+- segmento de uma célula com múltiplos IDs preserva o ID que originou a correspondência;
 - frase exata recebe bônus;
 - resultados empatados preservam estabilidade;
 - enriquecimento ausente não quebra a busca.
+
+### Dados / ID
+
+Cobrir:
+
+- `buscarPorMediaId` encontra célula de ID simples;
+- encontra cada ID de uma célula múltipla;
+- não usa substring acidental;
+- ID inválido não encontra registro.
 
 ### Segmentos
 
@@ -453,7 +503,8 @@ Cobrir:
 - formatação `00:28`, `01:05`, `01:02:03`;
 - segmento inválido é ignorado;
 - melhor trecho é identificado;
-- URL da ficha inclui `t` apenas quando válido.
+- URL da ficha inclui `t` apenas quando válido;
+- ID do segmento é preservado em registros com múltiplos IDs.
 
 ### Qualidade
 
@@ -464,13 +515,14 @@ Cobrir:
 - datas inválidas;
 - ausência contextual de local/repórter como warning;
 - falta de segmentos como info;
+- ausência de créditos como info quando a fonte foi carregada;
 - créditos indisponíveis como não verificado.
 
 ### Relacionados
 
 Cobrir:
 
-- não retornar o próprio item;
+- não retornar o próprio item nem IDs associados do mesmo registro;
 - assuntos e keywords pesam mais que programa;
 - relações abaixo do mínimo são removidas;
 - limite de 6;
@@ -482,6 +534,7 @@ Cobrir ao menos as funções puras de parsing/estado:
 
 - ID válido;
 - ID inválido;
+- ID pertencente a célula com múltiplos IDs;
 - `t` válido e inválido;
 - construção segura do endereço lowres;
 - fallback sem enrichment.
@@ -495,12 +548,14 @@ A entrega será considerada funcional quando:
 3. texto presente apenas em um segmento puder encontrar o Media ID correspondente;
 4. o usuário puder abrir o trecho encontrado diretamente no player da ficha;
 5. cada Media ID exibido na busca tiver acesso à ficha individual;
-6. a ficha funcionar mesmo sem enrichment;
-7. a ficha listar até 6 conteúdos relacionados relevantes;
-8. o painel de qualidade identificar problemas sem alterar a fonte;
-9. IDs múltiplos forem tratados corretamente para cópia, ficha e duplicidade;
-10. falha de créditos, enrichment ou player não impedir o restante da página;
-11. testes novos e testes existentes passarem antes da conclusão.
+6. IDs múltiplos abrirem corretamente a mesma linha editorial, preservando qual ID foi solicitado;
+7. a ficha funcionar mesmo sem enrichment;
+8. a ficha listar até 6 conteúdos relacionados relevantes;
+9. o painel de qualidade identificar problemas sem alterar a fonte;
+10. IDs múltiplos forem tratados corretamente para cópia, ficha e duplicidade;
+11. falha de créditos, enrichment ou player não impedir o restante da página;
+12. a primeira busca aguardar o término ou falha do carregamento opcional de enrichment/créditos;
+13. testes novos e testes existentes passarem antes da conclusão.
 
 ## 17. Fora de escopo desta entrega
 
@@ -519,12 +574,13 @@ Esses itens poderão ser adicionados depois sem alterar o contrato central defin
 ## 18. Sequência recomendada de implementação
 
 1. modelo e loader de `media-enrichment.json`;
-2. testes e extensão do `SearchEngine`;
-3. busca e navegação por segmentos/timecodes;
-4. ficha individual + player;
-5. algoritmo e UI de relacionados;
-6. motor e painel de qualidade;
-7. integração da tabela de resultados com ficha/timecodes;
-8. testes completos e verificação de regressão.
+2. busca exata de Media ID em `DadosMedia` e testes de IDs múltiplos;
+3. testes e extensão do `SearchEngine`;
+4. busca e navegação por segmentos/timecodes;
+5. ficha individual + player;
+6. algoritmo e UI de relacionados;
+7. motor e painel de qualidade;
+8. integração da tabela de resultados com ficha/timecodes;
+9. testes completos e verificação de regressão.
 
 Essa ordem cria primeiro as fundações compartilhadas e reduz retrabalho entre as cinco funcionalidades.
