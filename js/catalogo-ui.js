@@ -85,9 +85,10 @@ function separarIds(valor) {
 function formatarIdsComCopia(valor) {
   return separarIds(valor).map((id) => {
     const idSeguro = escapeHtml(id);
+    const href = `media.html?id=${encodeURIComponent(id)}`;
     return `
       <span class="id-item">
-        <span class="id-text">${idSeguro}</span>
+        <a class="media-id-link" href="${escapeHtml(href)}"><span class="id-text">${idSeguro}</span></a>
         <button type="button" class="btn-copiar-id" data-ids="${idSeguro}" title="Copiar ID" aria-label="Copiar ID ${idSeguro}">
           <img src="../images/copiar.png?v=4" alt="" class="icone-copiar" aria-hidden="true">
         </button>
@@ -103,6 +104,23 @@ function renderizarCelulaId(valor, rotulo = "ID") {
         <span class="id-lista">${formatarIdsComCopia(valor)}</span>
       </span>
     </td>
+  `;
+}
+
+function renderizarTrechoEncontrado(item) {
+  const trecho = Array.isArray(item?._SEARCH_SEGMENT_MATCHES)
+    ? item._SEARCH_SEGMENT_MATCHES[0]
+    : null;
+
+  if (!trecho || typeof MediaSegments === "undefined") return "";
+  const href = MediaSegments.criarUrlFicha(trecho.mediaId, trecho.start);
+  if (!href) return "";
+
+  const timecode = MediaSegments.formatarTimecode(trecho.start);
+  return `
+    <a class="trecho-encontrado" href="${escapeHtml(href)}" aria-label="Abrir trecho encontrado em ${escapeHtml(timecode)}">
+      Trecho encontrado · ${escapeHtml(timecode)}
+    </a>
   `;
 }
 
@@ -164,7 +182,7 @@ function renderizarProximaPagina() {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       ${renderizarCelulaId(item.ID)}
-      <td data-label="Descrição">${escapeHtml(item.DESCRICAO)}</td>
+      <td data-label="Descrição"><span class="descricao-texto">${escapeHtml(item.DESCRICAO)}</span>${renderizarTrechoEncontrado(item)}</td>
       <td data-label="Data">${escapeHtml(item.DATA)}</td>
       <td data-label="Local">${escapeHtml(item.LOCAL)}</td>
       <td data-label="Repórter">${escapeHtml(item.REPORTER)}</td>
