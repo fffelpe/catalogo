@@ -6,6 +6,25 @@ Visando algumas dificuldades para encontrar imagens no catálogo da casa, esta p
 
 https://fffelpe.github.io/catalogo/index.html
 
+## Busca inteligente e fichas de mídia
+
+O catálogo possui busca por relevância com sinônimos jornalísticos, créditos e metadados enriquecidos. A camada opcional `data/media-enrichment.json` pode associar palavras-chave, assuntos, pessoas, locais e segmentos com timecode a cada Media ID.
+
+As novas interfaces são:
+
+- `pages/media.html?id=MEDIA_ID`: ficha individual com player lowres, metadados, créditos, segmentos e conteúdos relacionados;
+- `pages/qualidade.html`: painel diagnóstico de qualidade dos registros, com filtros por programa, severidade e tipo de problema.
+
+A ausência do arquivo de enriquecimento, de créditos ou de segmentos não impede o funcionamento básico da busca e das fichas.
+
+## Testes
+
+```bash
+npm test
+```
+
+A suíte cobre sincronização existente, snapshots, Media IDs, ranking da busca, segmentos, ficha individual, conteúdos relacionados, segurança de renderização e painel de qualidade.
+
 ## Analytics global
 
 A integração de buscas populares globais está preparada no repositório. O passo a passo para criar o banco e ativar a integração está em [`docs/ANALYTICS_GLOBAL.md`](docs/ANALYTICS_GLOBAL.md).
