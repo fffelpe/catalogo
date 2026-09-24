@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T15:16:39.630Z",
-  "total": 41068,
+  "generatedAt": "2026-09-24T19:17:51.020Z",
+  "total": 41073,
   "registros": [
     {
       "ID": "2822B019835",
@@ -451749,6 +451749,61 @@
       "AFILIADA_EMISSORA": "TV CULTURA DO PARÁ",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018080",
+      "DESCRICAO": "",
+      "DATA": "23/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018081",
+      "DESCRICAO": "",
+      "DATA": "23/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018082",
+      "DESCRICAO": "",
+      "DATA": "23/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018083",
+      "DESCRICAO": "",
+      "DATA": "22/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018084",
+      "DESCRICAO": "",
+      "DATA": "23/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
       "PGM": ""
     }
   ]
