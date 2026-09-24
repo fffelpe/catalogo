@@ -201,6 +201,16 @@ const DadosMedia = {
     return 0;
   },
 
+  buscarPorMediaId(mediaId) {
+    if (typeof MediaIdUtils === "undefined") return null;
+    const alvo = MediaIdUtils.normalizar(mediaId);
+    if (!alvo) return null;
+
+    return this.registros.find((registro) =>
+      MediaIdUtils.extrair(registro.ID).includes(alvo)
+    ) || null;
+  },
+
   buscar(termo) {
     if (typeof SearchEngine !== "undefined") {
       return SearchEngine.pesquisar(this.registros, termo || "");
