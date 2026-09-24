@@ -9,6 +9,7 @@ const SearchEngine = (() => {
     LOCAL: 20,
     REPORTER: 18,
     PROGRAMA: 18,
+    PGM: 18,
     AFILIADA_EMISSORA: 12,
     CREDITOS_MATERIA: 30,
     CREDITOS_FONTES: 24,
