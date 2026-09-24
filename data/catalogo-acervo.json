@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T20:01:12.862Z",
+  "generatedAt": "2026-09-24T20:01:48.885Z",
   "total": 41074,
   "registros": [
     {
@@ -426845,7 +426845,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "374"
     },
     {
       "ID": "1452B005372",
@@ -426856,7 +426856,7 @@
       "AFILIADA_EMISSORA": "TVE / MS",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "374"
     },
     {
       "ID": "1452B005356",
@@ -426867,7 +426867,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "374"
     },
     {
       "ID": "1452B005384",
@@ -426878,7 +426878,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "373"
     },
     {
       "ID": "1452B005352",
@@ -426889,7 +426889,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "373"
     },
     {
       "ID": "1452B005364",
@@ -426900,7 +426900,7 @@
       "AFILIADA_EMISSORA": "TVE / ES",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "373"
     },
     {
       "ID": "1452B005353",
@@ -426911,7 +426911,7 @@
       "AFILIADA_EMISSORA": "CATVE / PR",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "373"
     },
     {
       "ID": "1452B005370",
@@ -426922,7 +426922,7 @@
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL / GO",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "373"
     },
     {
       "ID": "1452B005350",
@@ -426933,7 +426933,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "372"
     },
     {
       "ID": "1452B004906",
@@ -426944,7 +426944,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "372"
     },
     {
       "ID": "1452B005363",
@@ -426955,7 +426955,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "372"
     },
     {
       "ID": "1452B005362",
@@ -426966,7 +426966,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "372"
     },
     {
       "ID": "1452B005367",
@@ -426977,7 +426977,7 @@
       "AFILIADA_EMISSORA": "TV UNESP / SP",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "372"
     },
     {
       "ID": "1452B005310",
@@ -426988,7 +426988,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "371"
     },
     {
       "ID": "1452B005337",
@@ -426999,7 +426999,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "371"
     },
     {
       "ID": "1452B005320",
@@ -427010,7 +427010,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "371"
     },
     {
       "ID": "1452B005309",
@@ -427021,7 +427021,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "370"
     },
     {
       "ID": "1452B005308",
@@ -427032,7 +427032,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "370"
     },
     {
       "ID": "1452B005316",
@@ -427043,7 +427043,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "370"
     },
     {
       "ID": "1452B005158",
@@ -427054,7 +427054,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "369"
     },
     {
       "ID": "1452B005303",
@@ -427065,7 +427065,7 @@
       "AFILIADA_EMISSORA": "TV PERNAMBUCO",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "369"
     },
     {
       "ID": "1452B005295",
@@ -427076,7 +427076,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "369"
     },
     {
       "ID": "1452B005060",
@@ -427087,7 +427087,7 @@
       "AFILIADA_EMISSORA": "TVE / ES",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "368"
     },
     {
       "ID": "1452B005296",
@@ -427098,7 +427098,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "368"
     },
     {
       "ID": "1452B005287",
@@ -427109,7 +427109,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "367"
     },
     {
       "ID": "1452B005213",
@@ -427120,7 +427120,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "367"
     },
     {
       "ID": "1452B005186",
@@ -427131,7 +427131,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "367"
     },
     {
       "ID": "1452B005160",
@@ -427142,7 +427142,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "365"
     },
     {
       "ID": "1452B005249",
@@ -427153,7 +427153,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "365"
     },
     {
       "ID": "1452B005153",
@@ -427164,7 +427164,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "365"
     },
     {
       "ID": "1452B005232",
@@ -427175,7 +427175,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "364"
     },
     {
       "ID": "1452B005231",
@@ -427186,7 +427186,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "364"
     },
     {
       "ID": "1009E105308",
@@ -427197,7 +427197,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "364"
     },
     {
       "ID": "1452B005176",
@@ -427208,7 +427208,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "363"
     },
     {
       "ID": "1452B005214",
@@ -427219,7 +427219,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "363"
     },
     {
       "ID": "1452B005216",
@@ -427230,7 +427230,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "363"
     },
     {
       "ID": "1452B005165",
@@ -427241,7 +427241,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "361"
     },
     {
       "ID": "1452B005143",
@@ -427252,7 +427252,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "361"
     },
     {
       "ID": "1452B005142",
@@ -427263,7 +427263,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "361"
     },
     {
       "ID": "1452B005080",
@@ -427274,7 +427274,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "360"
     },
     {
       "ID": "1452B005077",
@@ -427285,7 +427285,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "360"
     },
     {
       "ID": "1452B005109",
@@ -427296,7 +427296,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "360"
     },
     {
       "ID": "1452B005141",
@@ -427307,7 +427307,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "360"
     },
     {
       "ID": "1452B005134",
@@ -427318,7 +427318,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "359"
     },
     {
       "ID": "1452B005128",
@@ -427329,7 +427329,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "359"
     },
     {
       "ID": "1452B005129",
@@ -427340,7 +427340,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "359"
     },
     {
       "ID": "1452B005122",
@@ -427351,7 +427351,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "358"
     },
     {
       "ID": "1452B005095",
@@ -427362,7 +427362,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "357"
     },
     {
       "ID": "1452B005074",
@@ -427373,7 +427373,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "357"
     },
     {
       "ID": "1452B005078",
@@ -427384,7 +427384,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "357"
     },
     {
       "ID": "1452B005075",
@@ -427395,7 +427395,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "356"
     },
     {
       "ID": "1452B005067",
@@ -427406,7 +427406,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "356"
     },
     {
       "ID": "1452B005066",
@@ -427417,7 +427417,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "356"
     },
     {
       "ID": "1452B005021",
@@ -427428,7 +427428,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "356"
     },
     {
       "ID": "1452B005049",
@@ -427439,7 +427439,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "355"
     },
     {
       "ID": "1452B005048",
@@ -427450,7 +427450,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "355"
     },
     {
       "ID": "1452B004974",
@@ -427461,7 +427461,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "355"
     },
     {
       "ID": "1452B005020",
@@ -427472,7 +427472,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "354"
     },
     {
       "ID": "1452B005042",
@@ -427483,7 +427483,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "354"
     },
     {
       "ID": "1452B005009",
@@ -427494,7 +427494,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "353"
     },
     {
       "ID": "1452B004973",
@@ -427505,7 +427505,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "353"
     },
     {
       "ID": "1452B004999",
@@ -427516,7 +427516,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "352"
     },
     {
       "ID": "1452B005008",
@@ -427527,7 +427527,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "352"
     },
     {
       "ID": "1452B004998",
@@ -427538,7 +427538,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "351"
     },
     {
       "ID": "1452B005003",
@@ -427549,7 +427549,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "351"
     },
     {
       "ID": "1452B005002",
@@ -427560,7 +427560,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "351"
     },
     {
       "ID": "REPÓRTER CHAMA",
@@ -427582,7 +427582,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "320"
     },
     {
       "ID": "1452B004347",
@@ -427593,7 +427593,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "320"
     },
     {
       "ID": "1452B004337",
@@ -427604,7 +427604,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "320"
     },
     {
       "ID": "1452B004285",
@@ -427615,7 +427615,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "320"
     },
     {
       "ID": "1452B004346",
@@ -427626,7 +427626,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "320"
     },
     {
       "ID": "1452B004360",
@@ -427637,7 +427637,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "321"
     },
     {
       "ID": "1452B004294",
@@ -427648,7 +427648,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "321"
     },
     {
       "ID": "1452B004369",
@@ -427659,7 +427659,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "321"
     },
     {
       "ID": "1452B004359",
@@ -427670,7 +427670,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "321"
     },
     {
       "ID": "1452B003789",
@@ -427681,7 +427681,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "322"
     },
     {
       "ID": "1452B004403",
@@ -427692,7 +427692,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "322"
     },
     {
       "ID": "1452B004374",
@@ -427703,7 +427703,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "322"
     },
     {
       "ID": "1452B004376",
@@ -427714,7 +427714,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "322"
     },
     {
       "ID": "1452B004375",
@@ -427725,7 +427725,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "322"
     },
     {
       "ID": "1452B004441",
@@ -427736,7 +427736,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "324"
     },
     {
       "ID": "1452B004256",
@@ -427747,7 +427747,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "324"
     },
     {
       "ID": "1452B004463",
@@ -427758,7 +427758,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "324"
     },
     {
       "ID": "1452B004382",
@@ -427769,7 +427769,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "324"
     },
     {
       "ID": "1452B004482",
@@ -427780,7 +427780,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "325"
     },
     {
       "ID": "1452B004469",
@@ -427791,7 +427791,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "325"
     },
     {
       "ID": "1452B004472",
@@ -427802,7 +427802,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "325"
     },
     {
       "ID": "1452B004481",
@@ -427813,7 +427813,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "325"
     },
     {
       "ID": "1452B004282",
@@ -427824,7 +427824,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "325"
     },
     {
       "ID": "1452B004505",
@@ -427835,7 +427835,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "326"
     },
     {
       "ID": "1452B004502",
@@ -427846,7 +427846,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "326"
     },
     {
       "ID": "1452B004487",
@@ -427857,7 +427857,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "326"
     },
     {
       "ID": "1452B004530",
@@ -427868,7 +427868,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "327"
     },
     {
       "ID": "1452B004523",
@@ -427879,7 +427879,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "327"
     },
     {
       "ID": "1452B004521",
@@ -427890,7 +427890,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "327"
     },
     {
       "ID": "1452B004515",
@@ -427901,7 +427901,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "327"
     },
     {
       "ID": "1452B004531",
@@ -427912,7 +427912,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "327"
     },
     {
       "ID": "1452B004524",
@@ -427923,7 +427923,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "327"
     },
     {
       "ID": "1452B004494",
@@ -427934,7 +427934,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "327"
     },
     {
       "ID": "1452B004491",
@@ -427945,7 +427945,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "329"
     },
     {
       "ID": "1452B004529",
@@ -427956,7 +427956,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "329"
     },
     {
       "ID": "1452B004543",
@@ -427967,7 +427967,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "328"
     },
     {
       "ID": "1452B004534",
@@ -427978,7 +427978,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "329"
     },
     {
       "ID": "1452B004574",
@@ -427989,7 +427989,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "329"
     },
     {
       "ID": "1452B004603",
@@ -428000,7 +428000,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "329"
     },
     {
       "ID": "1452B004601",
@@ -428011,7 +428011,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "329"
     },
     {
       "ID": "1452B001661",
@@ -428022,7 +428022,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "200"
     },
     {
       "ID": "1452B001664",
@@ -428033,7 +428033,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "200"
     },
     {
       "ID": "1452B001666",
@@ -428044,7 +428044,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "200"
     },
     {
       "ID": "1452B001667",
@@ -428055,7 +428055,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "201"
     },
     {
       "ID": "1452B001687",
@@ -428066,7 +428066,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "202"
     },
     {
       "ID": "1452B001720",
@@ -428077,7 +428077,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "203"
     },
     {
       "ID": "1452B001721",
@@ -428088,7 +428088,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "203"
     },
     {
       "ID": "1452B001722",
@@ -428099,7 +428099,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "203"
     },
     {
       "ID": "1452B003630",
@@ -428110,7 +428110,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "285"
     },
     {
       "ID": "1452B003633",
@@ -428121,7 +428121,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "285"
     },
     {
       "ID": "1452B003628",
@@ -428132,7 +428132,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "285"
     },
     {
       "ID": "1452B003586",
@@ -428143,7 +428143,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "284"
     },
     {
       "ID": "1452B003259",
@@ -428154,7 +428154,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "287"
     },
     {
       "ID": "1452B003703",
@@ -428165,7 +428165,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "288"
     },
     {
       "ID": "1452B003693",
@@ -428176,7 +428176,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "288"
     },
     {
       "ID": "1452B003706",
@@ -428187,7 +428187,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "288"
     },
     {
       "ID": "1452B003750",
@@ -428198,7 +428198,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "289"
     },
     {
       "ID": "1452B003723",
@@ -428209,7 +428209,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "289"
     },
     {
       "ID": "1452B003753",
@@ -428220,7 +428220,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "289"
     },
     {
       "ID": "1452B003724",
@@ -428231,7 +428231,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "289"
     },
     {
       "ID": "1452B003745",
@@ -428242,7 +428242,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "289"
     },
     {
       "ID": "1452B003725",
@@ -428253,7 +428253,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "289"
     },
     {
       "ID": "1452B003751",
@@ -428264,7 +428264,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "289"
     },
     {
       "ID": "1452B003780",
@@ -428275,7 +428275,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "290"
     },
     {
       "ID": "1452B003823",
@@ -428286,7 +428286,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "298"
     },
     {
       "ID": "1452B003822",
@@ -428297,7 +428297,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "298"
     },
     {
       "ID": "1452B003839",
@@ -428308,7 +428308,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "298"
     },
     {
       "ID": "1452B003830",
@@ -428319,7 +428319,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "298"
     },
     {
       "ID": "1452B003836",
@@ -428330,7 +428330,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "298"
     },
     {
       "ID": "1452B003833",
@@ -428341,7 +428341,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "298"
     },
     {
       "ID": "1452B003795",
@@ -428352,7 +428352,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "299"
     },
     {
       "ID": "1009B059942",
@@ -428363,7 +428363,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "300"
     },
     {
       "ID": "1452B003785",
@@ -428374,7 +428374,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "300"
     },
     {
       "ID": "1452B003349",
@@ -428385,7 +428385,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "275"
     },
     {
       "ID": "1452B003400",
@@ -428396,7 +428396,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "275"
     },
     {
       "ID": "1452B003401",
@@ -428407,7 +428407,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "275"
     },
     {
       "ID": "1452B003398",
@@ -428418,7 +428418,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "276"
     },
     {
       "ID": "1452B003410",
@@ -428429,7 +428429,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "277"
     },
     {
       "ID": "1452B003404",
@@ -428440,7 +428440,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "276"
     },
     {
       "ID": "1452B003399",
@@ -428451,7 +428451,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "277"
     },
     {
       "ID": "1452B003416",
@@ -428462,7 +428462,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "277"
     },
     {
       "ID": "1452B003409",
@@ -428473,7 +428473,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "277"
     },
     {
       "ID": "1452B003443",
@@ -428484,7 +428484,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "277"
     },
     {
       "ID": "1452B003466",
@@ -428495,7 +428495,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "278"
     },
     {
       "ID": "1452B003469",
@@ -428517,7 +428517,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "284"
     },
     {
       "ID": "1452B003532",
@@ -428528,7 +428528,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "281"
     },
     {
       "ID": "1452B002877",
@@ -428539,7 +428539,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "282"
     },
     {
       "ID": "1452B003571",
@@ -428550,7 +428550,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "283"
     },
     {
       "ID": "1452B003631",
@@ -428561,7 +428561,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "285"
     },
     {
       "ID": "1452B003632",
@@ -428572,7 +428572,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "285"
     },
     {
       "ID": "1452B003049",
@@ -428583,7 +428583,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "264"
     },
     {
       "ID": "1452B003052",
@@ -428594,7 +428594,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "264"
     },
     {
       "ID": "1452B003053",
@@ -428605,7 +428605,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "264"
     },
     {
       "ID": "1452B003054",
@@ -428616,7 +428616,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "264"
     },
     {
       "ID": "1452B003088",
@@ -428627,7 +428627,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "265"
     },
     {
       "ID": "1009E090047",
@@ -428638,7 +428638,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "266"
     },
     {
       "ID": "1009E090025",
@@ -428649,7 +428649,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "266"
     },
     {
       "ID": "1452B003106",
@@ -428660,7 +428660,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "266"
     },
     {
       "ID": "1452B003120",
@@ -428671,7 +428671,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "267"
     },
     {
       "ID": "1452B003127",
@@ -428682,7 +428682,7 @@
       "AFILIADA_EMISSORA": "CATVE / PR",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "267"
     },
     {
       "ID": "1452B003117",
@@ -428693,7 +428693,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "267"
     },
     {
       "ID": "1452B003151",
@@ -428704,7 +428704,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "268"
     },
     {
       "ID": "1452B003152",
@@ -428715,7 +428715,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "268"
     },
     {
       "ID": "1452B003206",
@@ -428726,7 +428726,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "268"
     },
     {
       "ID": "1452B003158",
@@ -428737,7 +428737,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "268"
     },
     {
       "ID": "1452B003230",
@@ -428748,7 +428748,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "269"
     },
     {
       "ID": "1452B003154",
@@ -428759,7 +428759,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "269"
     },
     {
       "ID": "1452B003223",
@@ -428770,7 +428770,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "270"
     },
     {
       "ID": "1452B003189",
@@ -428781,7 +428781,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "270"
     },
     {
       "ID": "1452B003264",
@@ -428792,7 +428792,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "271"
     },
     {
       "ID": "1452B003258",
@@ -428803,7 +428803,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "271"
     },
     {
       "ID": "1452B003107",
@@ -428814,7 +428814,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "271"
     },
     {
       "ID": "1452B003247",
@@ -428825,7 +428825,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "274"
     },
     {
       "ID": "1452B002994",
@@ -428836,7 +428836,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "260"
     },
     {
       "ID": "1452B002995",
@@ -428847,7 +428847,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "260"
     },
     {
       "ID": "1452B002999",
@@ -428858,7 +428858,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "260"
     },
     {
       "ID": "1452B002997",
@@ -428869,7 +428869,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "260"
     },
     {
       "ID": "1452B003000",
@@ -428880,7 +428880,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "260"
     },
     {
       "ID": "1452B003017",
@@ -428891,7 +428891,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "261"
     },
     {
       "ID": "1452B002989",
@@ -428902,7 +428902,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "261"
     },
     {
       "ID": "1452B003026",
@@ -428913,7 +428913,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "261"
     },
     {
       "ID": "1452B003014",
@@ -428924,7 +428924,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "261"
     },
     {
       "ID": "1452B002971",
@@ -428935,7 +428935,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "262"
     },
     {
       "ID": "1452B003015",
@@ -428946,7 +428946,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "262"
     },
     {
       "ID": "2822E022242",
@@ -428957,7 +428957,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "262"
     },
     {
       "ID": "1452B002967",
@@ -428968,7 +428968,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "263"
     },
     {
       "ID": "1452B003013",
@@ -428979,7 +428979,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "263"
     },
     {
       "ID": "1452B003048",
@@ -428990,7 +428990,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "264"
     },
     {
       "ID": "1452B002746",
@@ -429001,7 +429001,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "252"
     },
     {
       "ID": "1452B002770",
@@ -429012,7 +429012,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "253"
     },
     {
       "ID": "1452B002747",
@@ -429023,7 +429023,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "253"
     },
     {
       "ID": "1452B00276",
@@ -429034,7 +429034,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "254"
     },
     {
       "ID": "1452B002764",
@@ -429045,7 +429045,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "254"
     },
     {
       "ID": "1452B002787",
@@ -429056,7 +429056,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "254"
     },
     {
       "ID": "1452B002814",
@@ -429067,7 +429067,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "255"
     },
     {
       "ID": "1452B002795",
@@ -429078,7 +429078,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "255"
     },
     {
       "ID": "1452B002825",
@@ -429089,7 +429089,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "255"
     },
     {
       "ID": "1452B002810",
@@ -429100,7 +429100,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "256"
     },
     {
       "ID": "1452B002823",
@@ -429111,7 +429111,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "256"
     },
     {
       "ID": "1452B002797",
@@ -429122,7 +429122,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "256"
     },
     {
       "ID": "1452B002878",
@@ -429133,7 +429133,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "257"
     },
     {
       "ID": "1452B002900",
@@ -429144,7 +429144,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "258"
     },
     {
       "ID": "1452B002897",
@@ -429155,7 +429155,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "258"
     },
     {
       "ID": "1452B002955",
@@ -429166,7 +429166,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "258"
     },
     {
       "ID": "1452B002956",
@@ -429177,7 +429177,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "259"
     },
     {
       "ID": "1452B002966",
@@ -429188,7 +429188,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "259"
     },
     {
       "ID": "1452B002365",
@@ -429199,7 +429199,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "233"
     },
     {
       "ID": "1452B002468",
@@ -429210,7 +429210,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "233"
     },
     {
       "ID": "1452B002481",
@@ -429221,7 +429221,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "233"
     },
     {
       "ID": "1452B002490",
@@ -429232,7 +429232,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "234"
     },
     {
       "ID": "1452B002523",
@@ -429243,7 +429243,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "236"
     },
     {
       "ID": "1452B002522",
@@ -429254,7 +429254,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "236"
     },
     {
       "ID": "1452B002519",
@@ -429265,7 +429265,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "237"
     },
     {
       "ID": "1452B002554",
@@ -429276,7 +429276,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "237"
     },
     {
       "ID": "1452B002539",
@@ -429287,7 +429287,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "237"
     },
     {
       "ID": "1452B002524",
@@ -429298,7 +429298,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "237"
     },
     {
       "ID": "1452B002587",
@@ -429309,7 +429309,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "244"
     },
     {
       "ID": "1452B002595",
@@ -429320,7 +429320,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "244"
     },
     {
       "ID": "1452B002578",
@@ -429331,7 +429331,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "244"
     },
     {
       "ID": "1452B002603",
@@ -429342,7 +429342,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "244"
     },
     {
       "ID": "1452B002593",
@@ -429353,7 +429353,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "245"
     },
     {
       "ID": "1452B002623",
@@ -429364,7 +429364,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "247"
     },
     {
       "ID": "1452B002648",
@@ -429375,7 +429375,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "247"
     },
     {
       "ID": "1452B002661",
@@ -429386,7 +429386,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "248"
     },
     {
       "ID": "1452B002669",
@@ -429397,7 +429397,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "248"
     },
     {
       "ID": "1452B002724",
@@ -429408,7 +429408,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "248"
     },
     {
       "ID": "1452B000637",
@@ -429419,7 +429419,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "250"
     },
     {
       "ID": "1452B002732",
@@ -429430,7 +429430,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "251"
     },
     {
       "ID": "1452B002734",
@@ -429441,7 +429441,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "251"
     },
     {
       "ID": "1452B002743",
@@ -429452,7 +429452,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "252"
     },
     {
       "ID": "1452B002253",
@@ -429463,7 +429463,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "225"
     },
     {
       "ID": "1452B002273",
@@ -429474,7 +429474,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "225"
     },
     {
       "ID": "1452B002248",
@@ -429485,7 +429485,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "225"
     },
     {
       "ID": "1452B002284",
@@ -429496,7 +429496,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "226"
     },
     {
       "ID": "1452B002290",
@@ -429507,7 +429507,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "226"
     },
     {
       "ID": "1452B002288",
@@ -429518,7 +429518,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "226"
     },
     {
       "ID": "1452B002272",
@@ -429529,7 +429529,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "226"
     },
     {
       "ID": "1452B002300",
@@ -429540,7 +429540,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "227"
     },
     {
       "ID": "1452B002181",
@@ -429551,7 +429551,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "227"
     },
     {
       "ID": "1452B002348",
@@ -429562,7 +429562,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "228"
     },
     {
       "ID": "1452B002337",
@@ -429573,7 +429573,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "228"
     },
     {
       "ID": "1452B002338",
@@ -429584,7 +429584,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "228"
     },
     {
       "ID": "1452B002339",
@@ -429595,7 +429595,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "228"
     },
     {
       "ID": "1452B002340",
@@ -429606,7 +429606,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "228"
     },
     {
       "ID": "1452B002345",
@@ -429617,7 +429617,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "228"
     },
     {
       "ID": "1452B002354",
@@ -429628,7 +429628,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "229"
     },
     {
       "ID": "1452B002361",
@@ -429639,7 +429639,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "229"
     },
     {
       "ID": "1452B002371",
@@ -429650,7 +429650,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "229"
     },
     {
       "ID": "1452B001675",
@@ -429661,7 +429661,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "229"
     },
     {
       "ID": "1452B002406",
@@ -429672,7 +429672,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "231"
     },
     {
       "ID": "1452B002413",
@@ -429683,7 +429683,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "231"
     },
     {
       "ID": "1452B002404",
@@ -429694,7 +429694,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "231"
     },
     {
       "ID": "1452B002422",
@@ -429705,7 +429705,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "232"
     },
     {
       "ID": "1452B002424",
@@ -429716,7 +429716,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "232"
     },
     {
       "ID": "1452B002428",
@@ -429727,7 +429727,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "232"
     },
     {
       "ID": "1452B002140",
@@ -429738,7 +429738,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "221"
     },
     {
       "ID": "1452B002134",
@@ -429749,7 +429749,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "222"
     },
     {
       "ID": "1452B002160",
@@ -429760,7 +429760,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "222"
     },
     {
       "ID": "1452B002192",
@@ -429771,7 +429771,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "223"
     },
     {
       "ID": "1452B002193",
@@ -429782,7 +429782,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "223"
     },
     {
       "ID": "1452B002194",
@@ -429793,7 +429793,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "223"
     },
     {
       "ID": "1452B002203",
@@ -429804,7 +429804,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "223"
     },
     {
       "ID": "1452B002067",
@@ -429815,7 +429815,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "224"
     },
     {
       "ID": "1452B002131",
@@ -429826,7 +429826,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "224"
     },
     {
       "ID": "1452B002244",
@@ -429837,7 +429837,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "224"
     },
     {
       "ID": "1452B002245",
@@ -429848,7 +429848,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "224"
     },
     {
       "ID": "1452B002246",
@@ -429859,7 +429859,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "224"
     },
     {
       "ID": "1452B002247",
@@ -429870,7 +429870,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "224"
     },
     {
       "ID": "1452B002274",
@@ -429881,7 +429881,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "225"
     },
     {
       "ID": "1452B002168",
@@ -429892,7 +429892,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "225"
     },
     {
       "ID": "1452B001824",
@@ -429903,7 +429903,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "210"
     },
     {
       "ID": "1452B001616",
@@ -429914,7 +429914,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "211"
     },
     {
       "ID": "1452B001826",
@@ -429925,7 +429925,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "211"
     },
     {
       "ID": "1452B001827",
@@ -429936,7 +429936,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "211"
     },
     {
       "ID": "1452B001830",
@@ -429947,7 +429947,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "211"
     },
     {
       "ID": "1452B001867",
@@ -429958,7 +429958,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "212"
     },
     {
       "ID": "1452B001893",
@@ -429969,7 +429969,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "212"
     },
     {
       "ID": "1452B001904",
@@ -429980,7 +429980,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "212"
     },
     {
       "ID": "1452B001856",
@@ -429991,7 +429991,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "212"
     },
     {
       "ID": "1452B001872",
@@ -430002,7 +430002,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "213"
     },
     {
       "ID": "1452B001898",
@@ -430013,7 +430013,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "213"
     },
     {
       "ID": "1452B001897",
@@ -430024,7 +430024,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "213"
     },
     {
       "ID": "1452B001903",
@@ -430035,7 +430035,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "213"
     },
     {
       "ID": "1452B001911",
@@ -430046,7 +430046,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "214"
     },
     {
       "ID": "1452B001913",
@@ -430057,7 +430057,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "214"
     },
     {
       "ID": "1452B002205",
@@ -430068,7 +430068,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "217"
     },
     {
       "ID": "1452B002009",
@@ -430079,7 +430079,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "218"
     },
     {
       "ID": "1452B002058",
@@ -430090,7 +430090,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "219"
     },
     {
       "ID": "1452B002061",
@@ -430101,7 +430101,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "219"
     },
     {
       "ID": "1452B002063",
@@ -430112,7 +430112,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "219"
     },
     {
       "ID": "1452B002122",
@@ -430123,7 +430123,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "220"
     },
     {
       "ID": "1452B002066",
@@ -430134,7 +430134,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "220"
     },
     {
       "ID": "1452B002141",
@@ -430145,7 +430145,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "220"
     },
     {
       "ID": "1452B002097",
@@ -430156,7 +430156,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "221"
     },
     {
       "ID": "1452B002099",
@@ -430167,7 +430167,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "221"
     },
     {
       "ID": "1452B002120",
@@ -430178,7 +430178,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "221"
     },
     {
       "ID": "1452B002119",
@@ -430189,7 +430189,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "221"
     },
     {
       "ID": "1452B001786",
@@ -430200,7 +430200,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "208"
     },
     {
       "ID": "1452B001787",
@@ -430211,7 +430211,7 @@
       "AFILIADA_EMISSORA": "TVE / MS",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "208"
     },
     {
       "ID": "1452B001790",
@@ -430222,7 +430222,7 @@
       "AFILIADA_EMISSORA": "TVE / MS",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "208"
     },
     {
       "ID": "1452B001765",
@@ -430233,7 +430233,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "208"
     },
     {
       "ID": "1452B001773",
@@ -430244,7 +430244,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "209"
     },
     {
       "ID": "1452B001795",
@@ -430255,7 +430255,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "209"
     },
     {
       "ID": "1452B001809",
@@ -430266,7 +430266,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "209"
     },
     {
       "ID": "1452B001810",
@@ -430277,7 +430277,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "209"
     },
     {
       "ID": "1452B001822",
@@ -430288,7 +430288,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "210"
     },
     {
       "ID": "1452B001825",
@@ -430299,7 +430299,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "210"
     },
     {
       "ID": "1452B001717",
@@ -430310,7 +430310,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B001718",
@@ -430321,7 +430321,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B001719",
@@ -430332,7 +430332,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B001733",
@@ -430343,7 +430343,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B001734",
@@ -430354,7 +430354,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B001732",
@@ -430365,7 +430365,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B001735",
@@ -430376,7 +430376,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B001745",
@@ -430387,7 +430387,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "207"
     },
     {
       "ID": "1452B001746",
@@ -430398,7 +430398,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "207"
     },
     {
       "ID": "1452B001755",
@@ -430409,7 +430409,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "207"
     },
     {
       "ID": "1452B001757",
@@ -430420,7 +430420,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "207"
     },
     {
       "ID": "1452B001777",
@@ -430431,7 +430431,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "207"
     },
     {
       "ID": "1452B001770",
@@ -430442,7 +430442,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "208"
     },
     {
       "ID": "1452B001788",
@@ -430453,7 +430453,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "208"
     },
     {
       "ID": "1452B001727",
@@ -430464,7 +430464,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "203"
     },
     {
       "ID": "1452B001723",
@@ -430475,7 +430475,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "203"
     },
     {
       "ID": "1452B001725",
@@ -430486,7 +430486,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "203"
     },
     {
       "ID": "1452B001730",
@@ -430497,7 +430497,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "203"
     },
     {
       "ID": "1452B001711",
@@ -430508,7 +430508,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "204"
     },
     {
       "ID": "1452B001607",
@@ -430519,7 +430519,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "204"
     },
     {
       "ID": "1452B001608",
@@ -430530,7 +430530,7 @@
       "AFILIADA_EMISSORA": "TV USP / SP",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "204"
     },
     {
       "ID": "1452B001606",
@@ -430541,7 +430541,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "204"
     },
     {
       "ID": "1452B001707",
@@ -430552,7 +430552,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "204"
     },
     {
       "ID": "1452B001710",
@@ -430563,7 +430563,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B001750",
@@ -430574,7 +430574,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "205"
     },
     {
       "ID": "1452B001751",
@@ -430585,7 +430585,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "205"
     },
     {
       "ID": "1452B001752",
@@ -430596,7 +430596,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "205"
     },
     {
       "ID": "1452B001621",
@@ -430607,7 +430607,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "205"
     },
     {
       "ID": "1452B001620",
@@ -430618,7 +430618,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "205"
     },
     {
       "ID": "1452B001611",
@@ -430629,7 +430629,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "205"
     },
     {
       "ID": "1452B001736",
@@ -430640,7 +430640,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B001737",
@@ -430651,7 +430651,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "206"
     },
     {
       "ID": "1452B005344\n1452B005345\n1452B005346",
@@ -434842,7 +434842,7 @@
       "AFILIADA_EMISSORA": "TV SINAL / CE",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "377"
     },
     {
       "ID": "1452B004679",
@@ -448339,7 +448339,7 @@
       "AFILIADA_EMISSORA": "TVE / ES",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "377"
     },
     {
       "ID": "1452B004317",
@@ -448372,7 +448372,7 @@
       "AFILIADA_EMISSORA": "ANTV / MG",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "376"
     },
     {
       "ID": "1452B004319",
@@ -448383,7 +448383,7 @@
       "AFILIADA_EMISSORA": "ANTV / MG",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "376"
     },
     {
       "ID": "1452B004320",
@@ -448537,7 +448537,7 @@
       "AFILIADA_EMISSORA": "TV GOLFINHO / PE",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "380"
     },
     {
       "ID": "1452B005431",
@@ -448570,7 +448570,7 @@
       "AFILIADA_EMISSORA": "TV USP / SP",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "377"
     },
     {
       "ID": "1452B005411",
@@ -448581,7 +448581,7 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "376"
     },
     {
       "ID": "1452B004841",
@@ -448592,7 +448592,7 @@
       "AFILIADA_EMISSORA": "TV UNESP / SP",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "375"
     },
     {
       "ID": "1452B005435",
@@ -448603,7 +448603,7 @@
       "AFILIADA_EMISSORA": "TV TRÊS LAGOAS / MS",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "378"
     },
     {
       "ID": "1452B005436",
@@ -448614,7 +448614,7 @@
       "AFILIADA_EMISSORA": "TV NOVA / PE",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "378"
     },
     {
       "ID": "1452B005449",
@@ -449483,7 +449483,7 @@
       "AFILIADA_EMISSORA": "TV ARTES / SP",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "379"
     },
     {
       "ID": "1452B005447",
@@ -449494,7 +449494,7 @@
       "AFILIADA_EMISSORA": "TVE / MS",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "379"
     },
     {
       "ID": "2457B017860",
@@ -449868,7 +449868,7 @@
       "AFILIADA_EMISSORA": "ANTV / MG",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "380"
     },
     {
       "ID": "1452B005465",
@@ -450605,7 +450605,7 @@
       "AFILIADA_EMISSORA": "ANTV / MG",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "382"
     },
     {
       "ID": "1452B005484",
@@ -450616,7 +450616,7 @@
       "AFILIADA_EMISSORA": "TVE / ES",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "382"
     },
     {
       "ID": "1452B005483",
@@ -450638,7 +450638,7 @@
       "AFILIADA_EMISSORA": "CATVE / PR",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "381"
     },
     {
       "ID": "1452B004843",
@@ -450649,7 +450649,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "381"
     },
     {
       "ID": "0205B006964",
@@ -451815,7 +451815,7 @@
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
-      "PGM": ""
+      "PGM": "382"
     }
   ]
 }
