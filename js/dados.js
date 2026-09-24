@@ -81,9 +81,6 @@ const DadosMedia = {
         skipEmptyLines: true,
         complete: (results) => {
           const erros = Array.isArray(results.errors) ? results.errors : [];
-          // PapaParse sinaliza TooFewFields quando as últimas células vazias de uma
-          // linha não vieram no CSV. Isso é comum e não desloca as colunas.
-          // Os demais erros continuam bloqueando o carregamento para evitar dados corrompidos.
           const avisos = erros.filter((erro) => erro?.code === "TooFewFields");
           const errosRelevantes = erros.filter((erro) => erro?.code !== "TooFewFields");
 
@@ -125,9 +122,6 @@ const DadosMedia = {
       throw new Error("A fonte do catálogo não contém registros válidos com ID.");
     }
 
-    // A ordem da fonte representa a ordem física da planilha imgs. Mantemos uma
-    // cópia sem ordenação para recursos que precisam saber quais registros foram
-    // inseridos por último, sem alterar a ordenação por data usada nas buscas.
     this.registrosOrdemInsercao = [...normalizados];
     this.registros = [...normalizados].sort(this._compararPorDataDesc);
     this.carregado = true;
@@ -199,6 +193,19 @@ const DadosMedia = {
     if (da && !db) return -1;
     if (!da && db) return 1;
     return 0;
+  },
+
+  buscarPorMediaId(mediaId) {
+    if (typeof MediaIdUtils === "undefined" || typeof MediaIdUtils.normalizar !== "function") {
+      return null;
+    }
+
+    const id = MediaIdUtils.normalizar(mediaId);
+    if (!id) return null;
+
+    return this.registros.find((registro) =>
+      MediaIdUtils.extrair(registro.ID).includes(id)
+    ) || null;
   },
 
   buscar(termo) {
