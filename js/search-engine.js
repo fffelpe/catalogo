@@ -15,6 +15,11 @@ const SearchEngine = (() => {
     CREDITOS_FONTES: 24,
     CREDITOS_EQUIPE: 20,
     CREDITOS_CARGOS: 12,
+    KEYWORDS: 32,
+    SUBJECTS: 36,
+    PEOPLE: 28,
+    PLACES: 24,
+    SEGMENTS: 38,
     DATA: 5
   };
 
@@ -44,8 +49,6 @@ const SearchEngine = (() => {
     return texto.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
 
-  // Correspondência por palavra/expressão completa. Evita falsos positivos como
-  // "sus" em "sustentabilidade" e "ato" em "candidato".
   function contemTermo(texto, termo) {
     if (!texto || !termo) return false;
     const padrao = new RegExp(
@@ -55,9 +58,6 @@ const SearchEngine = (() => {
     return padrao.test(texto);
   }
 
-  // Aceita somente prefixo de palavra para o texto que o usuário realmente digitou.
-  // Isso mantém buscas como "agricult" -> "agricultura", sem aplicar aproximação
-  // a sinônimos e termos relacionados.
   function contemPrefixoPalavra(texto, termo) {
     if (!texto || !termo || termo.length < 4) return false;
     const padrao = new RegExp(
@@ -80,6 +80,11 @@ const SearchEngine = (() => {
       .split(/[\r\n,;+\/|&]+/)
       .map((id) => normalizar(id).replace(/\s+/g, ""))
       .filter(Boolean);
+  }
+
+  function separarIdsOriginais(valor) {
+    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(valor);
+    return separarIds(valor).map((id) => id.toUpperCase());
   }
 
   function contarOcorrencias(texto, termo) {
@@ -138,18 +143,71 @@ const SearchEngine = (() => {
     };
   }
 
+  function enriquecerComMetadados(registro) {
+    if (
+      typeof MediaEnrichment === "undefined" ||
+      typeof MediaEnrichment.camposPesquisa !== "function"
+    ) {
+      return registro;
+    }
+
+    const campos = {
+      KEYWORDS: [],
+      SUBJECTS: [],
+      PEOPLE: [],
+      PLACES: [],
+      SEGMENTS: []
+    };
+
+    separarIdsOriginais(registro.ID).forEach((id) => {
+      const enriquecido = MediaEnrichment.camposPesquisa(id) || {};
+      Object.keys(campos).forEach((campo) => {
+        const valor = String(enriquecido[campo] || "").trim();
+        if (valor) campos[campo].push(valor);
+      });
+    });
+
+    return {
+      ...registro,
+      ...Object.fromEntries(Object.entries(campos).map(([campo, valores]) => [campo, valores.join(" ")]))
+    };
+  }
+
+  function enriquecerRegistro(registro) {
+    return enriquecerComMetadados(enriquecerComCreditos(registro));
+  }
+
+  function encontrarMatchesSegmentos(registro, consulta) {
+    if (
+      typeof MediaSegments === "undefined" ||
+      typeof MediaSegments.buscar !== "function"
+    ) return [];
+
+    const matches = [];
+    separarIdsOriginais(registro.ID).forEach((id) => {
+      MediaSegments.buscar(id, consulta).forEach((segmento) => {
+        matches.push({ ...segmento, mediaId: id });
+      });
+    });
+
+    return matches
+      .sort((a, b) => (b.score || 0) - (a.score || 0) || (a.start || 0) - (b.start || 0))
+      .slice(0, 5);
+  }
+
   function calcularRelevancia(registroOriginal, consulta) {
-    const registro = enriquecerComCreditos(registroOriginal);
+    const registro = enriquecerRegistro(registroOriginal);
     const consultaNormalizada = normalizar(consulta);
 
     if (!consultaNormalizada) {
-      return { score: 0, correspondencias: [] };
+      return { score: 0, correspondencias: [], segmentMatches: [] };
     }
 
     if (detectarMediaIdExato(registro, consulta)) {
       return {
         score: 10000,
-        correspondencias: [{ campo: "ID", termo: consulta, tipo: "id-exato" }]
+        correspondencias: [{ campo: "ID", termo: consulta, tipo: "id-exato" }],
+        segmentMatches: []
       };
     }
 
@@ -201,7 +259,8 @@ const SearchEngine = (() => {
       }
     }
 
-    return { score, correspondencias };
+    const segmentMatches = encontrarMatchesSegmentos(registro, consulta);
+    return { score, correspondencias, segmentMatches };
   }
 
   function filtrarPrograma(registros, programa) {
@@ -227,7 +286,8 @@ const SearchEngine = (() => {
           registro,
           indiceOriginal,
           score: relevancia.score,
-          correspondencias: relevancia.correspondencias
+          correspondencias: relevancia.correspondencias,
+          segmentMatches: relevancia.segmentMatches || []
         };
       })
       .filter((item) => item.score > 0)
@@ -235,14 +295,16 @@ const SearchEngine = (() => {
       .map((item) => ({
         ...item.registro,
         _SEARCH_SCORE: item.score,
-        _SEARCH_MATCHES: item.correspondencias
+        _SEARCH_MATCHES: item.correspondencias,
+        _SEARCH_SEGMENT_MATCHES: item.segmentMatches
       }));
   }
 
   function explicarResultado(registro) {
     return {
       score: registro._SEARCH_SCORE || 0,
-      correspondencias: registro._SEARCH_MATCHES || []
+      correspondencias: registro._SEARCH_MATCHES || [],
+      segmentos: registro._SEARCH_SEGMENT_MATCHES || []
     };
   }
 
