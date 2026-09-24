@@ -4,7 +4,7 @@ import { google } from "googleapis";
 import { criarSnapshotCatalogo } from "./catalogo-snapshot.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
-const RANGE_IMGS = "imgs!A2:H";
+const RANGE_IMGS = "imgs!A2:I";
 const ARQUIVO_SAIDA = "data/catalogo-acervo.json";
 
 const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
