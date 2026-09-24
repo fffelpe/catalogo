@@ -194,7 +194,6 @@ function registrarAnalyticsGlobal(consulta, programa) {
 
   AnalyticsGlobal.registrarBusca(consulta, programa, resultadosAtuais.length)
     .then((gravou) => {
-      // Atualiza o ranking do programa depois que a nova busca foi persistida.
       if (gravou && programa && typeof BuscasPopulares !== "undefined") {
         BuscasPopulares.renderizarPrograma(programa);
       }
@@ -268,6 +267,25 @@ async function inicializarPaginaInicial() {
   return true;
 }
 
+async function carregarFontesOpcionaisBusca() {
+  const fontes = [];
+
+  if (typeof MediaEnrichment !== "undefined" && typeof MediaEnrichment.carregar === "function") {
+    fontes.push({ nome: "enrichment", promise: MediaEnrichment.carregar() });
+  }
+
+  if (typeof CreditosMedia !== "undefined" && typeof CreditosMedia.carregar === "function") {
+    fontes.push({ nome: "créditos", promise: CreditosMedia.carregar() });
+  }
+
+  const estados = await Promise.allSettled(fontes.map((fonte) => fonte.promise));
+  estados.forEach((estado, indice) => {
+    if (estado.status === "rejected") {
+      console.warn(`Fonte opcional de ${fontes[indice].nome} indisponível nesta execução:`, estado.reason);
+    }
+  });
+}
+
 async function inicializarPaginaResultados() {
   const input = document.getElementById("searchInput");
   const tbody = document.getElementById("resultsBody");
@@ -303,13 +321,7 @@ async function inicializarPaginaResultados() {
     return true;
   }
 
-  if (typeof CreditosMedia !== "undefined") {
-    try {
-      await CreditosMedia.carregar();
-    } catch (err) {
-      console.warn("Busca por créditos indisponível nesta execução:", err);
-    }
-  }
+  await carregarFontesOpcionaisBusca();
 
   AutocompleteBusca.inicializar({
     input,
