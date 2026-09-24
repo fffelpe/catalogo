@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { criarSnapshotCatalogo } from "../scripts/catalogo-snapshot.mjs";
 
-test("cria snapshot do catálogo com as oito colunas públicas e ignora linhas sem ID", () => {
+test("cria snapshot do catálogo com as colunas públicas e ignora linhas sem ID", () => {
   const linhas = [
     [
       "1452B004869",
@@ -13,8 +13,9 @@ test("cria snapshot do catálogo com as oito colunas públicas e ignora linhas s
       " TV Cultura ",
       " Agrocultura ",
       " Agronegócio ",
+      "381",
     ],
-    ["", "linha sem ID", "09/09/2026", "", "", "", "", ""],
+    ["", "linha sem ID", "09/09/2026", "", "", "", "", "", "999"],
     [
       "1009B064438",
       "Economia",
@@ -24,6 +25,7 @@ test("cria snapshot do catálogo com as oito colunas públicas e ignora linhas s
       "TV Cultura",
       "Jornal da Cultura",
       "Economia",
+      "",
     ],
   ];
 
@@ -44,7 +46,7 @@ test("cria snapshot do catálogo com as oito colunas públicas e ignora linhas s
       AFILIADA_EMISSORA: "TV Cultura",
       PROGRAMA: "Agrocultura",
       EDITORIA: "Agronegócio",
-      PGM: "",
+      PGM: "381",
     },
     {
       ID: "1009B064438",
