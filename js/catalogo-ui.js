@@ -37,9 +37,7 @@ function definirCarregamentoResultados(carregando) {
       return;
     }
 
-    if (elemento.id !== "secaoVTsAgro") {
-      elemento.hidden = carregando;
-    }
+    if (elemento.id !== "secaoVTsAgro") elemento.hidden = carregando;
   });
 }
 
@@ -85,9 +83,10 @@ function separarIds(valor) {
 function formatarIdsComCopia(valor) {
   return separarIds(valor).map((id) => {
     const idSeguro = escapeHtml(id);
+    const urlFicha = `media.html?id=${encodeURIComponent(id)}`;
     return `
       <span class="id-item">
-        <span class="id-text">${idSeguro}</span>
+        <a class="id-text id-media-link" href="${escapeHtml(urlFicha)}">${idSeguro}</a>
         <button type="button" class="btn-copiar-id" data-ids="${idSeguro}" title="Copiar ID" aria-label="Copiar ID ${idSeguro}">
           <img src="../images/copiar.png?v=4" alt="" class="icone-copiar" aria-hidden="true">
         </button>
@@ -104,6 +103,26 @@ function renderizarCelulaId(valor, rotulo = "ID") {
       </span>
     </td>
   `;
+}
+
+function renderizarTrechoEncontrado(item) {
+  const match = Array.isArray(item?._SEARCH_SEGMENT_MATCHES)
+    ? item._SEARCH_SEGMENT_MATCHES[0]
+    : null;
+  if (!match) return "";
+
+  const mediaId = MediaIdUtils?.normalizar?.(match.mediaId || separarIds(item.ID)[0]) || "";
+  if (!mediaId) return "";
+  const url = typeof MediaSegments !== "undefined"
+    ? MediaSegments.criarUrlFicha(mediaId, match.start)
+    : `media.html?id=${encodeURIComponent(mediaId)}&t=${Math.max(0, Math.floor(Number(match.start) || 0))}`;
+  if (!url) return "";
+
+  const timecode = typeof MediaSegments !== "undefined"
+    ? MediaSegments.formatarTimecode(match.start)
+    : "00:00";
+
+  return `<a class="trecho-encontrado-link" href="${escapeHtml(url)}">Trecho encontrado · ${escapeHtml(timecode)}</a>`;
 }
 
 function copiarTextoAlternativo(texto) {
@@ -162,9 +181,13 @@ function renderizarProximaPagina() {
 
   itens.forEach((item) => {
     const tr = document.createElement("tr");
+    const trechoEncontrado = renderizarTrechoEncontrado(item);
     tr.innerHTML = `
       ${renderizarCelulaId(item.ID)}
-      <td data-label="Descrição">${escapeHtml(item.DESCRICAO)}</td>
+      <td data-label="Descrição">
+        <span class="descricao-resultado">${escapeHtml(item.DESCRICAO)}</span>
+        ${trechoEncontrado ? `<span class="trecho-encontrado-wrap">${trechoEncontrado}</span>` : ""}
+      </td>
       <td data-label="Data">${escapeHtml(item.DATA)}</td>
       <td data-label="Local">${escapeHtml(item.LOCAL)}</td>
       <td data-label="Repórter">${escapeHtml(item.REPORTER)}</td>
@@ -178,9 +201,7 @@ function renderizarProximaPagina() {
   tbody.appendChild(frag);
   paginaAtual++;
 
-  if (loadMoreBtn) {
-    loadMoreBtn.style.display = fim < resultadosAtuais.length ? "inline-block" : "none";
-  }
+  if (loadMoreBtn) loadMoreBtn.style.display = fim < resultadosAtuais.length ? "inline-block" : "none";
 }
 
 function registrarAnalyticsGlobal(consulta, programa) {
@@ -188,13 +209,10 @@ function registrarAnalyticsGlobal(consulta, programa) {
     typeof AnalyticsGlobal === "undefined" ||
     typeof AnalyticsGlobal.registrarBusca !== "function" ||
     !AnalyticsGlobal.estaConfigurado()
-  ) {
-    return;
-  }
+  ) return;
 
   AnalyticsGlobal.registrarBusca(consulta, programa, resultadosAtuais.length)
     .then((gravou) => {
-      // Atualiza o ranking do programa depois que a nova busca foi persistida.
       if (gravou && programa && typeof BuscasPopulares !== "undefined") {
         BuscasPopulares.renderizarPrograma(programa);
       }
@@ -215,11 +233,8 @@ function executarBusca(termo, programa = "", registrar = false) {
   const tbody = document.getElementById("resultsBody");
   if (tbody) tbody.innerHTML = "";
 
-  if (consulta) {
-    setStatus(`${resultadosAtuais.length} resultado(s) encontrado(s) para “${consulta}”.`);
-  } else {
-    setStatus(`${resultadosAtuais.length} item(ns) no acervo.`);
-  }
+  if (consulta) setStatus(`${resultadosAtuais.length} resultado(s) encontrado(s) para “${consulta}”.`);
+  else setStatus(`${resultadosAtuais.length} item(ns) no acervo.`);
 
   if (registrar && consulta) {
     HistoricoBusca.registrar(consulta);
@@ -237,10 +252,7 @@ async function inicializarPaginaInicial() {
   const input = document.getElementById("searchInput");
   if (!form || !input) return false;
 
-  if (
-    typeof BuscasPopulares !== "undefined" &&
-    typeof BuscasPopulares.renderizarHome === "function"
-  ) {
+  if (typeof BuscasPopulares !== "undefined" && typeof BuscasPopulares.renderizarHome === "function") {
     BuscasPopulares.renderizarHome();
   }
 
@@ -303,6 +315,14 @@ async function inicializarPaginaResultados() {
     return true;
   }
 
+  if (typeof MediaEnrichment !== "undefined") {
+    try {
+      await MediaEnrichment.carregar();
+    } catch (err) {
+      console.warn("Enriquecimento de mídia indisponível nesta execução:", err);
+    }
+  }
+
   if (typeof CreditosMedia !== "undefined") {
     try {
       await CreditosMedia.carregar();
@@ -320,14 +340,9 @@ async function inicializarPaginaResultados() {
   executarBusca(termoInicial, programa, Boolean(termoInicial));
   definirCarregamentoResultados(false);
 
-  if (typeof inicializarVtsAgricultura === "function") {
-    inicializarVtsAgricultura(programa);
-  }
+  if (typeof inicializarVtsAgricultura === "function") inicializarVtsAgricultura(programa);
 
-  const buscaIncremental = debounce((valor) => {
-    executarBusca(valor, programa, false);
-  }, 250);
-
+  const buscaIncremental = debounce((valor) => executarBusca(valor, programa, false), 250);
   input.addEventListener("input", (event) => buscaIncremental(event.target.value));
 
   const form = document.getElementById("searchForm");
