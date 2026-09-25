@@ -41,6 +41,15 @@ test("workflows usam npm ci para instalações reproduzíveis", () => {
   }
 });
 
+test("créditos publicam com retry sem git pull --rebase", () => {
+  const workflow = ler(".github/workflows/sincronizar-creditos.yml");
+  assert.match(workflow, /for tentativa in 1 2 3 4 5/);
+  assert.match(workflow, /git fetch origin main/);
+  assert.match(workflow, /git reset --hard origin\/main/);
+  assert.match(workflow, /\/tmp\/catalogo-creditos/);
+  assert.doesNotMatch(workflow, /git pull --rebase/);
+});
+
 test("repositório não publica hostname vercel.app como CNAME do GitHub Pages", () => {
   assert.equal(fs.existsSync("CNAME"), false);
 });
