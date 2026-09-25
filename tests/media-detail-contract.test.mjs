@@ -8,21 +8,55 @@ const mediaIdPath = fileURLToPath(new URL("../js/media-id.js", import.meta.url))
 const playerPath = fileURLToPath(new URL("../js/media-player.js", import.meta.url));
 const pagePath = fileURLToPath(new URL("../pages/media.html", import.meta.url));
 
-function carregarPlayer() {
+function carregarPlayer({ protocolo = "http:", proxyBaseUrl = "" } = {}) {
   assert.ok(fs.existsSync(playerPath), "media-player.js deve existir");
-  const sandbox = { console };
+  const sandbox = {
+    console,
+    window: {
+      location: {
+        protocol: protocolo,
+        href: `${protocolo}//catalogo.test/pages/media.html`
+      }
+    }
+  };
+  if (proxyBaseUrl) sandbox.CATALOGO_VIDEO_PROXY_BASE_URL = proxyBaseUrl;
+
   vm.createContext(sandbox);
   vm.runInContext(fs.readFileSync(mediaIdPath, "utf8") + "\nglobalThis.MediaIdUtils = MediaIdUtils;", sandbox);
   vm.runInContext(fs.readFileSync(playerPath, "utf8") + "\nglobalThis.__MediaPlayer = MediaPlayer;", sandbox);
   return sandbox.__MediaPlayer;
 }
 
-test("player monta lowres apenas para Media ID válido", () => {
-  const MediaPlayer = carregarPlayer();
+test("player usa lowres direto somente em contexto HTTP", () => {
+  const MediaPlayer = carregarPlayer({ protocolo: "http:" });
   assert.equal(MediaPlayer.criarUrl("1452B004869"), "http://lowres.tvcultura.com.br/1452B004869.mp4");
   assert.equal(MediaPlayer.criarUrl("javascript:alert(1)"), "");
   assert.equal(MediaPlayer.normalizarInicio(-10), 0);
   assert.equal(MediaPlayer.normalizarInicio("28.5"), 28.5);
+});
+
+test("player bloqueia mixed content em contexto HTTPS sem proxy seguro", () => {
+  const MediaPlayer = carregarPlayer({ protocolo: "https:" });
+  assert.equal(MediaPlayer.criarUrl("1452B004869"), "");
+});
+
+test("player usa proxy HTTPS configurado para acesso seguro", () => {
+  const MediaPlayer = carregarPlayer({
+    protocolo: "https:",
+    proxyBaseUrl: "https://media-proxy.intranet/"
+  });
+  assert.equal(
+    MediaPlayer.criarUrl("1452B004869"),
+    "https://media-proxy.intranet/1452B004869.mp4"
+  );
+});
+
+test("player rejeita proxy configurado por HTTP em página HTTPS", () => {
+  const MediaPlayer = carregarPlayer({
+    protocolo: "https:",
+    proxyBaseUrl: "http://media-proxy.intranet/"
+  });
+  assert.equal(MediaPlayer.criarUrl("1452B004869"), "");
 });
 
 test("página da ficha expõe mounts e dependências principais", () => {

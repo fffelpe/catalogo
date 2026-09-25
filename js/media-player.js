@@ -3,11 +3,45 @@
 
 const MediaPlayer = (() => {
   const BASE_URL = "http://lowres.tvcultura.com.br/";
+  const PROXY_GLOBAL = "CATALOGO_VIDEO_PROXY_BASE_URL";
+
+  function contextoSeguro() {
+    return typeof window !== "undefined" && window.location?.protocol === "https:";
+  }
+
+  function normalizarProxyHttps(valorBruto) {
+    const valor = String(valorBruto || "").trim();
+    if (!valor || !/^https:\/\/[^\s/]+(?:\/[^\s]*)?$/i.test(valor)) return "";
+
+    if (typeof URL !== "undefined") {
+      try {
+        const base = new URL(valor);
+        if (base.protocol !== "https:") return "";
+        return base.href.endsWith("/") ? base.href : `${base.href}/`;
+      } catch {
+        return "";
+      }
+    }
+
+    return valor.endsWith("/") ? valor : `${valor}/`;
+  }
+
+  function obterProxyBaseUrl() {
+    const valor = typeof globalThis !== "undefined"
+      ? globalThis[PROXY_GLOBAL]
+      : "";
+    return normalizarProxyHttps(valor);
+  }
 
   function criarUrl(mediaId) {
     if (typeof MediaIdUtils === "undefined" || typeof MediaIdUtils.normalizar !== "function") return "";
     const id = MediaIdUtils.normalizar(mediaId);
-    return id ? `${BASE_URL}${id}.mp4` : "";
+    if (!id) return "";
+
+    const proxy = obterProxyBaseUrl();
+    if (proxy) return `${proxy}${id}.mp4`;
+    if (contextoSeguro()) return "";
+    return `${BASE_URL}${id}.mp4`;
   }
 
   function normalizarInicio(valor) {
@@ -67,5 +101,16 @@ const MediaPlayer = (() => {
     }
   }
 
-  return { BASE_URL, criarUrl, normalizarInicio, aplicarInicio, montar, irPara };
+  return {
+    BASE_URL,
+    PROXY_GLOBAL,
+    contextoSeguro,
+    normalizarProxyHttps,
+    obterProxyBaseUrl,
+    criarUrl,
+    normalizarInicio,
+    aplicarInicio,
+    montar,
+    irPara
+  };
 })();
