@@ -6,8 +6,8 @@ import { fileURLToPath } from "node:url";
 
 const mediaIdPath = fileURLToPath(new URL("../js/media-id.js", import.meta.url));
 const playerPath = fileURLToPath(new URL("../js/media-player.js", import.meta.url));
-const pagePath = fileURLToPath(new URL("../pages/media.html", import.meta.url));
 const detailPath = fileURLToPath(new URL("../js/media-detail.js", import.meta.url));
+const pagePath = fileURLToPath(new URL("../pages/media.html", import.meta.url));
 
 function carregarPlayer({ protocolo = "http:", proxyBaseUrl = "" } = {}) {
   assert.ok(fs.existsSync(playerPath), "media-player.js deve existir");
@@ -60,25 +60,29 @@ test("player rejeita proxy configurado por HTTP em página HTTPS", () => {
   assert.equal(MediaPlayer.criarUrl("1452B004869"), "");
 });
 
-test("página da ficha mantém conteúdo editorial sem player de vídeo", () => {
+test("página da ficha expõe metadados sem renderizar player de vídeo", () => {
   assert.ok(fs.existsSync(pagePath), "pages/media.html deve existir");
   const html = fs.readFileSync(pagePath, "utf8");
-
   for (const id of ["mediaTitle", "mediaDescription", "mediaMetadata", "mediaSegments", "mediaRelated", "mediaQuality"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`));
   }
-
   assert.doesNotMatch(html, /id=["']mediaPlayer["']/);
-  assert.doesNotMatch(html, /id=["']mediaPlayerStatus["']/);
-  assert.ok(!html.includes("media-player.js"), "media-player.js não deve ser carregado pela ficha individual");
-  assert.ok(!html.includes("Clique no timecode para assistir"), "a ficha não deve sugerir reprodução");
+  assert.ok(!html.includes("media-player.js"), "a ficha não deve carregar media-player.js");
+  assert.ok(html.includes("dados.js?v=7"), "dados.js deve ter versão nova para invalidar cache");
+  assert.ok(html.includes("media-detail.js?v=2"), "media-detail.js deve ter versão nova para invalidar cache");
+  assert.ok(html.includes("media-detail.css?v=2"), "media-detail.css deve ter versão nova para invalidar cache");
+  for (const script of ["media-id.js", "dados.js", "media-enrichment.js", "media-segments.js", "related-media.js", "catalogo-quality.js", "media-detail.js"]) {
+    assert.ok(html.includes(script), `${script} deve ser carregado`);
+  }
 });
 
-test("detalhe da ficha renderiza trechos informativos sem controles de reprodução", () => {
-  assert.ok(fs.existsSync(detailPath), "js/media-detail.js deve existir");
-  const js = fs.readFileSync(detailPath, "utf8");
+test("ficha individual não depende do player para inicializar", () => {
+  const source = fs.readFileSync(detailPath, "utf8");
+  assert.doesNotMatch(source, /\bMediaPlayer\b/);
+  assert.doesNotMatch(source, /configurarPlayer/);
+});
 
-  assert.ok(!js.includes("configurarPlayer"), "a ficha não deve configurar player");
-  assert.ok(!js.includes("MediaPlayer.irPara"), "os trechos não devem controlar reprodução");
-  assert.ok(!js.includes("media-segment-play"), "os trechos não devem exibir ícone de play");
+test("ficha individual exibe a duração resolvida para o Media ID", () => {
+  const source = fs.readFileSync(detailPath, "utf8");
+  assert.match(source, /\["Duração",\s*registro\.DURACAO\]/);
 });
