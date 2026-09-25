@@ -9,27 +9,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "scripts/media-id.mjs"
-      - "scripts/programa-por-prefixo.mjs"
-      - "scripts/google-sheets-errors.mjs"
-      - "scripts/agrocultura-local.mjs"
-      - "scripts/catalogo-snapshot.mjs"
-      - "scripts/snapshot-freshness.mjs"
-      - "scripts/verificar-frescor-snapshot.mjs"
-      - "scripts/gerar-snapshot-catalogo.mjs"
-      - "scripts/gerar-acervo-agrocultura.mjs"
-      - "scripts/sincronizar-planilhas.mjs"
-      - "scripts/sincronizar-noticias-agrocultura.mjs"
-      - "tests/agrocultura-local.test.mjs"
-      - "tests/catalogo-snapshot.test.mjs"
-      - "tests/snapshot-freshness.test.mjs"
-      - "tests/dados-local-first.test.mjs"
-      - "tests/programa-por-prefixo.test.mjs"
-      - "tests/google-sheets-errors.test.mjs"
-      - "tests/sincronizar-planilhas-fontes.test.mjs"
-      - "package.json"
-      - ".github/workflows/sincronizar-planilhas.yml"
+    paths-ignore:
+      - "data/**"
 
 permissions:
   contents: write
@@ -50,9 +31,10 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: "24"
+          cache: npm
 
       - name: Instalar dependências
-        run: npm install --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
 
       - name: Testar enriquecimento de LOCAL do AgroCultura
         run: node --test tests/agrocultura-local.test.mjs
