@@ -1,0 +1,47 @@
+name: Probe temporário da auditoria
+
+on:
+  push:
+    branches:
+      - fix/auditoria-2026-09-25
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v7
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      - name: Gerar package-lock reproduzível
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+
+      - name: Testar acesso ao lowres por HTTP e HTTPS
+        shell: bash
+        run: |
+          set +e
+          URL_PATH="1452B005350.mp4"
+          HTTPS_RESULT=$(curl -L --range 0-0 --max-time 20 -sS -o /dev/null -w '%{http_code}' "https://lowres.tvcultura.com.br/${URL_PATH}")
+          HTTPS_EXIT=$?
+          HTTP_RESULT=$(curl -L --range 0-0 --max-time 20 -sS -o /dev/null -w '%{http_code}' "http://lowres.tvcultura.com.br/${URL_PATH}")
+          HTTP_EXIT=$?
+          echo "HTTPS exit=${HTTPS_EXIT} status=${HTTPS_RESULT}"
+          echo "HTTP exit=${HTTP_EXIT} status=${HTTP_RESULT}"
+          printf 'HTTPS_EXIT=%s\nHTTPS_STATUS=%s\nHTTP_EXIT=%s\nHTTP_STATUS=%s\n' "$HTTPS_EXIT" "$HTTPS_RESULT" "$HTTP_EXIT" "$HTTP_RESULT" > probe-lowres.txt
+          exit 0
+
+      - name: Salvar package-lock e resultado do probe
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-probe
+          path: |
+            package-lock.json
+            probe-lowres.txt
