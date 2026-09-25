@@ -247,6 +247,38 @@ function executarBusca(termo, programa = "", registrar = false) {
   renderizarProximaPagina();
 }
 
+function carregarAutocompleteHomeSobDemanda(input, form) {
+  let inicializado = false;
+  let carregamento = null;
+
+  return async () => {
+    if (inicializado) return;
+    if (carregamento) return carregamento;
+
+    carregamento = (async () => {
+      try {
+        await DadosMedia.carregarCSV();
+        AutocompleteBusca.inicializar({
+          input,
+          registros: DadosMedia.registros,
+          containerId: "sugestoesBuscaHome",
+          onSelecionar: (termo) => {
+            input.value = termo;
+            form.requestSubmit();
+          }
+        });
+        inicializado = true;
+      } catch (err) {
+        console.warn("Autocomplete indisponível na página inicial:", err);
+      } finally {
+        carregamento = null;
+      }
+    })();
+
+    return carregamento;
+  };
+}
+
 async function inicializarPaginaInicial() {
   const form = document.getElementById("homeSearchForm");
   const input = document.getElementById("searchInput");
@@ -256,21 +288,9 @@ async function inicializarPaginaInicial() {
     BuscasPopulares.renderizarHome();
   }
 
-  try {
-    await DadosMedia.carregarCSV();
-
-    AutocompleteBusca.inicializar({
-      input,
-      registros: DadosMedia.registros,
-      containerId: "sugestoesBuscaHome",
-      onSelecionar: (termo) => {
-        input.value = termo;
-        form.requestSubmit();
-      }
-    });
-  } catch (err) {
-    console.warn("Autocomplete indisponível na página inicial:", err);
-  }
+  const carregarAutocomplete = carregarAutocompleteHomeSobDemanda(input, form);
+  input.addEventListener("focus", carregarAutocomplete, { once: true });
+  input.addEventListener("input", carregarAutocomplete, { once: true });
 
   form.addEventListener("submit", (event) => {
     const termo = input.value.trim();
