@@ -130,8 +130,22 @@ const DadosMedia = {
 
   _normalizar(item) {
     const mapa = {};
+    const duracoes = {};
+    const duracoesOriginais = item?.DURACOES;
+
+    if (duracoesOriginais && typeof duracoesOriginais === "object" && !Array.isArray(duracoesOriginais)) {
+      Object.entries(duracoesOriginais).forEach(([mediaId, duracao]) => {
+        const id = typeof MediaIdUtils !== "undefined" && typeof MediaIdUtils.normalizar === "function"
+          ? MediaIdUtils.normalizar(mediaId)
+          : String(mediaId || "").trim().toUpperCase();
+        const tempo = String(duracao || "").trim();
+        if (id && tempo) duracoes[id] = tempo;
+      });
+    }
+
     Object.keys(item || {}).forEach((chaveOriginal) => {
       const chave = String(chaveOriginal || "").trim().toUpperCase();
+      if (chave === "DURACOES") return;
       mapa[chave] = (item[chaveOriginal] || "").toString().trim();
     });
 
@@ -146,7 +160,8 @@ const DadosMedia = {
       AFILIADA_EMISSORA: chaveAfiliada ? mapa[chaveAfiliada] : "",
       PROGRAMA: mapa["PROGRAMA"] || "",
       EDITORIA: mapa["EDITORIA"] || "",
-      PGM: mapa["PGM"] || ""
+      PGM: mapa["PGM"] || "",
+      DURACOES: duracoes
     };
   },
 
@@ -203,9 +218,16 @@ const DadosMedia = {
     const id = MediaIdUtils.normalizar(mediaId);
     if (!id) return null;
 
-    return this.registros.find((registro) =>
-      MediaIdUtils.extrair(registro.ID).includes(id)
+    const registro = this.registros.find((item) =>
+      MediaIdUtils.extrair(item.ID).includes(id)
     ) || null;
+
+    if (!registro) return null;
+
+    return {
+      ...registro,
+      DURACAO: registro.DURACOES?.[id] || ""
+    };
   },
 
   buscar(termo) {
