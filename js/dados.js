@@ -226,7 +226,7 @@ const DadosMedia = {
 
     let base = this.registros;
     if (programaNome) {
-      const p = decodeURIComponent(programaNome).toLocaleLowerCase("pt-BR").trim();
+      const p = String(programaNome).toLocaleLowerCase("pt-BR").trim();
       base = base.filter((r) => String(r.PROGRAMA || "").toLocaleLowerCase("pt-BR").includes(p));
     }
     if (!termo) return base;

@@ -40,6 +40,12 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Instalar dependências
+        run: npm install --ignore-scripts --no-audit --no-fund
+
+      - name: Rodar suíte completa de testes
+        run: npm test
+
       - name: Validar frescor do snapshot principal
         env:
           SNAPSHOT_MAX_AGE_MINUTES: "20"
