@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T19:13:20.765Z",
-  "total": 41255,
+  "generatedAt": "2026-09-25T19:29:29.710Z",
+  "total": 41259,
   "registros": [
     {
       "ID": "2822B019835",
@@ -453807,6 +453807,50 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "",
       "PGM": "382"
+    },
+    {
+      "ID": "2457B018086",
+      "DESCRICAO": "DENUNCIAS PROPAGANDA IRREGULAR",
+      "DATA": "24/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018087",
+      "DESCRICAO": "CONCORRÊNCIA ALCOOL GASOLINA",
+      "DATA": "24/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ECONOMIA",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018088",
+      "DESCRICAO": "MESÁRIO DEFICIENTE VISUAL",
+      "DATA": "24/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018089",
+      "DESCRICAO": "VOTOS PRESIDENTE",
+      "DATA": "24/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": ""
     }
   ]
 }
