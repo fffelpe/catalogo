@@ -78,7 +78,7 @@ const MediaDetail = (() => {
     unicos.forEach((tag) => container.append(el("span", "media-tag", tag)));
   }
 
-  function renderSegments(segmentos, video) {
+  function renderSegments(segmentos) {
     const container = document.getElementById("mediaSegments");
     if (!container) return;
     container.textContent = "";
@@ -88,14 +88,10 @@ const MediaDetail = (() => {
     }
 
     segmentos.forEach((segmento) => {
-      const botao = el("button", "media-segment-button");
-      botao.type = "button";
-      botao.setAttribute("aria-label", `Assistir trecho em ${MediaSegments.formatarTimecode(segmento.start)}`);
-      botao.append(el("span", "media-segment-play", "▶"));
-      botao.append(el("span", "media-timecode", MediaSegments.formatarTimecode(segmento.start)));
-      botao.append(el("span", "media-segment-text", segmento.text));
-      botao.addEventListener("click", () => MediaPlayer.irPara(video, segmento.start));
-      container.append(botao);
+      const item = el("div", "media-segment-item");
+      item.append(el("span", "media-timecode", MediaSegments.formatarTimecode(segmento.start)));
+      item.append(el("span", "media-segment-text", segmento.text));
+      container.append(item);
     });
   }
 
@@ -165,30 +161,9 @@ const MediaDetail = (() => {
     container.append(lista);
   }
 
-  function configurarPlayer(mediaId, inicio) {
-    const video = document.getElementById("mediaPlayer");
-    const status = document.getElementById("mediaPlayerStatus");
-    const montado = MediaPlayer.montar(video, mediaId, inicio, {
-      onError: () => {
-        if (!status) return;
-        status.textContent = "Não foi possível carregar a pré-visualização deste Media ID. Os metadados continuam disponíveis.";
-        status.classList.add("is-error");
-      }
-    });
-
-    if (!montado && status) {
-      status.textContent = window.location.protocol === "https:"
-        ? "Pré-visualização indisponível neste acesso seguro. É necessário configurar o proxy HTTPS interno de vídeo; os metadados continuam disponíveis."
-        : "Não foi possível montar a pré-visualização deste Media ID. Os metadados continuam disponíveis.";
-      status.classList.add("is-error");
-    }
-    return video;
-  }
-
   async function inicializar() {
     const params = new URLSearchParams(window.location.search);
     const mediaId = MediaIdUtils.normalizar(params.get("id") || "");
-    const inicio = MediaPlayer.normalizarInicio(params.get("t"));
 
     if (!mediaId) {
       definirEstado("Media ID inválido.", "is-error");
@@ -235,8 +210,7 @@ const MediaDetail = (() => {
     renderMetadata(registro);
     const enrichment = MediaEnrichment.obter(mediaId) || {};
     renderTags(enrichment);
-    const video = configurarPlayer(mediaId, inicio);
-    renderSegments(MediaEnrichment.obterSegmentos(mediaId), video);
+    renderSegments(MediaEnrichment.obterSegmentos(mediaId));
     renderCredits(mediaId, creditosCarregados);
     renderRelated(registro, mediaId);
     renderQuality(registro, mediaId, creditosCarregados);
