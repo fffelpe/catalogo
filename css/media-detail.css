@@ -70,12 +70,11 @@
 
 .media-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
   margin-top: 22px;
 }
 
-.media-player-card,
 .media-metadata-card,
 .media-section {
   border: 1px solid #e0e9e4;
@@ -84,33 +83,9 @@
   box-shadow: 0 10px 28px rgba(20, 60, 42, 0.06);
 }
 
-.media-player-card {
-  overflow: hidden;
-}
-
-#mediaPlayer {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #101714;
-}
-
-.media-player-status {
-  padding: 12px 16px;
-  border-top: 1px solid #e8efe9;
-  background: #fff8e8;
-  color: #7a5a16;
-  font-size: 0.9rem;
-}
-
-.media-player-status.is-error {
-  background: #fff1f1;
-  color: #8b2c2c;
-}
-
 .media-metadata-card {
   display: grid;
-  align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   overflow: hidden;
 }
 
@@ -119,11 +94,12 @@
   grid-template-columns: 110px minmax(0, 1fr);
   gap: 12px;
   padding: 14px 16px;
+  border-right: 1px solid #edf2ef;
   border-bottom: 1px solid #edf2ef;
 }
 
 .media-meta-row:last-child {
-  border-bottom: 0;
+  border-right: 0;
 }
 
 .media-meta-label {
@@ -171,43 +147,22 @@
   gap: 10px;
 }
 
-.media-segment-button {
+.media-segment-item {
   display: grid;
-  grid-template-columns: auto 70px minmax(0, 1fr);
+  grid-template-columns: 70px minmax(0, 1fr);
   gap: 10px;
-  align-items: center;
+  align-items: start;
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #dce8e1;
   border-radius: 12px;
   background: #f8fbf9;
   color: #284438;
-  text-align: left;
-}
-
-.media-segment-button:hover,
-.media-segment-button:focus-visible {
-  border-color: #8fc3a6;
-  background: #f0f8f3;
-}
-
-.media-segment-play {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #e0f2e7;
-  color: #1c7348;
-  font-size: 0.78rem;
 }
 
 .media-timecode {
   color: #117044;
   font-weight: 750;
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 .media-empty {
@@ -322,7 +277,6 @@
 }
 
 @media (max-width: 900px) {
-  .media-hero-grid,
   .media-two-columns {
     grid-template-columns: 1fr;
   }
@@ -338,9 +292,18 @@
     margin-top: 18px;
   }
 
+  .media-metadata-card {
+    grid-template-columns: 1fr;
+  }
+
   .media-meta-row {
     grid-template-columns: 1fr;
     gap: 3px;
+    border-right: 0;
+  }
+
+  .media-segment-item {
+    grid-template-columns: 60px minmax(0, 1fr);
   }
 
   .media-related-grid {
