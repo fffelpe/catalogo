@@ -5,49 +5,41 @@ import vm from "node:vm";
 import { fileURLToPath } from "node:url";
 
 const mediaIdPath = fileURLToPath(new URL("../js/media-id.js", import.meta.url));
-const mediaSegmentsPath = fileURLToPath(new URL("../js/media-segments.js", import.meta.url));
-const catalogoUiPath = fileURLToPath(new URL("../js/catalogo-ui.js", import.meta.url));
+const segmentsPath = fileURLToPath(new URL("../js/media-segments.js", import.meta.url));
+const uiPath = fileURLToPath(new URL("../js/catalogo-ui.js", import.meta.url));
 
-function carregarRenderizadores() {
+function carregar() {
   const sandbox = {
     console,
-    URL,
-    URLSearchParams,
-    document: { addEventListener() {} }
+    navigator: {},
+    window: { isSecureContext: false, setTimeout() {} },
+    document: {
+      addEventListener() {},
+      getElementById() { return null; },
+      querySelectorAll() { return []; }
+    }
   };
   vm.createContext(sandbox);
-  vm.runInContext(fs.readFileSync(mediaIdPath, "utf8"), sandbox);
-  vm.runInContext(fs.readFileSync(mediaSegmentsPath, "utf8"), sandbox);
-  vm.runInContext(fs.readFileSync(catalogoUiPath, "utf8"), sandbox);
-  vm.runInContext(`
-    globalThis.__formatarIdsComCopia = formatarIdsComCopia;
-    globalThis.__renderizarTrechoEncontrado = typeof renderizarTrechoEncontrado === "function"
-      ? renderizarTrechoEncontrado
-      : null;
-  `, sandbox);
-  return sandbox;
+  vm.runInContext(fs.readFileSync(mediaIdPath, "utf8") + "\nglobalThis.MediaIdUtils = MediaIdUtils;", sandbox);
+  vm.runInContext(fs.readFileSync(segmentsPath, "utf8") + "\nglobalThis.MediaSegments = MediaSegments;", sandbox);
+  vm.runInContext(fs.readFileSync(uiPath, "utf8") + "\nglobalThis.__ui = { formatarIdsComCopia, renderizarTrechoEncontrado };", sandbox);
+  return sandbox.__ui;
 }
 
-test("cada Media ID vira link para a ficha e mantém botão de copiar", () => {
-  const sandbox = carregarRenderizadores();
-  const html = sandbox.__formatarIdsComCopia("1452B004869 / 1452B004870");
-
-  assert.match(html, /class="media-id-link" href="media\.html\?id=1452B004869"/);
-  assert.match(html, /class="media-id-link" href="media\.html\?id=1452B004870"/);
-  assert.equal((html.match(/class="btn-copiar-id"/g) || []).length, 2);
+test("cada Media ID da célula aponta para sua própria ficha", () => {
+  const { formatarIdsComCopia } = carregar();
+  const html = formatarIdsComCopia("1452B004869 / 1452B004870");
+  assert.ok(html.includes("media.html?id=1452B004869"));
+  assert.ok(html.includes("media.html?id=1452B004870"));
+  assert.equal((html.match(/btn-copiar-id/g) || []).length, 2);
 });
 
-test("melhor trecho vira ação compacta para a ficha no timecode correto", () => {
-  const sandbox = carregarRenderizadores();
-  assert.equal(typeof sandbox.__renderizarTrechoEncontrado, "function");
-
-  const html = sandbox.__renderizarTrechoEncontrado({
-    _SEARCH_SEGMENT_MATCHES: [
-      { mediaId: "1452B004869", start: 28, text: "Bombeiros auxiliam moradores" }
-    ]
+test("melhor trecho gera CTA com timecode e link para o ponto encontrado", () => {
+  const { renderizarTrechoEncontrado } = carregar();
+  const html = renderizarTrechoEncontrado({
+    ID: "1452B004869",
+    _SEARCH_SEGMENT_MATCHES: [{ mediaId: "1452B004869", start: 28, text: "Bombeiros auxiliam moradores" }]
   });
-
-  assert.match(html, /class="trecho-encontrado"/);
-  assert.match(html, /media\.html\?id=1452B004869&amp;t=28/);
-  assert.match(html, /Trecho encontrado · 00:28/);
+  assert.ok(html.includes("Trecho encontrado · 00:28"));
+  assert.ok(html.includes("media.html?id=1452B004869&amp;t=28"));
 });

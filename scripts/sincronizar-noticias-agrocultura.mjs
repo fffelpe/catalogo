@@ -200,7 +200,7 @@ async function garantirCabecalhoPgm() {
   await sheets.spreadsheets.values.update({
     spreadsheetId: PLANILHA_IMGS_ID,
     range: `${ABA_IMGS}!I1`,
-    valueInputOption: "USER_ENTERED",
+    valueInputOption: "RAW",
     requestBody: { values: [["PGM"]] },
   });
 }
@@ -228,6 +228,23 @@ async function main() {
   const pendentesPorId = new Map();
   const pendentes = [];
   const atualizacoesPorLinha = new Map();
+  let conflitosDistribuidos = 0;
+
+  function atualizarAlvo(alvo, registroOrigem, opcoesMesclagem = {}, preservarIdsDoAlvo = false) {
+    const origemEfetiva = [...registroOrigem];
+    if (preservarIdsDoAlvo) origemEfetiva[0] = alvo.dados[0];
+
+    const dadosNovos = mesclar(alvo.dados, origemEfetiva, opcoesMesclagem);
+    if (JSON.stringify(dadosNovos) === JSON.stringify(alvo.dados)) return;
+
+    alvo.dados = dadosNovos;
+    if (alvo.tipo === "existente") {
+      atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
+      registrarIds(existentesPorId, alvo);
+    } else {
+      registrarIds(pendentesPorId, alvo);
+    }
+  }
 
   function integrar(registros, opcoesMesclagem = {}) {
     for (const registroOrigem of registros) {
@@ -237,7 +254,26 @@ async function main() {
       )];
 
       if (alvos.length > 1) {
-        throw new Error(`Os IDs ${ids.join(", ")} do mesmo registro já pertencem a linhas diferentes na imgs.`);
+        conflitosDistribuidos += 1;
+        console.warn(
+          `Registro com IDs distribuídos em ${alvos.length} linhas da imgs: ${ids.join(", ")}. ` +
+          "Os metadados serão aplicados a cada linha sem fundir os Media IDs."
+        );
+
+        for (const alvoDistribuido of alvos) {
+          atualizarAlvo(alvoDistribuido, registroOrigem, opcoesMesclagem, true);
+        }
+
+        const idsJaRepresentados = new Set(alvos.flatMap((alvo) => idsDoValor(alvo.dados[0])));
+        const idsSemAlvo = ids.filter((id) => !idsJaRepresentados.has(id));
+        if (idsSemAlvo.length) {
+          const registroPendente = [...registroOrigem];
+          registroPendente[0] = idsSemAlvo.join("\n");
+          const pendente = { tipo: "pendente", linhaPlanilha: null, dados: registroPendente };
+          pendentes.push(pendente);
+          registrarIds(pendentesPorId, pendente);
+        }
+        continue;
       }
 
       let alvo = alvos[0];
@@ -248,16 +284,7 @@ async function main() {
         continue;
       }
 
-      const dadosNovos = mesclar(alvo.dados, registroOrigem, opcoesMesclagem);
-      if (JSON.stringify(dadosNovos) === JSON.stringify(alvo.dados)) continue;
-
-      alvo.dados = dadosNovos;
-      if (alvo.tipo === "existente") {
-        atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
-        registrarIds(existentesPorId, alvo);
-      } else {
-        registrarIds(pendentesPorId, alvo);
-      }
+      atualizarAlvo(alvo, registroOrigem, opcoesMesclagem, false);
     }
   }
 
@@ -268,7 +295,7 @@ async function main() {
     await sheets.spreadsheets.values.batchUpdate({
       spreadsheetId: PLANILHA_IMGS_ID,
       requestBody: {
-        valueInputOption: "USER_ENTERED",
+        valueInputOption: "RAW",
         data: [...atualizacoesPorLinha.entries()].map(([linha, values]) => ({
           range: `${ABA_IMGS}!A${linha}:I${linha}`,
           values: [values],
@@ -281,7 +308,7 @@ async function main() {
     await sheets.spreadsheets.values.append({
       spreadsheetId: PLANILHA_IMGS_ID,
       range: `${ABA_IMGS}!A:I`,
-      valueInputOption: "USER_ENTERED",
+      valueInputOption: "RAW",
       insertDataOption: "INSERT_ROWS",
       requestBody: { values: pendentes.map((item) => item.dados) },
     });
@@ -289,7 +316,8 @@ async function main() {
 
   console.log(
     `Integração concluída. Linhas atualizadas: ${atualizacoesPorLinha.size}; ` +
-    `novos registros: ${pendentes.length}; notícias: ${noticias.length}; matérias: ${materias.length}.`
+    `novos registros: ${pendentes.length}; notícias: ${noticias.length}; matérias: ${materias.length}; ` +
+    `conflitos distribuídos tratados: ${conflitosDistribuidos}.`
   );
 }
 

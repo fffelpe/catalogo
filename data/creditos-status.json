@@ -1,17 +1,17 @@
 {
-  "sincronizadoEm": "2026-09-24T22:06:37.021Z",
+  "sincronizadoEm": "2026-09-25T21:26:21.195Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
-  "totalArquivos": 290,
-  "totalIdsDetectados": 258,
-  "totalSincronizados": 258,
+  "totalArquivos": 293,
+  "totalIdsDetectados": 261,
+  "totalSincronizados": 261,
   "totalIgnorados": 0,
   "totalErros": 0,
   "totalDuplicados": 30,
   "totalConflitos": 30,
-  "totalConflitosBloqueantes": 1,
-  "totalNovosDuplicadosRejeitados": 1,
+  "totalConflitosBloqueantes": 0,
+  "totalNovosDuplicadosRejeitados": 0,
   "totalPreservados": 30,
-  "validacaoBloqueante": true,
+  "validacaoBloqueante": false,
   "regraDuplicidade": "Quando há dois ou mais documentos para o mesmo Media ID, exatamente um arquivo deve conter a palavra OFICIAL no nome. Novos conflitos são rejeitados e permanecem bloqueantes até serem resolvidos.",
   "comoResolverConflitos": [
     "Escolha uma única versão correta para cada Media ID em conflito.",
@@ -30,7 +30,7 @@
         {
           "id": "1YOj5kagF59zjKKQY8OD0uNh_-_EDOFTsPYi1rTMP9mk",
           "nome": "1452B005485",
-          "atualizadoEm": "2026-09-24T19:51:22.527Z"
+          "atualizadoEm": "2026-09-25T19:24:27.982Z"
         },
         {
           "id": "1qx0jVCmCIOJvhnc_HmdNo60TwNgbQDugiNWNuL-8o7U",
@@ -577,8 +577,8 @@
       "id": "1452B005485",
       "motivo": "documentos duplicados sem versão oficial definida",
       "tipo": "existente",
-      "bloqueante": true,
-      "rejeitado": true,
+      "bloqueante": false,
+      "rejeitado": false,
       "acao": "crédito anterior preservado; documentos conflitantes não foram aceitos pela sincronização",
       "oficiais": [],
       "novosArquivos": [],
@@ -586,7 +586,7 @@
         {
           "id": "1YOj5kagF59zjKKQY8OD0uNh_-_EDOFTsPYi1rTMP9mk",
           "nome": "1452B005485",
-          "atualizadoEm": "2026-09-24T19:51:22.527Z"
+          "atualizadoEm": "2026-09-25T19:24:27.982Z"
         },
         {
           "id": "1qx0jVCmCIOJvhnc_HmdNo60TwNgbQDugiNWNuL-8o7U",
@@ -1484,20 +1484,7 @@
       ]
     }
   ],
-  "rejeitadosNovos": [
-    {
-      "id": "1452B005485",
-      "motivo": "documentos duplicados sem versão oficial definida",
-      "novosArquivos": [],
-      "instrucoes": [
-        "Escolha qual dos documentos listados é a versão oficial correta.",
-        "Renomeie somente o documento escolhido para incluir a palavra OFICIAL. Exemplo: \"1452B005485 - OFICIAL\" (mantendo a extensão quando houver).",
-        "Não marque mais de um documento do mesmo Media ID como OFICIAL.",
-        "Opcionalmente, mova ou exclua da pasta de créditos as versões duplicadas que não devem mais participar da sincronização.",
-        "Execute novamente a sincronização. Até a resolução, a versão anterior do crédito permanece preservada."
-      ]
-    }
-  ],
+  "rejeitadosNovos": [],
   "preservados": [
     {
       "id": "1452B005485",

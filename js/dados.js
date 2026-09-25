@@ -81,9 +81,6 @@ const DadosMedia = {
         skipEmptyLines: true,
         complete: (results) => {
           const erros = Array.isArray(results.errors) ? results.errors : [];
-          // PapaParse sinaliza TooFewFields quando as últimas células vazias de uma
-          // linha não vieram no CSV. Isso é comum e não desloca as colunas.
-          // Os demais erros continuam bloqueando o carregamento para evitar dados corrompidos.
           const avisos = erros.filter((erro) => erro?.code === "TooFewFields");
           const errosRelevantes = erros.filter((erro) => erro?.code !== "TooFewFields");
 
@@ -125,9 +122,6 @@ const DadosMedia = {
       throw new Error("A fonte do catálogo não contém registros válidos com ID.");
     }
 
-    // A ordem da fonte representa a ordem física da planilha imgs. Mantemos uma
-    // cópia sem ordenação para recursos que precisam saber quais registros foram
-    // inseridos por último, sem alterar a ordenação por data usada nas buscas.
     this.registrosOrdemInsercao = [...normalizados];
     this.registros = [...normalizados].sort(this._compararPorDataDesc);
     this.carregado = true;
@@ -136,8 +130,22 @@ const DadosMedia = {
 
   _normalizar(item) {
     const mapa = {};
+    const duracoes = {};
+    const duracoesOriginais = item?.DURACOES;
+
+    if (duracoesOriginais && typeof duracoesOriginais === "object" && !Array.isArray(duracoesOriginais)) {
+      Object.entries(duracoesOriginais).forEach(([mediaId, duracao]) => {
+        const id = typeof MediaIdUtils !== "undefined" && typeof MediaIdUtils.normalizar === "function"
+          ? MediaIdUtils.normalizar(mediaId)
+          : String(mediaId || "").trim().toUpperCase();
+        const tempo = String(duracao || "").trim();
+        if (id && tempo) duracoes[id] = tempo;
+      });
+    }
+
     Object.keys(item || {}).forEach((chaveOriginal) => {
       const chave = String(chaveOriginal || "").trim().toUpperCase();
+      if (chave === "DURACOES") return;
       mapa[chave] = (item[chaveOriginal] || "").toString().trim();
     });
 
@@ -152,7 +160,8 @@ const DadosMedia = {
       AFILIADA_EMISSORA: chaveAfiliada ? mapa[chaveAfiliada] : "",
       PROGRAMA: mapa["PROGRAMA"] || "",
       EDITORIA: mapa["EDITORIA"] || "",
-      PGM: mapa["PGM"] || ""
+      PGM: mapa["PGM"] || "",
+      DURACOES: duracoes
     };
   },
 
@@ -202,13 +211,23 @@ const DadosMedia = {
   },
 
   buscarPorMediaId(mediaId) {
-    if (typeof MediaIdUtils === "undefined") return null;
-    const alvo = MediaIdUtils.normalizar(mediaId);
-    if (!alvo) return null;
+    if (typeof MediaIdUtils === "undefined" || typeof MediaIdUtils.normalizar !== "function") {
+      return null;
+    }
 
-    return this.registros.find((registro) =>
-      MediaIdUtils.extrair(registro.ID).includes(alvo)
+    const id = MediaIdUtils.normalizar(mediaId);
+    if (!id) return null;
+
+    const registro = this.registros.find((item) =>
+      MediaIdUtils.extrair(item.ID).includes(id)
     ) || null;
+
+    if (!registro) return null;
+
+    return {
+      ...registro,
+      DURACAO: registro.DURACOES?.[id] || ""
+    };
   },
 
   buscar(termo) {
@@ -229,7 +248,7 @@ const DadosMedia = {
 
     let base = this.registros;
     if (programaNome) {
-      const p = decodeURIComponent(programaNome).toLocaleLowerCase("pt-BR").trim();
+      const p = String(programaNome).toLocaleLowerCase("pt-BR").trim();
       base = base.filter((r) => String(r.PROGRAMA || "").toLocaleLowerCase("pt-BR").includes(p));
     }
     if (!termo) return base;

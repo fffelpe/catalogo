@@ -72,16 +72,19 @@ const SearchEngine = (() => {
     return termo.length >= 4 && (tipo === "original" || tipo === "frase");
   }
 
-  function extrairIds(valor) {
-    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(valor);
+  function separarIds(valor) {
+    if (typeof MediaIdUtils !== "undefined") {
+      return MediaIdUtils.extrair(valor).map((id) => id.toLocaleLowerCase("pt-BR"));
+    }
     return String(valor || "")
       .split(/[\r\n,;+\/|&]+/)
-      .map((id) => String(id || "").replace(/\s+/g, "").toUpperCase())
-      .filter((id) => /^\d{4}[A-Z]\d{5,6}$/.test(id));
+      .map((id) => normalizar(id).replace(/\s+/g, ""))
+      .filter(Boolean);
   }
 
-  function separarIds(valor) {
-    return extrairIds(valor).map((id) => id.toLocaleLowerCase("pt-BR"));
+  function separarIdsOriginais(valor) {
+    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(valor);
+    return separarIds(valor).map((id) => id.toUpperCase());
   }
 
   function contarOcorrencias(texto, termo) {
@@ -126,45 +129,70 @@ const SearchEngine = (() => {
     return Boolean(idConsulta) && idsRegistro.includes(idConsulta);
   }
 
+  function enriquecerComCreditos(registro) {
+    if (
+      typeof CreditosMedia === "undefined" ||
+      typeof CreditosMedia.camposPesquisa !== "function"
+    ) {
+      return registro;
+    }
+
+    return {
+      ...registro,
+      ...CreditosMedia.camposPesquisa(registro.ID)
+    };
+  }
+
+  function enriquecerComMetadados(registro) {
+    if (
+      typeof MediaEnrichment === "undefined" ||
+      typeof MediaEnrichment.camposPesquisa !== "function"
+    ) {
+      return registro;
+    }
+
+    const campos = {
+      KEYWORDS: [],
+      SUBJECTS: [],
+      PEOPLE: [],
+      PLACES: [],
+      SEGMENTS: []
+    };
+
+    separarIdsOriginais(registro.ID).forEach((id) => {
+      const enriquecido = MediaEnrichment.camposPesquisa(id) || {};
+      Object.keys(campos).forEach((campo) => {
+        const valor = String(enriquecido[campo] || "").trim();
+        if (valor) campos[campo].push(valor);
+      });
+    });
+
+    return {
+      ...registro,
+      ...Object.fromEntries(Object.entries(campos).map(([campo, valores]) => [campo, valores.join(" ")]))
+    };
+  }
+
   function enriquecerRegistro(registro) {
-    let enriquecido = { ...registro };
+    return enriquecerComMetadados(enriquecerComCreditos(registro));
+  }
 
+  function encontrarMatchesSegmentos(registro, consulta) {
     if (
-      typeof CreditosMedia !== "undefined" &&
-      typeof CreditosMedia.camposPesquisa === "function"
-    ) {
-      enriquecido = {
-        ...enriquecido,
-        ...CreditosMedia.camposPesquisa(registro.ID)
-      };
-    }
+      typeof MediaSegments === "undefined" ||
+      typeof MediaSegments.buscar !== "function"
+    ) return [];
 
-    if (
-      typeof MediaEnrichment !== "undefined" &&
-      typeof MediaEnrichment.camposPesquisa === "function"
-    ) {
-      const acumulado = {
-        KEYWORDS: [],
-        SUBJECTS: [],
-        PEOPLE: [],
-        PLACES: [],
-        SEGMENTS: []
-      };
-
-      extrairIds(registro.ID).forEach((id) => {
-        const campos = MediaEnrichment.camposPesquisa(id);
-        Object.keys(acumulado).forEach((campo) => {
-          const valor = String(campos?.[campo] || "").trim();
-          if (valor) acumulado[campo].push(valor);
-        });
+    const matches = [];
+    separarIdsOriginais(registro.ID).forEach((id) => {
+      MediaSegments.buscar(id, consulta).forEach((segmento) => {
+        matches.push({ ...segmento, mediaId: id });
       });
+    });
 
-      Object.entries(acumulado).forEach(([campo, valores]) => {
-        enriquecido[campo] = valores.join(" ");
-      });
-    }
-
-    return enriquecido;
+    return matches
+      .sort((a, b) => (b.score || 0) - (a.score || 0) || (a.start || 0) - (b.start || 0))
+      .slice(0, 5);
   }
 
   function calcularRelevancia(registroOriginal, consulta) {
@@ -172,13 +200,14 @@ const SearchEngine = (() => {
     const consultaNormalizada = normalizar(consulta);
 
     if (!consultaNormalizada) {
-      return { score: 0, correspondencias: [] };
+      return { score: 0, correspondencias: [], segmentMatches: [] };
     }
 
     if (detectarMediaIdExato(registro, consulta)) {
       return {
         score: 10000,
-        correspondencias: [{ campo: "ID", termo: consulta, tipo: "id-exato" }]
+        correspondencias: [{ campo: "ID", termo: consulta, tipo: "id-exato" }],
+        segmentMatches: []
       };
     }
 
@@ -230,7 +259,8 @@ const SearchEngine = (() => {
       }
     }
 
-    return { score, correspondencias };
+    const segmentMatches = encontrarMatchesSegmentos(registro, consulta);
+    return { score, correspondencias, segmentMatches };
   }
 
   function filtrarPrograma(registros, programa) {
@@ -252,19 +282,12 @@ const SearchEngine = (() => {
     return base
       .map((registro, indiceOriginal) => {
         const relevancia = calcularRelevancia(registro, termo);
-        const segmentos = (
-          typeof MediaSegments !== "undefined" &&
-          typeof MediaSegments.buscarEmRegistro === "function"
-        )
-          ? MediaSegments.buscarEmRegistro(registro, termo).slice(0, 5)
-          : [];
-
         return {
           registro,
           indiceOriginal,
           score: relevancia.score,
           correspondencias: relevancia.correspondencias,
-          segmentos
+          segmentMatches: relevancia.segmentMatches || []
         };
       })
       .filter((item) => item.score > 0)
@@ -273,7 +296,7 @@ const SearchEngine = (() => {
         ...item.registro,
         _SEARCH_SCORE: item.score,
         _SEARCH_MATCHES: item.correspondencias,
-        _SEARCH_SEGMENT_MATCHES: item.segmentos
+        _SEARCH_SEGMENT_MATCHES: item.segmentMatches
       }));
   }
 

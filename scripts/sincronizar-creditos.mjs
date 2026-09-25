@@ -3,7 +3,7 @@ import path from "node:path";
 import process from "node:process";
 import { google } from "googleapis";
 import mammoth from "mammoth";
-import pdfParse from "pdf-parse";
+import { PDFParse } from "pdf-parse";
 import {
   extrairMediaIdDoNome,
   resolverCandidatosCredito,
@@ -133,6 +133,16 @@ async function baixarArquivo(arquivo) {
   return Buffer.from(resposta.data);
 }
 
+async function extrairTextoPdf(buffer) {
+  const parser = new PDFParse({ data: buffer });
+  try {
+    const resultado = await parser.getText();
+    return resultado.text || "";
+  } finally {
+    await parser.destroy();
+  }
+}
+
 async function extrairTexto(arquivo) {
   if (arquivo.mimeType === "application/vnd.google-apps.document") {
     const resposta = await drive.files.export(
@@ -143,8 +153,7 @@ async function extrairTexto(arquivo) {
   }
 
   if (arquivo.mimeType === "application/pdf") {
-    const resultado = await pdfParse(await baixarArquivo(arquivo));
-    return resultado.text || "";
+    return extrairTextoPdf(await baixarArquivo(arquivo));
   }
 
   if (arquivo.mimeType === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {

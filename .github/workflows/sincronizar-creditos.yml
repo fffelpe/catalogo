@@ -15,6 +15,7 @@ on:
       - "scripts/sincronizar-creditos.mjs"
       - "tests/creditos-conflitos.test.mjs"
       - "package.json"
+      - "package-lock.json"
       - ".github/workflows/sincronizar-creditos.yml"
 
 permissions:
@@ -36,9 +37,10 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: "24"
+          cache: npm
 
       - name: Instalar dependências
-        run: npm install --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
 
       - name: Testar resolução de conflitos de créditos
         run: node --test tests/creditos-conflitos.test.mjs
@@ -56,12 +58,43 @@ jobs:
             exit 0
           fi
 
+          mkdir -p /tmp/catalogo-creditos
+          cp data/creditos.json /tmp/catalogo-creditos/creditos.json
+          cp data/creditos-status.json /tmp/catalogo-creditos/creditos-status.json
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/creditos.json data/creditos-status.json
-          git commit -m "chore: sincroniza créditos do Google Drive"
-          git pull --rebase origin main
-          git push
+
+          for tentativa in 1 2 3 4 5; do
+            echo "Tentativa ${tentativa}/5 de publicar os créditos..."
+
+            git fetch origin main
+            git reset --hard origin/main
+
+            cp /tmp/catalogo-creditos/creditos.json data/creditos.json
+            cp /tmp/catalogo-creditos/creditos-status.json data/creditos-status.json
+            git add data/creditos.json data/creditos-status.json
+
+            if git diff --cached --quiet; then
+              echo "Os créditos já estão atualizados na branch main."
+              exit 0
+            fi
+
+            git commit -m "chore: sincroniza créditos do Google Drive"
+
+            if git push origin HEAD:main; then
+              echo "Créditos publicados com sucesso."
+              exit 0
+            fi
+
+            if [ "$tentativa" -lt 5 ]; then
+              echo "A branch main mudou durante o push; reaplicando os créditos sobre a versão mais recente..."
+              sleep 2
+            fi
+          done
+
+          echo "Não foi possível publicar os créditos após 5 tentativas."
+          exit 1
 
       - name: Rejeitar novos conflitos de créditos
         run: |

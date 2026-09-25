@@ -1,43 +1,36 @@
-// media-enrichment.js - Metadados enriquecidos opcionais por Media ID.
+// media-enrichment.js
+// Camada opcional de metadados enriquecidos por Media ID.
 
 const MediaEnrichment = (() => {
-  let itens = Object.create(null);
+  let itens = {};
   let carregado = false;
   let carregamentoPromise = null;
 
-  const ENRICHMENT_URL = (() => {
+  const SNAPSHOT_URL = (() => {
     const scriptSrc = typeof document !== "undefined" ? document.currentScript?.src : "";
     if (scriptSrc) return new URL("../data/media-enrichment.json", scriptSrc).href;
-
     if (typeof window !== "undefined" && window.location?.href) {
       const caminho = window.location.pathname.includes("/pages/")
         ? "../data/media-enrichment.json"
         : "data/media-enrichment.json";
       return new URL(caminho, window.location.href).href;
     }
-
     return "data/media-enrichment.json";
   })();
 
-  function normalizarMediaId(valor) {
-    if (typeof MediaIdUtils !== "undefined" && typeof MediaIdUtils.normalizar === "function") {
-      return MediaIdUtils.normalizar(valor);
-    }
-
-    const limpo = String(valor || "")
-      .replace(/\.mp4$/i, "")
-      .replace(/[\u00A0\u200B-\u200D\uFEFF\s]+/g, "")
-      .trim()
-      .toUpperCase();
-
-    return /^\d{4}[A-Z]\d{5,6}$/.test(limpo) ? limpo : "";
+  function limparTexto(valor) {
+    return String(valor ?? "")
+      .replace(/\u00A0/g, " ")
+      .replace(/[\u200B-\u200D\uFEFF]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
   }
 
   function normalizarLista(valor) {
-    const lista = Array.isArray(valor) ? valor : [];
+    if (!Array.isArray(valor)) return [];
     const vistos = new Set();
-    return lista
-      .map((item) => String(item ?? "").trim())
+    return valor
+      .map(limparTexto)
       .filter((item) => {
         if (!item) return false;
         const chave = item.toLocaleLowerCase("pt-BR");
@@ -47,20 +40,18 @@ const MediaEnrichment = (() => {
       });
   }
 
-  function normalizarSegmento(segmento = {}) {
+  function normalizarSegmento(segmento) {
+    if (!segmento || typeof segmento !== "object") return null;
     const start = Number(segmento.start);
-    const endAusente = segmento.end === undefined || segmento.end === null || segmento.end === "";
-    const end = endAusente ? null : Number(segmento.end);
-    const text = String(segmento.text ?? "").trim();
+    const end = segmento.end === "" || segmento.end == null ? null : Number(segmento.end);
+    const text = limparTexto(segmento.text);
 
     if (!Number.isFinite(start) || start < 0 || !text) return null;
-    if (end !== null && (!Number.isFinite(end) || end < start)) return null;
+    if (end != null && (!Number.isFinite(end) || end < start)) return null;
 
-    return {
-      start,
-      ...(end === null ? {} : { end }),
-      text
-    };
+    const saida = { start, text };
+    if (end != null) saida.end = end;
+    return saida;
   }
 
   function normalizarItem(item = {}) {
@@ -75,18 +66,27 @@ const MediaEnrichment = (() => {
     };
   }
 
+  function normalizarMediaId(valor) {
+    if (typeof MediaIdUtils !== "undefined" && typeof MediaIdUtils.normalizar === "function") {
+      return MediaIdUtils.normalizar(valor);
+    }
+    const limpo = String(valor ?? "").replace(/\.mp4$/i, "").replace(/\s+/g, "").toUpperCase();
+    return /^\d{4}[A-Z]\d{5,6}$/.test(limpo) ? limpo : "";
+  }
+
   function normalizarPayload(payload) {
+    const saida = {};
     if (!payload || payload.schemaVersion !== 1 || !payload.items || typeof payload.items !== "object") {
-      throw new Error("Formato de media-enrichment.json não reconhecido.");
+      return { schemaVersion: 1, items: saida };
     }
 
-    const normalizados = Object.create(null);
-    Object.entries(payload.items).forEach(([mediaId, item]) => {
-      const id = normalizarMediaId(mediaId);
+    Object.entries(payload.items).forEach(([chave, item]) => {
+      const id = normalizarMediaId(chave);
       if (!id) return;
-      normalizados[id] = normalizarItem(item);
+      saida[id] = normalizarItem(item);
     });
-    return normalizados;
+
+    return { schemaVersion: 1, items: saida };
   }
 
   async function carregar() {
@@ -94,18 +94,17 @@ const MediaEnrichment = (() => {
     if (carregamentoPromise) return carregamentoPromise;
 
     carregamentoPromise = (async () => {
-      if (typeof fetch !== "function") {
-        throw new Error("Fetch indisponível para carregar enrichment.");
+      try {
+        if (typeof fetch !== "function") return itens;
+        const resposta = await fetch(SNAPSHOT_URL, { cache: "no-cache" });
+        if (!resposta.ok) return itens;
+        const payload = normalizarPayload(await resposta.json());
+        itens = payload.items;
+      } catch (erro) {
+        console.warn("Enriquecimento de mídia indisponível nesta execução:", erro);
+      } finally {
+        carregado = true;
       }
-
-      const resposta = await fetch(ENRICHMENT_URL, { cache: "no-cache" });
-      if (!resposta.ok) {
-        throw new Error(`Enrichment respondeu HTTP ${resposta.status}.`);
-      }
-
-      const payload = await resposta.json();
-      itens = normalizarPayload(payload);
-      carregado = true;
       return itens;
     })();
 
@@ -122,8 +121,7 @@ const MediaEnrichment = (() => {
   }
 
   function obterSegmentos(mediaId) {
-    const item = obter(mediaId);
-    return item ? item.segments : [];
+    return obter(mediaId)?.segments || [];
   }
 
   function camposPesquisa(mediaId) {
@@ -138,15 +136,24 @@ const MediaEnrichment = (() => {
   }
 
   function todos() {
-    return { ...itens };
+    return itens;
+  }
+
+  function _definirParaTeste(novosItens = {}) {
+    itens = normalizarPayload({ schemaVersion: 1, items: novosItens }).items;
+    carregado = true;
+    return itens;
   }
 
   return {
+    SNAPSHOT_URL,
     carregar,
     obter,
     obterSegmentos,
     camposPesquisa,
     todos,
-    normalizarItem
+    normalizarItem,
+    _normalizarPayload: normalizarPayload,
+    _definirParaTeste
   };
 })();

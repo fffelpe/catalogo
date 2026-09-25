@@ -1,29 +1,10 @@
 # Catálogo de Mídias — Jornalismo TV Cultura
 
-Desenvolvimento voluntário de uma plataforma open-source para produtores do jornalismo da TV Cultura.
+Desenvolvimento voluntário de uma plataforma open-source de conteúdo audiovisual.
 
 Visando algumas dificuldades para encontrar imagens no catálogo da casa, esta plataforma reúne materiais de diversos programas do jornalismo em um único lugar para facilitar a pesquisa e o acesso ao acervo.
 
 https://fffelpe.github.io/catalogo/index.html
-
-## Busca inteligente e fichas de mídia
-
-O catálogo possui busca por relevância com sinônimos jornalísticos, créditos e metadados enriquecidos. A camada opcional `data/media-enrichment.json` pode associar palavras-chave, assuntos, pessoas, locais e segmentos com timecode a cada Media ID.
-
-As novas interfaces são:
-
-- `pages/media.html?id=MEDIA_ID`: ficha individual com player lowres, metadados, créditos, segmentos e conteúdos relacionados;
-- `pages/qualidade.html`: painel diagnóstico de qualidade dos registros, com filtros por programa, severidade e tipo de problema.
-
-A ausência do arquivo de enriquecimento, de créditos ou de segmentos não impede o funcionamento básico da busca e das fichas.
-
-## Testes
-
-```bash
-npm test
-```
-
-A suíte cobre sincronização existente, snapshots, Media IDs, ranking da busca, segmentos, ficha individual, conteúdos relacionados, segurança de renderização e painel de qualidade.
 
 ## Analytics global
 

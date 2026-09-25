@@ -1,9 +1,10 @@
-// related-media.js - Similaridade determinística entre registros do catálogo.
+// related-media.js
+// Similaridade determinística para a ficha de Media ID.
 
 const RelatedMedia = (() => {
   const STOPWORDS = new Set([
     "a", "o", "as", "os", "de", "da", "do", "das", "dos", "e", "em", "na", "no",
-    "nas", "nos", "um", "uma", "uns", "umas", "para", "por", "com", "sem", "que"
+    "nas", "nos", "um", "uma", "para", "por", "com", "que"
   ]);
 
   function normalizar(texto) {
@@ -17,153 +18,94 @@ const RelatedMedia = (() => {
   }
 
   function tokens(texto) {
-    return new Set(
-      normalizar(texto)
-        .split(" ")
-        .filter((token) => token.length >= 3 && !STOPWORDS.has(token))
-    );
+    return new Set(normalizar(texto).split(" ").filter((t) => t.length >= 3 && !STOPWORDS.has(t)));
   }
 
-  function idsRegistro(registro) {
+  function ids(registro) {
     if (typeof MediaIdUtils === "undefined") return [];
-    return MediaIdUtils.extrair(registro?.ID || "");
+    return MediaIdUtils.extrair(registro?.ID);
   }
 
-  function conjuntoNormalizado(lista) {
-    return new Set((Array.isArray(lista) ? lista : []).map(normalizar).filter(Boolean));
-  }
-
-  function intersecaoTamanho(a, b) {
-    let total = 0;
-    a.forEach((valor) => {
-      if (b.has(valor)) total++;
+  function enrichment(registro) {
+    if (typeof MediaEnrichment === "undefined" || typeof MediaEnrichment.obter !== "function") return {};
+    const agregado = { subjects: [], keywords: [], places: [] };
+    ids(registro).forEach((id) => {
+      const item = MediaEnrichment.obter(id) || {};
+      agregado.subjects.push(...(item.subjects || []));
+      agregado.keywords.push(...(item.keywords || []));
+      agregado.places.push(...(item.places || []));
     });
-    return total;
+    return agregado;
   }
 
-  function metadadosEnriquecidos(registro) {
-    const subjects = new Set();
-    const keywords = new Set();
-    const places = new Set();
-
-    if (typeof MediaEnrichment === "undefined") return { subjects, keywords, places };
-
-    idsRegistro(registro).forEach((id) => {
-      const item = MediaEnrichment.obter(id);
-      if (!item) return;
-      conjuntoNormalizado(item.subjects).forEach((valor) => subjects.add(valor));
-      conjuntoNormalizado(item.keywords).forEach((valor) => keywords.add(valor));
-      conjuntoNormalizado(item.places).forEach((valor) => places.add(valor));
-    });
-
-    return { subjects, keywords, places };
+  function intersecaoPeso(a, b, peso) {
+    const sa = new Set((a || []).map(normalizar).filter(Boolean));
+    const sb = new Set((b || []).map(normalizar).filter(Boolean));
+    let comuns = 0;
+    sa.forEach((item) => { if (sb.has(item)) comuns++; });
+    return comuns > 0 ? peso + Math.min(comuns - 1, 3) * (peso * 0.2) : 0;
   }
 
-  function parseData(valor) {
-    const str = String(valor || "").trim();
-    let match = str.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})/);
-    if (match) {
-      let [, d, m, y] = match;
-      if (y.length === 2) y = (Number(y) < 50 ? "20" : "19") + y;
-      const data = new Date(Number(y), Number(m) - 1, Number(d));
-      if (data.getFullYear() === Number(y) && data.getMonth() === Number(m) - 1 && data.getDate() === Number(d)) return data;
-      return null;
-    }
-
-    match = str.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
-    if (!match) return null;
-    const [, y, m, d] = match;
-    const data = new Date(Number(y), Number(m) - 1, Number(d));
-    return data.getFullYear() === Number(y) && data.getMonth() === Number(m) - 1 && data.getDate() === Number(d)
-      ? data
-      : null;
-  }
-
-  function bonusTemporal(dataA, dataB) {
-    const a = parseData(dataA);
-    const b = parseData(dataB);
-    if (!a || !b) return 0;
-    const dias = Math.abs(a - b) / 86400000;
-    if (dias <= 7) return 5;
-    if (dias <= 30) return 4;
-    if (dias <= 90) return 3;
-    if (dias <= 365) return 1;
-    return 0;
-  }
-
-  function descricaoScore(a, b) {
+  function descricaoPeso(a, b) {
     const ta = tokens(a);
     const tb = tokens(b);
     if (!ta.size || !tb.size) return 0;
-    const comum = intersecaoTamanho(ta, tb);
-    const uniao = new Set([...ta, ...tb]).size;
-    return uniao ? (comum / uniao) * 25 : 0;
+    let comuns = 0;
+    ta.forEach((item) => { if (tb.has(item)) comuns++; });
+    return comuns ? Math.min(25, comuns * 8) : 0;
   }
 
-  function calcularScore(atual, candidato) {
-    const metaAtual = metadadosEnriquecidos(atual);
-    const metaCandidato = metadadosEnriquecidos(candidato);
-    let score = 0;
-    const motivos = [];
-
-    if (intersecaoTamanho(metaAtual.subjects, metaCandidato.subjects) > 0) {
-      score += 35;
-      motivos.push("assunto");
-    }
-    if (intersecaoTamanho(metaAtual.keywords, metaCandidato.keywords) > 0) {
-      score += 30;
-      motivos.push("palavra-chave");
-    }
-
-    const pontosDescricao = descricaoScore(atual.DESCRICAO, candidato.DESCRICAO);
-    if (pontosDescricao > 0) {
-      score += pontosDescricao;
-      motivos.push("descrição");
-    }
-
-    const localAtual = normalizar(atual.LOCAL);
-    const localCandidato = normalizar(candidato.LOCAL);
-    const lugaresRelacionados = intersecaoTamanho(metaAtual.places, metaCandidato.places) > 0;
-    if ((localAtual && localAtual === localCandidato) || lugaresRelacionados) {
-      score += 18;
-      motivos.push("local");
-    }
-
-    if (normalizar(atual.EDITORIA) && normalizar(atual.EDITORIA) === normalizar(candidato.EDITORIA)) score += 12;
-    if (normalizar(atual.REPORTER) && normalizar(atual.REPORTER) === normalizar(candidato.REPORTER)) score += 10;
-    if (normalizar(atual.PROGRAMA) && normalizar(atual.PROGRAMA) === normalizar(candidato.PROGRAMA)) score += 6;
-    score += bonusTemporal(atual.DATA, candidato.DATA);
-
-    return { score, motivos };
+  function parseData(valor) {
+    const m = String(valor || "").match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})/);
+    if (!m) return null;
+    let ano = Number(m[3]);
+    if (m[3].length === 2) ano += ano < 50 ? 2000 : 1900;
+    const data = new Date(ano, Number(m[2]) - 1, Number(m[1]));
+    return Number.isNaN(data.getTime()) ? null : data;
   }
 
-  function calcular(registroAtual, registros, opcoes = {}) {
-    const lista = Array.isArray(registros) ? registros : [];
-    const idsAtuais = new Set(idsRegistro(registroAtual));
-    const idSolicitado = typeof MediaIdUtils !== "undefined" ? MediaIdUtils.normalizar(opcoes.mediaId) : "";
-    if (idSolicitado) idsAtuais.add(idSolicitado);
+  function score(itemA, itemB) {
+    const a = enrichment(itemA);
+    const b = enrichment(itemB);
+    let total = 0;
+    total += intersecaoPeso(a.subjects, b.subjects, 35);
+    total += intersecaoPeso(a.keywords, b.keywords, 30);
+    total += descricaoPeso(itemA.DESCRICAO, itemB.DESCRICAO);
+    total += intersecaoPeso([itemA.LOCAL, ...(a.places || [])], [itemB.LOCAL, ...(b.places || [])], 18);
+    if (normalizar(itemA.EDITORIA) && normalizar(itemA.EDITORIA) === normalizar(itemB.EDITORIA)) total += 12;
+    if (normalizar(itemA.REPORTER) && normalizar(itemA.REPORTER) === normalizar(itemB.REPORTER)) total += 10;
+    if (normalizar(itemA.PROGRAMA) && normalizar(itemA.PROGRAMA) === normalizar(itemB.PROGRAMA)) total += 6;
 
-    const limite = Number.isInteger(opcoes.limite) && opcoes.limite > 0 ? opcoes.limite : 6;
-    const scoreMinimo = Number.isFinite(Number(opcoes.scoreMinimo)) ? Number(opcoes.scoreMinimo) : 12;
+    const da = parseData(itemA.DATA);
+    const db = parseData(itemB.DATA);
+    if (da && db) {
+      const dias = Math.abs(da - db) / 86400000;
+      total += Math.max(0, 5 - Math.min(5, dias / 7));
+    }
+    return total;
+  }
+
+  function calcular(alvo, registros, opcoes = {}) {
+    const limite = Number.isFinite(Number(opcoes.limite)) ? Number(opcoes.limite) : 6;
+    const scoreMinimo = Number.isFinite(Number(opcoes.scoreMinimo)) ? Number(opcoes.scoreMinimo) : 8;
+    const alvoIds = new Set(ids(alvo));
     const vistos = new Set();
 
-    return lista
-      .map((registro, indiceOriginal) => {
-        const ids = idsRegistro(registro);
-        if (!ids.length || ids.some((id) => idsAtuais.has(id))) return null;
-
-        const chave = [...ids].sort().join("|");
-        if (vistos.has(chave)) return null;
+    return (Array.isArray(registros) ? registros : [])
+      .filter((registro) => {
+        const registroIds = ids(registro);
+        if (registroIds.some((id) => alvoIds.has(id))) return false;
+        const chave = registroIds.slice().sort().join("|") || String(registro.ID || "");
+        if (vistos.has(chave)) return false;
         vistos.add(chave);
-
-        const relevancia = calcularScore(registroAtual, registro);
-        return { registro, score: relevancia.score, motivos: relevancia.motivos, indiceOriginal };
+        return true;
       })
-      .filter((item) => item && item.score >= scoreMinimo)
-      .sort((a, b) => b.score - a.score || a.indiceOriginal - b.indiceOriginal)
+      .map((registro, indice) => ({ registro, indice, score: score(alvo, registro) }))
+      .filter((item) => item.score >= scoreMinimo)
+      .sort((a, b) => b.score - a.score || a.indice - b.indice)
       .slice(0, limite)
-      .map(({ indiceOriginal, ...item }) => item);
+      .map((item) => ({ ...item.registro, _RELATED_SCORE: item.score }));
   }
 
-  return { calcular };
+  return { calcular, score };
 })();

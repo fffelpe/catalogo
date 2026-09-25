@@ -1,240 +1,217 @@
-// catalogo-quality-ui.js - Painel diagnóstico de qualidade do acervo.
+// catalogo-quality-ui.js
+// Renderização do painel de qualidade do catálogo.
 
 const CatalogoQualityUI = (() => {
-  const ITENS_POR_PAGINA = 50;
-  let relatorioCompleto = [];
-  let paginaAtual = 1;
+  let relatorio = null;
+  let resumo = null;
 
-  function escapeHtml(valor) {
-    return String(valor ?? "").replace(/[&<>"']/g, (char) => ({
-      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-    }[char]));
+  function el(tag, classe, texto) {
+    const node = document.createElement(tag);
+    if (classe) node.className = classe;
+    if (texto != null) node.textContent = String(texto);
+    return node;
   }
 
-  function normalizar(valor) {
-    return String(valor || "")
+  function normalizar(texto) {
+    return String(texto || "")
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLocaleLowerCase("pt-BR")
       .trim();
   }
 
-  function filtrarRelatorio(relatorio, filtros = {}) {
-    const programa = normalizar(filtros.programa);
-    const severidade = String(filtros.severidade || "").trim();
-    const problema = String(filtros.problema || "").trim();
+  function definirEstado(mensagem) {
+    const state = document.getElementById("qualityState");
+    const content = document.getElementById("qualityContent");
+    if (state) {
+      state.textContent = mensagem;
+      state.hidden = !mensagem;
+    }
+    if (content) content.hidden = Boolean(mensagem);
+  }
 
-    return (Array.isArray(relatorio) ? relatorio : []).filter((item) => {
-      const registro = item?.registro || {};
-      const problemas = Array.isArray(item?.problemas) ? item.problemas : [];
-      if (programa && normalizar(registro.PROGRAMA) !== programa) return false;
-      if (severidade && !problemas.some((entry) => entry.severidade === severidade)) return false;
-      if (problema && !problemas.some((entry) => entry.codigo === problema)) return false;
+  function criarCard(valor, rotulo, classe = "", detalhe = "") {
+    const card = el("article", `quality-summary-card ${classe}`.trim());
+    card.append(el("strong", "quality-summary-value", valor));
+    card.append(el("span", "quality-summary-label", rotulo));
+    if (detalhe) card.append(el("small", "quality-summary-detail", detalhe));
+    return card;
+  }
+
+  function renderResumo() {
+    const container = document.getElementById("qualitySummary");
+    if (!container || !resumo) return;
+    container.textContent = "";
+    const total = resumo.total || 0;
+    const percentualSemCriticos = total ? Math.round((resumo.semProblemasCriticos / total) * 100) : 0;
+    container.append(
+      criarCard(total.toLocaleString("pt-BR"), "Registros avaliados", "neutral"),
+      criarCard(resumo.semProblemasCriticos.toLocaleString("pt-BR"), "Sem problemas críticos", "success", `${percentualSemCriticos}% do total`),
+      criarCard((resumo.porCodigo.DESCRICAO_AUSENTE || 0).toLocaleString("pt-BR"), "Descrições ausentes", "warning"),
+      criarCard((resumo.porCodigo.LOCAL_AUSENTE || 0).toLocaleString("pt-BR"), "Locais ausentes", "info"),
+      criarCard((resumo.porCodigo.SEM_SEGMENTOS || 0).toLocaleString("pt-BR"), "Sem segmentos", "danger")
+    );
+  }
+
+  function preencherFiltros() {
+    const programa = document.getElementById("qualityProgramFilter");
+    const tipo = document.getElementById("qualityTypeFilter");
+    if (!programa || !tipo || !relatorio) return;
+
+    const programas = [...new Set(relatorio.registros
+      .map((item) => String(item.registro.PROGRAMA || "").trim())
+      .filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b, "pt-BR"));
+
+    programas.forEach((nome) => {
+      const option = document.createElement("option");
+      option.value = nome;
+      option.textContent = nome;
+      programa.append(option);
+    });
+
+    const problemas = new Map();
+    relatorio.registros.forEach((item) => item.problemas.forEach((p) => problemas.set(p.codigo, p.mensagem)));
+    [...problemas.entries()]
+      .sort((a, b) => a[1].localeCompare(b[1], "pt-BR"))
+      .forEach(([codigo, mensagem]) => {
+        const option = document.createElement("option");
+        option.value = codigo;
+        option.textContent = mensagem;
+        tipo.append(option);
+      });
+  }
+
+  function criarLinksIds(valor) {
+    const wrap = el("div", "quality-id-list");
+    const ids = MediaIdUtils.extrair(valor);
+    if (!ids.length) {
+      wrap.textContent = String(valor || "—");
+      return wrap;
+    }
+    ids.forEach((id) => {
+      const link = el("a", "quality-id-link", id);
+      link.href = `media.html?id=${encodeURIComponent(id)}`;
+      wrap.append(link);
+    });
+    return wrap;
+  }
+
+  function chipSeveridade(severidade) {
+    const textos = {
+      critical: "Crítica",
+      warning: "Aviso",
+      info: "Informação",
+      ok: "OK"
+    };
+    return el("span", `quality-severity-chip ${severidade}`, textos[severidade] || severidade);
+  }
+
+  function registrosFiltrados() {
+    if (!relatorio) return [];
+    const programa = document.getElementById("qualityProgramFilter")?.value || "";
+    const severidade = document.getElementById("qualitySeverityFilter")?.value || "";
+    const tipo = document.getElementById("qualityTypeFilter")?.value || "";
+
+    return relatorio.registros.filter((item) => {
+      if (programa && item.registro.PROGRAMA !== programa) return false;
+      if (severidade && item.severidade !== severidade) return false;
+      if (tipo && !item.problemas.some((p) => p.codigo === tipo)) return false;
       return true;
     });
   }
 
-  function criarUrlMedia(registro) {
-    if (typeof MediaIdUtils === "undefined") return "";
-    const id = MediaIdUtils.extrair(registro?.ID || "")[0];
-    return id ? `media.html?id=${encodeURIComponent(id)}` : "";
-  }
+  function renderTabela() {
+    const body = document.getElementById("qualityTableBody");
+    const status = document.getElementById("qualityTableStatus");
+    if (!body || !status) return;
+    body.textContent = "";
 
-  function paginar(lista, pagina = 1, itensPorPagina = ITENS_POR_PAGINA) {
-    const dados = Array.isArray(lista) ? lista : [];
-    const tamanho = Number.isInteger(itensPorPagina) && itensPorPagina > 0 ? itensPorPagina : ITENS_POR_PAGINA;
-    const totalPaginas = Math.max(1, Math.ceil(dados.length / tamanho));
-    const solicitada = Number.isFinite(Number(pagina)) ? Math.floor(Number(pagina)) : 1;
-    const paginaValida = Math.min(Math.max(solicitada, 1), totalPaginas);
-    const inicio = (paginaValida - 1) * tamanho;
-    return {
-      itens: dados.slice(inicio, inicio + tamanho),
-      pagina: paginaValida,
-      totalPaginas,
-      total: dados.length,
-      inicio: dados.length ? inicio + 1 : 0,
-      fim: Math.min(inicio + tamanho, dados.length)
-    };
-  }
+    const filtrados = registrosFiltrados();
+    const exibidos = filtrados.slice(0, 100);
 
-  function obterFiltros() {
-    return {
-      programa: document.getElementById("qualityProgramFilter")?.value || "",
-      severidade: document.getElementById("qualitySeverityFilter")?.value || "",
-      problema: document.getElementById("qualityProblemFilter")?.value || ""
-    };
-  }
+    exibidos.forEach((item) => {
+      const tr = document.createElement("tr");
+      const idCell = document.createElement("td");
+      idCell.append(criarLinksIds(item.registro.ID));
+      tr.append(idCell);
+      tr.append(el("td", "", item.registro.DESCRICAO || "Sem descrição"));
+      tr.append(el("td", "", item.registro.PROGRAMA || "—"));
+      tr.append(el("td", "", item.registro.DATA || "—"));
 
-  function preencherFiltros() {
-    const programaSelect = document.getElementById("qualityProgramFilter");
-    if (programaSelect) {
-      const programas = [...new Set(relatorioCompleto
-        .map((item) => String(item.registro?.PROGRAMA || "").trim())
-        .filter(Boolean))]
-        .sort((a, b) => a.localeCompare(b, "pt-BR"));
-      programaSelect.innerHTML = '<option value="">Todos os programas</option>' +
-        programas.map((programa) => `<option value="${escapeHtml(programa)}">${escapeHtml(programa)}</option>`).join("");
-    }
+      const problemasCell = document.createElement("td");
+      if (item.problemas.length) {
+        const lista = el("div", "quality-problem-list");
+        item.problemas.forEach((p) => lista.append(el("span", "quality-problem", p.mensagem)));
+        problemasCell.append(lista);
+      } else {
+        problemasCell.textContent = "—";
+      }
+      tr.append(problemasCell);
 
-    const problemaSelect = document.getElementById("qualityProblemFilter");
-    if (problemaSelect && typeof CatalogoQuality !== "undefined") {
-      problemaSelect.innerHTML = '<option value="">Todos os problemas</option>' +
-        Object.entries(CatalogoQuality.DEFINICOES || {}).map(([codigo, definicao]) =>
-          `<option value="${escapeHtml(codigo)}">${escapeHtml(definicao.mensagem)}</option>`
-        ).join("");
-    }
-  }
-
-  function definirTexto(id, valor) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = String(valor);
-  }
-
-  function renderizarResumo() {
-    if (typeof CatalogoQuality === "undefined") return;
-    const resumo = CatalogoQuality.resumir(relatorioCompleto);
-    const percentual = resumo.total ? Math.round((resumo.noCritical / resumo.total) * 100) : 0;
-
-    definirTexto("qualityTotal", resumo.total);
-    definirTexto("qualityNoCritical", resumo.noCritical);
-    definirTexto("qualityNoCriticalPercent", `${percentual}% do total`);
-    definirTexto("qualityMissingDescription", resumo.byProblem.DESCRICAO_AUSENTE || 0);
-    definirTexto("qualityMissingLocation", resumo.byProblem.LOCAL_AUSENTE || 0);
-    definirTexto("qualityNoSegments", resumo.byProblem.SEM_SEGMENTOS || 0);
-    definirTexto("qualityCriticalCount", resumo.critical);
-    definirTexto("qualityWarningCount", resumo.warning);
-    definirTexto("qualityInfoCount", resumo.info);
-  }
-
-  function severidadeLabel(severidade) {
-    return ({ critical: "Crítico", warning: "Aviso", info: "Info", ok: "—" })[severidade] || "—";
-  }
-
-  function renderizarLinha(item) {
-    const registro = item.registro || {};
-    const problemas = Array.isArray(item.problemas) ? item.problemas : [];
-    const url = criarUrlMedia(registro);
-    const idTexto = escapeHtml(registro.ID || "—");
-    const idHtml = url
-      ? `<a class="quality-id-link" href="${escapeHtml(url)}">${idTexto}</a>`
-      : `<span>${idTexto}</span>`;
-    const problemasHtml = problemas.length
-      ? problemas.map((problema) => `<span class="quality-problem-item">${escapeHtml(problema.mensagem)}</span>`).join("")
-      : '<span class="quality-ok">Sem problemas detectados</span>';
-    const severidade = item.severidadeMaxima || "ok";
-
-    return `
-      <tr>
-        <td data-label="ID">${idHtml}</td>
-        <td data-label="Descrição">${escapeHtml(registro.DESCRICAO || "—")}</td>
-        <td data-label="Programa">${escapeHtml(registro.PROGRAMA || "—")}</td>
-        <td data-label="Data">${escapeHtml(registro.DATA || "—")}</td>
-        <td data-label="Problemas"><div class="quality-problem-list">${problemasHtml}</div></td>
-        <td data-label="Severidade"><span class="quality-severity quality-severity--${escapeHtml(severidade)}">${escapeHtml(severidadeLabel(severidade))}</span></td>
-      </tr>
-    `;
-  }
-
-  function renderizarTabela() {
-    const tbody = document.getElementById("qualityResultsBody");
-    if (!tbody) return;
-
-    const filtrado = filtrarRelatorio(relatorioCompleto, obterFiltros());
-    const pagina = paginar(filtrado, paginaAtual, ITENS_POR_PAGINA);
-    paginaAtual = pagina.pagina;
-
-    tbody.innerHTML = pagina.itens.length
-      ? pagina.itens.map(renderizarLinha).join("")
-      : '<tr><td colspan="6" class="quality-empty">Nenhum registro corresponde aos filtros.</td></tr>';
-
-    definirTexto("qualityPaginationStatus", `Mostrando ${pagina.inicio}-${pagina.fim} de ${pagina.total} registro(s)`);
-    definirTexto("qualityPageNumber", `${pagina.pagina} / ${pagina.totalPaginas}`);
-
-    const anterior = document.getElementById("qualityPrevPage");
-    const proximo = document.getElementById("qualityNextPage");
-    if (anterior) anterior.disabled = pagina.pagina <= 1;
-    if (proximo) proximo.disabled = pagina.pagina >= pagina.totalPaginas;
-  }
-
-  async function carregarFontes() {
-    let creditosStatus = "not-loaded";
-    let enrichmentStatus = "not-loaded";
-    const tarefas = [];
-
-    if (typeof MediaEnrichment !== "undefined" && typeof MediaEnrichment.carregar === "function") {
-      tarefas.push({ tipo: "enrichment", promise: MediaEnrichment.carregar() });
-    }
-    if (typeof CreditosMedia !== "undefined" && typeof CreditosMedia.carregar === "function") {
-      tarefas.push({ tipo: "creditos", promise: CreditosMedia.carregar() });
-    }
-
-    const resultados = await Promise.allSettled(tarefas.map((tarefa) => tarefa.promise));
-    resultados.forEach((resultado, indice) => {
-      const tipo = tarefas[indice].tipo;
-      const status = resultado.status === "fulfilled" ? "loaded" : "failed";
-      if (tipo === "creditos") creditosStatus = status;
-      if (tipo === "enrichment") enrichmentStatus = status;
-      if (resultado.status === "rejected") console.warn(`Fonte opcional ${tipo} indisponível no painel:`, resultado.reason);
+      const severityCell = document.createElement("td");
+      severityCell.append(chipSeveridade(item.severidade));
+      tr.append(severityCell);
+      body.append(tr);
     });
 
-    return { creditosStatus, enrichmentStatus };
-  }
+    if (!exibidos.length) {
+      const tr = document.createElement("tr");
+      const td = el("td", "quality-empty-row", "Nenhum registro corresponde aos filtros.");
+      td.colSpan = 6;
+      tr.append(td);
+      body.append(tr);
+    }
 
-  function vincularEventos() {
-    ["qualityProgramFilter", "qualitySeverityFilter", "qualityProblemFilter"].forEach((id) => {
-      document.getElementById(id)?.addEventListener("change", () => {
-        paginaAtual = 1;
-        renderizarTabela();
-      });
-    });
-
-    document.getElementById("qualityPrevPage")?.addEventListener("click", () => {
-      paginaAtual--;
-      renderizarTabela();
-    });
-    document.getElementById("qualityNextPage")?.addEventListener("click", () => {
-      paginaAtual++;
-      renderizarTabela();
-    });
+    status.textContent = filtrados.length > 100
+      ? `Mostrando 100 de ${filtrados.length.toLocaleString("pt-BR")} registros filtrados.`
+      : `Mostrando ${filtrados.length.toLocaleString("pt-BR")} registro(s).`;
   }
 
   async function inicializar() {
-    const status = document.getElementById("qualityLoadStatus");
-    if (!status) return;
-
+    let creditosCarregados = false;
     try {
       await DadosMedia.carregarCSV();
+      await MediaEnrichment.carregar();
     } catch (erro) {
       console.error(erro);
-      status.textContent = "Não foi possível carregar o acervo para análise.";
-      status.classList.add("quality-load-status--error");
+      definirEstado("Não foi possível carregar o acervo para avaliação.");
       return;
     }
 
-    const fontes = await carregarFontes();
-    const contexto = {
-      ...fontes,
-      temCreditos: (id) => Boolean(typeof CreditosMedia !== "undefined" && CreditosMedia.obter(id)),
-      temSegmentos: (id) => Boolean(typeof MediaEnrichment !== "undefined" && MediaEnrichment.obterSegmentos(id).length)
-    };
+    if (typeof CreditosMedia !== "undefined") {
+      try {
+        await CreditosMedia.carregar();
+        creditosCarregados = true;
+      } catch (erro) {
+        console.warn("Créditos não verificados no painel:", erro);
+      }
+    }
 
-    relatorioCompleto = CatalogoQuality.avaliarAcervo(DadosMedia.registros, contexto);
+    relatorio = CatalogoQuality.avaliarAcervo(DadosMedia.registros, {
+      creditosCarregados,
+      temCreditos: (id) => Boolean(CreditosMedia?.obter?.(id))
+    });
+    resumo = CatalogoQuality.resumir(relatorio);
+
+    definirEstado("");
+    renderResumo();
     preencherFiltros();
-    renderizarResumo();
-    vincularEventos();
-    renderizarTabela();
-    status.hidden = true;
-    document.getElementById("qualityDashboard")?.removeAttribute("hidden");
+    renderTabela();
+
+    const creditsStatus = document.getElementById("qualityCreditsStatus");
+    if (creditsStatus) {
+      creditsStatus.textContent = creditosCarregados
+        ? "Créditos: verificados nesta avaliação."
+        : "Créditos: não verificados nesta avaliação; a indisponibilidade da fonte não foi tratada como ausência de créditos.";
+    }
+
+    ["qualityProgramFilter", "qualitySeverityFilter", "qualityTypeFilter"].forEach((id) => {
+      document.getElementById(id)?.addEventListener("change", renderTabela);
+    });
   }
 
-  return {
-    filtrarRelatorio,
-    criarUrlMedia,
-    paginar,
-    inicializar
-  };
+  return { inicializar };
 })();
 
-document.addEventListener("DOMContentLoaded", () => {
-  CatalogoQualityUI.inicializar();
-});
+document.addEventListener("DOMContentLoaded", CatalogoQualityUI.inicializar);

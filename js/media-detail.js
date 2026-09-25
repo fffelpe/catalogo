@@ -1,86 +1,51 @@
-// media-detail.js - Monta a ficha individual de um Media ID.
+// media-detail.js
+// Orquestra a ficha individual do Media ID usando dados editoriais e enrichment opcional.
 
 const MediaDetail = (() => {
-  function escapeHtml(valor) {
-    return String(valor ?? "").replace(/[&<>"']/g, (char) => ({
-      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-    }[char]));
-  }
-
-  function parseParametros(search) {
-    const params = new URLSearchParams(String(search || ""));
-    const id = typeof MediaIdUtils !== "undefined"
-      ? MediaIdUtils.normalizar(params.get("id") || "")
-      : "";
-    const bruto = Number(params.get("t"));
-    const start = Number.isFinite(bruto) && bruto >= 0 ? bruto : 0;
-    return { id, start };
-  }
-
-  function idsAssociados(registro, principal) {
-    if (typeof MediaIdUtils === "undefined") return [];
-    const idPrincipal = MediaIdUtils.normalizar(principal);
-    return MediaIdUtils.extrair(registro?.ID || "").filter((id) => id !== idPrincipal);
+  function el(tag, classe, texto) {
+    const node = document.createElement(tag);
+    if (classe) node.className = classe;
+    if (texto != null) node.textContent = String(texto);
+    return node;
   }
 
   function valorOuTraco(valor) {
     const texto = String(valor || "").trim();
-    return texto ? escapeHtml(texto) : "—";
+    return texto || "—";
   }
 
-  function setEstado(mensagem, tipo = "info") {
-    const estado = document.getElementById("mediaDetailState");
-    const conteudo = document.getElementById("mediaDetailContent");
+  function copiarTexto(texto) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(texto);
+    const area = document.createElement("textarea");
+    area.value = texto;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand("copy");
+    area.remove();
+    return Promise.resolve();
+  }
+
+  function definirEstado(mensagem, tipo = "") {
+    const estado = document.getElementById("mediaState");
+    const conteudo = document.getElementById("mediaContent");
     if (estado) {
-      estado.hidden = false;
-      estado.className = `media-detail-state media-detail-state--${tipo}`;
       estado.textContent = mensagem;
+      estado.className = `media-state ${tipo}`.trim();
+      estado.hidden = !mensagem;
     }
-    if (conteudo) conteudo.hidden = true;
+    if (conteudo) conteudo.hidden = Boolean(mensagem);
   }
 
-  async function carregarOpcionais() {
-    const fontes = [];
-    if (typeof MediaEnrichment !== "undefined" && typeof MediaEnrichment.carregar === "function") {
-      fontes.push({ nome: "enrichment", promise: MediaEnrichment.carregar() });
-    }
-    if (typeof CreditosMedia !== "undefined" && typeof CreditosMedia.carregar === "function") {
-      fontes.push({ nome: "créditos", promise: CreditosMedia.carregar() });
-    }
-
-    const estados = await Promise.allSettled(fontes.map((fonte) => fonte.promise));
-    estados.forEach((estado, indice) => {
-      if (estado.status === "rejected") {
-        console.warn(`Fonte opcional de ${fontes[indice].nome} indisponível na ficha:`, estado.reason);
-      }
-    });
-  }
-
-  function renderizarCabecalho(id, registro) {
-    const titulo = document.getElementById("mediaIdTitle");
-    if (titulo) titulo.textContent = `Media ID ${id}`;
-
-    const copy = document.getElementById("mediaCopyButton");
-    if (copy) {
-      copy.dataset.id = id;
-      copy.setAttribute("aria-label", `Copiar Media ID ${id}`);
-    }
-
-    const associados = idsAssociados(registro, id);
-    const alvo = document.getElementById("mediaAssociatedIds");
-    if (alvo) {
-      alvo.hidden = associados.length === 0;
-      alvo.innerHTML = associados.length
-        ? `IDs associados: ${associados.map((item) => `<a href="media.html?id=${encodeURIComponent(item)}">${escapeHtml(item)}</a>`).join(", ")}`
-        : "";
-    }
-  }
-
-  function renderizarMetadados(registro) {
-    const alvo = document.getElementById("mediaMetadata");
-    if (!alvo) return;
+  function renderMetadata(registro) {
+    const container = document.getElementById("mediaMetadata");
+    if (!container) return;
+    container.textContent = "";
     const campos = [
       ["Data", registro.DATA],
+      ["Duração", registro.DURACAO],
       ["Programa", registro.PROGRAMA],
       ["Editoria", registro.EDITORIA],
       ["Local", registro.LOCAL],
@@ -88,203 +53,171 @@ const MediaDetail = (() => {
       ["Afiliada / Emissora", registro.AFILIADA_EMISSORA],
       ["PGM", registro.PGM]
     ];
-
-    alvo.innerHTML = campos.map(([rotulo, valor]) => `
-      <div class="media-meta-row">
-        <span class="media-meta-label">${escapeHtml(rotulo)}</span>
-        <span class="media-meta-value">${valorOuTraco(valor)}</span>
-      </div>
-    `).join("");
+    campos.forEach(([rotulo, valor]) => {
+      const row = el("div", "media-meta-row");
+      row.append(el("span", "media-meta-label", rotulo));
+      row.append(el("span", "media-meta-value", valorOuTraco(valor)));
+      container.append(row);
+    });
   }
 
-  function renderizarDescricao(registro) {
-    const alvo = document.getElementById("mediaDescriptionText");
-    if (alvo) alvo.textContent = String(registro.DESCRICAO || "Descrição não informada.");
+  function renderTags(enrichment) {
+    const container = document.getElementById("mediaTags");
+    if (!container) return;
+    container.textContent = "";
+    const tags = [
+      ...(enrichment?.subjects || []),
+      ...(enrichment?.keywords || []),
+      ...(enrichment?.people || []),
+      ...(enrichment?.places || [])
+    ];
+    const unicos = [...new Set(tags.map((tag) => String(tag).trim()).filter(Boolean))];
+    if (!unicos.length) {
+      container.append(el("p", "media-empty", "Este Media ID ainda não possui palavras-chave enriquecidas."));
+      return;
+    }
+    unicos.forEach((tag) => container.append(el("span", "media-tag", tag)));
   }
 
-  function renderizarTags(id) {
-    const secao = document.getElementById("mediaTagsSection");
-    const alvo = document.getElementById("mediaTags");
-    if (!secao || !alvo || typeof MediaEnrichment === "undefined") return;
-
-    const item = MediaEnrichment.obter(id);
-    const tags = item
-      ? [...(item.subjects || []), ...(item.keywords || []), ...(item.people || []), ...(item.places || [])]
-      : [];
-    const unicas = [...new Map(tags.map((tag) => [String(tag).toLocaleLowerCase("pt-BR"), String(tag)])).values()];
-
-    secao.hidden = unicas.length === 0;
-    alvo.innerHTML = unicas.map((tag) => `<span class="media-tag">${escapeHtml(tag)}</span>`).join("");
-  }
-
-  function renderizarSegmentos(id) {
-    const secao = document.getElementById("mediaSegmentsSection");
-    const alvo = document.getElementById("mediaSegments");
-    if (!secao || !alvo || typeof MediaEnrichment === "undefined") return;
-
-    const segmentos = MediaEnrichment.obterSegmentos(id);
-    secao.hidden = segmentos.length === 0;
-    alvo.innerHTML = segmentos.map((segmento) => {
-      const timecode = typeof MediaSegments !== "undefined"
-        ? MediaSegments.formatarTimecode(segmento.start)
-        : String(segmento.start);
-      return `
-        <button type="button" class="media-segment" data-start="${Number(segmento.start)}" aria-label="Ir para ${escapeHtml(timecode)} — ${escapeHtml(segmento.text)}">
-          <span class="media-segment-play" aria-hidden="true">▶</span>
-          <span class="media-segment-time">${escapeHtml(timecode)}</span>
-          <span class="media-segment-text">${escapeHtml(segmento.text)}</span>
-        </button>
-      `;
-    }).join("");
-  }
-
-  function renderizarCreditos(id) {
-    const secao = document.getElementById("mediaCreditsSection");
-    const alvo = document.getElementById("mediaCredits");
-    if (!secao || !alvo || typeof CreditosMedia === "undefined") return;
-
-    const dados = CreditosMedia.obter(id);
-    if (!dados) {
-      secao.hidden = true;
+  function renderSegments(segmentos) {
+    const container = document.getElementById("mediaSegments");
+    if (!container) return;
+    container.textContent = "";
+    if (!segmentos.length) {
+      container.append(el("p", "media-empty", "Nenhum trecho indexado para este vídeo."));
       return;
     }
 
-    const linhas = [];
-    if (dados.materia) linhas.push(`<div><strong>Matéria:</strong> ${escapeHtml(dados.materia)}</div>`);
-    (Array.isArray(dados.fontes) ? dados.fontes : []).forEach((fonte) => {
-      const nome = escapeHtml(fonte?.nome || "");
-      const cargo = escapeHtml(fonte?.cargo || "");
-      if (nome || cargo) linhas.push(`<div><strong>Fonte:</strong> ${nome}${cargo ? ` — ${cargo}` : ""}</div>`);
+    segmentos.forEach((segmento) => {
+      const item = el("div", "media-segment-item");
+      item.append(el("span", "media-timecode", MediaSegments.formatarTimecode(segmento.start)));
+      item.append(el("span", "media-segment-text", segmento.text));
+      container.append(item);
     });
-    Object.entries(dados.creditos || {}).forEach(([cargo, nomes]) => {
-      const lista = Array.isArray(nomes) ? nomes.filter(Boolean) : [nomes].filter(Boolean);
-      if (lista.length) linhas.push(`<div><strong>${escapeHtml(cargo)}:</strong> ${lista.map(escapeHtml).join(", ")}</div>`);
-    });
-
-    secao.hidden = linhas.length === 0;
-    alvo.innerHTML = linhas.join("");
   }
 
-  function renderizarRelacionados(registro, id) {
-    const secao = document.getElementById("mediaRelatedSection");
-    const alvo = document.getElementById("mediaRelated");
-    if (!secao || !alvo || typeof RelatedMedia === "undefined") return;
+  function renderCredits(mediaId, creditosCarregados) {
+    const section = document.getElementById("mediaCreditsSection");
+    const container = document.getElementById("mediaCredits");
+    if (!section || !container || !creditosCarregados || typeof CreditosMedia === "undefined") return;
+    const dados = CreditosMedia.obter(mediaId);
+    if (!dados) return;
 
-    const relacionados = RelatedMedia.calcular(registro, DadosMedia.registros, { mediaId: id });
-    secao.hidden = relacionados.length === 0;
-    alvo.innerHTML = relacionados.map(({ registro: item }) => {
-      const primeiroId = typeof MediaIdUtils !== "undefined" ? MediaIdUtils.extrair(item.ID)[0] : "";
-      const href = primeiroId ? `media.html?id=${encodeURIComponent(primeiroId)}` : "#";
-      return `
-        <a class="related-card" href="${escapeHtml(href)}">
-          <span class="related-card-thumb" aria-hidden="true">▶</span>
-          <span class="related-card-title">${escapeHtml(item.DESCRICAO || primeiroId || "Conteúdo relacionado")}</span>
-          <span class="related-card-meta">${valorOuTraco(item.DATA)} · ${valorOuTraco(item.PROGRAMA)}</span>
-        </a>
-      `;
-    }).join("");
-  }
+    container.textContent = "";
+    const grid = el("div", "media-credit-grid");
+    const adicionar = (rotulo, valor) => {
+      if (!valor) return;
+      const item = el("div", "media-credit-item");
+      item.append(el("span", "media-credit-label", rotulo));
+      item.append(el("span", "media-credit-value", Array.isArray(valor) ? valor.join(", ") : valor));
+      grid.append(item);
+    };
 
-  function renderizarCompletude(registro, id) {
-    const alvo = document.getElementById("mediaCompleteness");
-    if (!alvo) return;
-    const campos = [registro.DESCRICAO, registro.DATA, registro.PROGRAMA, registro.LOCAL, registro.REPORTER];
-    const preenchidos = campos.filter((valor) => String(valor || "").trim()).length;
-    const possuiSegmentos = typeof MediaEnrichment !== "undefined" && MediaEnrichment.obterSegmentos(id).length > 0;
-    alvo.textContent = `${preenchidos}/5 metadados editoriais principais preenchidos${possuiSegmentos ? " · com segmentos indexados" : ""}.`;
-  }
-
-  async function copiarId(id, botao) {
-    try {
-      if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(id);
-      else {
-        const area = document.createElement("textarea");
-        area.value = id;
-        area.setAttribute("readonly", "");
-        area.style.position = "fixed";
-        area.style.opacity = "0";
-        document.body.appendChild(area);
-        area.select();
-        document.execCommand("copy");
-        area.remove();
-      }
-      if (botao) botao.textContent = "Copiado";
-      window.setTimeout(() => { if (botao) botao.textContent = "Copiar ID"; }, 1200);
-    } catch (erro) {
-      console.warn("Não foi possível copiar o Media ID:", erro);
+    adicionar("Matéria", dados.materia);
+    Object.entries(dados.creditos || {}).forEach(([cargo, valor]) => adicionar(cargo, valor));
+    if (Array.isArray(dados.fontes) && dados.fontes.length) {
+      adicionar("Fontes", dados.fontes.map((fonte) => [fonte?.nome, fonte?.cargo].filter(Boolean).join(" — ")).filter(Boolean));
     }
+    if (!grid.children.length) return;
+    container.append(grid);
+    section.hidden = false;
   }
 
-  function vincularInteracoes(id) {
-    const copy = document.getElementById("mediaCopyButton");
-    if (copy) copy.addEventListener("click", () => copiarId(id, copy));
+  function renderRelated(registro, mediaId) {
+    const container = document.getElementById("mediaRelated");
+    if (!container) return;
+    container.textContent = "";
+    const relacionados = RelatedMedia.calcular(registro, DadosMedia.registros, { limite: 6 });
+    if (!relacionados.length) {
+      container.append(el("p", "media-empty", "Ainda não há conteúdos relacionados com similaridade suficiente."));
+      return;
+    }
 
-    const video = document.getElementById("mediaVideo");
-    document.getElementById("mediaSegments")?.addEventListener("click", (event) => {
-      const botao = event.target.closest(".media-segment");
-      if (!botao || !video) return;
-      const inicio = Number(botao.dataset.start);
-      if (Number.isFinite(inicio) && inicio >= 0) video.currentTime = inicio;
+    relacionados.forEach((item) => {
+      const idRelacionado = MediaIdUtils.extrair(item.ID)[0];
+      if (!idRelacionado) return;
+      const link = el("a", "media-related-card");
+      link.href = `media.html?id=${encodeURIComponent(idRelacionado)}`;
+      link.append(el("span", "media-related-id", idRelacionado));
+      link.append(el("p", "media-related-description", valorOuTraco(item.DESCRICAO)));
+      link.append(el("span", "media-related-meta", [item.DATA, item.PROGRAMA].filter(Boolean).join(" · ")));
+      container.append(link);
     });
+  }
+
+  function renderQuality(registro, mediaId, creditosCarregados) {
+    const container = document.getElementById("mediaQuality");
+    if (!container) return;
+    container.textContent = "";
+    const resultado = CatalogoQuality.avaliarRegistro(registro, {
+      creditosCarregados,
+      temCreditos: (id) => Boolean(CreditosMedia?.obter?.(id))
+    });
+    const lista = el("div", "media-quality-list");
+    if (!resultado.problemas.length) {
+      lista.append(el("span", "media-quality-chip ok", "Sem problemas detectados"));
+    } else {
+      resultado.problemas.forEach((p) => lista.append(el("span", `media-quality-chip ${p.severidade}`, p.mensagem)));
+    }
+    container.append(lista);
   }
 
   async function inicializar() {
-    const conteudo = document.getElementById("mediaDetailContent");
-    if (!conteudo) return;
+    const params = new URLSearchParams(window.location.search);
+    const mediaId = MediaIdUtils.normalizar(params.get("id") || "");
 
-    const { id, start } = parseParametros(window.location.search);
-    if (!id) {
-      setEstado("Media ID inválido.", "erro");
+    if (!mediaId) {
+      definirEstado("Media ID inválido.", "is-error");
       return;
     }
 
+    let creditosCarregados = false;
     try {
       await DadosMedia.carregarCSV();
     } catch (erro) {
       console.error(erro);
-      setEstado("Não foi possível carregar o acervo.", "erro");
+      definirEstado("Não foi possível carregar o acervo.", "is-error");
       return;
     }
 
-    await carregarOpcionais();
-    const registro = DadosMedia.buscarPorMediaId(id);
+    const registro = DadosMedia.buscarPorMediaId(mediaId);
     if (!registro) {
-      setEstado(`Media ID ${id} não encontrado no acervo.`, "aviso");
+      definirEstado("Media ID não encontrado no acervo.", "is-error");
       return;
     }
 
-    document.getElementById("mediaDetailState")?.setAttribute("hidden", "");
-    conteudo.hidden = false;
-
-    renderizarCabecalho(id, registro);
-    renderizarDescricao(registro);
-    renderizarMetadados(registro);
-    renderizarCreditos(id);
-    renderizarTags(id);
-    renderizarSegmentos(id);
-    renderizarRelacionados(registro, id);
-    renderizarCompletude(registro, id);
-
-    const video = document.getElementById("mediaVideo");
-    const status = document.getElementById("mediaPlayerStatus");
-    if (typeof MediaPlayer !== "undefined") {
-      const configurado = MediaPlayer.configurar(video, id, start, status);
-      if (!configurado && status) {
-        status.hidden = false;
-        status.textContent = "Pré-visualização indisponível para este Media ID.";
+    await MediaEnrichment.carregar();
+    if (typeof CreditosMedia !== "undefined") {
+      try {
+        await CreditosMedia.carregar();
+        creditosCarregados = true;
+      } catch (erro) {
+        console.warn("Créditos não verificados nesta ficha:", erro);
       }
     }
 
-    vincularInteracoes(id);
+    definirEstado("");
+    document.title = `${mediaId} - Catálogo de Mídias`;
+    document.getElementById("mediaTitle").textContent = `Media ID ${mediaId}`;
+    document.getElementById("breadcrumbMediaId").textContent = mediaId;
+    document.getElementById("mediaDescription").textContent = valorOuTraco(registro.DESCRICAO);
+
+    const copyButton = document.getElementById("copyMediaId");
+    copyButton.addEventListener("click", () => copiarTexto(mediaId).then(() => {
+      copyButton.title = "Media ID copiado";
+      window.setTimeout(() => { copyButton.title = "Copiar Media ID"; }, 1200);
+    }));
+
+    renderMetadata(registro);
+    const enrichment = MediaEnrichment.obter(mediaId) || {};
+    renderTags(enrichment);
+    renderSegments(MediaEnrichment.obterSegmentos(mediaId));
+    renderCredits(mediaId, creditosCarregados);
+    renderRelated(registro, mediaId);
+    renderQuality(registro, mediaId, creditosCarregados);
   }
 
-  return {
-    parseParametros,
-    idsAssociados,
-    inicializar
-  };
+  return { inicializar };
 })();
 
-document.addEventListener("DOMContentLoaded", () => {
-  MediaDetail.inicializar();
-});
+document.addEventListener("DOMContentLoaded", MediaDetail.inicializar);

@@ -1,4 +1,5 @@
-// media-segments.js - Busca textual em segmentos/timecodes do Media ID.
+// media-segments.js
+// Pesquisa em trechos indexados e navegação por timecode.
 
 const MediaSegments = (() => {
   const STOPWORDS = new Set([
@@ -7,13 +8,9 @@ const MediaSegments = (() => {
   ]);
 
   function normalizar(texto) {
-    if (
-      typeof VocabularioJornalistico !== "undefined" &&
-      typeof VocabularioJornalistico.normalizar === "function"
-    ) {
-      return VocabularioJornalistico.normalizar(texto);
+    if (typeof SearchEngine !== "undefined" && typeof SearchEngine.normalizar === "function") {
+      return SearchEngine.normalizar(texto);
     }
-
     return String(texto || "")
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
@@ -23,93 +20,84 @@ const MediaSegments = (() => {
       .trim();
   }
 
-  function extrairTermos(consulta) {
+  function tokenizar(consulta) {
     return normalizar(consulta)
       .split(" ")
-      .filter((termo) => termo.length >= 2 && !STOPWORDS.has(termo));
+      .filter((token) => token.length >= 2 && !STOPWORDS.has(token));
   }
 
-  function pontuarTexto(texto, consulta) {
-    const alvo = normalizar(texto);
+  function scoreSegmento(segmento, consulta) {
+    const texto = normalizar(segmento?.text);
     const frase = normalizar(consulta);
-    if (!alvo || !frase) return 0;
+    if (!texto || !frase) return 0;
 
-    let score = 0;
-    if (alvo.includes(frase)) score += 100;
+    const tokens = tokenizar(consulta);
+    if (!tokens.length) return 0;
 
-    const termos = extrairTermos(consulta);
-    if (!termos.length) return score;
+    const encontrados = tokens.filter((token) => texto.includes(token));
+    if (!encontrados.length) return 0;
 
-    const encontrados = termos.filter((termo) => alvo.includes(termo)).length;
-    if (!encontrados) return 0;
-
-    score += encontrados * 20;
-    if (encontrados === termos.length) score += 40;
+    let score = encontrados.length * 10;
+    if (texto.includes(frase)) score += 30;
+    if (encontrados.length === tokens.length) score += 20;
     return score;
   }
 
-  function buscar(mediaId, consulta) {
-    if (
-      typeof MediaIdUtils === "undefined" ||
-      typeof MediaEnrichment === "undefined" ||
-      typeof MediaEnrichment.obterSegmentos !== "function"
-    ) return [];
-
-    const id = MediaIdUtils.normalizar(mediaId);
-    if (!id) return [];
-
-    return MediaEnrichment.obterSegmentos(id)
-      .map((segmento, indiceOriginal) => ({
-        mediaId: id,
-        start: Number(segmento.start),
-        ...(segmento.end === undefined ? {} : { end: Number(segmento.end) }),
-        text: String(segmento.text || ""),
-        score: pontuarTexto(segmento.text, consulta),
-        indiceOriginal
+  function _buscarNosSegmentos(segmentos, consulta) {
+    return (Array.isArray(segmentos) ? segmentos : [])
+      .map((segmento, indice) => ({
+        ...segmento,
+        score: scoreSegmento(segmento, consulta),
+        _indice: indice
       }))
-      .filter((item) => item.score > 0)
-      .sort((a, b) => b.score - a.score || a.indiceOriginal - b.indiceOriginal)
-      .map(({ indiceOriginal, ...item }) => item);
+      .filter((segmento) => segmento.score > 0)
+      .sort((a, b) => b.score - a.score || a._indice - b._indice)
+      .map(({ _indice, ...segmento }) => segmento);
   }
 
-  function buscarEmRegistro(registro, consulta) {
-    if (typeof MediaIdUtils === "undefined") return [];
-    const ids = MediaIdUtils.extrair(registro?.ID || "");
-    return ids
-      .flatMap((id) => buscar(id, consulta))
-      .sort((a, b) => b.score - a.score || a.start - b.start);
+  function buscar(mediaId, consulta) {
+    if (typeof MediaEnrichment === "undefined" || typeof MediaEnrichment.obterSegmentos !== "function") {
+      return [];
+    }
+    return _buscarNosSegmentos(MediaEnrichment.obterSegmentos(mediaId), consulta);
+  }
+
+  function buscarEmTodos(registros, consulta) {
+    const resultados = [];
+    (Array.isArray(registros) ? registros : []).forEach((registro) => {
+      const ids = typeof MediaIdUtils !== "undefined" ? MediaIdUtils.extrair(registro.ID) : [];
+      ids.forEach((id) => {
+        const matches = buscar(id, consulta);
+        if (matches.length) resultados.push({ registro, mediaId: id, matches });
+      });
+    });
+    return resultados;
   }
 
   function formatarTimecode(segundos) {
-    const total = Number(segundos);
-    if (!Number.isFinite(total) || total < 0) return "00:00";
-    const arredondado = Math.floor(total);
-    const horas = Math.floor(arredondado / 3600);
-    const minutos = Math.floor((arredondado % 3600) / 60);
-    const secs = arredondado % 60;
-    const dois = (valor) => String(valor).padStart(2, "0");
-    return horas > 0
-      ? `${dois(horas)}:${dois(minutos)}:${dois(secs)}`
-      : `${dois(minutos)}:${dois(secs)}`;
+    const total = Math.max(0, Math.floor(Number(segundos) || 0));
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    const s = total % 60;
+    const mm = String(m).padStart(2, "0");
+    const ss = String(s).padStart(2, "0");
+    return h > 0 ? `${String(h).padStart(2, "0")}:${mm}:${ss}` : `${mm}:${ss}`;
   }
 
-  function criarUrlFicha(mediaId, start = 0) {
+  function criarUrlFicha(mediaId, start) {
     if (typeof MediaIdUtils === "undefined") return "";
     const id = MediaIdUtils.normalizar(mediaId);
     if (!id) return "";
-
-    const segundos = Number(start);
-    const params = new URLSearchParams({ id });
-    if (Number.isFinite(segundos) && segundos > 0) {
-      params.set("t", String(Math.floor(segundos)));
-    }
-    return `media.html?${params.toString()}`;
+    const t = Number(start);
+    const sufixo = Number.isFinite(t) && t > 0 ? `&t=${Math.floor(t)}` : "";
+    return `media.html?id=${encodeURIComponent(id)}${sufixo}`;
   }
 
   return {
     buscar,
-    buscarEmRegistro,
+    buscarEmTodos,
     formatarTimecode,
-    criarUrlFicha
+    criarUrlFicha,
+    _buscarNosSegmentos
   };
 })();
