@@ -373,7 +373,7 @@ async function main() {
     await sheets.spreadsheets.values.batchUpdate({
       spreadsheetId: PLANILHA_IMGS_ID,
       requestBody: {
-        valueInputOption: "USER_ENTERED",
+        valueInputOption: "RAW",
         data: [...atualizacoesPorLinha.entries()].map(([linha, values]) => ({
           range: `${NOME_ABA_IMGS}!A${linha}:H${linha}`,
           values: [values],
@@ -386,7 +386,7 @@ async function main() {
     await sheets.spreadsheets.values.append({
       spreadsheetId: PLANILHA_IMGS_ID,
       range: `${NOME_ABA_IMGS}!A:H`,
-      valueInputOption: "USER_ENTERED",
+      valueInputOption: "RAW",
       insertDataOption: "INSERT_ROWS",
       requestBody: { values: pendentes.map((item) => item.dados) },
     });
