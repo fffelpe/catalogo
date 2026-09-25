@@ -9,24 +9,28 @@ const MediaPlayer = (() => {
     return typeof window !== "undefined" && window.location?.protocol === "https:";
   }
 
+  function normalizarProxyHttps(valorBruto) {
+    const valor = String(valorBruto || "").trim();
+    if (!valor || !/^https:\/\/[^\s/]+(?:\/[^\s]*)?$/i.test(valor)) return "";
+
+    if (typeof URL !== "undefined") {
+      try {
+        const base = new URL(valor);
+        if (base.protocol !== "https:") return "";
+        return base.href.endsWith("/") ? base.href : `${base.href}/`;
+      } catch {
+        return "";
+      }
+    }
+
+    return valor.endsWith("/") ? valor : `${valor}/`;
+  }
+
   function obterProxyBaseUrl() {
     const valor = typeof globalThis !== "undefined"
-      ? String(globalThis[PROXY_GLOBAL] || "").trim()
+      ? globalThis[PROXY_GLOBAL]
       : "";
-    if (!valor) return "";
-
-    try {
-      const base = new URL(
-        valor,
-        typeof window !== "undefined" && window.location?.href
-          ? window.location.href
-          : undefined
-      );
-      if (base.protocol !== "https:") return "";
-      return base.href.endsWith("/") ? base.href : `${base.href}/`;
-    } catch {
-      return "";
-    }
+    return normalizarProxyHttps(valor);
   }
 
   function criarUrl(mediaId) {
@@ -101,6 +105,7 @@ const MediaPlayer = (() => {
     BASE_URL,
     PROXY_GLOBAL,
     contextoSeguro,
+    normalizarProxyHttps,
     obterProxyBaseUrl,
     criarUrl,
     normalizarInicio,
