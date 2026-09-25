@@ -1,13 +1,13 @@
 {
-  "sincronizadoEm": "2026-09-25T19:12:25.183Z",
+  "sincronizadoEm": "2026-09-25T19:32:36.269Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
-  "totalArquivos": 290,
-  "totalIdsDetectados": 258,
-  "totalSincronizados": 258,
+  "totalArquivos": 293,
+  "totalIdsDetectados": 261,
+  "totalSincronizados": 261,
   "totalIgnorados": 0,
-  "totalErros": 1,
+  "totalErros": 0,
   "totalDuplicados": 30,
-  "totalConflitos": 29,
+  "totalConflitos": 30,
   "totalConflitosBloqueantes": 0,
   "totalNovosDuplicadosRejeitados": 0,
   "totalPreservados": 30,
@@ -23,16 +23,14 @@
   "duplicados": [
     {
       "id": "1452B005485",
-      "criterio": "única versão explicitamente marcada como OFICIAL",
-      "escolhido": "1452B005485 - OFICIAL",
-      "oficiais": [
-        "1452B005485 - OFICIAL"
-      ],
+      "criterio": "conflito: nenhuma escolha automática é permitida",
+      "escolhido": null,
+      "oficiais": [],
       "arquivos": [
         {
           "id": "1YOj5kagF59zjKKQY8OD0uNh_-_EDOFTsPYi1rTMP9mk",
-          "nome": "1452B005485 - OFICIAL",
-          "atualizadoEm": "2026-09-25T17:09:35.530Z"
+          "nome": "1452B005485",
+          "atualizadoEm": "2026-09-25T19:24:27.982Z"
         },
         {
           "id": "1qx0jVCmCIOJvhnc_HmdNo60TwNgbQDugiNWNuL-8o7U",
@@ -575,6 +573,36 @@
     }
   ],
   "conflitos": [
+    {
+      "id": "1452B005485",
+      "motivo": "documentos duplicados sem versão oficial definida",
+      "tipo": "existente",
+      "bloqueante": false,
+      "rejeitado": false,
+      "acao": "crédito anterior preservado; documentos conflitantes não foram aceitos pela sincronização",
+      "oficiais": [],
+      "novosArquivos": [],
+      "arquivos": [
+        {
+          "id": "1YOj5kagF59zjKKQY8OD0uNh_-_EDOFTsPYi1rTMP9mk",
+          "nome": "1452B005485",
+          "atualizadoEm": "2026-09-25T19:24:27.982Z"
+        },
+        {
+          "id": "1qx0jVCmCIOJvhnc_HmdNo60TwNgbQDugiNWNuL-8o7U",
+          "nome": "1452B005485",
+          "atualizadoEm": "2026-09-21T20:29:44.741Z"
+        }
+      ],
+      "exemploNomeOficial": "1452B005485 - OFICIAL",
+      "instrucoes": [
+        "Escolha qual dos documentos listados é a versão oficial correta.",
+        "Renomeie somente o documento escolhido para incluir a palavra OFICIAL. Exemplo: \"1452B005485 - OFICIAL\" (mantendo a extensão quando houver).",
+        "Não marque mais de um documento do mesmo Media ID como OFICIAL.",
+        "Opcionalmente, mova ou exclua da pasta de créditos as versões duplicadas que não devem mais participar da sincronização.",
+        "Execute novamente a sincronização. Até a resolução, a versão anterior do crédito permanece preservada."
+      ]
+    },
     {
       "id": "2457B017842",
       "motivo": "documentos duplicados sem versão oficial definida",
@@ -1459,8 +1487,8 @@
   "rejeitadosNovos": [],
   "preservados": [
     {
-      "id": "2457B017929",
-      "motivo": "documento atual não pôde ser lido; crédito anterior preservado"
+      "id": "1452B005485",
+      "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
     },
     {
       "id": "2457B017842",
@@ -1579,11 +1607,5 @@
       "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
     }
   ],
-  "erros": [
-    {
-      "id": "2457B017929",
-      "nome": "2457B017929.pdf",
-      "erro": "End of file inside array"
-    }
-  ]
+  "erros": []
 }
