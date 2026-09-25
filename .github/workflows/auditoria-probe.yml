@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   probe:
@@ -24,6 +24,18 @@ jobs:
       - name: Gerar package-lock reproduzível
         run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
 
+      - name: Versionar package-lock quando ausente
+        run: |
+          if git ls-files --error-unmatch package-lock.json >/dev/null 2>&1; then
+            echo "package-lock.json já está versionado."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "chore: trava dependências npm"
+          git push origin HEAD:fix/auditoria-2026-09-25
+
       - name: Testar acesso ao lowres por HTTP e HTTPS
         shell: bash
         run: |
@@ -38,10 +50,8 @@ jobs:
           printf 'HTTPS_EXIT=%s\nHTTPS_STATUS=%s\nHTTP_EXIT=%s\nHTTP_STATUS=%s\n' "$HTTPS_EXIT" "$HTTPS_RESULT" "$HTTP_EXIT" "$HTTP_RESULT" > probe-lowres.txt
           exit 0
 
-      - name: Salvar package-lock e resultado do probe
+      - name: Salvar resultado do probe
         uses: actions/upload-artifact@v4
         with:
           name: auditoria-probe
-          path: |
-            package-lock.json
-            probe-lowres.txt
+          path: probe-lowres.txt
