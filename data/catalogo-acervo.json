@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T15:29:29.998Z",
+  "generatedAt": "2026-09-25T16:40:44.361Z",
   "total": 41255,
   "registros": [
     {
@@ -430854,7 +430854,7 @@
     {
       "ID": "1452B002945",
       "DESCRICAO": "tv rba_vt colheita arroz_sc_08_05_ing",
-      "DATA": "05/08/2024",
+      "DATA": "5/8/2024",
       "LOCAL": "SANTA CATARINA",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -431800,7 +431800,7 @@
     {
       "ID": "1452B004398",
       "DESCRICAO": "alerta produtores de açai",
-      "DATA": "08/01/2025",
+      "DATA": "8/1/2025",
       "LOCAL": "PARÁ",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA DO PARÁ",
@@ -431932,7 +431932,7 @@
     {
       "ID": "1452B002045",
       "DESCRICAO": "produção bananas rs",
-      "DATA": "08/07/2023",
+      "DATA": "8/7/2023",
       "LOCAL": "RIO GRANDE DO SUL",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -431943,7 +431943,7 @@
     {
       "ID": "1452B002089",
       "DESCRICAO": "produção bananas rs",
-      "DATA": "08/07/2023",
+      "DATA": "8/7/2023",
       "LOCAL": "RIO GRANDE DO SUL",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -433021,7 +433021,7 @@
     {
       "ID": "1452B002624",
       "DESCRICAO": "café do brasil",
-      "DATA": "02/02/2024",
+      "DATA": "2/2/2024",
       "LOCAL": "RONDÔNIA",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -434077,7 +434077,7 @@
     {
       "ID": "1452B004396",
       "DESCRICAO": "tarifaço_laranjas",
-      "DATA": "08/01/2025",
+      "DATA": "8/1/2025",
       "LOCAL": "SERGIPE",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV APERIPÊ",
@@ -434979,7 +434979,7 @@
     {
       "ID": "1452B002166",
       "DESCRICAO": "rba vt vaca amamenta porco_01_09_ing",
-      "DATA": "09/01/2023",
+      "DATA": "9/1/2023",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -435155,7 +435155,7 @@
     {
       "ID": "1452B002630",
       "DESCRICAO": "receita torresmo",
-      "DATA": "02/07/2024",
+      "DATA": "2/7/2024",
       "LOCAL": "PARANÁ",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -435419,7 +435419,7 @@
     {
       "ID": "1452B002455",
       "DESCRICAO": "frigorifico verdi",
-      "DATA": "11/08/2023",
+      "DATA": "11/8/2023",
       "LOCAL": "SANTA CATARINA",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -436013,7 +436013,7 @@
     {
       "ID": "1452B004702",
       "DESCRICAO": "boi de estimação",
-      "DATA": "10/08/2025",
+      "DATA": "10/8/2025",
       "LOCAL": "SANTA CATARINA",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -436310,7 +436310,7 @@
     {
       "ID": "1452B002046",
       "DESCRICAO": "produção queijo ms",
-      "DATA": "08/07/2023",
+      "DATA": "8/7/2023",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -436794,7 +436794,7 @@
     {
       "ID": "1452B002087",
       "DESCRICAO": "vazio sanitario da soja",
-      "DATA": "08/11/2023",
+      "DATA": "8/11/2023",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -436948,7 +436948,7 @@
     {
       "ID": "1452B002720",
       "DESCRICAO": "tv rba_ vt experience day cravil soja_limpo_05_03_ing",
-      "DATA": "03/05/2024",
+      "DATA": "3/5/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -436959,7 +436959,7 @@
     {
       "ID": "1452B002786",
       "DESCRICAO": "A - vt soja melhorias_ms_10_04_ing",
-      "DATA": "04/10/2024",
+      "DATA": "4/10/2024",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -437762,7 +437762,7 @@
     {
       "ID": "1452B002947",
       "DESCRICAO": "tv rba_vt pesca artesanal da tainha_08_05_ing",
-      "DATA": "05/08/2024",
+      "DATA": "5/8/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -438125,7 +438125,7 @@
     {
       "ID": "1452B004542",
       "DESCRICAO": "produção trigo_ queda",
-      "DATA": "09/09/2025",
+      "DATA": "9/9/2025",
       "LOCAL": "SANTA CATARINA",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -438543,7 +438543,7 @@
     {
       "ID": "1452B001924",
       "DESCRICAO": "dia mundial chocolate",
-      "DATA": "05/07/2023",
+      "DATA": "5/7/2023",
       "LOCAL": "RIO DE JANEIRO",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -438576,7 +438576,7 @@
     {
       "ID": "1452B001930",
       "DESCRICAO": "laboratorio agrodefesa goias",
-      "DATA": "07/11/2023",
+      "DATA": "7/11/2023",
       "LOCAL": "GOIÁS",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -438774,7 +438774,7 @@
     {
       "ID": "1452B002069",
       "DESCRICAO": "ordenha robotizada",
-      "DATA": "08/11/2023",
+      "DATA": "8/11/2023",
       "LOCAL": "SANTA CATARINA",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -441370,7 +441370,7 @@
     {
       "ID": "1452B002043",
       "DESCRICAO": "equinos manejo ms",
-      "DATA": "08/07/2023",
+      "DATA": "8/7/2023",
       "LOCAL": "",
       "REPORTER": "NÁDIA NICOLAU",
       "AFILIADA_EMISSORA": "",
@@ -441381,7 +441381,7 @@
     {
       "ID": "1452B002070",
       "DESCRICAO": "pesquisador drone agricultura",
-      "DATA": "08/11/2023",
+      "DATA": "8/11/2023",
       "LOCAL": "",
       "REPORTER": "JULIO PENARIOL",
       "AFILIADA_EMISSORA": "TV UNESP/ SP",
@@ -441546,7 +441546,7 @@
     {
       "ID": "1452B002520",
       "DESCRICAO": "produção organicos imbuia",
-      "DATA": "12/01/2023",
+      "DATA": "12/1/2023",
       "LOCAL": "",
       "REPORTER": "GREICE SAUER",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -441579,7 +441579,7 @@
     {
       "ID": "1452B002626",
       "DESCRICAO": "show rural",
-      "DATA": "02/05/2024",
+      "DATA": "2/5/2024",
       "LOCAL": "",
       "REPORTER": "IANE CRUZ",
       "AFILIADA_EMISSORA": "",
@@ -441601,7 +441601,7 @@
     {
       "ID": "1452B002625",
       "DESCRICAO": "produção café",
-      "DATA": "02/05/2024",
+      "DATA": "2/5/2024",
       "LOCAL": "",
       "REPORTER": "JULIO PENARIOL",
       "AFILIADA_EMISSORA": "TV UNESP / SP",
@@ -441612,7 +441612,7 @@
     {
       "ID": "1452B002575",
       "DESCRICAO": "bella brutinha do agro",
-      "DATA": "01/12/2024",
+      "DATA": "1/12/2024",
       "LOCAL": "",
       "REPORTER": "GREICE SAUER",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -441876,7 +441876,7 @@
     {
       "ID": "1452B003273",
       "DESCRICAO": "BA ba tv_vt criadouro rieger_09_08_ing",
-      "DATA": "08/09/2024",
+      "DATA": "8/9/2024",
       "LOCAL": "",
       "REPORTER": "GREICE SAUER",
       "AFILIADA_EMISSORA": "",
@@ -442371,7 +442371,7 @@
     {
       "ID": "1452B004537",
       "DESCRICAO": "atafona em ibirama",
-      "DATA": "09/09/2025",
+      "DATA": "9/9/2025",
       "LOCAL": "",
       "REPORTER": "GREICE SAUER",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -445605,7 +445605,7 @@
     {
       "ID": "1452B005120",
       "DESCRICAO": "MIX FOR CARBON",
-      "DATA": "04/12/2026",
+      "DATA": "4/12/2026",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "FABIANO PEREIRA",
       "AFILIADA_EMISSORA": "TV UNESP / SP",
@@ -445616,7 +445616,7 @@
     {
       "ID": "1452B005110",
       "DESCRICAO": "estação experimental salmonicultura",
-      "DATA": "04/02/2026",
+      "DATA": "4/2/2026",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "FABIANO PEREIRA",
       "AFILIADA_EMISSORA": "TV USP / SP",
@@ -445627,7 +445627,7 @@
     {
       "ID": "1452B005111",
       "DESCRICAO": "pesquisa queijo artesanal serrano",
-      "DATA": "04/02/2026",
+      "DATA": "4/2/2026",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "FABIANO PEREIRA",
       "AFILIADA_EMISSORA": "TV USP / SP",
@@ -445638,7 +445638,7 @@
     {
       "ID": "1452B005108",
       "DESCRICAO": "dona maria reliquias",
-      "DATA": "04/01/2026",
+      "DATA": "4/1/2026",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "GREICE SAUER",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -445935,7 +445935,7 @@
     {
       "ID": "1452B004692",
       "DESCRICAO": "piá do boi",
-      "DATA": "10/08/2025",
+      "DATA": "10/8/2025",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -445946,7 +445946,7 @@
     {
       "ID": "1452B004665",
       "DESCRICAO": "florada de café",
-      "DATA": "10/07/2025",
+      "DATA": "10/7/2025",
       "LOCAL": "MINAS GERAIS - MG",
       "REPORTER": "JOÃO RAFAEL",
       "AFILIADA_EMISSORA": "ANTV / MG",
@@ -445957,7 +445957,7 @@
     {
       "ID": "1452B004658",
       "DESCRICAO": "juventude rural",
-      "DATA": "10/06/2025",
+      "DATA": "10/6/2025",
       "LOCAL": "",
       "REPORTER": "VERONICA SALAZAR",
       "AFILIADA_EMISSORA": "TVE / ES",
@@ -445990,7 +445990,7 @@
     {
       "ID": "1452B004538",
       "DESCRICAO": "chimarrão bom retiro",
-      "DATA": "09/09/2025",
+      "DATA": "9/9/2025",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -446001,7 +446001,7 @@
     {
       "ID": "1452B004539",
       "DESCRICAO": "estação experimental itajaí",
-      "DATA": "09/09/2025",
+      "DATA": "9/9/2025",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -446012,7 +446012,7 @@
     {
       "ID": "1452B004540",
       "DESCRICAO": "flor e ser",
-      "DATA": "09/09/2025",
+      "DATA": "9/9/2025",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -446023,7 +446023,7 @@
     {
       "ID": "1452B004541",
       "DESCRICAO": "produção de flores trombudo central",
-      "DATA": "09/09/2025",
+      "DATA": "9/9/2025",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -446034,7 +446034,7 @@
     {
       "ID": "1452B004544",
       "DESCRICAO": "adubação verde epagri",
-      "DATA": "09/09/2025",
+      "DATA": "9/9/2025",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "CAIO MARÇANI",
       "AFILIADA_EMISSORA": "RBA-TV / SC",
@@ -446100,7 +446100,7 @@
     {
       "ID": "1452B004397",
       "DESCRICAO": "preço da carne deve baixar",
-      "DATA": "08/01/2025",
+      "DATA": "8/1/2025",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
@@ -446111,7 +446111,7 @@
     {
       "ID": "1452B004399",
       "DESCRICAO": "tarifaço",
-      "DATA": "08/01/2025",
+      "DATA": "8/1/2025",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TVE / ES",
@@ -446254,7 +446254,7 @@
     {
       "ID": "1452B004157",
       "DESCRICAO": "rota turistica das cervejas artesanais",
-      "DATA": "06/03/2025",
+      "DATA": "6/3/2025",
       "LOCAL": "ESPÍRITO SANTO - ES",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TVE / ES",
@@ -446430,7 +446430,7 @@
     {
       "ID": "1452B003276",
       "DESCRICAO": "tv ulbra_vt lançamento exponter_12_08",
-      "DATA": "08/12/2024",
+      "DATA": "8/12/2024",
       "LOCAL": "RIO GRANDE DO SUL",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "ULBRA TV /RS",
@@ -446441,7 +446441,7 @@
     {
       "ID": "1452B003277",
       "DESCRICAO": "tv ulbra_vt preparativos expointer_12_08_ing",
-      "DATA": "08/12/2024",
+      "DATA": "8/12/2024",
       "LOCAL": "RIO GRANDE DO SUL",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "ULBRA TV /RS",
@@ -446452,7 +446452,7 @@
     {
       "ID": "1452B003272",
       "DESCRICAO": "BA rba tv _ vt rota cachaças_09_08_ing",
-      "DATA": "08/09/2024",
+      "DATA": "8/9/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -446463,7 +446463,7 @@
     {
       "ID": "1452B003275",
       "DESCRICAO": "rba tv_vt gansos_09_08_ing",
-      "DATA": "08/09/2024",
+      "DATA": "8/9/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -446474,7 +446474,7 @@
     {
       "ID": "1452B003243",
       "DESCRICAO": "tv rba_plano safra_rio do sul_02_08_ing",
-      "DATA": "08/02/2024",
+      "DATA": "8/2/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -446485,7 +446485,7 @@
     {
       "ID": "1452B003244",
       "DESCRICAO": "tv rba_vt batata doce gigante_02_08_ing",
-      "DATA": "08/02/2024",
+      "DATA": "8/2/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -446496,7 +446496,7 @@
     {
       "ID": "1452B003245",
       "DESCRICAO": "tv rba_vt bike de madeira_02_08_ing",
-      "DATA": "08/02/2024",
+      "DATA": "8/2/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -446507,7 +446507,7 @@
     {
       "ID": "1452B003246",
       "DESCRICAO": "tv rba_vt carro movido a lenha_02_08_ing",
-      "DATA": "08/02/2024",
+      "DATA": "8/2/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -446628,7 +446628,7 @@
     {
       "ID": "1452B003146",
       "DESCRICAO": "catve_vt preparativos show rural de inverno_pr_12_07_ing",
-      "DATA": "07/12/2024",
+      "DATA": "7/12/2024",
       "LOCAL": "PARANÁ - PR",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "CATVE / PR",
@@ -446639,7 +446639,7 @@
     {
       "ID": "1452B003136",
       "DESCRICAO": "tv cultura paulista_vt ferrovia e café_chico lourenço_08_07_ing",
-      "DATA": "07/08/2024",
+      "DATA": "7/8/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA / SP",
@@ -446650,7 +446650,7 @@
     {
       "ID": "1452B003129",
       "DESCRICAO": "tv rit_vt assessoria rural_05_07_ing",
-      "DATA": "07/05/2024",
+      "DATA": "7/5/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RIT TV / SP",
@@ -446661,7 +446661,7 @@
     {
       "ID": "1452B003130",
       "DESCRICAO": "tv rit_vt dia do chocolate_05_07_ing",
-      "DATA": "07/05/2024",
+      "DATA": "7/5/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RIT TV / SP",
@@ -446672,7 +446672,7 @@
     {
       "ID": "1452B003131",
       "DESCRICAO": "tv rit_vt piscicultura_ms_05_07_ing",
-      "DATA": "07/05/2024",
+      "DATA": "7/5/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RIT TV / SP",
@@ -446683,7 +446683,7 @@
     {
       "ID": "1452B003132",
       "DESCRICAO": "tv surui_ vt novo frigorifico_aumento exportação de carne_rondonia_matheus afonso_05_07_ing",
-      "DATA": "07/05/2024",
+      "DATA": "7/5/2024",
       "LOCAL": "RORAIMA",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV SURUÍ / RO",
@@ -446694,7 +446694,7 @@
     {
       "ID": "1452B003121",
       "DESCRICAO": "COM GC _ tv usp_vt sequestro carboco_fabiano pereira_04_07",
-      "DATA": "07/04/2024",
+      "DATA": "7/4/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "USP TV / SP",
@@ -446705,7 +446705,7 @@
     {
       "ID": "1452B003122",
       "DESCRICAO": "COM GC_ tv usp_vt sub-produtos uva_fabiano pereira_04_07",
-      "DATA": "07/04/2024",
+      "DATA": "7/4/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "USP TV / SP",
@@ -446716,7 +446716,7 @@
     {
       "ID": "1452B003124",
       "DESCRICAO": "tv usp_vt flores do futuro_fabiano pereira_04_07",
-      "DATA": "07/04/2024",
+      "DATA": "7/4/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV USP / SP",
@@ -446727,7 +446727,7 @@
     {
       "ID": "1452B003116",
       "DESCRICAO": "B - ROTACAO - tv rit_vt agroshow_ms_01_07_ing",
-      "DATA": "07/01/2024",
+      "DATA": "7/1/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RIT TV / SP",
@@ -446738,7 +446738,7 @@
     {
       "ID": "1452B003118",
       "DESCRICAO": "N tv rit_vt horto medicinal_01_07_ing",
-      "DATA": "07/01/2024",
+      "DATA": "7/1/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RIT TV / SP",
@@ -446749,7 +446749,7 @@
     {
       "ID": "1452B003128",
       "DESCRICAO": "N tv rit_vt horto medicinal_01_07_ing",
-      "DATA": "07/01/2024",
+      "DATA": "7/1/2024",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RIT TV / SP",
@@ -446881,7 +446881,7 @@
     {
       "ID": "1452B003042",
       "DESCRICAO": "tv rit_vt capim elefante_ms_07_06_ing",
-      "DATA": "06/07/2024",
+      "DATA": "6/7/2024",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RIT TV / MS",
@@ -446892,7 +446892,7 @@
     {
       "ID": "1452B003043",
       "DESCRICAO": "tv rit_vt rota rural_ms_07_06_ing",
-      "DATA": "06/07/2024",
+      "DATA": "6/7/2024",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RIT TV / MS",
@@ -446903,7 +446903,7 @@
     {
       "ID": "1452B003035",
       "DESCRICAO": "tv rba_vt hortaliças inverno_04_06_ing",
-      "DATA": "06/04/2024",
+      "DATA": "6/4/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -446914,7 +446914,7 @@
     {
       "ID": "1452B003036",
       "DESCRICAO": "tv rba_vt produtos coloniais_04_06_ing",
-      "DATA": "06/04/2024",
+      "DATA": "6/4/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -446925,7 +446925,7 @@
     {
       "ID": "1452B003040",
       "DESCRICAO": "tv surui_vt premio cafeicultor_aroldo tavares_04_06_ing",
-      "DATA": "06/04/2024",
+      "DATA": "6/4/2024",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV SURUÍ / RO",
@@ -447013,7 +447013,7 @@
     {
       "ID": "1452B002944",
       "DESCRICAO": "tv rba_vt chacara miana_0-05_ing",
-      "DATA": "05/08/2024",
+      "DATA": "5/8/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447024,7 +447024,7 @@
     {
       "ID": "1452B002946",
       "DESCRICAO": "tv rba_vt encantos do varjedo_08_05_ing",
-      "DATA": "05/08/2024",
+      "DATA": "5/8/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447035,7 +447035,7 @@
     {
       "ID": "1452B002943",
       "DESCRICAO": "rede ita_vt criação camarões_paraíba_07_05_ing",
-      "DATA": "05/07/2024",
+      "DATA": "5/7/2024",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -447200,7 +447200,7 @@
     {
       "ID": "1452B002766",
       "DESCRICAO": "mercado ver o peso",
-      "DATA": "04/01/2024",
+      "DATA": "4/1/2024",
       "LOCAL": "",
       "REPORTER": "LUIZ OCTÁVIO LUCAS",
       "AFILIADA_EMISSORA": "",
@@ -447266,7 +447266,7 @@
     {
       "ID": "1452B002677",
       "DESCRICAO": "tv rba_ vt experience day cravil soja_05_03",
-      "DATA": "03/05/2024",
+      "DATA": "3/5/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447277,7 +447277,7 @@
     {
       "ID": "1452B002678",
       "DESCRICAO": "tv rba_ vt pncf jovem_05_03",
-      "DATA": "03/05/2024",
+      "DATA": "3/5/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447288,7 +447288,7 @@
     {
       "ID": "1452B002679",
       "DESCRICAO": "tv rba_ vt silo secador_05_03",
-      "DATA": "03/05/2024",
+      "DATA": "3/5/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447299,7 +447299,7 @@
     {
       "ID": "1452B002721",
       "DESCRICAO": "tv rba_ vt pncf jovem_05_03)logo na tela_ing",
-      "DATA": "03/05/2024",
+      "DATA": "3/5/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447310,7 +447310,7 @@
     {
       "ID": "1452B002723",
       "DESCRICAO": "tv rba_ vt silo secador_05_03_ logo na tela_ing",
-      "DATA": "03/05/2024",
+      "DATA": "3/5/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447321,7 +447321,7 @@
     {
       "ID": "1452B002641",
       "DESCRICAO": "rba_vt produção pepino_sc_09_02_ing",
-      "DATA": "02/09/2024",
+      "DATA": "2/9/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447332,7 +447332,7 @@
     {
       "ID": "1452B002642",
       "DESCRICAO": "produção pitaya",
-      "DATA": "02/09/2024",
+      "DATA": "2/9/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447343,7 +447343,7 @@
     {
       "ID": "1452B002636",
       "DESCRICAO": "pecuária show rural",
-      "DATA": "02/08/2024",
+      "DATA": "2/8/2024",
       "LOCAL": "PARANÁ - PR",
       "REPORTER": "DEBORAH EVANGELISTA",
       "AFILIADA_EMISSORA": "CATVE / PR",
@@ -447354,7 +447354,7 @@
     {
       "ID": "1452B002629",
       "DESCRICAO": "qualidade uvas no show rural",
-      "DATA": "02/07/2024",
+      "DATA": "2/7/2024",
       "LOCAL": "PARANÁ - PR",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "CATVE / PR",
@@ -447442,7 +447442,7 @@
     {
       "ID": "1452B002576",
       "DESCRICAO": "colheita uvas estancia vinho",
-      "DATA": "01/08/2024",
+      "DATA": "1/8/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447453,7 +447453,7 @@
     {
       "ID": "1452B002577",
       "DESCRICAO": "jardim da dona uta_agrolandia_08_01_ing",
-      "DATA": "01/08/2024",
+      "DATA": "1/8/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447464,7 +447464,7 @@
     {
       "ID": "1452B002579",
       "DESCRICAO": "recanto familia aguida ibirama",
-      "DATA": "01/08/2024",
+      "DATA": "1/8/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447475,7 +447475,7 @@
     {
       "ID": "1452B002580",
       "DESCRICAO": "sitio barnabé",
-      "DATA": "01/08/2024",
+      "DATA": "1/8/2024",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447486,7 +447486,7 @@
     {
       "ID": "1452B002540",
       "DESCRICAO": "agrodefesa",
-      "DATA": "12/08/2023",
+      "DATA": "12/8/2023",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -447541,7 +447541,7 @@
     {
       "ID": "1452B002465",
       "DESCRICAO": "tv rba vt chalé rustico_ibirama_sc_09_11_ing",
-      "DATA": "11/09/2023",
+      "DATA": "11/9/2023",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447552,7 +447552,7 @@
     {
       "ID": "1452B002466",
       "DESCRICAO": "morangos serra tomio",
-      "DATA": "11/09/2023",
+      "DATA": "11/9/2023",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447563,7 +447563,7 @@
     {
       "ID": "1452B002454",
       "DESCRICAO": "banco de alimentos",
-      "DATA": "11/08/2023",
+      "DATA": "11/8/2023",
       "LOCAL": "GOIÁS - GO",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL / GO",
@@ -447574,7 +447574,7 @@
     {
       "ID": "1452B002407",
       "DESCRICAO": "prejuizos chuvas",
-      "DATA": "11/01/2023",
+      "DATA": "11/1/2023",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447585,7 +447585,7 @@
     {
       "ID": "1452B002408",
       "DESCRICAO": "braquiaria manejo",
-      "DATA": "11/01/2023",
+      "DATA": "11/1/2023",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TVE/ MS",
@@ -447596,7 +447596,7 @@
     {
       "ID": "1452B002409",
       "DESCRICAO": "cigarinha africana",
-      "DATA": "11/01/2023",
+      "DATA": "11/1/2023",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TVE/ MS",
@@ -447607,7 +447607,7 @@
     {
       "ID": "1452B002410",
       "DESCRICAO": "seminario embrapa cana",
-      "DATA": "11/01/2023",
+      "DATA": "11/1/2023",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TVE/ MS",
@@ -447684,7 +447684,7 @@
     {
       "ID": "1452B002165",
       "DESCRICAO": "rba vt colheita melancia_01_09_ing",
-      "DATA": "09/01/2023",
+      "DATA": "9/1/2023",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447893,7 +447893,7 @@
     {
       "ID": "1452B002071",
       "DESCRICAO": "nematoide cebola",
-      "DATA": "08/11/2023",
+      "DATA": "8/11/2023",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -447904,7 +447904,7 @@
     {
       "ID": "1452B002084",
       "DESCRICAO": "festa das origens",
-      "DATA": "08/11/2023",
+      "DATA": "8/11/2023",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447915,7 +447915,7 @@
     {
       "ID": "1452B002086",
       "DESCRICAO": "ordenha robotizada",
-      "DATA": "08/11/2023",
+      "DATA": "8/11/2023",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447926,7 +447926,7 @@
     {
       "ID": "1452B002142",
       "DESCRICAO": "cuia gigante",
-      "DATA": "08/11/2023",
+      "DATA": "8/11/2023",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "RBA TV / SC",
@@ -447937,7 +447937,7 @@
     {
       "ID": "1452B002059",
       "DESCRICAO": "equoterapia",
-      "DATA": "08/09/2023",
+      "DATA": "8/9/2023",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -447948,7 +447948,7 @@
     {
       "ID": "1452B002060",
       "DESCRICAO": "ordenha robotizada",
-      "DATA": "08/09/2023",
+      "DATA": "8/9/2023",
       "LOCAL": "",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -447959,7 +447959,7 @@
     {
       "ID": "1452B002044",
       "DESCRICAO": "produção abacaxi ms",
-      "DATA": "08/07/2023",
+      "DATA": "8/7/2023",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
@@ -447981,7 +447981,7 @@
     {
       "ID": "1452B001914",
       "DESCRICAO": "projeto cemeia",
-      "DATA": "07/05/2023",
+      "DATA": "7/5/2023",
       "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "JULIO PENARIOL",
       "AFILIADA_EMISSORA": "",
@@ -448036,7 +448036,7 @@
     {
       "ID": "1452B001855",
       "DESCRICAO": "exposul rafael ferreira",
-      "DATA": "06/12/2023",
+      "DATA": "6/12/2023",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "RAFAEL FERREIRA",
       "AFILIADA_EMISSORA": "",
@@ -448091,7 +448091,7 @@
     {
       "ID": "1452B001747",
       "DESCRICAO": "irrigacao bananeira",
-      "DATA": "05/12/2023",
+      "DATA": "5/12/2023",
       "LOCAL": "MINAS GERAIS - MG",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
