@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T19:29:29.710Z",
-  "total": 41259,
+  "generatedAt": "2026-09-25T19:37:55.815Z",
+  "total": 41264,
   "registros": [
     {
       "ID": "2822B019835",
@@ -453850,6 +453850,61 @@
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018090",
+      "DESCRICAO": "",
+      "DATA": "19/09/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "CATVE - PR",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SEGURANÇA",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018091",
+      "DESCRICAO": "",
+      "DATA": "14/09/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "CATVE - PR",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018092",
+      "DESCRICAO": "",
+      "DATA": "24/09/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "CATVE - PR",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018093",
+      "DESCRICAO": "",
+      "DATA": "17/09/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "CATVE - PR",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": ""
+    },
+    {
+      "ID": "2457B018094",
+      "DESCRICAO": "",
+      "DATA": "21/09/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "CATVE - PR",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
       "PGM": ""
     }
   ]
