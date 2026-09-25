@@ -8,7 +8,7 @@ const jsPath = fileURLToPath(new URL("../js/search-results-cards.js", import.met
 const buscaPath = fileURLToPath(new URL("../pages/resultado-busca.html", import.meta.url));
 const programaPath = fileURLToPath(new URL("../pages/programa.html", import.meta.url));
 
-test("resultados gerais usam cards compactos e organizados sem player de vídeo", () => {
+test("resultados gerais usam cards compactos em duas colunas sem player de vídeo", () => {
   assert.ok(fs.existsSync(cssPath), "css/search-results-cards.css deve existir");
   assert.ok(fs.existsSync(jsPath), "js/search-results-cards.js deve existir");
 
@@ -18,8 +18,13 @@ test("resultados gerais usam cards compactos e organizados sem player de vídeo"
   const programa = fs.readFileSync(programaPath, "utf8");
 
   assert.match(css, /\.results-table\s+tbody\s+tr\s*\{/);
+  assert.match(css, /grid-template-columns:\s*minmax\(0,\s*1\.35fr\)\s+minmax\(260px,\s*\.65fr\)/);
   assert.match(css, /grid-template-areas:\s*["']id programa["']/);
-  assert.match(css, /["']reporter local descricao afiliada["']/);
+  assert.match(css, /["']reporter local["']/);
+  assert.match(css, /["']descricao afiliada["']/);
+  assert.match(css, /["']\. acoes["']/);
+  assert.match(css, /gap:\s*5px\s+24px/);
+  assert.match(css, /padding:\s*10px\s+14px/);
   assert.match(css, /\.resultado-id/);
   assert.match(css, /\.resultado-reporter/);
   assert.match(css, /\.resultado-local/);
@@ -27,7 +32,6 @@ test("resultados gerais usam cards compactos e organizados sem player de vídeo"
   assert.match(css, /\.resultado-afiliada/);
   assert.match(css, /\.resultado-programa-badge/);
   assert.match(css, /\.resultado-meta-oculto-card/);
-  assert.match(css, /padding:\s*12px\s+14px/);
   assert.match(css, /border-radius:\s*12px/);
   assert.match(css, /box-shadow:/);
 
