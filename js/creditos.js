@@ -1,4 +1,5 @@
 // creditos.js - Carrega os metadados de créditos relacionados aos Media IDs.
+// A associação é feita pelo nome/Media ID do arquivo de crédito, independentemente do programa.
 
 const CreditosMedia = {
   registros: {},
@@ -20,21 +21,25 @@ const CreditosMedia = {
   },
 
   normalizarId(valor) {
+    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.normalizar(valor);
     return String(valor || "")
       .trim()
       .replace(/\.mp4$/i, "")
+      .replace(/\s+/g, "")
       .toUpperCase();
   },
 
   separarIds(valor) {
+    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(valor);
     return String(valor || "")
-      .split(/[\r\n,;]+/)
+      .split(/[\r\n,;+\/|&]+/)
       .map((id) => this.normalizarId(id))
       .filter(Boolean);
   },
 
   obter(id) {
-    return this.registros[this.normalizarId(id)] || null;
+    const normalizado = this.normalizarId(id);
+    return normalizado ? (this.registros[normalizado] || null) : null;
   },
 
   obterVarios(ids = []) {

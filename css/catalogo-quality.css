@@ -1,0 +1,229 @@
+.quality-page {
+  width: min(1240px, calc(100% - 32px));
+  margin: 32px auto 64px;
+}
+
+.quality-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.quality-heading h1 {
+  margin: 0;
+  color: #10251b;
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 760;
+}
+
+.quality-heading p:not(.quality-eyebrow) {
+  margin: 8px 0 0;
+  color: #697970;
+}
+
+.quality-eyebrow {
+  margin: 0 0 5px;
+  color: #2b7c55;
+  font-size: .82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.quality-back-link {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border: 1px solid #cfe0d6;
+  border-radius: 10px;
+  color: #1b6d46;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.quality-state,
+.quality-credits-status {
+  padding: 14px 16px;
+  border: 1px solid #dde7e1;
+  border-radius: 12px;
+  background: #f7faf8;
+  color: #496056;
+}
+
+.quality-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.quality-summary-card {
+  min-height: 132px;
+  padding: 18px;
+  border: 1px solid #e3ebe6;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(25, 67, 47, .05);
+}
+
+.quality-summary-card.success { background: #f2fbf5; }
+.quality-summary-card.warning { background: #fffaf0; }
+.quality-summary-card.info { background: #f4f8ff; }
+.quality-summary-card.danger { background: #fff5f5; }
+
+.quality-summary-value {
+  display: block;
+  margin-bottom: 6px;
+  color: #152d22;
+  font-size: 1.65rem;
+  font-weight: 780;
+}
+
+.quality-summary-label {
+  display: block;
+  color: #3d5549;
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.quality-summary-detail {
+  display: block;
+  margin-top: 8px;
+  color: #728178;
+  font-size: .78rem;
+}
+
+.quality-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid #e0e8e3;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(25, 67, 47, .04);
+}
+
+.quality-filters label {
+  display: grid;
+  gap: 6px;
+  color: #56695f;
+  font-size: .82rem;
+  font-weight: 650;
+}
+
+.quality-credits-status {
+  margin-top: 14px;
+  font-size: .86rem;
+}
+
+.quality-table-card {
+  margin-top: 16px;
+  overflow: hidden;
+  border: 1px solid #dce7e1;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(25, 67, 47, .05);
+}
+
+.quality-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.quality-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+}
+
+.quality-table th,
+.quality-table td {
+  padding: 11px 12px;
+  border-bottom: 1px solid #edf2ef;
+  text-align: left;
+  vertical-align: top;
+  font-size: .84rem;
+}
+
+.quality-table th {
+  background: #edf7f0;
+  color: #294b3a;
+  font-size: .78rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.quality-table tbody tr:hover td {
+  background: #fbfdfc;
+}
+
+.quality-id-list,
+.quality-problem-list {
+  display: grid;
+  gap: 4px;
+}
+
+.quality-id-link {
+  color: #187147;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.quality-problem {
+  color: #4f6258;
+}
+
+.quality-severity-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.quality-severity-chip.critical { background: #fde7e7; color: #9a2a2a; }
+.quality-severity-chip.warning { background: #fff0cf; color: #8a6108; }
+.quality-severity-chip.info { background: #e8f1ff; color: #2d6095; }
+.quality-severity-chip.ok { background: #e4f4e9; color: #1d7044; }
+
+.quality-table-status {
+  margin: 0;
+  padding: 12px 14px;
+  color: #6b7a72;
+  font-size: .82rem;
+}
+
+.quality-empty-row {
+  padding: 28px !important;
+  text-align: center !important;
+  color: #718078;
+}
+
+@media (max-width: 1000px) {
+  .quality-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .quality-page {
+    width: min(100% - 20px, 1240px);
+    margin-top: 20px;
+  }
+
+  .quality-heading {
+    flex-direction: column;
+  }
+
+  .quality-filters,
+  .quality-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -9,11 +9,17 @@ const SearchEngine = (() => {
     LOCAL: 20,
     REPORTER: 18,
     PROGRAMA: 18,
+    PGM: 18,
     AFILIADA_EMISSORA: 12,
     CREDITOS_MATERIA: 30,
     CREDITOS_FONTES: 24,
     CREDITOS_EQUIPE: 20,
     CREDITOS_CARGOS: 12,
+    KEYWORDS: 32,
+    SUBJECTS: 36,
+    PEOPLE: 28,
+    PLACES: 24,
+    SEGMENTS: 38,
     DATA: 5
   };
 
@@ -45,35 +51,64 @@ const SearchEngine = (() => {
 
   function contemTermo(texto, termo) {
     if (!texto || !termo) return false;
-    const padrao = new RegExp(`(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`, "u");
+    const padrao = new RegExp(
+      `(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`,
+      "u"
+    );
     return padrao.test(texto);
   }
 
+  function contemPrefixoPalavra(texto, termo) {
+    if (!texto || !termo || termo.length < 4) return false;
+    const padrao = new RegExp(
+      `(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}`,
+      "u"
+    );
+    return padrao.test(texto);
+  }
+
+  function podeUsarPrefixo(expansao, termo) {
+    const tipo = String(expansao?.tipo || "").toLowerCase();
+    return termo.length >= 4 && (tipo === "original" || tipo === "frase");
+  }
+
   function separarIds(valor) {
+    if (typeof MediaIdUtils !== "undefined") {
+      return MediaIdUtils.extrair(valor).map((id) => id.toLocaleLowerCase("pt-BR"));
+    }
     return String(valor || "")
-      .split(/[\r\n,;]+/)
-      .map((id) => normalizar(id))
+      .split(/[\r\n,;+\/|&]+/)
+      .map((id) => normalizar(id).replace(/\s+/g, ""))
       .filter(Boolean);
+  }
+
+  function separarIdsOriginais(valor) {
+    if (typeof MediaIdUtils !== "undefined") return MediaIdUtils.extrair(valor);
+    return separarIds(valor).map((id) => id.toUpperCase());
   }
 
   function contarOcorrencias(texto, termo) {
     if (!texto || !termo) return 0;
-    const padrao = new RegExp(`(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`, "gu");
+    const padrao = new RegExp(
+      `(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`,
+      "gu"
+    );
     return [...texto.matchAll(padrao)].length;
   }
 
   function calcularScoreCampo(valor, expansao, pesoCampo) {
     const texto = normalizar(valor);
-    const termo = expansao.termo;
-
+    const termo = normalizar(expansao.termo);
     if (!texto || !termo) return 0;
 
     let score = 0;
 
     if (texto === termo) {
-      score += pesoCampo * 2;
+      score = pesoCampo * 2;
     } else if (contemTermo(texto, termo)) {
-      score += pesoCampo;
+      score = pesoCampo;
+    } else if (podeUsarPrefixo(expansao, termo) && contemPrefixoPalavra(texto, termo)) {
+      score = pesoCampo * 0.55;
     } else {
       return 0;
     }
@@ -83,13 +118,15 @@ const SearchEngine = (() => {
       score += Math.min(ocorrencias - 1, 4) * (pesoCampo * 0.08);
     }
 
-    return score * expansao.peso;
+    return score * (Number(expansao.peso) || 1);
   }
 
   function detectarMediaIdExato(registro, consulta) {
     const idsRegistro = separarIds(registro.ID);
-    const consultaNormalizada = normalizar(consulta);
-    return idsRegistro.includes(consultaNormalizada);
+    const idConsulta = typeof MediaIdUtils !== "undefined"
+      ? MediaIdUtils.normalizar(consulta).toLocaleLowerCase("pt-BR")
+      : normalizar(consulta).replace(/\s+/g, "");
+    return Boolean(idConsulta) && idsRegistro.includes(idConsulta);
   }
 
   function enriquecerComCreditos(registro) {
@@ -106,18 +143,71 @@ const SearchEngine = (() => {
     };
   }
 
+  function enriquecerComMetadados(registro) {
+    if (
+      typeof MediaEnrichment === "undefined" ||
+      typeof MediaEnrichment.camposPesquisa !== "function"
+    ) {
+      return registro;
+    }
+
+    const campos = {
+      KEYWORDS: [],
+      SUBJECTS: [],
+      PEOPLE: [],
+      PLACES: [],
+      SEGMENTS: []
+    };
+
+    separarIdsOriginais(registro.ID).forEach((id) => {
+      const enriquecido = MediaEnrichment.camposPesquisa(id) || {};
+      Object.keys(campos).forEach((campo) => {
+        const valor = String(enriquecido[campo] || "").trim();
+        if (valor) campos[campo].push(valor);
+      });
+    });
+
+    return {
+      ...registro,
+      ...Object.fromEntries(Object.entries(campos).map(([campo, valores]) => [campo, valores.join(" ")]))
+    };
+  }
+
+  function enriquecerRegistro(registro) {
+    return enriquecerComMetadados(enriquecerComCreditos(registro));
+  }
+
+  function encontrarMatchesSegmentos(registro, consulta) {
+    if (
+      typeof MediaSegments === "undefined" ||
+      typeof MediaSegments.buscar !== "function"
+    ) return [];
+
+    const matches = [];
+    separarIdsOriginais(registro.ID).forEach((id) => {
+      MediaSegments.buscar(id, consulta).forEach((segmento) => {
+        matches.push({ ...segmento, mediaId: id });
+      });
+    });
+
+    return matches
+      .sort((a, b) => (b.score || 0) - (a.score || 0) || (a.start || 0) - (b.start || 0))
+      .slice(0, 5);
+  }
+
   function calcularRelevancia(registroOriginal, consulta) {
-    const registro = enriquecerComCreditos(registroOriginal);
+    const registro = enriquecerRegistro(registroOriginal);
     const consultaNormalizada = normalizar(consulta);
 
     if (!consultaNormalizada) {
-      return { score: 0, correspondencias: [] };
+      return { score: 0, correspondencias: [], segmentMatches: [] };
     }
 
     if (detectarMediaIdExato(registro, consulta)) {
       return {
         score: 10000,
-        correspondencias: [{ campo: "ID", termo: consulta, tipo: "id-exato" }]
+        correspondencias: [{ campo: "ID", termo: consulta, tipo: "id-exato" }],
+        segmentMatches: []
       };
     }
 
@@ -157,8 +247,9 @@ const SearchEngine = (() => {
 
     if (palavrasOriginais.length > 1) {
       const textoCompleto = normalizar(Object.values(registro).join(" "));
-      const quantidadeEncontrada = palavrasOriginais.filter(
-        (palavra) => contemTermo(textoCompleto, palavra)
+      const quantidadeEncontrada = palavrasOriginais.filter((palavra) =>
+        contemTermo(textoCompleto, palavra) ||
+        (palavra.length >= 4 && contemPrefixoPalavra(textoCompleto, palavra))
       ).length;
 
       if (quantidadeEncontrada === palavrasOriginais.length) {
@@ -168,7 +259,8 @@ const SearchEngine = (() => {
       }
     }
 
-    return { score, correspondencias };
+    const segmentMatches = encontrarMatchesSegmentos(registro, consulta);
+    return { score, correspondencias, segmentMatches };
   }
 
   function filtrarPrograma(registros, programa) {
@@ -194,7 +286,8 @@ const SearchEngine = (() => {
           registro,
           indiceOriginal,
           score: relevancia.score,
-          correspondencias: relevancia.correspondencias
+          correspondencias: relevancia.correspondencias,
+          segmentMatches: relevancia.segmentMatches || []
         };
       })
       .filter((item) => item.score > 0)
@@ -202,14 +295,16 @@ const SearchEngine = (() => {
       .map((item) => ({
         ...item.registro,
         _SEARCH_SCORE: item.score,
-        _SEARCH_MATCHES: item.correspondencias
+        _SEARCH_MATCHES: item.correspondencias,
+        _SEARCH_SEGMENT_MATCHES: item.segmentMatches
       }));
   }
 
   function explicarResultado(registro) {
     return {
       score: registro._SEARCH_SCORE || 0,
-      correspondencias: registro._SEARCH_MATCHES || []
+      correspondencias: registro._SEARCH_MATCHES || [],
+      segmentos: registro._SEARCH_SEGMENT_MATCHES || []
     };
   }
 

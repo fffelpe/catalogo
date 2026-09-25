@@ -1,0 +1,69 @@
+name: Deploy catálogo no GitHub Pages
+
+on:
+  workflow_run:
+    workflows:
+      - "Sincronizar planilhas do catálogo"
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Rodar suíte completa de testes
+        run: npm test
+
+      - name: Validar frescor do snapshot principal
+        env:
+          SNAPSHOT_MAX_AGE_MINUTES: "20"
+        run: npm run check:snapshot
+
+      - name: Preparar site público
+        run: |
+          rm -rf .pages-dist
+          mkdir -p .pages-dist
+          cp index.html .pages-dist/
+          cp -R css data images js pages .pages-dist/
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Empacotar site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ".pages-dist"
+
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

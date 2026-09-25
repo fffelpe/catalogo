@@ -2,16 +2,22 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import { google } from "googleapis";
-import pdfParse from "pdf-parse";
+import mammoth from "mammoth";
+import { PDFParse } from "pdf-parse";
+import {
+  extrairMediaIdDoNome,
+  resolverCandidatosCredito,
+  arquivoEhOficial,
+  avaliarNovidadeConflito,
+  instrucoesParaConflito
+} from "./creditos-conflitos.mjs";
 
 const PASTA_CREDITOS_ID = process.env.DRIVE_CREDITOS_FOLDER_ID || "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik";
 const SAIDA = path.resolve("data/creditos.json");
 const STATUS = path.resolve("data/creditos-status.json");
 
 const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
-if (!credenciaisJson) {
-  throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
-}
+if (!credenciaisJson) throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
 
 let credentials;
 try {
@@ -24,15 +30,10 @@ const auth = new google.auth.GoogleAuth({
   credentials,
   scopes: ["https://www.googleapis.com/auth/drive.readonly"]
 });
-
 const drive = google.drive({ version: "v3", auth });
 
 function normalizarId(nome) {
-  const id = String(nome || "")
-    .replace(/\.[^.]+$/, "")
-    .trim()
-    .toUpperCase();
-  return /^[A-Z0-9]{8,20}$/.test(id) ? id : "";
+  return extrairMediaIdDoNome(nome);
 }
 
 function limparLinhas(texto) {
@@ -65,9 +66,7 @@ function interpretarTexto(texto) {
 
   let materia = "";
   if (linhas.length) {
-    materia = linhas[0]
-      .replace(/^mat[eé]ria\s*\d*\s*[-–—:]?\s*/i, "")
-      .trim();
+    materia = linhas[0].replace(/^mat[eé]ria\s*\d*\s*[-–—:]?\s*/i, "").trim();
     consumidas.add(0);
   }
 
@@ -104,16 +103,10 @@ function interpretarTexto(texto) {
   for (let i = 0; i < candidatosFonte.length; i += 2) {
     const nome = candidatosFonte[i]?.linha || "";
     const cargo = candidatosFonte[i + 1]?.linha || "";
-    if (!nome) continue;
-    fontes.push({ nome, ...(cargo ? { cargo } : {}) });
+    if (nome) fontes.push({ nome, ...(cargo ? { cargo } : {}) });
   }
 
-  return {
-    materia,
-    fontes,
-    creditos,
-    textoCompleto: linhas.join(" | ")
-  };
+  return { materia, fontes, creditos, textoCompleto: linhas.join(" | ") };
 }
 
 async function listarArquivos() {
@@ -132,6 +125,24 @@ async function listarArquivos() {
   return arquivos;
 }
 
+async function baixarArquivo(arquivo) {
+  const resposta = await drive.files.get(
+    { fileId: arquivo.id, alt: "media" },
+    { responseType: "arraybuffer" }
+  );
+  return Buffer.from(resposta.data);
+}
+
+async function extrairTextoPdf(buffer) {
+  const parser = new PDFParse({ data: buffer });
+  try {
+    const resultado = await parser.getText();
+    return resultado.text || "";
+  } finally {
+    await parser.destroy();
+  }
+}
+
 async function extrairTexto(arquivo) {
   if (arquivo.mimeType === "application/vnd.google-apps.document") {
     const resposta = await drive.files.export(
@@ -142,76 +153,255 @@ async function extrairTexto(arquivo) {
   }
 
   if (arquivo.mimeType === "application/pdf") {
-    const resposta = await drive.files.get(
-      { fileId: arquivo.id, alt: "media" },
-      { responseType: "arraybuffer" }
-    );
-    const resultado = await pdfParse(Buffer.from(resposta.data));
-    return resultado.text || "";
+    return extrairTextoPdf(await baixarArquivo(arquivo));
+  }
+
+  if (arquivo.mimeType === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+    const resultado = await mammoth.extractRawText({ buffer: await baixarArquivo(arquivo) });
+    return resultado.value || "";
   }
 
   return "";
 }
 
+async function carregarRegistrosAnteriores() {
+  try {
+    return JSON.parse(await fs.readFile(SAIDA, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+async function carregarStatusAnterior() {
+  try {
+    return JSON.parse(await fs.readFile(STATUS, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+function ordenarMaisRecentes(arquivos) {
+  return [...arquivos].sort((a, b) => {
+    const ta = Date.parse(a.modifiedTime || "") || 0;
+    const tb = Date.parse(b.modifiedTime || "") || 0;
+    if (tb !== ta) return tb - ta;
+    return String(a.name || "").localeCompare(String(b.name || ""), "pt-BR");
+  });
+}
+
+async function escreverStatus(dados) {
+  await fs.mkdir(path.dirname(STATUS), { recursive: true });
+  await fs.writeFile(STATUS, `${JSON.stringify(dados, null, 2)}\n`, "utf8");
+}
+
 async function main() {
   const arquivos = await listarArquivos();
+  const [anteriores, statusAnterior] = await Promise.all([
+    carregarRegistrosAnteriores(),
+    carregarStatusAnterior()
+  ]);
   const registros = {};
   const ignorados = [];
   const erros = [];
+  const duplicados = [];
+  const conflitos = [];
+  const rejeitadosNovos = [];
+  const preservados = [];
 
+  const grupos = new Map();
   for (const arquivo of arquivos) {
     const id = normalizarId(arquivo.name);
     if (!id) {
-      ignorados.push({ nome: arquivo.name, motivo: "nome não corresponde a um Media ID" });
+      ignorados.push({
+        nome: arquivo.name,
+        motivo: "nome não contém exatamente um Media ID reconhecível (0000X00000 ou 0000X000000)"
+      });
+      continue;
+    }
+    if (!grupos.has(id)) grupos.set(id, []);
+    grupos.get(id).push(arquivo);
+  }
+
+  for (const [id, candidatosOriginais] of grupos.entries()) {
+    const candidatos = ordenarMaisRecentes(candidatosOriginais);
+    const resolucao = resolverCandidatosCredito(id, candidatos);
+
+    if (candidatos.length > 1) {
+      duplicados.push({
+        id,
+        criterio: resolucao.tipo === "oficial"
+          ? "única versão explicitamente marcada como OFICIAL"
+          : "conflito: nenhuma escolha automática é permitida",
+        escolhido: resolucao.escolhido?.name || null,
+        oficiais: candidatos.filter(arquivoEhOficial).map((item) => item.name),
+        arquivos: candidatos.map((item) => ({
+          id: item.id,
+          nome: item.name,
+          atualizadoEm: item.modifiedTime || ""
+        }))
+      });
+    }
+
+    if (resolucao.tipo === "conflito") {
+      const novidade = avaliarNovidadeConflito(id, candidatos, statusAnterior, anteriores[id]);
+      const instrucoes = instrucoesParaConflito(id, resolucao);
+      const arquivosDetalhados = candidatos.map((item) => ({
+        id: item.id,
+        nome: item.name,
+        atualizadoEm: item.modifiedTime || ""
+      }));
+      const novosArquivos = novidade.novosArquivos.map((item) => ({
+        id: item.id,
+        nome: item.name,
+        atualizadoEm: item.modifiedTime || ""
+      }));
+
+      const conflito = {
+        id,
+        motivo: resolucao.motivo,
+        tipo: novidade.novo ? "novo-ou-agravado" : "existente",
+        bloqueante: novidade.bloqueante,
+        rejeitado: novidade.bloqueante,
+        acao: anteriores[id]
+          ? "crédito anterior preservado; documentos conflitantes não foram aceitos pela sincronização"
+          : "nenhum crédito publicado até existir exatamente uma versão oficial",
+        oficiais: resolucao.oficiais.map((item) => item.name),
+        novosArquivos,
+        arquivos: arquivosDetalhados,
+        exemploNomeOficial: `${id} - OFICIAL`,
+        instrucoes
+      };
+      conflitos.push(conflito);
+
+      if (novidade.bloqueante) {
+        rejeitadosNovos.push({
+          id,
+          motivo: resolucao.motivo,
+          novosArquivos,
+          instrucoes
+        });
+      }
+
+      console.warn(
+        `Conflito de crédito em ${id}: ${resolucao.motivo}. `
+        + (novidade.bloqueante ? "Validação bloqueante ativa." : "Conflito legado preservado.")
+      );
+
+      if (anteriores[id]) {
+        registros[id] = anteriores[id];
+        preservados.push({
+          id,
+          motivo: `${resolucao.motivo}; crédito anterior preservado`
+        });
+      } else {
+        ignorados.push({
+          nome: id,
+          motivo: `${resolucao.motivo}; sem versão anterior para preservar`
+        });
+      }
       continue;
     }
 
-    try {
-      const texto = await extrairTexto(arquivo);
-      if (!texto.trim()) {
-        ignorados.push({ nome: arquivo.name, motivo: `formato sem extração de texto (${arquivo.mimeType})` });
-        continue;
+    const escolhido = resolucao.escolhido;
+    if (!escolhido) {
+      if (anteriores[id]) {
+        registros[id] = anteriores[id];
+        preservados.push({ id, motivo: "nenhum documento selecionável; crédito anterior preservado" });
+      } else {
+        ignorados.push({ nome: id, motivo: "nenhum documento selecionável" });
       }
-
-      registros[id] = {
-        ...interpretarTexto(texto),
-        arquivo: {
-          id: arquivo.id,
-          nome: arquivo.name,
-          mimeType: arquivo.mimeType,
-          atualizadoEm: arquivo.modifiedTime || "",
-          url: arquivo.webViewLink || `https://drive.google.com/open?id=${arquivo.id}`
-        },
-        origem: "Google Drive"
-      };
-    } catch (erro) {
-      erros.push({ nome: arquivo.name, id, erro: erro.message });
-      console.error(`Erro em ${arquivo.name}:`, erro.message);
+      continue;
     }
+
+    let textoEscolhido = "";
+    try {
+      textoEscolhido = await extrairTexto(escolhido);
+      if (!textoEscolhido.trim()) {
+        throw new Error(`sem texto extraível (${escolhido.mimeType})`);
+      }
+    } catch (erro) {
+      erros.push({ id, nome: escolhido.name, erro: erro.message });
+      console.error(`Erro em ${escolhido.name}:`, erro.message);
+
+      if (anteriores[id]) {
+        registros[id] = anteriores[id];
+        preservados.push({
+          id,
+          motivo: resolucao.tipo === "oficial"
+            ? "versão oficial atual não pôde ser lida; crédito anterior preservado"
+            : "documento atual não pôde ser lido; crédito anterior preservado"
+        });
+      } else {
+        ignorados.push({
+          nome: escolhido.name,
+          motivo: "documento selecionado não pôde ser lido e não existe versão anterior"
+        });
+      }
+      continue;
+    }
+
+    registros[id] = {
+      ...interpretarTexto(textoEscolhido),
+      arquivo: {
+        id: escolhido.id,
+        nome: escolhido.name,
+        mimeType: escolhido.mimeType,
+        atualizadoEm: escolhido.modifiedTime || "",
+        url: escolhido.webViewLink || `https://drive.google.com/open?id=${escolhido.id}`
+      },
+      origem: "Google Drive",
+      selecao: {
+        tipo: resolucao.tipo,
+        motivo: resolucao.motivo
+      }
+    };
   }
 
   if (!Object.keys(registros).length) {
-    throw new Error("Nenhum crédito válido foi extraído; o JSON existente foi preservado.");
+    throw new Error("Nenhum crédito válido foi extraído e não havia registros anteriores para preservar.");
   }
 
   await fs.mkdir(path.dirname(SAIDA), { recursive: true });
   await fs.writeFile(SAIDA, `${JSON.stringify(registros, null, 2)}\n`, "utf8");
-  await fs.writeFile(
-    STATUS,
-    `${JSON.stringify({
-      sincronizadoEm: new Date().toISOString(),
-      pastaDrive: PASTA_CREDITOS_ID,
-      totalArquivos: arquivos.length,
-      totalSincronizados: Object.keys(registros).length,
-      totalIgnorados: ignorados.length,
-      totalErros: erros.length,
-      ignorados,
-      erros
-    }, null, 2)}\n`,
-    "utf8"
-  );
 
-  console.log(`Créditos sincronizados: ${Object.keys(registros).length}/${arquivos.length}`);
+  const status = {
+    sincronizadoEm: new Date().toISOString(),
+    pastaDrive: PASTA_CREDITOS_ID,
+    totalArquivos: arquivos.length,
+    totalIdsDetectados: grupos.size,
+    totalSincronizados: Object.keys(registros).length,
+    totalIgnorados: ignorados.length,
+    totalErros: erros.length,
+    totalDuplicados: duplicados.length,
+    totalConflitos: conflitos.length,
+    totalConflitosBloqueantes: conflitos.filter((item) => item.bloqueante).length,
+    totalNovosDuplicadosRejeitados: rejeitadosNovos.length,
+    totalPreservados: preservados.length,
+    validacaoBloqueante: rejeitadosNovos.length > 0,
+    regraDuplicidade: "Quando há dois ou mais documentos para o mesmo Media ID, exatamente um arquivo deve conter a palavra OFICIAL no nome. Novos conflitos são rejeitados e permanecem bloqueantes até serem resolvidos.",
+    comoResolverConflitos: [
+      "Escolha uma única versão correta para cada Media ID em conflito.",
+      "Inclua a palavra OFICIAL somente no nome dessa versão, por exemplo: 1452B005138 - OFICIAL.docx.",
+      "Remova OFICIAL das demais versões ou mova/exclua os arquivos obsoletos da pasta de créditos.",
+      "Execute novamente a sincronização; a versão anterior permanece preservada enquanto o conflito existir."
+    ],
+    ignorados,
+    duplicados,
+    conflitos,
+    rejeitadosNovos,
+    preservados,
+    erros
+  };
+  await escreverStatus(status);
+
+  console.log(`Créditos disponíveis: ${Object.keys(registros).length}/${grupos.size} Media IDs.`);
+  if (duplicados.length) console.warn(`IDs com documentos duplicados: ${duplicados.length}.`);
+  if (conflitos.length) console.warn(`Conflitos sem seleção automática: ${conflitos.length}.`);
+  if (rejeitadosNovos.length) {
+    console.error(`Novos documentos duplicados rejeitados: ${rejeitadosNovos.length}. Consulte data/creditos-status.json para instruções.`);
+  }
+  if (preservados.length) console.warn(`Créditos anteriores preservados: ${preservados.length}.`);
+  if (erros.length) console.warn(`Tentativas de leitura com erro: ${erros.length}.`);
 }
 
 main().catch((erro) => {

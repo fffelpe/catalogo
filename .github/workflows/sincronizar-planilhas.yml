@@ -2,39 +2,113 @@ name: Sincronizar planilhas do catálogo
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/5 * * * *"
 
   workflow_dispatch:
 
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "data/**"
+
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: sincronizar-planilhas
   cancel-in-progress: false
 
 jobs:
-
   sincronizar:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Baixar repositório
         uses: actions/checkout@v7
 
       - name: Configurar Node.js
         uses: actions/setup-node@v7
-
         with:
           node-version: "24"
+          cache: npm
 
       - name: Instalar dependências
-        run: npm install --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Testar enriquecimento de LOCAL do AgroCultura
+        run: node --test tests/agrocultura-local.test.mjs
+
+      - name: Testar snapshot local do catálogo
+        run: node --test tests/catalogo-snapshot.test.mjs tests/dados-local-first.test.mjs
+
+      - name: Testar frescor do snapshot
+        run: node --test tests/snapshot-freshness.test.mjs
+
+      - name: Testar sincronização, prefixos e erros de permissão
+        run: node --test tests/programa-por-prefixo.test.mjs tests/google-sheets-errors.test.mjs tests/sincronizar-planilhas-fontes.test.mjs
 
       - name: Sincronizar planilhas
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-
         run: npm run sync:planilhas
+
+      - name: Gerar snapshot principal do catálogo
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: npm run sync:catalogo
+
+      - name: Validar frescor do snapshot principal
+        env:
+          SNAPSHOT_MAX_AGE_MINUTES: "20"
+        run: npm run check:snapshot
+
+      - name: Gerar acervo estruturado do AgroCultura
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: npm run sync:agrocultura
+
+      - name: Publicar snapshots do catálogo
+        run: |
+          if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json)" ]; then
+            echo "Nenhuma alteração nos snapshots do catálogo."
+            exit 0
+          fi
+
+          mkdir -p /tmp/catalogo-snapshots
+          cp data/catalogo-acervo.json /tmp/catalogo-snapshots/catalogo-acervo.json
+          cp data/agrocultura-acervo.json /tmp/catalogo-snapshots/agrocultura-acervo.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for tentativa in 1 2 3 4 5; do
+            echo "Tentativa ${tentativa}/5 de publicar os snapshots..."
+
+            git fetch origin main
+            git reset --hard origin/main
+
+            cp /tmp/catalogo-snapshots/catalogo-acervo.json data/catalogo-acervo.json
+            cp /tmp/catalogo-snapshots/agrocultura-acervo.json data/agrocultura-acervo.json
+            git add data/catalogo-acervo.json data/agrocultura-acervo.json
+
+            if git diff --cached --quiet; then
+              echo "Os snapshots já estão atualizados na branch main."
+              exit 0
+            fi
+
+            git commit -m "chore: atualiza snapshots do catálogo"
+
+            if git push origin HEAD:main; then
+              echo "Snapshots publicados com sucesso."
+              exit 0
+            fi
+
+            if [ "$tentativa" -lt 5 ]; then
+              echo "A branch main mudou durante o push; reaplicando os snapshots sobre a versão mais recente..."
+              sleep 2
+            fi
+          done
+
+          echo "Não foi possível publicar os snapshots após 5 tentativas."
+          exit 1
