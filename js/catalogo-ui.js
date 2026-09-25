@@ -1,9 +1,27 @@
 // catalogo-ui.js - Integra a interface com busca inteligente, autocomplete,
-// histórico, buscas populares, paginação, analytics global e cópia de Media IDs.
+// histórico, buscas populares, filtros da tabela, paginação, analytics global e cópia de Media IDs.
 
+let resultadosBase = [];
 let resultadosAtuais = [];
 let paginaAtual = 0;
+let consultaAtual = "";
+let campoFiltroAberto = "";
 const ITENS_POR_PAGINA = 50;
+const CAMPOS_FILTRO_CATEGORIA = ["LOCAL", "REPORTER", "AFILIADA_EMISSORA", "PROGRAMA", "EDITORIA"];
+
+function criarFiltrosVazios() {
+  return {
+    dataInicio: "",
+    dataFim: "",
+    LOCAL: [],
+    REPORTER: [],
+    AFILIADA_EMISSORA: [],
+    PROGRAMA: [],
+    EDITORIA: []
+  };
+}
+
+let filtrosAtivos = criarFiltrosVazios();
 
 function debounce(func, timeout = 300) {
   let timer;
@@ -204,6 +222,251 @@ function renderizarProximaPagina() {
   if (loadMoreBtn) loadMoreBtn.style.display = fim < resultadosAtuais.length ? "inline-block" : "none";
 }
 
+function filtroCampoEstaAtivo(campo) {
+  if (campo === "DATA") return Boolean(filtrosAtivos.dataInicio || filtrosAtivos.dataFim);
+  return Array.isArray(filtrosAtivos[campo]) && filtrosAtivos[campo].length > 0;
+}
+
+function atualizarIndicadoresFiltros() {
+  document.querySelectorAll(".btn-filtro-coluna[data-filter-field]").forEach((botao) => {
+    const ativo = filtroCampoEstaAtivo(botao.dataset.filterField);
+    botao.classList.toggle("filtro-ativo", ativo);
+    botao.setAttribute("aria-pressed", ativo ? "true" : "false");
+  });
+
+  const limpar = document.getElementById("limparFiltrosTabela");
+  if (limpar) {
+    limpar.hidden = typeof ResultFilters === "undefined" ? true : !ResultFilters.temFiltros(filtrosAtivos);
+  }
+}
+
+function atualizarStatusResultados() {
+  const possuiFiltros = typeof ResultFilters !== "undefined" && ResultFilters.temFiltros(filtrosAtivos);
+
+  if (possuiFiltros) {
+    if (consultaAtual) {
+      setStatus(`${resultadosAtuais.length} resultado(s) após os filtros, de ${resultadosBase.length} encontrado(s) para “${consultaAtual}”.`);
+    } else {
+      setStatus(`${resultadosAtuais.length} item(ns) após os filtros, de ${resultadosBase.length} item(ns) no acervo.`);
+    }
+    return;
+  }
+
+  if (consultaAtual) setStatus(`${resultadosAtuais.length} resultado(s) encontrado(s) para “${consultaAtual}”.`);
+  else setStatus(`${resultadosAtuais.length} item(ns) no acervo.`);
+}
+
+function aplicarFiltrosTabela() {
+  resultadosAtuais = typeof ResultFilters === "undefined"
+    ? resultadosBase.slice()
+    : ResultFilters.aplicar(resultadosBase, filtrosAtivos);
+
+  paginaAtual = 0;
+  const tbody = document.getElementById("resultsBody");
+  if (tbody) tbody.innerHTML = "";
+
+  atualizarIndicadoresFiltros();
+  atualizarStatusResultados();
+  renderizarProximaPagina();
+}
+
+function reconciliarFiltrosComResultados() {
+  if (typeof ResultFilters === "undefined") return;
+
+  CAMPOS_FILTRO_CATEGORIA.forEach((campo) => {
+    const disponiveis = new Set(
+      ResultFilters.obterOpcoes(resultadosBase, campo).map((valor) => ResultFilters.normalizarTexto(valor))
+    );
+    filtrosAtivos[campo] = (filtrosAtivos[campo] || []).filter((valor) =>
+      disponiveis.has(ResultFilters.normalizarTexto(valor))
+    );
+  });
+}
+
+function fecharFiltroPopover() {
+  const popover = document.getElementById("filtroTabelaPopover");
+  if (popover) popover.hidden = true;
+  campoFiltroAberto = "";
+}
+
+function posicionarFiltroPopover(botao) {
+  const popover = document.getElementById("filtroTabelaPopover");
+  if (!popover || popover.hidden || !botao) return;
+
+  const margem = 12;
+  const rect = botao.getBoundingClientRect();
+  const largura = popover.offsetWidth || 300;
+  const altura = popover.offsetHeight || 240;
+  let left = Math.min(rect.left, window.innerWidth - largura - margem);
+  left = Math.max(margem, left);
+
+  let top = rect.bottom + 7;
+  if (top + altura > window.innerHeight - margem) {
+    top = Math.max(margem, rect.top - altura - 7);
+  }
+
+  popover.style.left = `${Math.round(left)}px`;
+  popover.style.top = `${Math.round(top)}px`;
+}
+
+function limparFiltroCampo(campo) {
+  if (campo === "DATA") {
+    filtrosAtivos.dataInicio = "";
+    filtrosAtivos.dataFim = "";
+  } else if (CAMPOS_FILTRO_CATEGORIA.includes(campo)) {
+    filtrosAtivos[campo] = [];
+  }
+  aplicarFiltrosTabela();
+}
+
+function renderizarFiltroData(conteudo, botao) {
+  conteudo.innerHTML = `
+    <p class="filtro-tabela-titulo">Filtrar por data</p>
+    <div class="filtro-data-grade">
+      <label class="filtro-data-campo">De
+        <input type="date" id="filtroDataInicio" value="${escapeHtml(filtrosAtivos.dataInicio)}">
+      </label>
+      <label class="filtro-data-campo">Até
+        <input type="date" id="filtroDataFim" value="${escapeHtml(filtrosAtivos.dataFim)}">
+      </label>
+    </div>
+    <div class="filtro-popover-acoes">
+      <button type="button" class="filtro-popover-botao" data-limpar-filtro="DATA">Limpar data</button>
+    </div>
+  `;
+
+  const inicio = conteudo.querySelector("#filtroDataInicio");
+  const fim = conteudo.querySelector("#filtroDataFim");
+
+  const aplicarData = () => {
+    filtrosAtivos.dataInicio = inicio?.value || "";
+    filtrosAtivos.dataFim = fim?.value || "";
+    aplicarFiltrosTabela();
+    posicionarFiltroPopover(botao);
+  };
+
+  inicio?.addEventListener("change", aplicarData);
+  fim?.addEventListener("change", aplicarData);
+}
+
+function renderizarFiltroCategoria(campo, conteudo, botao) {
+  const nomes = {
+    LOCAL: "local",
+    REPORTER: "repórter",
+    AFILIADA_EMISSORA: "afiliada / emissora",
+    PROGRAMA: "programa",
+    EDITORIA: "editoria"
+  };
+  const opcoes = typeof ResultFilters === "undefined" ? [] : ResultFilters.obterOpcoes(resultadosBase, campo);
+  const selecionados = new Set((filtrosAtivos[campo] || []).map((valor) => normalizarTexto(valor)));
+
+  const lista = opcoes.map((valor) => {
+    const valorSeguro = escapeHtml(valor);
+    const marcado = selecionados.has(normalizarTexto(valor)) ? " checked" : "";
+    return `
+      <label class="filtro-opcao" data-filtro-texto="${escapeHtml(normalizarTexto(valor))}">
+        <input type="checkbox" data-filter-value="${valorSeguro}"${marcado}>
+        <span>${valorSeguro}</span>
+      </label>
+    `;
+  }).join("");
+
+  conteudo.innerHTML = `
+    <p class="filtro-tabela-titulo">Filtrar por ${escapeHtml(nomes[campo] || campo)}</p>
+    <input type="search" class="filtro-busca-opcoes" placeholder="Buscar opção..." aria-label="Buscar opção do filtro">
+    <div class="filtro-opcoes-lista">
+      ${lista || '<p class="filtro-opcoes-vazio">Nenhuma opção disponível nesta busca.</p>'}
+    </div>
+    <div class="filtro-popover-acoes">
+      <button type="button" class="filtro-popover-botao" data-limpar-filtro="${escapeHtml(campo)}">Limpar seleção</button>
+    </div>
+  `;
+
+  const busca = conteudo.querySelector(".filtro-busca-opcoes");
+  busca?.addEventListener("input", () => {
+    const termo = normalizarTexto(busca.value);
+    conteudo.querySelectorAll(".filtro-opcao").forEach((opcao) => {
+      opcao.hidden = termo ? !String(opcao.dataset.filtroTexto || "").includes(termo) : false;
+    });
+  });
+
+  conteudo.querySelectorAll("input[data-filter-value]").forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      filtrosAtivos[campo] = Array.from(conteudo.querySelectorAll("input[data-filter-value]:checked"))
+        .map((input) => input.dataset.filterValue)
+        .filter(Boolean);
+      aplicarFiltrosTabela();
+      posicionarFiltroPopover(botao);
+    });
+  });
+}
+
+function abrirFiltroPopover(campo, botao) {
+  const popover = document.getElementById("filtroTabelaPopover");
+  const conteudo = document.getElementById("filtroTabelaConteudo");
+  if (!popover || !conteudo) return;
+
+  if (!popover.hidden && campoFiltroAberto === campo) {
+    fecharFiltroPopover();
+    return;
+  }
+
+  campoFiltroAberto = campo;
+  if (campo === "DATA") renderizarFiltroData(conteudo, botao);
+  else renderizarFiltroCategoria(campo, conteudo, botao);
+
+  popover.hidden = false;
+  posicionarFiltroPopover(botao);
+}
+
+function limparTodosFiltrosTabela() {
+  filtrosAtivos = criarFiltrosVazios();
+  fecharFiltroPopover();
+  aplicarFiltrosTabela();
+}
+
+function inicializarFiltrosTabela() {
+  const popover = document.getElementById("filtroTabelaPopover");
+  const limparTodos = document.getElementById("limparFiltrosTabela");
+  const botoes = document.querySelectorAll(".btn-filtro-coluna[data-filter-field]");
+  if (!popover || !botoes.length) return;
+
+  botoes.forEach((botao) => {
+    botao.addEventListener("click", (event) => {
+      event.stopPropagation();
+      abrirFiltroPopover(botao.dataset.filterField, botao);
+    });
+  });
+
+  limparTodos?.addEventListener("click", limparTodosFiltrosTabela);
+
+  popover.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const limparCampo = event.target.closest("[data-limpar-filtro]");
+    if (!limparCampo) return;
+    const campo = limparCampo.dataset.limparFiltro;
+    limparFiltroCampo(campo);
+    const botao = document.querySelector(`.btn-filtro-coluna[data-filter-field="${campo}"]`);
+    if (campo === "DATA") renderizarFiltroData(document.getElementById("filtroTabelaConteudo"), botao);
+    else renderizarFiltroCategoria(campo, document.getElementById("filtroTabelaConteudo"), botao);
+    posicionarFiltroPopover(botao);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (popover.hidden) return;
+    if (event.target.closest(".filtro-tabela-popover") || event.target.closest(".btn-filtro-coluna")) return;
+    fecharFiltroPopover();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") fecharFiltroPopover();
+  });
+
+  window.addEventListener("resize", fecharFiltroPopover);
+  window.addEventListener("scroll", fecharFiltroPopover, true);
+  atualizarIndicadoresFiltros();
+}
+
 function registrarAnalyticsGlobal(consulta, programa) {
   if (
     typeof AnalyticsGlobal === "undefined" ||
@@ -211,7 +474,7 @@ function registrarAnalyticsGlobal(consulta, programa) {
     !AnalyticsGlobal.estaConfigurado()
   ) return;
 
-  AnalyticsGlobal.registrarBusca(consulta, programa, resultadosAtuais.length)
+  AnalyticsGlobal.registrarBusca(consulta, programa, resultadosBase.length)
     .then((gravou) => {
       if (gravou && programa && typeof BuscasPopulares !== "undefined") {
         BuscasPopulares.renderizarPrograma(programa);
@@ -222,19 +485,16 @@ function registrarAnalyticsGlobal(consulta, programa) {
 
 function executarBusca(termo, programa = "", registrar = false) {
   const consulta = String(termo || "").trim();
+  consultaAtual = consulta;
 
-  resultadosAtuais = SearchEngine.pesquisar(
+  resultadosBase = SearchEngine.pesquisar(
     DadosMedia.registros,
     consulta,
     { programa }
   );
 
-  paginaAtual = 0;
-  const tbody = document.getElementById("resultsBody");
-  if (tbody) tbody.innerHTML = "";
-
-  if (consulta) setStatus(`${resultadosAtuais.length} resultado(s) encontrado(s) para “${consulta}”.`);
-  else setStatus(`${resultadosAtuais.length} item(ns) no acervo.`);
+  reconciliarFiltrosComResultados();
+  fecharFiltroPopover();
 
   if (registrar && consulta) {
     HistoricoBusca.registrar(consulta);
@@ -244,7 +504,7 @@ function executarBusca(termo, programa = "", registrar = false) {
     if (programa) BuscasPopulares.renderizarPrograma(programa);
   }
 
-  renderizarProximaPagina();
+  aplicarFiltrosTabela();
 }
 
 function carregarAutocompleteHomeSobDemanda(input, form) {
@@ -357,6 +617,7 @@ async function inicializarPaginaResultados() {
     onSelecionar: (termo) => executarBusca(termo, programa, true)
   });
 
+  inicializarFiltrosTabela();
   executarBusca(termoInicial, programa, Boolean(termoInicial));
   definirCarregamentoResultados(false);
 
