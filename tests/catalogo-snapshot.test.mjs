@@ -98,6 +98,38 @@ test("cruza duração individualmente quando uma linha do catálogo contém vár
   });
 });
 
+test("ignora duração de ID que não existe no catálogo e não cria novo registro", () => {
+  const duracoesPorId = criarMapaDuracoes([
+    ["1452B004869", "00:03:21"],
+    ["9999B999999", "00:09:59"],
+  ]);
+
+  const snapshot = criarSnapshotCatalogo([
+    [
+      "1452B004869",
+      "Registro existente",
+      "25/09/2026",
+      "São Paulo",
+      "Repórter Teste",
+      "TV Cultura",
+      "Jornal da Cultura",
+      "Geral",
+      "",
+    ],
+  ], {
+    generatedAt: "2026-09-25T21:00:00.000Z",
+    duracoesPorId,
+  });
+
+  assert.equal(snapshot.total, 1);
+  assert.equal(snapshot.registros.length, 1);
+  assert.equal(snapshot.registros[0].ID, "1452B004869");
+  assert.deepEqual(snapshot.registros[0].DURACOES, {
+    "1452B004869": "00:03:21",
+  });
+  assert.equal(snapshot.registros.some((registro) => registro.ID.includes("9999B999999")), false);
+});
+
 test("recusa publicar snapshot vazio para não substituir o acervo por acidente", () => {
   assert.throws(
     () => criarSnapshotCatalogo([["", "sem ID"]]),
