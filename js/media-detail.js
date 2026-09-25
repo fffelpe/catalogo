@@ -168,13 +168,20 @@ const MediaDetail = (() => {
   function configurarPlayer(mediaId, inicio) {
     const video = document.getElementById("mediaPlayer");
     const status = document.getElementById("mediaPlayerStatus");
-    MediaPlayer.montar(video, mediaId, inicio, {
+    const montado = MediaPlayer.montar(video, mediaId, inicio, {
       onError: () => {
         if (!status) return;
         status.textContent = "Não foi possível carregar a pré-visualização deste Media ID. Os metadados continuam disponíveis.";
         status.classList.add("is-error");
       }
     });
+
+    if (!montado && status) {
+      status.textContent = window.location.protocol === "https:"
+        ? "Pré-visualização indisponível neste acesso seguro. É necessário configurar o proxy HTTPS interno de vídeo; os metadados continuam disponíveis."
+        : "Não foi possível montar a pré-visualização deste Media ID. Os metadados continuam disponíveis.";
+      status.classList.add("is-error");
+    }
     return video;
   }
 
