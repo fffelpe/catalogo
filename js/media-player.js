@@ -3,11 +3,41 @@
 
 const MediaPlayer = (() => {
   const BASE_URL = "http://lowres.tvcultura.com.br/";
+  const PROXY_GLOBAL = "CATALOGO_VIDEO_PROXY_BASE_URL";
+
+  function contextoSeguro() {
+    return typeof window !== "undefined" && window.location?.protocol === "https:";
+  }
+
+  function obterProxyBaseUrl() {
+    const valor = typeof globalThis !== "undefined"
+      ? String(globalThis[PROXY_GLOBAL] || "").trim()
+      : "";
+    if (!valor) return "";
+
+    try {
+      const base = new URL(
+        valor,
+        typeof window !== "undefined" && window.location?.href
+          ? window.location.href
+          : undefined
+      );
+      if (base.protocol !== "https:") return "";
+      return base.href.endsWith("/") ? base.href : `${base.href}/`;
+    } catch {
+      return "";
+    }
+  }
 
   function criarUrl(mediaId) {
     if (typeof MediaIdUtils === "undefined" || typeof MediaIdUtils.normalizar !== "function") return "";
     const id = MediaIdUtils.normalizar(mediaId);
-    return id ? `${BASE_URL}${id}.mp4` : "";
+    if (!id) return "";
+
+    const proxy = obterProxyBaseUrl();
+    if (proxy) return `${proxy}${id}.mp4`;
+    if (contextoSeguro()) return "";
+    return `${BASE_URL}${id}.mp4`;
   }
 
   function normalizarInicio(valor) {
@@ -67,5 +97,15 @@ const MediaPlayer = (() => {
     }
   }
 
-  return { BASE_URL, criarUrl, normalizarInicio, aplicarInicio, montar, irPara };
+  return {
+    BASE_URL,
+    PROXY_GLOBAL,
+    contextoSeguro,
+    obterProxyBaseUrl,
+    criarUrl,
+    normalizarInicio,
+    aplicarInicio,
+    montar,
+    irPara
+  };
 })();
