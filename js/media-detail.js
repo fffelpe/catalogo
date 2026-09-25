@@ -45,6 +45,7 @@ const MediaDetail = (() => {
     container.textContent = "";
     const campos = [
       ["Data", registro.DATA],
+      ["Duração", registro.DURACAO],
       ["Programa", registro.PROGRAMA],
       ["Editoria", registro.EDITORIA],
       ["Local", registro.LOCAL],
