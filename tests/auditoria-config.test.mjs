@@ -50,6 +50,17 @@ test("créditos publicam com retry sem git pull --rebase", () => {
   assert.doesNotMatch(workflow, /git pull --rebase/);
 });
 
+test("sincronização de créditos usa pdf-parse v2 para PDFs modernos", () => {
+  const pacote = JSON.parse(ler("package.json"));
+  assert.match(pacote.dependencies?.["pdf-parse"] || "", /^\^2\.4\./);
+
+  const sync = ler("scripts/sincronizar-creditos.mjs");
+  assert.match(sync, /import\s*\{\s*PDFParse\s*\}\s*from\s*["']pdf-parse["']/);
+  assert.match(sync, /new PDFParse\(\{\s*data:/);
+  assert.match(sync, /\.getText\(\)/);
+  assert.match(sync, /\.destroy\(\)/);
+});
+
 test("repositório não publica hostname vercel.app como CNAME do GitHub Pages", () => {
   assert.equal(fs.existsSync("CNAME"), false);
 });
