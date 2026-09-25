@@ -1,10 +1,10 @@
-/* Cards horizontais para a listagem geral do catálogo.
+/* Cards compactos para a listagem geral do catálogo.
    Este arquivo é carregado depois de search-results-table.css e substitui
    apenas a apresentação das buscas gerais. As tabelas específicas do
    AgroCultura continuam com o layout próprio. */
 
 .results-table tbody tr {
-  --resultado-card-raio: 16px;
+  --resultado-card-raio: 12px;
 }
 
 .pagina-busca .table-wrap,
@@ -27,19 +27,18 @@
   background: transparent;
 }
 
-/* O antigo cabeçalho da tabela passa a funcionar como uma barra compacta
-   de filtros, preservando a lógica já existente. */
+/* Mantém os filtros existentes em uma barra compacta. */
 .pagina-busca .results-table thead,
 .pagina-programa .resultados-gerais-wrap > .results-table thead {
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .pagina-busca .results-table thead tr,
 .pagina-programa .resultados-gerais-wrap > .results-table thead tr {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -66,28 +65,28 @@
 .pagina-programa .resultados-gerais-wrap .cabecalho-coluna-filtro {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  min-height: 38px;
-  padding: 6px 8px 6px 13px;
-  border: 1px solid #cfe4d6;
-  border-radius: 11px;
+  gap: 7px;
+  min-height: 34px;
+  padding: 5px 7px 5px 11px;
+  border: 1px solid #d5e6da;
+  border-radius: 10px;
   background: #fff;
   color: #365242;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: .01em;
-  box-shadow: 0 2px 7px rgba(25, 75, 43, .04);
+  box-shadow: 0 2px 6px rgba(25, 75, 43, .04);
 }
 
 .pagina-busca .btn-filtro-coluna,
 .pagina-programa .resultados-gerais-wrap .btn-filtro-coluna {
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   border: 0;
   border-radius: 7px;
   background: #edf7f0;
   color: #176d45;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .pagina-busca .btn-filtro-coluna:hover,
@@ -107,31 +106,38 @@
 .pagina-busca .results-table tbody,
 .pagina-programa .resultados-gerais-wrap > .results-table tbody {
   display: grid;
-  gap: 14px;
+  gap: 10px;
   width: 100%;
 }
 
+/* Estrutura principal do card:
+   topo: ID à esquerda e programa à direita;
+   abaixo: repórter, local, descrição e afiliada. */
 .pagina-busca .results-table tbody tr,
 .pagina-programa .resultados-gerais-wrap > .results-table tbody tr {
-  display: flex !important;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 0;
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(150px, .9fr) minmax(150px, .9fr) minmax(300px, 2.4fr) minmax(145px, .85fr);
+  grid-template-areas:
+    "id programa programa programa"
+    "reporter local descricao afiliada"
+    ". . . acoes";
+  gap: 7px 14px;
   width: 100%;
   margin: 0;
-  padding: 18px 20px;
+  padding: 12px 14px;
   overflow: visible;
-  border: 1px solid #dce8e0;
-  border-radius: 16px;
+  border: 1px solid #dde9e1;
+  border-radius: 12px;
   background: #fff;
-  box-shadow: 0 6px 20px rgba(24, 73, 42, .07);
+  box-shadow: 0 3px 12px rgba(24, 73, 42, .06);
   transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
 
 .pagina-busca .results-table tbody tr:hover,
 .pagina-programa .resultados-gerais-wrap > .results-table tbody tr:hover {
-  border-color: #b7d6c1;
-  box-shadow: 0 9px 26px rgba(24, 73, 42, .10);
+  border-color: #b9d6c2;
+  box-shadow: 0 5px 16px rgba(24, 73, 42, .09);
   transform: translateY(-1px);
 }
 
@@ -145,8 +151,8 @@
   border: 0;
   background: transparent !important;
   color: #31463a;
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 12px;
+  line-height: 1.35;
   white-space: normal !important;
   overflow-wrap: anywhere;
 }
@@ -156,12 +162,11 @@
   content: none;
 }
 
-/* ID: principal âncora visual do card. */
-.pagina-busca .results-table tbody td:nth-child(1),
-.pagina-programa .resultados-gerais-wrap > .results-table tbody td:nth-child(1) {
-  order: 1;
-  flex: 1 1 420px;
-  padding-right: 18px;
+/* ID no topo esquerdo. */
+.pagina-busca .resultado-id,
+.pagina-programa .resultados-gerais-wrap .resultado-id {
+  grid-area: id;
+  align-self: center;
 }
 
 .pagina-busca .id-lista,
@@ -169,7 +174,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 7px 12px;
+  gap: 5px 10px;
 }
 
 .pagina-busca .id-item,
@@ -177,16 +182,16 @@
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .pagina-busca .id-media-link,
 .pagina-programa .resultados-gerais-wrap .id-media-link {
   color: #17261d;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
-  letter-spacing: .015em;
-  line-height: 1.25;
+  letter-spacing: .012em;
+  line-height: 1.2;
   text-decoration: none;
 }
 
@@ -201,31 +206,32 @@
 
 .pagina-busca .btn-copiar-id,
 .pagina-programa .resultados-gerais-wrap .btn-copiar-id {
-  width: 28px;
-  height: 28px;
-  padding: 5px;
-  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 4px;
+  border-radius: 7px;
   background: #f3f7f4;
 }
 
 .pagina-busca .icone-copiar,
 .pagina-programa .resultados-gerais-wrap .icone-copiar {
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
 }
 
-/* Programa: etiqueta no canto superior direito. */
+/* Programa no canto superior direito. */
 .pagina-busca .resultado-programa-badge,
 .pagina-programa .resultados-gerais-wrap .resultado-programa-badge {
-  order: 1;
-  flex: 0 0 auto;
-  max-width: min(280px, 38%);
-  margin-left: auto;
-  padding: 7px 12px !important;
-  border-radius: 10px !important;
+  grid-area: programa;
+  justify-self: end;
+  align-self: start;
+  max-width: min(260px, 100%);
+  padding: 5px 10px !important;
+  border-radius: 9px !important;
   background: #e8f5ec !important;
   color: #176d45 !important;
-  font-size: 11px !important;
+  font-size: 10px !important;
   font-weight: 800;
   line-height: 1.2;
   text-align: center;
@@ -233,47 +239,81 @@
   letter-spacing: .025em;
 }
 
-/* Descrição ocupa toda a largura e recebe prioridade de leitura. */
+/* Campos principais logo abaixo do ID. */
+.pagina-busca .resultado-reporter,
+.pagina-programa .resultados-gerais-wrap .resultado-reporter {
+  grid-area: reporter;
+}
+
+.pagina-busca .resultado-local,
+.pagina-programa .resultados-gerais-wrap .resultado-local {
+  grid-area: local;
+}
+
 .pagina-busca .resultado-descricao,
 .pagina-programa .resultados-gerais-wrap .resultado-descricao {
-  order: 2;
-  flex: 0 0 100%;
-  margin-top: 11px;
-  color: #3b4d42 !important;
-  font-size: 15px !important;
-  line-height: 1.55 !important;
+  grid-area: descricao;
+}
+
+.pagina-busca .resultado-afiliada,
+.pagina-programa .resultados-gerais-wrap .resultado-afiliada {
+  grid-area: afiliada;
+}
+
+.pagina-busca .resultado-reporter,
+.pagina-busca .resultado-local,
+.pagina-busca .resultado-descricao,
+.pagina-busca .resultado-afiliada,
+.pagina-programa .resultados-gerais-wrap .resultado-reporter,
+.pagina-programa .resultados-gerais-wrap .resultado-local,
+.pagina-programa .resultados-gerais-wrap .resultado-descricao,
+.pagina-programa .resultados-gerais-wrap .resultado-afiliada {
+  min-width: 0;
+  padding-top: 3px;
+  color: #30453a !important;
+  font-size: 12px !important;
+  line-height: 1.38 !important;
+}
+
+.pagina-busca .resultado-local,
+.pagina-busca .resultado-descricao,
+.pagina-busca .resultado-afiliada,
+.pagina-programa .resultados-gerais-wrap .resultado-local,
+.pagina-programa .resultados-gerais-wrap .resultado-descricao,
+.pagina-programa .resultados-gerais-wrap .resultado-afiliada {
+  padding-left: 14px;
+  border-left: 1px solid #e4ece7;
+}
+
+.pagina-busca .resultado-reporter::before,
+.pagina-busca .resultado-local::before,
+.pagina-busca .resultado-descricao::before,
+.pagina-busca .resultado-afiliada::before,
+.pagina-programa .resultados-gerais-wrap .resultado-reporter::before,
+.pagina-programa .resultados-gerais-wrap .resultado-local::before,
+.pagina-programa .resultados-gerais-wrap .resultado-descricao::before,
+.pagina-programa .resultados-gerais-wrap .resultado-afiliada::before {
+  content: attr(data-label) !important;
+  display: block;
+  margin-bottom: 2px;
+  color: #77877d;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .025em;
+  text-transform: uppercase;
 }
 
 .pagina-busca .descricao-resultado,
 .pagina-programa .resultados-gerais-wrap .descricao-resultado {
   display: block;
-  max-width: 1020px;
+  max-width: none;
 }
 
-/* Metadados formam uma faixa leve na base do card. */
-.pagina-busca .resultado-meta,
-.pagina-programa .resultados-gerais-wrap .resultado-meta {
-  order: 3;
-  display: inline-flex !important;
-  align-items: baseline;
-  gap: 6px;
-  margin-top: 15px;
-  margin-right: 20px;
-  color: #53665a !important;
-  font-size: 12px !important;
-  white-space: normal !important;
-}
-
-.pagina-busca .resultado-meta::before,
-.pagina-programa .resultados-gerais-wrap .resultado-meta::before {
-  content: attr(data-label) !important;
-  color: #7b8b81;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .035em;
-  text-transform: uppercase;
-}
-
+/* Data e editoria continuam no DOM para filtros/pesquisa, mas ficam fora do
+   card compacto. A ficha individual continua exibindo os metadados completos. */
+.pagina-busca .resultado-meta-oculto-card,
+.pagina-programa .resultados-gerais-wrap .resultado-meta-oculto-card,
 .pagina-busca .resultado-meta-vazio,
 .pagina-programa .resultados-gerais-wrap .resultado-meta-vazio {
   display: none !important;
@@ -294,26 +334,25 @@
   text-underline-offset: 2px;
 }
 
-/* CTA para a ficha do Media ID. Nenhuma prévia ou player é inserido. */
+/* Mantém o acesso à ficha sem aumentar a altura do card. */
 .pagina-busca .resultado-acoes,
 .pagina-programa .resultados-gerais-wrap .resultado-acoes {
-  order: 4;
-  flex: 0 0 100%;
-  display: flex !important;
-  justify-content: flex-end;
-  margin-top: 12px;
+  grid-area: acoes;
+  justify-self: end;
+  align-self: end;
+  margin-top: -2px;
 }
 
 .pagina-busca .resultado-detalhes,
 .pagina-programa .resultados-gerais-wrap .resultado-detalhes {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  min-height: 34px;
-  padding: 6px 10px;
-  border-radius: 9px;
+  gap: 4px;
+  min-height: 26px;
+  padding: 3px 6px;
+  border-radius: 7px;
   color: #176d45;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   text-decoration: none;
 }
@@ -329,26 +368,33 @@
 
 .pagina-busca .resultado-detalhes-seta,
 .pagina-programa .resultados-gerais-wrap .resultado-detalhes-seta {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1;
 }
 
-/* Créditos e trecho encontrado permanecem dentro da descrição. */
+/* Créditos e trecho encontrado continuam dentro da descrição. */
 .pagina-busca .creditos-detalhes,
 .pagina-programa .resultados-gerais-wrap .creditos-detalhes {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .pagina-busca .trecho-encontrado-wrap,
 .pagina-programa .resultados-gerais-wrap .trecho-encontrado-wrap {
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
-/* Mensagem de lista vazia continua simples, sem parecer um registro. */
+.pagina-busca .trecho-encontrado-link,
+.pagina-programa .resultados-gerais-wrap .trecho-encontrado-link {
+  min-height: 22px;
+  padding: 2px 7px;
+  font-size: 9px;
+}
+
+/* Mensagem de lista vazia. */
 .pagina-busca .resultado-card-vazio,
 .pagina-programa .resultados-gerais-wrap .resultado-card-vazio {
   display: block !important;
-  padding: 22px;
+  padding: 18px;
   border-style: dashed;
   box-shadow: none;
   color: #607266;
@@ -359,6 +405,32 @@
 .pagina-programa .resultados-gerais-wrap .resultado-card-vazio td {
   width: 100%;
   text-align: center;
+}
+
+@media (max-width: 980px) {
+  .pagina-busca .results-table tbody tr,
+  .pagina-programa .resultados-gerais-wrap > .results-table tbody tr {
+    grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr);
+    grid-template-areas:
+      "id programa"
+      "reporter local"
+      "descricao descricao"
+      "afiliada acoes";
+    gap: 8px 12px;
+  }
+
+  .pagina-busca .resultado-descricao,
+  .pagina-busca .resultado-afiliada,
+  .pagina-programa .resultados-gerais-wrap .resultado-descricao,
+  .pagina-programa .resultados-gerais-wrap .resultado-afiliada {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .pagina-busca .resultado-local,
+  .pagina-programa .resultados-gerais-wrap .resultado-local {
+    padding-left: 12px;
+  }
 }
 
 @media (max-width: 850px) {
@@ -374,64 +446,46 @@
   .pagina-programa .resultados-gerais-wrap > .results-table thead th {
     flex: 0 0 auto;
   }
+}
 
+@media (max-width: 560px) {
   .pagina-busca .results-table tbody tr,
   .pagina-programa .resultados-gerais-wrap > .results-table tbody tr {
-    padding: 16px;
-    border-radius: 14px;
-  }
-
-  .pagina-busca .results-table tbody td:nth-child(1),
-  .pagina-programa .resultados-gerais-wrap > .results-table tbody td:nth-child(1) {
-    flex-basis: 100%;
-    padding-right: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "id id"
+      "programa programa"
+      "reporter local"
+      "descricao descricao"
+      "afiliada afiliada"
+      "acoes acoes";
+    padding: 11px 12px;
+    border-radius: 11px;
   }
 
   .pagina-busca .resultado-programa-badge,
   .pagina-programa .resultados-gerais-wrap .resultado-programa-badge {
-    order: 2;
-    max-width: 100%;
-    margin-top: 9px;
-    margin-left: 0;
+    justify-self: start;
   }
 
-  .pagina-busca .resultado-descricao,
-  .pagina-programa .resultados-gerais-wrap .resultado-descricao {
-    order: 3;
-    margin-top: 12px;
-    font-size: 14px !important;
+  .pagina-busca .resultado-local,
+  .pagina-programa .resultados-gerais-wrap .resultado-local {
+    padding-left: 10px;
   }
 
-  .pagina-busca .resultado-meta,
-  .pagina-programa .resultados-gerais-wrap .resultado-meta {
-    order: 4;
-    flex: 1 1 calc(50% - 12px);
-    margin-top: 13px;
-    margin-right: 12px;
+  .pagina-busca .resultado-afiliada,
+  .pagina-programa .resultados-gerais-wrap .resultado-afiliada {
+    padding-left: 0;
+    border-left: 0;
   }
 
   .pagina-busca .resultado-acoes,
   .pagina-programa .resultados-gerais-wrap .resultado-acoes {
-    order: 5;
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 520px) {
-  .pagina-busca .results-table tbody tr,
-  .pagina-programa .resultados-gerais-wrap > .results-table tbody tr {
-    padding: 14px;
-    border-radius: 13px;
+    justify-self: start;
   }
 
   .pagina-busca .id-media-link,
   .pagina-programa .resultados-gerais-wrap .id-media-link {
     font-size: 16px;
-  }
-
-  .pagina-busca .resultado-meta,
-  .pagina-programa .resultados-gerais-wrap .resultado-meta {
-    flex-basis: 100%;
-    margin-right: 0;
   }
 }
