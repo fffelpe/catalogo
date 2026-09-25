@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 
 const mediaIdPath = fileURLToPath(new URL("../js/media-id.js", import.meta.url));
 const playerPath = fileURLToPath(new URL("../js/media-player.js", import.meta.url));
+const detailPath = fileURLToPath(new URL("../js/media-detail.js", import.meta.url));
 const pagePath = fileURLToPath(new URL("../pages/media.html", import.meta.url));
 
 function carregarPlayer({ protocolo = "http:", proxyBaseUrl = "" } = {}) {
@@ -68,4 +69,9 @@ test("página da ficha expõe mounts e dependências principais", () => {
   for (const script of ["media-id.js", "dados.js", "media-enrichment.js", "media-segments.js", "related-media.js", "catalogo-quality.js", "media-player.js", "media-detail.js"]) {
     assert.ok(html.includes(script), `${script} deve ser carregado`);
   }
+});
+
+test("ficha individual exibe a duração resolvida para o Media ID", () => {
+  const source = fs.readFileSync(detailPath, "utf8");
+  assert.match(source, /\["Duração",\s*registro\.DURACAO\]/);
 });
