@@ -200,7 +200,7 @@ async function garantirCabecalhoPgm() {
   await sheets.spreadsheets.values.update({
     spreadsheetId: PLANILHA_IMGS_ID,
     range: `${ABA_IMGS}!I1`,
-    valueInputOption: "USER_ENTERED",
+    valueInputOption: "RAW",
     requestBody: { values: [["PGM"]] },
   });
 }
@@ -295,7 +295,7 @@ async function main() {
     await sheets.spreadsheets.values.batchUpdate({
       spreadsheetId: PLANILHA_IMGS_ID,
       requestBody: {
-        valueInputOption: "USER_ENTERED",
+        valueInputOption: "RAW",
         data: [...atualizacoesPorLinha.entries()].map(([linha, values]) => ({
           range: `${ABA_IMGS}!A${linha}:I${linha}`,
           values: [values],
@@ -308,7 +308,7 @@ async function main() {
     await sheets.spreadsheets.values.append({
       spreadsheetId: PLANILHA_IMGS_ID,
       range: `${ABA_IMGS}!A:I`,
-      valueInputOption: "USER_ENTERED",
+      valueInputOption: "RAW",
       insertDataOption: "INSERT_ROWS",
       requestBody: { values: pendentes.map((item) => item.dados) },
     });
