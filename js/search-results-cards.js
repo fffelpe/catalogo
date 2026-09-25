@@ -1,18 +1,18 @@
 // search-results-cards.js
-// Melhora apenas a apresentação dos resultados gerais, preservando busca,
-// filtros, créditos, cópia de IDs e links já existentes.
+// Organiza visualmente os resultados gerais em cards compactos, preservando
+// busca, filtros, créditos, cópia de IDs e links já existentes.
 
 (function () {
   const BODY_ID = "resultsBody";
 
   const MAPA_CLASSES = {
     "Descrição": "resultado-descricao",
-    "Data": "resultado-meta",
-    "Local": "resultado-meta",
-    "Repórter": "resultado-meta",
-    "Afiliada / Emissora": "resultado-meta",
-    "Editoria": "resultado-meta",
-    "Programa": "resultado-programa-badge"
+    "Data": "resultado-meta-oculto-card",
+    "Local": "resultado-local",
+    "Repórter": "resultado-reporter",
+    "Afiliada / Emissora": "resultado-afiliada",
+    "Programa": "resultado-programa-badge",
+    "Editoria": "resultado-meta-oculto-card"
   };
 
   function textoVisivel(elemento) {
@@ -25,10 +25,13 @@
       const classe = MAPA_CLASSES[rotulo];
       if (classe) td.classList.add(classe);
 
-      if ((classe === "resultado-meta" || classe === "resultado-programa-badge") && !textoVisivel(td)) {
+      if (classe && !textoVisivel(td)) {
         td.classList.add("resultado-meta-vazio");
       }
     });
+
+    const celulaId = tr.querySelector("td.id-cell") || tr.querySelector("td:first-child");
+    if (celulaId) celulaId.classList.add("resultado-id");
   }
 
   function criarAcaoDetalhes(tr) {
