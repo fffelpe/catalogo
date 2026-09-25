@@ -14,6 +14,37 @@ const MediaDetail = (() => {
     return texto || "—";
   }
 
+  function normalizarPrograma(valor) {
+    return String(valor || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim()
+      .toUpperCase();
+  }
+
+  function programaTemEpisodio(programa) {
+    const normalizado = normalizarPrograma(programa);
+    return normalizado === "AGROCULTURA" || normalizado === "REPORTER ECO";
+  }
+
+  function criarCamposMetadata(registro = {}) {
+    const campos = [
+      ["Data", registro.DATA],
+      ["Duração", registro.DURACAO],
+      ["Programa", registro.PROGRAMA],
+      ["Editoria", registro.EDITORIA],
+      ["Local", registro.LOCAL],
+      ["Repórter", registro.REPORTER],
+      ["Afiliada / Emissora", registro.AFILIADA_EMISSORA]
+    ];
+
+    if (programaTemEpisodio(registro.PROGRAMA)) {
+      campos.push(["Episódio", registro.PGM]);
+    }
+
+    return campos;
+  }
+
   function copiarTexto(texto) {
     if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(texto);
     const area = document.createElement("textarea");
@@ -43,17 +74,7 @@ const MediaDetail = (() => {
     const container = document.getElementById("mediaMetadata");
     if (!container) return;
     container.textContent = "";
-    const campos = [
-      ["Data", registro.DATA],
-      ["Duração", registro.DURACAO],
-      ["Programa", registro.PROGRAMA],
-      ["Editoria", registro.EDITORIA],
-      ["Local", registro.LOCAL],
-      ["Repórter", registro.REPORTER],
-      ["Afiliada / Emissora", registro.AFILIADA_EMISSORA],
-      ["PGM", registro.PGM]
-    ];
-    campos.forEach(([rotulo, valor]) => {
+    criarCamposMetadata(registro).forEach(([rotulo, valor]) => {
       const row = el("div", "media-meta-row");
       row.append(el("span", "media-meta-label", rotulo));
       row.append(el("span", "media-meta-value", valorOuTraco(valor)));
@@ -217,7 +238,7 @@ const MediaDetail = (() => {
     renderQuality(registro, mediaId, creditosCarregados);
   }
 
-  return { inicializar };
+  return { inicializar, programaTemEpisodio, criarCamposMetadata };
 })();
 
 document.addEventListener("DOMContentLoaded", MediaDetail.inicializar);
