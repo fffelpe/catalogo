@@ -1,6 +1,6 @@
 # Catálogo de Mídias — Jornalismo TV Cultura
 
-Desenvolvimento voluntário de uma plataforma open-source para produtores do jornalismo da TV Cultura.
+Desenvolvimento voluntário de uma plataforma open-source de conteúdo audiovisual.
 
 Visando algumas dificuldades para encontrar imagens no catálogo da casa, esta plataforma reúne materiais de diversos programas do jornalismo em um único lugar para facilitar a pesquisa e o acesso ao acervo.
 
