@@ -61,6 +61,23 @@ test("sincronização de créditos usa pdf-parse v2 para PDFs modernos", () => {
   assert.match(sync, /\.destroy\(\)/);
 });
 
+test("sincronização respeita cooldown da cota do Google Sheets entre etapas pesadas", () => {
+  const pacote = JSON.parse(ler("package.json"));
+  const comando = pacote.scripts?.["sync:planilhas"] || "";
+  const primeira = comando.indexOf("sincronizar-planilhas.mjs");
+  const cooldown = comando.indexOf("aguardar-cota-sheets.mjs");
+  const segunda = comando.indexOf("sincronizar-noticias-agrocultura.mjs");
+
+  assert.ok(primeira >= 0, "sincronizar-planilhas.mjs deve permanecer no pipeline");
+  assert.ok(cooldown > primeira, "cooldown deve rodar depois da sincronização principal");
+  assert.ok(segunda > cooldown, "integração AgroCultura deve rodar depois do cooldown");
+  assert.equal(fs.existsSync("scripts/aguardar-cota-sheets.mjs"), true, "script de cooldown deve existir");
+
+  const espera = ler("scripts/aguardar-cota-sheets.mjs");
+  assert.match(espera, /SHEETS_SYNC_COOLDOWN_MS/);
+  assert.match(espera, /65000/);
+});
+
 test("repositório não publica hostname vercel.app como CNAME do GitHub Pages", () => {
   assert.equal(fs.existsSync("CNAME"), false);
 });
