@@ -3,7 +3,7 @@
 // busca, filtros, créditos, cópia de IDs e links já existentes.
 
 (function () {
-  const BODY_ID = "resultsBody";
+  const BODY_IDS = ["resultsBody", "mamAgroBody"];
 
   const MAPA_CLASSES = {
     "Descrição": "resultado-descricao",
@@ -22,10 +22,12 @@
   function marcarCelulas(tr) {
     tr.querySelectorAll("td[data-label]").forEach((td) => {
       const rotulo = td.getAttribute("data-label") || "";
-      const classe = MAPA_CLASSES[rotulo];
+      const painelAgro = tr.parentElement?.id === "mamAgroBody";
+      const classe = painelAgro && rotulo === "Data"
+        ? "resultado-data" : MAPA_CLASSES[rotulo];
       if (classe) td.classList.add(classe);
 
-      if (classe && !textoVisivel(td)) {
+      if (!textoVisivel(td) && rotulo !== "Descrição") {
         td.classList.add("resultado-meta-vazio");
       }
     });
@@ -48,7 +50,7 @@
     link.className = "resultado-detalhes";
     link.href = linkId.getAttribute("href") || "#";
     link.setAttribute("aria-label", `Ver mais detalhes de ${textoVisivel(linkId)}`);
-    link.append(document.createTextNode("Mais detalhes"));
+    link.append(document.createTextNode(tr.parentElement?.id === "mamAgroBody" ? "Veja mais" : "Mais detalhes"));
 
     const seta = document.createElement("span");
     seta.className = "resultado-detalhes-seta";
@@ -88,8 +90,8 @@
     tbody?.querySelectorAll("tr").forEach(decorarLinha);
   }
 
-  function inicializarCards() {
-    const tbody = document.getElementById(BODY_ID);
+  function observarCards(bodyId) {
+    const tbody = document.getElementById(bodyId);
     if (!tbody) return;
 
     decorarTabela(tbody);
@@ -107,5 +109,5 @@
     observer.observe(tbody, { childList: true, subtree: false });
   }
 
-  document.addEventListener("DOMContentLoaded", inicializarCards);
+  document.addEventListener("DOMContentLoaded", () => BODY_IDS.forEach(observarCards));
 })();
