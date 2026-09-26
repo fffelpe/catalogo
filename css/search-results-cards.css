@@ -1,7 +1,6 @@
 /* Cards compactos para a listagem geral do catálogo.
    Este arquivo é carregado depois de search-results-table.css e substitui
-   apenas a apresentação das buscas gerais. As tabelas específicas do
-   AgroCultura continuam com o layout próprio. */
+   a apresentação das buscas gerais e das categorias do painel AgroCultura. */
 
 .results-table tbody tr {
   --resultado-card-raio: 12px;
@@ -388,6 +387,7 @@
 
 .pagina-busca .trecho-encontrado-wrap,
 .pagina-programa .resultados-gerais-wrap .trecho-encontrado-wrap {
+  display: block;
   margin-top: 2px;
 }
 
@@ -509,4 +509,109 @@
     padding-left: 0;
     border-left: 0;
   }
+}
+
+/* Cards das abas VT's, notícias/stand-ups e imagens de cobertura.
+   Preserva as células utilizadas pela integração de créditos. */
+.pagina-programa .mam-agro-table-wrap {
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.pagina-programa .mam-agro-table {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border: 0;
+}
+.pagina-programa .mam-agro-table thead { display: none; }
+.pagina-programa .mam-agro-table tbody {
+  display: grid;
+  width: 100%;
+  gap: 7px;
+}
+.pagina-programa .mam-agro-table tbody tr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 3px 18px;
+  width: 100%;
+  margin: 0;
+  padding: 9px 12px;
+  border: 1px solid #dde9e1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(24, 73, 42, .04);
+}
+.pagina-programa .mam-agro-table tbody td {
+  display: block;
+  flex: 0 1 auto;
+  order: 2;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  color: #31463a;
+  font-size: 12px;
+  line-height: 1.35;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.pagina-programa .mam-agro-table tbody td::before {
+  content: attr(data-label) ": ";
+  display: inline;
+  color: #68786e;
+  font-size: 10px;
+  font-weight: 700;
+}
+.pagina-programa .mam-agro-table tbody .resultado-id {
+  flex-basis: 100%;
+  order: 0;
+}
+.pagina-programa .mam-agro-table tbody .resultado-descricao {
+  flex-basis: 100%;
+  order: 1;
+}
+.pagina-programa .mam-agro-table tbody .resultado-acoes {
+  flex-basis: 100%;
+  order: 3;
+  text-align: right;
+}
+.pagina-programa .mam-agro-table .resultado-id::before,
+.pagina-programa .mam-agro-table .resultado-acoes::before,
+.pagina-programa .mam-agro-table .resultado-card-vazio td::before { content: none; }
+.pagina-programa .mam-agro-table .resultado-meta-vazio { display: none; }
+.pagina-programa .mam-agro-table .id-lista,
+.pagina-programa .mam-agro-table .id-item {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+.pagina-programa .mam-agro-table .id-media-link {
+  color: #17261d;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.pagina-programa .mam-agro-table .resultado-detalhes {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 26px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #176d45;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.pagina-programa .mam-agro-table a:hover,
+.pagina-programa .mam-agro-table a:focus-visible { text-decoration: underline; }
+.pagina-programa .mam-agro-table .creditos-detalhes { margin-top: 3px; padding-top: 3px; }
+.pagina-programa .mam-agro-table .creditos-resumo { font-size: 12px; }
+@media (max-width: 480px) {
+  .pagina-programa .mam-agro-table tbody tr { padding: 8px 10px; gap: 3px 12px; }
 }
