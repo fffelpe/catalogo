@@ -23,8 +23,11 @@ test("resultados gerais usam cards compactos em duas colunas sem player de víde
   assert.match(css, /["']reporter local["']/);
   assert.match(css, /["']descricao afiliada["']/);
   assert.match(css, /["']\. acoes["']/);
-  assert.match(css, /gap:\s*5px\s+24px/);
-  assert.match(css, /padding:\s*10px\s+14px/);
+  assert.match(css, /gap:\s*3px\s+14px/);
+  assert.match(css, /padding:\s*8px\s+11px/);
+  assert.match(css, /\.resultado-reporter::before[\s\S]*?display:\s*inline/);
+  assert.match(css, /@media\s*\(max-width:\s*640px\)[\s\S]*?["']reporter local["']/);
+  assert.match(css, /@media\s*\(max-width:\s*420px\)[\s\S]*?grid-template-columns:\s*1fr/);
   assert.match(css, /\.resultado-id/);
   assert.match(css, /\.resultado-reporter/);
   assert.match(css, /\.resultado-local/);
