@@ -156,6 +156,7 @@
     const linkId = tr.querySelector(".id-media-link[href]");
     if (!linkId) return null;
 
+    const mediaId = primeiroMediaId(tr);
     rodape = document.createElement("td");
     rodape.className = "resultado-rodape";
     rodape.setAttribute("data-label", "Ações");
@@ -165,8 +166,9 @@
 
     const link = document.createElement("a");
     link.className = "resultado-detalhes";
-    link.href = linkId.getAttribute("href") || "#";
-    link.setAttribute("aria-label", `Ver mais detalhes de ${textoVisivel(linkId)}`);
+    link.href = mediaId ? `media.html?id=${encodeURIComponent(mediaId)}` : (linkId.getAttribute("href") || "#");
+    if (mediaId) link.setAttribute("data-media-id", mediaId);
+    link.setAttribute("aria-label", `Ver mais detalhes de ${mediaId || textoVisivel(linkId)}`);
     link.append(document.createTextNode("Veja mais"));
 
     const seta = document.createElement("span");
