@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T16:05:53.706Z",
-  "total": 41264,
+  "generatedAt": "2026-09-28T20:30:16.873Z",
+  "total": 41269,
   "registros": [
     {
       "ID": "2822B019835",
@@ -527661,6 +527661,66 @@
       "DURACOES": {
         "2457B018094": "00:02:24"
       }
+    },
+    {
+      "ID": "2457B018095",
+      "DESCRICAO": "MARATONA",
+      "DATA": "06/07/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - MS",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018096",
+      "DESCRICAO": "ACIDENTE DE AVIÃO",
+      "DATA": "03/07/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - MS",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018097",
+      "DESCRICAO": "PARQUE DAS CAPIVARAS",
+      "DATA": "09/09/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "KELLY MARTINS",
+      "AFILIADA_EMISSORA": "TVE - MS",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018098",
+      "DESCRICAO": "SANTUÁRIO DE ELEFANTES",
+      "DATA": "19/09/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "KELLY MARTINS",
+      "AFILIADA_EMISSORA": "TVE - MS",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018099",
+      "DESCRICAO": "FEIRA LITERÁRIA DE BONITO",
+      "DATA": "14/07/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - MS",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "",
+      "PGM": "",
+      "DURACOES": {}
     }
   ]
 }
