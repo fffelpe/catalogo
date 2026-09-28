@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T20:40:23.385Z",
+  "generatedAt": "2026-09-28T20:44:47.487Z",
   "total": 41269,
   "registros": [
     {
@@ -527670,7 +527670,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TVE - MS",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527682,7 +527682,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TVE - MS",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527694,7 +527694,7 @@
       "REPORTER": "KELLY MARTINS",
       "AFILIADA_EMISSORA": "TVE - MS",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527706,7 +527706,7 @@
       "REPORTER": "KELLY MARTINS",
       "AFILIADA_EMISSORA": "TVE - MS",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527718,7 +527718,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TVE - MS",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     }
