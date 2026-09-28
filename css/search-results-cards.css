@@ -1,13 +1,10 @@
-/* Cards compactos para a listagem geral do catálogo.
-   Este arquivo é carregado depois de search-results-table.css e substitui
-   a apresentação das buscas gerais e das categorias do painel AgroCultura. */
+/* Cards compactos do Catálogo de Mídias.
+   Referência visual: categoria no topo, descrição como título, Media ID,
+   local, repórter, data/duração e rodapé com créditos + "Veja mais". */
 
-.results-table tbody tr {
-  --resultado-card-raio: 12px;
-}
-
-.pagina-busca .table-wrap,
-.pagina-programa .resultados-gerais-wrap {
+:where(.pagina-busca, .pagina-programa) .table-wrap,
+.pagina-programa .resultados-gerais-wrap,
+.pagina-programa .mam-agro-table-wrap {
   overflow: visible !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -16,7 +13,9 @@
 }
 
 .pagina-busca .results-table,
-.pagina-programa .resultados-gerais-wrap > .results-table {
+.pagina-programa .resultados-gerais-wrap > .results-table,
+.pagina-programa .mam-agro-table,
+.pagina-programa .vts-dinamica-table {
   display: block;
   width: 100% !important;
   min-width: 0 !important;
@@ -26,7 +25,7 @@
   background: transparent;
 }
 
-/* Mantém os filtros existentes em uma barra compacta. */
+/* Os filtros de busca continuam acima da grade, sem ocupar espaço dentro dos cards. */
 .pagina-busca .results-table thead,
 .pagina-programa .resultados-gerais-wrap > .results-table thead {
   display: block;
@@ -67,14 +66,13 @@
   gap: 7px;
   min-height: 34px;
   padding: 5px 7px 5px 11px;
-  border: 1px solid #d5e6da;
-  border-radius: 10px;
+  border: 1px solid #d5e3da;
+  border-radius: 9px;
   background: #fff;
   color: #365242;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: .01em;
-  box-shadow: 0 2px 6px rgba(25, 75, 43, .04);
 }
 
 .pagina-busca .btn-filtro-coluna,
@@ -82,9 +80,9 @@
   width: 23px;
   height: 23px;
   border: 0;
-  border-radius: 7px;
+  border-radius: 6px;
   background: #edf7f0;
-  color: #176d45;
+  color: #087847;
   font-size: 12px;
 }
 
@@ -98,58 +96,77 @@
 
 .pagina-busca .btn-filtro-coluna.filtro-ativo,
 .pagina-programa .resultados-gerais-wrap .btn-filtro-coluna.filtro-ativo {
-  background: #167347;
+  background: #087847;
   color: #fff;
 }
 
+/* Cinco cards por linha no desktop, como na referência aprovada. */
 .pagina-busca .results-table tbody,
-.pagina-programa .resultados-gerais-wrap > .results-table tbody {
+.pagina-programa .resultados-gerais-wrap > .results-table tbody,
+.pagina-programa .mam-agro-table tbody,
+.pagina-programa .vts-dinamica-table tbody {
   display: grid;
-  gap: 8px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
   width: 100%;
+  align-items: stretch;
 }
 
 /*
-  Estrutura compacta do card:
-  ID + copiar                         Programa
-  Repórter                            Local
-  Descrição                           Afiliada
-                                      Mais detalhes
+  Estrutura interna de cada card:
+  PROGRAMA
+  TÍTULO (resumo da descrição)
+  MEDIA ID + copiar
+  LOCAL
+  REPÓRTER
+  DATA                         DURAÇÃO
+  ------------------------------------
+  COM CRÉDITOS                 VEJA MAIS ›
 */
 .pagina-busca .results-table tbody tr,
-.pagina-programa .resultados-gerais-wrap > .results-table tbody tr {
+.pagina-programa .resultados-gerais-wrap > .results-table tbody tr,
+.pagina-programa .mam-agro-table tbody tr,
+.pagina-programa .vts-dinamica-table tbody tr {
   position: relative;
   display: grid !important;
-  grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+  grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
-    "id programa"
-    "reporter local"
-    "descricao afiliada"
-    ". acoes";
-  grid-auto-rows: min-content;
+    "programa programa"
+    "titulo titulo"
+    "id id"
+    "local local"
+    "reporter reporter"
+    "data duracao"
+    "rodape rodape";
+  grid-template-rows: min-content minmax(36px, auto) min-content min-content min-content min-content 1fr;
   align-items: start;
-  gap: 3px 14px;
+  gap: 5px 8px;
   width: 100%;
-  min-height: 0;
+  min-width: 0;
+  min-height: 205px;
   margin: 0;
-  padding: 8px 11px;
+  padding: 10px;
   overflow: visible;
-  border: 1px solid #dde9e1;
-  border-radius: 12px;
+  border: 1px solid #d6e1da;
+  border-radius: 8px;
   background: #fff;
-  box-shadow: 0 3px 12px rgba(24, 73, 42, .06);
-  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+  box-shadow: none;
+  transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease;
 }
 
 .pagina-busca .results-table tbody tr:hover,
-.pagina-programa .resultados-gerais-wrap > .results-table tbody tr:hover {
-  border-color: #b9d6c2;
-  box-shadow: 0 5px 16px rgba(24, 73, 42, .09);
+.pagina-programa .resultados-gerais-wrap > .results-table tbody tr:hover,
+.pagina-programa .mam-agro-table tbody tr:hover,
+.pagina-programa .vts-dinamica-table tbody tr:hover {
+  border-color: #b8d1c1;
+  box-shadow: 0 3px 10px rgba(20, 71, 43, .07);
   transform: translateY(-1px);
 }
 
 .pagina-busca .results-table tbody td,
-.pagina-programa .resultados-gerais-wrap > .results-table tbody td {
+.pagina-programa .resultados-gerais-wrap > .results-table tbody td,
+.pagina-programa .mam-agro-table tbody td,
+.pagina-programa .vts-dinamica-table tbody td {
   display: block;
   width: auto;
   min-width: 0;
@@ -157,280 +174,346 @@
   padding: 0;
   border: 0;
   background: transparent !important;
-  color: #31463a;
-  font-size: 12px;
+  color: #18231d;
+  font-size: 11px;
   line-height: 1.3;
   white-space: normal !important;
   overflow-wrap: anywhere;
 }
 
 .pagina-busca .results-table tbody td::before,
-.pagina-programa .resultados-gerais-wrap > .results-table tbody td::before {
+.pagina-programa .resultados-gerais-wrap > .results-table tbody td::before,
+.pagina-programa .mam-agro-table tbody td::before,
+.pagina-programa .vts-dinamica-table tbody td::before {
   content: none;
 }
 
-/* ID no topo esquerdo com o ícone de copiar imediatamente ao lado. */
+/* Categoria / programa: texto verde simples, sem pill, igual à referência. */
+.pagina-busca .resultado-programa-badge,
+.pagina-programa .resultados-gerais-wrap .resultado-programa-badge,
+.pagina-programa .mam-agro-table .resultado-programa-badge,
+.pagina-programa .vts-dinamica-table .resultado-programa-badge {
+  grid-area: programa;
+  justify-self: start;
+  align-self: start;
+  max-width: 100%;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #087847 !important;
+  font-size: 9.5px !important;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: .045em;
+}
+
+/* A descrição passa a ser o título editorial do card. */
+.pagina-busca .resultado-titulo,
+.pagina-programa .resultados-gerais-wrap .resultado-titulo,
+.pagina-programa .mam-agro-table .resultado-titulo,
+.pagina-programa .vts-dinamica-table .resultado-titulo {
+  grid-area: titulo;
+  min-height: 34px;
+  color: #080d0a !important;
+  font-size: 13.5px !important;
+  font-weight: 700;
+  line-height: 1.22 !important;
+}
+
+.pagina-busca .resultado-titulo .descricao-resultado,
+.pagina-programa .resultados-gerais-wrap .resultado-titulo .descricao-resultado,
+.pagina-programa .mam-agro-table .resultado-titulo .descricao-resultado,
+.pagina-programa .vts-dinamica-table .resultado-titulo .descricao-resultado {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+/* Media ID com o copiar na extremidade direita da mesma linha. */
 .pagina-busca .resultado-id,
-.pagina-programa .resultados-gerais-wrap .resultado-id {
+.pagina-programa .resultados-gerais-wrap .resultado-id,
+.pagina-programa .mam-agro-table .resultado-id,
+.pagina-programa .vts-dinamica-table .resultado-id {
   grid-area: id;
-  align-self: center;
+  margin-top: 3px;
 }
 
-.pagina-busca .id-lista,
-.pagina-programa .resultados-gerais-wrap .id-lista {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px 9px;
+.pagina-busca .resultado-id .id-cell-content,
+.pagina-programa .resultado-id .id-cell-content,
+.pagina-busca .resultado-id .id-lista,
+.pagina-programa .resultado-id .id-lista {
+  display: block;
+  width: 100%;
 }
 
-.pagina-busca .id-item,
-.pagina-programa .resultados-gerais-wrap .id-item {
-  display: inline-flex;
-  flex-direction: row;
+.pagina-busca .resultado-id .id-item,
+.pagina-programa .resultado-id .id-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
+  width: 100%;
+  min-width: 0;
 }
 
 .pagina-busca .id-media-link,
-.pagina-programa .resultados-gerais-wrap .id-media-link {
-  color: #17261d;
-  font-size: 17px;
-  font-weight: 800;
-  letter-spacing: .012em;
-  line-height: 1.15;
+.pagina-programa .id-media-link {
+  min-width: 0;
+  color: #111b15;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .018em;
+  line-height: 1.25;
   text-decoration: none;
 }
 
 .pagina-busca .id-media-link:hover,
 .pagina-busca .id-media-link:focus-visible,
-.pagina-programa .resultados-gerais-wrap .id-media-link:hover,
-.pagina-programa .resultados-gerais-wrap .id-media-link:focus-visible {
-  color: #167347;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.pagina-busca .btn-copiar-id,
-.pagina-programa .resultados-gerais-wrap .btn-copiar-id {
-  width: 23px;
-  height: 23px;
-  margin: 0;
-  padding: 4px;
-  border-radius: 7px;
-  background: #f3f7f4;
-}
-
-.pagina-busca .icone-copiar,
-.pagina-programa .resultados-gerais-wrap .icone-copiar {
-  width: 13px;
-  height: 13px;
-}
-
-/* Programa no topo direito. */
-.pagina-busca .resultado-programa-badge,
-.pagina-programa .resultados-gerais-wrap .resultado-programa-badge {
-  grid-area: programa;
-  justify-self: end;
-  align-self: center;
-  max-width: min(260px, 100%);
-  padding: 4px 9px !important;
-  border-radius: 8px !important;
-  background: #e8f5ec !important;
-  color: #176d45 !important;
-  font-size: 10px !important;
-  font-weight: 800;
-  line-height: 1.15;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .025em;
-}
-
-/* Segunda e terceira linhas: duas colunas, sem quatro blocos espalhados. */
-.pagina-busca .resultado-reporter,
-.pagina-programa .resultados-gerais-wrap .resultado-reporter {
-  grid-area: reporter;
-}
-
-.pagina-busca .resultado-local,
-.pagina-programa .resultados-gerais-wrap .resultado-local {
-  grid-area: local;
-}
-
-.pagina-busca .resultado-descricao,
-.pagina-programa .resultados-gerais-wrap .resultado-descricao {
-  grid-area: descricao;
-}
-
-.pagina-busca .resultado-afiliada,
-.pagina-programa .resultados-gerais-wrap .resultado-afiliada {
-  grid-area: afiliada;
-}
-
-.pagina-busca .resultado-reporter,
-.pagina-busca .resultado-local,
-.pagina-busca .resultado-descricao,
-.pagina-busca .resultado-afiliada,
-.pagina-programa .resultados-gerais-wrap .resultado-reporter,
-.pagina-programa .resultados-gerais-wrap .resultado-local,
-.pagina-programa .resultados-gerais-wrap .resultado-descricao,
-.pagina-programa .resultados-gerais-wrap .resultado-afiliada {
-  min-width: 0;
-  padding-top: 0;
-  color: #30453a !important;
-  font-size: 12px !important;
-  line-height: 1.28 !important;
-}
-
-/* Apenas a coluna da direita recebe uma separação visual sutil. */
-.pagina-busca .resultado-local,
-.pagina-busca .resultado-afiliada,
-.pagina-programa .resultados-gerais-wrap .resultado-local,
-.pagina-programa .resultados-gerais-wrap .resultado-afiliada {
-  padding-left: 10px;
-  border-left: 1px solid #e4ece7;
-}
-
-.pagina-busca .resultado-reporter::before,
-.pagina-busca .resultado-local::before,
-.pagina-busca .resultado-descricao::before,
-.pagina-busca .resultado-afiliada::before,
-.pagina-programa .resultados-gerais-wrap .resultado-reporter::before,
-.pagina-programa .resultados-gerais-wrap .resultado-local::before,
-.pagina-programa .resultados-gerais-wrap .resultado-descricao::before,
-.pagina-programa .resultados-gerais-wrap .resultado-afiliada::before {
-  content: attr(data-label) !important;
-  display: inline;
-  margin-right: 5px;
-  color: #77877d;
-  font-size: 9px;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: .025em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.pagina-busca .descricao-resultado,
-.pagina-programa .resultados-gerais-wrap .descricao-resultado {
-  display: inline;
-  max-width: none;
-}
-
-/* Data e editoria continuam no DOM para filtros/pesquisa, mas ficam fora do
-   card compacto. A ficha individual continua exibindo os metadados completos. */
-.pagina-busca .resultado-meta-oculto-card,
-.pagina-programa .resultados-gerais-wrap .resultado-meta-oculto-card,
-.pagina-busca .resultado-meta-vazio,
-.pagina-programa .resultados-gerais-wrap .resultado-meta-vazio {
-  display: none !important;
-}
-
-.pagina-busca .link-afiliada,
-.pagina-programa .resultados-gerais-wrap .link-afiliada {
-  color: #176d45;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.pagina-busca .link-afiliada:hover,
-.pagina-busca .link-afiliada:focus-visible,
-.pagina-programa .resultados-gerais-wrap .link-afiliada:hover,
-.pagina-programa .resultados-gerais-wrap .link-afiliada:focus-visible {
+.pagina-programa .id-media-link:hover,
+.pagina-programa .id-media-link:focus-visible {
+  color: #087847;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-/* Mais detalhes permanece no canto inferior direito sem abrir uma nova faixa alta. */
-.pagina-busca .resultado-acoes,
-.pagina-programa .resultados-gerais-wrap .resultado-acoes {
-  grid-area: acoes;
+.pagina-busca .btn-copiar-id,
+.pagina-programa .btn-copiar-id {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 2px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.pagina-busca .btn-copiar-id:hover,
+.pagina-busca .btn-copiar-id:focus-visible,
+.pagina-programa .btn-copiar-id:hover,
+.pagina-programa .btn-copiar-id:focus-visible {
+  background: #edf7f0;
+  outline: none;
+}
+
+.pagina-busca .icone-copiar,
+.pagina-programa .icone-copiar {
+  width: 13px;
+  height: 13px;
+}
+
+/* Local e repórter ficam em linhas próprias, sem divisórias laterais. */
+.pagina-busca .resultado-local,
+.pagina-programa .resultado-local {
+  grid-area: local;
+  color: #1a2a20 !important;
+  font-size: 10.5px !important;
+}
+
+.pagina-busca .resultado-reporter,
+.pagina-programa .resultado-reporter {
+  grid-area: reporter;
+  color: #304239 !important;
+  font-size: 10px !important;
+}
+
+.pagina-busca .resultado-reporter::before,
+.pagina-programa .resultado-reporter::before {
+  content: "Repórter: ";
+  display: inline;
+  color: #65746b;
+  font-weight: 400;
+}
+
+/* Data e duração dividem a última linha de metadados. */
+.pagina-busca .resultado-data,
+.pagina-programa .resultado-data {
+  grid-area: data;
+  align-self: end;
+  color: #304239 !important;
+  font-size: 9.5px !important;
+  white-space: nowrap !important;
+}
+
+.pagina-busca .resultado-data::before,
+.pagina-programa .resultado-data::before {
+  content: "Data: ";
+  display: inline;
+  color: #65746b;
+  font-weight: 400;
+}
+
+.pagina-busca .resultado-duracao,
+.pagina-programa .resultado-duracao {
+  grid-area: duracao;
   justify-self: end;
   align-self: end;
-  margin-top: -2px;
+  color: #304239 !important;
+  font-size: 9.5px !important;
+  text-align: right;
+  white-space: nowrap !important;
+}
+
+.pagina-busca .resultado-duracao::before,
+.pagina-programa .resultado-duracao::before {
+  content: "Duração: ";
+  display: inline;
+  color: #65746b;
+  font-weight: 400;
+}
+
+/* Metadados que seguem úteis para filtros permanecem no DOM, mas não no card. */
+.pagina-busca .resultado-meta-oculto-card,
+.pagina-programa .resultado-meta-oculto-card {
+  display: none !important;
+}
+
+/* Rodapé fino: créditos à esquerda e CTA à direita. */
+.pagina-busca .resultado-rodape,
+.pagina-programa .resultado-rodape {
+  grid-area: rodape;
+  align-self: end;
+  display: flex !important;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-height: 27px;
+  margin-top: 1px;
+  padding-top: 6px !important;
+  border-top: 1px solid #dbe4de !important;
+}
+
+.pagina-busca .resultado-creditos-slot,
+.pagina-programa .resultado-creditos-slot {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  align-items: center;
+  gap: 5px;
+  color: #087847;
+  font-size: 9.5px;
 }
 
 .pagina-busca .resultado-detalhes,
-.pagina-programa .resultados-gerais-wrap .resultado-detalhes {
+.pagina-programa .resultado-detalhes {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
-  gap: 4px;
-  min-height: 22px;
-  padding: 2px 5px;
-  border-radius: 7px;
-  color: #176d45;
-  font-size: 11px;
-  font-weight: 800;
+  gap: 3px;
+  min-height: 20px;
+  padding: 0;
+  border-radius: 0;
+  color: #087847;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .pagina-busca .resultado-detalhes:hover,
 .pagina-busca .resultado-detalhes:focus-visible,
-.pagina-programa .resultados-gerais-wrap .resultado-detalhes:hover,
-.pagina-programa .resultados-gerais-wrap .resultado-detalhes:focus-visible {
-  background: #edf7f0;
-  color: #0f5a37;
+.pagina-programa .resultado-detalhes:hover,
+.pagina-programa .resultado-detalhes:focus-visible {
+  color: #055d36;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   outline: none;
 }
 
 .pagina-busca .resultado-detalhes-seta,
-.pagina-programa .resultados-gerais-wrap .resultado-detalhes-seta {
+.pagina-programa .resultado-detalhes-seta {
   font-size: 14px;
-  line-height: 1;
+  line-height: .8;
 }
 
-/* Créditos e trecho encontrado continuam dentro da descrição. */
-.pagina-busca .creditos-detalhes,
-.pagina-programa .resultados-gerais-wrap .creditos-detalhes {
-  margin-top: 2px;
+/* Créditos continuam expansíveis, apenas mudam para o rodapé do card. */
+.pagina-busca .resultado-creditos-slot .creditos-detalhes,
+.pagina-programa .resultado-creditos-slot .creditos-detalhes {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-.pagina-busca .trecho-encontrado-wrap,
-.pagina-programa .resultados-gerais-wrap .trecho-encontrado-wrap {
-  display: block;
-  margin-top: 2px;
+.pagina-busca .resultado-creditos-slot .creditos-resumo,
+.pagina-programa .resultado-creditos-slot .creditos-resumo {
+  color: #087847;
+  font-size: 9.5px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
-.pagina-busca .trecho-encontrado-link,
-.pagina-programa .resultados-gerais-wrap .trecho-encontrado-link {
-  min-height: 22px;
-  padding: 2px 7px;
+.pagina-busca .resultado-creditos-slot .creditos-conteudo,
+.pagina-programa .resultado-creditos-slot .creditos-conteudo {
+  position: relative;
+  z-index: 2;
+  margin-top: 5px;
+  min-width: min(260px, 70vw);
+}
+
+.pagina-busca .resultado-creditos-slot .trecho-encontrado-wrap,
+.pagina-programa .resultado-creditos-slot .trecho-encontrado-wrap {
+  display: inline-flex;
+  margin: 0;
+}
+
+.pagina-busca .resultado-creditos-slot .trecho-encontrado-link,
+.pagina-programa .resultado-creditos-slot .trecho-encontrado-link {
+  min-height: 18px;
+  padding: 0;
   font-size: 9px;
 }
 
-/* Mensagem de lista vazia. */
+/* Linha vazia ocupa a largura inteira da grade. */
 .pagina-busca .resultado-card-vazio,
-.pagina-programa .resultados-gerais-wrap .resultado-card-vazio {
+.pagina-programa .resultado-card-vazio {
+  grid-column: 1 / -1 !important;
   display: block !important;
-  padding: 16px;
-  border-style: dashed;
-  box-shadow: none;
+  min-height: 0 !important;
+  padding: 16px !important;
+  border-style: dashed !important;
+  box-shadow: none !important;
   color: #607266;
   text-align: center;
 }
 
 .pagina-busca .resultado-card-vazio td,
-.pagina-programa .resultados-gerais-wrap .resultado-card-vazio td {
+.pagina-programa .resultado-card-vazio td {
   width: 100%;
   text-align: center;
 }
 
-@media (max-width: 900px) {
-  .pagina-busca .results-table tbody tr,
-  .pagina-programa .resultados-gerais-wrap > .results-table tbody tr {
-    grid-template-columns: minmax(0, 1.15fr) minmax(220px, .85fr);
-    gap: 3px 12px;
-  }
+/* As tabelas específicas não exibem cabeçalho porque o próprio card rotula os dados. */
+.pagina-programa .mam-agro-table thead,
+.pagina-programa .vts-dinamica-table thead {
+  display: none;
+}
 
-  .pagina-busca .resultado-local,
-  .pagina-busca .resultado-afiliada,
-  .pagina-programa .resultados-gerais-wrap .resultado-local,
-  .pagina-programa .resultados-gerais-wrap .resultado-afiliada {
-    padding-left: 8px;
+/* Responsividade: 5 → 4 → 3 → 2 → 1 card por linha. */
+@media (max-width: 1280px) {
+  .pagina-busca .results-table tbody,
+  .pagina-programa .resultados-gerais-wrap > .results-table tbody,
+  .pagina-programa .mam-agro-table tbody,
+  .pagina-programa .vts-dinamica-table tbody {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
+  .pagina-busca .results-table tbody,
+  .pagina-programa .resultados-gerais-wrap > .results-table tbody,
+  .pagina-programa .mam-agro-table tbody,
+  .pagina-programa .vts-dinamica-table tbody {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .pagina-busca .results-table thead tr,
   .pagina-programa .resultados-gerais-wrap > .results-table thead tr {
     flex-wrap: nowrap;
@@ -445,173 +528,27 @@
   }
 }
 
-@media (max-width: 640px) {
-  .pagina-busca .results-table tbody tr,
-  .pagina-programa .resultados-gerais-wrap > .results-table tbody tr {
+@media (max-width: 760px) {
+  .pagina-busca .results-table tbody,
+  .pagina-programa .resultados-gerais-wrap > .results-table tbody,
+  .pagina-programa .mam-agro-table tbody,
+  .pagina-programa .vts-dinamica-table tbody {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-areas:
-      "id programa"
-      "reporter local"
-      "descricao descricao"
-      "afiliada acoes";
-    gap: 3px 9px;
-    padding: 8px 10px;
-    border-radius: 11px;
-  }
-
-  .pagina-busca .resultado-programa-badge,
-  .pagina-programa .resultados-gerais-wrap .resultado-programa-badge {
-    justify-self: end;
-  }
-
-  .pagina-busca .resultado-local,
-  .pagina-busca .resultado-afiliada,
-  .pagina-programa .resultados-gerais-wrap .resultado-local,
-  .pagina-programa .resultados-gerais-wrap .resultado-afiliada {
-    padding-left: 8px;
-  }
-
-  .pagina-busca .resultado-acoes,
-  .pagina-programa .resultados-gerais-wrap .resultado-acoes {
-    justify-self: end;
-  }
-
-  .pagina-busca .id-media-link,
-  .pagina-programa .resultados-gerais-wrap .id-media-link {
-    font-size: 16px;
   }
 }
 
-@media (max-width: 420px) {
-  .pagina-busca .results-table tbody tr,
-  .pagina-programa .resultados-gerais-wrap > .results-table tbody tr {
+@media (max-width: 520px) {
+  .pagina-busca .results-table tbody,
+  .pagina-programa .resultados-gerais-wrap > .results-table tbody,
+  .pagina-programa .mam-agro-table tbody,
+  .pagina-programa .vts-dinamica-table tbody {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "id"
-      "programa"
-      "reporter"
-      "local"
-      "descricao"
-      "afiliada"
-      "acoes";
-    row-gap: 2px;
   }
 
-  .pagina-busca .resultado-programa-badge,
-  .pagina-programa .resultados-gerais-wrap .resultado-programa-badge {
-    justify-self: start;
+  .pagina-busca .results-table tbody tr,
+  .pagina-programa .resultados-gerais-wrap > .results-table tbody tr,
+  .pagina-programa .mam-agro-table tbody tr,
+  .pagina-programa .vts-dinamica-table tbody tr {
+    min-height: 190px;
   }
-
-  .pagina-busca .resultado-local,
-  .pagina-busca .resultado-afiliada,
-  .pagina-programa .resultados-gerais-wrap .resultado-local,
-  .pagina-programa .resultados-gerais-wrap .resultado-afiliada {
-    padding-left: 0;
-    border-left: 0;
-  }
-}
-
-/* Cards das abas VT's, notícias/stand-ups e imagens de cobertura.
-   Preserva as células utilizadas pela integração de créditos. */
-.pagina-programa .mam-agro-table-wrap {
-  overflow: visible;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-}
-.pagina-programa .mam-agro-table {
-  display: block;
-  width: 100%;
-  min-width: 0;
-  border: 0;
-}
-.pagina-programa .mam-agro-table thead { display: none; }
-.pagina-programa .mam-agro-table tbody {
-  display: grid;
-  width: 100%;
-  gap: 7px;
-}
-.pagina-programa .mam-agro-table tbody tr {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 3px 18px;
-  width: 100%;
-  margin: 0;
-  padding: 9px 12px;
-  border: 1px solid #dde9e1;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(24, 73, 42, .04);
-}
-.pagina-programa .mam-agro-table tbody td {
-  display: block;
-  flex: 0 1 auto;
-  order: 2;
-  width: auto;
-  min-width: 0;
-  max-width: 100%;
-  padding: 0;
-  border: 0;
-  color: #31463a;
-  font-size: 12px;
-  line-height: 1.35;
-  white-space: normal;
-  overflow-wrap: anywhere;
-}
-.pagina-programa .mam-agro-table tbody td::before {
-  content: attr(data-label) ": ";
-  display: inline;
-  color: #68786e;
-  font-size: 10px;
-  font-weight: 700;
-}
-.pagina-programa .mam-agro-table tbody .resultado-id {
-  flex-basis: 100%;
-  order: 0;
-}
-.pagina-programa .mam-agro-table tbody .resultado-descricao {
-  flex-basis: 100%;
-  order: 1;
-}
-.pagina-programa .mam-agro-table tbody .resultado-acoes {
-  flex-basis: 100%;
-  order: 3;
-  text-align: right;
-}
-.pagina-programa .mam-agro-table .resultado-id::before,
-.pagina-programa .mam-agro-table .resultado-acoes::before,
-.pagina-programa .mam-agro-table .resultado-card-vazio td::before { content: none; }
-.pagina-programa .mam-agro-table .resultado-meta-vazio { display: none; }
-.pagina-programa .mam-agro-table .id-lista,
-.pagina-programa .mam-agro-table .id-item {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px 8px;
-}
-.pagina-programa .mam-agro-table .id-media-link {
-  color: #17261d;
-  font-size: 16px;
-  font-weight: 800;
-  text-decoration: none;
-}
-.pagina-programa .mam-agro-table .resultado-detalhes {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  min-height: 26px;
-  padding: 2px 6px;
-  border-radius: 6px;
-  color: #176d45;
-  font-size: 12px;
-  font-weight: 700;
-  text-decoration: none;
-}
-.pagina-programa .mam-agro-table a:hover,
-.pagina-programa .mam-agro-table a:focus-visible { text-decoration: underline; }
-.pagina-programa .mam-agro-table .creditos-detalhes { margin-top: 3px; padding-top: 3px; }
-.pagina-programa .mam-agro-table .creditos-resumo { font-size: 12px; }
-@media (max-width: 480px) {
-  .pagina-programa .mam-agro-table tbody tr { padding: 8px 10px; gap: 3px 12px; }
 }

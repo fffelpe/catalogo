@@ -1,70 +1,205 @@
 // search-results-cards.js
-// Organiza visualmente os resultados gerais em cards compactos, preservando
-// busca, filtros, créditos, cópia de IDs e links já existentes.
+// Transforma as linhas das tabelas do catálogo em cards editoriais compactos.
+// Preserva filtros, créditos, cópia de Media IDs e links das fichas individuais.
 
 (function () {
-  const BODY_IDS = ["resultsBody", "mamAgroBody"];
+  const BODY_IDS = ["resultsBody", "mamAgroBody", "tbodyVtsAgro"];
 
   const MAPA_CLASSES = {
-    "Descrição": "resultado-descricao",
-    "Data": "resultado-meta-oculto-card",
+    "Descrição": "resultado-titulo",
+    "DESCRIÇÃO": "resultado-titulo",
+    "Descricao": "resultado-titulo",
+    "DESCRICAO": "resultado-titulo",
+    "Data": "resultado-data",
+    "DATA": "resultado-data",
     "Local": "resultado-local",
+    "LOCAL": "resultado-local",
     "Repórter": "resultado-reporter",
-    "Afiliada / Emissora": "resultado-afiliada",
+    "REPÓRTER": "resultado-reporter",
+    "Reporter": "resultado-reporter",
+    "REPORTER": "resultado-reporter",
+    "Afiliada / Emissora": "resultado-meta-oculto-card",
     "Programa": "resultado-programa-badge",
-    "Editoria": "resultado-meta-oculto-card"
+    "PROGRAMA": "resultado-programa-badge",
+    "Editoria": "resultado-meta-oculto-card",
+    "EDITORIA": "resultado-meta-oculto-card",
+    "PGM": "resultado-meta-oculto-card"
   };
+
+  const CAMPOS_VISIVEIS = new Set([
+    "Data", "DATA", "Local", "LOCAL", "Repórter", "REPÓRTER", "Reporter", "REPORTER"
+  ]);
 
   function textoVisivel(elemento) {
     return String(elemento?.textContent || "").replace(/\s+/g, " ").trim();
   }
 
+  function resumirDescricao(texto, limite = 78) {
+    const limpo = String(texto || "").replace(/\s+/g, " ").trim();
+    if (!limpo || limpo === "—") return "Sem descrição";
+
+    const primeiraFrase = limpo.match(/^(.{12,}?[.!?])(?:\s|$)/)?.[1] || limpo;
+    if (primeiraFrase.length <= limite) return primeiraFrase;
+
+    const corte = primeiraFrase.slice(0, limite + 1);
+    const ultimoEspaco = corte.lastIndexOf(" ");
+    const resumo = (ultimoEspaco > Math.floor(limite * 0.65)
+      ? corte.slice(0, ultimoEspaco)
+      : corte.slice(0, limite)).trim();
+
+    return `${resumo.replace(/[,:;.!?]+$/, "")}…`;
+  }
+
+  function prepararTitulo(td) {
+    if (!td) return;
+
+    let alvo = td.querySelector(".descricao-resultado");
+    if (!alvo) {
+      const textoDireto = Array.from(td.childNodes)
+        .filter((node) => node.nodeType === Node.TEXT_NODE)
+        .map((node) => String(node.textContent || "").trim())
+        .filter(Boolean)
+        .join(" ");
+
+      alvo = document.createElement("span");
+      alvo.className = "descricao-resultado";
+      alvo.textContent = textoDireto || "Sem descrição";
+
+      Array.from(td.childNodes)
+        .filter((node) => node.nodeType === Node.TEXT_NODE)
+        .forEach((node) => node.remove());
+      td.prepend(alvo);
+    }
+
+    const descricaoCompleta = alvo.dataset.descricaoCompleta || textoVisivel(alvo);
+    if (!descricaoCompleta) return;
+
+    alvo.dataset.descricaoCompleta = descricaoCompleta;
+    alvo.title = descricaoCompleta;
+    alvo.textContent = resumirDescricao(descricaoCompleta);
+  }
+
+  function preencherCampoVazio(td, rotulo) {
+    if (!td || !CAMPOS_VISIVEIS.has(rotulo)) return;
+    if (!textoVisivel(td)) td.textContent = "—";
+  }
+
   function marcarCelulas(tr) {
     tr.querySelectorAll("td[data-label]").forEach((td) => {
       const rotulo = td.getAttribute("data-label") || "";
-      const painelAgro = tr.parentElement?.id === "mamAgroBody";
-      const classe = painelAgro && rotulo === "Data"
-        ? "resultado-data" : MAPA_CLASSES[rotulo];
+      const classe = MAPA_CLASSES[rotulo];
       if (classe) td.classList.add(classe);
-
-      if (!textoVisivel(td) && rotulo !== "Descrição") {
-        td.classList.add("resultado-meta-vazio");
-      }
+      if (classe === "resultado-titulo") prepararTitulo(td);
+      preencherCampoVazio(td, rotulo);
     });
 
-    const celulaId = tr.querySelector("td.id-cell") || tr.querySelector("td:first-child");
+    const celulaId = tr.querySelector("td.id-cell") || tr.querySelector('td[data-label="ID"]') || tr.querySelector("td:first-child");
     if (celulaId) celulaId.classList.add("resultado-id");
   }
 
-  function criarAcaoDetalhes(tr) {
-    if (tr.querySelector(".resultado-acoes")) return;
+  function primeiroMediaId(tr) {
+    const link = tr.querySelector(".id-media-link");
+    if (link) return textoVisivel(link);
+
+    const botao = tr.querySelector(".btn-copiar-id[data-ids]");
+    const bruto = botao?.dataset.ids || "";
+    if (typeof MediaIdUtils !== "undefined" && typeof MediaIdUtils.extrair === "function") {
+      return MediaIdUtils.extrair(bruto)[0] || "";
+    }
+    return bruto.split(/[\r\n,;+\/|&]+/).map((id) => id.trim()).find(Boolean) || "";
+  }
+
+  function garantirPrograma(tr) {
+    let celula = tr.querySelector('.resultado-programa-badge, td[data-label="Programa"], td[data-label="PROGRAMA"]');
+    if (!celula) {
+      celula = document.createElement("td");
+      celula.setAttribute("data-label", "Programa");
+      const bodyId = tr.parentElement?.id || "";
+      celula.textContent = (bodyId === "mamAgroBody" || bodyId === "tbodyVtsAgro") ? "AGROCULTURA" : "CATÁLOGO";
+      tr.appendChild(celula);
+    }
+
+    celula.classList.add("resultado-programa-badge");
+    if (!textoVisivel(celula)) celula.textContent = "CATÁLOGO";
+    return celula;
+  }
+
+  function garantirDuracao(tr) {
+    let celula = tr.querySelector('.resultado-duracao, td[data-label="Duração"], td[data-label="DURACAO"], td[data-label="DURAÇÃO"]');
+    if (!celula) {
+      celula = document.createElement("td");
+      celula.setAttribute("data-label", "Duração");
+      tr.appendChild(celula);
+    }
+
+    celula.classList.add("resultado-duracao");
+    if (textoVisivel(celula)) return celula;
+
+    const mediaId = primeiroMediaId(tr);
+    let duracao = "";
+    if (mediaId && typeof DadosMedia !== "undefined" && typeof DadosMedia.buscarPorMediaId === "function") {
+      try {
+        duracao = String(DadosMedia.buscarPorMediaId(mediaId)?.DURACAO || "").trim();
+      } catch (erro) {
+        console.warn("Não foi possível obter a duração do Media ID:", mediaId, erro);
+      }
+    }
+
+    celula.textContent = duracao || "—";
+    return celula;
+  }
+
+  function criarRodape(tr) {
+    let rodape = tr.querySelector(".resultado-rodape");
+    if (rodape) return rodape;
 
     const linkId = tr.querySelector(".id-media-link[href]");
-    if (!linkId) return;
+    if (!linkId) return null;
 
-    const celula = document.createElement("td");
-    celula.className = "resultado-acoes";
-    celula.setAttribute("data-label", "Ações");
+    rodape = document.createElement("td");
+    rodape.className = "resultado-rodape";
+    rodape.setAttribute("data-label", "Ações");
+
+    const extras = document.createElement("span");
+    extras.className = "resultado-creditos-slot";
 
     const link = document.createElement("a");
     link.className = "resultado-detalhes";
     link.href = linkId.getAttribute("href") || "#";
     link.setAttribute("aria-label", `Ver mais detalhes de ${textoVisivel(linkId)}`);
-    link.append(document.createTextNode(tr.parentElement?.id === "mamAgroBody" ? "Veja mais" : "Mais detalhes"));
+    link.append(document.createTextNode("Veja mais"));
 
     const seta = document.createElement("span");
     seta.className = "resultado-detalhes-seta";
     seta.setAttribute("aria-hidden", "true");
     seta.textContent = "›";
-
     link.appendChild(seta);
-    celula.appendChild(link);
-    tr.appendChild(celula);
+
+    rodape.append(extras, link);
+    tr.appendChild(rodape);
+    return rodape;
+  }
+
+  function realocarCreditos(tr) {
+    const rodape = tr.querySelector(".resultado-rodape") || criarRodape(tr);
+    const slot = rodape?.querySelector(".resultado-creditos-slot");
+    if (!slot) return;
+
+    tr.querySelectorAll(".creditos-detalhes").forEach((detalhes) => {
+      if (detalhes.closest(".resultado-creditos-slot")) return;
+      const resumo = detalhes.querySelector("summary");
+      if (resumo) resumo.textContent = "Com créditos";
+      slot.appendChild(detalhes);
+    });
+
+    tr.querySelectorAll(".trecho-encontrado-wrap").forEach((trecho) => {
+      if (trecho.closest(".resultado-creditos-slot")) return;
+      slot.appendChild(trecho);
+    });
   }
 
   function decorarLinha(tr) {
     if (!tr || tr.nodeType !== Node.ELEMENT_NODE) return;
-    if (tr.dataset.resultadoCardProcessado === "1") return;
 
     const celulas = tr.querySelectorAll("td");
     if (!celulas.length) return;
@@ -75,15 +210,18 @@
       return;
     }
 
-    marcarCelulas(tr);
-    criarAcaoDetalhes(tr);
+    if (tr.dataset.resultadoCardProcessado !== "1") {
+      marcarCelulas(tr);
+      garantirPrograma(tr);
+      garantirDuracao(tr);
+      criarRodape(tr);
 
-    const primeiroId = tr.querySelector(".id-media-link");
-    if (primeiroId) {
-      tr.setAttribute("aria-label", `Resultado ${textoVisivel(primeiroId)}`);
+      const primeiroId = tr.querySelector(".id-media-link");
+      if (primeiroId) tr.setAttribute("aria-label", `Resultado ${textoVisivel(primeiroId)}`);
+      tr.dataset.resultadoCardProcessado = "1";
     }
 
-    tr.dataset.resultadoCardProcessado = "1";
+    realocarCreditos(tr);
   }
 
   function decorarTabela(tbody) {
@@ -100,13 +238,15 @@
       mutacoes.forEach((mutacao) => {
         mutacao.addedNodes.forEach((node) => {
           if (node.nodeType !== Node.ELEMENT_NODE) return;
-          if (node.matches?.("tr")) decorarLinha(node);
+
+          const linha = node.matches?.("tr") ? node : node.closest?.("tr");
+          if (linha) decorarLinha(linha);
           node.querySelectorAll?.("tr").forEach(decorarLinha);
         });
       });
     });
 
-    observer.observe(tbody, { childList: true, subtree: false });
+    observer.observe(tbody, { childList: true, subtree: true });
   }
 
   document.addEventListener("DOMContentLoaded", () => BODY_IDS.forEach(observarCards));

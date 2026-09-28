@@ -8,7 +8,7 @@ const jsPath = fileURLToPath(new URL("../js/search-results-cards.js", import.met
 const buscaPath = fileURLToPath(new URL("../pages/resultado-busca.html", import.meta.url));
 const programaPath = fileURLToPath(new URL("../pages/programa.html", import.meta.url));
 
-test("resultados gerais usam cards compactos em duas colunas sem player de vídeo", () => {
+test("resultados gerais usam cards editoriais compactos sem player de vídeo", () => {
   assert.ok(fs.existsSync(cssPath), "css/search-results-cards.css deve existir");
   assert.ok(fs.existsSync(jsPath), "js/search-results-cards.js deve existir");
 
@@ -17,37 +17,35 @@ test("resultados gerais usam cards compactos em duas colunas sem player de víde
   const busca = fs.readFileSync(buscaPath, "utf8");
   const programa = fs.readFileSync(programaPath, "utf8");
 
-  assert.match(css, /\.results-table\s+tbody\s+tr\s*\{/);
-  assert.match(css, /grid-template-columns:\s*minmax\(0,\s*1\.35fr\)\s+minmax\(260px,\s*\.65fr\)/);
-  assert.match(css, /grid-template-areas:\s*["']id programa["']/);
-  assert.match(css, /["']reporter local["']/);
-  assert.match(css, /["']descricao afiliada["']/);
-  assert.match(css, /["']\. acoes["']/);
-  assert.match(css, /gap:\s*3px\s+14px/);
-  assert.match(css, /padding:\s*8px\s+11px/);
-  assert.match(css, /\.resultado-reporter::before[\s\S]*?display:\s*inline/);
-  assert.match(css, /@media\s*\(max-width:\s*640px\)[\s\S]*?["']reporter local["']/);
-  assert.match(css, /@media\s*\(max-width:\s*420px\)[\s\S]*?grid-template-columns:\s*1fr/);
+  assert.match(css, /\.results-table\s+tbody/);
+  assert.match(css, /grid-template-columns:\s*repeat\(5,\s*minmax\(0,\s*1fr\)\)/);
+  assert.match(css, /["']programa programa["']/);
+  assert.match(css, /["']titulo titulo["']/);
+  assert.match(css, /["']id id["']/);
+  assert.match(css, /["']data duracao["']/);
+  assert.match(css, /["']rodape rodape["']/);
   assert.match(css, /\.resultado-id/);
+  assert.match(css, /\.resultado-titulo/);
   assert.match(css, /\.resultado-reporter/);
   assert.match(css, /\.resultado-local/);
-  assert.match(css, /\.resultado-descricao/);
-  assert.match(css, /\.resultado-afiliada/);
+  assert.match(css, /\.resultado-data/);
+  assert.match(css, /\.resultado-duracao/);
   assert.match(css, /\.resultado-programa-badge/);
   assert.match(css, /\.resultado-meta-oculto-card/);
-  assert.match(css, /border-radius:\s*12px/);
-  assert.match(css, /box-shadow:/);
+  assert.match(css, /border-radius:\s*8px/);
 
+  assert.match(js, /"Descrição":\s*"resultado-titulo"/);
   assert.match(js, /"Repórter":\s*"resultado-reporter"/);
   assert.match(js, /"Local":\s*"resultado-local"/);
-  assert.match(js, /"Descrição":\s*"resultado-descricao"/);
-  assert.match(js, /"Afiliada \/ Emissora":\s*"resultado-afiliada"/);
   assert.match(js, /"Programa":\s*"resultado-programa-badge"/);
-  assert.match(js, /"Data":\s*"resultado-meta-oculto-card"/);
+  assert.match(js, /"Data":\s*"resultado-data"/);
+  assert.match(js, /"Afiliada \/ Emissora":\s*"resultado-meta-oculto-card"/);
   assert.match(js, /"Editoria":\s*"resultado-meta-oculto-card"/);
   assert.match(js, /resultado-id/);
   assert.match(js, /MutationObserver/);
   assert.match(js, /resultado-detalhes/);
+  assert.match(js, /resultado-duracao/);
+  assert.match(js, /Com créditos/);
 
   for (const html of [busca, programa]) {
     assert.ok(html.includes("search-results-cards.css"), "a página deve carregar o CSS de cards");
