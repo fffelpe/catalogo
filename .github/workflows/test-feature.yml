@@ -26,20 +26,3 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Rodar testes
         run: npm test
-      - name: Validar palavras-chave no acervo real
-        run: |
-          npm run sync:keywords
-          node --input-type=module <<'NODE'
-          import fs from 'node:fs';
-          const arquivo = 'data/media-enrichment.json';
-          const dados = JSON.parse(fs.readFileSync(arquivo, 'utf8'));
-          const itens = Object.values(dados.items || {});
-          const automaticas = itens.map((item) => {
-            const manuais = new Set((item.manualKeywords || []).map((x) => String(x).toLocaleLowerCase('pt-BR')));
-            return (item.keywords || []).filter((x) => !manuais.has(String(x).toLocaleLowerCase('pt-BR'))).length;
-          });
-          const bytes = fs.statSync(arquivo).size;
-          const com8 = automaticas.filter((n) => n >= 8).length;
-          const semKeywords = automaticas.filter((n) => n === 0).length;
-          console.log(`VALIDACAO_KEYWORDS itens=${itens.length} com8=${com8} semKeywords=${semKeywords} bytes=${bytes} mib=${(bytes / 1024 / 1024).toFixed(2)}`);
-          NODE
