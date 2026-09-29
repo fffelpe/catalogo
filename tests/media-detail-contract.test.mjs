@@ -87,8 +87,8 @@ test("página da ficha expõe metadados sem qualquer pré-visualização de víd
   assert.ok(html.includes("dados.js?v=8"), "dados.js deve ter versão nova para invalidar cache");
   assert.ok(html.includes("creditos.js?v=5"), "creditos.js deve ter versão nova para invalidar cache");
   assert.ok(html.includes("reporteres.js?v=2"), "reporteres.js deve ter versão nova para invalidar cache");
-  assert.ok(html.includes("media-detail.js?v=4"), "media-detail.js deve ter versão nova para invalidar cache");
-  assert.ok(html.includes("media-detail.css?v=3"), "media-detail.css deve ter versão nova para invalidar cache");
+  assert.ok(html.includes("media-detail.js?v=5"), "media-detail.js deve ter versão nova para invalidar cache");
+  assert.ok(html.includes("media-detail.css?v=4"), "media-detail.css deve ter versão nova para invalidar cache");
   for (const script of ["media-id.js", "dados.js", "creditos.js", "reporteres.js", "media-enrichment.js", "media-segments.js", "related-media.js", "catalogo-quality.js", "media-detail.js"]) {
     assert.ok(html.includes(script), `${script} deve ser carregado`);
   }
