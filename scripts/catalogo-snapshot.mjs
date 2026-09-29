@@ -42,9 +42,16 @@ export function criarMapaDuracoes(linhas = []) {
   const mapa = {};
 
   (Array.isArray(linhas) ? linhas : []).forEach((linha) => {
-    const id = normalizarMediaId(linha?.[0]);
-    const duracao = limparCelula(linha?.[1]);
+    if (!Array.isArray(linha)) return;
+
+    const celulas = linha.map(limparCelula);
+    const indiceId = celulas.findIndex((valor) => Boolean(normalizarMediaId(valor)));
+    if (indiceId < 0) return;
+
+    const id = normalizarMediaId(celulas[indiceId]);
+    const duracao = limparCelula(celulas[indiceId + 1]);
     if (!id || !duracao) return;
+
     mapa[id] = duracao;
   });
 
