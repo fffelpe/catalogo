@@ -188,6 +188,22 @@
   font-weight: 600;
 }
 
+.media-tag-link {
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.media-tag-link:hover,
+.media-tag-link:focus-visible {
+  border-color: #9bc8b0;
+  background: #e4f2e9;
+  color: #126a42;
+  text-decoration: none;
+  outline: none;
+}
+
 .media-credit-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
