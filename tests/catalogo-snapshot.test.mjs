@@ -130,17 +130,33 @@ test("ignora duração de ID que não existe no catálogo e não cria novo regis
   assert.equal(snapshot.registros.some((registro) => registro.ID.includes("9999B999999")), false);
 });
 
-test("lê duração no formato real da planilha com índice antes do Media ID", () => {
+test("mantém Media ID no catálogo quando a coluna B de duração está vazia", () => {
   const duracoesPorId = criarMapaDuracoes([
-    ["147", "1452B000149", "00:01:04"],
-    ["148", "1452B000150", "00:05:13"],
-    ["149", "1452B000151", ""],
+    ["1452B004871", ""],
   ]);
 
-  assert.deepEqual(duracoesPorId, {
-    "1452B000149": "00:01:04",
-    "1452B000150": "00:05:13",
+  assert.deepEqual(duracoesPorId, {});
+
+  const snapshot = criarSnapshotCatalogo([
+    [
+      "1452B004871",
+      "Mídia ainda não ingestada",
+      "25/09/2026",
+      "",
+      "",
+      "",
+      "Jornal da Cultura",
+      "",
+      "",
+    ],
+  ], {
+    generatedAt: "2026-09-25T21:10:00.000Z",
+    duracoesPorId,
   });
+
+  assert.equal(snapshot.total, 1);
+  assert.equal(snapshot.registros[0].ID, "1452B004871");
+  assert.deepEqual(snapshot.registros[0].DURACOES, {});
 });
 
 test("recusa publicar snapshot vazio para não substituir o acervo por acidente", () => {
