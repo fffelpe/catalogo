@@ -1,4 +1,49 @@
 {
+  "2457B018086": {
+    "materia": "LAUDO NATEL - DESEMB. DO TRE-GO",
+    "fontes": [
+      {
+        "nome": "REPETE LAUDO",
+        "cargo": "BRUNELLE PORTELA - REPÓRTER"
+      },
+      {
+        "nome": "REPETE LAUDO",
+        "cargo": "DE CAMPANHA, O APLICATIVO PARDAL DO TRIBUNAL REGIONAL ELEITORAL DE GOIÁS RECEBEU CENTENAS DE DENÚNCIAS DE IRREGULARIDADES NAS PROPAGANDAS.// O NÚMERO JÁ É MAIOR QUE O RECEBIDO EM 2022 E DEVE BATER RECORDE NESTE PROCESSO ELEITORAL.// QUEM TRAZ MAIS DETALHES É A REPÓRTER BRUNELLE PORTELA.//"
+      }
+    ],
+    "creditos": {},
+    "textoCompleto": "LAUDO NATEL - DESEMB. DO TRE-GO | REPETE LAUDO | BRUNELLE PORTELA - REPÓRTER | REPETE LAUDO | DE CAMPANHA, O APLICATIVO PARDAL DO TRIBUNAL REGIONAL ELEITORAL DE GOIÁS RECEBEU CENTENAS DE DENÚNCIAS DE IRREGULARIDADES NAS PROPAGANDAS.// O NÚMERO JÁ É MAIOR QUE O RECEBIDO EM 2022 E DEVE BATER RECORDE NESTE PROCESSO ELEITORAL.// QUEM TRAZ MAIS DETALHES É A REPÓRTER BRUNELLE PORTELA.//",
+    "arquivo": {
+      "id": "1nvQ830A5BMfBt79ghFnfMvGxa_jypuzl-E1XlHahGfc",
+      "nome": "2457B018086",
+      "mimeType": "application/vnd.google-apps.document",
+      "atualizadoEm": "2026-09-29T22:02:26.850Z",
+      "url": "https://docs.google.com/document/d/1nvQ830A5BMfBt79ghFnfMvGxa_jypuzl-E1XlHahGfc/edit?usp=drivesdk"
+    },
+    "origem": "Google Drive",
+    "selecao": {
+      "tipo": "unico",
+      "motivo": "único documento disponível"
+    }
+  },
+  "2457B018111": {
+    "materia": "SONORA: Igor Duarte_Coordenador do projeto Livros nas Praças",
+    "fontes": [],
+    "creditos": {},
+    "textoCompleto": "SONORA: Igor Duarte_Coordenador do projeto Livros nas Praças",
+    "arquivo": {
+      "id": "16puCkiSeskrPh_4URRIPX2jxQrO0AvMW-nhdZhwkq-s",
+      "nome": "2457B018111",
+      "mimeType": "application/vnd.google-apps.document",
+      "atualizadoEm": "2026-09-29T21:58:48.653Z",
+      "url": "https://docs.google.com/document/d/16puCkiSeskrPh_4URRIPX2jxQrO0AvMW-nhdZhwkq-s/edit?usp=drivesdk"
+    },
+    "origem": "Google Drive",
+    "selecao": {
+      "tipo": "unico",
+      "motivo": "único documento disponível"
+    }
+  },
   "2457B018121": {
     "materia": "CABEÇA - Em Agrolândia, uma",
     "fontes": [
@@ -559,33 +604,6 @@
       "mimeType": "application/vnd.google-apps.document",
       "atualizadoEm": "2026-09-25T19:24:35.745Z",
       "url": "https://docs.google.com/document/d/1wIjKep5aenRnWRA1c0CTvm9XWrXgQiFFqIza5kK9rDs/edit?usp=drivesdk"
-    },
-    "origem": "Google Drive",
-    "selecao": {
-      "tipo": "unico",
-      "motivo": "único documento disponível"
-    }
-  },
-  "2457B018086": {
-    "materia": "LAUDO NATEL - DESEMB. DO TRE-GO",
-    "fontes": [
-      {
-        "nome": "REPETE LAUDO",
-        "cargo": "BUNELLE PORTELA - REPÓRTER"
-      },
-      {
-        "nome": "REPETE LAUDO",
-        "cargo": "DE CAMPANHA, O APLICATIVO PARDAL DO TRIBUNAL REGIONAL ELEITORAL DE GOIÁS RECEBEU CENTENAS DE DENÚNCIAS DE IRREGULARIDADES NAS PROPAGANDAS.// O NÚMERO JÁ É MAIOR QUE O RECEBIDO EM 2022 E DEVE BATER RECORDE NESTE PROCESSO ELEITORAL.// QUEM TRAZ MAIS DETALHES É A REPÓRTER BRUNELLE PORTELA.//"
-      }
-    ],
-    "creditos": {},
-    "textoCompleto": "LAUDO NATEL - DESEMB. DO TRE-GO | REPETE LAUDO | BUNELLE PORTELA - REPÓRTER | REPETE LAUDO | DE CAMPANHA, O APLICATIVO PARDAL DO TRIBUNAL REGIONAL ELEITORAL DE GOIÁS RECEBEU CENTENAS DE DENÚNCIAS DE IRREGULARIDADES NAS PROPAGANDAS.// O NÚMERO JÁ É MAIOR QUE O RECEBIDO EM 2022 E DEVE BATER RECORDE NESTE PROCESSO ELEITORAL.// QUEM TRAZ MAIS DETALHES É A REPÓRTER BRUNELLE PORTELA.//",
-    "arquivo": {
-      "id": "1nvQ830A5BMfBt79ghFnfMvGxa_jypuzl-E1XlHahGfc",
-      "nome": "2457B018086",
-      "mimeType": "application/vnd.google-apps.document",
-      "atualizadoEm": "2026-09-25T19:24:35.702Z",
-      "url": "https://docs.google.com/document/d/1nvQ830A5BMfBt79ghFnfMvGxa_jypuzl-E1XlHahGfc/edit?usp=drivesdk"
     },
     "origem": "Google Drive",
     "selecao": {
