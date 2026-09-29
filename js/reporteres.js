@@ -1,17 +1,18 @@
-// reporteres.js - Identifica repórteres a partir da planilha, dos créditos e do cadastro auxiliar.
-// Prioridade: valor já informado na planilha > crédito explícito > nome conhecido presente nos créditos.
+// reporteres.js - Identifica repórteres e enriquece afiliadas a partir da base oficial.
+// Prioridade: valor já informado em imgs > créditos > cadastro oficial de referência.
 
 const ReporteresMedia = (() => {
   let nomesConhecidos = [];
+  let cadastro = { afiliadas: [], reporteres: [] };
   let cadastroCarregado = false;
   let preparacaoPromise = null;
 
   const URL_CADASTRO = (() => {
     try {
       const base = document.currentScript?.src || window.location.href;
-      return new URL("../data/reporteres.json", base).href;
+      return new URL("../data/afiliadas-reporteres.json", base).href;
     } catch {
-      return "../data/reporteres.json";
+      return "../data/afiliadas-reporteres.json";
     }
   })();
 
@@ -79,7 +80,7 @@ const ReporteresMedia = (() => {
   }
 
   async function carregarCadastro() {
-    if (cadastroCarregado) return nomesConhecidos;
+    if (cadastroCarregado) return cadastro;
 
     try {
       const resposta = await fetch(`${URL_CADASTRO}${URL_CADASTRO.includes("?") ? "&" : "?"}_=${Date.now()}`, {
@@ -88,17 +89,42 @@ const ReporteresMedia = (() => {
       if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
 
       const dados = await resposta.json();
-      nomesConhecidos = Array.isArray(dados?.reporteres)
-        ? dados.reporteres.map((item) => String(item?.nome || "").trim()).filter(Boolean)
-        : [];
+      if (dados?.schemaVersion !== 1) throw new Error("Versão do cadastro não reconhecida.");
+
+      cadastro = {
+        afiliadas: Array.isArray(dados.afiliadas) ? dados.afiliadas : [],
+        reporteres: Array.isArray(dados.reporteres) ? dados.reporteres : []
+      };
+      nomesConhecidos = cadastro.reporteres
+        .map((item) => String(item?.nome || "").trim())
+        .filter(Boolean);
       cadastroCarregado = true;
     } catch (erro) {
-      console.warn("Cadastro auxiliar de repórteres indisponível:", erro);
+      console.warn("Cadastro oficial de afiliadas/repórteres indisponível:", erro);
+      cadastro = { afiliadas: [], reporteres: [] };
       nomesConhecidos = [];
       cadastroCarregado = true;
     }
 
-    return nomesConhecidos;
+    return cadastro;
+  }
+
+  function buscarReporterPorNome(nome) {
+    const chave = normalizar(nome);
+    if (!chave) return null;
+    return cadastro.reporteres.find((item) => normalizar(item?.nome) === chave) || null;
+  }
+
+  function buscarAfiliadaPorId(id) {
+    const chave = normalizar(id);
+    if (!chave) return null;
+    return cadastro.afiliadas.find((item) => normalizar(item?.id) === chave) || null;
+  }
+
+  function buscarAfiliadaPorNome(nome) {
+    const chave = normalizar(nome);
+    if (!chave) return null;
+    return cadastro.afiliadas.find((item) => normalizar(item?.nome) === chave) || null;
   }
 
   function montarTextoCreditos(dados) {
@@ -154,7 +180,6 @@ const ReporteresMedia = (() => {
       });
     }
 
-    // Alguns registros trazem o crédito diretamente na descrição da planilha.
     const descricao = String(registro.DESCRICAO || "");
     if (/REP[ÓO]RTER|REPORTAGEM|TRAZ\s+TODOS\s+OS\s+DETALHES|FOI\s+CONFERIR/i.test(descricao)) {
       extrairDoTexto(descricao).forEach((nome) => adicionar(encontrados, nome));
@@ -163,17 +188,68 @@ const ReporteresMedia = (() => {
     return encontrados.join(" / ");
   }
 
+  function aplicarMetadadosAfiliada(registro, afiliada, preencherNome = false) {
+    if (!registro || !afiliada) return;
+
+    if (preencherNome && !String(registro.AFILIADA_EMISSORA || "").trim()) {
+      registro.AFILIADA_EMISSORA = String(afiliada.nome || "").trim();
+    }
+
+    registro._AFILIADA_ID = String(afiliada.id || "").trim();
+    registro._AFILIADA_UF = String(afiliada.uf || "").trim();
+    registro._AFILIADA_CIDADE = String(afiliada.cidade || "").trim();
+    registro._AFILIADA_ATIVA = afiliada.ativa !== false;
+    registro._ENRIQUECIMENTO_ORIGEM = "fonte_afiliadas_reporteres";
+  }
+
+  function aplicarMetadadosReporter(registro, nomes) {
+    const conhecidos = nomes
+      .map((nome) => buscarReporterPorNome(nome))
+      .filter(Boolean);
+
+    if (!conhecidos.length) return conhecidos;
+
+    registro._REPORTER_ID = conhecidos.map((item) => item.id).filter(Boolean).join(" / ");
+    registro._REPORTER_ATIVO = conhecidos.every((item) => item.ativo !== false);
+    return conhecidos;
+  }
+
+  function resolverAfiliadaUnicaPorReporteres(reporteres) {
+    const ids = [...new Set(
+      reporteres.map((item) => String(item?.afiliadaId || "").trim()).filter(Boolean)
+    )];
+    if (ids.length !== 1) return null;
+    return buscarAfiliadaPorId(ids[0]);
+  }
+
   function aplicar(registros) {
     if (!Array.isArray(registros)) return registros;
 
     registros.forEach((registro) => {
       if (!registro || typeof registro !== "object") return;
-      const original = String(registro.REPORTER || "").trim();
-      const identificado = identificar(registro);
-      if (!identificado) return;
 
-      registro.REPORTER = identificado;
-      registro._REPORTER_ORIGEM = original ? "planilha" : "creditos";
+      const reporterOriginal = String(registro.REPORTER || "").trim();
+      const afiliadaOriginal = String(registro.AFILIADA_EMISSORA || "").trim();
+      const identificado = identificar(registro);
+      const nomesIdentificados = identificado
+        ? identificado.split(/\s+\/\s+/).map((nome) => nome.trim()).filter(Boolean)
+        : [];
+
+      if (identificado) {
+        registro.REPORTER = identificado;
+        registro._REPORTER_ORIGEM = reporterOriginal ? "planilha" : "creditos";
+      }
+
+      const reporteresConhecidos = aplicarMetadadosReporter(registro, nomesIdentificados);
+
+      if (afiliadaOriginal) {
+        const afiliadaCadastrada = buscarAfiliadaPorNome(afiliadaOriginal);
+        if (afiliadaCadastrada) aplicarMetadadosAfiliada(registro, afiliadaCadastrada, false);
+        return;
+      }
+
+      const afiliadaInferida = resolverAfiliadaUnicaPorReporteres(reporteresConhecidos);
+      if (afiliadaInferida) aplicarMetadadosAfiliada(registro, afiliadaInferida, true);
     });
 
     return registros;
@@ -201,8 +277,8 @@ const ReporteresMedia = (() => {
   return { carregarCadastro, identificar, aplicar, preparar };
 })();
 
-// Integração transparente: qualquer página que carregue a planilha depois deste script
-// recebe os repórteres enriquecidos antes de usar os registros.
+// Integração transparente: qualquer página que carregue o acervo depois deste script
+// recebe o enriquecimento antes de usar os registros.
 if (typeof DadosMedia !== "undefined" && typeof DadosMedia.carregarCSV === "function") {
   const carregarCSVOriginal = DadosMedia.carregarCSV.bind(DadosMedia);
 
@@ -213,7 +289,7 @@ if (typeof DadosMedia !== "undefined" && typeof DadosMedia.carregarCSV === "func
       await ReporteresMedia.preparar();
       ReporteresMedia.aplicar(this.registros);
     } catch (erro) {
-      console.warn("Não foi possível enriquecer os repórteres nesta execução:", erro);
+      console.warn("Não foi possível enriquecer repórteres e afiliadas nesta execução:", erro);
     }
 
     return registros;
