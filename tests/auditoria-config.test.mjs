@@ -94,3 +94,13 @@ test("home adia o carregamento do snapshot até interação do usuário", () => 
   const trecho = ui.slice(inicio, fim);
   assert.doesNotMatch(trecho, /\n\s*await DadosMedia\.carregarCSV\(\);/);
 });
+
+test("workflow principal regenera e publica palavras-chave automaticamente", () => {
+  const pacote = JSON.parse(ler("package.json"));
+  assert.match(pacote.scripts?.["sync:keywords"] || "", /gerar-palavras-chave\.mjs/);
+
+  const sync = ler(".github/workflows/sincronizar-planilhas.yml");
+  assert.match(sync, /npm run sync:keywords/);
+  assert.match(sync, /data\/media-enrichment\.json/);
+  assert.equal(fs.existsSync("scripts/gerar-palavras-chave.mjs"), true);
+});
