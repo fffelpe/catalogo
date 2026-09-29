@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
 /* Catálogo de Mídias — TV Cultura */
 * { box-sizing: border-box; }
-body { margin: 0; font-family: "IBM Plex Sans JP", Arial, sans-serif; color: #000; background: #fff; }
+body { margin: 0; font-family: "IBM Plex Sans", Arial, sans-serif; color: #000; background: #fff; text-transform: uppercase; }
+body * { text-transform: uppercase; }
 a { color: #000; text-decoration: none; }
-button, input { font: inherit; }
+button, input, textarea, select, option { font: inherit; text-transform: uppercase; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px clamp(16px, 4vw, 48px); }
 .logo { display: flex; align-items: center; gap: 14px; }
@@ -81,7 +84,8 @@ button, input { font: inherit; }
 .id-cell-content { display: grid; grid-template-columns: minmax(0, 1fr) 28px; align-items: start; gap: 8px; width: 100%; max-width: 100%; }
 .id-lista { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 .id-item { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
-.id-text { display: block; min-width: 0; line-height: 1.35; overflow-wrap: anywhere; word-break: break-word; }
+.id-text { display: block; min-width: 0; line-height: 1.35; overflow-wrap: anywhere; word-break: break-word; font-family: "IBM Plex Mono", monospace; font-weight: 600; }
+.id-media-link, .media-related-id, #breadcrumbMediaId, #mediaTitle { font-family: "IBM Plex Mono", monospace; }
 .btn-copiar-id { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 28px; height: 28px; margin: -4px 0; padding: 5px; border: 0; border-radius: 4px; background: transparent; color: inherit; cursor: pointer; }
 .btn-copiar-id:hover, .btn-copiar-id:focus-visible { background: #e8f5ed; outline: none; }
 .btn-copiar-id:focus-visible { box-shadow: 0 0 0 2px #00953b; }

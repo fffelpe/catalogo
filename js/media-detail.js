@@ -93,18 +93,45 @@ const MediaDetail = (() => {
     const container = document.getElementById("mediaTags");
     if (!container) return;
     container.textContent = "";
+
+    const keywords = (enrichment?.keywords || [])
+      .map((tag) => String(tag).trim())
+      .filter(Boolean);
+    const normalizarTag = (tag) => typeof KeywordNavigation !== "undefined"
+      ? KeywordNavigation.normalizar(tag)
+      : String(tag || "").trim().toLocaleLowerCase("pt-BR");
+    const keywordsNormalizadas = new Set(keywords.map(normalizarTag));
+
     const tags = [
       ...(enrichment?.subjects || []),
-      ...(enrichment?.keywords || []),
+      ...keywords,
       ...(enrichment?.people || []),
       ...(enrichment?.places || [])
     ];
-    const unicos = [...new Set(tags.map((tag) => String(tag).trim()).filter(Boolean))];
+    const unicos = [];
+    const vistos = new Set();
+    tags.map((tag) => String(tag).trim()).filter(Boolean).forEach((tag) => {
+      const chave = normalizarTag(tag);
+      if (vistos.has(chave)) return;
+      vistos.add(chave);
+      unicos.push(tag);
+    });
+
     if (!unicos.length) {
       container.append(el("p", "media-empty", "Este Media ID ainda não possui palavras-chave enriquecidas."));
       return;
     }
-    unicos.forEach((tag) => container.append(el("span", "media-tag", tag)));
+
+    unicos.forEach((tag) => {
+      const ehKeyword = keywordsNormalizadas.has(normalizarTag(tag)) && typeof KeywordNavigation !== "undefined";
+      const item = el(ehKeyword ? "a" : "span", ehKeyword ? "media-tag media-tag-link" : "media-tag", tag);
+      if (ehKeyword) {
+        item.href = KeywordNavigation.criarUrl(tag);
+        item.title = `Ver todos os materiais com a palavra-chave ${tag}`;
+        item.setAttribute("aria-label", `Ver materiais relacionados à palavra-chave ${tag}`);
+      }
+      container.append(item);
+    });
   }
 
   function renderSegments(segmentos) {
