@@ -18,6 +18,13 @@ async function lerJson(caminho, fallback) {
   }
 }
 
+function quantidadeAutomatica(item = {}) {
+  const manuais = new Set((item.manualKeywords || []).map((termo) => String(termo).trim().toLocaleLowerCase("pt-BR")));
+  return (item.keywords || []).filter(
+    (termo) => !manuais.has(String(termo).trim().toLocaleLowerCase("pt-BR"))
+  ).length;
+}
+
 async function main() {
   const [catalogo, creditos, anterior, afiliadas] = await Promise.all([
     lerJson(CAMINHOS.catalogo, { registros: [] }),
@@ -39,8 +46,9 @@ async function main() {
   });
 
   const itens = Object.values(snapshot.items);
-  const totalKeywords = itens.reduce((soma, item) => soma + (item.autoKeywords?.length || 0), 0);
-  const comOitoOuMais = itens.filter((item) => (item.autoKeywords?.length || 0) >= 8).length;
+  const quantidadesAutomaticas = itens.map(quantidadeAutomatica);
+  const totalKeywords = quantidadesAutomaticas.reduce((soma, quantidade) => soma + quantidade, 0);
+  const comOitoOuMais = quantidadesAutomaticas.filter((quantidade) => quantidade >= 8).length;
 
   await fs.writeFile(CAMINHOS.saida, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");
 
