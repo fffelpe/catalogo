@@ -6,7 +6,7 @@ import { criarMapaDuracoes, criarSnapshotCatalogo } from "./catalogo-snapshot.mj
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const RANGE_IMGS = "imgs!A2:I";
 const PLANILHA_DURACOES_ID = "1zrG3ULT16FxN7wWiFpeYtSvXAXuOaQ1NQ1brA0pXStQ";
-const RANGE_DURACOES = "'Página1'!A:B";
+const RANGE_DURACOES = "'Página1'!A:C";
 const ARQUIVO_SAIDA = "data/catalogo-acervo.json";
 
 const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
