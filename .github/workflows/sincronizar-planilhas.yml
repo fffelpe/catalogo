@@ -65,6 +65,7 @@ jobs:
         run: npm run sync:catalogo
 
       - name: Gerar snapshot de afiliadas e repórteres
+        continue-on-error: true
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:afiliadas
