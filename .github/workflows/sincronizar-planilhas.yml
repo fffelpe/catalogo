@@ -45,6 +45,9 @@ jobs:
       - name: Testar snapshot de afiliadas e repórteres
         run: node --test tests/afiliadas-reporteres-snapshot.test.mjs
 
+      - name: Testar palavras-chave por Media ID
+        run: node --test tests/palavras-chave.test.mjs
+
       - name: Testar frescor do snapshot
         run: node --test tests/snapshot-freshness.test.mjs
 
@@ -66,6 +69,9 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:afiliadas
 
+      - name: Gerar palavras-chave e enriquecimento
+        run: npm run sync:keywords
+
       - name: Validar frescor do snapshot principal
         env:
           SNAPSHOT_MAX_AGE_MINUTES: "20"
@@ -78,7 +84,7 @@ jobs:
 
       - name: Publicar snapshots do catálogo
         run: |
-          if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json)" ]; then
+          if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json)" ]; then
             echo "Nenhuma alteração nos snapshots do catálogo."
             exit 0
           fi
@@ -100,7 +106,12 @@ jobs:
             cp /tmp/catalogo-snapshots/catalogo-acervo.json data/catalogo-acervo.json
             cp /tmp/catalogo-snapshots/agrocultura-acervo.json data/agrocultura-acervo.json
             cp /tmp/catalogo-snapshots/afiliadas-reporteres.json data/afiliadas-reporteres.json
-            git add data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json
+
+            # Recalcula depois do reset para preservar qualquer palavra-chave manual
+            # que tenha sido adicionada à main enquanto esta execução estava em andamento.
+            npm run sync:keywords
+
+            git add data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json
 
             if git diff --cached --quiet; then
               echo "Os snapshots já estão atualizados na branch main."
