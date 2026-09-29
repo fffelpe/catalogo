@@ -87,7 +87,7 @@ test("página da ficha expõe metadados sem qualquer pré-visualização de víd
   assert.ok(html.includes("dados.js?v=8"), "dados.js deve ter versão nova para invalidar cache");
   assert.ok(html.includes("media-detail.js?v=3"), "media-detail.js deve ter versão nova para invalidar cache");
   assert.ok(html.includes("media-detail.css?v=3"), "media-detail.css deve ter versão nova para invalidar cache");
-  for (const script of ["media-id.js", "dados.js", "media-enrichment.js", "media-segments.js", "related-media.js", "catalogo-quality.js", "media-detail.js"]) {
+  for (const script of ["media-id.js", "dados.js", "creditos.js", "reporteres.js", "media-enrichment.js", "media-segments.js", "related-media.js", "catalogo-quality.js", "media-detail.js"]) {
     assert.ok(html.includes(script), `${script} deve ser carregado`);
   }
 });
@@ -138,4 +138,19 @@ test("metadados substituem PGM por EPISÓDIO apenas nos programas permitidos", (
 
   const jc = MediaDetail.criarCamposMetadata({ ...base, PROGRAMA: "Jornal da Cultura" });
   assert.equal(jc.some(([rotulo]) => rotulo === "Episódio" || rotulo === "PGM"), false);
+});
+
+test("ficha individual inclui cidade e UF enriquecidas da afiliada", () => {
+  const MediaDetail = carregarMediaDetail();
+  const campos = MediaDetail.criarCamposMetadata({
+    DATA: "29/09/2026",
+    DURACAO: "00:03:10",
+    PROGRAMA: "Agrocultura",
+    AFILIADA_EMISSORA: "TV BRASIL CENTRAL",
+    _AFILIADA_CIDADE: "GOIÂNIA",
+    _AFILIADA_UF: "GOIÁS - GO",
+  });
+
+  assert.equal(campos.some(([rotulo, valor]) => rotulo === "Cidade da afiliada" && valor === "GOIÂNIA"), true);
+  assert.equal(campos.some(([rotulo, valor]) => rotulo === "UF da afiliada" && valor === "GOIÁS - GO"), true);
 });
