@@ -235,10 +235,19 @@ function extrairLugares(registro = {}, credito = {}, afiliadas = {}) {
 
 function camposAnteriores(anterior = {}, campo, campoManual, campoAuto) {
   const atual = lista(anterior?.[campo]);
+
+  if (Object.prototype.hasOwnProperty.call(anterior, campoManual)) {
+    return unicos(lista(anterior?.[campoManual]));
+  }
+
   const automaticosAnteriores = new Set(lista(anterior?.[campoAuto]).map(chave));
-  const explicitamenteManuais = lista(anterior?.[campoManual]);
-  const inferidosManuais = atual.filter((item) => !automaticosAnteriores.has(chave(item)));
-  return unicos([...explicitamenteManuais, ...inferidosManuais]);
+  if (automaticosAnteriores.size) {
+    return unicos(atual.filter((item) => !automaticosAnteriores.has(chave(item))));
+  }
+
+  // Snapshots anteriores à proveniência são tratados como edição manual para
+  // nunca apagar um termo editorial que já existia no catálogo.
+  return unicos(atual);
 }
 
 function limitarKeywords(candidatos, limite = 15) {
@@ -292,6 +301,20 @@ function unirCampo(manual, automatico) {
   return unicos([...manual, ...automatico]);
 }
 
+function compactarItem(item) {
+  return {
+    keywords: item.keywords,
+    manualKeywords: item.manualKeywords,
+    subjects: item.subjects,
+    manualSubjects: item.manualSubjects,
+    people: item.people,
+    manualPeople: item.manualPeople,
+    places: item.places,
+    manualPlaces: item.manualPlaces,
+    segments: item.segments,
+  };
+}
+
 export function gerarEnriquecimentoRegistro(registro = {}, credito = {}, anterior = {}, afiliadas = {}) {
   const pessoasAuto = extrairPessoas(registro, credito);
   const lugaresAuto = extrairLugares(registro, credito, afiliadas);
@@ -337,12 +360,13 @@ export function gerarEnriquecimentoCatalogo({
     const ids = extrairIds(registro?.ID);
     for (const id of ids) {
       const credito = mapaCreditos[id] || {};
-      items[id] = gerarEnriquecimentoRegistro(
+      const item = gerarEnriquecimentoRegistro(
         { ...registro, ID: id },
         credito,
         itensAnteriores[id] || {},
         afiliadas
       );
+      items[id] = compactarItem(item);
     }
   }
 

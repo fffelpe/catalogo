@@ -9,6 +9,7 @@
     "sync:afiliadas": "node scripts/gerar-afiliadas-reporteres.mjs",
     "sync:agrocultura": "node scripts/gerar-acervo-agrocultura.mjs",
     "sync:catalogo": "node scripts/gerar-snapshot-catalogo.mjs",
+    "sync:keywords": "node scripts/gerar-palavras-chave.mjs",
     "check:snapshot": "node scripts/verificar-frescor-snapshot.mjs data/catalogo-acervo.json"
   },
   "dependencies": {
