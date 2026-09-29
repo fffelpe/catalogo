@@ -58,9 +58,11 @@ const CreditosMedia = {
     const fontes = [];
     const cargos = [];
     const equipe = [];
+    const textos = [];
 
     encontrados.forEach(({ dados }) => {
       if (dados.materia) materias.push(dados.materia);
+      if (dados.textoCompleto) textos.push(dados.textoCompleto);
 
       const listaFontes = Array.isArray(dados.fontes) ? dados.fontes : [];
       listaFontes.forEach((fonte) => {
@@ -78,7 +80,8 @@ const CreditosMedia = {
       CREDITOS_MATERIA: materias.join(" "),
       CREDITOS_FONTES: fontes.join(" "),
       CREDITOS_CARGOS: cargos.join(" "),
-      CREDITOS_EQUIPE: equipe.join(" ")
+      CREDITOS_EQUIPE: equipe.join(" "),
+      CREDITOS_TEXTO: textos.join(" ")
     };
   }
 };

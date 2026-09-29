@@ -15,6 +15,7 @@ const SearchEngine = (() => {
     CREDITOS_FONTES: 24,
     CREDITOS_EQUIPE: 20,
     CREDITOS_CARGOS: 12,
+    CREDITOS_TEXTO: 16,
     KEYWORDS: 32,
     SUBJECTS: 36,
     PEOPLE: 28,
