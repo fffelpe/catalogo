@@ -37,7 +37,7 @@
 
 - [x] Testar duração por Media ID, múltiplos IDs, ID ausente e duração vazia.
 - [x] Ler apenas colunas A:B da planilha `DURAÇÃO ID'S`.
-- [ ] Rodar a suíte completa.
+- [x] Rodar a suíte completa.
 
 ### Task 2: Créditos como metadados pesquisáveis
 
@@ -48,7 +48,7 @@
 
 - [x] Testar termo existente apenas em `textoCompleto`.
 - [x] Expor `CREDITOS_TEXTO` e adicioná-lo ao ranking com peso complementar.
-- [ ] Rodar a suíte completa.
+- [x] Rodar a suíte completa.
 
 ### Task 3: Snapshot oficial de afiliadas e repórteres com cidade
 
@@ -63,10 +63,10 @@
 - `criarSnapshotAfiliadasReporteres(afiliadasRows, reporteresRows, options)` produz `{ schemaVersion, generatedAt, afiliadas, reporteres }`.
 - Afiliada produz `{ id, nome, uf, cidade, ativa }`.
 
-- [ ] Escrever testes para cidade, status, IDs duplicados e referência inválida.
-- [ ] Verificar os testes falhando antes da implementação.
-- [ ] Implementar o gerador puro e o script que lê as abas `afiliadas!A2:E` e `repórteres!A2:E`.
-- [ ] Integrar ao workflow de sincronização e publicação dos snapshots.
+- [x] Escrever testes para cidade, status, IDs duplicados e referência inválida.
+- [x] Verificar os testes falhando antes da implementação.
+- [x] Implementar o gerador puro e o script que lê as abas `afiliadas!A2:E` e `repórteres!A2:E`.
+- [x] Integrar ao workflow de sincronização e publicação dos snapshots.
 
 ### Task 4: Enriquecimento e busca por cidade/UF
 
@@ -77,14 +77,14 @@
 - Test: `tests/reporteres-afiliadas.test.mjs`
 - Test: `tests/media-detail-contract.test.mjs`
 
-- [ ] Testar preenchimento de afiliada, cidade e UF quando o repórter é identificado.
-- [ ] Testar preservação de afiliada já existente em `imgs`.
-- [ ] Trocar `data/reporteres.json` por `data/afiliadas-reporteres.json` como fonte oficial.
-- [ ] Expor `_AFILIADA_CIDADE` e `_AFILIADA_UF` para busca e ficha do Media ID.
-- [ ] Mostrar Cidade e UF na ficha individual quando disponíveis.
+- [x] Testar preenchimento de afiliada, cidade e UF quando o repórter é identificado.
+- [x] Testar preservação de afiliada já existente em `imgs`.
+- [x] Trocar `data/reporteres.json` por `data/afiliadas-reporteres.json` como fonte oficial.
+- [x] Expor `_AFILIADA_CIDADE` e `_AFILIADA_UF` para busca e ficha do Media ID.
+- [x] Mostrar Cidade e UF na ficha individual quando disponíveis.
 
 ### Task 5: Verificação e integração
 
-- [ ] Rodar `npm test` e confirmar zero falhas.
-- [ ] Inspecionar o diff do PR.
-- [ ] Tornar o PR pronto para revisão e integrar somente após os testes do GitHub Actions passarem.
+- [x] Rodar `npm test` e confirmar zero falhas.
+- [x] Inspecionar o diff do PR.
+- [ ] Integrar o PR complementar após os testes do GitHub Actions passarem.

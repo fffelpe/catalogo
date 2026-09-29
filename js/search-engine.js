@@ -11,6 +11,8 @@ const SearchEngine = (() => {
     PROGRAMA: 18,
     PGM: 18,
     AFILIADA_EMISSORA: 12,
+    _AFILIADA_CIDADE: 18,
+    _AFILIADA_UF: 14,
     CREDITOS_MATERIA: 30,
     CREDITOS_FONTES: 24,
     CREDITOS_EQUIPE: 20,

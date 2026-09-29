@@ -38,6 +38,13 @@ const MediaDetail = (() => {
       ["Afiliada / Emissora", registro.AFILIADA_EMISSORA]
     ];
 
+    if (String(registro._AFILIADA_CIDADE || "").trim()) {
+      campos.push(["Cidade da afiliada", registro._AFILIADA_CIDADE]);
+    }
+    if (String(registro._AFILIADA_UF || "").trim()) {
+      campos.push(["UF da afiliada", registro._AFILIADA_UF]);
+    }
+
     if (programaTemEpisodio(registro.PROGRAMA)) {
       campos.push(["Episódio", registro.PGM]);
     }
