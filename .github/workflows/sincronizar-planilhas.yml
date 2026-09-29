@@ -42,6 +42,9 @@ jobs:
       - name: Testar snapshot local do catálogo
         run: node --test tests/catalogo-snapshot.test.mjs tests/dados-local-first.test.mjs
 
+      - name: Testar snapshot de afiliadas e repórteres
+        run: node --test tests/afiliadas-reporteres-snapshot.test.mjs
+
       - name: Testar frescor do snapshot
         run: node --test tests/snapshot-freshness.test.mjs
 
@@ -58,6 +61,11 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:catalogo
 
+      - name: Gerar snapshot de afiliadas e repórteres
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: npm run sync:afiliadas
+
       - name: Validar frescor do snapshot principal
         env:
           SNAPSHOT_MAX_AGE_MINUTES: "20"
@@ -70,7 +78,7 @@ jobs:
 
       - name: Publicar snapshots do catálogo
         run: |
-          if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json)" ]; then
+          if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json)" ]; then
             echo "Nenhuma alteração nos snapshots do catálogo."
             exit 0
           fi
@@ -78,6 +86,7 @@ jobs:
           mkdir -p /tmp/catalogo-snapshots
           cp data/catalogo-acervo.json /tmp/catalogo-snapshots/catalogo-acervo.json
           cp data/agrocultura-acervo.json /tmp/catalogo-snapshots/agrocultura-acervo.json
+          cp data/afiliadas-reporteres.json /tmp/catalogo-snapshots/afiliadas-reporteres.json
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -90,7 +99,8 @@ jobs:
 
             cp /tmp/catalogo-snapshots/catalogo-acervo.json data/catalogo-acervo.json
             cp /tmp/catalogo-snapshots/agrocultura-acervo.json data/agrocultura-acervo.json
-            git add data/catalogo-acervo.json data/agrocultura-acervo.json
+            cp /tmp/catalogo-snapshots/afiliadas-reporteres.json data/afiliadas-reporteres.json
+            git add data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json
 
             if git diff --cached --quiet; then
               echo "Os snapshots já estão atualizados na branch main."
