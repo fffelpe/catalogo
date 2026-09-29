@@ -112,3 +112,48 @@ test("não cria enriquecimento para Media ID que existe apenas nos créditos", (
   assert.ok(snapshot.items["1452B005485"]);
   assert.equal(snapshot.items["9999B999999"], undefined);
 });
+
+test("snapshot publicado não duplica listas automáticas e mantém marcador de proveniência manual", () => {
+  const snapshot = gerarEnriquecimentoCatalogo({
+    registros: [registroCafe],
+    creditos: { "1452B005485": creditoCafe },
+    anterior: { schemaVersion: 1, items: {} },
+    afiliadas,
+  });
+
+  const item = snapshot.items["1452B005485"];
+  assert.equal(Object.hasOwn(item, "autoKeywords"), false);
+  assert.equal(Object.hasOwn(item, "autoSubjects"), false);
+  assert.equal(Object.hasOwn(item, "autoPeople"), false);
+  assert.equal(Object.hasOwn(item, "autoPlaces"), false);
+  assert.deepEqual(item.manualKeywords, []);
+  assert.ok(item.keywords.length >= 8);
+});
+
+test("segunda geração não transforma keywords automáticas antigas em manuais", () => {
+  const registroInicial = {
+    ID: "1009B064437",
+    DESCRICAO: "BICICLETA + CICLOVIA + CICLISTA + MOBILIDADE URBANA + TRANSPORTE SUSTENTÁVEL + CAPIVARA + PATINETE + BICICLETA ELÉTRICA",
+    PROGRAMA: "JORNAL DA CULTURA",
+    EDITORIA: "COTIDIANO",
+  };
+
+  const primeira = gerarEnriquecimentoCatalogo({
+    registros: [registroInicial],
+    anterior: { schemaVersion: 1, items: {} },
+  });
+
+  const segunda = gerarEnriquecimentoCatalogo({
+    registros: [{
+      ...registroInicial,
+      DESCRICAO: "VACINA DA GRIPE + INFLUENZA + VACINAÇÃO + POSTO DE SAÚDE + PACIENTE + ENFERMEIRA + ATENDIMENTO MÉDICO + IMUNIZAÇÃO",
+      EDITORIA: "SAÚDE",
+    }],
+    anterior: primeira,
+  });
+
+  const item = segunda.items["1009B064437"];
+  assert.equal(item.manualKeywords.includes("bicicleta"), false);
+  assert.equal(item.keywords.includes("bicicleta"), false);
+  assert.ok(item.keywords.includes("vacina da gripe"));
+});
