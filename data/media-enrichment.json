@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-30T15:14:21.980Z",
+  "generatedAt": "2026-09-30T19:28:24.958Z",
   "items": {
     "2822B019835": {
       "keywords": [
@@ -871652,6 +871652,577 @@
       "manualSubjects": [],
       "people": [
         "MARCUS MENEZES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018127": {
+      "keywords": [
+        "evento tecnologia",
+        "tecnologia",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "evento"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "tecnologia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018128": {
+      "keywords": [
+        "festa literária internacional em niterói",
+        "cultura / arte",
+        "professor",
+        "cultural",
+        "produtor",
+        "souza",
+        "joão",
+        "luiz"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VITÓRIA AZEVEDO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018129": {
+      "keywords": [
+        "importância literatura para jovens",
+        "educação",
+        "fluminense",
+        "presidente",
+        "artístico",
+        "academia",
+        "diretor",
+        "letras",
+        "flin"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MATEUS MENEZES",
+        "Márcia Pessanha",
+        "Jackson Jacques"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018130": {
+      "keywords": [
+        "ilha grande as melhores do mundo",
+        "lazer",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "melhores",
+        "grande",
+        "mundo",
+        "ilha"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "THAYNNÁ SCHMEISKE"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018131": {
+      "keywords": [
+        "lavagem cais valongo",
+        "lazer",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "lavagem",
+        "valongo",
+        "cais"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018132": {
+      "keywords": [
+        "ney matogrosso 85 anos",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "matogrosso",
+        "anos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MARCUS MENEZES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018133": {
+      "keywords": [
+        "ópera do malandro",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "malandro",
+        "ópera"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MARCUS MENEZES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018134": {
+      "keywords": [
+        "projeto favela mais rica",
+        "política",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "projeto",
+        "favela",
+        "rica"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "THAYNNÁ SCHMEISKE"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018135": {
+      "keywords": [
+        "rede proteção idosos",
+        "segurança",
+        "sonoras",
+        "eunice",
+        "márcio",
+        "alves",
+        "cléia",
+        "lopes",
+        "anos",
+        "aposentada",
+        "aposentado"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "segurança"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MATEUS MENEZES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018136": {
+      "keywords": [
+        "rock in rio mateus menezes",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "rock"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MATEUS MENEZES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018137": {
+      "keywords": [
+        "tecnologia e inclusão",
+        "tecnologia",
+        "educacional",
+        "inovação",
+        "eduardo",
+        "coord",
+        "levi",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "tecnologia"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VITÓRIA AZEVEDO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018138": {
+      "keywords": [
+        "ana carolina 25 anos",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "carolina",
+        "anos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "THAYNNÁ SCHMEISKE"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018139": {
+      "keywords": [
+        "baleias",
+        "lazer",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018140": {
+      "keywords": [
+        "crise no centro cultural correios",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "correios",
+        "cultural",
+        "centro",
+        "crise"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VITÓRIA AZEVEDO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018141": {
+      "keywords": [
+        "darcy ribeiro tema escola de samba",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "ribeiro",
+        "escola",
+        "darcy",
+        "samba",
+        "tema"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "THAYNNÁ SCHMEISKE"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018142": {
+      "keywords": [
+        "dia nacional do combate ao tabagismo",
+        "saúde",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "tabagismo",
+        "nacional",
+        "combate"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "saúde"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VITÓRIA AZEVEDO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018143": {
+      "keywords": [
+        "encerramento festa literária",
+        "cultura / arte",
+        "artístico",
+        "diretor",
+        "flin",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MATEUS MENEZES",
+        "Jackson Jacques"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018144": {
+      "keywords": [
+        "estudante passa em dez universidades",
+        "educação",
+        "estudante",
+        "monteiro",
+        "luiza",
+        "maria",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MATEUS MENEZES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018145": {
+      "keywords": [
+        "onça pintada do pantanal",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "mato grosso do sul - ms",
+        "campo grande",
+        "campo grande - ms",
+        "pantanal",
+        "pintada",
+        "onça"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "KELLY MARTINS"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018146": {
+      "keywords": [
+        "distribuição de urnas eletrônicas",
+        "política",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "sergipe - se",
+        "distribuição",
+        "eletrônicas",
+        "urnas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SERGIPE - SE"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018147": {
+      "keywords": [
+        "analise de solos",
+        "educação",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "mato grosso do sul - ms",
+        "analise",
+        "solos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "LU PEDRUSSI"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018148": {
+      "keywords": [
+        "destival de cinema do rio de janeiro",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "destival",
+        "janeiro",
+        "cinema"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MATEUS MENEZES"
       ],
       "manualPeople": [],
       "places": [

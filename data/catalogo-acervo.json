@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-30T15:14:02.387Z",
-  "total": 41297,
+  "generatedAt": "2026-09-30T19:27:58.504Z",
+  "total": 41319,
   "registros": [
     {
       "ID": "2822B019835",
@@ -527754,7 +527754,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018100": "0:08:00"
+      }
     },
     {
       "ID": "2457B018101",
@@ -527766,7 +527768,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018101": "0:07:07"
+      }
     },
     {
       "ID": "2457B018102",
@@ -527778,7 +527782,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018102": "0:00:56"
+      }
     },
     {
       "ID": "2457B018103",
@@ -527790,7 +527796,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SEGURANÇA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018103": "0:00:56"
+      }
     },
     {
       "ID": "2457B018104",
@@ -527802,7 +527810,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018104": "0:02:33"
+      }
     },
     {
       "ID": "2457B018105",
@@ -527814,7 +527824,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018105": "0:06:48"
+      }
     },
     {
       "ID": "2457B018106",
@@ -527826,7 +527838,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018106": "0:02:40"
+      }
     },
     {
       "ID": "2457B018107",
@@ -527838,7 +527852,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018107": "0:04:21"
+      }
     },
     {
       "ID": "2457B018117",
@@ -527850,7 +527866,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018117": "0:02:52"
+      }
     },
     {
       "ID": "2457B018118",
@@ -527862,7 +527880,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018118": "0:01:57"
+      }
     },
     {
       "ID": "2457B018119",
@@ -527874,7 +527894,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018119": "0:01:58"
+      }
     },
     {
       "ID": "2457B018120",
@@ -527886,7 +527908,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018120": "0:04:11"
+      }
     },
     {
       "ID": "2457B018121",
@@ -527898,7 +527922,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018121": "0:04:30"
+      }
     },
     {
       "ID": "2457B018122",
@@ -527910,7 +527936,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018122": "0:02:38"
+      }
     },
     {
       "ID": "2457B018123",
@@ -527922,7 +527950,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018123": "0:03:31"
+      }
     },
     {
       "ID": "2457B018124",
@@ -527934,7 +527964,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018124": "0:08:23"
+      }
     },
     {
       "ID": "2457B018125",
@@ -527946,7 +527978,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018125": "0:03:48"
+      }
     },
     {
       "ID": "2457B018126",
@@ -527958,7 +527992,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018126": "0:04:10"
+      }
     },
     {
       "ID": "2457B018108",
@@ -527970,7 +528006,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018108": "0:02:19"
+      }
     },
     {
       "ID": "2457B018109",
@@ -527982,7 +528020,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018109": "0:02:43"
+      }
     },
     {
       "ID": "2457B018110",
@@ -527994,7 +528034,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018110": "0:02:32"
+      }
     },
     {
       "ID": "2457B018111",
@@ -528006,7 +528048,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018111": "0:02:48"
+      }
     },
     {
       "ID": "2457B018112",
@@ -528018,7 +528062,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018112": "0:01:58"
+      }
     },
     {
       "ID": "2457B018113",
@@ -528030,7 +528076,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018113": "0:02:27"
+      }
     },
     {
       "ID": "2457B018114",
@@ -528042,7 +528090,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018114": "0:01:52"
+      }
     },
     {
       "ID": "2457B018115",
@@ -528054,7 +528104,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018115": "0:02:19"
+      }
     },
     {
       "ID": "2457B018116",
@@ -528062,6 +528114,272 @@
       "DATA": "17/09/2026",
       "LOCAL": "RIO DE JANEIRO - RJ",
       "REPORTER": "MARCUS MENEZES",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {
+        "2457B018116": "0:02:33"
+      }
+    },
+    {
+      "ID": "2457B018127",
+      "DESCRICAO": "EVENTO TECNOLOGIA",
+      "DATA": "05/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "TECNOLOGIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018128",
+      "DESCRICAO": "FESTA LITERÁRIA INTERNACIONAL EM NITERÓI",
+      "DATA": "11/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "VITÓRIA AZEVEDO",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018129",
+      "DESCRICAO": "IMPORTÂNCIA LITERATURA PARA JOVENS",
+      "DATA": "14/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "MATEUS MENEZES",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018130",
+      "DESCRICAO": "ILHA GRANDE AS MELHORES DO MUNDO",
+      "DATA": "08/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "THAYNNÁ SCHMEISKE",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018131",
+      "DESCRICAO": "LAVAGEM CAIS VALONGO",
+      "DATA": "28/07/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018132",
+      "DESCRICAO": "NEY MATOGROSSO 85 ANOS",
+      "DATA": "01/09/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "MARCUS MENEZES",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018133",
+      "DESCRICAO": "ÓPERA DO MALANDRO",
+      "DATA": "18/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "MARCUS MENEZES",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018134",
+      "DESCRICAO": "PROJETO FAVELA MAIS RICA",
+      "DATA": "20/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "THAYNNÁ SCHMEISKE",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018135",
+      "DESCRICAO": "REDE PROTEÇÃO IDOSOS",
+      "DATA": "10/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "MATEUS MENEZES",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SEGURANÇA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018136",
+      "DESCRICAO": "ROCK IN RIO MATEUS MENEZES",
+      "DATA": "26/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "MATEUS MENEZES",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018137",
+      "DESCRICAO": "TECNOLOGIA E INCLUSÃO",
+      "DATA": "18/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "VITÓRIA AZEVEDO",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "TECNOLOGIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018138",
+      "DESCRICAO": "ANA CAROLINA 25 ANOS",
+      "DATA": "06/07/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "THAYNNÁ SCHMEISKE",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018139",
+      "DESCRICAO": "BALEIAS",
+      "DATA": "07/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018140",
+      "DESCRICAO": "CRISE NO CENTRO CULTURAL CORREIOS",
+      "DATA": "29/09/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "VITÓRIA AZEVEDO",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018141",
+      "DESCRICAO": "DARCY RIBEIRO TEMA ESCOLA DE SAMBA",
+      "DATA": "22/07/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "THAYNNÁ SCHMEISKE",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018142",
+      "DESCRICAO": "DIA NACIONAL DO COMBATE AO TABAGISMO",
+      "DATA": "28/09/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "VITÓRIA AZEVEDO",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SAÚDE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018143",
+      "DESCRICAO": "ENCERRAMENTO FESTA LITERÁRIA",
+      "DATA": "17/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "MATEUS MENEZES",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018144",
+      "DESCRICAO": "ESTUDANTE PASSA EM DEZ UNIVERSIDADES",
+      "DATA": "20/07/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "MATEUS MENEZES",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018145",
+      "DESCRICAO": "ONÇA PINTADA DO PANTANAL",
+      "DATA": "29/09/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "KELLY MARTINS",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018146",
+      "DESCRICAO": "DISTRIBUIÇÃO DE URNAS ELETRÔNICAS",
+      "DATA": "29/09/2026",
+      "LOCAL": "SERGIPE - SE",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018147",
+      "DESCRICAO": "ANALISE DE SOLOS",
+      "DATA": "29/09/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "LU PEDRUSSI",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018148",
+      "DESCRICAO": "DESTIVAL DE CINEMA DO RIO DE JANEIRO",
+      "DATA": "30/09/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "MATEUS MENEZES",
       "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
