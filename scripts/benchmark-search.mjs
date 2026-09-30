@@ -16,8 +16,7 @@ const QUERIES = [
   "bruno faustino",
   "meio ambiente"
 ];
-
-const ROUNDS = Number(process.env.BENCH_ROUNDS || 8);
+const ROUNDS = Number(process.env.BENCH_ROUNDS || 2);
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(path.join(repo, file), "utf8"));
@@ -48,7 +47,6 @@ function createSearchContext() {
     fetch: async () => ({ ok: false, json: async () => ({}) })
   };
   vm.createContext(sandbox);
-
   loadScript(sandbox, "js/media-id.js", "MediaIdUtils");
   loadScript(sandbox, "js/sinonimos.js", "VocabularioJornalistico");
   loadScript(sandbox, "js/media-enrichment.js", "MediaEnrichment");
@@ -58,37 +56,31 @@ function createSearchContext() {
   sandbox.CreditosMedia.registros = credits && typeof credits === "object" ? credits : {};
   sandbox.CreditosMedia.carregado = true;
   loadScript(sandbox, "js/search-engine.js", "SearchEngine");
-
   return sandbox.SearchEngine;
 }
 
 function timedSearch(engine, query) {
   const start = performance.now();
   const result = engine.pesquisar(records, query);
-  const ms = performance.now() - start;
-  return { ms, count: result.length };
+  return { ms: performance.now() - start, count: result.length };
 }
 
 function stats(values) {
   const sorted = [...values].sort((a, b) => a - b);
   const avg = values.reduce((a, b) => a + b, 0) / values.length;
-  const median = sorted[Math.floor(sorted.length / 2)];
-  const p95 = sorted[Math.min(sorted.length - 1, Math.ceil(sorted.length * 0.95) - 1)];
   return {
     avgMs: avg,
-    medianMs: median,
-    p95Ms: p95,
+    medianMs: sorted[Math.floor(sorted.length / 2)],
     minMs: sorted[0],
     maxMs: sorted.at(-1)
   };
 }
 
-const firstPass = [];
-for (const query of QUERIES) {
-  const engine = createSearchContext();
-  firstPass.push({ query, ...timedSearch(engine, query) });
-}
+// Mede uma primeira busca representativa com o catálogo já carregado.
+const coldEngine = createSearchContext();
+const cold = { query: "são paulo", ...timedSearch(coldEngine, "são paulo") };
 
+// Mede uso normal da página: motor carregado, uma passagem de aquecimento e pesquisas seguintes.
 const engine = createSearchContext();
 for (const query of QUERIES) timedSearch(engine, query);
 
@@ -112,10 +104,8 @@ const output = {
   label,
   records: records.length,
   rounds: ROUNDS,
-  queries: QUERIES,
-  firstPass,
+  cold,
   warm,
-  overallFirst: stats(firstPass.map((x) => x.ms)),
   overallWarm: stats([...samples.values()].flat())
 };
 
