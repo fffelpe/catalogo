@@ -35,3 +35,27 @@ test("buscarPorMediaId rejeita consulta que não seja Media ID válido", () => {
   DadosMedia.registros = [{ ID: "1452B004869", DESCRICAO: "Teste" }];
   assert.equal(DadosMedia.buscarPorMediaId("<script>"), null);
 });
+
+test("buscarPorMediaId usa o índice criado ao aplicar os registros", () => {
+  const DadosMedia = carregarDados();
+
+  DadosMedia._aplicarRegistros([{
+    ID: "1452B004869 / 1452B004870",
+    DESCRICAO: "Registro indexado",
+    DURACOES: {
+      "1452B004869": "00:01:00",
+      "1452B004870": "00:02:00"
+    }
+  }]);
+
+  DadosMedia.registros = new Proxy(DadosMedia.registros, {
+    get(target, prop, receiver) {
+      if (prop === "find") throw new Error("busca linear não deve ser usada");
+      return Reflect.get(target, prop, receiver);
+    }
+  });
+
+  const resultado = DadosMedia.buscarPorMediaId("1452B004870");
+  assert.equal(resultado?.DESCRICAO, "Registro indexado");
+  assert.equal(resultado?.DURACAO, "00:02:00");
+});
