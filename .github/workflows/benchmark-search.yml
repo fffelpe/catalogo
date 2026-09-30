@@ -1,0 +1,49 @@
+name: Benchmark busca antes e depois
+
+on:
+  push:
+    branches:
+      - benchmark/search-before-after
+  workflow_dispatch:
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Baixar repositório com histórico
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Preparar snapshots dos commits
+        shell: bash
+        run: |
+          cp scripts/benchmark-search.mjs /tmp/benchmark-search.mjs
+          git worktree add /tmp/catalogo-before b3ce07217126f3dab312ec168a6e9b58c62820b0
+          git worktree add /tmp/catalogo-after 9e5bd37afc0c2fcd49d1c4bb710825fec72f5307
+
+      - name: Rodada A - antes
+        run: BENCH_ROUNDS=8 node /tmp/benchmark-search.mjs /tmp/catalogo-before before-A | tee /tmp/before-A.log
+
+      - name: Rodada A - depois
+        run: BENCH_ROUNDS=8 node /tmp/benchmark-search.mjs /tmp/catalogo-after after-A | tee /tmp/after-A.log
+
+      - name: Rodada B - depois
+        run: BENCH_ROUNDS=8 node /tmp/benchmark-search.mjs /tmp/catalogo-after after-B | tee /tmp/after-B.log
+
+      - name: Rodada B - antes
+        run: BENCH_ROUNDS=8 node /tmp/benchmark-search.mjs /tmp/catalogo-before before-B | tee /tmp/before-B.log
+
+      - name: Resumo bruto
+        if: always()
+        shell: bash
+        run: |
+          echo '=== BEFORE A ==='
+          cat /tmp/before-A.log || true
+          echo '=== AFTER A ==='
+          cat /tmp/after-A.log || true
+          echo '=== AFTER B ==='
+          cat /tmp/after-B.log || true
+          echo '=== BEFORE B ==='
+          cat /tmp/before-B.log || true
