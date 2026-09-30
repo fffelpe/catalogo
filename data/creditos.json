@@ -1,4 +1,35 @@
 {
+  "2457B018147": {
+    "materia": "GC ANALISE SOLOS",
+    "fontes": [
+      {
+        "nome": "Wellyta de Oliveira Ferreira",
+        "cargo": "líder do laboratório"
+      },
+      {
+        "nome": "imagens",
+        "cargo": "João Batista"
+      },
+      {
+        "nome": "Lu Pedrussi",
+        "cargo": "Campo Grande - MS"
+      }
+    ],
+    "creditos": {},
+    "textoCompleto": "GC ANALISE SOLOS | Wellyta de Oliveira Ferreira | líder do laboratório | imagens | João Batista | Lu Pedrussi | Campo Grande - MS",
+    "arquivo": {
+      "id": "1N-ccHo-0KcvkZeTdaY26OWsl0L6hxbjw4geLcopAvsU",
+      "nome": "2457B018147",
+      "mimeType": "application/vnd.google-apps.document",
+      "atualizadoEm": "2026-09-30T19:24:45.267Z",
+      "url": "https://docs.google.com/document/d/1N-ccHo-0KcvkZeTdaY26OWsl0L6hxbjw4geLcopAvsU/edit?usp=drivesdk"
+    },
+    "origem": "Google Drive",
+    "selecao": {
+      "tipo": "unico",
+      "motivo": "único documento disponível"
+    }
+  },
   "2457B018129": {
     "materia": "SONORA 1:",
     "fontes": [
