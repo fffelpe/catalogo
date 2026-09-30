@@ -7,6 +7,7 @@ const DadosMedia = {
   registrosOrdemInsercao: [],
   carregado: false,
   _carregamentoPromise: null,
+  _indicePorMediaId: new Map(),
   CSV_URL: "https://docs.google.com/spreadsheets/d/1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs/export?format=csv&gid=0",
   SNAPSHOT_URL: (() => {
     const scriptSrc = typeof document !== "undefined" ? document.currentScript?.src : "";
@@ -124,8 +125,30 @@ const DadosMedia = {
 
     this.registrosOrdemInsercao = [...normalizados];
     this.registros = [...normalizados].sort(this._compararPorDataDesc);
+    this._reconstruirIndiceMediaId();
     this.carregado = true;
     return this.registros;
+  },
+
+  _reconstruirIndiceMediaId() {
+    const indice = new Map();
+    const registros = Array.isArray(this.registros) ? this.registros : [];
+
+    registros.forEach((registro) => {
+      const ids = typeof MediaIdUtils !== "undefined" && typeof MediaIdUtils.extrair === "function"
+        ? MediaIdUtils.extrair(registro.ID)
+        : String(registro.ID || "")
+          .split(/[\r\n,;+\/|&]+/)
+          .map((id) => String(id || "").trim().toUpperCase())
+          .filter(Boolean);
+
+      ids.forEach((id) => {
+        if (!indice.has(id)) indice.set(id, registro);
+      });
+    });
+
+    this._indicePorMediaId = indice;
+    return indice;
   },
 
   _normalizar(item) {
@@ -218,9 +241,20 @@ const DadosMedia = {
     const id = MediaIdUtils.normalizar(mediaId);
     if (!id) return null;
 
-    const registro = this.registros.find((item) =>
-      MediaIdUtils.extrair(item.ID).includes(id)
-    ) || null;
+    let registro = this._indicePorMediaId instanceof Map
+      ? (this._indicePorMediaId.get(id) || null)
+      : null;
+
+    if (!registro) {
+      registro = this.registros.find((item) =>
+        MediaIdUtils.extrair(item.ID).includes(id)
+      ) || null;
+
+      if (registro) {
+        if (!(this._indicePorMediaId instanceof Map)) this._indicePorMediaId = new Map();
+        this._indicePorMediaId.set(id, registro);
+      }
+    }
 
     if (!registro) return null;
 

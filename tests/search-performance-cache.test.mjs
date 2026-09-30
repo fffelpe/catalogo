@@ -10,6 +10,7 @@ const searchPath = fileURLToPath(new URL("../js/search-engine.js", import.meta.u
 function carregar() {
   let chamadasCreditos = 0;
   let chamadasEnriquecimento = 0;
+  let chamadasSegmentos = 0;
 
   const sandbox = {
     console,
@@ -36,6 +37,12 @@ function carregar() {
           SEGMENTS: ""
         };
       }
+    },
+    MediaSegments: {
+      buscar() {
+        chamadasSegmentos += 1;
+        return [];
+      }
     }
   };
 
@@ -45,7 +52,8 @@ function carregar() {
 
   return {
     SearchEngine: sandbox.__SearchEngine,
-    contadores: () => ({ chamadasCreditos, chamadasEnriquecimento })
+    contadores: () => ({ chamadasCreditos, chamadasEnriquecimento }),
+    chamadasSegmentos: () => chamadasSegmentos
   };
 }
 
@@ -79,4 +87,19 @@ test("triagem preserva resultado encontrado somente por palavras distribuídas e
   const resultados = SearchEngine.pesquisar(registros, "bombeiros santos");
   assert.equal(resultados.length, 1);
   assert.equal(resultados[0].ID, "1452B004869");
+});
+
+test("triagem evita cálculo detalhado de segmentos para registros irrelevantes", () => {
+  const { SearchEngine, chamadasSegmentos } = carregar();
+  const registros = [
+    { ID: "1452B004869", DESCRICAO: "Chuva forte em São Paulo", PROGRAMA: "JC" },
+    { ID: "1452B004870", DESCRICAO: "Economia brasileira", PROGRAMA: "JC" },
+    { ID: "1452B004871", DESCRICAO: "Campeonato de futebol", PROGRAMA: "JC" }
+  ];
+
+  const resultados = SearchEngine.pesquisar(registros, "chuva");
+
+  assert.equal(resultados.length, 1);
+  assert.equal(resultados[0].ID, "1452B004869");
+  assert.equal(chamadasSegmentos(), 1);
 });
