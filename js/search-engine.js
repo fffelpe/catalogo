@@ -31,6 +31,9 @@ const SearchEngine = (() => {
     "nas", "nos", "um", "uma", "uns", "umas", "para", "por", "com", "sem", "que"
   ]);
 
+  const cacheRegistros = new WeakMap();
+  const cacheProgramas = new WeakMap();
+
   function normalizar(texto) {
     if (
       typeof VocabularioJornalistico !== "undefined" &&
@@ -52,22 +55,46 @@ const SearchEngine = (() => {
     return texto.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
 
-  function contemTermo(texto, termo) {
-    if (!texto || !termo) return false;
-    const padrao = new RegExp(
-      `(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`,
-      "u"
-    );
-    return padrao.test(texto);
+  function criarPadroesTermo(termoNormalizado) {
+    if (!termoNormalizado) return null;
+    const escapado = escaparRegex(termoNormalizado);
+    return {
+      termoNormalizado,
+      padraoTermo: new RegExp(
+        `(^|[^\\p{L}\\p{N}])${escapado}(?=$|[^\\p{L}\\p{N}])`,
+        "u"
+      ),
+      padraoPrefixo: termoNormalizado.length >= 4
+        ? new RegExp(`(^|[^\\p{L}\\p{N}])${escapado}`, "u")
+        : null,
+      padraoOcorrencias: new RegExp(
+        `(^|[^\\p{L}\\p{N}])${escapado}(?=$|[^\\p{L}\\p{N}])`,
+        "gu"
+      )
+    };
   }
 
-  function contemPrefixoPalavra(texto, termo) {
-    if (!texto || !termo || termo.length < 4) return false;
-    const padrao = new RegExp(
-      `(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}`,
-      "u"
-    );
-    return padrao.test(texto);
+  function testarPadrao(padrao, texto) {
+    if (!padrao || !texto) return false;
+    padrao.lastIndex = 0;
+    const encontrou = padrao.test(texto);
+    padrao.lastIndex = 0;
+    return encontrou;
+  }
+
+  function contarOcorrenciasPreparadas(texto, padrao) {
+    if (!texto || !padrao) return 0;
+    padrao.lastIndex = 0;
+    let quantidade = 0;
+    let match;
+
+    while ((match = padrao.exec(texto)) !== null) {
+      quantidade += 1;
+      if (match[0] === "") padrao.lastIndex += 1;
+    }
+
+    padrao.lastIndex = 0;
+    return quantidade;
   }
 
   function podeUsarPrefixo(expansao, termo) {
@@ -90,33 +117,26 @@ const SearchEngine = (() => {
     return separarIds(valor).map((id) => id.toUpperCase());
   }
 
-  function contarOcorrencias(texto, termo) {
-    if (!texto || !termo) return 0;
-    const padrao = new RegExp(
-      `(^|[^\\p{L}\\p{N}])${escaparRegex(termo)}(?=$|[^\\p{L}\\p{N}])`,
-      "gu"
-    );
-    return [...texto.matchAll(padrao)].length;
-  }
-
-  function calcularScoreCampo(valor, expansao, pesoCampo) {
-    const texto = normalizar(valor);
-    const termo = normalizar(expansao.termo);
+  function calcularScoreCampoPreparado(texto, expansao, pesoCampo) {
+    const termo = expansao.termoNormalizado;
     if (!texto || !termo) return 0;
 
     let score = 0;
 
     if (texto === termo) {
       score = pesoCampo * 2;
-    } else if (contemTermo(texto, termo)) {
+    } else if (testarPadrao(expansao.padraoTermo, texto)) {
       score = pesoCampo;
-    } else if (podeUsarPrefixo(expansao, termo) && contemPrefixoPalavra(texto, termo)) {
+    } else if (
+      podeUsarPrefixo(expansao, termo) &&
+      testarPadrao(expansao.padraoPrefixo, texto)
+    ) {
       score = pesoCampo * 0.55;
     } else {
       return 0;
     }
 
-    const ocorrencias = contarOcorrencias(texto, termo);
+    const ocorrencias = contarOcorrenciasPreparadas(texto, expansao.padraoOcorrencias);
     if (ocorrencias > 1) {
       score += Math.min(ocorrencias - 1, 4) * (pesoCampo * 0.08);
     }
@@ -124,12 +144,29 @@ const SearchEngine = (() => {
     return score * (Number(expansao.peso) || 1);
   }
 
-  function detectarMediaIdExato(registro, consulta) {
-    const idsRegistro = separarIds(registro.ID);
-    const idConsulta = typeof MediaIdUtils !== "undefined"
-      ? MediaIdUtils.normalizar(consulta).toLocaleLowerCase("pt-BR")
-      : normalizar(consulta).replace(/\s+/g, "");
-    return Boolean(idConsulta) && idsRegistro.includes(idConsulta);
+  function referenciaCreditos() {
+    if (
+      typeof CreditosMedia === "undefined" ||
+      typeof CreditosMedia.camposPesquisa !== "function"
+    ) return null;
+
+    return CreditosMedia.registros && typeof CreditosMedia.registros === "object"
+      ? CreditosMedia.registros
+      : CreditosMedia;
+  }
+
+  function referenciaEnriquecimento() {
+    if (
+      typeof MediaEnrichment === "undefined" ||
+      typeof MediaEnrichment.camposPesquisa !== "function"
+    ) return null;
+
+    if (typeof MediaEnrichment.todos === "function") {
+      const todos = MediaEnrichment.todos();
+      if (todos && typeof todos === "object") return todos;
+    }
+
+    return MediaEnrichment;
   }
 
   function enriquecerComCreditos(registro) {
@@ -180,6 +217,104 @@ const SearchEngine = (() => {
     return enriquecerComMetadados(enriquecerComCreditos(registro));
   }
 
+  function prepararRegistro(registroOriginal) {
+    const refCreditos = referenciaCreditos();
+    const refEnriquecimento = referenciaEnriquecimento();
+    const existente = cacheRegistros.get(registroOriginal);
+
+    if (
+      existente &&
+      existente.refCreditos === refCreditos &&
+      existente.refEnriquecimento === refEnriquecimento
+    ) {
+      return existente.preparado;
+    }
+
+    const registro = enriquecerRegistro(registroOriginal);
+    const camposNormalizados = {};
+
+    Object.keys(PESOS_CAMPOS).forEach((campo) => {
+      const valor = registro[campo] || "";
+      camposNormalizados[campo] = valor ? normalizar(valor) : "";
+    });
+
+    const preparado = {
+      registro,
+      camposNormalizados,
+      textoCompleto: normalizar(Object.values(registro).join(" ")),
+      ids: separarIds(registro.ID)
+    };
+
+    cacheRegistros.set(registroOriginal, {
+      refCreditos,
+      refEnriquecimento,
+      preparado
+    });
+
+    return preparado;
+  }
+
+  function prepararExpansao(expansao) {
+    const termoNormalizado = normalizar(expansao?.termo || "");
+    const padroes = criarPadroesTermo(termoNormalizado);
+    if (!padroes) return null;
+
+    return {
+      ...expansao,
+      ...padroes
+    };
+  }
+
+  function prepararContextoConsulta(consulta) {
+    const consultaOriginal = String(consulta || "");
+    const consultaNormalizada = normalizar(consultaOriginal);
+    const expansoesOriginais = typeof VocabularioJornalistico !== "undefined"
+      ? VocabularioJornalistico.expandirConsulta(consultaOriginal)
+      : [{ termo: consultaNormalizada, original: consultaOriginal, tipo: "original", peso: 1 }];
+
+    const expansoes = (Array.isArray(expansoesOriginais) ? expansoesOriginais : [])
+      .map(prepararExpansao)
+      .filter(Boolean);
+
+    const palavrasOriginais = consultaNormalizada
+      .split(" ")
+      .filter((palavra) => palavra.length >= 2 && !STOPWORDS.has(palavra))
+      .map((palavra) => criarPadroesTermo(palavra))
+      .filter(Boolean);
+
+    const idConsulta = typeof MediaIdUtils !== "undefined" && typeof MediaIdUtils.normalizar === "function"
+      ? MediaIdUtils.normalizar(consultaOriginal).toLocaleLowerCase("pt-BR")
+      : consultaNormalizada.replace(/\s+/g, "");
+
+    return {
+      consultaOriginal,
+      consultaNormalizada,
+      consultaPadroes: criarPadroesTermo(consultaNormalizada),
+      expansoes,
+      palavrasOriginais,
+      idConsulta
+    };
+  }
+
+  function detectarMediaIdExato(preparado, contexto) {
+    return Boolean(contexto.idConsulta) && preparado.ids.includes(contexto.idConsulta);
+  }
+
+  function registroPodePontuar(preparado, contexto) {
+    if (detectarMediaIdExato(preparado, contexto)) return true;
+
+    const texto = preparado.textoCompleto;
+    if (!texto) return false;
+
+    if (contexto.expansoes.some((expansao) =>
+      expansao.termoNormalizado && texto.includes(expansao.termoNormalizado)
+    )) return true;
+
+    return contexto.palavrasOriginais.some((palavra) =>
+      palavra.termoNormalizado && texto.includes(palavra.termoNormalizado)
+    );
+  }
+
   function encontrarMatchesSegmentos(registro, consulta) {
     if (
       typeof MediaSegments === "undefined" ||
@@ -198,35 +333,28 @@ const SearchEngine = (() => {
       .slice(0, 5);
   }
 
-  function calcularRelevancia(registroOriginal, consulta) {
-    const registro = enriquecerRegistro(registroOriginal);
-    const consultaNormalizada = normalizar(consulta);
-
-    if (!consultaNormalizada) {
+  function calcularRelevanciaPreparada(registroOriginal, preparado, contexto) {
+    if (!contexto.consultaNormalizada) {
       return { score: 0, correspondencias: [], segmentMatches: [] };
     }
 
-    if (detectarMediaIdExato(registro, consulta)) {
+    if (detectarMediaIdExato(preparado, contexto)) {
       return {
         score: 10000,
-        correspondencias: [{ campo: "ID", termo: consulta, tipo: "id-exato" }],
+        correspondencias: [{ campo: "ID", termo: contexto.consultaOriginal, tipo: "id-exato" }],
         segmentMatches: []
       };
     }
-
-    const expansoes = typeof VocabularioJornalistico !== "undefined"
-      ? VocabularioJornalistico.expandirConsulta(consulta)
-      : [{ termo: consultaNormalizada, original: consulta, tipo: "original", peso: 1 }];
 
     let score = 0;
     const correspondencias = [];
 
     Object.entries(PESOS_CAMPOS).forEach(([campo, pesoCampo]) => {
-      const valorCampo = registro[campo] || "";
-      if (!valorCampo) return;
+      const textoCampo = preparado.camposNormalizados[campo] || "";
+      if (!textoCampo) return;
 
-      expansoes.forEach((expansao) => {
-        const pontos = calcularScoreCampo(valorCampo, expansao, pesoCampo);
+      contexto.expansoes.forEach((expansao) => {
+        const pontos = calcularScoreCampoPreparado(textoCampo, expansao, pesoCampo);
         if (pontos <= 0) return;
 
         score += pontos;
@@ -239,39 +367,53 @@ const SearchEngine = (() => {
       });
     });
 
-    const descricao = normalizar(registro.DESCRICAO);
-    if (consultaNormalizada.length >= 3 && contemTermo(descricao, consultaNormalizada)) {
+    const descricao = preparado.camposNormalizados.DESCRICAO || "";
+    if (
+      contexto.consultaNormalizada.length >= 3 &&
+      testarPadrao(contexto.consultaPadroes?.padraoTermo, descricao)
+    ) {
       score += 120;
     }
 
-    const palavrasOriginais = consultaNormalizada
-      .split(" ")
-      .filter((palavra) => palavra.length >= 2 && !STOPWORDS.has(palavra));
-
-    if (palavrasOriginais.length > 1) {
-      const textoCompleto = normalizar(Object.values(registro).join(" "));
-      const quantidadeEncontrada = palavrasOriginais.filter((palavra) =>
-        contemTermo(textoCompleto, palavra) ||
-        (palavra.length >= 4 && contemPrefixoPalavra(textoCompleto, palavra))
+    if (contexto.palavrasOriginais.length > 1) {
+      const quantidadeEncontrada = contexto.palavrasOriginais.filter((palavra) =>
+        testarPadrao(palavra.padraoTermo, preparado.textoCompleto) ||
+        (
+          palavra.termoNormalizado.length >= 4 &&
+          testarPadrao(palavra.padraoPrefixo, preparado.textoCompleto)
+        )
       ).length;
 
-      if (quantidadeEncontrada === palavrasOriginais.length) {
+      if (quantidadeEncontrada === contexto.palavrasOriginais.length) {
         score += 60;
       } else {
         score += quantidadeEncontrada * 10;
       }
     }
 
-    const segmentMatches = encontrarMatchesSegmentos(registro, consulta);
+    const segmentMatches = encontrarMatchesSegmentos(registroOriginal, contexto.consultaOriginal);
     return { score, correspondencias, segmentMatches };
+  }
+
+  function calcularRelevancia(registroOriginal, consulta) {
+    const contexto = prepararContextoConsulta(consulta);
+    const preparado = prepararRegistro(registroOriginal);
+    return calcularRelevanciaPreparada(registroOriginal, preparado, contexto);
+  }
+
+  function programaNormalizado(registro) {
+    if (cacheProgramas.has(registro)) return cacheProgramas.get(registro);
+    const valor = normalizar(registro.PROGRAMA || "");
+    cacheProgramas.set(registro, valor);
+    return valor;
   }
 
   function filtrarPrograma(registros, programa) {
     if (!programa) return registros;
-    const programaNormalizado = normalizar(programa);
+    const programaBusca = normalizar(programa);
 
     return registros.filter((registro) =>
-      normalizar(registro.PROGRAMA).includes(programaNormalizado)
+      programaNormalizado(registro).includes(programaBusca)
     );
   }
 
@@ -282,18 +424,26 @@ const SearchEngine = (() => {
 
     if (!termo) return base;
 
-    return base
-      .map((registro, indiceOriginal) => {
-        const relevancia = calcularRelevancia(registro, termo);
-        return {
-          registro,
-          indiceOriginal,
-          score: relevancia.score,
-          correspondencias: relevancia.correspondencias,
-          segmentMatches: relevancia.segmentMatches || []
-        };
-      })
-      .filter((item) => item.score > 0)
+    const contexto = prepararContextoConsulta(termo);
+    const avaliados = [];
+
+    base.forEach((registro, indiceOriginal) => {
+      const preparado = prepararRegistro(registro);
+      if (!registroPodePontuar(preparado, contexto)) return;
+
+      const relevancia = calcularRelevanciaPreparada(registro, preparado, contexto);
+      if (relevancia.score <= 0) return;
+
+      avaliados.push({
+        registro,
+        indiceOriginal,
+        score: relevancia.score,
+        correspondencias: relevancia.correspondencias,
+        segmentMatches: relevancia.segmentMatches || []
+      });
+    });
+
+    return avaliados
       .sort((a, b) => b.score - a.score || a.indiceOriginal - b.indiceOriginal)
       .map((item) => ({
         ...item.registro,
@@ -311,10 +461,16 @@ const SearchEngine = (() => {
     };
   }
 
+  function limparCache() {
+    // WeakMap não possui clear(); os caches são naturalmente descartados com os registros.
+    // Esta função existe como ponto de extensão sem alterar a API pública atual.
+  }
+
   return {
     pesquisar,
     calcularRelevancia,
     explicarResultado,
-    normalizar
+    normalizar,
+    limparCache
   };
 })();
