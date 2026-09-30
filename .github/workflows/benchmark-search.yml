@@ -23,27 +23,17 @@ jobs:
           git worktree add /tmp/catalogo-before b3ce07217126f3dab312ec168a6e9b58c62820b0
           git worktree add /tmp/catalogo-after 9e5bd37afc0c2fcd49d1c4bb710825fec72f5307
 
-      - name: Rodada A - antes
-        run: BENCH_ROUNDS=8 node /tmp/benchmark-search.mjs /tmp/catalogo-before before-A | tee /tmp/before-A.log
+      - name: Antes da otimização
+        run: BENCH_ROUNDS=2 node /tmp/benchmark-search.mjs /tmp/catalogo-before before | tee /tmp/before.log
 
-      - name: Rodada A - depois
-        run: BENCH_ROUNDS=8 node /tmp/benchmark-search.mjs /tmp/catalogo-after after-A | tee /tmp/after-A.log
-
-      - name: Rodada B - depois
-        run: BENCH_ROUNDS=8 node /tmp/benchmark-search.mjs /tmp/catalogo-after after-B | tee /tmp/after-B.log
-
-      - name: Rodada B - antes
-        run: BENCH_ROUNDS=8 node /tmp/benchmark-search.mjs /tmp/catalogo-before before-B | tee /tmp/before-B.log
+      - name: Depois da otimização
+        run: BENCH_ROUNDS=2 node /tmp/benchmark-search.mjs /tmp/catalogo-after after | tee /tmp/after.log
 
       - name: Resumo bruto
         if: always()
         shell: bash
         run: |
-          echo '=== BEFORE A ==='
-          cat /tmp/before-A.log || true
-          echo '=== AFTER A ==='
-          cat /tmp/after-A.log || true
-          echo '=== AFTER B ==='
-          cat /tmp/after-B.log || true
-          echo '=== BEFORE B ==='
-          cat /tmp/before-B.log || true
+          echo '=== BEFORE ==='
+          cat /tmp/before.log || true
+          echo '=== AFTER ==='
+          cat /tmp/after.log || true
