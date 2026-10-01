@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T16:36:01.989Z",
-  "total": 41319,
+  "generatedAt": "2026-10-01T19:17:35.746Z",
+  "total": 41324,
   "registros": [
     {
       "ID": "2822B019835",
@@ -528383,6 +528383,66 @@
       "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018149",
+      "DESCRICAO": "VENDAVAL EM FOZ DO IGUAÇU",
+      "DATA": "30/09/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018150",
+      "DESCRICAO": "CHUVAS EM TOLEDO NO PARANÁ + ESTRAGOS CAUSADOS PELA CHUVA",
+      "DATA": "30/09/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018151",
+      "DESCRICAO": "BOXE CONSTRUINDO CAMPEÕES",
+      "DATA": "30/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ESPORTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018152",
+      "DESCRICAO": "CALORÃO EM GOIÁS",
+      "DATA": "30/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018153",
+      "DESCRICAO": "RETA FINAL NAS ELEIÇÕES 2026",
+      "DATA": "30/09/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T16:36:26.473Z",
+  "generatedAt": "2026-10-01T19:18:00.940Z",
   "items": {
     "2822B019835": {
       "keywords": [
@@ -872231,6 +872231,169 @@
       "manualPeople": [],
       "places": [
         "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018149": {
+      "keywords": [
+        "vendaval em foz do iguaçu",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv brasil central",
+        "paraná - pr",
+        "goiânia",
+        "goiás - go",
+        "goiânia - go"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR",
+        "GOIÂNIA",
+        "GOIÁS - GO",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018150": {
+      "keywords": [
+        "chuvas em toledo no paraná",
+        "estragos causados pela chuva",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv brasil central",
+        "paraná - pr",
+        "goiânia",
+        "goiás - go",
+        "goiânia - go"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR",
+        "GOIÂNIA",
+        "GOIÁS - GO",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018151": {
+      "keywords": [
+        "boxe construindo campeões",
+        "esporte",
+        "construindo",
+        "campeões",
+        "anos",
+        "oportunidades",
+        "aprendendo",
+        "municípios",
+        "transporte",
+        "encontrou",
+        "esportivo",
+        "histórias",
+        "rodrigues",
+        "conhecer",
+        "marciais"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "esporte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "BRUNELLE PORTELA",
+        "MARIELA PACHECO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018152": {
+      "keywords": [
+        "calorão em goiás",
+        "meio ambiente",
+        "identificação",
+        "funcionário",
+        "cuidadora",
+        "luciana",
+        "público",
+        "sonoras",
+        "wesley",
+        "souza",
+        "meteorologista",
+        "temperaturas",
+        "amenizar",
+        "atingido",
+        "conjunto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ANDRÉ AMORIM",
+        "MARIANA RABELLO",
+        "MARIANA RABELLO FOI ÀS RUAS"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018153": {
+      "keywords": [
+        "reta final nas eleições 2026",
+        "política",
+        "sonoras",
+        "governador",
+        "importante",
+        "presidente",
+        "senadores",
+        "confusão",
+        "deputado",
+        "detalhes",
+        "eleições",
+        "esquecer",
+        "estadual",
+        "colinha",
+        "digitar"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ALEX ATANÁZIO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
       ],
       "manualPlaces": [],
       "segments": []
