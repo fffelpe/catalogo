@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T19:40:38.207Z",
+  "generatedAt": "2026-10-02T22:32:02.031Z",
   "items": {
     "2822B019835": {
       "keywords": [
@@ -872841,6 +872841,74 @@
       "manualPeople": [],
       "places": [
         "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "1452B005330": {
+      "keywords": [
+        "vt gado sindi ms",
+        "sindi",
+        "instagram",
+        "telefone",
+        "piraputanga",
+        "pecuarista",
+        "realizado",
+        "conhecer",
+        "estancia",
+        "trabalho",
+        "contato",
+        "arroba",
+        "entrar",
+        "juarez",
+        "quiser"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "ELAINE SILVA",
+        "André Cardoso",
+        "SUGESTÃO DE NOTA PÉ"
+      ],
+      "manualPeople": [],
+      "places": [
+        "CAMPO GRANDE",
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "1452B005495": {
+      "keywords": [
+        "vt queijo rs",
+        "queijo",
+        "descobrir",
+        "embarcou",
+        "ciência",
+        "direito",
+        "gerente",
+        "receita",
+        "segredo",
+        "vacaria",
+        "brasil",
+        "existe",
+        "grande",
+        "viagem",
+        "deixa"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "BRUNO FAUSTINO",
+        "RODA COMP",
+        "Jiovani Foiatto"
+      ],
+      "manualPeople": [],
+      "places": [
+        "VACARIA / RS"
       ],
       "manualPlaces": [],
       "segments": []

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T19:40:14.786Z",
-  "total": 41339,
+  "generatedAt": "2026-10-02T22:31:45.396Z",
+  "total": 41341,
   "registros": [
     {
       "ID": "2822B019835",
@@ -528624,6 +528624,32 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005330",
+      "DESCRICAO": "VT GADO SINDI MS",
+      "DATA": "03/10/2026",
+      "LOCAL": "",
+      "REPORTER": "ELAINE SILVA",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "383",
+      "DURACOES": {
+        "1452B005330": "0:05:08"
+      }
+    },
+    {
+      "ID": "1452B005495",
+      "DESCRICAO": "VT QUEIJO RS",
+      "DATA": "03/10/2026",
+      "LOCAL": "",
+      "REPORTER": "BRUNO FAUSTINO",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "383",
       "DURACOES": {}
     }
   ]

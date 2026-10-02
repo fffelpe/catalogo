@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T19:40:28.889Z",
+  "generatedAt": "2026-10-02T22:31:56.541Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -22,12 +22,40 @@
     ]
   },
   "resumo": {
-    "materiais": 2025,
-    "vts": 735,
+    "materiais": 2027,
+    "vts": 737,
     "noticias": 364,
     "coberturas": 1352
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005330",
+      "ids": [
+        "1452B005330"
+      ],
+      "descricao": "VT GADO SINDI MS",
+      "reporter": "ELAINE SILVA",
+      "data": "03/10/2026",
+      "local": "",
+      "pgm": "383"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005495",
+      "ids": [
+        "1452B005495"
+      ],
+      "descricao": "VT QUEIJO RS",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "03/10/2026",
+      "local": "",
+      "pgm": "383"
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
