@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T18:32:25.272Z",
+  "generatedAt": "2026-10-02T19:40:38.207Z",
   "items": {
     "2822B019835": {
       "keywords": [
@@ -872394,6 +872394,453 @@
         "GOIÁS - GO",
         "GOIÂNIA",
         "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018154": {
+      "keywords": [
+        "joão bosco 80 anos",
+        "lazer",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "bosco",
+        "anos",
+        "joão"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018155": {
+      "keywords": [
+        "tre orienta eleitores",
+        "política",
+        "sobre",
+        "horizonte-mg",
+        "informações",
+        "orientações",
+        "documentos",
+        "secretário",
+        "converso",
+        "faltando",
+        "henrique",
+        "assunto",
+        "carlos",
+        "flávio",
+        "guerra"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "TRE ORIENTA ELEITORES",
+        "TRE-MG ORIENTA ELEITORES",
+        "CELULAR NAS ELEIÇÕES",
+        "PERPÉTUO BRAGA",
+        "RONERSON PINHEIRO",
+        "PABLO ARAGÃO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MINAS GERAIS - MG"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018156": {
+      "keywords": [
+        "reconhecimento videos por ia",
+        "política",
+        "eleições",
+        "ficar",
+        "vídeo",
+        "horizonte-mg",
+        "importante",
+        "investigar",
+        "secretário",
+        "cientista",
+        "eleitoral",
+        "eleitores",
+        "campanha",
+        "político",
+        "durante"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Flávio Guerra",
+        "CRIADO POR I.A",
+        "RUDA RICCI",
+        "PABLO ARAGÃO",
+        "RONERSON PINHEIRO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MINAS GERAIS - MG"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018157": {
+      "keywords": [
+        "votos deficientes físicos",
+        "política",
+        "instituto",
+        "deficiência",
+        "rodolfo",
+        "professor",
+        "desafios",
+        "mendonça",
+        "acessar",
+        "capital",
+        "desafio",
+        "pacheco",
+        "simples",
+        "votação",
+        "acesso"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "URNAS PARA A PESSOA COM",
+        "JUAREZ MARTINS",
+        "Belo Horizonte",
+        "NAIARA GONÇALVES",
+        "RAFAEL É EXEMPLO NO QUESITO ACESSIBILIDADE"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MINAS GERAIS - MG",
+        "direto geral do TRE / MG"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018158": {
+      "keywords": [
+        "votos idosos",
+        "política",
+        "rafael",
+        "nasta",
+        "obrigação",
+        "mendonça",
+        "lorena",
+        "anos",
+        "elisaete",
+        "mesmo",
+        "urnas",
+        "quantidade",
+        "eleitoral",
+        "eleitores",
+        "horizonte"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ELEIÇÕES VOTO IDOSO",
+        "IDOSOS QUEREM VOTAR"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MINAS GERAIS - MG",
+        "diretor geral do TER / MG"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018159": {
+      "keywords": [
+        "votos quilombolas",
+        "política",
+        "gonçalves",
+        "rodolfo",
+        "naiara",
+        "urna",
+        "quilombolas",
+        "eleitores",
+        "acesso",
+        "comunidades",
+        "afastadas",
+        "antônio",
+        "cresceu",
+        "pacheco",
+        "chegar"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VOTO QUILOMBOLA",
+        "Flávio Guerra",
+        "VOTAÇÃO AINDA É UM DESAFIO",
+        "Belo Horizonte-MG",
+        "diretor do TRE-MG"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MINAS GERAIS - MG"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018160": {
+      "keywords": [
+        "dificuldades votos indígenas",
+        "política",
+        "indígenas",
+        "votação",
+        "diretor-geral",
+        "horizonte-mg",
+        "comunidades",
+        "distâncias",
+        "enfrentam",
+        "adotadas",
+        "garantir",
+        "algumas",
+        "direito",
+        "envolve",
+        "medidas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VOTO INDÍGENA",
+        "Lorena Mendonça",
+        "DIFICULDADES NO ACESSO AOS",
+        "ATARA MATU PURI",
+        "NAIARA GONÇALVES",
+        "RODOLFO PACHECO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MINAS GERAIS - MG"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018161": {
+      "keywords": [
+        "alimentos no calor",
+        "cotidiano",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "alimentos",
+        "calor"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cotidiano"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018162": {
+      "keywords": [
+        "economia de energia",
+        "economia",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "energia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018163": {
+      "keywords": [
+        "dia do idoso",
+        "cotidiano",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "idoso"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cotidiano"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018164": {
+      "keywords": [
+        "impacto das bets",
+        "economia",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "impacto",
+        "bets"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018165": {
+      "keywords": [
+        "cuidados com golpes",
+        "segurança",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "cuidados",
+        "golpes"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "segurança"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018166": {
+      "keywords": [
+        "transporte gratuito eleições",
+        "cotidiano",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "transporte",
+        "eleições",
+        "gratuito"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cotidiano"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018167": {
+      "keywords": [
+        "transporte pessoas com deficiência",
+        "cotidiano",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "deficiência",
+        "transporte",
+        "pessoas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cotidiano"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "2457B018168": {
+      "keywords": [
+        "urnas seguras",
+        "política",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "seguras",
+        "urnas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
       ],
       "manualPlaces": [],
       "segments": []
