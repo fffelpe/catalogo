@@ -56,10 +56,13 @@ const MediaEnrichment = (() => {
 
   function normalizarItem(item = {}) {
     return {
+      title: limparTexto(item.title),
+      manualTitle: limparTexto(item.manualTitle),
       keywords: normalizarLista(item.keywords),
       subjects: normalizarLista(item.subjects),
       people: normalizarLista(item.people),
       places: normalizarLista(item.places),
+      organizations: normalizarLista(item.organizations),
       segments: (Array.isArray(item.segments) ? item.segments : [])
         .map(normalizarSegmento)
         .filter(Boolean)
@@ -131,6 +134,7 @@ const MediaEnrichment = (() => {
       SUBJECTS: item.subjects.join(" "),
       PEOPLE: item.people.join(" "),
       PLACES: item.places.join(" "),
+      ORGANIZATIONS: item.organizations.join(" "),
       SEGMENTS: item.segments.map((segmento) => segmento.text).join(" ")
     };
   }
