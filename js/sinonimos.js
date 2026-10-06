@@ -553,6 +553,19 @@ const VocabularioJornalistico = (() => {
   }
 
 
+  function escaparRegex(texto) {
+    return String(texto || "").replace(/[-/\\^$*+?.()|[\]{}]/g, "\\  function obterNomeGrupo(chave, grupo) {");
+  }
+
+  function contemExpressao(textoNormalizado, expressaoNormalizada) {
+    if (!textoNormalizado || !expressaoNormalizada) return false;
+    const padrao = new RegExp(
+      `(^|[^\\p{L}\\p{N}])${escaparRegex(expressaoNormalizada)}(?=$|[^\\p{L}\\p{N}])`,
+      "u"
+    );
+    return padrao.test(textoNormalizado);
+  }
+
   function obterNomeGrupo(chave, grupo) {
     if (grupo.termos && grupo.termos.length) {
       return grupo.termos[0];
@@ -665,15 +678,14 @@ const VocabularioJornalistico = (() => {
         expandirTermo(palavra).forEach(adicionar);
       });
 
-    // Também verifica expressões compostas cadastradas.
+    // Também verifica qualquer forma composta cadastrada (principal, termo ou sinônimo)
+    // usando limites de palavra para evitar falsos positivos como "banco centralizado".
     Object.entries(DICIONARIO).forEach(([chave, grupo]) => {
+      const principal = obterNomeGrupo(chave, grupo);
+      const compostos = aliasesDoGrupo(chave, grupo, false)
+        .filter((alias) => alias.includes(" "));
 
-      const principal = normalizar(obterNomeGrupo(chave, grupo));
-
-      if (
-        principal.includes(" ") &&
-        consultaNormalizada.includes(principal)
-      ) {
+      if (compostos.some((alias) => contemExpressao(consultaNormalizada, alias))) {
         expandirTermo(principal).forEach(adicionar);
       }
     });
@@ -726,7 +738,6 @@ const VocabularioJornalistico = (() => {
   function extrairConceitos(texto, opcoes = {}) {
     const normalizado = normalizar(texto);
     if (!normalizado) return [];
-    const alvo = ` ${normalizado} `;
     const resultados = [];
 
     for (const conceito of obterIndiceConceitos()) {
@@ -734,7 +745,7 @@ const VocabularioJornalistico = (() => {
       let evidencia = "";
 
       for (const alias of conceito.aliases) {
-        if (alvo.includes(` ${alias} `)) {
+        if (contemExpressao(normalizado, alias)) {
           peso = 1;
           evidencia = alias;
           break;
@@ -743,7 +754,7 @@ const VocabularioJornalistico = (() => {
 
       if (!peso && opcoes.incluirRelacionados !== false) {
         for (const relacionado of conceito.relacionados) {
-          if (alvo.includes(` ${relacionado} `)) {
+          if (contemExpressao(normalizado, relacionado)) {
             peso = 0.45;
             evidencia = relacionado;
             break;
