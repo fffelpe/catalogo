@@ -553,6 +553,19 @@ const VocabularioJornalistico = (() => {
   }
 
 
+  function escaparRegex(texto) {
+    return String(texto || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function contemExpressao(textoNormalizado, expressaoNormalizada) {
+    if (!textoNormalizado || !expressaoNormalizada) return false;
+    const padrao = new RegExp(
+      `(^|[^\\p{L}\\p{N}])${escaparRegex(expressaoNormalizada)}(?=$|[^\\p{L}\\p{N}])`,
+      "u"
+    );
+    return padrao.test(textoNormalizado);
+  }
+
   function obterNomeGrupo(chave, grupo) {
     if (grupo.termos && grupo.termos.length) {
       return grupo.termos[0];
@@ -665,15 +678,14 @@ const VocabularioJornalistico = (() => {
         expandirTermo(palavra).forEach(adicionar);
       });
 
-    // Também verifica expressões compostas cadastradas.
+    // Também verifica qualquer forma composta cadastrada (principal, termo ou sinônimo)
+    // usando limites de palavra para evitar falsos positivos como "banco centralizado".
     Object.entries(DICIONARIO).forEach(([chave, grupo]) => {
+      const principal = obterNomeGrupo(chave, grupo);
+      const compostos = aliasesDoGrupo(chave, grupo, false)
+        .filter((alias) => alias.includes(" "));
 
-      const principal = normalizar(obterNomeGrupo(chave, grupo));
-
-      if (
-        principal.includes(" ") &&
-        consultaNormalizada.includes(principal)
-      ) {
+      if (compostos.some((alias) => contemExpressao(consultaNormalizada, alias))) {
         expandirTermo(principal).forEach(adicionar);
       }
     });
@@ -702,6 +714,22 @@ const VocabularioJornalistico = (() => {
     return [...new Set(valores.map(normalizar).filter(Boolean))];
   }
 
+  let indiceConceitosCache = null;
+
+  function obterIndiceConceitos() {
+    if (indiceConceitosCache) return indiceConceitosCache;
+
+    indiceConceitosCache = Object.entries(DICIONARIO).map(([chave, grupo]) => ({
+      chave,
+      termo: obterNomeGrupo(chave, grupo),
+      categoria: grupo.categoria || "assunto",
+      aliases: aliasesDoGrupo(chave, grupo, false),
+      relacionados: (grupo.relacionados || []).map(normalizar).filter(Boolean)
+    }));
+
+    return indiceConceitosCache;
+  }
+
   function canonizar(termo) {
     const grupo = encontrarGrupo(termo);
     return grupo ? grupo.principal : String(termo || "").trim();
@@ -710,15 +738,14 @@ const VocabularioJornalistico = (() => {
   function extrairConceitos(texto, opcoes = {}) {
     const normalizado = normalizar(texto);
     if (!normalizado) return [];
-    const alvo = ` ${normalizado} `;
     const resultados = [];
 
-    for (const [chave, grupo] of Object.entries(DICIONARIO)) {
+    for (const conceito of obterIndiceConceitos()) {
       let peso = 0;
       let evidencia = "";
 
-      for (const alias of aliasesDoGrupo(chave, grupo, false)) {
-        if (alvo.includes(` ${alias} `)) {
+      for (const alias of conceito.aliases) {
+        if (contemExpressao(normalizado, alias)) {
           peso = 1;
           evidencia = alias;
           break;
@@ -726,8 +753,8 @@ const VocabularioJornalistico = (() => {
       }
 
       if (!peso && opcoes.incluirRelacionados !== false) {
-        for (const relacionado of (grupo.relacionados || []).map(normalizar).filter(Boolean)) {
-          if (alvo.includes(` ${relacionado} `)) {
+        for (const relacionado of conceito.relacionados) {
+          if (contemExpressao(normalizado, relacionado)) {
             peso = 0.45;
             evidencia = relacionado;
             break;
@@ -737,9 +764,9 @@ const VocabularioJornalistico = (() => {
 
       if (peso) {
         resultados.push({
-          chave,
-          termo: obterNomeGrupo(chave, grupo),
-          categoria: grupo.categoria || "assunto",
+          chave: conceito.chave,
+          termo: conceito.termo,
+          categoria: conceito.categoria,
           peso,
           evidencia
         });

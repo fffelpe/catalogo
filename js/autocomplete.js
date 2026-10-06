@@ -17,6 +17,50 @@ const AutocompleteBusca = (() => {
     return String(texto || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR").trim();
   }
 
+  function distanciaLevenshtein(a, b, limite = 2) {
+    if (a === b) return 0;
+    if (!a || !b || Math.abs(a.length - b.length) > limite) return limite + 1;
+
+    let anterior = Array.from({ length: b.length + 1 }, (_, i) => i);
+    for (let i = 1; i <= a.length; i++) {
+      const atual = [i];
+      let menor = atual[0];
+      for (let j = 1; j <= b.length; j++) {
+        const custo = a[i - 1] === b[j - 1] ? 0 : 1;
+        atual[j] = Math.min(atual[j - 1] + 1, anterior[j] + 1, anterior[j - 1] + custo);
+        if (atual[j] < menor) menor = atual[j];
+      }
+      if (menor > limite) return limite + 1;
+      anterior = atual;
+    }
+    return anterior[b.length];
+  }
+
+  function scoreFuzzy(texto, consulta) {
+    const q = normalizar(consulta);
+    if (q.length < 4) return 0;
+    const alvo = normalizar(texto);
+    const termosConsulta = q.split(" ").filter((item) => item.length >= 4);
+    const termosAlvo = alvo.split(" ").filter((item) => item.length >= 4);
+    if (!termosConsulta.length || !termosAlvo.length) return 0;
+
+    let total = 0;
+    for (const termo of termosConsulta) {
+      let melhor = 0;
+      const limite = termo.length <= 5 ? 1 : 2;
+      for (const candidato of termosAlvo) {
+        if (candidato[0] !== termo[0] || Math.abs(candidato.length - termo.length) > limite) continue;
+        const distancia = distanciaLevenshtein(termo, candidato, limite);
+        if (distancia > limite) continue;
+        melhor = Math.max(melhor, 1 - distancia / Math.max(termo.length, candidato.length));
+      }
+      if (!melhor) return 0;
+      total += melhor;
+    }
+
+    return total / termosConsulta.length;
+  }
+
   function escapeHtml(texto) {
     return String(texto || "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   }
@@ -73,16 +117,32 @@ const AutocompleteBusca = (() => {
     const q = normalizar(consulta);
     if (q.length < 2) return [];
 
-    return indice.map((item) => {
+    const diretas = indice.map((item) => {
       const texto = normalizar(item.texto);
       const inicia = texto.startsWith(q);
       const palavraInicia = !inicia && texto.split(" ").some((p) => p.startsWith(q));
       const contem = !inicia && !palavraInicia && texto.includes(q);
       if (!inicia && !palavraInicia && !contem) return null;
-      return { ...item, score: item.peso + (inicia ? 100 : palavraInicia ? 70 : 35) };
+      return { ...item, score: item.peso + (inicia ? 100 : palavraInicia ? 70 : 35), tipoMatch: "direto" };
     }).filter(Boolean)
-      .sort((a,b) => b.score - a.score || a.texto.localeCompare(b.texto, "pt-BR"))
-      .slice(0, LIMITE);
+      .sort((a,b) => b.score - a.score || a.texto.localeCompare(b.texto, "pt-BR"));
+
+    if (diretas.length >= LIMITE || q.length < 4) return diretas.slice(0, LIMITE);
+
+    const chavesDiretas = new Set(diretas.map((item) => normalizar(item.texto)));
+    const aproximadas = indice.map((item) => {
+      if (chavesDiretas.has(normalizar(item.texto))) return null;
+      const similaridade = scoreFuzzy(item.texto, q);
+      if (similaridade < 0.68) return null;
+      return {
+        ...item,
+        score: item.peso + 42 * similaridade,
+        tipoMatch: "aproximado"
+      };
+    }).filter(Boolean)
+      .sort((a,b) => b.score - a.score || a.texto.localeCompare(b.texto, "pt-BR"));
+
+    return [...diretas, ...aproximadas].slice(0, LIMITE);
   }
 
   function destacar(texto, consulta) {
@@ -197,5 +257,5 @@ const AutocompleteBusca = (() => {
     });
   }
 
-  return { montarIndice, obterSugestoes, inicializar, renderizar, fechar };
+  return { montarIndice, obterSugestoes, inicializar, renderizar, fechar, distanciaLevenshtein, scoreFuzzy };
 })();

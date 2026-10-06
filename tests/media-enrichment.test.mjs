@@ -50,6 +50,7 @@ test("camposPesquisa agrega campos enriquecidos em texto pesquisável", () => {
     SUBJECTS: "enchente",
     PEOPLE: "",
     PLACES: "São Paulo",
+    ORGANIZATIONS: "",
     SEGMENTS: "Bombeiros auxiliam moradores"
   });
 });

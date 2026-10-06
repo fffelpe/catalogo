@@ -3,6 +3,8 @@ import assert from "node:assert/strict";
 import {
   gerarEnriquecimentoCatalogo,
   gerarEnriquecimentoRegistro,
+  gerarTituloAutomatico,
+  extrairOrganizacoes,
 } from "../scripts/palavras-chave.mjs";
 
 const registroCafe = {
@@ -156,4 +158,43 @@ test("segunda geração não transforma keywords automáticas antigas em manuais
   assert.equal(item.manualKeywords.includes("bicicleta"), false);
   assert.equal(item.keywords.includes("bicicleta"), false);
   assert.ok(item.keywords.includes("vacina da gripe"));
+});
+
+
+test("gera título editorial curto sem perder a descrição original", () => {
+  const titulo = gerarTituloAutomatico(
+    "GERAIS EXERCITO MILITAR NA AMAZONIA + GERAIS AMAZONIA + RIO AMAZONIA + AEREAS AMAZONIA"
+  );
+
+  assert.ok(titulo.length > 0);
+  assert.ok(titulo.length <= 88);
+  assert.equal(titulo.toLocaleLowerCase("pt-BR").startsWith("gerais"), false);
+  assert.match(titulo.toLocaleLowerCase("pt-BR"), /amaz/);
+});
+
+test("extrai organizações conhecidas como entidades estruturadas", () => {
+  const organizacoes = extrairOrganizacoes({
+    DESCRICAO: "STF ANALISA CASO DA PETROBRAS",
+    AFILIADA_EMISSORA: "TV CULTURA"
+  });
+
+  assert.ok(organizacoes.includes("Supremo Tribunal Federal"));
+  assert.ok(organizacoes.includes("Petrobras"));
+  assert.ok(organizacoes.includes("TV CULTURA"));
+});
+
+test("snapshot de enriquecimento publica título e organizações", () => {
+  const snapshot = gerarEnriquecimentoCatalogo({
+    registros: [{
+      ID: "1452B005999",
+      DESCRICAO: "PETROBRAS DIVULGA NOVO BALANÇO + FACHADA DA EMPRESA",
+      PROGRAMA: "JORNAL DA CULTURA",
+      EDITORIA: "ECONOMIA"
+    }],
+    anterior: { schemaVersion: 1, items: {} }
+  });
+
+  const item = snapshot.items["1452B005999"];
+  assert.ok(item.title);
+  assert.ok(item.organizations.includes("Petrobras"));
 });
