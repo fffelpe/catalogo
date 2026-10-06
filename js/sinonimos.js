@@ -554,7 +554,7 @@ const VocabularioJornalistico = (() => {
 
 
   function escaparRegex(texto) {
-    return String(texto || "").replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
+    return String(texto || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
 
   function contemExpressao(textoNormalizado, expressaoNormalizada) {
