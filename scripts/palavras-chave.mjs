@@ -325,7 +325,7 @@ function gerarTituloAutomatico(descricao) {
 
   const base = escolhidos.join(" — ") || chunks[0];
   const limitado = base.length > 88
-    ? \`\${base.slice(0, 85).replace(/\s+\S*$/, "").trim()}…\`
+    ? base.slice(0, 85).replace(/\s+\S*$/, "").trim() + "…"
     : base;
 
   return formatarTituloEditorial(limitado);
