@@ -20,8 +20,9 @@ const SearchEngine = (() => {
     CREDITOS_TEXTO: 16,
     KEYWORDS: 32,
     SUBJECTS: 36,
-    PEOPLE: 28,
-    PLACES: 24,
+    PEOPLE: 32,
+    PLACES: 28,
+    ORGANIZATIONS: 30,
     SEGMENTS: 38,
     DATA: 5
   };
@@ -30,6 +31,106 @@ const SearchEngine = (() => {
     "a", "o", "as", "os", "de", "da", "do", "das", "dos", "e", "em", "na", "no",
     "nas", "nos", "um", "uma", "uns", "umas", "para", "por", "com", "sem", "que"
   ]);
+
+  const CAMPOS_FUZZY = new Set([
+    "DESCRICAO", "EDITORIA", "LOCAL", "REPORTER", "PROGRAMA",
+    "KEYWORDS", "SUBJECTS", "PEOPLE", "PLACES", "ORGANIZATIONS"
+  ]);
+
+  function tokenizar(texto) {
+    return normalizar(texto)
+      .split(" ")
+      .filter((token) => token.length >= 2 && !STOPWORDS.has(token));
+  }
+
+  function distanciaLevenshteinLimitada(a, b, limite = 2) {
+    if (a === b) return 0;
+    if (!a || !b || Math.abs(a.length - b.length) > limite) return limite + 1;
+
+    let anterior = Array.from({ length: b.length + 1 }, (_, i) => i);
+    for (let i = 1; i <= a.length; i++) {
+      const atual = [i];
+      let menorLinha = atual[0];
+
+      for (let j = 1; j <= b.length; j++) {
+        const custo = a[i - 1] === b[j - 1] ? 0 : 1;
+        const valor = Math.min(
+          atual[j - 1] + 1,
+          anterior[j] + 1,
+          anterior[j - 1] + custo
+        );
+        atual[j] = valor;
+        if (valor < menorLinha) menorLinha = valor;
+      }
+
+      if (menorLinha > limite) return limite + 1;
+      anterior = atual;
+    }
+
+    return anterior[b.length];
+  }
+
+  function limiteFuzzy(termo) {
+    if (termo.length < 4) return 0;
+    if (termo.length <= 5) return 1;
+    return 2;
+  }
+
+  function melhorCorrespondenciaFuzzy(tokens, termo) {
+    const limite = limiteFuzzy(termo);
+    if (!limite || !Array.isArray(tokens) || !tokens.length) return null;
+
+    let melhor = null;
+    for (const token of tokens) {
+      if (!token || Math.abs(token.length - termo.length) > limite) continue;
+      if (token[0] !== termo[0]) continue;
+
+      const distancia = distanciaLevenshteinLimitada(token, termo, limite);
+      if (distancia > limite) continue;
+
+      const similaridade = 1 - (distancia / Math.max(token.length, termo.length));
+      if (!melhor || similaridade > melhor.similaridade) {
+        melhor = { token, distancia, similaridade };
+        if (distancia === 0) break;
+      }
+    }
+
+    return melhor;
+  }
+
+  function mapaConceitos(texto) {
+    const mapa = new Map();
+    if (
+      typeof VocabularioJornalistico === "undefined" ||
+      typeof VocabularioJornalistico.extrairConceitos !== "function"
+    ) return mapa;
+
+    VocabularioJornalistico.extrairConceitos(texto).forEach((conceito) => {
+      const atual = mapa.get(conceito.chave);
+      if (!atual || conceito.peso > atual.peso) mapa.set(conceito.chave, conceito);
+    });
+    return mapa;
+  }
+
+  function similaridadeSemantica(conceitosRegistro, conceitosConsulta) {
+    if (!(conceitosRegistro instanceof Map) || !(conceitosConsulta instanceof Map)) return 0;
+    if (!conceitosRegistro.size || !conceitosConsulta.size) return 0;
+
+    let produto = 0;
+    let normaR = 0;
+    let normaQ = 0;
+
+    conceitosRegistro.forEach((item) => { normaR += (Number(item.peso) || 0) ** 2; });
+    conceitosConsulta.forEach((item) => {
+      const pesoQ = Number(item.peso) || 0;
+      normaQ += pesoQ ** 2;
+      const correspondente = conceitosRegistro.get(item.chave);
+      if (correspondente) produto += pesoQ * (Number(correspondente.peso) || 0);
+    });
+
+    if (!produto || !normaR || !normaQ) return 0;
+    return produto / (Math.sqrt(normaR) * Math.sqrt(normaQ));
+  }
 
   const cacheRegistros = new WeakMap();
   const cacheProgramas = new WeakMap();
@@ -196,6 +297,7 @@ const SearchEngine = (() => {
       SUBJECTS: [],
       PEOPLE: [],
       PLACES: [],
+      ORGANIZATIONS: [],
       SEGMENTS: []
     };
 
@@ -238,10 +340,19 @@ const SearchEngine = (() => {
       camposNormalizados[campo] = valor ? normalizar(valor) : "";
     });
 
+    const textoCompleto = normalizar(Object.values(registro).join(" "));
+    const tokensPorCampo = {};
+    Object.keys(PESOS_CAMPOS).forEach((campo) => {
+      tokensPorCampo[campo] = tokenizar(camposNormalizados[campo] || "");
+    });
+
     const preparado = {
       registro,
       camposNormalizados,
-      textoCompleto: normalizar(Object.values(registro).join(" ")),
+      textoCompleto,
+      tokensGerais: [...new Set(tokenizar(textoCompleto))],
+      tokensPorCampo,
+      conceitos: mapaConceitos(textoCompleto),
       ids: separarIds(registro.ID)
     };
 
@@ -286,12 +397,20 @@ const SearchEngine = (() => {
       ? MediaIdUtils.normalizar(consultaOriginal).toLocaleLowerCase("pt-BR")
       : consultaNormalizada.replace(/\s+/g, "");
 
+    const palavrasFuzzy = [...new Set(
+      consultaNormalizada
+        .split(" ")
+        .filter((palavra) => palavra.length >= 4 && !STOPWORDS.has(palavra))
+    )];
+
     return {
       consultaOriginal,
       consultaNormalizada,
       consultaPadroes: criarPadroesTermo(consultaNormalizada),
       expansoes,
       palavrasOriginais,
+      palavrasFuzzy,
+      conceitos: mapaConceitos(consultaOriginal),
       idConsulta
     };
   }
@@ -299,6 +418,105 @@ const SearchEngine = (() => {
   function detectarMediaIdExato(preparado, contexto) {
     return Boolean(contexto.idConsulta) && preparado.ids.includes(contexto.idConsulta);
   }
+  function calcularFuzzy(preparado, contexto) {
+    let total = 0;
+    const correspondencias = [];
+
+    for (const palavra of contexto.palavrasFuzzy || []) {
+      if (preparado.textoCompleto.includes(palavra)) continue;
+
+      let melhorCampo = null;
+      for (const [campo, pesoCampo] of Object.entries(PESOS_CAMPOS)) {
+        if (!CAMPOS_FUZZY.has(campo)) continue;
+        const match = melhorCorrespondenciaFuzzy(preparado.tokensPorCampo[campo], palavra);
+        if (!match) continue;
+
+        const pontos = pesoCampo * 0.42 * match.similaridade;
+        if (!melhorCampo || pontos > melhorCampo.pontos) {
+          melhorCampo = { campo, termo: palavra, encontrado: match.token, pontos };
+        }
+      }
+
+      if (melhorCampo) {
+        total += melhorCampo.pontos;
+        correspondencias.push({
+          campo: melhorCampo.campo,
+          termo: melhorCampo.termo,
+          encontrado: melhorCampo.encontrado,
+          tipo: "fuzzy",
+          pontos: melhorCampo.pontos
+        });
+      }
+    }
+
+    return { score: total, correspondencias };
+  }
+
+  function calcularSemantica(preparado, contexto) {
+    const similaridade = similaridadeSemantica(preparado.conceitos, contexto.conceitos);
+    if (similaridade <= 0) return { score: 0, correspondencias: [] };
+
+    const compartilhados = [];
+    contexto.conceitos.forEach((conceito, chave) => {
+      if (preparado.conceitos.has(chave)) compartilhados.push(conceito.termo);
+    });
+
+    const score = Math.min(110, 90 * similaridade);
+    return {
+      score,
+      correspondencias: [{
+        campo: "SEMANTICA",
+        termo: compartilhados.join(", "),
+        tipo: "semantico",
+        pontos: score
+      }]
+    };
+  }
+
+  function detectarEntidades(preparado, contexto) {
+    const entidades = [];
+    const candidatos = [
+      ["pessoa", "PEOPLE"],
+      ["pessoa", "REPORTER"],
+      ["local", "PLACES"],
+      ["local", "LOCAL"],
+      ["organizacao", "ORGANIZATIONS"],
+      ["organizacao", "AFILIADA_EMISSORA"]
+    ];
+
+    const vistos = new Set();
+    for (const [tipo, campo] of candidatos) {
+      const bruto = String(preparado.registro[campo] || "").trim();
+      const valor = preparado.camposNormalizados[campo] || "";
+      if (!bruto || !valor) continue;
+
+      const corresponde = contexto.consultaNormalizada.includes(valor) ||
+        (valor.length >= 4 && contexto.consultaNormalizada.split(" ").some((parte) => valor.includes(parte) && parte.length >= 4));
+      if (!corresponde) continue;
+
+      const chave = `${tipo}:${valor}`;
+      if (vistos.has(chave)) continue;
+      vistos.add(chave);
+      entidades.push({ tipo, valor: bruto, campo });
+    }
+
+    if (
+      typeof VocabularioJornalistico !== "undefined" &&
+      typeof VocabularioJornalistico.extrairConceitos === "function"
+    ) {
+      VocabularioJornalistico.extrairConceitos(contexto.consultaOriginal, { incluirRelacionados: false })
+        .filter((item) => item.categoria === "organizacao")
+        .forEach((item) => {
+          const chave = `organizacao:${normalizar(item.termo)}`;
+          if (vistos.has(chave)) return;
+          vistos.add(chave);
+          entidades.push({ tipo: "organizacao", valor: item.termo, campo: "VOCABULARIO" });
+        });
+    }
+
+    return entidades;
+  }
+
 
   function registroPodePontuar(preparado, contexto) {
     if (detectarMediaIdExato(preparado, contexto)) return true;
@@ -310,8 +528,14 @@ const SearchEngine = (() => {
       expansao.termoNormalizado && texto.includes(expansao.termoNormalizado)
     )) return true;
 
-    return contexto.palavrasOriginais.some((palavra) =>
+    if (contexto.palavrasOriginais.some((palavra) =>
       palavra.termoNormalizado && texto.includes(palavra.termoNormalizado)
+    )) return true;
+
+    if (similaridadeSemantica(preparado.conceitos, contexto.conceitos) > 0) return true;
+
+    return (contexto.palavrasFuzzy || []).some((palavra) =>
+      Boolean(melhorCorrespondenciaFuzzy(preparado.tokensGerais, palavra))
     );
   }
 
@@ -391,8 +615,28 @@ const SearchEngine = (() => {
       }
     }
 
+    const fuzzy = calcularFuzzy(preparado, contexto);
+    score += fuzzy.score;
+    correspondencias.push(...fuzzy.correspondencias);
+
+    const semantica = calcularSemantica(preparado, contexto);
+    score += semantica.score;
+    correspondencias.push(...semantica.correspondencias);
+
+    const entidades = detectarEntidades(preparado, contexto);
+    if (entidades.length) {
+      const bonusEntidades = Math.min(90, entidades.length * 24);
+      score += bonusEntidades;
+      correspondencias.push({
+        campo: "ENTIDADES",
+        termo: entidades.map((item) => item.valor).join(", "),
+        tipo: "entidade",
+        pontos: bonusEntidades
+      });
+    }
+
     const segmentMatches = encontrarMatchesSegmentos(registroOriginal, contexto.consultaOriginal);
-    return { score, correspondencias, segmentMatches };
+    return { score, correspondencias, segmentMatches, entidades };
   }
 
   function calcularRelevancia(registroOriginal, consulta) {
@@ -439,7 +683,8 @@ const SearchEngine = (() => {
         indiceOriginal,
         score: relevancia.score,
         correspondencias: relevancia.correspondencias,
-        segmentMatches: relevancia.segmentMatches || []
+        segmentMatches: relevancia.segmentMatches || [],
+        entidades: relevancia.entidades || []
       });
     });
 
@@ -449,7 +694,8 @@ const SearchEngine = (() => {
         ...item.registro,
         _SEARCH_SCORE: item.score,
         _SEARCH_MATCHES: item.correspondencias,
-        _SEARCH_SEGMENT_MATCHES: item.segmentMatches
+        _SEARCH_SEGMENT_MATCHES: item.segmentMatches,
+        _SEARCH_ENTITIES: item.entidades
       }));
   }
 
@@ -457,7 +703,8 @@ const SearchEngine = (() => {
     return {
       score: registro._SEARCH_SCORE || 0,
       correspondencias: registro._SEARCH_MATCHES || [],
-      segmentos: registro._SEARCH_SEGMENT_MATCHES || []
+      segmentos: registro._SEARCH_SEGMENT_MATCHES || [],
+      entidades: registro._SEARCH_ENTITIES || []
     };
   }
 
@@ -471,6 +718,9 @@ const SearchEngine = (() => {
     calcularRelevancia,
     explicarResultado,
     normalizar,
+    distanciaLevenshteinLimitada,
+    melhorCorrespondenciaFuzzy,
+    similaridadeSemantica,
     limparCache
   };
 })();
