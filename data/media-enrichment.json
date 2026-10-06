@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T16:48:24.285Z",
+  "generatedAt": "2026-10-06T19:53:09.178Z",
   "items": {
     "2822B019835": {
       "keywords": [
@@ -861081,6 +861081,8 @@
         "agrocultura",
         "rba tv / sc",
         "santa catarina - sc",
+        "rio do sul",
+        "rio do sul - sc",
         "cebola",
         "safra",
         "alho"
@@ -861090,10 +861092,14 @@
         "agronegócio"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "EVANDRO CLÁUDIO"
+      ],
       "manualPeople": [],
       "places": [
-        "SANTA CATARINA - SC"
+        "SANTA CATARINA - SC",
+        "RIO DO SUL",
+        "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
       "segments": []
@@ -872910,6 +872916,832 @@
       "places": [
         "VACARIA / RS"
       ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "1452B005504": {
+      "keywords": [
+        "agronegócio",
+        "morango",
+        "produtor",
+        "engenheiro",
+        "agrônomo",
+        "andradas",
+        "campestrinho",
+        "qualidade",
+        "culturas",
+        "cultivo",
+        "espaço",
+        "outras",
+        "região",
+        "terra",
+        "principalmente"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "José Mauricio dos Santos",
+        "Luciano Lopes",
+        "João Rafael de Oliveira"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MINAS GERAIS - MG"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "1452B005505": {
+      "keywords": [
+        "abelhas mudanças climáticas",
+        "agronegócio",
+        "apicultor",
+        "abelhas",
+        "oliveira",
+        "antônio",
+        "jardim",
+        "rafael",
+        "santo",
+        "joão",
+        "apicultura",
+        "produzido",
+        "alimento",
+        "internet",
+        "colmeia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Christian Van Bellen"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MINAS GERAIS - MG"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "1452B005506": {
+      "keywords": [
+        "regras piracema",
+        "peixe",
+        "pesca",
+        "agronegócio",
+        "linha",
+        "padrão",
+        "inferior",
+        "henrique",
+        "pedro",
+        "esportiva",
+        "piracema",
+        "marcelo",
+        "rabelo",
+        "regras",
+        "fiscalização"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "DF- AVERIGUADOS",
+        "UPRINT. FISCALIZAÇÃO-SEMAD",
+        "EM GC"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000133": {
+      "keywords": [
+        "abertura de votação em aracaju",
+        "política",
+        "de olho no voto",
+        "abertura",
+        "aracaju",
+        "votação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000134": {
+      "keywords": [
+        "votação em maceió",
+        "política",
+        "de olho no voto",
+        "votação",
+        "maceió"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000135": {
+      "keywords": [
+        "votação no acre",
+        "política",
+        "de olho no voto",
+        "votação",
+        "acre"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000136": {
+      "keywords": [
+        "boletim voto gilmar mendes_ cuiaba_04_10",
+        "política",
+        "de olho no voto",
+        "boletim",
+        "cuiaba",
+        "gilmar",
+        "mendes",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000137": {
+      "keywords": [
+        "escola sem luz durante votação",
+        "política",
+        "de olho no voto",
+        "catve",
+        "durante",
+        "votação",
+        "escola"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000138": {
+      "keywords": [
+        "voto triplice fronteira",
+        "política",
+        "de olho no voto",
+        "catve",
+        "fronteira",
+        "triplice",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000139": {
+      "keywords": [
+        "eleições em foz do iguaçu",
+        "política",
+        "de olho no voto",
+        "catve",
+        "eleições",
+        "iguaçu"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000140": {
+      "keywords": [
+        "eleições em toledo no paraná",
+        "política",
+        "de olho no voto",
+        "catve",
+        "eleições",
+        "paraná",
+        "toledo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000141": {
+      "keywords": [
+        "coletiva ronaldo caiado _tv brasil central",
+        "política",
+        "de olho no voto",
+        "catve",
+        "central",
+        "ronaldo",
+        "brasil",
+        "caiado"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000142": {
+      "keywords": [
+        "governador eleit0 de sergipe_fabio mitidieri",
+        "política",
+        "de olho no voto",
+        "catve",
+        "governador",
+        "mitidieri",
+        "sergipe",
+        "eleit",
+        "fabio"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000143": {
+      "keywords": [
+        "governador eleito de mato grosso do sul_eduardo riedel",
+        "política",
+        "de olho no voto",
+        "governador",
+        "eduardo",
+        "eleito",
+        "grosso",
+        "riedel",
+        "mato"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000144": {
+      "keywords": [
+        "governador eleito mt_otaviano pivetta",
+        "política",
+        "de olho no voto",
+        "governador",
+        "otaviano",
+        "pivetta",
+        "eleito"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000145": {
+      "keywords": [
+        "política",
+        "de olho no voto",
+        "votação",
+        "ceará"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000146": {
+      "keywords": [
+        "voto vice governador felício ramuth",
+        "política",
+        "de olho no voto",
+        "governador",
+        "felício",
+        "ramuth",
+        "vice",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000147": {
+      "keywords": [
+        "rede minas_voto carmem lúcia_",
+        "política",
+        "de olho no voto",
+        "carmem",
+        "lúcia",
+        "minas",
+        "rede",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000148": {
+      "keywords": [
+        "eleições em goiás",
+        "política",
+        "de olho no voto",
+        "tv brasil central",
+        "goiânia",
+        "goiás - go",
+        "goiânia - go",
+        "eleições",
+        "goiás"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÂNIA",
+        "GOIÁS - GO",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000149": {
+      "keywords": [
+        "repercusão primeiro turno",
+        "política",
+        "de olho no voto",
+        "tv brasil central",
+        "goiânia",
+        "goiás - go",
+        "goiânia - go",
+        "repercusão",
+        "primeiro",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÂNIA",
+        "GOIÁS - GO",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000150": {
+      "keywords": [
+        "coletiva ronaldo caiado primeiro turno",
+        "política",
+        "de olho no voto",
+        "tv brasil central",
+        "goiânia",
+        "goiás - go",
+        "goiânia - go",
+        "primeiro",
+        "ronaldo",
+        "caiado",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÂNIA",
+        "GOIÁS - GO",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000151": {
+      "keywords": [
+        "votação no piauí",
+        "política",
+        "de olho no voto",
+        "votação",
+        "piauí"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000152": {
+      "keywords": [
+        "votação litoral paulista",
+        "política",
+        "de olho no voto",
+        "paulista",
+        "litoral",
+        "votação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000153": {
+      "keywords": [
+        "balanço eleições no rio de janeiro primeiro turno",
+        "política",
+        "de olho no voto",
+        "eleições",
+        "primeiro",
+        "balanço",
+        "janeiro",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000154": {
+      "keywords": [
+        "tv nova_recife_filas longa",
+        "política",
+        "de olho no voto",
+        "recife",
+        "filas",
+        "longa"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000155": {
+      "keywords": [
+        "votação candidatos e outros eleitores",
+        "política",
+        "de olho no voto",
+        "candidatos",
+        "eleitores",
+        "votação",
+        "outros"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000156": {
+      "keywords": [
+        "tre rio de janeiro",
+        "política",
+        "de olho no voto",
+        "janeiro"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000157": {
+      "keywords": [
+        "votação de flávio bolsonaro",
+        "política",
+        "de olho no voto",
+        "bolsonaro",
+        "votação",
+        "flávio"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000158": {
+      "keywords": [
+        "tve bahia_votação bahia_04_10",
+        "política",
+        "de olho no voto",
+        "bahia",
+        "votação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000159": {
+      "keywords": [
+        "candidatos ao governo do espírito santo",
+        "política",
+        "de olho no voto",
+        "candidatos",
+        "espírito",
+        "governo",
+        "santo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000160": {
+      "keywords": [
+        "ocorrências policiais em mato grosso do sul",
+        "política",
+        "de olho no voto",
+        "ocorrências",
+        "policiais",
+        "grosso",
+        "mato"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000161": {
+      "keywords": [
+        "boletim votação em campo grande",
+        "política",
+        "de olho no voto",
+        "boletim",
+        "votação",
+        "grande",
+        "campo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000162": {
+      "keywords": [
+        "ub play_união da vitoria_votaçãochuva",
+        "política",
+        "de olho no voto",
+        "votaçãochuva",
+        "vitoria",
+        "união",
+        "play"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000163": {
+      "keywords": [
+        "votação no espírito santo",
+        "política",
+        "de olho no voto",
+        "espírito",
+        "votação",
+        "santo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000164": {
+      "keywords": [
+        "votação ciro gomes_tv ceará",
+        "política",
+        "de olho no voto",
+        "votação",
+        "ceará",
+        "gomes",
+        "ciro"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000165": {
+      "keywords": [
+        "voto de marina silva",
+        "política",
+        "de olho no voto",
+        "marina",
+        "silva",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000166": {
+      "keywords": [
+        "voto de lula e flávio bolsonaro",
+        "política",
+        "de olho no voto",
+        "bolsonaro",
+        "flávio",
+        "lula",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
       "manualPlaces": [],
       "segments": []
     }
