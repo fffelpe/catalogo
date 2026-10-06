@@ -482,6 +482,62 @@ const VocabularioJornalistico = (() => {
         "estádio",
         "estadio"
       ]
+    },
+
+    covid_19: {
+      termos: ["covid-19"],
+      sinonimos: ["covid", "coronavírus", "coronavirus", "sars-cov-2"],
+      relacionados: ["pandemia", "vacina", "hospital", "saúde", "isolamento"],
+      categoria: "assunto"
+    },
+
+    supremo_tribunal_federal: {
+      termos: ["supremo tribunal federal"],
+      sinonimos: ["stf", "supremo"],
+      relacionados: ["justiça", "tribunal", "ministro", "brasília"],
+      categoria: "organizacao"
+    },
+
+    policia_federal: {
+      termos: ["polícia federal"],
+      sinonimos: ["policia federal", "pf"],
+      relacionados: ["investigação", "operação", "delegado", "prisão"],
+      categoria: "organizacao"
+    },
+
+    petrobras: {
+      termos: ["petrobras"],
+      sinonimos: ["petróleo brasileiro s.a.", "petroleo brasileiro s.a."],
+      relacionados: ["petróleo", "petroleo", "combustível", "combustivel", "energia"],
+      categoria: "organizacao"
+    },
+
+    banco_central: {
+      termos: ["banco central"],
+      sinonimos: ["bacen", "bc"],
+      relacionados: ["juros", "selic", "inflação", "inflacao", "economia"],
+      categoria: "organizacao"
+    },
+
+    ibama: {
+      termos: ["ibama"],
+      sinonimos: ["instituto brasileiro do meio ambiente"],
+      relacionados: ["meio ambiente", "fiscalização", "fiscalizacao", "desmatamento"],
+      categoria: "organizacao"
+    },
+
+    inss: {
+      termos: ["inss"],
+      sinonimos: ["instituto nacional do seguro social"],
+      relacionados: ["previdência", "previdencia", "aposentadoria", "benefício", "beneficio"],
+      categoria: "organizacao"
+    },
+
+    defesa_civil: {
+      termos: ["defesa civil"],
+      sinonimos: [],
+      relacionados: ["enchente", "alagamento", "chuva", "deslizamento", "emergência", "emergencia"],
+      categoria: "organizacao"
     }
   };
 
@@ -628,9 +684,76 @@ const VocabularioJornalistico = (() => {
 
   function listarTodos() {
     return Object.entries(DICIONARIO).map(([chave, grupo]) => ({
+      chave,
       termo: obterNomeGrupo(chave, grupo),
       sinonimos: grupo.sinonimos || [],
-      relacionados: grupo.relacionados || []
+      relacionados: grupo.relacionados || [],
+      categoria: grupo.categoria || "assunto"
+    }));
+  }
+
+  function aliasesDoGrupo(chave, grupo, incluirRelacionados = false) {
+    const valores = [
+      obterNomeGrupo(chave, grupo),
+      ...(grupo.termos || []),
+      ...(grupo.sinonimos || [])
+    ];
+    if (incluirRelacionados) valores.push(...(grupo.relacionados || []));
+    return [...new Set(valores.map(normalizar).filter(Boolean))];
+  }
+
+  function canonizar(termo) {
+    const grupo = encontrarGrupo(termo);
+    return grupo ? grupo.principal : String(termo || "").trim();
+  }
+
+  function extrairConceitos(texto, opcoes = {}) {
+    const normalizado = normalizar(texto);
+    if (!normalizado) return [];
+    const alvo = ` ${normalizado} `;
+    const resultados = [];
+
+    for (const [chave, grupo] of Object.entries(DICIONARIO)) {
+      let peso = 0;
+      let evidencia = "";
+
+      for (const alias of aliasesDoGrupo(chave, grupo, false)) {
+        if (alvo.includes(` ${alias} `)) {
+          peso = 1;
+          evidencia = alias;
+          break;
+        }
+      }
+
+      if (!peso && opcoes.incluirRelacionados !== false) {
+        for (const relacionado of (grupo.relacionados || []).map(normalizar).filter(Boolean)) {
+          if (alvo.includes(` ${relacionado} `)) {
+            peso = 0.45;
+            evidencia = relacionado;
+            break;
+          }
+        }
+      }
+
+      if (peso) {
+        resultados.push({
+          chave,
+          termo: obterNomeGrupo(chave, grupo),
+          categoria: grupo.categoria || "assunto",
+          peso,
+          evidencia
+        });
+      }
+    }
+
+    return resultados;
+  }
+
+  function termosCanonicos() {
+    return listarTodos().map((item) => ({
+      chave: item.chave,
+      termo: item.termo,
+      categoria: item.categoria
     }));
   }
 
@@ -641,7 +764,10 @@ const VocabularioJornalistico = (() => {
     encontrarGrupo,
     expandirTermo,
     expandirConsulta,
-    listarTodos
+    listarTodos,
+    canonizar,
+    extrairConceitos,
+    termosCanonicos
   };
 
 })();
