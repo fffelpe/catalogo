@@ -18,6 +18,21 @@ const TERMOS_TECNICOS = new Set([
   "roda", "sem", "sonora", "take", "tempo", "volta"
 ]);
 
+const ORGANIZACOES_CONHECIDAS = [
+  { nome: "Supremo Tribunal Federal", aliases: ["supremo tribunal federal", "stf", "supremo"] },
+  { nome: "Polícia Federal", aliases: ["polícia federal", "policia federal", "pf"] },
+  { nome: "Petrobras", aliases: ["petrobras", "petróleo brasileiro", "petroleo brasileiro"] },
+  { nome: "Banco Central", aliases: ["banco central", "bacen"] },
+  { nome: "IBAMA", aliases: ["ibama", "instituto brasileiro do meio ambiente"] },
+  { nome: "INSS", aliases: ["inss", "instituto nacional do seguro social"] },
+  { nome: "ONU", aliases: ["onu", "organização das nações unidas", "organizacao das nacoes unidas"] },
+  { nome: "OMS", aliases: ["oms", "organização mundial da saúde", "organizacao mundial da saude"] },
+  { nome: "Congresso Nacional", aliases: ["congresso nacional", "congresso"] },
+  { nome: "Senado Federal", aliases: ["senado federal", "senado"] },
+  { nome: "Câmara dos Deputados", aliases: ["câmara dos deputados", "camara dos deputados", "câmara federal", "camara federal"] },
+  { nome: "Defesa Civil", aliases: ["defesa civil"] }
+];
+
 const ROTULOS_NAO_PESSOA = new Set([
   "imagem", "imagens", "producao", "produção", "edicao", "edição", "divulgacao", "divulgação",
   "reportagem", "reporter", "repórter", "cinegrafista", "camera", "câmera", "off", "volta", "roda"
@@ -233,6 +248,90 @@ function extrairLugares(registro = {}, credito = {}, afiliadas = {}) {
   return unicos(lugares);
 }
 
+function extrairOrganizacoes(registro = {}, credito = {}) {
+  const texto = chave([
+    registro.DESCRICAO,
+    registro.PROGRAMA,
+    registro.AFILIADA_EMISSORA,
+    credito?.materia,
+    credito?.textoCompleto
+  ].filter(Boolean).join(" | "));
+
+  const encontradas = [];
+  const alvo = ` ${texto} `;
+  for (const organizacao of ORGANIZACOES_CONHECIDAS) {
+    const bateu = organizacao.aliases
+      .map(chave)
+      .filter(Boolean)
+      .some((alias) => alvo.includes(` ${alias} `));
+    if (bateu) encontradas.push(organizacao.nome);
+  }
+
+  const emissora = limparTexto(registro.AFILIADA_EMISSORA);
+  if (emissora && !ehTecnico(emissora)) encontradas.push(emissora);
+
+  return unicos(encontradas);
+}
+
+function limparChunkTitulo(valor) {
+  return limparTexto(valor)
+    .replace(/^(?:gerais?|copi[aã]o|imagens?|takes?|sonora|off|arquivo|a[eé]reas?)s+(?:des+|das+|dos+|ems+)?/i, "")
+    .replace(/(?:off|volta sem gc|sem gc|id gigante)/gi, "")
+    .replace(/s+/g, " ")
+    .trim();
+}
+
+function formatarTituloEditorial(valor) {
+  const siglas = new Set(["SP", "RJ", "MG", "DF", "GO", "ONU", "OMS", "STF", "PF", "INSS", "IBAMA", "EUA", "COP26", "G20"]);
+  const minusculas = new Set(["de", "da", "do", "das", "dos", "e", "em", "na", "no", "nas", "nos", "com", "para"]);
+
+  return limparTexto(valor)
+    .toLocaleLowerCase("pt-BR")
+    .split(" ")
+    .map((parte, indice) => {
+      const upper = parte.toLocaleUpperCase("pt-BR");
+      if (siglas.has(upper)) return upper;
+      if (indice > 0 && minusculas.has(parte)) return parte;
+      return parte ? parte[0].toLocaleUpperCase("pt-BR") + parte.slice(1) : "";
+    })
+    .join(" ")
+    .trim();
+}
+
+function gerarTituloAutomatico(descricao) {
+  const chunks = limparTexto(descricao)
+    .split(/s*(?:+||+|/{2,}|;|
+)s*/g)
+    .map(limparChunkTitulo)
+    .filter((item) => item.length >= 4)
+    .filter((item) => !ehTecnico(item));
+
+  if (!chunks.length) return "";
+
+  const escolhidos = [];
+  const chaves = [];
+  for (const chunk of chunks) {
+    const normalizado = chave(chunk);
+    if (!normalizado) continue;
+    const redundante = chaves.some((anterior) =>
+      anterior === normalizado ||
+      anterior.includes(normalizado) ||
+      normalizado.includes(anterior)
+    );
+    if (redundante) continue;
+    escolhidos.push(chunk);
+    chaves.push(normalizado);
+    if (escolhidos.length >= 2) break;
+  }
+
+  const base = escolhidos.join(" — ") || chunks[0];
+  const limitado = base.length > 88
+    ? `${base.slice(0, 85).replace(/\s+\S*$/, "").trim()}…`
+    : base;
+
+  return formatarTituloEditorial(limitado);
+}
+
 function camposAnteriores(anterior = {}, campo, campoManual, campoAuto) {
   const atual = lista(anterior?.[campo]);
 
@@ -303,6 +402,8 @@ function unirCampo(manual, automatico) {
 
 function compactarItem(item) {
   return {
+    title: item.title,
+    manualTitle: item.manualTitle,
     keywords: item.keywords,
     manualKeywords: item.manualKeywords,
     subjects: item.subjects,
@@ -311,6 +412,8 @@ function compactarItem(item) {
     manualPeople: item.manualPeople,
     places: item.places,
     manualPlaces: item.manualPlaces,
+    organizations: item.organizations,
+    manualOrganizations: item.manualOrganizations,
     segments: item.segments,
   };
 }
@@ -318,17 +421,23 @@ function compactarItem(item) {
 export function gerarEnriquecimentoRegistro(registro = {}, credito = {}, anterior = {}, afiliadas = {}) {
   const pessoasAuto = extrairPessoas(registro, credito);
   const lugaresAuto = extrairLugares(registro, credito, afiliadas);
+  const organizacoesAuto = extrairOrganizacoes(registro, credito);
   const keywordsAuto = gerarKeywordsAutomaticas(registro, credito, pessoasAuto, lugaresAuto);
   const subjectsAuto = unicos([
     pareceKeyword(registro.EDITORIA) && chave(registro.EDITORIA) !== "geral" ? keyword(registro.EDITORIA) : ""
   ]);
+  const manualTitle = limparTexto(anterior?.manualTitle);
+  const title = manualTitle || gerarTituloAutomatico(registro.DESCRICAO);
 
   const manualKeywords = camposAnteriores(anterior, "keywords", "manualKeywords", "autoKeywords");
   const manualSubjects = camposAnteriores(anterior, "subjects", "manualSubjects", "autoSubjects");
   const manualPeople = camposAnteriores(anterior, "people", "manualPeople", "autoPeople");
   const manualPlaces = camposAnteriores(anterior, "places", "manualPlaces", "autoPlaces");
+  const manualOrganizations = camposAnteriores(anterior, "organizations", "manualOrganizations", "autoOrganizations");
 
   return {
+    title,
+    manualTitle,
     keywords: unirCampo(manualKeywords, keywordsAuto),
     manualKeywords,
     autoKeywords: keywordsAuto,
@@ -341,6 +450,9 @@ export function gerarEnriquecimentoRegistro(registro = {}, credito = {}, anterio
     places: unirCampo(manualPlaces, lugaresAuto),
     manualPlaces,
     autoPlaces: lugaresAuto,
+    organizations: unirCampo(manualOrganizations, organizacoesAuto),
+    manualOrganizations,
+    autoOrganizations: organizacoesAuto,
     segments: Array.isArray(anterior?.segments) ? anterior.segments : [],
   };
 }
@@ -376,3 +488,5 @@ export function gerarEnriquecimentoCatalogo({
     items,
   };
 }
+
+export { gerarTituloAutomatico, extrairOrganizacoes };
