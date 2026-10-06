@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T19:52:53.083Z",
-  "total": 41378,
+  "generatedAt": "2026-10-06T20:53:58.894Z",
+  "total": 41386,
   "registros": [
     {
       "ID": "2822B019835",
@@ -528144,7 +528144,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018128": "0:02:36"
+      }
     },
     {
       "ID": "2457B018129",
@@ -528156,7 +528158,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018129": "0:02:38"
+      }
     },
     {
       "ID": "2457B018130",
@@ -528168,7 +528172,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018130": "0:02:22"
+      }
     },
     {
       "ID": "2457B018131",
@@ -528180,7 +528186,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018131": "0:02:18"
+      }
     },
     {
       "ID": "2457B018132",
@@ -528192,7 +528200,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018132": "0:02:39"
+      }
     },
     {
       "ID": "2457B018133",
@@ -528204,7 +528214,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018133": "0:02:18"
+      }
     },
     {
       "ID": "2457B018134",
@@ -528216,7 +528228,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018134": "0:02:08"
+      }
     },
     {
       "ID": "2457B018135",
@@ -528228,7 +528242,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SEGURANÇA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018135": "0:03:00"
+      }
     },
     {
       "ID": "2457B018136",
@@ -528240,7 +528256,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018136": "0:02:16"
+      }
     },
     {
       "ID": "2457B018137",
@@ -528252,7 +528270,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "TECNOLOGIA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018137": "0:01:55"
+      }
     },
     {
       "ID": "2457B018138",
@@ -528264,7 +528284,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018138": "0:02:32"
+      }
     },
     {
       "ID": "2457B018139",
@@ -528276,7 +528298,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018139": "0:01:08"
+      }
     },
     {
       "ID": "2457B018140",
@@ -528288,7 +528312,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018140": "0:02:11"
+      }
     },
     {
       "ID": "2457B018141",
@@ -528300,7 +528326,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018141": "0:02:21"
+      }
     },
     {
       "ID": "2457B018142",
@@ -528312,7 +528340,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SAÚDE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018142": "0:01:43"
+      }
     },
     {
       "ID": "2457B018143",
@@ -528324,7 +528354,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018143": "0:02:07"
+      }
     },
     {
       "ID": "2457B018144",
@@ -528336,7 +528368,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018144": "0:02:06"
+      }
     },
     {
       "ID": "2457B018145",
@@ -528348,7 +528382,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018145": "0:01:50"
+      }
     },
     {
       "ID": "2457B018146",
@@ -528360,7 +528396,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018146": "0:01:32"
+      }
     },
     {
       "ID": "2457B018147",
@@ -528372,7 +528410,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018147": "0:03:40"
+      }
     },
     {
       "ID": "2457B018148",
@@ -528384,7 +528424,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018148": "0:02:52"
+      }
     },
     {
       "ID": "2457B018149",
@@ -528396,7 +528438,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018149": "0:03:49"
+      }
     },
     {
       "ID": "2457B018150",
@@ -528408,7 +528452,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018150": "0:02:45"
+      }
     },
     {
       "ID": "2457B018151",
@@ -528420,7 +528466,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "ESPORTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018151": "0:02:22"
+      }
     },
     {
       "ID": "2457B018152",
@@ -528432,7 +528480,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018152": "0:02:27"
+      }
     },
     {
       "ID": "2457B018153",
@@ -528444,7 +528494,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018153": "0:01:55"
+      }
     },
     {
       "ID": "2457B018154",
@@ -528456,7 +528508,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018154": "0:02:55"
+      }
     },
     {
       "ID": "2457B018155",
@@ -528468,7 +528522,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018155": "0:02:23"
+      }
     },
     {
       "ID": "2457B018156",
@@ -528480,7 +528536,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018156": "0:04:59"
+      }
     },
     {
       "ID": "2457B018157",
@@ -528492,7 +528550,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018157": "0:03:20"
+      }
     },
     {
       "ID": "2457B018158",
@@ -528504,7 +528564,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018158": "0:02:40"
+      }
     },
     {
       "ID": "2457B018159",
@@ -528516,7 +528578,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018159": "0:01:41"
+      }
     },
     {
       "ID": "2457B018160",
@@ -528528,7 +528592,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018160": "0:02:09"
+      }
     },
     {
       "ID": "2457B018161",
@@ -528540,7 +528606,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "COTIDIANO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018161": "0:03:36"
+      }
     },
     {
       "ID": "2457B018162",
@@ -528552,7 +528620,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "ECONOMIA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018162": "0:02:40"
+      }
     },
     {
       "ID": "2457B018163",
@@ -528564,7 +528634,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "COTIDIANO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018163": "0:03:22"
+      }
     },
     {
       "ID": "2457B018164",
@@ -528576,7 +528648,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "ECONOMIA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018164": "0:02:44"
+      }
     },
     {
       "ID": "2457B018165",
@@ -528588,7 +528662,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SEGURANÇA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018165": "0:01:44"
+      }
     },
     {
       "ID": "2457B018166",
@@ -528600,7 +528676,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "COTIDIANO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018166": "0:01:53"
+      }
     },
     {
       "ID": "2457B018167",
@@ -528612,7 +528690,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "COTIDIANO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018167": "0:02:23"
+      }
     },
     {
       "ID": "2457B018168",
@@ -528624,7 +528704,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018168": "0:01:55"
+      }
     },
     {
       "ID": "1452B005330",
@@ -528662,7 +528744,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005504": "0:04:32"
+      }
     },
     {
       "ID": "1452B005505",
@@ -528674,7 +528758,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005505": "0:05:11"
+      }
     },
     {
       "ID": "1452B005506",
@@ -528686,7 +528772,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005506": "0:02:22"
+      }
     },
     {
       "ID": "3293B000133",
@@ -528908,7 +528996,7 @@
       "ID": "3293B000151",
       "DESCRICAO": "VOTAÇÃO NO PIAUÍ",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "PIAUÍ / PI",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -528920,7 +529008,7 @@
       "ID": "3293B000152",
       "DESCRICAO": "VOTAÇÃO LITORAL PAULISTA",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "SÃO PAULO / SP",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -528932,7 +529020,7 @@
       "ID": "3293B000153",
       "DESCRICAO": "BALANÇO ELEIÇÕES NO RIO DE JANEIRO PRIMEIRO TURNO",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "RIO DE JANEIRO / RJ",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -528944,7 +529032,7 @@
       "ID": "3293B000154",
       "DESCRICAO": "TV NOVA_RECIFE_FILAS LONGA",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "PERNAMBUCO / PE",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -528980,7 +529068,7 @@
       "ID": "3293B000157",
       "DESCRICAO": "VOTAÇÃO DE FLÁVIO BOLSONARO",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "RIO DE JANEIRO / RJ",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -528992,7 +529080,7 @@
       "ID": "3293B000158",
       "DESCRICAO": "tve bahia_votação bahia_04_10",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "BAHIA / BA",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -529004,7 +529092,7 @@
       "ID": "3293B000159",
       "DESCRICAO": "CANDIDATOS AO GOVERNO DO ESPÍRITO SANTO",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "ESPÍRITO SANTO / ES",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -529016,7 +529104,7 @@
       "ID": "3293B000160",
       "DESCRICAO": "OCORRÊNCIAS POLICIAIS EM MATO GROSSO DO SUL",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "MATO GROSSO DO SUL / MS",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -529028,7 +529116,7 @@
       "ID": "3293B000161",
       "DESCRICAO": "BOLETIM VOTAÇÃO EM CAMPO GRANDE",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "CAMPO GRANDE / MS",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -529040,7 +529128,7 @@
       "ID": "3293B000162",
       "DESCRICAO": "UB PLAY_UNIÃO DA VITORIA_VOTAÇÃOCHUVA",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "VITÓRIA / ES",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -529052,7 +529140,7 @@
       "ID": "3293B000163",
       "DESCRICAO": "VOTAÇÃO NO ESPÍRITO SANTO",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "ESPÍRITO SANTO / ES",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -529064,7 +529152,7 @@
       "ID": "3293B000164",
       "DESCRICAO": "VOTAÇÃO CIRO GOMES_TV CEARÁ",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "CEARÁ / CE",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
@@ -529088,13 +529176,125 @@
       "ID": "3293B000166",
       "DESCRICAO": "VOTO DE LULA E FLÁVIO BOLSONARO",
       "DATA": "04/10/2026",
-      "LOCAL": "",
+      "LOCAL": "RIO DE JANEIRO E SÃO PAULO",
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "DE OLHO NO VOTO",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
+    },
+    {
+      "ID": "3293B000127",
+      "DESCRICAO": "COLETIVA FLAVIO BOLSONARO COLETIVA PÓS RESULTADO",
+      "DATA": "04/10/2026",
+      "LOCAL": "BRASÍLIA / DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA",
+      "PROGRAMA": "DE OLHO NO VOTO",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {
+        "3293B000127": "2:13:32"
+      }
+    },
+    {
+      "ID": "3293B000126",
+      "DESCRICAO": "COLETIVA FERNANDO HADDAD PÓS RESULTADO",
+      "DATA": "04/10/2026",
+      "LOCAL": "SÃO PAULO / SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA",
+      "PROGRAMA": "DE OLHO NO VOTO",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {
+        "3293B000126": "0:34:00"
+      }
+    },
+    {
+      "ID": "3293B000125",
+      "DESCRICAO": "COLETIVA PT LULA PÓS RESULTADO",
+      "DATA": "04/10/2026",
+      "LOCAL": "SÃO PAULO / SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA",
+      "PROGRAMA": "DE OLHO NO VOTO",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {
+        "3293B000125": "1:46:56"
+      }
+    },
+    {
+      "ID": "3293B000124",
+      "DESCRICAO": "COLETIVA TARCISIO PÓS RESULTADO",
+      "DATA": "04/10/2026",
+      "LOCAL": "SÃO PAULO / SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA",
+      "PROGRAMA": "DE OLHO NO VOTO",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {
+        "3293B000124": "2:35:45"
+      }
+    },
+    {
+      "ID": "3293B000123",
+      "DESCRICAO": "VOTAÇÃO GERALDO ALCKMIN",
+      "DATA": "04/10/2026",
+      "LOCAL": "SÃO PAULO / SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA",
+      "PROGRAMA": "DE OLHO NO VOTO",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {
+        "3293B000123": "0:20:04"
+      }
+    },
+    {
+      "ID": "3293B000122",
+      "DESCRICAO": "BOLETIM BALANÇO ELEICAO",
+      "DATA": "04/10/2026",
+      "LOCAL": "SÃO PAULO / SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA",
+      "PROGRAMA": "DE OLHO NO VOTO",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {
+        "3293B000122": "0:10:13"
+      }
+    },
+    {
+      "ID": "3293B000121",
+      "DESCRICAO": "IMAGENS VOTACAO",
+      "DATA": "04/10/2026",
+      "LOCAL": "SÃO PAULO / SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA",
+      "PROGRAMA": "DE OLHO NO VOTO",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {
+        "3293B000121": "0:11:13"
+      }
+    },
+    {
+      "ID": "3293B000111",
+      "DESCRICAO": "VOTACAO PUC",
+      "DATA": "04/10/2026",
+      "LOCAL": "SÃO PAULO / SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA",
+      "PROGRAMA": "DE OLHO NO VOTO",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {
+        "3293B000111": "0:08:02"
+      }
     }
   ]
 }

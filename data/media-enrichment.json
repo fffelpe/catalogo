@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T19:53:09.178Z",
+  "generatedAt": "2026-10-06T20:54:24.794Z",
   "items": {
     "2822B019835": {
       "keywords": [
@@ -873425,6 +873425,7 @@
         "votação no piauí",
         "política",
         "de olho no voto",
+        "piauí / pi",
         "votação",
         "piauí"
       ],
@@ -873435,7 +873436,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "PIAUÍ / PI"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873444,6 +873447,7 @@
         "votação litoral paulista",
         "política",
         "de olho no voto",
+        "são paulo / sp",
         "paulista",
         "litoral",
         "votação"
@@ -873455,7 +873459,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "SÃO PAULO / SP"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873464,6 +873470,7 @@
         "balanço eleições no rio de janeiro primeiro turno",
         "política",
         "de olho no voto",
+        "rio de janeiro / rj",
         "eleições",
         "primeiro",
         "balanço",
@@ -873477,7 +873484,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "RIO DE JANEIRO / RJ"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873486,6 +873495,7 @@
         "tv nova_recife_filas longa",
         "política",
         "de olho no voto",
+        "pernambuco / pe",
         "recife",
         "filas",
         "longa"
@@ -873497,7 +873507,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "PERNAMBUCO / PE"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873545,6 +873557,7 @@
         "votação de flávio bolsonaro",
         "política",
         "de olho no voto",
+        "rio de janeiro / rj",
         "bolsonaro",
         "votação",
         "flávio"
@@ -873556,7 +873569,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "RIO DE JANEIRO / RJ"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873565,6 +873580,7 @@
         "tve bahia_votação bahia_04_10",
         "política",
         "de olho no voto",
+        "bahia / ba",
         "bahia",
         "votação"
       ],
@@ -873575,7 +873591,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "BAHIA / BA"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873584,6 +873602,7 @@
         "candidatos ao governo do espírito santo",
         "política",
         "de olho no voto",
+        "espírito santo / es",
         "candidatos",
         "espírito",
         "governo",
@@ -873596,7 +873615,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO / ES"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873605,6 +873626,7 @@
         "ocorrências policiais em mato grosso do sul",
         "política",
         "de olho no voto",
+        "mato grosso do sul / ms",
         "ocorrências",
         "policiais",
         "grosso",
@@ -873617,7 +873639,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "MATO GROSSO DO SUL / MS"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873626,6 +873650,7 @@
         "boletim votação em campo grande",
         "política",
         "de olho no voto",
+        "campo grande / ms",
         "boletim",
         "votação",
         "grande",
@@ -873638,7 +873663,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "CAMPO GRANDE / MS"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873647,6 +873674,7 @@
         "ub play_união da vitoria_votaçãochuva",
         "política",
         "de olho no voto",
+        "vitória / es",
         "votaçãochuva",
         "vitoria",
         "união",
@@ -873659,7 +873687,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "VITÓRIA / ES"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873668,6 +873698,7 @@
         "votação no espírito santo",
         "política",
         "de olho no voto",
+        "espírito santo / es",
         "espírito",
         "votação",
         "santo"
@@ -873679,7 +873710,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO / ES"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873688,6 +873721,7 @@
         "votação ciro gomes_tv ceará",
         "política",
         "de olho no voto",
+        "ceará / ce",
         "votação",
         "ceará",
         "gomes",
@@ -873700,7 +873734,9 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "CEARÁ / CE"
+      ],
       "manualPlaces": [],
       "segments": []
     },
@@ -873729,6 +873765,7 @@
         "voto de lula e flávio bolsonaro",
         "política",
         "de olho no voto",
+        "rio de janeiro e são paulo",
         "bolsonaro",
         "flávio",
         "lula",
@@ -873741,7 +873778,194 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "RIO DE JANEIRO E SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000127": {
+      "keywords": [
+        "coletiva flavio bolsonaro coletiva pós resultado",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "brasília / df",
+        "bolsonaro",
+        "resultado",
+        "flavio"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA / DF"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000126": {
+      "keywords": [
+        "coletiva fernando haddad pós resultado",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "resultado",
+        "fernando",
+        "haddad"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000125": {
+      "keywords": [
+        "coletiva pt lula pós resultado",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "resultado",
+        "lula"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000124": {
+      "keywords": [
+        "coletiva tarcisio pós resultado",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "resultado",
+        "tarcisio"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000123": {
+      "keywords": [
+        "votação geraldo alckmin",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "alckmin",
+        "geraldo",
+        "votação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000122": {
+      "keywords": [
+        "boletim balanço eleicao",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "balanço",
+        "boletim",
+        "eleicao"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000121": {
+      "keywords": [
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "votacao"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP"
+      ],
+      "manualPlaces": [],
+      "segments": []
+    },
+    "3293B000111": {
+      "keywords": [
+        "votacao puc",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "votacao"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP"
+      ],
       "manualPlaces": [],
       "segments": []
     }
