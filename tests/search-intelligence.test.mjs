@@ -89,3 +89,18 @@ test("autocomplete sugere correção aproximada para erro de digitação", () =>
   assert.ok(sugestoes.some((item) => item.texto.toLocaleLowerCase("pt-BR") === "bolsonaro"));
   assert.ok(sugestoes.some((item) => item.tipoMatch === "aproximado"));
 });
+
+
+test("associação semântica não vira entidade organizacional falsa", () => {
+  const { SearchEngine } = carregar();
+  const resultados = SearchEngine.pesquisar([
+    { ID: "1452B005030", DESCRICAO: "ALTA NO PREÇO DO COMBUSTÍVEL", PROGRAMA: "Jornal da Cultura" }
+  ], "Petrobras");
+
+  assert.equal(resultados.length, 1, "relação semântica com combustível pode manter o resultado");
+  assert.equal(
+    resultados[0]._SEARCH_ENTITIES.some((item) => item.tipo === "organizacao"),
+    false,
+    "entidade deve exigir evidência direta da organização"
+  );
+});
