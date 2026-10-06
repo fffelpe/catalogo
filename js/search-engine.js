@@ -117,19 +117,17 @@ const SearchEngine = (() => {
     if (!conceitosRegistro.size || !conceitosConsulta.size) return 0;
 
     let produto = 0;
-    let normaR = 0;
-    let normaQ = 0;
+    let pesoConsulta = 0;
 
-    conceitosRegistro.forEach((item) => { normaR += (Number(item.peso) || 0) ** 2; });
     conceitosConsulta.forEach((item) => {
       const pesoQ = Number(item.peso) || 0;
-      normaQ += pesoQ ** 2;
+      pesoConsulta += pesoQ;
       const correspondente = conceitosRegistro.get(item.chave);
       if (correspondente) produto += pesoQ * (Number(correspondente.peso) || 0);
     });
 
-    if (!produto || !normaR || !normaQ) return 0;
-    return produto / (Math.sqrt(normaR) * Math.sqrt(normaQ));
+    if (!produto || !pesoConsulta) return 0;
+    return Math.min(1, produto / pesoConsulta);
   }
 
   const cacheRegistros = new WeakMap();
@@ -507,6 +505,9 @@ const SearchEngine = (() => {
       VocabularioJornalistico.extrairConceitos(contexto.consultaOriginal, { incluirRelacionados: false })
         .filter((item) => item.categoria === "organizacao")
         .forEach((item) => {
+          const conceitoRegistro = preparado.conceitos.get(item.chave);
+          if (!conceitoRegistro || Number(conceitoRegistro.peso) < 0.9) return;
+
           const chave = `organizacao:${normalizar(item.termo)}`;
           if (vistos.has(chave)) return;
           vistos.add(chave);
