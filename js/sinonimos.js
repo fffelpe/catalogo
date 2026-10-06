@@ -702,6 +702,22 @@ const VocabularioJornalistico = (() => {
     return [...new Set(valores.map(normalizar).filter(Boolean))];
   }
 
+  let indiceConceitosCache = null;
+
+  function obterIndiceConceitos() {
+    if (indiceConceitosCache) return indiceConceitosCache;
+
+    indiceConceitosCache = Object.entries(DICIONARIO).map(([chave, grupo]) => ({
+      chave,
+      termo: obterNomeGrupo(chave, grupo),
+      categoria: grupo.categoria || "assunto",
+      aliases: aliasesDoGrupo(chave, grupo, false),
+      relacionados: (grupo.relacionados || []).map(normalizar).filter(Boolean)
+    }));
+
+    return indiceConceitosCache;
+  }
+
   function canonizar(termo) {
     const grupo = encontrarGrupo(termo);
     return grupo ? grupo.principal : String(termo || "").trim();
@@ -713,11 +729,11 @@ const VocabularioJornalistico = (() => {
     const alvo = ` ${normalizado} `;
     const resultados = [];
 
-    for (const [chave, grupo] of Object.entries(DICIONARIO)) {
+    for (const conceito of obterIndiceConceitos()) {
       let peso = 0;
       let evidencia = "";
 
-      for (const alias of aliasesDoGrupo(chave, grupo, false)) {
+      for (const alias of conceito.aliases) {
         if (alvo.includes(` ${alias} `)) {
           peso = 1;
           evidencia = alias;
@@ -726,7 +742,7 @@ const VocabularioJornalistico = (() => {
       }
 
       if (!peso && opcoes.incluirRelacionados !== false) {
-        for (const relacionado of (grupo.relacionados || []).map(normalizar).filter(Boolean)) {
+        for (const relacionado of conceito.relacionados) {
           if (alvo.includes(` ${relacionado} `)) {
             peso = 0.45;
             evidencia = relacionado;
@@ -737,9 +753,9 @@ const VocabularioJornalistico = (() => {
 
       if (peso) {
         resultados.push({
-          chave,
-          termo: obterNomeGrupo(chave, grupo),
-          categoria: grupo.categoria || "assunto",
+          chave: conceito.chave,
+          termo: conceito.termo,
+          categoria: conceito.categoria,
           peso,
           evidencia
         });
