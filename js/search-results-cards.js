@@ -50,6 +50,36 @@
     return `${resumo.replace(/[,:;.!?]+$/, "")}…`;
   }
 
+  function gerarTituloEditorialLocal(descricao) {
+    const chunks = String(descricao || "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(/\s*(?:\+|\|+|\/{2,}|;)\s*/g)
+      .map((parte) => parte
+        .replace(/^(?:GERAIS?|COPI[AÃ]O|IMAGENS?|TAKES?|SONORA|OFF|ARQUIVO|A[EÉ]REAS?)\s+(?:DE\s+|DA\s+|DO\s+|EM\s+)?/i, "")
+        .trim())
+      .filter((parte) => parte.length >= 4);
+
+    if (!chunks.length) return resumirDescricao(descricao);
+
+    const escolhidos = [];
+    const vistos = [];
+    for (const chunk of chunks) {
+      const chave = chunk.toLocaleLowerCase("pt-BR");
+      if (vistos.some((item) => item === chave || item.includes(chave) || chave.includes(item))) continue;
+      vistos.push(chave);
+      escolhidos.push(chunk);
+      if (escolhidos.length >= 2) break;
+    }
+
+    const titulo = escolhidos.join(" — ") || chunks[0];
+    const normalizado = titulo.toLocaleLowerCase("pt-BR");
+    const formatado = normalizado
+      ? normalizado[0].toLocaleUpperCase("pt-BR") + normalizado.slice(1)
+      : "";
+    return resumirDescricao(formatado, 88);
+  }
+
   function prepararTitulo(td) {
     if (!td) return;
 
@@ -74,9 +104,17 @@
     const descricaoCompleta = alvo.dataset.descricaoCompleta || textoVisivel(alvo);
     if (!descricaoCompleta) return;
 
+    const tr = td.closest("tr");
+    const mediaId = tr ? primeiroMediaId(tr) : "";
+    const tituloEnriquecido = mediaId && typeof MediaEnrichment !== "undefined"
+      ? String(MediaEnrichment.obter?.(mediaId)?.title || "").trim()
+      : "";
+    const tituloEditorial = tituloEnriquecido || gerarTituloEditorialLocal(descricaoCompleta);
+
     alvo.dataset.descricaoCompleta = descricaoCompleta;
+    alvo.dataset.tituloEditorial = tituloEditorial;
     alvo.title = descricaoCompleta;
-    alvo.textContent = resumirDescricao(descricaoCompleta);
+    alvo.textContent = tituloEditorial;
   }
 
   function preencherCampoVazio(td, rotulo) {
