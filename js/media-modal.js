@@ -177,7 +177,8 @@ const MediaModal = (() => {
       ...(enrichment?.subjects || []),
       ...(enrichment?.keywords || []),
       ...(enrichment?.people || []),
-      ...(enrichment?.places || [])
+      ...(enrichment?.places || []),
+      ...(enrichment?.organizations || [])
     ];
     const unicos = [...new Set(tags.map((tag) => texto(tag)).filter(Boolean))];
 
