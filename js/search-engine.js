@@ -505,6 +505,9 @@ const SearchEngine = (() => {
       VocabularioJornalistico.extrairConceitos(contexto.consultaOriginal, { incluirRelacionados: false })
         .filter((item) => item.categoria === "organizacao")
         .forEach((item) => {
+          const conceitoRegistro = preparado.conceitos.get(item.chave);
+          if (!conceitoRegistro || Number(conceitoRegistro.peso) < 0.9) return;
+
           const chave = `organizacao:${normalizar(item.termo)}`;
           if (vistos.has(chave)) return;
           vistos.add(chave);
