@@ -104,3 +104,29 @@ test("associação semântica não vira entidade organizacional falsa", () => {
     "entidade deve exigir evidência direta da organização"
   );
 });
+
+
+test("expande alias institucional composto para a forma canônica", () => {
+  const { VocabularioJornalistico } = carregar();
+  const termos = VocabularioJornalistico
+    .expandirConsulta("instituto nacional do seguro social")
+    .map((item) => item.termo);
+
+  assert.ok(termos.includes("inss"));
+});
+
+test("não expande nome composto quando ele aparece apenas como prefixo de outra palavra", () => {
+  const { VocabularioJornalistico } = carregar();
+  const termos = VocabularioJornalistico
+    .expandirConsulta("banco centralizado")
+    .map((item) => item.termo);
+
+  assert.equal(termos.includes("bacen"), false);
+  assert.equal(termos.includes("bc"), false);
+});
+
+test("extração semântica reconhece conceito depois de hífen", () => {
+  const { VocabularioJornalistico } = carregar();
+  const conceitos = VocabularioJornalistico.extrairConceitos("cenário pós-covid");
+  assert.ok(conceitos.some((item) => item.chave === "covid_19"));
+});
