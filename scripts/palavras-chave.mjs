@@ -275,9 +275,9 @@ function extrairOrganizacoes(registro = {}, credito = {}) {
 
 function limparChunkTitulo(valor) {
   return limparTexto(valor)
-    .replace(/^(?:gerais?|copi[aã]o|imagens?|takes?|sonora|off|arquivo|a[eé]reas?)s+(?:des+|das+|dos+|ems+)?/i, "")
-    .replace(/(?:off|volta sem gc|sem gc|id gigante)/gi, "")
-    .replace(/s+/g, " ")
+    .replace(/^(?:gerais?|copi[aã]o|imagens?|takes?|sonora|off|arquivo|a[eé]reas?)\s+(?:de\s+|da\s+|do\s+|em\s+)?/i, "")
+    .replace(/\b(?:off|volta sem gc|sem gc|id gigante)\b/gi, "")
+    .replace(/\s+/g, " ")
     .trim();
 }
 
@@ -300,8 +300,7 @@ function formatarTituloEditorial(valor) {
 
 function gerarTituloAutomatico(descricao) {
   const chunks = limparTexto(descricao)
-    .split(/s*(?:+||+|/{2,}|;|
-)s*/g)
+    .split(/\s*(?:\+|\|+|\/{2,}|;|\n)\s*/g)
     .map(limparChunkTitulo)
     .filter((item) => item.length >= 4)
     .filter((item) => !ehTecnico(item));
@@ -326,7 +325,7 @@ function gerarTituloAutomatico(descricao) {
 
   const base = escolhidos.join(" — ") || chunks[0];
   const limitado = base.length > 88
-    ? `${base.slice(0, 85).replace(/\s+\S*$/, "").trim()}…`
+    ? \`\${base.slice(0, 85).replace(/\s+\S*$/, "").trim()}…\`
     : base;
 
   return formatarTituloEditorial(limitado);
