@@ -106,7 +106,8 @@ const MediaDetail = (() => {
       ...(enrichment?.subjects || []),
       ...keywords,
       ...(enrichment?.people || []),
-      ...(enrichment?.places || [])
+      ...(enrichment?.places || []),
+      ...(enrichment?.organizations || [])
     ];
     const unicos = [];
     const vistos = new Set();
