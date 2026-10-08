@@ -44,9 +44,10 @@ jobs:
       - name: Rodar suíte completa de testes
         run: npm test
 
-      - name: Validar frescor do snapshot principal
+      - name: Validar snapshot e avisar sobre dados desatualizados
         env:
           SNAPSHOT_MAX_AGE_MINUTES: "20"
+          SNAPSHOT_STALE_AS_WARNING: "true"
         run: npm run check:snapshot
 
       - name: Preparar site público
@@ -55,6 +56,9 @@ jobs:
           mkdir -p .pages-dist
           cp index.html .pages-dist/
           cp -R css data images js pages .pages-dist/
+
+      - name: Compactar JSON somente no artefato publicado
+        run: node scripts/otimizar-json-publicacao.mjs .pages-dist/data
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5

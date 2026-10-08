@@ -29,6 +29,11 @@ async function main() {
   console.log(`Limite permitido: ${limiteMinutos} minuto(s)`);
 
   if (!resultado.ok) {
+    const somenteAntigo = resultado.motivo?.startsWith("Snapshot excedeu o limite de ");
+    if (somenteAntigo && process.env.SNAPSHOT_STALE_AS_WARNING === "true") {
+      console.warn(`AVISO: ${resultado.motivo} Publicação permitida; consulte o histórico de sincronizações.`);
+      return;
+    }
     console.error(`ERRO: ${resultado.motivo}`);
     process.exitCode = 1;
     return;

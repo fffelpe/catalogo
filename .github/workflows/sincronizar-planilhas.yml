@@ -83,6 +83,9 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:agrocultura
 
+      - name: Evitar atualização sem mudança de conteúdo
+        run: node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json
+
       - name: Publicar snapshots do catálogo
         run: |
           if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json)" ]; then
@@ -111,6 +114,7 @@ jobs:
             # Recalcula depois do reset para preservar qualquer palavra-chave manual
             # que tenha sido adicionada à main enquanto esta execução estava em andamento.
             npm run sync:keywords
+            node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json
 
             git add data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json
 

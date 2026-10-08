@@ -4,20 +4,29 @@
 const CreditosMedia = {
   registros: {},
   carregado: false,
+  _carregamentoPromise: null,
   JSON_URL: "../data/creditos.json",
 
   async carregar() {
     if (this.carregado) return this.registros;
+    if (this._carregamentoPromise) return this._carregamentoPromise;
 
-    const resposta = await fetch(this.JSON_URL, { cache: "no-store" });
-    if (!resposta.ok) {
-      throw new Error(`Não foi possível carregar os créditos (${resposta.status}).`);
+    this._carregamentoPromise = (async () => {
+      const resposta = await fetch(this.JSON_URL, { cache: "no-store" });
+      if (!resposta.ok) {
+        throw new Error(`Não foi possível carregar os créditos (${resposta.status}).`);
+      }
+      const dados = await resposta.json();
+      this.registros = dados && typeof dados === "object" ? dados : {};
+      this.carregado = true;
+      return this.registros;
+    })();
+
+    try {
+      return await this._carregamentoPromise;
+    } finally {
+      this._carregamentoPromise = null;
     }
-
-    const dados = await resposta.json();
-    this.registros = dados && typeof dados === "object" ? dados : {};
-    this.carregado = true;
-    return this.registros;
   },
 
   normalizarId(valor) {

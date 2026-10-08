@@ -585,6 +585,17 @@ async function inicializarPaginaResultados() {
 
   definirCarregamentoResultados(true);
 
+  // Os arquivos opcionais são buscados em paralelo ao acervo principal.
+  // A pesquisa básica continua disponível se falhar um dos enriquecimentos.
+  const extras = [];
+  if (typeof MediaEnrichment !== "undefined") {
+    extras.push({ nome: "Enriquecimento de mídia", carregar: () => MediaEnrichment.carregar() });
+  }
+  if (typeof CreditosMedia !== "undefined") {
+    extras.push({ nome: "Créditos", carregar: () => CreditosMedia.carregar() });
+  }
+  const carregamentoExtras = Promise.allSettled(extras.map((extra) => extra.carregar()));
+
   try {
     await DadosMedia.carregarCSV();
   } catch (err) {
@@ -595,21 +606,12 @@ async function inicializarPaginaResultados() {
     return true;
   }
 
-  if (typeof MediaEnrichment !== "undefined") {
-    try {
-      await MediaEnrichment.carregar();
-    } catch (err) {
-      console.warn("Enriquecimento de mídia indisponível nesta execução:", err);
+  const statusExtras = await carregamentoExtras;
+  statusExtras.forEach((status, indice) => {
+    if (status.status === "rejected") {
+      console.warn(`${extras[indice].nome} indisponível nesta execução:`, status.reason);
     }
-  }
-
-  if (typeof CreditosMedia !== "undefined") {
-    try {
-      await CreditosMedia.carregar();
-    } catch (err) {
-      console.warn("Busca por créditos indisponível nesta execução:", err);
-    }
-  }
+  });
 
   AutocompleteBusca.inicializar({
     input,
