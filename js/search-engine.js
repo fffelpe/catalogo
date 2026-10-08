@@ -132,6 +132,7 @@ const SearchEngine = (() => {
 
   const cacheRegistros = new WeakMap();
   const cacheProgramas = new WeakMap();
+  const cacheIndicesMediaId = new WeakMap();
 
   function normalizar(texto) {
     if (
@@ -662,13 +663,44 @@ const SearchEngine = (() => {
     );
   }
 
+  function buscarRegistrosPorMediaId(lista, id) {
+    let indice = cacheIndicesMediaId.get(lista);
+    if (!indice) {
+      indice = new Map();
+      lista.forEach((registro) => {
+        separarIdsOriginais(registro.ID).forEach((mediaId) => {
+          if (!indice.has(mediaId)) indice.set(mediaId, []);
+          indice.get(mediaId).push(registro);
+        });
+      });
+      cacheIndicesMediaId.set(lista, indice);
+    }
+    return indice.get(id) || [];
+  }
+
   function pesquisar(registros, consulta, opcoes = {}) {
     const lista = Array.isArray(registros) ? registros : [];
-    const base = filtrarPrograma(lista, opcoes.programa || "");
     const termo = String(consulta || "").trim();
+    const programa = opcoes.programa || "";
 
-    if (!termo) return base;
+    if (!termo) return filtrarPrograma(lista, programa);
 
+    // Consulta exata de Media ID não percorre o acervo com fuzzy/semântica.
+    const idExato = typeof MediaIdUtils !== "undefined"
+      && typeof MediaIdUtils.normalizar === "function"
+      ? MediaIdUtils.normalizar(termo) : "";
+    if (idExato) {
+      return filtrarPrograma(buscarRegistrosPorMediaId(lista, idExato), programa)
+        .map((registro) => ({
+          ...registro,
+          _SEARCH_SCORE: 10000,
+          _SEARCH_MATCHES: [{ campo: "ID", termo, tipo: "id-exato" }],
+          _SEARCH_SEGMENT_MATCHES: [],
+          _SEARCH_ENTITIES: []
+        }));
+    }
+
+    const base = filtrarPrograma(lista, programa);
     const contexto = prepararContextoConsulta(termo);
     const avaliados = [];
 
