@@ -12,6 +12,7 @@ on:
     paths:
       - "scripts/media-id.mjs"
       - "scripts/creditos-conflitos.mjs"
+      - "scripts/estabilizar-snapshots.mjs"
       - "scripts/sincronizar-creditos.mjs"
       - "tests/creditos-conflitos.test.mjs"
       - "package.json"
@@ -50,6 +51,38 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           DRIVE_CREDITOS_FOLDER_ID: "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik"
         run: npm run sync:creditos
+
+      - name: Rejeitar novos conflitos de créditos
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const status = JSON.parse(fs.readFileSync("data/creditos-status.json", "utf8"));
+          const rejeitados = Array.isArray(status.rejeitadosNovos) ? status.rejeitadosNovos : [];
+
+          if (!rejeitados.length) {
+            console.log("Nenhum novo conflito bloqueante de créditos.");
+            process.exit(0);
+          }
+
+          console.error(`Validação rejeitou ${rejeitados.length} Media ID(s) com duplicidade não resolvida.`);
+          for (const item of rejeitados) {
+            console.error(`\n${item.id}: ${item.motivo}`);
+            for (const passo of item.instrucoes || []) console.error(`  - ${passo}`);
+          }
+          process.exit(1);
+          NODE
+
+      - name: Guardar relatório de auditoria dos créditos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-creditos
+          path: data/creditos-status.json
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Evitar commit somente por horário de sincronização
+        run: node scripts/estabilizar-snapshots.mjs data/creditos-status.json
 
       - name: Publicar alterações
         run: |
@@ -96,22 +129,3 @@ jobs:
           echo "Não foi possível publicar os créditos após 5 tentativas."
           exit 1
 
-      - name: Rejeitar novos conflitos de créditos
-        run: |
-          node --input-type=module <<'NODE'
-          import fs from "node:fs";
-          const status = JSON.parse(fs.readFileSync("data/creditos-status.json", "utf8"));
-          const rejeitados = Array.isArray(status.rejeitadosNovos) ? status.rejeitadosNovos : [];
-
-          if (!rejeitados.length) {
-            console.log("Nenhum novo conflito bloqueante de créditos.");
-            process.exit(0);
-          }
-
-          console.error(`Validação rejeitou ${rejeitados.length} Media ID(s) com duplicidade não resolvida.`);
-          for (const item of rejeitados) {
-            console.error(`\n${item.id}: ${item.motivo}`);
-            for (const passo of item.instrucoes || []) console.error(`  - ${passo}`);
-          }
-          process.exit(1);
-          NODE
