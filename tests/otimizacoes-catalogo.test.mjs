@@ -30,7 +30,7 @@ test("Media ID exato usa índice e mantém resultados duplicados e filtro por pr
     { ID: "1452B004871", PROGRAMA: "JC", DESCRICAO: "1452B004869 citado no texto" }
   ];
   const resultados = sandbox.SearchEngine.pesquisar(registros, "1452b004869.mp4");
-  assert.deepEqual(resultados.map(x => x.PROGRAMA), ["JC", "Agrocultura"]);
+  assert.deepEqual(Array.from(resultados, x => x.PROGRAMA), ["JC", "Agrocultura"]);
   assert.ok(resultados.every(x => x._SEARCH_SCORE === 10000));
   assert.equal(creditoConsultas, 0, "busca exata não deve enriquecer todos os registros");
   const filtrados = sandbox.SearchEngine.pesquisar(registros, "1452B004869", { programa: "Agrocultura" });
