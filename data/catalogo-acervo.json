@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T21:08:27.029Z",
-  "total": 41430,
+  "generatedAt": "2026-10-09T19:33:12.191Z",
+  "total": 41438,
   "registros": [
     {
       "ID": "2822B019835",
@@ -528814,7 +528814,7 @@
     },
     {
       "ID": "3293B000136",
-      "DESCRICAO": "boletim voto gilmar mendes_ cuiaba_04_10",
+      "DESCRICAO": "MINISTRO GILMAR MENDES INDO VOTAR + VOTO GILMAR MENDES ELEIÇÕES 2026",
       "DATA": "04/10/2026",
       "LOCAL": "",
       "REPORTER": "",
@@ -529821,6 +529821,102 @@
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018179",
+      "DESCRICAO": "PROCON PREÇOS ALIMENTOS",
+      "DATA": "08/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018180",
+      "DESCRICAO": "BRINQUEDOS DIA DAS CRIANÇAS",
+      "DATA": "08/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018181",
+      "DESCRICAO": "CRIANÇAS CRIMES CIBERNÉTICOS",
+      "DATA": "08/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "TECNOLOGIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018183",
+      "DESCRICAO": "CUIDADOS SARAMPO",
+      "DATA": "08/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SAÚDE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018184",
+      "DESCRICAO": "EXPECTATIVA COMÉRCIO FINAL DE ANO",
+      "DATA": "08/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018185",
+      "DESCRICAO": "PERIGOS RAIOS",
+      "DATA": "08/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SEGURANÇA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018186",
+      "DESCRICAO": "UNIVERSIDADE FEDERAL DE GOIÁS",
+      "DATA": "08/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018187",
+      "DESCRICAO": "AULÃO ENEM",
+      "DATA": "05/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     }
