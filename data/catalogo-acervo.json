@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T19:33:12.191Z",
-  "total": 41438,
+  "generatedAt": "2026-10-09T21:35:54.113Z",
+  "total": 41445,
   "registros": [
     {
       "ID": "2822B019835",
@@ -529917,6 +529917,90 @@
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018188",
+      "DESCRICAO": "DIA DAS CRIANÇAS NA BIBLIOTECA",
+      "DATA": "07/10/2026",
+      "LOCAL": "SERGIPE - SE",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018189",
+      "DESCRICAO": "TURISMO SANTA TERESA",
+      "DATA": "06/10/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018190",
+      "DESCRICAO": "ANIVERSÁRIO 95 CRISTO REDENTOR",
+      "DATA": "08/10/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018191",
+      "DESCRICAO": "ELEFANTE MARINHO PRAIA RIO DE JANEIRO",
+      "DATA": "07/10/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018192",
+      "DESCRICAO": "SONORA DAVI ALCOLUMBRE",
+      "DATA": "07/10/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV SENADO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018193",
+      "DESCRICAO": "SONORA ROGÉRIO MARINHO",
+      "DATA": "07/10/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV SENADO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018194",
+      "DESCRICAO": "SONORA SENADOR WELLINGTON FAGUNDES",
+      "DATA": "07/10/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV SENADO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     }
