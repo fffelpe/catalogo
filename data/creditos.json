@@ -1,4 +1,67 @@
 {
+  "2457B018205": {
+    "materia": "REPÓRTER: MARIA LUÍSA FRAGOSO - SANTOS/SP",
+    "fontes": [],
+    "creditos": {
+      "imagens": "JOSÉ PIMENTEL"
+    },
+    "textoCompleto": "REPÓRTER: MARIA LUÍSA FRAGOSO - SANTOS/SP | CINEGRAFISTA: JOSÉ PIMENTEL | SONORA 1: INÊS RANGEL - coordenadora de museus e galerias | SONORA 2: MARIA APARECIDA DA SILVA - AUTÔNOMA",
+    "arquivo": {
+      "id": "1spmavf7pn-LDHLVok7vEKYkrJjlUzIN5CBwNCTF5BVM",
+      "nome": "2457B018205",
+      "mimeType": "application/vnd.google-apps.document",
+      "atualizadoEm": "2026-10-12T19:07:48.506Z",
+      "url": "https://docs.google.com/document/d/1spmavf7pn-LDHLVok7vEKYkrJjlUzIN5CBwNCTF5BVM/edit?usp=drivesdk"
+    },
+    "origem": "Google Drive",
+    "selecao": {
+      "tipo": "unico",
+      "motivo": "único documento disponível"
+    }
+  },
+  "2457B018199": {
+    "materia": "sonora_RAFAEL MORAES_TURISMÓLOGO IPN",
+    "fontes": [],
+    "creditos": {},
+    "textoCompleto": "sonora_RAFAEL MORAES_TURISMÓLOGO IPN",
+    "arquivo": {
+      "id": "1HlCgLLosLPJAI3PEkgeH0BXuWy7FlPSHnEZ92Kyw8LQ",
+      "nome": "2457B018199",
+      "mimeType": "application/vnd.google-apps.document",
+      "atualizadoEm": "2026-10-12T18:52:12.963Z",
+      "url": "https://docs.google.com/document/d/1HlCgLLosLPJAI3PEkgeH0BXuWy7FlPSHnEZ92Kyw8LQ/edit?usp=drivesdk"
+    },
+    "origem": "Google Drive",
+    "selecao": {
+      "tipo": "unico",
+      "motivo": "único documento disponível"
+    }
+  },
+  "2457B018198": {
+    "materia": "Créditos: SONORA",
+    "fontes": [
+      {
+        "nome": "Alexandre Cherman",
+        "cargo": "Astrônomo do Planetário do Rio"
+      }
+    ],
+    "creditos": {
+      "credito": "SONORA"
+    },
+    "textoCompleto": "Créditos: SONORA | Alexandre Cherman | Astrônomo do Planetário do Rio",
+    "arquivo": {
+      "id": "1Hf-0dE_LscdOJr8cOj0dOEP5gNYYihSJIiE6wsgaiD8",
+      "nome": "2457B018198",
+      "mimeType": "application/vnd.google-apps.document",
+      "atualizadoEm": "2026-10-12T18:52:12.738Z",
+      "url": "https://docs.google.com/document/d/1Hf-0dE_LscdOJr8cOj0dOEP5gNYYihSJIiE6wsgaiD8/edit?usp=drivesdk"
+    },
+    "origem": "Google Drive",
+    "selecao": {
+      "tipo": "unico",
+      "motivo": "único documento disponível"
+    }
+  },
   "2457B018188": {
     "materia": "BOLETIM CRIANÇAS EPIPHÂNIO DÓRIA",
     "fontes": [
