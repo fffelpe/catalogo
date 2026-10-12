@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T21:35:54.113Z",
-  "total": 41445,
+  "generatedAt": "2026-10-12T22:57:42.181Z",
+  "total": 41461,
   "registros": [
     {
       "ID": "2822B019835",
@@ -523172,7 +523172,7 @@
       "REPORTER": "EVANDRO CLÁUDIO",
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
-      "EDITORIA": "AGRONEGÓCIO",
+      "EDITORIA": "AGROCULTURA",
       "PGM": "383",
       "DURACOES": {
         "1452B005475": "0:01:34"
@@ -530002,6 +530002,202 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018195",
+      "DESCRICAO": "ALERTA PREVISÃO VENDAVAL",
+      "DATA": "21/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018196",
+      "DESCRICAO": "AUMENTO OFERTA EMPREGOS",
+      "DATA": "24/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018197",
+      "DESCRICAO": "DJAVAN MARCOS MENEZES",
+      "DATA": "30/07/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018198",
+      "DESCRICAO": "ECLIPSE SOLAR",
+      "DATA": "12/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018199",
+      "DESCRICAO": "INSTITUOSS PRETOS NOVOS",
+      "DATA": "31/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018200",
+      "DESCRICAO": "PINGUINS RIO DE JANEIRO",
+      "DATA": "25/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018201",
+      "DESCRICAO": "PRÊMIO GRANDE OTELO DE CINEMA",
+      "DATA": "05/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018203",
+      "DESCRICAO": "MUSEU DO SAMBA",
+      "DATA": "04/08/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018204",
+      "DESCRICAO": "PESQUISA VACINA MALÁRIA",
+      "DATA": "22/07/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SAÚDE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018205",
+      "DESCRICAO": "MORRO MONTSERRAT",
+      "DATA": "26/08/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA LITORAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018206",
+      "DESCRICAO": "QUEDA ÁRVORE BOQUEIRÃO",
+      "DATA": "07/08/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA LITORAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018207",
+      "DESCRICAO": "VENTANIA + VENDAVAL",
+      "DATA": "30/07/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA LITORAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018208",
+      "DESCRICAO": "AFASTAMENTO BURNOUT",
+      "DATA": "28/08/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA LITORAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005492",
+      "DESCRICAO": "MANEJO EL NINO",
+      "DATA": "10/10/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "VERÔNICA SALAZAR",
+      "AFILIADA_EMISSORA": "TVE / ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGROCULTURA",
+      "PGM": "384",
+      "DURACOES": {
+        "1452B005492": "0:03:16"
+      }
+    },
+    {
+      "ID": "1452B005355",
+      "DESCRICAO": "VT BIOINSUMOS",
+      "DATA": "CATVE / PR",
+      "LOCAL": "",
+      "REPORTER": "AMANDA DALLA COSTA",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "384",
+      "DURACOES": {
+        "1452B005355": "0:10:43"
+      }
+    },
+    {
+      "ID": "1452B005507",
+      "DESCRICAO": "VT INSUMOS AGRO",
+      "DATA": "10/10/2026",
+      "LOCAL": "",
+      "REPORTER": "BRUNO FAUSTINO",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "384",
       "DURACOES": {}
     }
   ]

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T21:36:20.072Z",
+  "generatedAt": "2026-10-12T22:58:08.208Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1030707,7 +1030707,6 @@
       "manualTitle": "",
       "keywords": [
         "safra de alho e cebola",
-        "agronegócio",
         "agrocultura",
         "rba tv / sc",
         "santa catarina - sc",
@@ -1030719,7 +1030718,7 @@
       ],
       "manualKeywords": [],
       "subjects": [
-        "agronegócio"
+        "agrocultura"
       ],
       "manualSubjects": [],
       "people": [
@@ -1048260,6 +1048259,501 @@
         "Senado Federal",
         "TV SENADO"
       ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018195": {
+      "title": "Alerta Previsão Vendaval",
+      "manualTitle": "",
+      "keywords": [
+        "alerta previsão vendaval",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "previsão",
+        "vendaval",
+        "alerta"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018196": {
+      "title": "Aumento Oferta Empregos",
+      "manualTitle": "",
+      "keywords": [
+        "aumento oferta empregos",
+        "economia",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "empregos",
+        "aumento",
+        "oferta"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018197": {
+      "title": "Djavan Marcos Menezes",
+      "manualTitle": "",
+      "keywords": [
+        "djavan marcos menezes",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "menezes",
+        "djavan",
+        "marcos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018198": {
+      "title": "Eclipse Solar",
+      "manualTitle": "",
+      "keywords": [
+        "eclipse solar",
+        "meio ambiente",
+        "planetário",
+        "astrônomo",
+        "créditos",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Alexandre Cherman"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018199": {
+      "title": "Instituoss Pretos Novos",
+      "manualTitle": "",
+      "keywords": [
+        "instituoss pretos novos",
+        "política",
+        "turismólogo",
+        "moraes",
+        "rafael",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018200": {
+      "title": "Pinguins Rio de Janeiro",
+      "manualTitle": "",
+      "keywords": [
+        "pinguins rio de janeiro",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "pinguins",
+        "janeiro"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018201": {
+      "title": "Prêmio Grande Otelo de Cinema",
+      "manualTitle": "",
+      "keywords": [
+        "prêmio grande otelo de cinema",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "cinema",
+        "grande",
+        "prêmio",
+        "otelo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018203": {
+      "title": "Museu do Samba",
+      "manualTitle": "",
+      "keywords": [
+        "museu do samba",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "museu",
+        "samba"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018204": {
+      "title": "Pesquisa Vacina Malária",
+      "manualTitle": "",
+      "keywords": [
+        "pesquisa vacina malária",
+        "saúde",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "pesquisa",
+        "malária",
+        "vacina"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "saúde"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018205": {
+      "title": "Morro Montserrat",
+      "manualTitle": "",
+      "keywords": [
+        "morro montserrat",
+        "cultura / arte",
+        "maria",
+        "fragoso",
+        "santos",
+        "luísa",
+        "cinegrafista",
+        "coordenadora",
+        "aparecida",
+        "autônoma",
+        "galerias",
+        "museus",
+        "rangel",
+        "silva",
+        "inês"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "JOSÉ PIMENTEL"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SANTOS",
+        "SANTOS - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA LITORAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018206": {
+      "title": "Queda Árvore Boqueirão",
+      "manualTitle": "",
+      "keywords": [
+        "queda árvore boqueirão",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura litoral",
+        "são paulo - sp",
+        "santos",
+        "santos - sp",
+        "boqueirão",
+        "árvore",
+        "queda"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SANTOS",
+        "SANTOS - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA LITORAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018207": {
+      "title": "Ventania — Vendaval",
+      "manualTitle": "",
+      "keywords": [
+        "ventania",
+        "vendaval",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura litoral",
+        "são paulo - sp",
+        "santos",
+        "santos - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SANTOS",
+        "SANTOS - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA LITORAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018208": {
+      "title": "Afastamento Burnout",
+      "manualTitle": "",
+      "keywords": [
+        "afastamento burnout",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura litoral",
+        "são paulo - sp",
+        "santos",
+        "santos - sp",
+        "afastamento",
+        "burnout"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SANTOS",
+        "SANTOS - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA LITORAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005492": {
+      "title": "Manejo El Nino",
+      "manualTitle": "",
+      "keywords": [
+        "manejo el nino",
+        "agrocultura",
+        "tve / es",
+        "espírito santo - es",
+        "vitória",
+        "vitória - es",
+        "manejo",
+        "nino"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agrocultura"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VERÔNICA SALAZAR"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES",
+        "VITÓRIA",
+        "VITÓRIA - ES"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE / ES"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005355": {
+      "title": "Vt Bioinsumos",
+      "manualTitle": "",
+      "keywords": [
+        "vt bioinsumos",
+        "agrocultura",
+        "cascavel",
+        "paraná - pr",
+        "cascavel - pr",
+        "bioinsumos"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "AMANDA DALLA COSTA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "CASCAVEL",
+        "PARANÁ - PR",
+        "CASCAVEL - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005507": {
+      "title": "Vt Insumos Agro",
+      "manualTitle": "",
+      "keywords": [
+        "vt insumos agro",
+        "agrocultura",
+        "insumos",
+        "agro"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "BRUNO FAUSTINO"
+      ],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
       "manualOrganizations": [],
       "segments": []
     }

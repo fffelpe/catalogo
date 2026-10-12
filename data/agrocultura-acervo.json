@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T23:05:34.400Z",
+  "generatedAt": "2026-10-12T22:57:57.053Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -22,25 +22,25 @@
     ]
   },
   "resumo": {
-    "materiais": 2028,
-    "vts": 737,
-    "noticias": 365,
+    "materiais": 2031,
+    "vts": 739,
+    "noticias": 366,
     "coberturas": 1352
   },
   "vts": [
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005330",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005507",
       "ids": [
-        "1452B005330"
+        "1452B005507"
       ],
-      "descricao": "VT GADO SINDI MS",
-      "reporter": "ELAINE SILVA",
-      "data": "03/10/2026",
+      "descricao": "VT INSUMOS AGRO",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "10/10/2026",
       "local": "",
-      "pgm": "383"
+      "pgm": "384"
     },
     {
       "tipo": "vt",
@@ -73,20 +73,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005409",
-      "ids": [
-        "1452B005409"
-      ],
-      "descricao": "VT MORANGOS PLANTIO",
-      "reporter": "AMANDA DALLA COSTA",
-      "data": "26/09/2026",
-      "local": "",
-      "pgm": "382"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005479",
       "ids": [
@@ -97,34 +83,6 @@
       "data": "19/09/2026",
       "local": "",
       "pgm": "381"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005453",
-      "ids": [
-        "1452B005453"
-      ],
-      "descricao": "VT CURRAL PRODUTIVO",
-      "reporter": "VERÔNICA SALAZAR",
-      "data": "19/09/2026",
-      "local": "",
-      "pgm": "381"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B004318",
-      "ids": [
-        "1452B004318"
-      ],
-      "descricao": "VT DESCASCADOR DE CAFÉ",
-      "reporter": "LARISSA BARCELOS",
-      "data": "13/09/2026",
-      "local": "ESPÍRITO SANTO - ES",
-      "pgm": "380"
     },
     {
       "tipo": "vt",
@@ -143,20 +101,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005415",
-      "ids": [
-        "1452B005415"
-      ],
-      "descricao": "VT AÇUDES AUTOMAÇÃO",
-      "reporter": "ANTONIELLA ORLANDI",
-      "data": "06/09/2026",
-      "local": "",
-      "pgm": "379"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005448",
       "ids": [
@@ -167,20 +111,6 @@
       "data": "05/09/2026",
       "local": "",
       "pgm": "379"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B004321",
-      "ids": [
-        "1452B004321"
-      ],
-      "descricao": "VT AÇAI DE JUSSARA",
-      "reporter": "SAMUEL ROCHA",
-      "data": "30/08/2026",
-      "local": "",
-      "pgm": "378"
     },
     {
       "tipo": "vt",
@@ -213,20 +143,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005427",
-      "ids": [
-        "1452B005427"
-      ],
-      "descricao": "VT SILAGEM MS",
-      "reporter": "ELAINE SILVA",
-      "data": "23/08/2026",
-      "local": "",
-      "pgm": "377"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005408",
       "ids": [
@@ -237,34 +153,6 @@
       "data": "16/08/2026",
       "local": "",
       "pgm": "376"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005412",
-      "ids": [
-        "1452B005412"
-      ],
-      "descricao": "VT UVAS SÃO FRANCISCO",
-      "reporter": "LAÍS DUARTE",
-      "data": "16/08/2026",
-      "local": "PERNAMBUCO - PE",
-      "pgm": "376"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005375",
-      "ids": [
-        "1452B005375"
-      ],
-      "descricao": "VT MANDIOCA PRAGA",
-      "reporter": "AMANDA DALLA COSTA",
-      "data": "09/08/2026",
-      "local": "",
-      "pgm": "375"
     },
     {
       "tipo": "vt",
@@ -297,34 +185,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005357",
-      "ids": [
-        "1452B005357"
-      ],
-      "descricao": "VT RANARIO PR",
-      "reporter": "SAMUEL ROCHA",
-      "data": "02/08/2026",
-      "local": "PARANÁ - PR",
-      "pgm": "374"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005373",
-      "ids": [
-        "1452B005373"
-      ],
-      "descricao": "VT FRUTAS MATA ATLÂNTICA",
-      "reporter": "MAURO MEDEIROS",
-      "data": "26/07/2026",
-      "local": "SÃO PAULO - SP",
-      "pgm": "373"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005377",
       "ids": [
@@ -349,34 +209,6 @@
       "data": "19/07/2026",
       "local": "",
       "pgm": "372"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005354",
-      "ids": [
-        "1452B005354"
-      ],
-      "descricao": "VT TECNO PEQUENOS",
-      "reporter": "SAMUEL ROCHA",
-      "data": "19/07/2026",
-      "local": "",
-      "pgm": "372"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005164",
-      "ids": [
-        "1452B005164"
-      ],
-      "descricao": "VT BANANA MULHERES",
-      "reporter": "IZABELA TOSCANO",
-      "data": "12/07/2026",
-      "local": "",
-      "pgm": "371"
     },
     {
       "tipo": "vt",
@@ -409,20 +241,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005313",
-      "ids": [
-        "1452B005313"
-      ],
-      "descricao": "VT MIRTILO",
-      "reporter": "LARISSA BARCELOS",
-      "data": "05/07/2026",
-      "local": "",
-      "pgm": "370"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005305",
       "ids": [
@@ -433,34 +251,6 @@
       "data": "28/06/2026",
       "local": "",
       "pgm": "369"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005301",
-      "ids": [
-        "1452B005301"
-      ],
-      "descricao": "VT MEL MELATO",
-      "reporter": "PATRÍCIA ALBUQUERQUE",
-      "data": "28/06/2026",
-      "local": "",
-      "pgm": "369"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005227",
-      "ids": [
-        "1452B005227"
-      ],
-      "descricao": "VT MICROTERRAÇO",
-      "reporter": "CAMILA SOARES",
-      "data": "21/06/2026",
-      "local": "ESPÍRITO SANTO - ES",
-      "pgm": "368"
     },
     {
       "tipo": "vt",
@@ -479,20 +269,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005265",
-      "ids": [
-        "1452B005265"
-      ],
-      "descricao": "VT CAFÉ REGENERATIVO",
-      "reporter": "JOÃO RAFAEL",
-      "data": "14/06/2026",
-      "local": "MINAS GERAIS - MG",
-      "pgm": "367"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005279",
       "ids": [
@@ -507,20 +283,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005233",
-      "ids": [
-        "1452B005233"
-      ],
-      "descricao": "VT FÁBRICA RAÇÃO",
-      "reporter": "VERÔNICA SALAZAR",
-      "data": "07/06/2026",
-      "local": "ESPÍRITO SANTO - ES",
-      "pgm": "366"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005261",
       "ids": [
@@ -531,20 +293,6 @@
       "data": "07/06/2026",
       "local": "",
       "pgm": "366"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005159",
-      "ids": [
-        "1452B005159"
-      ],
-      "descricao": "VT CAFÉ MINAS",
-      "reporter": "CARLOS AUGUSTO SOARES",
-      "data": "31/05/2026",
-      "local": "MINAS GERAIS - MG",
-      "pgm": "365"
     },
     {
       "tipo": "vt",
@@ -577,34 +325,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005212",
-      "ids": [
-        "1452B005212"
-      ],
-      "descricao": "VT UNESP LEITE",
-      "reporter": "JULIO PENARIOL",
-      "data": "24/05/2026",
-      "local": "",
-      "pgm": "364"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005205",
-      "ids": [
-        "1452B005205"
-      ],
-      "descricao": "VT COMPOSTAGEM",
-      "reporter": "CAROLINA VIGNALI",
-      "data": "17/05/2026",
-      "local": "",
-      "pgm": "363"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005207",
       "ids": [
@@ -629,34 +349,6 @@
       "data": "10/05/2026",
       "local": "",
       "pgm": "362"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005183",
-      "ids": [
-        "1452B005183"
-      ],
-      "descricao": "VT CANA DE GARAPA",
-      "reporter": "NATÁLIA VICENTE",
-      "data": "10/05/2026",
-      "local": "",
-      "pgm": "362"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005173",
-      "ids": [
-        "1452B005173"
-      ],
-      "descricao": "VT ESALQ ESPAÇO",
-      "reporter": "FABIANO PEREIRA",
-      "data": "03/05/2026",
-      "local": "",
-      "pgm": "361"
     },
     {
       "tipo": "vt",
@@ -689,20 +381,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005147",
-      "ids": [
-        "1452B005147"
-      ],
-      "descricao": "VT FRUTA CEARÁ",
-      "reporter": "KEROLLY BATISTA",
-      "data": "24/04/2026",
-      "local": "",
-      "pgm": "360"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005126",
       "ids": [
@@ -710,20 +388,6 @@
       ],
       "descricao": "VT AGRO GUERRA",
       "reporter": "BRUNO FAUSTINO",
-      "data": "19/04/2026",
-      "local": "",
-      "pgm": "359"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005127",
-      "ids": [
-        "1452B005127"
-      ],
-      "descricao": "VT GRANJA MULHER",
-      "reporter": "GABRIEL CAVALINI",
       "data": "19/04/2026",
       "local": "",
       "pgm": "359"
@@ -745,20 +409,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005121",
-      "ids": [
-        "1452B005121"
-      ],
-      "descricao": "VT MEL ES",
-      "reporter": "LARISSA BARCELOS",
-      "data": "12/04/2026",
-      "local": "",
-      "pgm": "358"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005093",
       "ids": [
@@ -766,20 +416,6 @@
       ],
       "descricao": "VT CACAU DE LINHARES",
       "reporter": "BRUNO FAUSTINO",
-      "data": "05/04/2026",
-      "local": "",
-      "pgm": "357"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005072",
-      "ids": [
-        "1452B005072"
-      ],
-      "descricao": "VT QUEIJARIA DRIVE THRU",
-      "reporter": "VITOR ZUCOLOTTI",
       "data": "05/04/2026",
       "local": "",
       "pgm": "357"
@@ -801,20 +437,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005068",
-      "ids": [
-        "1452B005068"
-      ],
-      "descricao": "VT LIMÃO SICILIANO",
-      "reporter": "VERÔNICA SALAZAR",
-      "data": "29/03/2026",
-      "local": "",
-      "pgm": "356"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005052",
       "ids": [
@@ -825,48 +447,6 @@
       "data": "22/03/2026",
       "local": "",
       "pgm": "355"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005046",
-      "ids": [
-        "1452B005046"
-      ],
-      "descricao": "VT REGENERATIVA",
-      "reporter": "VERÔNICA SALAZAR",
-      "data": "22/03/2026",
-      "local": "",
-      "pgm": "355"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005041",
-      "ids": [
-        "1452B005041"
-      ],
-      "descricao": "VT INHAME ES",
-      "reporter": "VERÔNICA SALAZAR",
-      "data": "15/03/2026",
-      "local": "",
-      "pgm": "354"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005039",
-      "ids": [
-        "1452B005039"
-      ],
-      "descricao": "VT MILHO CRIOULO",
-      "reporter": "MAURO MEDEIROS",
-      "data": "15/03/2026",
-      "local": "",
-      "pgm": "354"
     },
     {
       "tipo": "vt",
@@ -899,34 +479,6 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B004948",
-      "ids": [
-        "1452B004948"
-      ],
-      "descricao": "VT CACAU ES",
-      "reporter": "VERÔNICA SALAZAR",
-      "data": "08/03/2026",
-      "local": "ESPÍRITO SANTO",
-      "pgm": "353"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005010",
-      "ids": [
-        "1452B005010"
-      ],
-      "descricao": "VT AZEITE ANDRADAS",
-      "reporter": "JOÃO RAFAEL",
-      "data": "01/03/2026",
-      "local": "",
-      "pgm": "352"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B005012",
       "ids": [
@@ -937,20 +489,6 @@
       "data": "01/03/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "352"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B005000",
-      "ids": [
-        "1452B005000"
-      ],
-      "descricao": "VT CONDOMÍNIO AGRÍCOLA",
-      "reporter": "VERÔNICA SALAZAR",
-      "data": "22/02/2026",
-      "local": "",
-      "pgm": "351"
     },
     {
       "tipo": "vt",
@@ -976,20 +514,6 @@
       ],
       "descricao": "VT COLIBRIS RUSCHI",
       "reporter": "BRUNO FAUSTINO",
-      "data": "15/02/2026",
-      "local": "",
-      "pgm": "350"
-    },
-    {
-      "tipo": "vt",
-      "origem": "MATÉRIAS QUE FORAM AO AR_",
-      "aba": "2026",
-      "id": "1452B004950",
-      "ids": [
-        "1452B004950"
-      ],
-      "descricao": "VT FLORES ES",
-      "reporter": "LEANDRO MANHÃES",
       "data": "15/02/2026",
       "local": "",
       "pgm": "350"
@@ -10510,6 +10034,34 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B004321",
+      "ids": [
+        "1452B004321"
+      ],
+      "descricao": "VT AÇAI DE JUSSARA",
+      "reporter": "SAMUEL ROCHA",
+      "data": "CATVE / PR",
+      "local": "",
+      "pgm": "378"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005415",
+      "ids": [
+        "1452B005415"
+      ],
+      "descricao": "VT AÇUDES AUTOMAÇÃO",
+      "reporter": "ANTONIELLA ORLANDI",
+      "data": "CATVE / PR",
+      "local": "",
+      "pgm": "379"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "2023",
       "id": "1452B000592",
       "ids": [
@@ -10520,6 +10072,76 @@
       "data": "NÃO EXIB",
       "local": "",
       "pgm": "222"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005010",
+      "ids": [
+        "1452B005010"
+      ],
+      "descricao": "VT AZEITE ANDRADAS",
+      "reporter": "JOÃO RAFAEL",
+      "data": "ANTV / MG",
+      "local": "",
+      "pgm": "352"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005164",
+      "ids": [
+        "1452B005164"
+      ],
+      "descricao": "VT BANANA MULHERES",
+      "reporter": "IZABELA TOSCANO",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "371"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005355",
+      "ids": [
+        "1452B005355"
+      ],
+      "descricao": "VT BIOINSUMOS",
+      "reporter": "AMANDA DALLA COSTA",
+      "data": "CATVE / PR",
+      "local": "",
+      "pgm": "384"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B004948",
+      "ids": [
+        "1452B004948"
+      ],
+      "descricao": "VT CACAU ES",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "TVE / ES",
+      "local": "ESPÍRITO SANTO",
+      "pgm": "353"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005159",
+      "ids": [
+        "1452B005159"
+      ],
+      "descricao": "VT CAFÉ MINAS",
+      "reporter": "CARLOS AUGUSTO SOARES",
+      "data": "REDE MINAS / MG",
+      "local": "MINAS GERAIS - MG",
+      "pgm": "365"
     },
     {
       "tipo": "vt",
@@ -10538,6 +10160,34 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005265",
+      "ids": [
+        "1452B005265"
+      ],
+      "descricao": "VT CAFÉ REGENERATIVO",
+      "reporter": "JOÃO RAFAEL",
+      "data": "ANTV / MG",
+      "local": "MINAS GERAIS - MG",
+      "pgm": "367"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005183",
+      "ids": [
+        "1452B005183"
+      ],
+      "descricao": "VT CANA DE GARAPA",
+      "reporter": "NATÁLIA VICENTE",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "362"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "VTS FAUSTINO",
       "id": "1452B000774",
       "ids": [
@@ -10552,6 +10202,342 @@
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005205",
+      "ids": [
+        "1452B005205"
+      ],
+      "descricao": "VT COMPOSTAGEM",
+      "reporter": "CAROLINA VIGNALI",
+      "data": "TV UNESP / SP",
+      "local": "",
+      "pgm": "363"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005000",
+      "ids": [
+        "1452B005000"
+      ],
+      "descricao": "VT CONDOMÍNIO AGRÍCOLA",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "351"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005453",
+      "ids": [
+        "1452B005453"
+      ],
+      "descricao": "VT CURRAL PRODUTIVO",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "381"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B004318",
+      "ids": [
+        "1452B004318"
+      ],
+      "descricao": "VT DESCASCADOR DE CAFÉ",
+      "reporter": "LARISSA BARCELOS",
+      "data": "TVE / ES",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "380"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005173",
+      "ids": [
+        "1452B005173"
+      ],
+      "descricao": "VT ESALQ ESPAÇO",
+      "reporter": "FABIANO PEREIRA",
+      "data": "TV USP / SP",
+      "local": "",
+      "pgm": "361"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005233",
+      "ids": [
+        "1452B005233"
+      ],
+      "descricao": "VT FÁBRICA RAÇÃO",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "TVE / ES",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "366"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B004950",
+      "ids": [
+        "1452B004950"
+      ],
+      "descricao": "VT FLORES ES",
+      "reporter": "LEANDRO MANHÃES",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "350"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005147",
+      "ids": [
+        "1452B005147"
+      ],
+      "descricao": "VT FRUTA CEARÁ",
+      "reporter": "KEROLLY BATISTA",
+      "data": "TV CEARÁ",
+      "local": "",
+      "pgm": "360"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005373",
+      "ids": [
+        "1452B005373"
+      ],
+      "descricao": "VT FRUTAS MATA ATLÂNTICA",
+      "reporter": "MAURO MEDEIROS",
+      "data": "TV CULTURA / SP",
+      "local": "SÃO PAULO - SP",
+      "pgm": "373"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005330",
+      "ids": [
+        "1452B005330"
+      ],
+      "descricao": "VT GADO SINDI MS",
+      "reporter": "ELAINE SILVA",
+      "data": "TVE / MS",
+      "local": "",
+      "pgm": "383"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005127",
+      "ids": [
+        "1452B005127"
+      ],
+      "descricao": "VT GRANJA MULHER",
+      "reporter": "GABRIEL CAVALINI",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "359"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005041",
+      "ids": [
+        "1452B005041"
+      ],
+      "descricao": "VT INHAME ES",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "354"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005068",
+      "ids": [
+        "1452B005068"
+      ],
+      "descricao": "VT LIMÃO SICILIANO",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "356"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005375",
+      "ids": [
+        "1452B005375"
+      ],
+      "descricao": "VT MANDIOCA PRAGA",
+      "reporter": "AMANDA DALLA COSTA",
+      "data": "CATVE / PR",
+      "local": "",
+      "pgm": "375"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005121",
+      "ids": [
+        "1452B005121"
+      ],
+      "descricao": "VT MEL ES",
+      "reporter": "LARISSA BARCELOS",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "358"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005301",
+      "ids": [
+        "1452B005301"
+      ],
+      "descricao": "VT MEL MELATO",
+      "reporter": "PATRÍCIA ALBUQUERQUE",
+      "data": "TV UB PLAY / PR",
+      "local": "",
+      "pgm": "369"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005227",
+      "ids": [
+        "1452B005227"
+      ],
+      "descricao": "VT MICROTERRAÇO",
+      "reporter": "CAMILA SOARES",
+      "data": "TVE / ES",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "368"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005039",
+      "ids": [
+        "1452B005039"
+      ],
+      "descricao": "VT MILHO CRIOULO",
+      "reporter": "MAURO MEDEIROS",
+      "data": "TV CULTURA / SP",
+      "local": "",
+      "pgm": "354"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005313",
+      "ids": [
+        "1452B005313"
+      ],
+      "descricao": "VT MIRTILO",
+      "reporter": "LARISSA BARCELOS",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "370"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005409",
+      "ids": [
+        "1452B005409"
+      ],
+      "descricao": "VT MORANGOS PLANTIO",
+      "reporter": "AMANDA DALLA COSTA",
+      "data": "CATVE / PR",
+      "local": "",
+      "pgm": "382"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005072",
+      "ids": [
+        "1452B005072"
+      ],
+      "descricao": "VT QUEIJARIA DRIVE THRU",
+      "reporter": "VITOR ZUCOLOTTI",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "357"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005357",
+      "ids": [
+        "1452B005357"
+      ],
+      "descricao": "VT RANARIO PR",
+      "reporter": "SAMUEL ROCHA",
+      "data": "CATVE / PR",
+      "local": "PARANÁ - PR",
+      "pgm": "374"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005046",
+      "ids": [
+        "1452B005046"
+      ],
+      "descricao": "VT REGENERATIVA",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "355"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005427",
+      "ids": [
+        "1452B005427"
+      ],
+      "descricao": "VT SILAGEM MS",
+      "reporter": "ELAINE SILVA",
+      "data": "TVE / MS",
+      "local": "",
+      "pgm": "377"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
       "aba": "2023",
       "id": "1452B002153",
       "ids": [
@@ -10562,9 +10548,79 @@
       "data": "REPRISE DO DIA 08/11/2020",
       "local": "",
       "pgm": "231"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005354",
+      "ids": [
+        "1452B005354"
+      ],
+      "descricao": "VT TECNO PEQUENOS",
+      "reporter": "SAMUEL ROCHA",
+      "data": "CATVE / PR",
+      "local": "",
+      "pgm": "372"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005212",
+      "ids": [
+        "1452B005212"
+      ],
+      "descricao": "VT UNESP LEITE",
+      "reporter": "JULIO PENARIOL",
+      "data": "TV UNESP / SP",
+      "local": "",
+      "pgm": "364"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005412",
+      "ids": [
+        "1452B005412"
+      ],
+      "descricao": "VT UVAS SÃO FRANCISCO",
+      "reporter": "LAÍS DUARTE",
+      "data": "TV CULTURA / SP",
+      "local": "PERNAMBUCO - PE",
+      "pgm": "376"
     }
   ],
   "noticias": [
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B004847",
+      "ids": [
+        "1452B004847"
+      ],
+      "descricao": "BOSQUE SUCULENTAS",
+      "reporter": "GREICE SAUER",
+      "data": "10/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "384"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005492",
+      "ids": [
+        "1452B005492"
+      ],
+      "descricao": "MANEJO EL NINO",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "10/10/2026",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "384"
+    },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
