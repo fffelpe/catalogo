@@ -179,14 +179,32 @@ async function carregarImgs() {
   return (resposta.data.values || []).map(normalizarLinhaImgs);
 }
 
-function mesclar(atual, origem, { somentePreencherVazios = false } = {}) {
+const CAMPOS_AUDITORIA = ["ID", "DESCRIÇÃO", "DATA", "LOCAL", "REPÓRTER", "AFILIADA / EMISSORA", "PROGRAMA", "EDITORIA", "PGM"];
+
+function chaveComparacao(valor) {
+  return limparTexto(valor)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleUpperCase("pt-BR")
+    .replace(/[^A-Z0-9]+/g, " ")
+    .trim();
+}
+
+function mesclar(atual, origem, { somentePreencherVazios = true, onConflito = () => {} } = {}) {
   const resultado = [...atual];
   const ids = [...new Set([...idsDoValor(atual[0]), ...idsDoValor(origem[0])])];
   resultado[0] = ids.join("\n");
   for (let i = 1; i < 9; i += 1) {
-    if (!origem[i]) continue;
-    if (somentePreencherVazios && resultado[i]) continue;
-    resultado[i] = origem[i];
+    const recebido = limparTexto(origem[i]);
+    if (!recebido) continue;
+    const existente = limparTexto(resultado[i]);
+    if (!existente) {
+      resultado[i] = recebido;
+    } else if (chaveComparacao(existente) !== chaveComparacao(recebido)) {
+      onConflito({ campo: CAMPOS_AUDITORIA[i], existente, recebido });
+      // Mesmo em integrações antigas sem a opção explícita, nunca sobrescrever.
+      if (!somentePreencherVazios) continue;
+    }
   }
   return resultado;
 }
@@ -229,12 +247,26 @@ async function main() {
   const pendentes = [];
   const atualizacoesPorLinha = new Map();
   let conflitosDistribuidos = 0;
+  const conflitosMetadados = [];
+  const conflitosVistos = new Set();
 
   function atualizarAlvo(alvo, registroOrigem, opcoesMesclagem = {}, preservarIdsDoAlvo = false) {
     const origemEfetiva = [...registroOrigem];
     if (preservarIdsDoAlvo) origemEfetiva[0] = alvo.dados[0];
 
-    const dadosNovos = mesclar(alvo.dados, origemEfetiva, opcoesMesclagem);
+    const dadosNovos = mesclar(alvo.dados, origemEfetiva, {
+      ...opcoesMesclagem,
+      onConflito: (conflito) => {
+        const chave = JSON.stringify([idsDoValor(origemEfetiva[0]), alvo.linhaPlanilha, conflito]);
+        if (conflitosVistos.has(chave)) return;
+        conflitosVistos.add(chave);
+        conflitosMetadados.push({
+          ids: idsDoValor(origemEfetiva[0]).join(", "),
+          linhaImgs: alvo.tipo === "existente" ? alvo.linhaPlanilha : null,
+          ...conflito,
+        });
+      },
+    });
     if (JSON.stringify(dadosNovos) === JSON.stringify(alvo.dados)) return;
 
     alvo.dados = dadosNovos;
@@ -288,7 +320,7 @@ async function main() {
     }
   }
 
-  integrar(noticias);
+  integrar(noticias, { somentePreencherVazios: true });
   integrar(materias, { somentePreencherVazios: true });
 
   if (atualizacoesPorLinha.size) {
@@ -312,6 +344,12 @@ async function main() {
       insertDataOption: "INSERT_ROWS",
       requestBody: { values: pendentes.map((item) => item.dados) },
     });
+  }
+
+  if (conflitosMetadados.length) {
+    console.warn(`Notícias/matérias: ${conflitosMetadados.length} divergência(s) preservadas para revisão.`);
+    conflitosMetadados.slice(0, 40).forEach((conflito) => console.warn(JSON.stringify(conflito)));
+    if (conflitosMetadados.length > 40) console.warn("Exibidos os 40 primeiros conflitos.");
   }
 
   console.log(
