@@ -3,6 +3,7 @@ import { google } from "googleapis";
 import { extrairMediaIds, validarConteudoMediaIds } from "./media-id.mjs";
 import { normalizarMediaId, programaPorListaDeIds } from "./programa-por-prefixo.mjs";
 import { ehErroPermissaoGoogle } from "./google-sheets-errors.mjs";
+import { mesclarCamposPreservando } from "./mesclagem-metadados.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const NOME_ABA_IMGS = "imgs";
@@ -176,31 +177,14 @@ async function removerDuplicatasIdenticas(imgs) {
 
 const CAMPOS_CONFLITO = ["ID", "DESCRIÇÃO", "DATA", "LOCAL", "REPÓRTER", "AFILIADA / EMISSORA", "PROGRAMA", "EDITORIA"];
 
-function chaveComparacao(valor) {
-  return limparTexto(valor)
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLocaleUpperCase("pt-BR")
-    .replace(/[^A-Z0-9]+/g, " ")
-    .trim();
-}
-
-// Preserva metadados já cadastrados; divergências ficam na auditoria do workflow.
+// Preenche lacunas, preserva valores existentes e registra divergências.
 function mesclarRegistro(atual, fonte, registrarConflito = () => {}) {
-  const resultado = [...atual];
+  const resultado = mesclarCamposPreservando(atual, fonte, {
+    nomesCampos: CAMPOS_CONFLITO,
+    registrarConflito,
+    ate: 8,
+  });
   resultado[0] = [...new Set([...separarIds(atual[0]), ...separarIds(fonte[0])])].join("\n");
-
-  for (let i = 1; i < 8; i++) {
-    const recebido = limparTexto(fonte[i]);
-    if (!recebido) continue;
-    const existente = limparTexto(resultado[i]);
-    if (!existente) {
-      resultado[i] = recebido;
-    } else if (chaveComparacao(existente) !== chaveComparacao(recebido)) {
-      registrarConflito({ campo: CAMPOS_CONFLITO[i], existente, recebido });
-    }
-  }
-
   resultado[6] = programaPorListaDeIds(separarIds(resultado[0]), resultado[6]);
   return resultado;
 }
