@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T19:04:19.604Z",
-  "total": 41466,
+  "generatedAt": "2026-10-14T20:42:11.544Z",
+  "total": 41468,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530332,6 +530332,30 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV ENCONTRO DAS ÁGUAS",
       "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "0205B006996",
+      "DESCRICAO": "APLICATIVO DE RECICLAGEM + APLICATIVO DE RECICLAGEM CATAKI + APP CATAKI",
+      "DATA": "09/10/2026",
+      "LOCAL": "SÃO PAULO / SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA / SP",
+      "PROGRAMA": "REPÓRTER ECO",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "0205B006998",
+      "DESCRICAO": "PRAIA + LITORAL + PESSOAS NA PRAIA + CALOR + SOL",
+      "DATA": "14/10/2026",
+      "LOCAL": "FORTALEZA / CE",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA / SP",
+      "PROGRAMA": "REPÓRTER ECO",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {}
