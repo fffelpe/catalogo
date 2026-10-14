@@ -14,22 +14,22 @@ const CatalogoQuality = (() => {
   function dataValida(valor) {
     const texto = String(valor || "").trim();
     if (!texto) return false;
-    let partes = texto.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})(?:\D|$)/);
-    if (!partes) return /^\d{4}-\d{1,2}-\d{1,2}(?:\D|$)/.test(texto);
-    const dia = Number(partes[1]);
-    const mes = Number(partes[2]);
-    let ano = Number(partes[3]);
-    if (partes[3].length === 2) ano += ano < 50 ? 2000 : 1900;
+    let partes = texto.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})$/);
+    let dia, mes, ano;
+    if (partes) {
+      dia = Number(partes[1]);
+      mes = Number(partes[2]);
+      ano = Number(partes[3]);
+      if (partes[3].length === 2) ano += ano < 50 ? 2000 : 1900;
+    } else {
+      partes = texto.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+      if (!partes) return false;
+      ano = Number(partes[1]);
+      mes = Number(partes[2]);
+      dia = Number(partes[3]);
+    }
     const data = new Date(ano, mes - 1, dia);
     return data.getFullYear() === ano && data.getMonth() === mes - 1 && data.getDate() === dia;
-  }
-
-  function obterEnrichment(id, contexto = {}) {
-    if (contexto.enrichment && contexto.enrichment[id]) return contexto.enrichment[id];
-    if (typeof MediaEnrichment !== "undefined" && typeof MediaEnrichment.obter === "function") {
-      return MediaEnrichment.obter(id);
-    }
-    return null;
   }
 
   function avaliarRegistro(registro = {}, contexto = {}) {
@@ -54,13 +54,11 @@ const CatalogoQuality = (() => {
     if (!String(registro.REPORTER || "").trim()) {
       problemas.push(problema("REPORTER_AUSENTE", "warning", "Repórter ausente"));
     }
-
-    const temSegmentos = ids.some((id) => {
-      const enrichment = obterEnrichment(id, contexto);
-      return Array.isArray(enrichment?.segments) && enrichment.segments.length > 0;
-    });
-    if (!temSegmentos) {
-      problemas.push(problema("SEM_SEGMENTOS", "info", "Vídeo ainda sem segmentos indexados"));
+    if (!String(registro.AFILIADA_EMISSORA || "").trim()) {
+      problemas.push(problema("AFILIADA_AUSENTE", "warning", "Afiliada / emissora ausente"));
+    }
+    if (!String(registro.EDITORIA || "").trim()) {
+      problemas.push(problema("EDITORIA_AUSENTE", "warning", "Editoria ausente"));
     }
 
     if (contexto.creditosCarregados === true && typeof contexto.temCreditos === "function") {
