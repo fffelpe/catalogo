@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T21:27:54.996Z",
+  "generatedAt": "2026-10-14T18:33:54.239Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1048772,6 +1048772,162 @@
       "places": [],
       "manualPlaces": [],
       "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018220": {
+      "title": "Hotéis — Copacabana Palace",
+      "manualTitle": "",
+      "keywords": [
+        "hotéis",
+        "copacabana palace",
+        "economia",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "copacabana",
+        "palace"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018221": {
+      "title": "Queimadas no Amazônia — Incêndio Florestal",
+      "manualTitle": "",
+      "keywords": [
+        "queimadas no amazônia",
+        "incêndio florestal",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv encontro das águas",
+        "amazonas - am",
+        "florestal",
+        "queimadas",
+        "amazônia",
+        "incêndio"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "AMAZONAS - AM"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV ENCONTRO DAS ÁGUAS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018222": {
+      "title": "O Poder da Música Enquentes",
+      "manualTitle": "",
+      "keywords": [
+        "o poder da música enquentes",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "enquentes",
+        "música",
+        "poder"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018223": {
+      "title": "Aviões — Queimadas na Amazônia",
+      "manualTitle": "",
+      "keywords": [
+        "aviões",
+        "queimadas na amazônia",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv encontro das águas",
+        "amazonas - am",
+        "queimadas",
+        "amazônia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "AMAZONAS - AM"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV ENCONTRO DAS ÁGUAS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018224": {
+      "title": "Combate Queimadas na Amazônia",
+      "manualTitle": "",
+      "keywords": [
+        "combate queimadas na amazônia",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv encontro das águas",
+        "amazonas - am",
+        "queimadas",
+        "amazônia",
+        "combate"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "AMAZONAS - AM"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV ENCONTRO DAS ÁGUAS"
+      ],
       "manualOrganizations": [],
       "segments": []
     }

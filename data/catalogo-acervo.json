@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T21:27:32.829Z",
-  "total": 41461,
+  "generatedAt": "2026-10-14T18:33:33.058Z",
+  "total": 41466,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530198,6 +530198,66 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "",
       "PGM": "384",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018220",
+      "DESCRICAO": "HOTÉIS + COPACABANA PALACE",
+      "DATA": "13/10/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018221",
+      "DESCRICAO": "QUEIMADAS NO AMAZÔNIA + INCÊNDIO FLORESTAL",
+      "DATA": "13/10/2026",
+      "LOCAL": "AMAZONAS - AM",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV ENCONTRO DAS ÁGUAS",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018222",
+      "DESCRICAO": "O PODER DA MÚSICA ENQUENTES",
+      "DATA": "13/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018223",
+      "DESCRICAO": "AVIÕES + QUEIMADAS NA AMAZÔNIA",
+      "DATA": "13/10/2026",
+      "LOCAL": "AMAZONAS - AM",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV ENCONTRO DAS ÁGUAS",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018224",
+      "DESCRICAO": "COMBATE QUEIMADAS NA AMAZÔNIA",
+      "DATA": "13/10/2026",
+      "LOCAL": "AMAZONAS - AM",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV ENCONTRO DAS ÁGUAS",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
       "DURACOES": {}
     }
   ]
