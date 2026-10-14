@@ -220,20 +220,35 @@ async function main() {
     carregarMateriasExibidas(),
   ]);
   const existentesPorId = new Map();
+  const idsDuplicadosImgs = new Set();
 
   imgs.forEach((linha, indice) => {
-    if (!idsDoValor(linha[0]).length) return;
-    registrarIds(existentesPorId, {
+    const ids = idsDoValor(linha[0]);
+    if (!ids.length) return;
+    const registro = {
       tipo: "existente",
       linhaPlanilha: indice + 2,
       dados: linha,
+    };
+    ids.forEach((id) => {
+      const anterior = existentesPorId.get(id);
+      if (anterior && anterior.linhaPlanilha !== registro.linhaPlanilha) {
+        idsDuplicadosImgs.add(id);
+      } else if (!anterior) {
+        existentesPorId.set(id, registro);
+      }
     });
   });
+
+  if (idsDuplicadosImgs.size) {
+    console.warn(`Notícias/matérias: ${idsDuplicadosImgs.size} Media ID(s) duplicados na imgs, bloqueados contra atualização automática.`);
+  }
 
   const pendentesPorId = new Map();
   const pendentes = [];
   const atualizacoesPorLinha = new Map();
   let conflitosDistribuidos = 0;
+  let bloqueadosPorDuplicidade = 0;
   const conflitosMetadados = [];
   const conflitosVistos = new Set();
 
@@ -268,6 +283,11 @@ async function main() {
   function integrar(registros, opcoesMesclagem = {}) {
     for (const registroOrigem of registros) {
       const ids = idsDoValor(registroOrigem[0]);
+      if (ids.some((id) => idsDuplicadosImgs.has(id))) {
+        bloqueadosPorDuplicidade += 1;
+        console.warn(`Notícias/matérias: ${ids.join(", ")} ignorado; existe em mais de uma linha da imgs.`);
+        continue;
+      }
       const alvos = [...new Set(
         ids.map((id) => existentesPorId.get(id) || pendentesPorId.get(id)).filter(Boolean)
       )];
@@ -342,7 +362,7 @@ async function main() {
   console.log(
     `Integração concluída. Linhas atualizadas: ${atualizacoesPorLinha.size}; ` +
     `novos registros: ${pendentes.length}; notícias: ${noticias.length}; matérias: ${materias.length}; ` +
-    `conflitos distribuídos tratados: ${conflitosDistribuidos}.`
+    `conflitos distribuídos tratados: ${conflitosDistribuidos}; bloqueados por IDs duplicados na imgs: ${bloqueadosPorDuplicidade}.`
   );
 }
 
