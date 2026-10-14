@@ -22,7 +22,7 @@ test("painel de qualidade expõe resumo, filtros e tabela", () => {
   for (const script of [
     "media-id.js",
     "dados.js",
-    "media-enrichment.js",
+    "reporteres.js",
     "catalogo-quality.js",
     "catalogo-quality-ui.js"
   ]) {
