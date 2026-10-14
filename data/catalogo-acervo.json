@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T18:33:33.058Z",
+  "generatedAt": "2026-10-14T19:04:19.604Z",
   "total": 41466,
   "registros": [
     {
@@ -493831,7 +493831,7 @@
       "DATA": "26/07/2026",
       "LOCAL": "SANTA CATARINA - SC",
       "REPORTER": "CAIO MARÇANI",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "373",
@@ -493845,7 +493845,7 @@
       "DATA": "26/07/2026",
       "LOCAL": "PARANÁ - PR",
       "REPORTER": "JARDEL SANTOS",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "CATVE / PR",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "373",
@@ -493901,7 +493901,7 @@
       "DATA": "19/07/2026",
       "LOCAL": "MINAS GERAIS - MG",
       "REPORTER": "JOÃO RAFAEL",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "ANTV / MG",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "372",
@@ -493915,7 +493915,7 @@
       "DATA": "19/07/2026",
       "LOCAL": "GOIÁS - GO",
       "REPORTER": "RAFAEL MESQUITA",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL / GO",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "372",
@@ -493929,7 +493929,7 @@
       "DATA": "19/07/2026",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "ELAINE SILVA",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "TVE / MS",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "372",
@@ -493971,7 +493971,7 @@
       "DATA": "12/07/2026",
       "LOCAL": "VITÓRIA - ES",
       "REPORTER": "VERÔNICA SALAZAR",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "TVE / ES",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "371",
@@ -494111,7 +494111,7 @@
       "DATA": "21/06/2026",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "KELLY MARTINS",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "TVE / MS",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "368",
@@ -494125,7 +494125,7 @@
       "DATA": "14/06/2026",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "KELLY MARTINS",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "TVE / MS",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "367",
@@ -521380,7 +521380,7 @@
       "DATA": "16/08/2026",
       "LOCAL": "MATO GROSSO DO SUL - MS",
       "REPORTER": "KELLY MARTINS",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "TVE / MS",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "376",
@@ -523172,7 +523172,7 @@
       "REPORTER": "EVANDRO CLÁUDIO",
       "AFILIADA_EMISSORA": "RBA TV / SC",
       "PROGRAMA": "AGROCULTURA",
-      "EDITORIA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
       "PGM": "383",
       "DURACOES": {
         "1452B005475": "0:01:34"
@@ -529714,7 +529714,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SAÚDE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018169": "0:02:54"
+      }
     },
     {
       "ID": "2457B018170",
@@ -529726,7 +529728,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018170": "0:02:22"
+      }
     },
     {
       "ID": "2457B018171",
@@ -529738,7 +529742,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SAÚDE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018171": "0:03:08"
+      }
     },
     {
       "ID": "2457B018172",
@@ -529750,7 +529756,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "ECONOMIA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018172": "0:02:13"
+      }
     },
     {
       "ID": "2457B018173",
@@ -529762,7 +529770,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018173": "0:02:55"
+      }
     },
     {
       "ID": "2457B018174",
@@ -529774,7 +529784,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SEGURANÇA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018174": "0:01:26"
+      }
     },
     {
       "ID": "2457B018175",
@@ -529786,7 +529798,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SAÚDE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018175": "0:02:17"
+      }
     },
     {
       "ID": "2457B018176",
@@ -529798,7 +529812,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018176": "0:02:26"
+      }
     },
     {
       "ID": "2457B018177",
@@ -529810,7 +529826,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018177": "0:02:12"
+      }
     },
     {
       "ID": "2457B018178",
@@ -529822,7 +529840,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018178": "0:02:24"
+      }
     },
     {
       "ID": "2457B018179",
@@ -529834,7 +529854,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "ECONOMIA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018179": "0:02:34"
+      }
     },
     {
       "ID": "2457B018180",
@@ -529846,7 +529868,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018180": "0:01:45"
+      }
     },
     {
       "ID": "2457B018181",
@@ -529858,7 +529882,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "TECNOLOGIA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018181": "0:01:50"
+      }
     },
     {
       "ID": "2457B018183",
@@ -529870,7 +529896,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SAÚDE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018183": "0:02:50"
+      }
     },
     {
       "ID": "2457B018184",
@@ -529882,7 +529910,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "ECONOMIA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018184": "0:03:13"
+      }
     },
     {
       "ID": "2457B018185",
@@ -529894,7 +529924,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SEGURANÇA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018185": "0:02:01"
+      }
     },
     {
       "ID": "2457B018186",
@@ -529906,7 +529938,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018186": "0:02:14"
+      }
     },
     {
       "ID": "2457B018187",
@@ -529918,7 +529952,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018187": "0:01:57"
+      }
     },
     {
       "ID": "2457B018188",
@@ -529930,7 +529966,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018188": "0:03:06"
+      }
     },
     {
       "ID": "2457B018189",
@@ -529942,7 +529980,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018189": "0:01:43"
+      }
     },
     {
       "ID": "2457B018190",
@@ -529954,7 +529994,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018190": "0:03:08"
+      }
     },
     {
       "ID": "2457B018191",
@@ -529966,7 +530008,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018191": "0:02:02"
+      }
     },
     {
       "ID": "2457B018192",
@@ -529978,7 +530022,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018192": "0:06:42"
+      }
     },
     {
       "ID": "2457B018193",
@@ -529990,7 +530036,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018193": "0:06:24"
+      }
     },
     {
       "ID": "2457B018194",
@@ -530002,7 +530050,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018194": "0:06:10"
+      }
     },
     {
       "ID": "2457B018195",
@@ -530014,7 +530064,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018195": "0:01:46"
+      }
     },
     {
       "ID": "2457B018196",
@@ -530026,7 +530078,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "ECONOMIA",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018196": "0:01:23"
+      }
     },
     {
       "ID": "2457B018197",
@@ -530038,7 +530092,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018197": "0:02:56"
+      }
     },
     {
       "ID": "2457B018198",
@@ -530050,7 +530106,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018198": "0:02:52"
+      }
     },
     {
       "ID": "2457B018199",
@@ -530074,7 +530132,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018200": "00:02:12"
+      }
     },
     {
       "ID": "2457B018201",
@@ -530086,7 +530146,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018201": "00:01:34"
+      }
     },
     {
       "ID": "2457B018203",
@@ -530098,7 +530160,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018203": "00:02:45"
+      }
     },
     {
       "ID": "2457B018204",
@@ -530110,7 +530174,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SAÚDE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018204": "00:02:28"
+      }
     },
     {
       "ID": "2457B018205",
@@ -530122,7 +530188,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018205": "00:02:51"
+      }
     },
     {
       "ID": "2457B018206",
@@ -530134,7 +530202,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018206": "00:00:42"
+      }
     },
     {
       "ID": "2457B018207",
@@ -530146,7 +530216,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018207": "00:00:51"
+      }
     },
     {
       "ID": "2457B018208",
@@ -530158,7 +530230,9 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "2457B018208": "00:04:02"
+      }
     },
     {
       "ID": "1452B005492",
@@ -530168,7 +530242,7 @@
       "REPORTER": "VERÔNICA SALAZAR",
       "AFILIADA_EMISSORA": "TVE / ES",
       "PROGRAMA": "AGROCULTURA",
-      "EDITORIA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
       "PGM": "384",
       "DURACOES": {
         "1452B005492": "0:03:16"
@@ -530198,7 +530272,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "",
       "PGM": "384",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005507": "0:07:14"
+      }
     },
     {
       "ID": "2457B018220",

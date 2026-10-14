@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T18:33:54.239Z",
+  "generatedAt": "2026-10-14T19:04:46.677Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -973169,6 +973169,7 @@
         "turismo sc",
         "agronegócio",
         "agrocultura",
+        "rba tv / sc",
         "santa catarina - sc",
         "rio do sul",
         "rio do sul - sc",
@@ -973189,7 +973190,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -973200,6 +973203,7 @@
         "horta agrocidadão",
         "agronegócio",
         "agrocultura",
+        "catve / pr",
         "paraná - pr",
         "agrocidadão",
         "horta"
@@ -973217,7 +973221,9 @@
         "PARANÁ - PR"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "CATVE / PR"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -973374,7 +973380,9 @@
         "ANDRADAS - MG"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "ANTV / MG"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -973415,7 +973423,9 @@
         "GOIÂNIA - GO"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL / GO"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -973426,6 +973436,7 @@
         "conab grãos",
         "agronegócio",
         "agrocultura",
+        "tve / ms",
         "mato grosso do sul - ms",
         "campo grande",
         "campo grande - ms",
@@ -973447,7 +973458,9 @@
         "CAMPO GRANDE - MS"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / MS"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -973526,6 +973539,7 @@
         "thabata",
         "brito",
         "agrocultura",
+        "tve / es",
         "vitória - es",
         "vitória",
         "espírito santo - es"
@@ -973545,7 +973559,9 @@
         "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -973898,6 +973914,7 @@
         "campos",
         "produtor",
         "agrocultura",
+        "tve / ms",
         "mato grosso do sul - ms",
         "campo grande",
         "campo grande - ms"
@@ -973917,7 +973934,9 @@
         "CAMPO GRANDE - MS"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / MS"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -973950,7 +973969,9 @@
         "CAMPO GRANDE - MS"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / MS"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1025685,7 +1025706,9 @@
         "CASTRO / PR"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / MS"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1030725,6 +1030748,7 @@
       "manualTitle": "",
       "keywords": [
         "safra de alho e cebola",
+        "agronegócio",
         "agrocultura",
         "rba tv / sc",
         "santa catarina - sc",
@@ -1030736,7 +1030760,7 @@
       ],
       "manualKeywords": [],
       "subjects": [
-        "agrocultura"
+        "agronegócio"
       ],
       "manualSubjects": [],
       "people": [
@@ -1048696,6 +1048720,7 @@
       "manualTitle": "",
       "keywords": [
         "manejo el nino",
+        "agronegócio",
         "agrocultura",
         "tve / es",
         "espírito santo - es",
@@ -1048706,7 +1048731,7 @@
       ],
       "manualKeywords": [],
       "subjects": [
-        "agrocultura"
+        "agronegócio"
       ],
       "manualSubjects": [],
       "people": [
@@ -1048878,24 +1048903,40 @@
         "aviões",
         "queimadas na amazônia",
         "meio ambiente",
-        "jornal da cultura",
-        "tv encontro das águas",
-        "amazonas - am",
-        "queimadas",
-        "amazônia"
+        "incêndios",
+        "combate",
+        "aeronaves",
+        "fogo",
+        "desenvolvimento",
+        "acompanharam",
+        "sobrevolaram",
+        "florestais",
+        "integração",
+        "atingidas",
+        "ministros",
+        "ambiente"
       ],
       "manualKeywords": [],
       "subjects": [
         "meio ambiente"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "SONORA WALDER GÓES",
+        "SONORA JOÃO PAULO CAPOBIANCO",
+        "LINK BOMBEIROS",
+        "HEMERSON FREITAS",
+        "SONORA SERAFIM CORRÊA",
+        "Vice-Governador do Amazonas",
+        "HENRI CLAY"
+      ],
       "manualPeople": [],
       "places": [
         "AMAZONAS - AM"
       ],
       "manualPlaces": [],
       "organizations": [
+        "IBAMA",
         "TV ENCONTRO DAS ÁGUAS"
       ],
       "manualOrganizations": [],
@@ -1048907,12 +1048948,19 @@
       "keywords": [
         "combate queimadas na amazônia",
         "meio ambiente",
-        "jornal da cultura",
-        "tv encontro das águas",
-        "amazonas - am",
+        "amazonas",
+        "incêndios",
+        "governo",
+        "estado",
+        "combate",
+        "governador",
         "queimadas",
-        "amazônia",
-        "combate"
+        "equipes",
+        "reforço",
+        "focos",
+        "capobianco",
+        "ambiente",
+        "ministro"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1048926,6 +1048974,7 @@
       ],
       "manualPlaces": [],
       "organizations": [
+        "IBAMA",
         "TV ENCONTRO DAS ÁGUAS"
       ],
       "manualOrganizations": [],
