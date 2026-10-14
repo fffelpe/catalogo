@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T20:42:11.544Z",
-  "total": 41468,
+  "generatedAt": "2026-10-14T23:29:04.253Z",
+  "total": 41471,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530357,6 +530357,42 @@
       "AFILIADA_EMISSORA": "TV CULTURA / SP",
       "PROGRAMA": "REPÓRTER ECO",
       "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005510",
+      "DESCRICAO": "FRIGORÍFICO DE FRANGO + GRANJA DE FRANGO + GRANJA DE OVOS + EXPORTAÇÃO DE FRANGO",
+      "DATA": "14/10/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005511",
+      "DESCRICAO": "GRANJA DE FRANGO + FRIGORÍFICO DE FRANGO",
+      "DATA": "14/10/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005512",
+      "DESCRICAO": "FRIGORÍFICO DE CARNE DE FRANGO",
+      "DATA": "14/10/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
       "DURACOES": {}
     }
