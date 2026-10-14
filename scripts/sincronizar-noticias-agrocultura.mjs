@@ -1,6 +1,7 @@
 import process from "node:process";
 import { google } from "googleapis";
 import { extrairMediaIds } from "./media-id.mjs";
+import { mesclarCamposPreservando } from "./mesclagem-metadados.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const PLANILHA_NOTICIAS_ID = "1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw";
@@ -181,31 +182,17 @@ async function carregarImgs() {
 
 const CAMPOS_AUDITORIA = ["ID", "DESCRIÇÃO", "DATA", "LOCAL", "REPÓRTER", "AFILIADA / EMISSORA", "PROGRAMA", "EDITORIA", "PGM"];
 
-function chaveComparacao(valor) {
-  return limparTexto(valor)
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLocaleUpperCase("pt-BR")
-    .replace(/[^A-Z0-9]+/g, " ")
-    .trim();
-}
-
 function mesclar(atual, origem, { somentePreencherVazios = true, onConflito = () => {} } = {}) {
-  const resultado = [...atual];
+  if (!somentePreencherVazios) {
+    throw new Error("Sobrescrita de metadados desativada: somente lacunas podem ser preenchidas.");
+  }
+  const resultado = mesclarCamposPreservando(atual, origem, {
+    nomesCampos: CAMPOS_AUDITORIA,
+    registrarConflito: onConflito,
+    ate: 9,
+  });
   const ids = [...new Set([...idsDoValor(atual[0]), ...idsDoValor(origem[0])])];
   resultado[0] = ids.join("\n");
-  for (let i = 1; i < 9; i += 1) {
-    const recebido = limparTexto(origem[i]);
-    if (!recebido) continue;
-    const existente = limparTexto(resultado[i]);
-    if (!existente) {
-      resultado[i] = recebido;
-    } else if (chaveComparacao(existente) !== chaveComparacao(recebido)) {
-      onConflito({ campo: CAMPOS_AUDITORIA[i], existente, recebido });
-      // Mesmo em integrações antigas sem a opção explícita, nunca sobrescrever.
-      if (!somentePreencherVazios) continue;
-    }
-  }
   return resultado;
 }
 
