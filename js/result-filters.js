@@ -7,15 +7,30 @@
     "REPORTER",
     "AFILIADA_EMISSORA",
     "PROGRAMA",
-    "EDITORIA"
+    "EDITORIA",
+    "UF",
+    "PGM"
   ];
 
   function normalizarTexto(valor) {
     return String(valor ?? "")
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
-      .trim()
-      .toUpperCase();
+      .toUpperCase()
+      .replace(/[^\p{L}\p{N}]+/gu, " ")
+      .trim();
+  }
+
+  function valoresDoCampo(item, campo) {
+    if (campo === "UF") {
+      const local = String(item?.LOCAL || "").trim().toUpperCase();
+      const match = local.match(/(?:^|[\s,\/-])([A-Z]{2})\s*$/);
+      return match ? [match[1]] : [];
+    }
+    const valor = String(item?.[campo] ?? "").trim();
+    if (!valor) return [];
+    if (campo === "REPORTER") return valor.split(/\s*(?:\/|;|\||\n)\s*/).filter(Boolean);
+    return [valor];
   }
 
   function dataParaNumero(valor) {
@@ -42,6 +57,8 @@
     if (!Number.isInteger(ano) || !Number.isInteger(mes) || !Number.isInteger(dia)) return null;
     if (mes < 1 || mes > 12 || dia < 1 || dia > 31) return null;
 
+    const data = new Date(ano, mes - 1, dia);
+    if (data.getFullYear() !== ano || data.getMonth() !== mes - 1 || data.getDate() !== dia) return null;
     return (ano * 10000) + (mes * 100) + dia;
   }
 
@@ -71,8 +88,8 @@
       for (const campo of CAMPOS_CATEGORIA) {
         const selecionados = selecoes[campo];
         if (!selecionados.length) continue;
-        const valorItem = normalizarTexto(item?.[campo]);
-        if (!selecionados.includes(valorItem)) return false;
+        const valoresItem = valoresDoCampo(item, campo).map(normalizarTexto);
+        if (!valoresItem.some((valor) => selecionados.includes(valor))) return false;
       }
 
       return true;
@@ -83,10 +100,11 @@
     const mapa = new Map();
 
     for (const item of Array.isArray(registros) ? registros : []) {
-      const valor = String(item?.[campo] ?? "").trim();
-      const chave = normalizarTexto(valor);
-      if (!chave || mapa.has(chave)) continue;
-      mapa.set(chave, valor);
+      for (const valor of valoresDoCampo(item, campo)) {
+        const chave = normalizarTexto(valor);
+        if (!chave || mapa.has(chave)) continue;
+        mapa.set(chave, valor.trim());
+      }
     }
 
     return Array.from(mapa.values()).sort((a, b) =>

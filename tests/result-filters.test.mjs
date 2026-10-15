@@ -88,3 +88,34 @@ test("identifica quando existe ao menos um filtro ativo", async () => {
   assert.equal(filtros.temFiltros({ LOCAL: ["São Paulo"] }), true);
   assert.equal(filtros.temFiltros({ dataInicio: "2026-09-01" }), true);
 });
+
+test("reconhece grafias equivalentes de afiliada sem alterar o valor original", async () => {
+  const filtros = await carregarResultFilters();
+  const regs = [{ AFILIADA_EMISSORA: "TVE / ES" }];
+  assert.equal(filtros.aplicar(regs, { AFILIADA_EMISSORA: ["TVE - ES"] }).length, 1);
+  assert.equal(regs[0].AFILIADA_EMISSORA, "TVE / ES");
+});
+
+test("filtra individualmente os repórteres em um registro com vários nomes", async () => {
+  const filtros = await carregarResultFilters();
+  const regs = [{ REPORTER: "Ana Souza / Bruno Lima" }, { REPORTER: "Carlos Santos" }];
+  assert.equal(filtros.aplicar(regs, { REPORTER: ["Bruno Lima"] }).length, 1);
+  assert.deepEqual(Array.from(filtros.obterOpcoes(regs, "REPORTER")), ["Ana Souza", "Bruno Lima", "Carlos Santos"]);
+});
+
+test("combina filtro de UF do LOCAL com PGM e ignora UF da emissora", async () => {
+  const filtros = await carregarResultFilters();
+  const regs = [
+    { LOCAL: "RIO DO SUL - SC", PGM: "384", _AFILIADA_UF: "SP" },
+    { LOCAL: "VITÓRIA / ES", PGM: "384" },
+    { LOCAL: "", PGM: "384", _AFILIADA_UF: "SC" }
+  ];
+  assert.equal(filtros.aplicar(regs, { UF: ["SC"], PGM: ["384"] }).length, 1);
+  assert.deepEqual(Array.from(filtros.obterOpcoes(regs, "UF")), ["ES", "SC"]);
+});
+
+test("recusa datas impossíveis no filtro de intervalo", async () => {
+  const filtros = await carregarResultFilters();
+  assert.equal(filtros.dataParaNumero("2026-02-30"), null);
+  assert.equal(filtros.dataParaNumero("2026-02-28"), 20260228);
+});

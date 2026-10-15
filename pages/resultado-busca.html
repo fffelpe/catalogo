@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../css/id-copy.css?v=1">
   <link rel="stylesheet" href="../css/creditos.css?v=1">
   <link rel="stylesheet" href="../css/search-highlight.css?v=1">
-  <link rel="stylesheet" href="../css/search-results-table.css?v=4">
+  <link rel="stylesheet" href="../css/search-results-table.css?v=5">
   <link rel="stylesheet" href="../css/search-results-cards.css?v=4">
   <link rel="stylesheet" href="../css/media-modal.css?v=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
@@ -30,8 +30,16 @@
         <input type="search" id="searchInput" placeholder="Refinar busca por assunto, local, repórter ou ID..." class="form-control me-2 rounded-pill" autocomplete="off" aria-label="Refinar busca">
         <button class="btn btn-outline-success rounded-pill" type="submit">Buscar</button>
       </form>
-      <p class="busca-inteligente-aviso">A busca considera correspondências exatas, prefixos digitados, sinônimos jornalísticos, termos relacionados e metadados de créditos, ordenando os resultados por relevância.</p>
+      <p class="busca-inteligente-aviso">Busca por texto, Media ID e sinônimos; combine filtros de repórter, afiliada, local, editoria e data.</p>
+      <p class="busca-sintaxe-exemplo">Busca por campos: <code>café reporter:"Greice Sauer" uf:SC</code> ou <code>programa:Agrocultura pgm:384</code>.</p>
     </section>
+
+    <nav class="filtros-rapidos" aria-label="Filtros complementares">
+      <span>Refinar resultados:</span>
+      <button type="button" class="btn-filtro-coluna filtro-rapido" data-filter-field="UF" aria-label="Filtrar por UF do local" aria-pressed="false">UF do local ▾</button>
+      <button type="button" class="btn-filtro-coluna filtro-rapido" data-filter-field="PGM" aria-label="Filtrar por número de programa" aria-pressed="false">Episódio / PGM ▾</button>
+      <a href="qualidade.html" class="link-qualidade-busca">Qualidade dos dados</a>
+    </nav>
 
     <section id="historicoBusca" class="historico-busca" aria-label="Pesquisas recentes" hidden>
       <div class="historico-cabecalho">
@@ -118,15 +126,15 @@
   <script src="../js/media-enrichment.js?v=2"></script>
   <script src="../js/keyword-navigation.js?v=1"></script>
   <script src="../js/media-segments.js?v=1"></script>
-  <script src="../js/search-engine.js?v=8"></script>
+  <script src="../js/search-engine.js?v=9"></script>
   <script src="../js/keyword-results.js?v=1"></script>
   <script src="../js/historico-busca.js"></script>
   <script src="../js/buscas-populares.js?v=3"></script>
   <script src="../js/autocomplete.js?v=2"></script>
   <script src="../js/creditos.js?v=5"></script>
   <script src="../js/reporteres.js?v=2"></script>
-  <script src="../js/result-filters.js?v=1"></script>
-  <script src="../js/catalogo-ui.js?v=16"></script>
+  <script src="../js/result-filters.js?v=2"></script>
+  <script src="../js/catalogo-ui.js?v=17"></script>
   <script src="../js/creditos-ui.js?v=4"></script>
   <script src="../js/search-results-cards.js?v=5"></script>
   <script src="../js/media-modal.js?v=2"></script>

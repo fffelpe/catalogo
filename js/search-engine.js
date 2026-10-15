@@ -130,9 +130,11 @@ const SearchEngine = (() => {
     return Math.min(1, produto / pesoConsulta);
   }
 
-  const cacheRegistros = new WeakMap();
-  const cacheProgramas = new WeakMap();
-  const cacheIndicesMediaId = new WeakMap();
+  let cacheRegistros = new WeakMap();
+  let cacheProgramas = new WeakMap();
+  let cacheIndicesMediaId = new WeakMap();
+  let cacheIndicesCampos = new WeakMap();
+  let cacheConsultas = new WeakMap();
 
   function normalizar(texto) {
     if (
@@ -678,29 +680,139 @@ const SearchEngine = (() => {
     return indice.get(id) || [];
   }
 
+
+  const ALIASES_FILTRO = Object.freeze({
+    reporter: "REPORTER", "repórter": "REPORTER", rep: "REPORTER",
+    afiliada: "AFILIADA_EMISSORA", emissora: "AFILIADA_EMISSORA",
+    local: "LOCAL", cidade: "LOCAL", uf: "UF",
+    programa: "PROGRAMA", editoria: "EDITORIA", pgm: "PGM", id: "ID"
+  });
+
+  function normalizarFiltro(valor) {
+    return normalizar(valor).replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  }
+
+  // Ex.: "safra reporter:\"Greice Sauer\" uf:SC programa:Agrocultura".
+  function analisarConsulta(consulta) {
+    const filtros = [];
+    const livre = String(consulta || "").replace(
+      /(^|\s)(repórter|reporter|rep|afiliada|emissora|local|cidade|uf|programa|editoria|pgm|id)\s*:\s*(?:"([^"]+)"|'([^']+)'|([^\s]+))/giu,
+      (trecho, espaco, campo, duplas, simples, direto) => {
+        const valor = (duplas || simples || direto || "").trim();
+        if (valor) filtros.push({ campo: ALIASES_FILTRO[campo.toLocaleLowerCase("pt-BR")], valor });
+        return espaco;
+      }
+    ).replace(/\s+/g, " ").trim();
+    return { livre, filtros };
+  }
+
+
+  function prepararIndiceCampos(registros) {
+    const lista = Array.isArray(registros) ? registros : [];
+    if (cacheIndicesCampos.has(lista)) return cacheIndicesCampos.get(lista);
+
+    // Índice de facetas pequenas construído uma única vez por acervo carregado.
+    // Evita calcular ranking em dezenas de milhares de linhas quando há UF/PGM/ID.
+    const index = { UF: new Map(), PGM: new Map(), ID: new Map() };
+    const adicionar = (campo, chave, registro) => {
+      if (!chave) return;
+      let bucket = index[campo].get(chave);
+      if (!bucket) {
+        bucket = new Set();
+        index[campo].set(chave, bucket);
+      }
+      bucket.add(registro);
+    };
+
+    lista.forEach((registro) => {
+      separarIdsOriginais(registro.ID).forEach((id) => adicionar("ID", id.toUpperCase(), registro));
+      const local = normalizarFiltro(registro.LOCAL);
+      const uf = local.match(/(?:^| )([a-z]{2})$/i);
+      if (uf) adicionar("UF", uf[1].toUpperCase(), registro);
+      String(registro.PGM || "").split(/[\n\r,;+|/]+/)
+        .map((parte) => parte.trim()).filter(Boolean)
+        .forEach((pgm) => adicionar("PGM", pgm, registro));
+    });
+    cacheIndicesCampos.set(lista, index);
+    return index;
+  }
+
+  function filtrarPorCampos(registros, filtros = []) {
+    if (!filtros.length) return registros;
+
+    const indexados = filtros.filter((filtro) => ["UF", "PGM", "ID"].includes(filtro.campo));
+    let candidatos = registros;
+    if (indexados.length) {
+      const indice = prepararIndiceCampos(registros);
+      const grupos = indexados.map(({ campo, valor }) => {
+        const chave = campo === "UF" ? normalizarFiltro(valor).toUpperCase()
+          : campo === "ID" && typeof MediaIdUtils !== "undefined" ? MediaIdUtils.normalizar(valor)
+          : String(valor).trim();
+        return Array.from(indice[campo].get(chave) || []);
+      });
+      candidatos = grupos.reduce((menor, grupo) => grupo.length < menor.length ? grupo : menor, registros);
+      if (!candidatos.length) return [];
+    }
+
+    return candidatos.filter((registro) => filtros.every(({ campo, valor }) => {
+      if (campo === "ID") {
+        const exato = typeof MediaIdUtils !== "undefined" ? MediaIdUtils.normalizar(valor) : "";
+        return Boolean(exato) && separarIdsOriginais(registro.ID).some((id) => id.toUpperCase() === exato);
+      }
+      if (campo === "PGM") {
+        return String(registro.PGM || "").split(/[\n\r,;+|/]+/).some((parte) => parte.trim() === valor.trim());
+      }
+      if (campo === "UF") {
+        const local = normalizarFiltro(registro.LOCAL);
+        const sigla = normalizarFiltro(valor);
+        return /^[a-z]{2}$/i.test(sigla) && local.endsWith(" " + sigla) || local === sigla;
+      }
+      const pesquisado = normalizarFiltro(valor);
+      const encontrado = normalizarFiltro(registro[campo]);
+      return Boolean(pesquisado) && encontrado.includes(pesquisado);
+    }));
+  }
+
+  function memorizarBusca(lista, chave, resultados) {
+    if (!chave) return resultados;
+    let entradas = cacheConsultas.get(lista);
+    if (!entradas) {
+      entradas = new Map();
+      cacheConsultas.set(lista, entradas);
+    }
+    if (entradas.size >= 12) entradas.delete(entradas.keys().next().value);
+    entradas.set(chave, resultados);
+    return resultados;
+  }
+
   function pesquisar(registros, consulta, opcoes = {}) {
     const lista = Array.isArray(registros) ? registros : [];
-    const termo = String(consulta || "").trim();
+    const termoCompleto = String(consulta || "").trim();
+    const { livre: termo, filtros } = analisarConsulta(termoCompleto);
     const programa = opcoes.programa || "";
+    const chaveCache = termoCompleto ? JSON.stringify([termoCompleto, programa]) : "";
+    const respostasAnteriores = cacheConsultas.get(lista);
+    if (chaveCache && respostasAnteriores?.has(chaveCache)) return respostasAnteriores.get(chaveCache);
 
-    if (!termo) return filtrarPrograma(lista, programa);
+    const filtrados = filtrarPorCampos(filtrarPrograma(lista, programa), filtros);
+    if (!termo) return memorizarBusca(lista, chaveCache, filtrados);
 
     // Consulta exata de Media ID não percorre o acervo com fuzzy/semântica.
     const idExato = typeof MediaIdUtils !== "undefined"
       && typeof MediaIdUtils.normalizar === "function"
       ? MediaIdUtils.normalizar(termo) : "";
     if (idExato) {
-      return filtrarPrograma(buscarRegistrosPorMediaId(lista, idExato), programa)
+      return memorizarBusca(lista, chaveCache, filtrarPorCampos(filtrarPrograma(buscarRegistrosPorMediaId(lista, idExato), programa), filtros)
         .map((registro) => ({
           ...registro,
           _SEARCH_SCORE: 10000,
           _SEARCH_MATCHES: [{ campo: "ID", termo, tipo: "id-exato" }],
           _SEARCH_SEGMENT_MATCHES: [],
           _SEARCH_ENTITIES: []
-        }));
+        })));
     }
 
-    const base = filtrarPrograma(lista, programa);
+    const base = filtrados;
     const contexto = prepararContextoConsulta(termo);
     const avaliados = [];
 
@@ -721,7 +833,7 @@ const SearchEngine = (() => {
       });
     });
 
-    return avaliados
+    return memorizarBusca(lista, chaveCache, avaliados
       .sort((a, b) => b.score - a.score || a.indiceOriginal - b.indiceOriginal)
       .map((item) => ({
         ...item.registro,
@@ -729,7 +841,7 @@ const SearchEngine = (() => {
         _SEARCH_MATCHES: item.correspondencias,
         _SEARCH_SEGMENT_MATCHES: item.segmentMatches,
         _SEARCH_ENTITIES: item.entidades
-      }));
+      })));
   }
 
   function explicarResultado(registro) {
@@ -742,12 +854,17 @@ const SearchEngine = (() => {
   }
 
   function limparCache() {
-    // WeakMap não possui clear(); os caches são naturalmente descartados com os registros.
-    // Esta função existe como ponto de extensão sem alterar a API pública atual.
+    cacheRegistros = new WeakMap();
+    cacheProgramas = new WeakMap();
+    cacheIndicesMediaId = new WeakMap();
+    cacheIndicesCampos = new WeakMap();
+    cacheConsultas = new WeakMap();
   }
 
   return {
     pesquisar,
+    analisarConsulta,
+    prepararIndiceCampos,
     calcularRelevancia,
     explicarResultado,
     normalizar,

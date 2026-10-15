@@ -460,3 +460,40 @@
     width: min(330px, calc(100vw - 16px));
   }
 }
+
+/* Filtros complementares acima dos cinco cards, sem ocupar espaço nos resultados. */
+.pagina-busca .filtros-rapidos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 14px;
+  font-size: 12px;
+  color: #496155;
+}
+.pagina-busca .filtros-rapidos .filtro-rapido {
+  border: 1px solid #bdd6c6;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: #1c5530;
+  background: #f7fbf8;
+  font-size: 12px;
+  width: auto;
+}
+.pagina-busca .filtros-rapidos .filtro-rapido.filtro-ativo {
+  border-color: #2e8048;
+  background: #e5f4e9;
+}
+.pagina-busca .link-qualidade-busca {
+  margin-left: auto;
+  color: #2b6140;
+  text-decoration: underline;
+}
+.pagina-busca .busca-sintaxe-exemplo {
+  margin: 0 0 4px;
+  color: #526c5c;
+  font-size: 12px;
+}
+.pagina-busca .busca-sintaxe-exemplo code {
+  color: #215c38;
+}

@@ -50,3 +50,29 @@ test("não elimina metadados quando a fonte contém células vazias", () => {
   const resultado = mesclarCamposPreservando(atual, ["ID", "", "", null, undefined]);
   assert.deepEqual(resultado, atual);
 });
+
+test("divergência de identidade impede misturar repórter ou afiliada de outras matérias", () => {
+  const atual = ["2457B017959", "TESTES FINAIS ROCK IN RIO", "01/09/2026", "", ""];
+  const recebido = ["2457B017959", "REGRAS AUTO PROPELIDOS", "16/09/2026", "PARANÁ - PR", "ANA LIMA"];
+  const ocorrencias = [];
+  const mesclado = mesclarCamposPreservando(atual, recebido, {
+    nomesCampos: campos,
+    registrarConflito: (c) => ocorrencias.push(c),
+  });
+  assert.equal(mesclado[3], "");
+  assert.equal(mesclado[4], "");
+  assert.ok(ocorrencias.some((c) => c.campo === "DESCRIÇÃO"));
+});
+
+test("diferença apenas na editoria mantém o original e aceita local ausente", () => {
+  const atual = ["1452B004869", "Tema", "10/10/2026", "", "", "", "AGROCULTURA", "AGROCULTURA"];
+  const recebido = ["1452B004869", "Tema", "10/10/2026", "VITÓRIA - ES", "", "", "AGROCULTURA", "AGRONEGÓCIO"];
+  const divergencias = [];
+  const mesclado = mesclarCamposPreservando(atual, recebido, {
+    nomesCampos: campos,
+    registrarConflito: (d) => divergencias.push(d),
+  });
+  assert.equal(mesclado[3], "VITÓRIA - ES");
+  assert.equal(mesclado[7], "AGROCULTURA");
+  assert.equal(divergencias.length, 1);
+});
