@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T20:07:59.223Z",
-  "total": 41476,
+  "generatedAt": "2026-10-15T21:55:39.784Z",
+  "total": 41478,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530454,6 +530454,32 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
       "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005490",
+      "DESCRICAO": "VT PENEIRADOR",
+      "DATA": "TVE / ES",
+      "LOCAL": "",
+      "REPORTER": "ANY COMETTI",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "385",
+      "DURACOES": {
+        "1452B005490": "0:10:00"
+      }
+    },
+    {
+      "ID": "1452B005516",
+      "DESCRICAO": "VT PECUÁRIA LEITEIRA",
+      "DATA": "17/10/2026",
+      "LOCAL": "",
+      "REPORTER": "BRUNO FAUSTINO",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "385",
       "DURACOES": {}
     }
   ]

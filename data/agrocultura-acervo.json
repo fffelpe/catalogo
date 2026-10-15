@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T21:27:46.184Z",
+  "generatedAt": "2026-10-15T21:55:58.769Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -22,12 +22,26 @@
     ]
   },
   "resumo": {
-    "materiais": 1952,
-    "vts": 613,
+    "materiais": 1954,
+    "vts": 615,
     "noticias": 366,
     "coberturas": 1352
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005516",
+      "ids": [
+        "1452B005516"
+      ],
+      "descricao": "VT PECUÁRIA LEITEIRA",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "17/10/2026",
+      "local": "",
+      "pgm": "385"
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -8545,6 +8559,20 @@
       "data": "TVE / ES",
       "local": "",
       "pgm": "334"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005490",
+      "ids": [
+        "1452B005490"
+      ],
+      "descricao": "VT PENEIRADOR",
+      "reporter": "ANY COMETTI",
+      "data": "TVE / ES",
+      "local": "",
+      "pgm": "385"
     },
     {
       "tipo": "vt",
