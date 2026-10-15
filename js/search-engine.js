@@ -718,10 +718,10 @@ const SearchEngine = (() => {
       if (!chave) return;
       let bucket = index[campo].get(chave);
       if (!bucket) {
-        bucket = [];
+        bucket = new Set();
         index[campo].set(chave, bucket);
       }
-      if (!bucket.includes(registro)) bucket.push(registro);
+      bucket.add(registro);
     };
 
     lista.forEach((registro) => {
@@ -748,7 +748,7 @@ const SearchEngine = (() => {
         const chave = campo === "UF" ? normalizarFiltro(valor).toUpperCase()
           : campo === "ID" && typeof MediaIdUtils !== "undefined" ? MediaIdUtils.normalizar(valor)
           : String(valor).trim();
-        return indice[campo].get(chave) || [];
+        return Array.from(indice[campo].get(chave) || []);
       });
       candidatos = grupos.reduce((menor, grupo) => grupo.length < menor.length ? grupo : menor, registros);
       if (!candidatos.length) return [];
