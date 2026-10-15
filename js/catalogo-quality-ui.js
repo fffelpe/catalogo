@@ -49,7 +49,9 @@ const CatalogoQualityUI = (() => {
       criarCard(resumo.semProblemasCriticos.toLocaleString("pt-BR"), "Sem problemas críticos", "success", `${percentualSemCriticos}% do total`),
       criarCard((resumo.porCodigo.DESCRICAO_AUSENTE || 0).toLocaleString("pt-BR"), "Descrições ausentes", "warning"),
       criarCard((resumo.porCodigo.LOCAL_AUSENTE || 0).toLocaleString("pt-BR"), "Locais ausentes", "info"),
-      criarCard((resumo.porCodigo.SEM_SEGMENTOS || 0).toLocaleString("pt-BR"), "Sem segmentos", "danger")
+      criarCard((resumo.porCodigo.REPORTER_AUSENTE || 0).toLocaleString("pt-BR"), "Repórteres ausentes", "warning"),
+      criarCard((resumo.porCodigo.AFILIADA_AUSENTE || 0).toLocaleString("pt-BR"), "Afiliadas ausentes", "warning"),
+      criarCard((resumo.porCodigo.EDITORIA_AUSENTE || 0).toLocaleString("pt-BR"), "Editorias ausentes", "info")
     );
   }
 
@@ -172,7 +174,6 @@ const CatalogoQualityUI = (() => {
     let creditosCarregados = false;
     try {
       await DadosMedia.carregarCSV();
-      await MediaEnrichment.carregar();
     } catch (erro) {
       console.error(erro);
       definirEstado("Não foi possível carregar o acervo para avaliação.");

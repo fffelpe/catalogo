@@ -1,6 +1,7 @@
 import process from "node:process";
 import { google } from "googleapis";
 import { extrairMediaIds } from "./media-id.mjs";
+import { mesclarCamposPreservando } from "./mesclagem-metadados.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const PLANILHA_NOTICIAS_ID = "1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw";
@@ -179,15 +180,19 @@ async function carregarImgs() {
   return (resposta.data.values || []).map(normalizarLinhaImgs);
 }
 
-function mesclar(atual, origem, { somentePreencherVazios = false } = {}) {
-  const resultado = [...atual];
+const CAMPOS_AUDITORIA = ["ID", "DESCRIÇÃO", "DATA", "LOCAL", "REPÓRTER", "AFILIADA / EMISSORA", "PROGRAMA", "EDITORIA", "PGM"];
+
+function mesclar(atual, origem, { somentePreencherVazios = true, onConflito = () => {} } = {}) {
+  if (!somentePreencherVazios) {
+    throw new Error("Sobrescrita de metadados desativada: somente lacunas podem ser preenchidas.");
+  }
+  const resultado = mesclarCamposPreservando(atual, origem, {
+    nomesCampos: CAMPOS_AUDITORIA,
+    registrarConflito: onConflito,
+    ate: 9,
+  });
   const ids = [...new Set([...idsDoValor(atual[0]), ...idsDoValor(origem[0])])];
   resultado[0] = ids.join("\n");
-  for (let i = 1; i < 9; i += 1) {
-    if (!origem[i]) continue;
-    if (somentePreencherVazios && resultado[i]) continue;
-    resultado[i] = origem[i];
-  }
   return resultado;
 }
 
@@ -215,26 +220,55 @@ async function main() {
     carregarMateriasExibidas(),
   ]);
   const existentesPorId = new Map();
+  const idsDuplicadosImgs = new Set();
 
   imgs.forEach((linha, indice) => {
-    if (!idsDoValor(linha[0]).length) return;
-    registrarIds(existentesPorId, {
+    const ids = idsDoValor(linha[0]);
+    if (!ids.length) return;
+    const registro = {
       tipo: "existente",
       linhaPlanilha: indice + 2,
       dados: linha,
+    };
+    ids.forEach((id) => {
+      const anterior = existentesPorId.get(id);
+      if (anterior && anterior.linhaPlanilha !== registro.linhaPlanilha) {
+        idsDuplicadosImgs.add(id);
+      } else if (!anterior) {
+        existentesPorId.set(id, registro);
+      }
     });
   });
+
+  if (idsDuplicadosImgs.size) {
+    console.warn(`Notícias/matérias: ${idsDuplicadosImgs.size} Media ID(s) duplicados na imgs, bloqueados contra atualização automática.`);
+  }
 
   const pendentesPorId = new Map();
   const pendentes = [];
   const atualizacoesPorLinha = new Map();
   let conflitosDistribuidos = 0;
+  let bloqueadosPorDuplicidade = 0;
+  const conflitosMetadados = [];
+  const conflitosVistos = new Set();
 
   function atualizarAlvo(alvo, registroOrigem, opcoesMesclagem = {}, preservarIdsDoAlvo = false) {
     const origemEfetiva = [...registroOrigem];
     if (preservarIdsDoAlvo) origemEfetiva[0] = alvo.dados[0];
 
-    const dadosNovos = mesclar(alvo.dados, origemEfetiva, opcoesMesclagem);
+    const dadosNovos = mesclar(alvo.dados, origemEfetiva, {
+      ...opcoesMesclagem,
+      onConflito: (conflito) => {
+        const chave = JSON.stringify([idsDoValor(origemEfetiva[0]), alvo.linhaPlanilha, conflito]);
+        if (conflitosVistos.has(chave)) return;
+        conflitosVistos.add(chave);
+        conflitosMetadados.push({
+          ids: idsDoValor(origemEfetiva[0]).join(", "),
+          linhaImgs: alvo.tipo === "existente" ? alvo.linhaPlanilha : null,
+          ...conflito,
+        });
+      },
+    });
     if (JSON.stringify(dadosNovos) === JSON.stringify(alvo.dados)) return;
 
     alvo.dados = dadosNovos;
@@ -249,6 +283,11 @@ async function main() {
   function integrar(registros, opcoesMesclagem = {}) {
     for (const registroOrigem of registros) {
       const ids = idsDoValor(registroOrigem[0]);
+      if (ids.some((id) => idsDuplicadosImgs.has(id))) {
+        bloqueadosPorDuplicidade += 1;
+        console.warn(`Notícias/matérias: ${ids.join(", ")} ignorado; existe em mais de uma linha da imgs.`);
+        continue;
+      }
       const alvos = [...new Set(
         ids.map((id) => existentesPorId.get(id) || pendentesPorId.get(id)).filter(Boolean)
       )];
@@ -288,7 +327,7 @@ async function main() {
     }
   }
 
-  integrar(noticias);
+  integrar(noticias, { somentePreencherVazios: true });
   integrar(materias, { somentePreencherVazios: true });
 
   if (atualizacoesPorLinha.size) {
@@ -314,10 +353,16 @@ async function main() {
     });
   }
 
+  if (conflitosMetadados.length) {
+    console.warn(`Notícias/matérias: ${conflitosMetadados.length} divergência(s) preservadas para revisão.`);
+    conflitosMetadados.slice(0, 40).forEach((conflito) => console.warn(JSON.stringify(conflito)));
+    if (conflitosMetadados.length > 40) console.warn("Exibidos os 40 primeiros conflitos.");
+  }
+
   console.log(
     `Integração concluída. Linhas atualizadas: ${atualizacoesPorLinha.size}; ` +
     `novos registros: ${pendentes.length}; notícias: ${noticias.length}; matérias: ${materias.length}; ` +
-    `conflitos distribuídos tratados: ${conflitosDistribuidos}.`
+    `conflitos distribuídos tratados: ${conflitosDistribuidos}; bloqueados por IDs duplicados na imgs: ${bloqueadosPorDuplicidade}.`
   );
 }
 

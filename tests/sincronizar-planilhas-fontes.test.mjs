@@ -106,3 +106,10 @@ test("bloqueia a geração do snapshot AgroCultura quando qualquer fonte princip
   assert.match(conteudo, /Snapshot AgroCultura não publicado/);
   assert.match(conteudo, /parcial:\s*false/);
 });
+
+test("integração de notícias não atualiza linha arbitrária quando ID aparece duas vezes na imgs", async () => {
+  const conteudo = await readFile(INTEGRACAO_AGRO, "utf8");
+  assert.match(conteudo, /idsDuplicadosImgs = new Set/);
+  assert.match(conteudo, /idsDuplicadosImgs\.has\(id\)/);
+  assert.match(conteudo, /bloqueadosPorDuplicidade/);
+});

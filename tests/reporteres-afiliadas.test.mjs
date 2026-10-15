@@ -87,3 +87,19 @@ test("afiliada existente reconhecida pela base recebe cidade e UF sem trocar o n
   assert.equal(registros[0]._AFILIADA_CIDADE, "VITÓRIA");
   assert.equal(registros[0]._AFILIADA_UF, "ESPÍRITO SANTO - ES");
 });
+
+test("variação TVE - ES é identificada como TVE / ES sem substituir a grafia original", async () => {
+  const ReporteresMedia = carregar();
+  await ReporteresMedia.carregarCadastro();
+
+  const registros = [{
+    ID: "1452B005484",
+    REPORTER: "",
+    AFILIADA_EMISSORA: "TVE - ES",
+    DESCRICAO: "Material da afiliada"
+  }];
+  ReporteresMedia.aplicar(registros);
+  assert.equal(registros[0].AFILIADA_EMISSORA, "TVE - ES");
+  assert.equal(registros[0]._AFILIADA_ID, "AFL002");
+  assert.equal(registros[0]._AFILIADA_UF, "ESPÍRITO SANTO - ES");
+});

@@ -121,10 +121,14 @@ const ReporteresMedia = (() => {
     return cadastro.afiliadas.find((item) => normalizar(item?.id) === chave) || null;
   }
 
+  function normalizarNomeAfiliada(valor) {
+    return normalizar(valor).replace(/[^A-Z0-9]+/g, " ").trim();
+  }
+
   function buscarAfiliadaPorNome(nome) {
-    const chave = normalizar(nome);
+    const chave = normalizarNomeAfiliada(nome);
     if (!chave) return null;
-    return cadastro.afiliadas.find((item) => normalizar(item?.nome) === chave) || null;
+    return cadastro.afiliadas.find((item) => normalizarNomeAfiliada(item?.nome) === chave) || null;
   }
 
   function montarTextoCreditos(dados) {
