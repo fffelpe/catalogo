@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T22:01:33.887Z",
+  "generatedAt": "2026-10-15T22:40:54.508Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1049443,6 +1049443,244 @@
       "places": [],
       "manualPlaces": [],
       "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2922B000771": {
+      "title": "Entrevista Maria Angela Presidente Tv Cultura",
+      "manualTitle": "",
+      "keywords": [
+        "tv cultura",
+        "documentários",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo",
+        "entrevista",
+        "presidente",
+        "cultura",
+        "angela",
+        "maria"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "tv cultura"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2922B000767": {
+      "title": "Ernesto Paglia",
+      "manualTitle": "",
+      "keywords": [
+        "ernesto paglia",
+        "tv cultura",
+        "documentários",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo",
+        "ernesto",
+        "paglia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "tv cultura"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2922B000758": {
+      "title": "Marilia Assef (diretora de Jornalismo da Tv Cultura — Roberto Muylaert",
+      "manualTitle": "",
+      "keywords": [
+        "marilia assef (diretora de jornalismo da tv cultura",
+        "roberto muylaert",
+        "tv cultura",
+        "documentários",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo",
+        "jornalismo",
+        "diretora",
+        "muylaert",
+        "cultura",
+        "marilia",
+        "roberto",
+        "assef"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "tv cultura"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2922B000734": {
+      "title": "Gerais Museus das Favelas",
+      "manualTitle": "",
+      "keywords": [
+        "takes gerais museus das favelas",
+        "cultura",
+        "documentários",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo",
+        "favelas",
+        "museus",
+        "takes"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2922B000739": {
+      "title": "Drone Pelourinho Bahia",
+      "manualTitle": "",
+      "keywords": [
+        "drone pelourinho bahia",
+        "cultura",
+        "documentários",
+        "tv cultura - sp",
+        "bahia - ba",
+        "são paulo",
+        "são paulo - sp",
+        "pelourinho",
+        "bahia",
+        "drone"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BAHIA - BA",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2922B000732": {
+      "title": "Drone Mineiração Ilegal — Mineração Ilegal na Floresta Amazônica",
+      "manualTitle": "",
+      "keywords": [
+        "mineração ilegal na floresta amazônica",
+        "meio ambiente",
+        "documentários",
+        "tv cultura - sp",
+        "amazonas - am",
+        "são paulo",
+        "são paulo - sp",
+        "ilegal",
+        "mineiração",
+        "amazônica",
+        "mineração",
+        "floresta",
+        "drone"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "AMAZONAS - AM",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2922B000730": {
+      "title": "Diversos Fotos Claudia Andujar",
+      "manualTitle": "",
+      "keywords": [
+        "takes diversos fotos claudia andujar",
+        "arte",
+        "documentários",
+        "tv cultura - sp",
+        "são paulo",
+        "são paulo - sp",
+        "diversos",
+        "andujar",
+        "claudia",
+        "fotos",
+        "takes"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     }

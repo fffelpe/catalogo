@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T22:00:56.220Z",
-  "total": 41478,
+  "generatedAt": "2026-10-15T22:40:24.518Z",
+  "total": 41485,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530480,6 +530480,90 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "",
       "PGM": "385",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2922B000771",
+      "DESCRICAO": "ENTREVISTA MARIA ANGELA PRESIDENTE TV CULTURA",
+      "DATA": "24/09/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "DOCUMENTÁRIOS",
+      "EDITORIA": "TV CULTURA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2922B000767",
+      "DESCRICAO": "ERNESTO PAGLIA",
+      "DATA": "21/09/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "DOCUMENTÁRIOS",
+      "EDITORIA": "TV CULTURA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2922B000758",
+      "DESCRICAO": "MARILIA ASSEF (DIRETORA DE JORNALISMO DA TV CULTURA + ROBERTO MUYLAERT",
+      "DATA": "03/09/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "DOCUMENTÁRIOS",
+      "EDITORIA": "TV CULTURA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2922B000734",
+      "DESCRICAO": "TAKES GERAIS MUSEUS DAS FAVELAS",
+      "DATA": "08/05/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "DOCUMENTÁRIOS",
+      "EDITORIA": "CULTURA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2922B000739",
+      "DESCRICAO": "DRONE PELOURINHO BAHIA",
+      "DATA": "11/05/2026",
+      "LOCAL": "BAHIA - BA",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "DOCUMENTÁRIOS",
+      "EDITORIA": "CULTURA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2922B000732",
+      "DESCRICAO": "IMAGENS DE DRONE MINEIRAÇÃO ILEGAL + MINERAÇÃO ILEGAL NA FLORESTA AMAZÔNICA",
+      "DATA": "28/04/2026",
+      "LOCAL": "AMAZONAS - AM",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "DOCUMENTÁRIOS",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2922B000730",
+      "DESCRICAO": "TAKES DIVERSOS FOTOS CLAUDIA ANDUJAR",
+      "DATA": "28/04/2026",
+      "LOCAL": "",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "DOCUMENTÁRIOS",
+      "EDITORIA": "ARTE",
+      "PGM": "",
       "DURACOES": {}
     }
   ]
