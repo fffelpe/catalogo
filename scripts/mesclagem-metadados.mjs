@@ -21,21 +21,25 @@ export function mesclarCamposPreservando(atual = [], origem = [], opcoes = {}) {
   } = opcoes;
   const resultado = [...atual];
 
-  // A coluna 0 é o Media ID, gerenciado separadamente por cada integração.
+  // Uma divergência no assunto, data ou autoria bloqueia complementos
+  // potencialmente associados a outra matéria que recebeu o mesmo ID.
+  const camposIdentidade = new Set(["DESCRIÇÃO", "DATA", "LOCAL", "REPÓRTER", "AFILIADA", "AFILIADA / EMISSORA", "PROGRAMA", "PGM"]);
+  const preencher = [];
+  let conflitoIdentidade = false;
   for (let i = 1; i < ate; i += 1) {
     const recebido = String(origem[i] ?? "").trim();
     if (!recebido) continue;
-
     const existente = String(resultado[i] ?? "").trim();
+    const campo = nomesCampos[i] || ("COLUNA_" + (i + 1));
     if (!existente) {
-      resultado[i] = recebido;
+      preencher.push([i, recebido]);
     } else if (chaveComparacao(existente) !== chaveComparacao(recebido)) {
-      registrarConflito({
-        campo: nomesCampos[i] || `COLUNA_${i + 1}`,
-        existente,
-        recebido,
-      });
+      registrarConflito({ campo, existente, recebido });
+      if (camposIdentidade.has(campo)) conflitoIdentidade = true;
     }
+  }
+  if (!conflitoIdentidade) {
+    preencher.forEach(([i, recebido]) => { resultado[i] = recebido; });
   }
   return resultado;
 }
