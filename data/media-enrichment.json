@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T23:29:39.414Z",
+  "generatedAt": "2026-10-15T20:08:35.345Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1049127,6 +1049127,165 @@
       ],
       "manualPlaces": [],
       "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005513": {
+      "title": "Agricultura Mineira — El Niño",
+      "manualTitle": "",
+      "keywords": [
+        "agricultura mineira",
+        "el niño",
+        "agronegócio",
+        "agrocultura",
+        "minas gerais - mg",
+        "agricultura",
+        "mineira",
+        "niño"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "DANIELA NUNES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MINAS GERAIS - MG"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018237": {
+      "title": "Elefante Marinho nas Praias do Rio de Janeiro",
+      "manualTitle": "",
+      "keywords": [
+        "elefante marinho nas praias do rio de janeiro",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "elefante",
+        "janeiro",
+        "marinho",
+        "praias"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MATEUS MENEZES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018238": {
+      "title": "Degas",
+      "manualTitle": "",
+      "keywords": [
+        "degas",
+        "lazer",
+        "jornal da cultura",
+        "tv aperipê",
+        "pernambuco - pe",
+        "aracaju",
+        "sergipe - se",
+        "aracaju - se"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PERNAMBUCO - PE",
+        "ARACAJU",
+        "SERGIPE - SE",
+        "ARACAJU - SE"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV APERIPÊ"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018239": {
+      "title": "Tv Senador Ccj Pec da Segurança Pública — Pec 6x1",
+      "manualTitle": "",
+      "keywords": [
+        "tv senador ccj pec da segurança pública",
+        "pec 6x1",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "segurança",
+        "pública",
+        "senador"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018240": {
+      "title": "Teto Desaba — Túnel do Tempo",
+      "manualTitle": "",
+      "keywords": [
+        "teto desaba",
+        "túnel do tempo",
+        "política",
+        "jornal da cultura",
+        "tv câmara",
+        "brasília - df",
+        "desaba",
+        "túnel",
+        "teto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CÂMARA"
+      ],
       "manualOrganizations": [],
       "segments": []
     }
