@@ -133,6 +133,7 @@ const SearchEngine = (() => {
   let cacheRegistros = new WeakMap();
   let cacheProgramas = new WeakMap();
   let cacheIndicesMediaId = new WeakMap();
+  let cacheIndicesCampos = new WeakMap();
   let cacheConsultas = new WeakMap();
 
   function normalizar(texto) {
@@ -705,9 +706,55 @@ const SearchEngine = (() => {
     return { livre, filtros };
   }
 
+
+  function prepararIndiceCampos(registros) {
+    const lista = Array.isArray(registros) ? registros : [];
+    if (cacheIndicesCampos.has(lista)) return cacheIndicesCampos.get(lista);
+
+    // Índice de facetas pequenas construído uma única vez por acervo carregado.
+    // Evita calcular ranking em dezenas de milhares de linhas quando há UF/PGM/ID.
+    const index = { UF: new Map(), PGM: new Map(), ID: new Map() };
+    const adicionar = (campo, chave, registro) => {
+      if (!chave) return;
+      let bucket = index[campo].get(chave);
+      if (!bucket) {
+        bucket = [];
+        index[campo].set(chave, bucket);
+      }
+      if (!bucket.includes(registro)) bucket.push(registro);
+    };
+
+    lista.forEach((registro) => {
+      separarIdsOriginais(registro.ID).forEach((id) => adicionar("ID", id.toUpperCase(), registro));
+      const local = normalizarFiltro(registro.LOCAL);
+      const uf = local.match(/(?:^| )([a-z]{2})$/i);
+      if (uf) adicionar("UF", uf[1].toUpperCase(), registro);
+      String(registro.PGM || "").split(/[\n\r,;+|/]+/)
+        .map((parte) => parte.trim()).filter(Boolean)
+        .forEach((pgm) => adicionar("PGM", pgm, registro));
+    });
+    cacheIndicesCampos.set(lista, index);
+    return index;
+  }
+
   function filtrarPorCampos(registros, filtros = []) {
     if (!filtros.length) return registros;
-    return registros.filter((registro) => filtros.every(({ campo, valor }) => {
+
+    const indexados = filtros.filter((filtro) => ["UF", "PGM", "ID"].includes(filtro.campo));
+    let candidatos = registros;
+    if (indexados.length) {
+      const indice = prepararIndiceCampos(registros);
+      const grupos = indexados.map(({ campo, valor }) => {
+        const chave = campo === "UF" ? normalizarFiltro(valor).toUpperCase()
+          : campo === "ID" && typeof MediaIdUtils !== "undefined" ? MediaIdUtils.normalizar(valor)
+          : String(valor).trim();
+        return indice[campo].get(chave) || [];
+      });
+      candidatos = grupos.reduce((menor, grupo) => grupo.length < menor.length ? grupo : menor, registros);
+      if (!candidatos.length) return [];
+    }
+
+    return candidatos.filter((registro) => filtros.every(({ campo, valor }) => {
       if (campo === "ID") {
         const exato = typeof MediaIdUtils !== "undefined" ? MediaIdUtils.normalizar(valor) : "";
         return Boolean(exato) && separarIdsOriginais(registro.ID).some((id) => id.toUpperCase() === exato);
@@ -810,12 +857,14 @@ const SearchEngine = (() => {
     cacheRegistros = new WeakMap();
     cacheProgramas = new WeakMap();
     cacheIndicesMediaId = new WeakMap();
+    cacheIndicesCampos = new WeakMap();
     cacheConsultas = new WeakMap();
   }
 
   return {
     pesquisar,
     analisarConsulta,
+    prepararIndiceCampos,
     calcularRelevancia,
     explicarResultado,
     normalizar,
