@@ -16,7 +16,7 @@ function carregar() {
   return sandbox.__CatalogoQuality;
 }
 
-test("descrição ausente é warning e segmento ausente é info", () => {
+test("auditoria identifica campos ausentes sem exigir segmentos de vídeo", () => {
   const CatalogoQuality = carregar();
   const resultado = CatalogoQuality.avaliarRegistro({
     ID: "1452B004869",
@@ -24,11 +24,38 @@ test("descrição ausente é warning e segmento ausente é info", () => {
     DATA: "10/02/2023",
     PROGRAMA: "Jornal da Cultura",
     LOCAL: "",
-    REPORTER: ""
-  }, { enrichment: {} });
+    REPORTER: "",
+    AFILIADA_EMISSORA: "",
+    EDITORIA: ""
+  });
 
-  assert.ok(resultado.problemas.some((p) => p.codigo === "DESCRICAO_AUSENTE" && p.severidade === "warning"));
-  assert.ok(resultado.problemas.some((p) => p.codigo === "SEM_SEGMENTOS" && p.severidade === "info"));
+  for (const codigo of [
+    "DESCRICAO_AUSENTE",
+    "LOCAL_AUSENTE",
+    "REPORTER_AUSENTE",
+    "AFILIADA_AUSENTE",
+    "EDITORIA_AUSENTE"
+  ]) {
+    assert.ok(resultado.problemas.some((p) => p.codigo === codigo && p.severidade === "warning"), codigo);
+  }
+  assert.equal(resultado.problemas.some((p) => p.codigo === "SEM_SEGMENTOS"), false);
+});
+
+test("data ISO impossível é apontada como inválida, data real é aceita", () => {
+  const CatalogoQuality = carregar();
+  const base = {
+    ID: "1452B004869",
+    DESCRICAO: "Pessoas na feira",
+    PROGRAMA: "AGROCULTURA",
+    REPORTER: "ANA LIMA",
+    LOCAL: "SÃO PAULO - SP",
+    AFILIADA_EMISSORA: "TV CULTURA / SP",
+    EDITORIA: "COTIDIANO"
+  };
+  const invalida = CatalogoQuality.avaliarRegistro({ ...base, DATA: "2026-02-30" });
+  const valida = CatalogoQuality.avaliarRegistro({ ...base, DATA: "2026-02-28" });
+  assert.equal(invalida.problemas.some((p) => p.codigo === "DATA_INVALIDA"), true);
+  assert.equal(valida.problemas.some((p) => p.codigo === "DATA_INVALIDA"), false);
 });
 
 test("detecta ID duplicado mesmo dentro de célula com múltiplos IDs", () => {

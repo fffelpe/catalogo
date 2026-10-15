@@ -3,6 +3,7 @@ import { google } from "googleapis";
 import { extrairMediaIds, validarConteudoMediaIds } from "./media-id.mjs";
 import { normalizarMediaId, programaPorListaDeIds } from "./programa-por-prefixo.mjs";
 import { ehErroPermissaoGoogle } from "./google-sheets-errors.mjs";
+import { mesclarCamposPreservando } from "./mesclagem-metadados.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const NOME_ABA_IMGS = "imgs";
@@ -174,10 +175,16 @@ async function removerDuplicatasIdenticas(imgs) {
   return linhasParaExcluir.length;
 }
 
-function mesclarRegistro(atual, fonte) {
-  const resultado = [...atual];
+const CAMPOS_CONFLITO = ["ID", "DESCRIÇÃO", "DATA", "LOCAL", "REPÓRTER", "AFILIADA / EMISSORA", "PROGRAMA", "EDITORIA"];
+
+// Preenche lacunas, preserva valores existentes e registra divergências.
+function mesclarRegistro(atual, fonte, registrarConflito = () => {}) {
+  const resultado = mesclarCamposPreservando(atual, fonte, {
+    nomesCampos: CAMPOS_CONFLITO,
+    registrarConflito,
+    ate: 8,
+  });
   resultado[0] = [...new Set([...separarIds(atual[0]), ...separarIds(fonte[0])])].join("\n");
-  for (let i = 1; i < 8; i++) if (fonte[i]) resultado[i] = fonte[i];
   resultado[6] = programaPorListaDeIds(separarIds(resultado[0]), resultado[6]);
   return resultado;
 }
@@ -333,6 +340,8 @@ async function main() {
   const atualizacoesPorLinha = new Map(atualizacoesNormalizacao);
   let conflitosFonte = 0;
   let bloqueadosPorDuplicidade = 0;
+  const conflitosMetadados = [];
+  const conflitosVistos = new Set();
 
   for (const fonte of FONTES) {
     for (const registro of await carregarFonte(fonte)) {
@@ -354,7 +363,17 @@ async function main() {
 
       const alvo = encontrados[0];
       if (alvo) {
-        const dadosNovos = mesclarRegistro(alvo.dados, registro);
+        const dadosNovos = mesclarRegistro(alvo.dados, registro, (conflito) => {
+          const chave = JSON.stringify([ids, fonte.nome, conflito]);
+          if (conflitosVistos.has(chave)) return;
+          conflitosVistos.add(chave);
+          conflitosMetadados.push({
+            ids: ids.join(", "),
+            fonte: fonte.nome,
+            linhaImgs: alvo.tipo === "existente" ? alvo.linhaPlanilha : null,
+            ...conflito,
+          });
+        });
         if (JSON.stringify(dadosNovos) !== JSON.stringify(alvo.dados)) {
           alvo.dados = dadosNovos;
           if (alvo.tipo === "existente") atualizacoesPorLinha.set(alvo.linhaPlanilha, dadosNovos);
@@ -402,6 +421,12 @@ async function main() {
     console.warn(
       "Agrocultura: não foi possível remover automaticamente IDs já utilizados porque a conta de serviço não tem permissão de edição na fonte_agrocultura. A sincronização de imgs continuará."
     );
+  }
+
+  if (conflitosMetadados.length) {
+    console.warn(`Metadados divergentes preservados na imgs: ${conflitosMetadados.length} conflito(s).`);
+    conflitosMetadados.slice(0, 40).forEach((conflito) => console.warn(JSON.stringify(conflito)));
+    if (conflitosMetadados.length > 40) console.warn("Exibidos somente os 40 primeiros conflitos; fonte original preservada.");
   }
 
   console.log("Sincronização finalizada.");

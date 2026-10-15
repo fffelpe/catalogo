@@ -65,10 +65,18 @@ jobs:
         run: npm run sync:catalogo
 
       - name: Gerar snapshot de afiliadas e repórteres
+        id: gerar_afiliadas
         continue-on-error: true
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:afiliadas
+
+      - name: Alertar quando o cadastro de afiliadas e repórteres não sincroniza
+        if: steps.gerar_afiliadas.outcome == 'failure'
+        run: |
+          echo "::warning title=Cadastro de afiliadas e repórteres::Falha na leitura da planilha Google. O snapshot publicado pode estar desatualizado. Verifique o acesso da conta de serviço à aba repórteres."
+          echo "### Cadastro de afiliadas e repórteres não atualizado" >> "$GITHUB_STEP_SUMMARY"
+          echo "A sincronização da planilha de referência falhou. O snapshot anterior foi preservado. Verifique a permissão da conta de serviço GOOGLE_SERVICE_ACCOUNT_JSON na planilha de afiliadas/repórteres." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Gerar palavras-chave e enriquecimento
         run: npm run sync:keywords
