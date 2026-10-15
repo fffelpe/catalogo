@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T21:56:13.095Z",
+  "generatedAt": "2026-10-15T22:01:33.887Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -973490,7 +973490,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -974242,7 +974244,7 @@
       "keywords": [
         "agro guerra",
         "agronegócio",
-        "agrocultura",
+        "jornal da cultura",
         "são paulo - sp",
         "são paulo",
         "guerra",
@@ -975288,6 +975290,8 @@
         "agronegócio",
         "agrocultura",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "tradições",
         "expoagro"
       ],
@@ -975301,7 +975305,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -977284,7 +977290,7 @@
       "keywords": [
         "camarão",
         "agronegócio",
-        "agrocultura",
+        "jornal da cultura",
         "bertioga - sp"
       ],
       "manualKeywords": [],
@@ -977982,7 +977988,7 @@
       "keywords": [
         "matéria sobre o plano safra",
         "agronegócio",
-        "agrocultura",
+        "jornal da cultura",
         "são paulo - sp",
         "são paulo",
         "matéria",
@@ -978017,7 +978023,7 @@
         "matéria jornal da cultura",
         "matéria sobre algodão",
         "agronegócio",
-        "agrocultura",
+        "jornal da cultura",
         "são paulo - sp",
         "são paulo",
         "matéria",
@@ -978825,7 +978831,7 @@
       "keywords": [
         "pink farm",
         "agronegócio",
-        "agrocultura",
+        "jornal da tarde",
         "são paulo - sp",
         "farm",
         "pink"
@@ -1042812,7 +1042818,9 @@
       "people": [],
       "manualPeople": [],
       "places": [
-        "PIAUÍ - PI"
+        "PIAUÍ - PI",
+        "PARNAÍBA",
+        "PARNAÍBA - PI"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1042858,6 +1042866,8 @@
         "jornal da cultura",
         "tv antares",
         "piauí - pi",
+        "teresina",
+        "teresina - pi",
         "escolas",
         "piauí"
       ],
@@ -1042869,7 +1042879,9 @@
       "people": [],
       "manualPeople": [],
       "places": [
-        "PIAUÍ - PI"
+        "PIAUÍ - PI",
+        "TERESINA",
+        "TERESINA - PI"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1042965,6 +1042977,8 @@
         "jornal da cultura",
         "tv ceará",
         "ceará - ce",
+        "fortaleza",
+        "fortaleza - ce",
         "escolas",
         "ceará"
       ],
@@ -1042976,7 +1042990,9 @@
       "people": [],
       "manualPeople": [],
       "places": [
-        "CEARÁ - CE"
+        "CEARÁ - CE",
+        "FORTALEZA",
+        "FORTALEZA - CE"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043015,7 +1043031,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "PIAUÍ - PI"
+        "PIAUÍ - PI",
+        "PARNAÍBA",
+        "PARNAÍBA - PI"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043362,6 +1043380,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "exposição",
         "sebastião",
         "salgado"
@@ -1043376,7 +1043396,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043394,6 +1043416,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "montenegro",
         "rodrigues",
         "fernanda",
@@ -1043409,7 +1043433,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043427,6 +1043453,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "metragem",
         "madonna",
         "curta"
@@ -1043441,7 +1043469,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043473,7 +1043503,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043491,6 +1043523,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "recuperação",
         "cinemas"
       ],
@@ -1043504,7 +1043538,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043522,6 +1043558,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "equipados",
         "receberem",
         "espectro",
@@ -1043540,7 +1043578,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043558,6 +1043598,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "motta",
         "cine",
         "zezé"
@@ -1043572,7 +1043614,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043590,6 +1043634,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "brasileiro",
         "filme",
         "oscar"
@@ -1043604,7 +1043650,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043622,6 +1043670,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "grammy",
         "latino"
       ],
@@ -1043635,7 +1043685,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043695,7 +1043747,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043730,7 +1043784,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043748,6 +1043804,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "melhores",
         "grande",
         "mundo",
@@ -1043763,7 +1043821,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043811,6 +1043871,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "matogrosso",
         "anos"
       ],
@@ -1043824,7 +1043886,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043842,6 +1043906,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "malandro",
         "ópera"
       ],
@@ -1043855,7 +1043921,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043873,6 +1043941,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "projeto",
         "favela",
         "rica"
@@ -1043887,7 +1043957,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043922,7 +1043994,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043940,6 +1044014,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "rock"
       ],
       "manualKeywords": [],
@@ -1043952,7 +1044028,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1043974,7 +1044052,9 @@
         "levi",
         "jornal da cultura",
         "tv cultura do rio",
-        "rio de janeiro - rj"
+        "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1043986,7 +1044066,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1044004,6 +1044086,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "carolina",
         "anos"
       ],
@@ -1044017,7 +1044101,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1044062,6 +1044148,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "correios",
         "cultural",
         "centro",
@@ -1044077,7 +1044165,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1044095,6 +1044185,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "ribeiro",
         "escola",
         "darcy",
@@ -1044111,7 +1044203,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1044129,6 +1044223,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "tabagismo",
         "nacional",
         "combate"
@@ -1044143,7 +1044239,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1044163,7 +1044261,9 @@
         "flin",
         "jornal da cultura",
         "tv cultura do rio",
-        "rio de janeiro - rj"
+        "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1044176,7 +1044276,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1044197,7 +1044299,9 @@
         "maria",
         "jornal da cultura",
         "tv cultura do rio",
-        "rio de janeiro - rj"
+        "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1044209,7 +1044313,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1044328,6 +1044434,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "destival",
         "janeiro",
         "cinema"
@@ -1044342,7 +1044450,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1049169,6 +1049279,8 @@
         "jornal da cultura",
         "tv cultura do rio",
         "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
         "elefante",
         "janeiro",
         "marinho",
@@ -1049184,7 +1049296,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO DE JANEIRO - RJ"
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
       ],
       "manualPlaces": [],
       "organizations": [
