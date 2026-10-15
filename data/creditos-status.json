@@ -1,16 +1,16 @@
 {
-  "sincronizadoEm": "2026-10-14T18:43:13.464Z",
+  "sincronizadoEm": "2026-10-15T09:33:03.423Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
   "totalArquivos": 347,
   "totalIdsDetectados": 315,
   "totalSincronizados": 315,
   "totalIgnorados": 0,
-  "totalErros": 0,
+  "totalErros": 1,
   "totalDuplicados": 30,
   "totalConflitos": 30,
   "totalConflitosBloqueantes": 0,
   "totalNovosDuplicadosRejeitados": 0,
-  "totalPreservados": 30,
+  "totalPreservados": 31,
   "validacaoBloqueante": false,
   "regraDuplicidade": "Quando há dois ou mais documentos para o mesmo Media ID, exatamente um arquivo deve conter a palavra OFICIAL no nome. Novos conflitos são rejeitados e permanecem bloqueantes até serem resolvidos.",
   "comoResolverConflitos": [
@@ -1491,6 +1491,10 @@
       "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
     },
     {
+      "id": "2457B018065",
+      "motivo": "documento atual não pôde ser lido; crédito anterior preservado"
+    },
+    {
       "id": "2457B017842",
       "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
     },
@@ -1607,5 +1611,11 @@
       "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
     }
   ],
-  "erros": []
+  "erros": [
+    {
+      "id": "2457B018065",
+      "nome": "2457B018065",
+      "erro": "User rate limit exceeded."
+    }
+  ]
 }
