@@ -7,7 +7,7 @@ let paginaAtual = 0;
 let consultaAtual = "";
 let campoFiltroAberto = "";
 const ITENS_POR_PAGINA = 50;
-const CAMPOS_FILTRO_CATEGORIA = ["LOCAL", "REPORTER", "AFILIADA_EMISSORA", "PROGRAMA", "EDITORIA"];
+const CAMPOS_FILTRO_CATEGORIA = ["LOCAL", "REPORTER", "AFILIADA_EMISSORA", "PROGRAMA", "EDITORIA", "UF", "PGM"];
 
 function criarFiltrosVazios() {
   return {
@@ -17,7 +17,9 @@ function criarFiltrosVazios() {
     REPORTER: [],
     AFILIADA_EMISSORA: [],
     PROGRAMA: [],
-    EDITORIA: []
+    EDITORIA: [],
+    UF: [],
+    PGM: []
   };
 }
 
@@ -355,14 +357,16 @@ function renderizarFiltroCategoria(campo, conteudo, botao) {
     REPORTER: "repórter",
     AFILIADA_EMISSORA: "afiliada / emissora",
     PROGRAMA: "programa",
-    EDITORIA: "editoria"
+    EDITORIA: "editoria",
+    UF: "estado (UF do local)",
+    PGM: "número do programa (PGM)"
   };
   const opcoes = typeof ResultFilters === "undefined" ? [] : ResultFilters.obterOpcoes(resultadosBase, campo);
-  const selecionados = new Set((filtrosAtivos[campo] || []).map((valor) => normalizarTexto(valor)));
+  const selecionados = new Set((filtrosAtivos[campo] || []).map((valor) => ResultFilters.normalizarTexto(valor)));
 
   const lista = opcoes.map((valor) => {
     const valorSeguro = escapeHtml(valor);
-    const marcado = selecionados.has(normalizarTexto(valor)) ? " checked" : "";
+    const marcado = selecionados.has(ResultFilters.normalizarTexto(valor)) ? " checked" : "";
     return `
       <label class="filtro-opcao" data-filtro-texto="${escapeHtml(normalizarTexto(valor))}">
         <input type="checkbox" data-filter-value="${valorSeguro}"${marcado}>
@@ -606,13 +610,7 @@ async function inicializarPaginaResultados() {
     return true;
   }
 
-  const statusExtras = await carregamentoExtras;
-  statusExtras.forEach((status, indice) => {
-    if (status.status === "rejected") {
-      console.warn(`${extras[indice].nome} indisponível nesta execução:`, status.reason);
-    }
-  });
-
+  // A busca básica não fica bloqueada esperando os arquivos opcionais.
   AutocompleteBusca.inicializar({
     input,
     registros: DadosMedia.registros,
@@ -622,6 +620,16 @@ async function inicializarPaginaResultados() {
   inicializarFiltrosTabela();
   executarBusca(termoInicial, programa, Boolean(termoInicial));
   definirCarregamentoResultados(false);
+
+  carregamentoExtras.then((statusExtras) => {
+    statusExtras.forEach((status, indice) => {
+      if (status.status === "rejected") {
+        console.warn(`${extras[indice].nome} indisponível nesta execução:`, status.reason);
+      }
+    });
+    if (typeof SearchEngine.limparCache === "function") SearchEngine.limparCache();
+    executarBusca(input.value, programa, false);
+  });
 
   if (typeof inicializarVtsAgricultura === "function") inicializarVtsAgricultura(programa);
 
