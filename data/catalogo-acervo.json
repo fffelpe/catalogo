@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T22:40:24.518Z",
-  "total": 41485,
+  "generatedAt": "2026-10-16T20:23:12.729Z",
+  "total": 41488,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530564,6 +530564,42 @@
       "PROGRAMA": "DOCUMENTÁRIOS",
       "EDITORIA": "ARTE",
       "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005520",
+      "DESCRICAO": "SAFRA DE GRÃOS + COLHEITA DE MILHO + GRÃOS DE SOJA + COLHEITA DE SOJA + LAVOURA DE TRIGO",
+      "DATA": "16/10/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "KELLY MARTINS",
+      "AFILIADA_EMISSORA": "TVE - MS",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018241",
+      "DESCRICAO": "APROVAÇÃO DA PEC DO FIM DA JORNADA DE TRABALHO 6X1 + DAVI ALCOLUMBRE + PAULO PAIM + PLENÁRIO DO SENADO FEDERAL",
+      "DATA": "14/10/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV SENADO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005518\n1452B005517",
+      "DESCRICAO": "GREENING + DOENÇA CÍTRICA + GERAIS GREENING EM LARANJAS E LIMÃOS",
+      "DATA": "17/10/2026",
+      "LOCAL": "BAURU - SP",
+      "REPORTER": "JÚLIO PENARIOL",
+      "AFILIADA_EMISSORA": "TV UNESP / SP",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "385",
       "DURACOES": {}
     }
   ]

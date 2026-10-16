@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T22:40:54.508Z",
+  "generatedAt": "2026-10-16T20:23:39.747Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1049680,6 +1049680,142 @@
       "manualPlaces": [],
       "organizations": [
         "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005520": {
+      "title": "Safra de Grãos — Colheita de Milho",
+      "manualTitle": "",
+      "keywords": [
+        "safra de grãos",
+        "colheita de milho",
+        "grãos de soja",
+        "colheita de soja",
+        "lavoura de trigo",
+        "agronegócio",
+        "agrocultura",
+        "tve - ms",
+        "mato grosso do sul - ms",
+        "campo grande",
+        "campo grande - ms"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "KELLY MARTINS"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - MS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018241": {
+      "title": "Aprovação da Pec do Fim da Jornada de Trabalho 6x1 — Davi Alcolumbre",
+      "manualTitle": "",
+      "keywords": [
+        "aprovação da pec do fim da jornada de trabalho 6x1",
+        "davi alcolumbre",
+        "paulo paim",
+        "plenário do senado federal",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005518": {
+      "title": "Greening — Doença Cítrica",
+      "manualTitle": "",
+      "keywords": [
+        "greening",
+        "doença cítrica",
+        "agronegócio",
+        "agrocultura",
+        "tv unesp / sp",
+        "bauru - sp",
+        "bauru",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "JÚLIO PENARIOL"
+      ],
+      "manualPeople": [],
+      "places": [
+        "BAURU - SP",
+        "BAURU",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005517": {
+      "title": "Greening — Doença Cítrica",
+      "manualTitle": "",
+      "keywords": [
+        "greening",
+        "doença cítrica",
+        "agronegócio",
+        "agrocultura",
+        "tv unesp / sp",
+        "bauru - sp",
+        "bauru",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "JÚLIO PENARIOL"
+      ],
+      "manualPeople": [],
+      "places": [
+        "BAURU - SP",
+        "BAURU",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV UNESP / SP"
       ],
       "manualOrganizations": [],
       "segments": []

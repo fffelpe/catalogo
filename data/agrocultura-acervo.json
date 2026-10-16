@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T21:55:58.769Z",
+  "generatedAt": "2026-10-16T20:23:28.029Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -22,9 +22,9 @@
     ]
   },
   "resumo": {
-    "materiais": 1954,
+    "materiais": 1958,
     "vts": 615,
-    "noticias": 366,
+    "noticias": 370,
     "coberturas": 1352
   },
   "vts": [
@@ -8786,6 +8786,49 @@
     }
   ],
   "noticias": [
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005513",
+      "ids": [
+        "1452B005513"
+      ],
+      "descricao": "CLIMA + EL NIÑO",
+      "reporter": "DANIELA NUNES",
+      "data": "17/10/2026",
+      "local": "MINAS GERAIS - MG",
+      "pgm": "385"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005465",
+      "ids": [
+        "1452B005465"
+      ],
+      "descricao": "EXPORTAÇÃO CARNE DE FRANGO + FRIGORIFICO DE FRANGO + GALINHAS + AVES",
+      "reporter": "SAMUEL ROCHA",
+      "data": "17/10/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "385"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005518\n1452B005517",
+      "ids": [
+        "1452B005518",
+        "1452B005517"
+      ],
+      "descricao": "GREENING + DOENÇA CÍTRICA + GERAIS GREENING EM LARANJAS E LIMÃOS",
+      "reporter": "JÚLIO PENARIOL",
+      "data": "17/10/2026",
+      "local": "BAURU - SP",
+      "pgm": "385"
+    },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
