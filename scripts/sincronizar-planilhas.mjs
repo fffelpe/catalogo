@@ -4,6 +4,7 @@ import { extrairMediaIds, validarConteudoMediaIds } from "./media-id.mjs";
 import { normalizarMediaId, programaPorListaDeIds } from "./programa-por-prefixo.mjs";
 import { ehErroPermissaoGoogle } from "./google-sheets-errors.mjs";
 import { mesclarCamposPreservando } from "./mesclagem-metadados.mjs";
+import { salvarRelatorioConflitos } from "./relatorio-conflitos.mjs";
 import { identificarLinhasDuplicadas } from "./imgs-dedup.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
@@ -423,6 +424,8 @@ async function main() {
     conflitosMetadados.slice(0, 40).forEach((conflito) => console.warn(JSON.stringify(conflito)));
     if (conflitosMetadados.length > 40) console.warn("Exibidos somente os 40 primeiros conflitos; fonte original preservada.");
   }
+
+  await salvarRelatorioConflitos("auditorias/fontes.json", { etapa: "fontes", conflitos: conflitosMetadados });
 
   console.log("Sincronização finalizada.");
   console.log(`Linhas totalmente duplicadas removidas: ${removidas}`);
