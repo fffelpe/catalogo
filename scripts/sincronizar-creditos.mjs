@@ -11,6 +11,7 @@ import {
   avaliarNovidadeConflito,
   instrucoesParaConflito
 } from "./creditos-conflitos.mjs";
+import { podeReutilizarCredito } from "./creditos-cache.mjs";
 
 const PASTA_CREDITOS_ID = process.env.DRIVE_CREDITOS_FOLDER_ID || "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik";
 const SAIDA = path.resolve("data/creditos.json");
@@ -207,6 +208,7 @@ async function main() {
   const conflitos = [];
   const rejeitadosNovos = [];
   const preservados = [];
+  let reutilizadosSemDownload = 0;
 
   const grupos = new Map();
   for (const arquivo of arquivos) {
@@ -313,6 +315,13 @@ async function main() {
       continue;
     }
 
+    // Se documento e seleção não mudaram no Drive, evita download e reprocessamento de PDF/DOCX.
+    if (podeReutilizarCredito(escolhido, anteriores[id], resolucao.tipo)) {
+      registros[id] = anteriores[id];
+      reutilizadosSemDownload += 1;
+      continue;
+    }
+
     let textoEscolhido = "";
     try {
       textoEscolhido = await extrairTexto(escolhido);
@@ -395,6 +404,7 @@ async function main() {
   await escreverStatus(status);
 
   console.log(`Créditos disponíveis: ${Object.keys(registros).length}/${grupos.size} Media IDs.`);
+  console.log(`Documentos sem mudanças reutilizados do snapshot: ${reutilizadosSemDownload} (sem novo download).`);
   if (duplicados.length) console.warn(`IDs com documentos duplicados: ${duplicados.length}.`);
   if (conflitos.length) console.warn(`Conflitos sem seleção automática: ${conflitos.length}.`);
   if (rejeitadosNovos.length) {
