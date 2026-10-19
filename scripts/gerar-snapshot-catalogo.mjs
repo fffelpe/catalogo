@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import process from "node:process";
 import { google } from "googleapis";
 import { criarMapaDuracoes, criarSnapshotCatalogo } from "./catalogo-snapshot.mjs";
+import { validarRegressaoSnapshot } from "./snapshot-integrity.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const RANGE_IMGS = "imgs!A2:I";
@@ -42,6 +43,18 @@ async function main() {
   const linhas = respostaImgs.data.values || [];
   const duracoesPorId = criarMapaDuracoes(respostaDuracoes.data.values || []);
   const snapshot = criarSnapshotCatalogo(linhas, { duracoesPorId });
+
+  let anterior = null;
+  try {
+    anterior = JSON.parse(await fs.readFile(ARQUIVO_SAIDA, "utf8"));
+  } catch (erro) {
+    if (erro?.code !== "ENOENT") throw erro;
+  }
+  const integridade = validarRegressaoSnapshot(snapshot, anterior);
+  console.log(
+    `Integridade verificada: ${integridade.total} registros e ${integridade.duracoes} durações vinculadas; ` +
+    "quedas abruptas bloqueadas antes de substituir o snapshot."
+  );
 
   await fs.mkdir("data", { recursive: true });
   await fs.writeFile(
