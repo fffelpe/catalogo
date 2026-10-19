@@ -92,6 +92,7 @@ async function carregarFonte(fonte) {
   } catch (erro) {
     const status = erro?.response?.status || erro?.code || "erro";
     console.warn(`${fonte.nome}: fonte indisponível (${status}); as demais fontes continuarão sendo sincronizadas.`);
+    console.warn(`::warning title=Fonte de planilha indisponível::${fonte.nome}: falha ${status}; novos metadados desta origem podem não aparecer no catálogo.`);
     return [];
   }
 
