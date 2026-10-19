@@ -5,6 +5,8 @@ const MediaEnrichment = (() => {
   let itens = {};
   let carregado = false;
   let carregamentoPromise = null;
+  let detalhesCarregados = false;
+  let detalhesPromise = null;
 
   const SNAPSHOT_URL = (() => {
     const scriptSrc = typeof document !== "undefined" ? document.currentScript?.src : "";
@@ -17,6 +19,8 @@ const MediaEnrichment = (() => {
     }
     return "data/media-enrichment.json";
   })();
+
+  const SEARCH_INDEX_URL = SNAPSHOT_URL.replace(/media-enrichment\.json$/, "media-search-index.json");
 
   function limparTexto(valor) {
     return String(valor ?? "")
@@ -86,7 +90,11 @@ const MediaEnrichment = (() => {
     Object.entries(payload.items).forEach(([chave, item]) => {
       const id = normalizarMediaId(chave);
       if (!id) return;
-      saida[id] = normalizarItem(item);
+      const bruto = Array.isArray(item) ? {
+        title: item[0], keywords: item[1], subjects: item[2], people: item[3],
+        places: item[4], organizations: item[5], segments: item[6]
+      } : item;
+      saida[id] = normalizarItem(bruto);
     });
 
     return { schemaVersion: 1, items: saida };
@@ -99,10 +107,11 @@ const MediaEnrichment = (() => {
     carregamentoPromise = (async () => {
       try {
         if (typeof fetch !== "function") return itens;
-        const resposta = await fetch(SNAPSHOT_URL, { cache: "no-cache" });
+        let resposta = await fetch(SEARCH_INDEX_URL, { cache: "no-cache" });
+        if (!resposta.ok) resposta = await fetch(SNAPSHOT_URL, { cache: "no-cache" });
         if (!resposta.ok) return itens;
         const payload = normalizarPayload(await resposta.json());
-        itens = payload.items;
+        if (!detalhesCarregados) itens = payload.items;
       } catch (erro) {
         console.warn("Enriquecimento de mídia indisponível nesta execução:", erro);
       } finally {
@@ -116,6 +125,29 @@ const MediaEnrichment = (() => {
     } finally {
       carregamentoPromise = null;
     }
+  }
+
+  // Pesquisa/listagem usa índice leve; ficha e modal carregam detalhes editoriais integrais.
+  async function carregarDetalhes() {
+    if (detalhesCarregados) return itens;
+    if (detalhesPromise) return detalhesPromise;
+    detalhesPromise = (async () => {
+      try {
+        if (typeof fetch !== "function") return itens;
+        const resposta = await fetch(SNAPSHOT_URL, { cache: "no-cache" });
+        if (!resposta.ok) throw new Error("Snapshot integral indisponível");
+        const payload = normalizarPayload(await resposta.json());
+        itens = payload.items;
+        detalhesCarregados = true;
+        carregado = true;
+      } catch (erro) {
+        console.warn("Detalhes completos do enriquecimento indisponíveis:", erro);
+        await carregar();
+      }
+      return itens;
+    })();
+    try { return await detalhesPromise; }
+    finally { detalhesPromise = null; }
   }
 
   function obter(mediaId) {
@@ -146,12 +178,15 @@ const MediaEnrichment = (() => {
   function _definirParaTeste(novosItens = {}) {
     itens = normalizarPayload({ schemaVersion: 1, items: novosItens }).items;
     carregado = true;
+    detalhesCarregados = true;
     return itens;
   }
 
   return {
     SNAPSHOT_URL,
+    SEARCH_INDEX_URL,
     carregar,
+    carregarDetalhes,
     obter,
     obterSegmentos,
     camposPesquisa,
