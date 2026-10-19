@@ -731,7 +731,7 @@ const SearchEngine = (() => {
       if (uf) adicionar("UF", uf[1].toUpperCase(), registro);
       String(registro.PGM || "").split(/[\n\r,;+|/]+/)
         .map((parte) => parte.trim()).filter(Boolean)
-        .forEach((pgm) => adicionar("PGM", pgm, registro));
+        .forEach((pgm) => adicionar("PGM", normalizarFiltro(pgm), registro));
     });
     cacheIndicesCampos.set(lista, index);
     return index;
@@ -747,7 +747,7 @@ const SearchEngine = (() => {
       const grupos = indexados.map(({ campo, valor }) => {
         const chave = campo === "UF" ? normalizarFiltro(valor).toUpperCase()
           : campo === "ID" && typeof MediaIdUtils !== "undefined" ? MediaIdUtils.normalizar(valor)
-          : String(valor).trim();
+          : campo === "PGM" ? normalizarFiltro(valor) : String(valor).trim();
         return Array.from(indice[campo].get(chave) || []);
       });
       candidatos = grupos.reduce((menor, grupo) => grupo.length < menor.length ? grupo : menor, registros);
@@ -760,7 +760,9 @@ const SearchEngine = (() => {
         return Boolean(exato) && separarIdsOriginais(registro.ID).some((id) => id.toUpperCase() === exato);
       }
       if (campo === "PGM") {
-        return String(registro.PGM || "").split(/[\n\r,;+|/]+/).some((parte) => parte.trim() === valor.trim());
+        const procurado = normalizarFiltro(valor);
+        return Boolean(procurado) && String(registro.PGM || "").split(/[\n\r,;+|/]+/)
+          .some((parte) => normalizarFiltro(parte) === procurado);
       }
       if (campo === "UF") {
         const local = normalizarFiltro(registro.LOCAL);
