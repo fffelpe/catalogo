@@ -1,0 +1,67 @@
+name: Monitorar integridade da sincronização
+
+on:
+  workflow_run:
+    workflows:
+      - "Sincronizar planilhas do catálogo"
+      - "Sincronizar créditos"
+      - "Deploy catálogo no GitHub Pages"
+    types:
+      - completed
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  issues: write
+
+concurrency:
+  group: monitorar-integridade-catalogo
+  cancel-in-progress: false
+
+jobs:
+  alertar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Abrir ou encerrar alerta sem duplicar issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const abertas = await github.paginate(github.rest.issues.listForRepo,
+              { owner, repo, state: "open", per_page: 100, labels: "catalogo-alerta" })
+              .catch(async () => github.paginate(github.rest.issues.listForRepo,
+                { owner, repo, state: "open", per_page: 100 }));
+            const localizar = (titulo) => abertas.find((issue) => !issue.pull_request && issue.title === titulo);
+
+            async function ajustar(titulo, comFalha, corpo) {
+              const anterior = localizar(titulo);
+              if (comFalha && !anterior) {
+                await github.rest.issues.create({ owner, repo, title: titulo, body: corpo, labels: ["catalogo-alerta"] })
+                  .catch(async () => github.rest.issues.create({ owner, repo, title: titulo, body: corpo }));
+              } else if (comFalha && anterior && anterior.body !== corpo) {
+                await github.rest.issues.update({ owner, repo, issue_number: anterior.number, body: corpo });
+              } else if (!comFalha && anterior) {
+                await github.rest.issues.update({ owner, repo, issue_number: anterior.number, state: "closed" });
+              }
+            }
+
+            if (context.eventName === "workflow_run") {
+              const run = context.payload.workflow_run;
+              const titulo = `[Catálogo] Falha: ${run.name}`;
+              const falhou = ["failure", "timed_out", "action_required"].includes(run.conclusion);
+              const corpo = `Falha observada em ${run.updated_at || run.created_at}.\n\n[Ver execução ${run.id}](${run.html_url}).\n\nEste alerta será fechado automaticamente quando uma execução do mesmo workflow for concluída com sucesso.`;
+              await ajustar(titulo, falhou, corpo);
+            } else {
+              const titulo = "[Catálogo] Sincronização principal atrasada";
+              const resultado = await github.rest.actions.listWorkflowRuns({
+                owner, repo, workflow_id: "sincronizar-planilhas.yml", status: "completed", per_page: 30
+              });
+              const ultimoSucesso = (resultado.data.workflow_runs || []).find((run) => run.conclusion === "success");
+              const idadeHoras = ultimoSucesso ? (Date.now() - Date.parse(ultimoSucesso.updated_at)) / 3_600_000 : Infinity;
+              const atrasado = idadeHoras > 3;
+              const link = ultimoSucesso?.html_url || "https://github.com/" + owner + "/" + repo + "/actions";
+              const corpo = `Última execução principal concluída com sucesso há ${Number.isFinite(idadeHoras) ? idadeHoras.toFixed(1) : "mais de 3"} hora(s).\n\n[Ver histórico](${link}). Verificar GitHub Actions, Google Sheets e credenciais.\n\nO alerta será encerrado quando a sincronização voltar ao intervalo esperado.`;
+              await ajustar(titulo, atrasado, corpo);
+            }

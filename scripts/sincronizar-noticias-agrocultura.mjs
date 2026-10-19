@@ -2,6 +2,7 @@ import process from "node:process";
 import { google } from "googleapis";
 import { extrairMediaIds } from "./media-id.mjs";
 import { mesclarCamposPreservando } from "./mesclagem-metadados.mjs";
+import { salvarRelatorioConflitos } from "./relatorio-conflitos.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const PLANILHA_NOTICIAS_ID = "1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw";
@@ -259,11 +260,12 @@ async function main() {
     const dadosNovos = mesclar(alvo.dados, origemEfetiva, {
       ...opcoesMesclagem,
       onConflito: (conflito) => {
-        const chave = JSON.stringify([idsDoValor(origemEfetiva[0]), alvo.linhaPlanilha, conflito]);
+        const chave = JSON.stringify([idsDoValor(origemEfetiva[0]), alvo.linhaPlanilha, opcoesMesclagem.fonte, conflito]);
         if (conflitosVistos.has(chave)) return;
         conflitosVistos.add(chave);
         conflitosMetadados.push({
           ids: idsDoValor(origemEfetiva[0]).join(", "),
+          fonte: opcoesMesclagem.fonte || "Agrocultura",
           linhaImgs: alvo.tipo === "existente" ? alvo.linhaPlanilha : null,
           ...conflito,
         });
@@ -327,8 +329,8 @@ async function main() {
     }
   }
 
-  integrar(noticias, { somentePreencherVazios: true });
-  integrar(materias, { somentePreencherVazios: true });
+  integrar(noticias, { somentePreencherVazios: true, fonte: "Notícias / stand-ups" });
+  integrar(materias, { somentePreencherVazios: true, fonte: "Matérias exibidas" });
 
   if (atualizacoesPorLinha.size) {
     await sheets.spreadsheets.values.batchUpdate({
@@ -358,6 +360,8 @@ async function main() {
     conflitosMetadados.slice(0, 40).forEach((conflito) => console.warn(JSON.stringify(conflito)));
     if (conflitosMetadados.length > 40) console.warn("Exibidos os 40 primeiros conflitos.");
   }
+
+  await salvarRelatorioConflitos("auditorias/noticias-agrocultura.json", { etapa: "noticias-agrocultura", conflitos: conflitosMetadados });
 
   console.log(
     `Integração concluída. Linhas atualizadas: ${atualizacoesPorLinha.size}; ` +

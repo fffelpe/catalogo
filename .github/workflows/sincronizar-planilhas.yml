@@ -59,6 +59,28 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: npm run sync:planilhas
 
+      - name: Guardar relatórios completos de divergências entre planilhas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-metadados
+          path: auditorias/*.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Resumir divergências identificadas
+        if: always()
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          for (const [rotulo, arquivo] of [["Fontes", "auditorias/fontes.json"], ["Notícias/VTs", "auditorias/noticias-agrocultura.json"]]) {
+            if (!fs.existsSync(arquivo)) continue;
+            const relatorio = JSON.parse(fs.readFileSync(arquivo, "utf8"));
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
+              `- **${rotulo}:** ${relatorio.resumo.totalConflitos} conflito(s), ${relatorio.resumo.totalMediaIds} MediaID(s); detalhes no artefato auditoria-metadados.\n`);
+          }
+          NODE
+
       - name: Gerar snapshot principal do catálogo
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
@@ -92,11 +114,14 @@ jobs:
         run: npm run sync:agrocultura
 
       - name: Evitar atualização sem mudança de conteúdo
-        run: node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json
+        run: node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/sincronizacao-status.json
+
+      - name: Atualizar indicadores horários da sincronização
+        run: node scripts/atualizar-status-sincronizacao.mjs
 
       - name: Publicar snapshots do catálogo
         run: |
-          if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json)" ]; then
+          if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/sincronizacao-status.json)" ]; then
             echo "Nenhuma alteração nos snapshots do catálogo."
             exit 0
           fi
@@ -105,6 +130,7 @@ jobs:
           cp data/catalogo-acervo.json /tmp/catalogo-snapshots/catalogo-acervo.json
           cp data/agrocultura-acervo.json /tmp/catalogo-snapshots/agrocultura-acervo.json
           cp data/afiliadas-reporteres.json /tmp/catalogo-snapshots/afiliadas-reporteres.json
+          cp data/sincronizacao-status.json /tmp/catalogo-snapshots/sincronizacao-status.json
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -118,13 +144,14 @@ jobs:
             cp /tmp/catalogo-snapshots/catalogo-acervo.json data/catalogo-acervo.json
             cp /tmp/catalogo-snapshots/agrocultura-acervo.json data/agrocultura-acervo.json
             cp /tmp/catalogo-snapshots/afiliadas-reporteres.json data/afiliadas-reporteres.json
+            cp /tmp/catalogo-snapshots/sincronizacao-status.json data/sincronizacao-status.json
 
             # Recalcula depois do reset para preservar qualquer palavra-chave manual
             # que tenha sido adicionada à main enquanto esta execução estava em andamento.
             npm run sync:keywords
-            node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json
+            node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/sincronizacao-status.json
 
-            git add data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json
+            git add data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/sincronizacao-status.json
 
             if git diff --cached --quiet; then
               echo "Os snapshots já estão atualizados na branch main."
