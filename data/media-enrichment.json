@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T19:49:46.581Z",
+  "generatedAt": "2026-10-19T23:10:52.282Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1049313,12 +1049313,19 @@
       "keywords": [
         "degas",
         "lazer",
-        "jornal da cultura",
-        "tv aperipê",
-        "pernambuco - pe",
-        "aracaju",
-        "sergipe - se",
-        "aracaju - se"
+        "exposição",
+        "borges",
+        "recife",
+        "instituto",
+        "victória",
+        "ricardo",
+        "campos",
+        "fotografias",
+        "esculturas",
+        "nordeste",
+        "obras",
+        "bailarinas",
+        "dezessete"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1049379,12 +1049386,18 @@
         "teto desaba",
         "túnel do tempo",
         "política",
-        "jornal da cultura",
-        "tv câmara",
-        "brasília - df",
-        "desaba",
-        "túnel",
-        "teto"
+        "câmara",
+        "deputados",
+        "madrugada",
+        "entrarem",
+        "contato",
+        "polícia",
+        "acesso",
+        "melhor",
+        "anexo",
+        "nessa",
+        "tunel",
+        "será"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1049398,6 +1049411,7 @@
       ],
       "manualPlaces": [],
       "organizations": [
+        "Câmara dos Deputados",
         "TV CÂMARA"
       ],
       "manualOrganizations": [],
@@ -1049408,17 +1049422,41 @@
       "manualTitle": "",
       "keywords": [
         "vt peneirador",
-        "agrocultura",
-        "peneirador"
+        "café",
+        "ifes",
+        "máquina",
+        "ideia",
+        "sebrae",
+        "peneirador",
+        "data",
+        "invenção",
+        "projeto",
+        "vargem",
+        "apoio",
+        "grão",
+        "peneira",
+        "motor"
       ],
       "manualKeywords": [],
       "subjects": [],
       "manualSubjects": [],
       "people": [
-        "ANY COMETTI"
+        "ANY COMETTI",
+        "Culturas do Campo",
+        "CAFEICULTOR INVENTOR",
+        "KALEB SILVA",
+        "minha esposa para fazer o prototipo",
+        "para adaptação",
+        "NO MEIO DO CAFEZAL",
+        "EMPREENDEDORISMO E ÀS INOVAÇÕES",
+        "a mão do anatalicio",
+        "TV Marcelo Miranda",
+        "VERÔNICA SALAZAR"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "SEBRAE / ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1049429,18 +1049467,38 @@
       "manualTitle": "",
       "keywords": [
         "vt pecuária leiteira",
-        "agrocultura",
-        "leiteira",
-        "pecuária"
+        "crédito",
+        "bem-estar",
+        "leite",
+        "secretário-executivo",
+        "finalização",
+        "zootecnista",
+        "consultor",
+        "gutierrez",
+        "pollastre",
+        "oliveira",
+        "pecuária",
+        "sindilat",
+        "sugestão",
+        "bilhões"
       ],
       "manualKeywords": [],
       "subjects": [],
       "manualSubjects": [],
       "people": [
-        "BRUNO FAUSTINO"
+        "BRUNO FAUSTINO",
+        "RODA COMP",
+        "ESCREVER NO INÍCIO DA PASSAGEM",
+        "ESCREVER NO FINAL DA PASSAGEM",
+        "DARLAN PAGLIARINI",
+        "ISABELA SANDRI",
+        "MATHEUS LOPES"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "PORTO ALEGRE / RS",
+        "Secretário-executivo do Sindilat / RS"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1049759,11 +1049817,18 @@
         "greening",
         "doença cítrica",
         "agronegócio",
-        "agrocultura",
-        "tv unesp / sp",
-        "bauru - sp",
-        "bauru",
-        "são paulo - sp"
+        "cobertura",
+        "plantas",
+        "conta",
+        "fundecitrus",
+        "percentuais",
+        "vanderlei",
+        "easynews",
+        "psilídeo",
+        "pontos",
+        "principalmente",
+        "desaceleração",
+        "produtividade"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1049771,7 +1049836,19 @@
       ],
       "manualSubjects": [],
       "people": [
-        "JÚLIO PENARIOL"
+        "JÚLIO PENARIOL",
+        "PRINCIPAL E MAIS DEVASTADORA DOENÇA",
+        "CITRÍCOLA DE SÃO PAULO E DO TRIÂNGULO",
+        "FUNDO DE DEFESA DA CITRICULTURA",
+        "ÚLTIMOS TRÊS ANOS OCORREU",
+        "GREENING. ESTE CONTROLE TEM SIDO",
+        "QUE POSSUEM DIFERENTES MODOS DE AÇÃO",
+        "AFETADAS TAMBÉM COLABOROU PARA CONTER",
+        "CONTINUA COMPROMETENDO A",
+        "VOLUME DE CHUVAS REGISTRADOS NAS",
+        "PORQUE O CLIMA MAIS ÚMIDO E QUENTE",
+        "BO AGROCULTURA AVANÇO GREENING",
+        "Unesp NOT"
       ],
       "manualPeople": [],
       "places": [
@@ -1049878,12 +1049955,15 @@
       "keywords": [
         "livros infantis",
         "educação",
-        "jornal da cultura",
-        "sergipe - se",
+        "infantil",
+        "boletim",
+        "livro",
+        "encerramento",
         "aracaju",
-        "aracaju - se",
-        "infantis",
-        "livros"
+        "cibelle",
+        "autora",
+        "bastos",
+        "aline"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1049910,11 +1049990,19 @@
       "keywords": [
         "exposição fotos frevo",
         "cultura / arte",
-        "jornal da cultura",
-        "pernambuco - pe",
+        "ferreira",
+        "artista",
+        "olinda",
+        "passista",
+        "plástico",
         "exposição",
-        "fotos",
-        "frevo"
+        "improviso",
+        "malaquias",
+        "marcone",
+        "tropeço",
+        "frevo",
+        "guarda-chuva",
+        "revelamento"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1049939,11 +1050027,19 @@
       "keywords": [
         "férias com tartarugas marinhas",
         "lazer",
-        "jornal da cultura",
-        "pernambuco - pe",
         "tartarugas",
         "marinhas",
-        "férias"
+        "crianças",
+        "férias",
+        "câmeras",
+        "espécie",
+        "olinda",
+        "anos",
+        "planejamento",
+        "secretário",
+        "tartaruga",
+        "ambiente",
+        "cabral"
       ],
       "manualKeywords": [],
       "subjects": [
