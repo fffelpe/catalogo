@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T20:23:28.029Z",
+  "generatedAt": "2026-10-19T19:24:30.519Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -22,9 +22,9 @@
     ]
   },
   "resumo": {
-    "materiais": 1958,
+    "materiais": 1959,
     "vts": 615,
-    "noticias": 370,
+    "noticias": 371,
     "coberturas": 1352
   },
   "vts": [
@@ -8790,6 +8790,34 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005483",
+      "ids": [
+        "1452B005483"
+      ],
+      "descricao": "ANALISE DE SEMENTES + CIENTISTAS EM LABORATÓRIOS + PESQUISAS LABORATORIAIS +",
+      "reporter": "ELAINE SILVA",
+      "data": "17/10/2026",
+      "local": "CAMPO GRANDE - MS",
+      "pgm": "385"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005469",
+      "ids": [
+        "1452B005469"
+      ],
+      "descricao": "BOIS SE CANGAM SOZINHOS + BOIS BAIANO E GIGANTE",
+      "reporter": "GREICE SAUER",
+      "data": "17/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "385"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B005513",
       "ids": [
         "1452B005513"
@@ -8798,20 +8826,6 @@
       "reporter": "DANIELA NUNES",
       "data": "17/10/2026",
       "local": "MINAS GERAIS - MG",
-      "pgm": "385"
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B005465",
-      "ids": [
-        "1452B005465"
-      ],
-      "descricao": "EXPORTAÇÃO CARNE DE FRANGO + FRIGORIFICO DE FRANGO + GALINHAS + AVES",
-      "reporter": "SAMUEL ROCHA",
-      "data": "17/10/2026",
-      "local": "PARANÁ - PR",
       "pgm": "385"
     },
     {
