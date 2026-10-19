@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T20:23:12.729Z",
-  "total": 41488,
+  "generatedAt": "2026-10-19T19:49:09.756Z",
+  "total": 41494,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530600,6 +530600,78 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "385",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018254",
+      "DESCRICAO": "OFICINA DE LIBRAS",
+      "DATA": "17/09/2026",
+      "LOCAL": "SERGIPE - SE",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018255",
+      "DESCRICAO": "EXPOSIÇÃO IMAGENS QUE FALAM",
+      "DATA": "18/09/2026",
+      "LOCAL": "SERGIPE - SE",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018256",
+      "DESCRICAO": "LIVROS INFANTIS",
+      "DATA": "15/07/2026",
+      "LOCAL": "SERGIPE - SE",
+      "REPORTER": "CIBELE MOURA",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018257",
+      "DESCRICAO": "EXPOSIÇÃO FOTOS FREVO",
+      "DATA": "19/08/2026",
+      "LOCAL": "PERNAMBUCO - PE",
+      "REPORTER": "VICTÓRIA CAMPOS",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018258",
+      "DESCRICAO": "FÉRIAS COM TARTARUGAS MARINHAS",
+      "DATA": "22/07/2026",
+      "LOCAL": "PERNAMBUCO - PE",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018259",
+      "DESCRICAO": "REDUÇÃO DE CHUVAS EFEITOS EL NIÑO",
+      "DATA": "15/09/2026",
+      "LOCAL": "SERGIPE - SE",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
       "DURACOES": {}
     }
   ]

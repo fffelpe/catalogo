@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T20:23:39.747Z",
+  "generatedAt": "2026-10-19T19:49:46.581Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1049817,6 +1049817,174 @@
       "organizations": [
         "TV UNESP / SP"
       ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018254": {
+      "title": "Oficina de Libras",
+      "manualTitle": "",
+      "keywords": [
+        "oficina de libras",
+        "cultura / arte",
+        "jornal da cultura",
+        "sergipe - se",
+        "oficina",
+        "libras"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SERGIPE - SE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018255": {
+      "title": "Exposição Imagens Que Falam",
+      "manualTitle": "",
+      "keywords": [
+        "exposição imagens que falam",
+        "cultura / arte",
+        "jornal da cultura",
+        "sergipe - se",
+        "exposição",
+        "falam"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SERGIPE - SE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018256": {
+      "title": "Livros Infantis",
+      "manualTitle": "",
+      "keywords": [
+        "livros infantis",
+        "educação",
+        "jornal da cultura",
+        "sergipe - se",
+        "aracaju",
+        "aracaju - se",
+        "infantis",
+        "livros"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "CIBELE MOURA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SERGIPE - SE",
+        "ARACAJU",
+        "ARACAJU - SE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018257": {
+      "title": "Exposição Fotos Frevo",
+      "manualTitle": "",
+      "keywords": [
+        "exposição fotos frevo",
+        "cultura / arte",
+        "jornal da cultura",
+        "pernambuco - pe",
+        "exposição",
+        "fotos",
+        "frevo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VICTÓRIA CAMPOS"
+      ],
+      "manualPeople": [],
+      "places": [
+        "PERNAMBUCO - PE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018258": {
+      "title": "Férias com Tartarugas Marinhas",
+      "manualTitle": "",
+      "keywords": [
+        "férias com tartarugas marinhas",
+        "lazer",
+        "jornal da cultura",
+        "pernambuco - pe",
+        "tartarugas",
+        "marinhas",
+        "férias"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PERNAMBUCO - PE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018259": {
+      "title": "Redução de Chuvas Efeitos El Niño",
+      "manualTitle": "",
+      "keywords": [
+        "redução de chuvas efeitos el niño",
+        "meio ambiente",
+        "jornal da cultura",
+        "sergipe - se",
+        "efeitos",
+        "redução",
+        "chuvas",
+        "niño"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SERGIPE - SE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
       "manualOrganizations": [],
       "segments": []
     }
