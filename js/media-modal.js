@@ -290,7 +290,7 @@ const MediaModal = (() => {
       let enrichment = {};
       if (typeof MediaEnrichment !== "undefined") {
         try {
-          await MediaEnrichment.carregar();
+          await MediaEnrichment.carregarDetalhes();
           enrichment = MediaEnrichment.obter(normalizado) || {};
         } catch (erro) {
           console.warn("Enriquecimento indisponível no modal:", erro);
