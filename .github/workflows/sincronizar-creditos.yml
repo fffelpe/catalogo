@@ -12,9 +12,11 @@ on:
     paths:
       - "scripts/media-id.mjs"
       - "scripts/creditos-conflitos.mjs"
+      - "scripts/creditos-cache.mjs"
       - "scripts/estabilizar-snapshots.mjs"
       - "scripts/sincronizar-creditos.mjs"
       - "tests/creditos-conflitos.test.mjs"
+      - "tests/creditos-cache.test.mjs"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/sincronizar-creditos.yml"
@@ -44,7 +46,7 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
 
       - name: Testar resolução de conflitos de créditos
-        run: node --test tests/creditos-conflitos.test.mjs
+        run: node --test tests/creditos-conflitos.test.mjs tests/creditos-cache.test.mjs
 
       - name: Sincronizar créditos do Google Drive
         env:
