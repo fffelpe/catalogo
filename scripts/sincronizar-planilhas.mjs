@@ -4,10 +4,11 @@ import { extrairMediaIds, validarConteudoMediaIds } from "./media-id.mjs";
 import { normalizarMediaId, programaPorListaDeIds } from "./programa-por-prefixo.mjs";
 import { ehErroPermissaoGoogle } from "./google-sheets-errors.mjs";
 import { mesclarCamposPreservando } from "./mesclagem-metadados.mjs";
+import { identificarLinhasDuplicadas } from "./imgs-dedup.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const NOME_ABA_IMGS = "imgs";
-const RANGE_IMGS = `${NOME_ABA_IMGS}!A2:H`;
+const RANGE_IMGS = `${NOME_ABA_IMGS}!A2:I`;
 
 const PLANILHA_AGROCULTURA_ID = "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To";
 const ABA_AGROCULTURA = "fonte_agrocultura";
@@ -118,7 +119,9 @@ async function carregarImgs() {
   const resposta = await sheets.spreadsheets.values.get({ spreadsheetId: PLANILHA_IMGS_ID, range: RANGE_IMGS });
   const atualizacoesNormalizacao = new Map();
 
-  const linhas = (resposta.data.values || []).map((linha, indice) => {
+  const linhasOriginais = resposta.data.values || [];
+  const pgmPorLinha = linhasOriginais.map((linha) => limparTexto(linha[8]));
+  const linhas = linhasOriginais.map((linha, indice) => {
     const base = normalizarLinhaBase(linha);
     try {
       const normalizada = normalizarLinha(linha, `imgs, linha ${indice + 2}`);
@@ -132,7 +135,7 @@ async function carregarImgs() {
     }
   });
 
-  return { linhas, atualizacoesNormalizacao };
+  return { linhas, pgmPorLinha, atualizacoesNormalizacao };
 }
 
 async function obterSheetId(spreadsheetId, titulo) {
@@ -151,17 +154,8 @@ async function obterSheetIdImgs() {
   return obterSheetId(PLANILHA_IMGS_ID, NOME_ABA_IMGS);
 }
 
-async function removerDuplicatasIdenticas(imgs) {
-  const primeiraLinhaPorConteudo = new Map();
-  const linhasParaExcluir = [];
-
-  imgs.forEach((linha, indice) => {
-    const ids = separarIds(linha[0]);
-    if (!ids.length) return;
-    const chave = JSON.stringify(linha);
-    if (primeiraLinhaPorConteudo.has(chave)) linhasParaExcluir.push(indice + 2);
-    else primeiraLinhaPorConteudo.set(chave, indice + 2);
-  });
+async function removerDuplicatasIdenticas(imgs, pgmPorLinha = []) {
+  const linhasParaExcluir = identificarLinhasDuplicadas(imgs, pgmPorLinha);
 
   if (!linhasParaExcluir.length) return 0;
   const sheetId = await obterSheetIdImgs();
@@ -324,7 +318,7 @@ async function main() {
   let imgs = carregamentoImgs.linhas;
   let atualizacoesNormalizacao = carregamentoImgs.atualizacoesNormalizacao;
 
-  const removidas = await removerDuplicatasIdenticas(imgs);
+  const removidas = await removerDuplicatasIdenticas(imgs, carregamentoImgs.pgmPorLinha);
   if (removidas) {
     carregamentoImgs = await carregarImgs();
     imgs = carregamentoImgs.linhas;
