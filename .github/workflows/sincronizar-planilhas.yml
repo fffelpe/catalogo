@@ -114,7 +114,7 @@ jobs:
         run: npm run sync:agrocultura
 
       - name: Evitar atualização sem mudança de conteúdo
-        run: node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/sincronizacao-status.json
+        run: node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json
 
       - name: Atualizar indicadores horários da sincronização
         run: node scripts/atualizar-status-sincronizacao.mjs
@@ -149,7 +149,7 @@ jobs:
             # Recalcula depois do reset para preservar qualquer palavra-chave manual
             # que tenha sido adicionada à main enquanto esta execução estava em andamento.
             npm run sync:keywords
-            node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/sincronizacao-status.json
+            node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json
 
             git add data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/sincronizacao-status.json
 
