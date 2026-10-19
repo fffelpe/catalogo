@@ -242,7 +242,7 @@ const MediaDetail = (() => {
       return;
     }
 
-    await MediaEnrichment.carregar();
+    await MediaEnrichment.carregarDetalhes();
     if (typeof CreditosMedia !== "undefined") {
       try {
         await CreditosMedia.carregar();
