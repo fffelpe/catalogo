@@ -170,7 +170,26 @@ const CatalogoQualityUI = (() => {
       : `Mostrando ${filtrados.length.toLocaleString("pt-BR")} registro(s).`;
   }
 
+  async function carregarIndicadoresSincronizacao() {
+    const elemento = document.getElementById("qualitySyncStatus");
+    if (!elemento) return;
+    try {
+      const url = new URL("../data/sincronizacao-status.json", document.currentScript?.src || window.location.href);
+      const resposta = await fetch(url, { cache: "no-cache" });
+      if (!resposta.ok) throw new Error("Status indisponível");
+      const status = await resposta.json();
+      const data = (iso) => new Date(iso).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
+      if (status.schemaVersion !== 1 || !status.ultimaVerificacaoFaixaUTC || !status.ultimoAcervoAtualizadoEm) {
+        throw new Error("Status inválido");
+      }
+      elemento.textContent = `Verificação de planilhas: hora iniciada em ${data(status.ultimaVerificacaoFaixaUTC)} (precisão de 1 hora). Última alteração do acervo principal: ${data(status.ultimoAcervoAtualizadoEm)}.`;
+    } catch (erro) {
+      elemento.textContent = "Horário de verificação não disponível. Consulte as execuções no GitHub Actions.";
+    }
+  }
+
   async function inicializar() {
+    void carregarIndicadoresSincronizacao();
     let creditosCarregados = false;
     try {
       await DadosMedia.carregarCSV();
