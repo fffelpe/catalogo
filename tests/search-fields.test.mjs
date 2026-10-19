@@ -59,3 +59,13 @@ test("reaproveita consultas idênticas e invalida cache após enriquecimento", (
   motor.limparCache();
   assert.equal(motor.pesquisar(dados, "repórter:Maria").length, 1);
 });
+
+test("filtro PGM ignora diferenças de acentuação, caixa e pontuação", () => {
+  const motor = carregarBusca();
+  const dados = [
+    { ID: "1452B004869", PGM: "Edição Especial 025", PROGRAMA: "AGROCULTURA" },
+    { ID: "1452B004870", PGM: "Edição Regular 025", PROGRAMA: "AGROCULTURA" }
+  ];
+  const resultados = motor.pesquisar(dados, 'pgm:"edicao especial 025"');
+  assert.deepEqual(Array.from(resultados, (r) => r.ID), ["1452B004869"]);
+});
