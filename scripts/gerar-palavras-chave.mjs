@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import { gerarEnriquecimentoCatalogo } from "./palavras-chave.mjs";
+import { gerarIndiceBuscaEnriquecimento } from "./indice-busca-enriquecimento.mjs";
 
 const CAMINHOS = {
   catalogo: "data/catalogo-acervo.json",
@@ -51,6 +52,8 @@ async function main() {
   const comOitoOuMais = quantidadesAutomaticas.filter((quantidade) => quantidade >= 8).length;
 
   await fs.writeFile(CAMINHOS.saida, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");
+  const indiceBusca = gerarIndiceBuscaEnriquecimento(snapshot);
+  await fs.writeFile("data/media-search-index.json", `${JSON.stringify(indiceBusca)}\n`, "utf8");
 
   console.log(
     `Enriquecimento: ${itens.length} Media ID(s), ${totalKeywords} palavra(s)-chave automática(s), ` +
