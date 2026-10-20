@@ -3,11 +3,13 @@ import process from "node:process";
 import { google } from "googleapis";
 import { extrairMediaIds } from "./media-id.mjs";
 import { construirIndiceLocais, resolverLocal } from "./agrocultura-local.mjs";
+import { classificarAcervoAgrocultura } from "./agrocultura-classificacao.mjs";
 
 const PLANILHAS = {
   vts: "1Ny0gjt-4du7cJ-ejgahfhdplnCBl58d6RV7kfuLjKM0",
   noticias: "1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw",
   imagens: "1M4ZVI_ax1ziVttl87FxFC0xxs7zRtVhj9yoIFFUb1aI",
+  fonteAgrocultura: "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To",
   naoExibidas: "1snKWDdgFQ1T-AXdEU6Hof9V2B56v5qkQKfUjrzobtGU",
   imgs: "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs",
 };
@@ -17,6 +19,7 @@ const ABA_FAUSTINO = "VTS FAUSTINO";
 const ABA_NOTICIAS = "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ";
 const ABA_IMAGENS = "Página1";
 const ABA_NAO_EXIBIDAS = "MATÉRIAS QUE NÃO FORAM AO AR";
+const ABA_FONTE_AGROCULTURA = "fonte_agrocultura";
 
 const credenciaisJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
 if (!credenciaisJson) throw new Error("Secret GOOGLE_SERVICE_ACCOUNT_JSON não configurado.");
@@ -91,6 +94,17 @@ async function ler(spreadsheetId, range) {
   return resposta.data.values || [];
 }
 
+function nomeCabecalho(valor) {
+  return texto(valor).normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toUpperCase().replace(/[^A-Z0-9]/g, "");
+}
+
+function coluna(linha, cabecalho, ...nomes) {
+  const chaves = nomes.map(nomeCabecalho);
+  const indice = cabecalho.findIndex((nome) => chaves.includes(nomeCabecalho(nome)));
+  return indice < 0 ? "" : linha[indice];
+}
+
 async function tentarCarregar(rotulo, funcao) {
   try {
     const registros = await funcao();
@@ -103,7 +117,7 @@ async function tentarCarregar(rotulo, funcao) {
   }
 }
 
-function registroBase({ tipo, origem, aba, id, descricao, reporter, data, local, pgm, formatoData = "dmy" }) {
+function registroBase({ tipo, origem, aba, id, descricao, reporter, data, local, pgm, afiliada, formatoData = "dmy" }) {
   const listaIds = ids(id);
   if (!listaIds.length) return null;
   return {
@@ -117,6 +131,7 @@ function registroBase({ tipo, origem, aba, id, descricao, reporter, data, local,
     data: texto(data),
     local: texto(local),
     pgm: texto(pgm),
+    afiliada: texto(afiliada),
     _timestamp: dataParaTimestamp(data, formatoData),
   };
 }
@@ -139,35 +154,41 @@ async function carregarVts() {
   const locaisPorId = await carregarLocaisVts();
 
   for (const aba of ABAS_VTS) {
-    const linhas = await ler(PLANILHAS.vts, `'${aba}'!A2:E`);
+    const ultimaColuna = Number(aba) <= 2022 ? "E" : "F";
+    const [cabecalho = [], ...linhas] = await ler(PLANILHAS.vts, `'${aba}'!A1:${ultimaColuna}`);
+
     for (const linha of linhas) {
+      const id = coluna(linha, cabecalho, "ID", "MEDIA ID");
       const registro = registroBase({
         tipo: "vt",
         origem: "MATÉRIAS QUE FORAM AO AR_",
         aba,
-        pgm: linha[0],
-        descricao: linha[1],
-        reporter: linha[2],
-        id: linha[3],
-        data: linha[4],
-        local: resolverLocal(ids(linha[3]), locaisPorId),
+        pgm: coluna(linha, cabecalho, "PGM"),
+        descricao: coluna(linha, cabecalho, "VT"),
+        reporter: coluna(linha, cabecalho, "REPÓRTER", "REPORTER"),
+        id,
+        data: coluna(linha, cabecalho, "EXIBIDO", "DATA"),
+        afiliada: coluna(linha, cabecalho, "AFILIADA"),
+        local: resolverLocal(ids(id), locaisPorId),
       });
       if (registro) registros.push(registro);
     }
   }
 
-  const faustino = await ler(PLANILHAS.vts, `'${ABA_FAUSTINO}'!A2:D`);
+  const [cabecalhoFaustino = [], ...faustino] =
+    await ler(PLANILHAS.vts, `'${ABA_FAUSTINO}'!A1:D`);
   for (const linha of faustino) {
+    const id = coluna(linha, cabecalhoFaustino, "ID");
     const registro = registroBase({
       tipo: "vt",
       origem: "MATÉRIAS QUE FORAM AO AR_",
       aba: ABA_FAUSTINO,
-      pgm: linha[0],
-      descricao: linha[1],
+      pgm: coluna(linha, cabecalhoFaustino, "PGM"),
+      descricao: coluna(linha, cabecalhoFaustino, "VT"),
       reporter: "BRUNO FAUSTINO",
-      id: linha[2],
-      data: linha[3],
-      local: resolverLocal(ids(linha[2]), locaisPorId),
+      id,
+      data: coluna(linha, cabecalhoFaustino, "EXIBIDO", "DATA"),
+      local: resolverLocal(ids(id), locaisPorId),
     });
     if (registro) registros.push(registro);
   }
@@ -176,7 +197,8 @@ async function carregarVts() {
 }
 
 async function carregarNoticias() {
-  const linhas = await ler(PLANILHAS.noticias, `'${ABA_NOTICIAS.replaceAll("'", "''")}'!A2:I`);
+  const [cabecalho = [], ...linhas] =
+    await ler(PLANILHAS.noticias, `'${ABA_NOTICIAS.replaceAll("'", "''")}'!A1:I`);
   const registros = [];
 
   for (const linha of linhas) {
@@ -184,61 +206,79 @@ async function carregarNoticias() {
       tipo: "noticias",
       origem: "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       aba: ABA_NOTICIAS,
-      pgm: linha[0],
-      id: linha[1],
-      data: linha[2],
-      descricao: linha[3],
-      local: linha[4],
-      reporter: linha[5],
+      pgm: coluna(linha, cabecalho, "PGM"),
+      id: coluna(linha, cabecalho, "ID"),
+      data: coluna(linha, cabecalho, "DATA"),
+      descricao: coluna(linha, cabecalho, "ASSUNTO"),
+      local: coluna(linha, cabecalho, "UF"),
+      reporter: coluna(linha, cabecalho, "REPÓRTER"),
+      afiliada: coluna(linha, cabecalho, "AFILIADA / EMISSORA"),
     });
     if (registro) registros.push(registro);
   }
-
   return registros;
 }
 
 async function carregarImagensCobertura() {
   const registros = [];
-  const imagens = await ler(PLANILHAS.imagens, `'${ABA_IMAGENS}'!A2:D`);
+  const [cabecalho = [], ...imagens] = await ler(PLANILHAS.imagens, `'${ABA_IMAGENS}'!A1:D`);
 
   for (const linha of imagens) {
     const registro = registroBase({
       tipo: "cobertura",
       origem: "IMAGENS AGROCULTURA 15.07.2026",
       aba: ABA_IMAGENS,
-      id: linha[0],
-      data: linha[1],
-      local: linha[2],
-      descricao: linha[3],
-      reporter: "",
-      pgm: "",
+      id: coluna(linha, cabecalho, "ID"),
+      data: coluna(linha, cabecalho, "DATA"),
+      local: coluna(linha, cabecalho, "ESTADO"),
+      descricao: coluna(linha, cabecalho, "DETALHES"),
     });
     if (registro) registros.push(registro);
   }
+  return registros;
+}
 
+async function carregarFonteAgrocultura() {
+  const registros = [];
+  const [cabecalho = [], ...linhas] =
+    await ler(PLANILHAS.fonteAgrocultura, `'${ABA_FONTE_AGROCULTURA}'!A1:H`);
+
+  for (const linha of linhas) {
+    const registro = registroBase({
+      tipo: "cobertura",
+      origem: "fonte_agrocultura",
+      aba: ABA_FONTE_AGROCULTURA,
+      id: coluna(linha, cabecalho, "ID"),
+      data: coluna(linha, cabecalho, "DATA"),
+      descricao: coluna(linha, cabecalho, "DESCRIÇÃO", "DESCRICAO"),
+      local: coluna(linha, cabecalho, "LOCAL"),
+      reporter: coluna(linha, cabecalho, "REPÓRTER"),
+      afiliada: coluna(linha, cabecalho, "AFILIADA / EMISSORA"),
+    });
+    if (registro) registros.push(registro);
+  }
   return registros;
 }
 
 async function carregarMateriasNaoExibidas() {
   const registros = [];
-  const linhas = await ler(PLANILHAS.naoExibidas, `'${ABA_NAO_EXIBIDAS}'!A2:E`);
+  const [cabecalho = [], ...linhas] =
+    await ler(PLANILHAS.naoExibidas, `'${ABA_NAO_EXIBIDAS}'!A1:E`);
 
   for (const linha of linhas) {
     const registro = registroBase({
       tipo: "cobertura",
       origem: "MATÉRIAS QUE NÃO FORAM AO AR",
       aba: ABA_NAO_EXIBIDAS,
-      data: linha[0],
-      id: linha[1],
-      reporter: linha[2],
-      local: "",
-      descricao: linha[4],
-      pgm: "",
+      data: coluna(linha, cabecalho, "RECEBIDO EM"),
+      id: coluna(linha, cabecalho, "ID"),
+      reporter: coluna(linha, cabecalho, "REPÓRTER"),
+      afiliada: coluna(linha, cabecalho, "FILIADA", "AFILIADA"),
+      descricao: coluna(linha, cabecalho, "MATÉRIAS", "MATERIAS"),
       formatoData: "mdy",
     });
     if (registro) registros.push(registro);
   }
-
   return registros;
 }
 
@@ -252,11 +292,12 @@ function limparInternos(registro) {
 }
 
 async function main() {
-  const [vtsFonte, noticiasFonte, imagensFonte, naoExibidasFonte] = await Promise.all([
+  const [vtsFonte, noticiasFonte, imagensFonte, naoExibidasFonte, fonteAgroFonte] = await Promise.all([
     tentarCarregar("VTs", carregarVts),
     tentarCarregar("Notícias/stand-ups", carregarNoticias),
     tentarCarregar("Imagens de cobertura", carregarImagensCobertura),
     tentarCarregar("Matérias não exibidas", carregarMateriasNaoExibidas),
+    tentarCarregar("fonte_agrocultura", carregarFonteAgrocultura),
   ]);
 
   const falhasFontes = [
@@ -264,6 +305,7 @@ async function main() {
     ["Notícias/stand-ups", noticiasFonte.erro],
     ["Imagens de cobertura", imagensFonte.erro],
     ["Matérias não exibidas", naoExibidasFonte.erro],
+    ["fonte_agrocultura", fonteAgroFonte.erro],
   ].filter(([, erro]) => erro);
 
   if (falhasFontes.length) {
@@ -275,9 +317,11 @@ async function main() {
     );
   }
 
-  const vts = vtsFonte.registros;
-  const noticias = noticiasFonte.registros;
-  const coberturas = [...imagensFonte.registros, ...naoExibidasFonte.registros];
+  const { vts, noticias, coberturas, removidosDaCobertura } = classificarAcervoAgrocultura({
+    vts: vtsFonte.registros,
+    noticias: noticiasFonte.registros,
+    coberturas: [...fonteAgroFonte.registros, ...imagensFonte.registros, ...naoExibidasFonte.registros],
+  });
 
   if (!vts.length && !noticias.length && !coberturas.length) {
     throw new Error("Nenhuma fonte do AgroCultura pôde ser lida. Verifique as permissões da conta de serviço.");
@@ -297,6 +341,7 @@ async function main() {
       noticias: noticiasFonte.erro,
       imagens: imagensFonte.erro,
       naoExibidas: naoExibidasFonte.erro,
+      fonteAgrocultura: fonteAgroFonte.erro,
     },
     fontes: {
       vts: [
@@ -305,13 +350,14 @@ async function main() {
         "imgs / LOCAL por Media ID",
       ],
       noticias: ["NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR"],
-      coberturas: ["IMAGENS AGROCULTURA 15.07.2026", "MATÉRIAS QUE NÃO FORAM AO AR"],
+      coberturas: ["fonte_agrocultura", "IMAGENS AGROCULTURA 15.07.2026", "MATÉRIAS QUE NÃO FORAM AO AR"],
     },
     resumo: {
       materiais: todosIds.size,
       vts: new Set(vts.flatMap((r) => r.ids)).size,
       noticias: new Set(noticias.flatMap((r) => r.ids)).size,
       coberturas: new Set(coberturas.flatMap((r) => r.ids)).size,
+      coberturaDuplicadosExcluidos: removidosDaCobertura,
     },
     vts: vts.map(limparInternos),
     noticias: noticias.map(limparInternos),
@@ -322,7 +368,7 @@ async function main() {
   await fs.writeFile("data/agrocultura-acervo.json", `${JSON.stringify(payload, null, 2)}\n`, "utf8");
 
   console.log(`AgroCultura: ${payload.resumo.materiais} IDs únicos.`);
-  console.log(`VTs: ${payload.resumo.vts}; notícias/stand-ups: ${payload.resumo.noticias}; coberturas: ${payload.resumo.coberturas}.`);
+  console.log(`VTs: ${payload.resumo.vts}; notícias: ${payload.resumo.noticias}; coberturas: ${payload.resumo.coberturas}; excluídos da cobertura: ${removidosDaCobertura}.`);
 }
 
 main().catch((erro) => {
