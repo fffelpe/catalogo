@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T20:04:11.956Z",
+  "generatedAt": "2026-10-20T22:23:02.368Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1006250,6 +1006250,7 @@
       "keywords": [
         "vt bufalos unesp",
         "agrocultura",
+        "tv unesp / sp",
         "bauru",
         "são paulo - sp",
         "bauru - sp",
@@ -1006269,7 +1006270,9 @@
         "BAURU - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1006323,6 +1006326,7 @@
       "keywords": [
         "vt estiagem rs",
         "agrocultura",
+        "ulbra tv / rs",
         "rio grande do sul",
         "estiagem"
       ],
@@ -1006337,7 +1006341,9 @@
         "RIO GRANDE DO SUL"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "ULBRA TV / RS"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1006437,6 +1006443,7 @@
       "keywords": [
         "vt agro sp",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "agro"
       ],
@@ -1006451,7 +1006458,9 @@
         "SÃO PAULO"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1006481,6 +1006490,7 @@
       "keywords": [
         "vt fazenda ilpf",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "fazenda",
         "ilpf"
@@ -1006496,7 +1006506,9 @@
         "SÃO PAULO"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1006506,6 +1006518,7 @@
       "keywords": [
         "vt agrovilla sp",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "agrovilla"
       ],
@@ -1006520,7 +1006533,9 @@
         "SÃO PAULO"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1006875,6 +1006890,10 @@
       "keywords": [
         "vt pequi sem espinho",
         "agrocultura",
+        "tv brasil central",
+        "goiânia",
+        "goiás - go",
+        "goiânia - go",
         "espinho",
         "pequi"
       ],
@@ -1006883,9 +1006902,15 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "GOIÂNIA",
+        "GOIÁS - GO",
+        "GOIÂNIA - GO"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1006982,6 +1007007,7 @@
       "keywords": [
         "vt macadâmia sp",
         "agrocultura",
+        "tv unesp / sp",
         "bauru",
         "são paulo - sp",
         "bauru - sp",
@@ -1007000,7 +1007026,9 @@
         "BAURU - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007200,6 +1007228,7 @@
       "keywords": [
         "vt ordenha automática",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1007219,7 +1007248,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007294,6 +1007325,7 @@
       "keywords": [
         "vt alimento espaço",
         "agrocultura",
+        "tv usp / sp",
         "piracicaba",
         "são paulo - sp",
         "piracicaba - sp",
@@ -1007313,7 +1007345,9 @@
         "PIRACICABA - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV USP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007323,6 +1007357,7 @@
       "keywords": [
         "vt etanol hidrogênio",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "são paulo - sp",
         "hidrogênio",
@@ -1007340,7 +1007375,9 @@
         "SÃO PAULO - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007350,6 +1007387,7 @@
       "keywords": [
         "vt etanol hidrogênio",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "são paulo - sp",
         "hidrogênio",
@@ -1007367,7 +1007405,9 @@
         "SÃO PAULO - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007409,6 +1007449,7 @@
       "keywords": [
         "vt prejuízos leite",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1007428,7 +1007469,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007438,6 +1007481,7 @@
       "keywords": [
         "vt prejuízos chuva",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1007457,7 +1007501,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007467,6 +1007513,7 @@
       "keywords": [
         "vt turismo rural",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1007486,7 +1007533,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007528,6 +1007577,7 @@
       "keywords": [
         "vt morango sc",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1007546,7 +1007596,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007640,6 +1007692,7 @@
       "keywords": [
         "vt bolacha natal",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1007659,7 +1007712,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007669,6 +1007724,10 @@
       "keywords": [
         "vt semente pastagem",
         "agrocultura",
+        "tve / es",
+        "vitória",
+        "espírito santo - es",
+        "vitória - es",
         "pastagem",
         "semente"
       ],
@@ -1007679,9 +1007738,15 @@
         "THAIS CINTRA"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "VITÓRIA",
+        "ESPÍRITO SANTO - ES",
+        "VITÓRIA - ES"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007799,6 +1007864,7 @@
       "keywords": [
         "vt idoso agro",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1007818,7 +1007884,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007828,6 +1007896,7 @@
       "keywords": [
         "vt robô caça insetos",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "são paulo - sp",
         "insetos",
@@ -1007846,7 +1007915,9 @@
         "SÃO PAULO - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007856,6 +1007927,7 @@
       "keywords": [
         "vt fazenda histórica pt 1",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "são paulo - sp",
         "histórica",
@@ -1007873,7 +1007945,9 @@
         "SÃO PAULO - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007883,6 +1007957,7 @@
       "keywords": [
         "vt truta piracaia",
         "agrocultura",
+        "tv cultura / sp",
         "piracaia",
         "truta"
       ],
@@ -1007895,7 +1007970,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1007927,6 +1008004,7 @@
       "keywords": [
         "vt outras conservas",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1007946,7 +1008024,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008050,6 +1008130,7 @@
       "keywords": [
         "vt agrishow",
         "agrocultura",
+        "tv cultura / sp",
         "agrishow"
       ],
       "manualKeywords": [],
@@ -1008061,7 +1008142,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008071,6 +1008154,7 @@
       "keywords": [
         "vt orgânicos preços",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "são paulo - sp",
         "orgânicos",
@@ -1008088,7 +1008172,9 @@
         "SÃO PAULO - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008098,6 +1008184,7 @@
       "keywords": [
         "vt trufas",
         "agrocultura",
+        "tv cultura / sp",
         "trufas"
       ],
       "manualKeywords": [],
@@ -1008109,7 +1008196,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008140,6 +1008229,7 @@
       "keywords": [
         "vt farinha de bragança",
         "agrocultura",
+        "tv cultura do pará / pa",
         "bragança",
         "farinha"
       ],
@@ -1008152,7 +1008242,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA DO PARÁ / PA"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008224,6 +1008316,7 @@
       "keywords": [
         "vt unesp gramado",
         "agrocultura",
+        "tv unesp / sp",
         "bauru",
         "são paulo - sp",
         "bauru - sp",
@@ -1008243,7 +1008336,9 @@
         "BAURU - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008253,6 +1008348,7 @@
       "keywords": [
         "vt vinho mg",
         "agrocultura",
+        "rede minas / mg",
         "vinho"
       ],
       "manualKeywords": [],
@@ -1008264,7 +1008360,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "REDE MINAS / MG"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008274,6 +1008372,7 @@
       "keywords": [
         "vt enoturismo",
         "agrocultura",
+        "rede minas / mg",
         "enoturismo"
       ],
       "manualKeywords": [],
@@ -1008285,7 +1008384,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "REDE MINAS / MG"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008357,6 +1008458,7 @@
       "keywords": [
         "vt vinho diamantina",
         "agrocultura",
+        "rede minas / mg",
         "diamantina",
         "vinho"
       ],
@@ -1008369,7 +1008471,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "REDE MINAS / MG"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008484,6 +1008588,7 @@
       "keywords": [
         "vt frutos da mata",
         "agrocultura",
+        "tv cultura / sp",
         "frutos",
         "mata"
       ],
@@ -1008496,7 +1008601,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008538,6 +1008645,7 @@
       "keywords": [
         "vt beiju",
         "agrocultura",
+        "tve / es",
         "vitória",
         "espírito santo - es",
         "vitória - es",
@@ -1008556,7 +1008664,9 @@
         "VITÓRIA - ES"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008566,6 +1008676,7 @@
       "keywords": [
         "vt influencer do agro",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1008585,7 +1008696,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008617,6 +1008730,7 @@
       "keywords": [
         "vt morangos calor",
         "agrocultura",
+        "tve / es",
         "vitória",
         "espírito santo - es",
         "vitória - es",
@@ -1008636,7 +1008750,9 @@
         "VITÓRIA - ES"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008668,6 +1008784,7 @@
       "keywords": [
         "vt cultivo de flores",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1008687,7 +1008804,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008697,6 +1008816,7 @@
       "keywords": [
         "vt rosas paraiso",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1008716,7 +1008836,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008726,6 +1008848,7 @@
       "keywords": [
         "vt café bauru",
         "agrocultura",
+        "tv unesp / sp",
         "bauru",
         "são paulo - sp",
         "bauru - sp",
@@ -1008744,7 +1008867,9 @@
         "BAURU - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008754,6 +1008879,7 @@
       "keywords": [
         "vt lúpulo",
         "agrocultura",
+        "tve / es",
         "vitória",
         "espírito santo - es",
         "vitória - es",
@@ -1008772,7 +1008898,9 @@
         "VITÓRIA - ES"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008782,6 +1008910,7 @@
       "keywords": [
         "vt agricultor raiz",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1008801,7 +1008930,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008811,6 +1008942,7 @@
       "keywords": [
         "vt fazenda recupera",
         "agrocultura",
+        "tv unesp / sp",
         "bauru",
         "são paulo - sp",
         "bauru - sp",
@@ -1008830,7 +1008962,9 @@
         "BAURU - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008840,6 +1008974,7 @@
       "keywords": [
         "vt morangos estufa",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1008859,7 +1008994,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008869,6 +1009006,7 @@
       "keywords": [
         "vt abacaxi bauru",
         "agrocultura",
+        "tv unesp / sp",
         "bauru",
         "são paulo - sp",
         "bauru - sp",
@@ -1008887,7 +1009025,9 @@
         "BAURU - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008897,6 +1009037,7 @@
       "keywords": [
         "vt vinho são joaquim",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1008916,7 +1009057,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008926,6 +1009069,7 @@
       "keywords": [
         "vt hibisco",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1008944,7 +1009088,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008954,6 +1009100,7 @@
       "keywords": [
         "vt avocado sp",
         "agrocultura",
+        "tv unesp / sp",
         "bauru",
         "são paulo - sp",
         "bauru - sp",
@@ -1008972,7 +1009119,9 @@
         "BAURU - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1008982,6 +1009131,7 @@
       "keywords": [
         "vt plantas medicinais",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "são paulo - sp",
         "medicinais",
@@ -1008999,7 +1009149,9 @@
         "SÃO PAULO - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009009,6 +1009161,7 @@
       "keywords": [
         "vt avó agro",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1009027,7 +1009180,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009037,6 +1009192,7 @@
       "keywords": [
         "vt vinho sobrevivente",
         "agrocultura",
+        "tv cultura / sp",
         "sobrevivente",
         "vinho"
       ],
@@ -1009049,7 +1009205,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009103,6 +1009261,10 @@
       "keywords": [
         "vt feira gritos",
         "agrocultura",
+        "tve / es",
+        "vitória",
+        "espírito santo - es",
+        "vitória - es",
         "gritos",
         "feira"
       ],
@@ -1009113,9 +1009275,15 @@
         "VITOR ZUCOLOTTI"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "VITÓRIA",
+        "ESPÍRITO SANTO - ES",
+        "VITÓRIA - ES"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009157,6 +1009325,7 @@
       "keywords": [
         "vt diversificação",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1009175,7 +1009344,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009185,6 +1009356,7 @@
       "keywords": [
         "vt da floresta a mesa",
         "agrocultura",
+        "tv cultura / pa",
         "floresta",
         "mesa"
       ],
@@ -1009197,7 +1009369,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / PA"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009269,6 +1009443,7 @@
       "keywords": [
         "vt febre potomac",
         "agrocultura",
+        "tv unesp / sp",
         "potomac",
         "febre"
       ],
@@ -1009281,7 +1009456,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009291,6 +1009468,10 @@
       "keywords": [
         "vt quilombola padaria",
         "agrocultura",
+        "tve / es",
+        "vitória",
+        "espírito santo - es",
+        "vitória - es",
         "quilombola",
         "padaria"
       ],
@@ -1009301,9 +1009482,15 @@
         "NATALIA VICENTE"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "VITÓRIA",
+        "ESPÍRITO SANTO - ES",
+        "VITÓRIA - ES"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009402,6 +1009589,7 @@
       "keywords": [
         "vt chocolate floresta",
         "agrocultura",
+        "tv cultura / pa",
         "chocolate",
         "floresta"
       ],
@@ -1009414,7 +1009602,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / PA"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009424,6 +1009614,7 @@
       "keywords": [
         "vt mulher pomerana",
         "agrocultura",
+        "tve / es",
         "vitória",
         "espírito santo - es",
         "vitória - es",
@@ -1009443,7 +1009634,9 @@
         "VITÓRIA - ES"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009453,6 +1009646,7 @@
       "keywords": [
         "vt transição energética",
         "agrocultura",
+        "tve / es",
         "vitória",
         "espírito santo - es",
         "vitória - es",
@@ -1009472,7 +1009666,9 @@
         "VITÓRIA - ES"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009514,6 +1009710,7 @@
       "keywords": [
         "vt expointer",
         "agrocultura",
+        "tv ulbra / rs",
         "expointer"
       ],
       "manualKeywords": [],
@@ -1009525,7 +1009722,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV ULBRA / RS"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009535,6 +1009734,7 @@
       "keywords": [
         "vt sistemas integrados",
         "agrocultura",
+        "tv unesp / sp",
         "integrados",
         "sistemas"
       ],
@@ -1009547,7 +1009747,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV UNESP / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009614,6 +1009816,7 @@
       "keywords": [
         "vt agrofloresta / pa",
         "agrocultura",
+        "tv cultura / sp",
         "são paulo",
         "são paulo - sp",
         "agrofloresta"
@@ -1009630,7 +1009833,9 @@
         "SÃO PAULO - SP"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA / SP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009695,7 +1009900,8 @@
       "places": [],
       "manualPlaces": [],
       "organizations": [
-        "ONU"
+        "ONU",
+        "TV CULTURA / PA"
       ],
       "manualOrganizations": [],
       "segments": []
@@ -1009731,6 +1009937,7 @@
       "keywords": [
         "vt mel bracatinga",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1009749,7 +1009956,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1009791,6 +1010000,7 @@
       "keywords": [
         "vt mini agricultor",
         "agrocultura",
+        "rba tv / sc",
         "rio do sul",
         "santa catarina - sc",
         "rio do sul - sc",
@@ -1009810,7 +1010020,9 @@
         "RIO DO SUL - SC"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1041794,7 +1042006,9 @@
         "CASCAVEL - PR"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "CATVE / PR"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1041804,6 +1042018,7 @@
       "keywords": [
         "vt silagem ms",
         "agrocultura",
+        "tve / ms",
         "campo grande",
         "mato grosso do sul - ms",
         "campo grande - ms",
@@ -1041822,7 +1042037,9 @@
         "CAMPO GRANDE - MS"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / MS"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1041856,7 +1042073,9 @@
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "CATVE / PR"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1041906,7 +1042125,9 @@
         "NA PROPRIEDADE DE SETE HECTARES / EM"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1041943,7 +1042164,9 @@
         "CASCAVEL - PR"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "CATVE / PR"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1045226,7 +1045449,9 @@
         "CAMPO GRANDE - MS"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TVE / MS"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
