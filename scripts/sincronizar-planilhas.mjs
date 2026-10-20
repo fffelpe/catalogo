@@ -233,7 +233,10 @@ async function encontrarAbaPorPrefixo(spreadsheetId, prefixo) {
 
 async function carregarIdsJaUtilizadosAgrocultura() {
   const rangesMaterias = [
-    ...ABAS_MATERIAS.map((aba) => `'${aba}'!D2:D`),
+    ...ABAS_MATERIAS.map((aba) => {
+      const colunaId = Number(aba) >= 2023 && Number(aba) <= 2024 ? "E" : "D";
+      return `'${aba}'!${colunaId}2:${colunaId}`;
+    }),
     `'${ABA_VTS_FAUSTINO}'!C2:C`,
   ];
 
@@ -257,6 +260,8 @@ async function carregarIdsJaUtilizadosAgrocultura() {
 }
 
 async function removerAgroculturaJaUtilizados() {
+  // Exclusão lógica: os IDs já utilizados ficam fora da aba Cobertura no snapshot.
+  // Nunca alterar ou apagar linhas na fonte_agrocultura.
   const idsUsados = await carregarIdsJaUtilizadosAgrocultura();
   if (!idsUsados.size) return 0;
 
@@ -265,51 +270,15 @@ async function removerAgroculturaJaUtilizados() {
     range: `${ABA_AGROCULTURA}!A2:A`,
   });
 
-  const linhasParaExcluir = [];
-  const atualizacoesParciais = [];
-
-  (resposta.data.values || []).forEach((linha, indice) => {
-    const numeroLinha = indice + 2;
-    const ids = separarIds(linha[0] || "");
-    if (!ids.length) return;
-
-    const restantes = ids.filter((id) => !idsUsados.has(id));
-    if (restantes.length === ids.length) return;
-
-    if (!restantes.length) {
-      linhasParaExcluir.push(numeroLinha);
-      return;
-    }
-
-    atualizacoesParciais.push({
-      range: `${ABA_AGROCULTURA}!A${numeroLinha}`,
-      values: [[restantes.join("\n")]],
+  const repetidos = new Set();
+  (resposta.data.values || []).forEach((linha) => {
+    separarIds(linha[0] || "").forEach((id) => {
+      if (idsUsados.has(id)) repetidos.add(id);
     });
   });
 
-  if (atualizacoesParciais.length) {
-    await sheets.spreadsheets.values.batchUpdate({
-      spreadsheetId: PLANILHA_AGROCULTURA_ID,
-      requestBody: { valueInputOption: "USER_ENTERED", data: atualizacoesParciais },
-    });
-  }
-
-  if (linhasParaExcluir.length) {
-    const sheetId = await obterSheetId(PLANILHA_AGROCULTURA_ID, ABA_AGROCULTURA);
-    const requests = linhasParaExcluir.sort((a, b) => b - a).map((numeroLinha) => ({
-      deleteDimension: {
-        range: { sheetId, dimension: "ROWS", startIndex: numeroLinha - 1, endIndex: numeroLinha }
-      }
-    }));
-    await sheets.spreadsheets.batchUpdate({
-      spreadsheetId: PLANILHA_AGROCULTURA_ID,
-      requestBody: { requests },
-    });
-  }
-
-  const removidos = linhasParaExcluir.length + atualizacoesParciais.length;
-  console.log(`Agrocultura: ${removidos} registro(s) retirado(s) do estoque porque o Media ID já foi usado em matérias/notícias.`);
-  return removidos;
+  console.log(`Agrocultura: ${repetidos.size} ID(s) já utilizados; planilha de origem preservada. Filtro aplicado na exibição.`);
+  return repetidos.size;
 }
 
 async function main() {
@@ -407,16 +376,12 @@ async function main() {
     });
   }
 
-  // A fonte AgroCultura é estoque. Só removemos depois de garantir que os registros
-  // foram preservados/atualizados na imgs, que funciona como índice histórico geral.
-  let removidosDoEstoqueAgro = 0;
+  // Auditoria somente leitura: a deduplicação ocorre na exibição do AgroCultura.
+  let idsAgroJaUtilizados = 0;
   try {
-    removidosDoEstoqueAgro = await removerAgroculturaJaUtilizados();
+    idsAgroJaUtilizados = await removerAgroculturaJaUtilizados();
   } catch (erro) {
-    if (!ehErroPermissaoGoogle(erro)) throw erro;
-    console.warn(
-      "Agrocultura: não foi possível remover automaticamente IDs já utilizados porque a conta de serviço não tem permissão de edição na fonte_agrocultura. A sincronização de imgs continuará."
-    );
+    console.warn(`Agrocultura: auditoria de IDs repetidos indisponível (${erro.message}). A fonte original não será modificada.`);
   }
 
   if (conflitosMetadados.length) {
@@ -431,7 +396,7 @@ async function main() {
   console.log(`Linhas totalmente duplicadas removidas: ${removidas}`);
   console.log(`Linhas atualizadas/normalizadas: ${atualizacoesPorLinha.size}`);
   console.log(`Novos registros: ${pendentes.length}`);
-  console.log(`Registros retirados do estoque Agrocultura: ${removidosDoEstoqueAgro}`);
+  console.log(`IDs da fonte AgroCultura classificados em VTs ou Notícias: ${idsAgroJaUtilizados}`);
   console.log(`Conflitos de fonte ignorados com segurança: ${conflitosFonte}`);
   console.log(`Registros bloqueados por Media ID duplicado na imgs: ${bloqueadosPorDuplicidade}`);
   console.log(`Total de Media IDs indexados: ${new Set([...existentesPorId.keys(), ...pendentesPorId.keys()]).size}`);
