@@ -102,3 +102,20 @@
   .agro-mais-buscados-lista,
   .mam-agro-resumo { grid-template-columns: 1fr; }
 }
+
+/* Cards das três categorias AgroCultura: cinco colunas em telas largas. */
+.pagina-agrocultura .mam-agro-table-wrap { overflow: visible; }
+.pagina-agrocultura .mam-agro-table tbody { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.pagina-agrocultura .mam-agro-table tbody tr { min-width: 0; }
+.agro-lista-status { margin: 4px 0 0; font-size: 12px; color: #68726b; }
+.agro-carregar-mais { display: block; margin: 16px auto 0; min-width: 190px; }
+.agro-carregar-mais[hidden] { display: none !important; }
+@media (max-width: 1100px) {
+  .pagina-agrocultura .mam-agro-table tbody { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .pagina-agrocultura .mam-agro-table tbody { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 460px) {
+  .pagina-agrocultura .mam-agro-table tbody { grid-template-columns: 1fr; }
+}
