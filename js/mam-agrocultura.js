@@ -28,6 +28,32 @@
     return texto(bruto).toUpperCase().match(/\d{4}[A-Z]\d{5,6}/g) || [];
   }
 
+  function deduplicarRegistros(registros) {
+    const resultado = new Map();
+    for (const registro of registros) {
+      for (const id of idsDoRegistro(registro)) {
+        if (!resultado.has(id)) {
+          resultado.set(id, { ...registro, id, ids: [id] });
+          continue;
+        }
+        const anterior = resultado.get(id);
+        for (const campo of ["descricao", "reporter", "data", "local", "pgm", "afiliada"]) {
+          if (!texto(anterior[campo]) && texto(registro[campo])) anterior[campo] = registro[campo];
+        }
+      }
+    }
+    return [...resultado.values()];
+  }
+
+  function normalizarCategorias(dados) {
+    const vts = deduplicarRegistros(Array.isArray(dados.vts) ? dados.vts : []);
+    const noticias = deduplicarRegistros(Array.isArray(dados.noticias) ? dados.noticias : []);
+    const idsPrioritarios = new Set([...vts, ...noticias].map((registro) => registro.id));
+    const coberturas = deduplicarRegistros(Array.isArray(dados.coberturas) ? dados.coberturas : [])
+      .filter((registro) => !idsPrioritarios.has(registro.id));
+    return { vts, noticias, coberturas };
+  }
+
   function idsSemCreditos(registros) {
     const faltantes = new Set();
     registros.forEach((registro) => {
@@ -55,10 +81,10 @@
     const todos = [...acervo.vts, ...acervo.noticias, ...acervo.coberturas];
     const resumo = acervo.resumo || {};
     const valores = {
-      mamIngestados: valorResumo(resumo, "materiais", contarIdsUnicos(todos)),
-      mamTotalVts: valorResumo(resumo, "vts", contarIdsUnicos(acervo.vts)),
-      mamTotalNoticias: valorResumo(resumo, "noticias", contarIdsUnicos(acervo.noticias)),
-      mamTotalCoberturas: valorResumo(resumo, "coberturas", contarIdsUnicos(acervo.coberturas)),
+      mamIngestados: contarIdsUnicos(todos),
+      mamTotalVts: contarIdsUnicos(acervo.vts),
+      mamTotalNoticias: contarIdsUnicos(acervo.noticias),
+      mamTotalCoberturas: contarIdsUnicos(acervo.coberturas),
       mamIdsSemCreditos: creditosDisponiveis ? idsSemCreditos(todos).size : "—",
     };
 
@@ -105,8 +131,16 @@
     if (topo) topo.hidden = true;
     if (tabela) tabela.hidden = true;
     if (tbody) tbody.innerHTML = "";
+    const mais = document.getElementById("agroCarregarMais");
+    if (mais) mais.hidden = true;
+    const status = document.getElementById("agroListaStatus");
+    if (status) status.textContent = "";
     document.querySelectorAll("[data-agro-tipo]").forEach((b) => b.classList.remove("ativo"));
   }
+
+  let abaAtiva = "";
+  let limiteVisivel = 40;
+  const PASSO_PAGINACAO = 40;
 
   function renderizarTabela(acervo, filtro) {
     const { topo, tabela, tbody, titulo } = elementosTabela();
@@ -114,8 +148,8 @@
 
     const mapa = {
       vt: { titulo: "VT'S", registros: acervo.vts },
-      noticias: { titulo: "Notícias e stand-ups", registros: acervo.noticias },
-      cobertura: { titulo: "Imagens de coberturas", registros: acervo.coberturas },
+      noticias: { titulo: "Notícias e Outras Notícias", registros: acervo.noticias },
+      cobertura: { titulo: "Imagens de Cobertura", registros: acervo.coberturas },
     };
     const selecao = mapa[filtro];
     if (!selecao) return;
@@ -124,13 +158,30 @@
     if (topo) topo.hidden = false;
     if (tabela) tabela.hidden = false;
 
-    const registros = Array.isArray(selecao.registros) ? selecao.registros : [];
+    const termo = normalizar(document.getElementById("searchInput")?.value || "");
+    const palavras = termo.split(/\s+/).filter(Boolean);
+    const registros = (Array.isArray(selecao.registros) ? selecao.registros : [])
+      .filter((registro) => {
+        if (!palavras.length) return true;
+        const indice = normalizar([
+          registro.id, registro.descricao, registro.reporter, registro.data,
+          registro.local, registro.pgm, registro.afiliada, registro.origem,
+        ].join(" "));
+        return palavras.every((palavra) => indice.includes(palavra));
+      });
+
+    const status = document.getElementById("agroListaStatus");
+    const mostrarMais = document.getElementById("agroCarregarMais");
+    if (status) status.textContent =
+      `Exibindo ${Math.min(limiteVisivel, registros.length)} de ${registros.length} Media IDs`;
+    if (mostrarMais) mostrarMais.hidden = registros.length <= limiteVisivel;
+
     if (!registros.length) {
-      tbody.innerHTML = '<tr><td colspan="6">Nenhum material encontrado nesta categoria.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6">Nenhum Media ID encontrado nesta categoria.</td></tr>';
       return;
     }
 
-    tbody.innerHTML = registros.map((registro) => `
+    tbody.innerHTML = registros.slice(0, limiteVisivel).map((registro) => `
       <tr>
         ${celulaId(registro)}
         <td data-label="Descrição">${escapeHtml(registro.descricao)}</td>
@@ -147,8 +198,22 @@
       botao.addEventListener("click", () => {
         document.querySelectorAll("[data-agro-tipo]").forEach((b) => b.classList.remove("ativo"));
         botao.classList.add("ativo");
-        renderizarTabela(acervo, botao.dataset.agroTipo);
+        abaAtiva = botao.dataset.agroTipo;
+        limiteVisivel = PASSO_PAGINACAO;
+        renderizarTabela(acervo, abaAtiva);
       });
+    });
+
+    document.getElementById("agroCarregarMais")?.addEventListener("click", () => {
+      if (!abaAtiva) return;
+      limiteVisivel += PASSO_PAGINACAO;
+      renderizarTabela(acervo, abaAtiva);
+    });
+
+    document.getElementById("searchInput")?.addEventListener("input", () => {
+      if (!abaAtiva) return;
+      limiteVisivel = PASSO_PAGINACAO;
+      renderizarTabela(acervo, abaAtiva);
     });
   }
 
@@ -170,9 +235,7 @@
       throw new Error("O snapshot do AgroCultura está marcado como parcial e não será exibido.");
     }
     return {
-      vts: Array.isArray(dados.vts) ? dados.vts : [],
-      noticias: Array.isArray(dados.noticias) ? dados.noticias : [],
-      coberturas: Array.isArray(dados.coberturas) ? dados.coberturas : [],
+      ...normalizarCategorias(dados),
       resumo: dados.resumo && typeof dados.resumo === "object" ? dados.resumo : {},
       generatedAt: dados.generatedAt || null,
       parcial: false,
