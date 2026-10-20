@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T23:10:52.282Z",
+  "generatedAt": "2026-10-20T20:04:11.956Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1050078,6 +1050078,340 @@
       "manualPeople": [],
       "places": [
         "SERGIPE - SE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005523": {
+      "title": "Cavalo Terapeuta",
+      "manualTitle": "",
+      "keywords": [
+        "cavalo terapeuta",
+        "agronegócio",
+        "cavalo",
+        "quem",
+        "cavalos",
+        "haras",
+        "coração",
+        "campo",
+        "apenas",
+        "quando",
+        "centro",
+        "tambor",
+        "magia",
+        "gaya",
+        "experiência"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "DESENVOLVIMENTO HUMANO",
+        "SONORA FRANCISCO LEAL BELONI",
+        "SOBE SOM",
+        "DA MEDIADORA INGRID",
+        "HORA E MEIA",
+        "CAMINHOS PARA ESSA CONEXÃO",
+        "Maycon Costa",
+        "Marcelo Miranda"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES",
+        "TRABALHO / OS",
+        "MAS HÁ SEIS ANOS / UM"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - ES"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005524": {
+      "title": "Jardim de Mel",
+      "manualTitle": "",
+      "keywords": [
+        "jardim de mel",
+        "agronegócio",
+        "entrevistado",
+        "indicações",
+        "citação",
+        "jardim",
+        "abelhas",
+        "deixa",
+        "colatina",
+        "data",
+        "bióloga",
+        "fundador",
+        "total",
+        "programas",
+        "espírito"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Culturas do Campo",
+        "Maycon Costa",
+        "Thaíz Romão",
+        "ABRIRAM JUNTOS O PRIMEIRO MELIPONÁRIO DO ESTADO",
+        "Natalia Vicente",
+        "TV Veronica Salazar",
+        "Hercules Birchler"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES",
+        "BOAPADA / DE",
+        "PAISAGENS MAIS VERDES / EM"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - ES"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005525": {
+      "title": "Irradiador Gama",
+      "manualTitle": "",
+      "keywords": [
+        "irradiador gama",
+        "agronegócio",
+        "agrocultura",
+        "tv usp",
+        "são paulo - sp",
+        "piracicaba",
+        "piracicaba - sp",
+        "irradiador",
+        "gama"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "PIRACICABA",
+        "PIRACICABA - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV USP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005526": {
+      "title": "Piscicultura",
+      "manualTitle": "",
+      "keywords": [
+        "piscicultura",
+        "agronegócio",
+        "veterinária",
+        "dourados",
+        "produtor",
+        "batista",
+        "agraer",
+        "médica",
+        "rural",
+        "joão",
+        "sonoras"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ELAINE SILVA",
+        "Henrique konno",
+        "Chaiana Schroeder"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - MS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005527": {
+      "title": "Lavoura de Azeitona",
+      "manualTitle": "",
+      "keywords": [
+        "lavoura de azeitona",
+        "agronegócio",
+        "entrevistado",
+        "olivicultor",
+        "citação",
+        "indicações",
+        "cláudio",
+        "azeite",
+        "data",
+        "afonso",
+        "deixa",
+        "clima",
+        "programas",
+        "espírito",
+        "lavoura"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Culturas do Campo",
+        "Fagner Fabrete",
+        "TEMPO DE FLORADA",
+        "Natalia Vicente",
+        "Leonardo Altoé",
+        "TV Marcelo Miranda",
+        "Verônica Salazar"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES",
+        "FICAM NA PROPRIEDADE DO LEONARDO / EM",
+        "ARBEQUINA E ARBOSANA / DE",
+        "GRAPPOLO / DA",
+        "O INVERNO / AS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - ES"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005528": {
+      "title": "Arborização",
+      "manualTitle": "",
+      "keywords": [
+        "arborização",
+        "agronegócio",
+        "agrocultura"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018284": {
+      "title": "Condominio Amigo dos Animais",
+      "manualTitle": "",
+      "keywords": [
+        "condominio amigo dos animais",
+        "meio ambiente",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "condominio",
+        "animais",
+        "amigo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VICTÓRIA AZEVEDO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018285": {
+      "title": "Memorial da Enfermagem",
+      "manualTitle": "",
+      "keywords": [
+        "memorial da enfermagem",
+        "cultura / arte",
+        "jornal da cultura",
+        "são paulo - sp",
+        "enfermagem",
+        "memorial"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018286": {
+      "title": "Delta do Parnaíba — Revoada dos Guarás",
+      "manualTitle": "",
+      "keywords": [
+        "delta do parnaíba",
+        "revoada dos guarás",
+        "lazer",
+        "mundinho",
+        "davidoff",
+        "piauí",
+        "turista",
+        "viagem",
+        "delta",
+        "paisagem",
+        "outubro",
+        "visitantes",
+        "grosselin",
+        "carolina",
+        "natureza"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "HELDER SOUZA",
+        "Visitação e vida nos canais",
+        "Dunas e espera pelos guarás",
+        "MURIEL TENTOU GUARDAR A CENA NO CELULAR",
+        "Mídias digitais Bruna Sampaio",
+        "da equipe"
+      ],
+      "manualPeople": [],
+      "places": [
+        "PIAUÍ - PI"
       ],
       "manualPlaces": [],
       "organizations": [],

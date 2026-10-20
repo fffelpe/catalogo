@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T19:49:09.756Z",
-  "total": 41494,
+  "generatedAt": "2026-10-20T20:03:34.204Z",
+  "total": 41503,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530671,6 +530671,114 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005523",
+      "DESCRICAO": "CAVALO TERAPEUTA",
+      "DATA": "20/10/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005524",
+      "DESCRICAO": "JARDIM DE MEL",
+      "DATA": "20/10/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005525",
+      "DESCRICAO": "IRRADIADOR GAMA",
+      "DATA": "20/10/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV USP",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005526",
+      "DESCRICAO": "PISCICULTURA",
+      "DATA": "16/10/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "ELAINE SILVA",
+      "AFILIADA_EMISSORA": "TVE - MS",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005527",
+      "DESCRICAO": "LAVOURA DE AZEITONA",
+      "DATA": "19/10/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005528",
+      "DESCRICAO": "ARBORIZAÇÃO",
+      "DATA": "20/10/2026",
+      "LOCAL": "",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018284",
+      "DESCRICAO": "CONDOMINIO AMIGO DOS ANIMAIS",
+      "DATA": "19/10/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "VICTÓRIA AZEVEDO",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018285",
+      "DESCRICAO": "MEMORIAL DA ENFERMAGEM",
+      "DATA": "19/10/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018286",
+      "DESCRICAO": "DELTA DO PARNAÍBA + REVOADA DOS GUARÁS",
+      "DATA": "19/10/2026",
+      "LOCAL": "PIAUÍ - PI",
+      "REPORTER": "HELDER SOUZA",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
       "PGM": "",
       "DURACOES": {}
     }
