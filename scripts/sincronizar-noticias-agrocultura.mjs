@@ -90,29 +90,43 @@ async function carregarNoticias() {
   return registros;
 }
 
+function normalizarColunaAgro(valor) {
+  return limparTexto(valor).normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "").toUpperCase()
+    .replace(/[^A-Z0-9]/g, "");
+}
+
+function campoAgro(linha, cabecalho, ...nomes) {
+  const chaves = nomes.map(normalizarColunaAgro);
+  const indice = cabecalho.findIndex((coluna) => chaves.includes(normalizarColunaAgro(coluna)));
+  return indice === -1 ? "" : limparTexto(linha[indice]);
+}
+
 async function carregarMateriasExibidas() {
   const registros = [];
 
   for (const aba of ABAS_MATERIAS) {
+    const ultimaColuna = Number(aba) <= 2022 ? "E" : "F";
     const resposta = await sheets.spreadsheets.values.get({
       spreadsheetId: PLANILHA_MATERIAS_ID,
-      range: `'${aba}'!A2:E`,
+      range: `'${aba}'!A1:${ultimaColuna}`,
     });
+    const [cabecalho = [], ...linhas] = resposta.data.values || [];
 
-    for (const linha of resposta.data.values || []) {
-      const ids = idsDoValor(linha[3]);
+    for (const linha of linhas) {
+      const ids = idsDoValor(campoAgro(linha, cabecalho, "ID"));
       if (!ids.length) continue;
 
       registros.push([
         ids.join("\n"),
-        limparTexto(linha[1]),
-        limparTexto(linha[4]),
+        campoAgro(linha, cabecalho, "VT"),
+        campoAgro(linha, cabecalho, "EXIBIDO", "DATA"),
         "",
-        limparTexto(linha[2]),
-        "",
+        campoAgro(linha, cabecalho, "REPÓRTER", "REPORTER"),
+        campoAgro(linha, cabecalho, "AFILIADA"),
         "AGROCULTURA",
         "",
-        limparTexto(linha[0]),
+        campoAgro(linha, cabecalho, "PGM"),
       ]);
     }
   }

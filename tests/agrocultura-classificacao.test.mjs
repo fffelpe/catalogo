@@ -79,3 +79,14 @@ test("página disponibiliza cards paginados com filtro e opção Ver mais", asyn
   assert.match(interfaceCodigo, /searchInput/);
   assert.match(css, /repeat\(5, minmax\(0, 1fr\)\)/);
 });
+
+test("indexador geral lê ID, data e afiliada em colunas diferentes entre os anos", async () => {
+  const codigo = await readFile(new URL("../scripts/sincronizar-noticias-agrocultura.mjs", import.meta.url), "utf8");
+  const trecho = codigo.split("async function carregarMateriasExibidas() {")[1]?.split("async function garantirNoveColunasImgs() {")[0];
+  assert.ok(trecho);
+  assert.match(trecho, /Number\(aba\) <= 2022 \? "E" : "F"/);
+  assert.match(trecho, /campoAgro\(linha, cabecalho, "ID"\)/);
+  assert.match(trecho, /campoAgro\(linha, cabecalho, "EXIBIDO", "DATA"\)/);
+  assert.match(trecho, /campoAgro\(linha, cabecalho, "AFILIADA"\)/);
+  assert.doesNotMatch(trecho, /idsDoValor\(linha\[3\]\)/);
+});
