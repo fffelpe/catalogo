@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T22:19:39.538Z",
+  "generatedAt": "2026-10-21T19:25:03.990Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,10 +24,10 @@
     ]
   },
   "resumo": {
-    "materiais": 2080,
+    "materiais": 2083,
     "vts": 741,
     "noticias": 371,
-    "coberturas": 971,
+    "coberturas": 974,
     "coberturaDuplicadosExcluidos": 429
   },
   "vts": [
@@ -16719,6 +16719,21 @@
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
       "aba": "fonte_agrocultura",
+      "id": "1452B005531",
+      "ids": [
+        "1452B005531"
+      ],
+      "descricao": "CONSÓRCIO CAFÉ COM MAMÃO",
+      "reporter": "",
+      "data": "21/10/2026",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "",
+      "afiliada": "TVE - ES"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
       "id": "1452B005528",
       "ids": [
         "1452B005528"
@@ -16729,6 +16744,21 @@
       "local": "",
       "pgm": "",
       "afiliada": ""
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005529",
+      "ids": [
+        "1452B005529"
+      ],
+      "descricao": "CAPIM VETIVER",
+      "reporter": "",
+      "data": "20/10/2026",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "",
+      "afiliada": "TVE - ES"
     },
     {
       "tipo": "cobertura",
@@ -16769,6 +16799,21 @@
         "1452B005524"
       ],
       "descricao": "JARDIM DE MEL",
+      "reporter": "",
+      "data": "20/10/2026",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "",
+      "afiliada": "TVE - ES"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005530",
+      "ids": [
+        "1452B005530"
+      ],
+      "descricao": "PROJETO SUÍNOS GOURMET",
       "reporter": "",
       "data": "20/10/2026",
       "local": "ESPÍRITO SANTO - ES",

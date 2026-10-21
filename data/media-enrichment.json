@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T22:23:02.368Z",
+  "generatedAt": "2026-10-21T19:25:21.139Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1050640,6 +1050640,153 @@
       ],
       "manualPlaces": [],
       "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005529": {
+      "title": "Capim Vetiver",
+      "manualTitle": "",
+      "keywords": [
+        "capim vetiver",
+        "agronegócio",
+        "capim",
+        "terra",
+        "vetiver",
+        "pode",
+        "marechal",
+        "encostas",
+        "segurar",
+        "data",
+        "mesmo",
+        "pouco",
+        "sítio",
+        "vida",
+        "contenção"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Culturas do Campo",
+        "KALEB SILVA",
+        "EDUCAÇÃO DOS FILHOS",
+        "Any Cometti",
+        "TV Veronica Salazar",
+        "plantar pra vender",
+        "da hora de vender",
+        "ATÉ UMA HORTINHA NO CAMINHO DA ÁGUA",
+        "dias fica só por conta da chuva",
+        "pelas redes sociais",
+        "DONA MARINEUSA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES",
+        "PARA COMPRAR UMA TERRINHA / UM",
+        "NOVA / DE"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - ES"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005530": {
+      "title": "Projeto Suínos Gourmet",
+      "manualTitle": "",
+      "keywords": [
+        "projeto suínos gourmet",
+        "agronegócio",
+        "carne",
+        "gourmet",
+        "projeto",
+        "produtor",
+        "animais",
+        "porco",
+        "mariana",
+        "alegre",
+        "tenho",
+        "data",
+        "macho",
+        "temos",
+        "dias"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Culturas do Campo",
+        "DAVI CABRAL",
+        "ALIMENTAÇÃO DO ANIMAL",
+        "Any Cometti",
+        "TV Veronica Salazar",
+        "os leitões",
+        "FICOU EMPOLGADO",
+        "RAÇA BELGA PIETRAIN",
+        "baias para matrizes",
+        "carinho e bem estar. tem que ser"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - ES"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005531": {
+      "title": "Consórcio Café com Mamão",
+      "manualTitle": "",
+      "keywords": [
+        "consórcio café com mamão",
+        "agronegócio",
+        "indicações",
+        "mucurici",
+        "água",
+        "barragens",
+        "sobe",
+        "santo",
+        "data",
+        "mamão",
+        "propriedade",
+        "espírito",
+        "total",
+        "café",
+        "programas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Culturas do Campo",
+        "Fagner Fabrete",
+        "CABEÇAS DE GADO PARA CORTE",
+        "características da barragem",
+        "Izabela Toscano",
+        "TV Veronica Salazar",
+        "Bruno Pancieri",
+        "COMPACTAÇÃO DO SOLO E CONSTRUÇÃO DA ESTRUTURA",
+        "Extensionista Incaper"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES",
+        "COM O APOIO DO INCAPER / OS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     }

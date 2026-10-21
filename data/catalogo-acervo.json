@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T22:22:25.418Z",
-  "total": 41503,
+  "generatedAt": "2026-10-21T19:24:42.905Z",
+  "total": 41506,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530779,6 +530779,42 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005529",
+      "DESCRICAO": "CAPIM VETIVER",
+      "DATA": "20/10/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005530",
+      "DESCRICAO": "PROJETO SUÍNOS GOURMET",
+      "DATA": "20/10/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005531",
+      "DESCRICAO": "CONSÓRCIO CAFÉ COM MAMÃO",
+      "DATA": "21/10/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
       "DURACOES": {}
     }
