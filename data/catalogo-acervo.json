@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T19:24:42.905Z",
+  "generatedAt": "2026-10-21T21:19:23.813Z",
   "total": 41506,
   "registros": [
     {
@@ -530684,7 +530684,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005523": "00:12:19"
+      }
     },
     {
       "ID": "1452B005524",
@@ -530696,7 +530698,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005524": "00:09:06"
+      }
     },
     {
       "ID": "1452B005525",
@@ -530708,7 +530712,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005525": "00:04:03"
+      }
     },
     {
       "ID": "1452B005526",
@@ -530720,7 +530726,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005526": "00:05:35"
+      }
     },
     {
       "ID": "1452B005527",
@@ -530732,7 +530740,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005527": "00:10:41"
+      }
     },
     {
       "ID": "1452B005528",
@@ -530744,7 +530754,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005528": "00:04:13"
+      }
     },
     {
       "ID": "2457B018284",
@@ -530792,7 +530804,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005529": "00:09:23"
+      }
     },
     {
       "ID": "1452B005530",
@@ -530804,7 +530818,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005530": "00:09:56"
+      }
     },
     {
       "ID": "1452B005531",
@@ -530816,7 +530832,9 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
-      "DURACOES": {}
+      "DURACOES": {
+        "1452B005531": "00:06:55"
+      }
     }
   ]
 }
