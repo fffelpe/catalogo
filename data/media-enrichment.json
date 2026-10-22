@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T18:51:44.540Z",
+  "generatedAt": "2026-10-22T21:59:22.395Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1050796,19 +1050796,48 @@
       "keywords": [
         "abertura colheita cebola",
         "agronegócio",
-        "agrocultura",
-        "rba tv - sc",
-        "santa catarina - sc",
+        "campo",
         "abertura",
-        "colheita",
-        "cebola"
+        "engenheiro",
+        "presidente",
+        "agrônomo",
+        "agricultores",
+        "catarina",
+        "plantada",
+        "marcou",
+        "nesta",
+        "safra",
+        "santa",
+        "hiperprecoces"
       ],
       "manualKeywords": [],
       "subjects": [
         "agronegócio"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "Uma oportunidade para buscar",
+        "saber o que há de novidade quando",
+        "do Alto Vale e da região serrana",
+        "estações de pesquisa da Epagri eles",
+        "em diferentes áreas da cadeia",
+        "oficial da colheita da cebola em",
+        "começam a colher as variedades",
+        "quinzena de outubro",
+        "trabalho se estende até fim de",
+        "PASSAGEM EM ITUPORANGA",
+        "conta do excesso de oferta no ano",
+        "primeiro semestre do ano passado",
+        "deste ano e muitos produtores",
+        "área de plantio foi uma forma de",
+        "também teve exposição de máquinas",
+        "sementes também mostraram novidades",
+        "momento de interação entre os",
+        "expectativa para que o clima",
+        "da Epagri",
+        "Greice Sauer",
+        "Caio Marçani"
+      ],
       "manualPeople": [],
       "places": [
         "SANTA CATARINA - SC"
@@ -1050985,6 +1051014,109 @@
       "places": [],
       "manualPlaces": [],
       "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005496": {
+      "title": "Análise Solos",
+      "manualTitle": "",
+      "keywords": [
+        "análise solos",
+        "agronegócio",
+        "agrocultura",
+        "tve / ms",
+        "mato grosso do sul - ms",
+        "campo grande",
+        "campo grande - ms",
+        "análise",
+        "solos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "LU PEDRUSSI"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE / MS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005533": {
+      "title": "Doença de Newcastle — Granja",
+      "manualTitle": "",
+      "keywords": [
+        "doença de newcastle",
+        "granja",
+        "agronegócio",
+        "agrocultura",
+        "rba tv / sc",
+        "santa catarina - sc",
+        "rio do sul",
+        "rio do sul - sc"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "EVANDRO CLÁUDIO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SANTA CATARINA - SC",
+        "RIO DO SUL",
+        "RIO DO SUL - SC"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005534": {
+      "title": "Doença de Newcastle — Granja",
+      "manualTitle": "",
+      "keywords": [
+        "doença de newcastle",
+        "granja",
+        "agronegócio",
+        "agrocultura",
+        "rba tv / sc",
+        "santa catarina - sc",
+        "rio do sul",
+        "rio do sul - sc"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "EVANDRO CLÁUDIO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SANTA CATARINA - SC",
+        "RIO DO SUL",
+        "RIO DO SUL - SC"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     }

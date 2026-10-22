@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T18:51:34.035Z",
+  "generatedAt": "2026-10-22T21:59:10.358Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,11 +24,11 @@
     ]
   },
   "resumo": {
-    "materiais": 2092,
+    "materiais": 2093,
     "vts": 743,
-    "noticias": 373,
-    "coberturas": 979,
-    "coberturaDuplicadosExcluidos": 430
+    "noticias": 376,
+    "coberturas": 977,
+    "coberturaDuplicadosExcluidos": 432
   },
   "vts": [
     {
@@ -11182,6 +11182,81 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005496",
+      "ids": [
+        "1452B005496"
+      ],
+      "descricao": "ANÁLISE SOLOS",
+      "reporter": "LU PEDRUSSI",
+      "data": "24/10/2026",
+      "local": "MATO GROSSO DO SUL - MS",
+      "pgm": "386",
+      "afiliada": "TVE / MS"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005533",
+      "ids": [
+        "1452B005533"
+      ],
+      "descricao": "DOENÇA DE NEWCASTLE + GRANJA",
+      "reporter": "EVANDRO CLÁUDIO",
+      "data": "24/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "386",
+      "afiliada": "RBA TV / SC"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005534",
+      "ids": [
+        "1452B005534"
+      ],
+      "descricao": "DOENÇA DE NEWCASTLE + GRANJA",
+      "reporter": "EVANDRO CLÁUDIO",
+      "data": "24/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "386",
+      "afiliada": "RBA TV / SC"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005465",
+      "ids": [
+        "1452B005465"
+      ],
+      "descricao": "EXPORTAÇÕES CARNE FRANGO",
+      "reporter": "SAMUEL ROCHA",
+      "data": "24/10/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "386",
+      "afiliada": "CATVE / PR"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005525",
+      "ids": [
+        "1452B005525"
+      ],
+      "descricao": "IRRADIADOR GAMA + CENA UNESP",
+      "reporter": "FABIANO PEREIRA",
+      "data": "24/10/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "386",
+      "afiliada": "TV UNESP / SP"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B005483",
       "ids": [
         "1452B005483"
@@ -16717,36 +16792,6 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B005533",
-      "ids": [
-        "1452B005533"
-      ],
-      "descricao": "",
-      "reporter": "",
-      "data": "",
-      "local": "",
-      "pgm": "386",
-      "afiliada": ""
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B005534",
-      "ids": [
-        "1452B005534"
-      ],
-      "descricao": "",
-      "reporter": "",
-      "data": "",
-      "local": "",
-      "pgm": "386",
-      "afiliada": ""
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B002009",
       "ids": [
         "1452B002009"
@@ -16924,21 +16969,6 @@
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
       "afiliada": "TVE - ES"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005525",
-      "ids": [
-        "1452B005525"
-      ],
-      "descricao": "IRRADIADOR GAMA",
-      "reporter": "",
-      "data": "20/10/2026",
-      "local": "SÃO PAULO - SP",
-      "pgm": "",
-      "afiliada": "TV USP"
     },
     {
       "tipo": "cobertura",
@@ -17129,21 +17159,6 @@
         "1452B005468"
       ],
       "descricao": "COLHEITA DE TRIGO",
-      "reporter": "",
-      "data": "15/09/2026",
-      "local": "PARANÁ - PR",
-      "pgm": "",
-      "afiliada": "RBA TV / SC"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005465",
-      "ids": [
-        "1452B005465"
-      ],
-      "descricao": "EXPORTAÇÕES CARNE DE FRANGO",
       "reporter": "",
       "data": "15/09/2026",
       "local": "PARANÁ - PR",
