@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T21:19:23.813Z",
-  "total": 41506,
+  "generatedAt": "2026-10-22T18:51:21.131Z",
+  "total": 41513,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530835,6 +530835,90 @@
       "DURACOES": {
         "1452B005531": "00:06:55"
       }
+    },
+    {
+      "ID": "1452B005535",
+      "DESCRICAO": "ABERTURA COLHEITA CEBOLA",
+      "DATA": "21/10/2026",
+      "LOCAL": "SANTA CATARINA - SC",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "RBA TV - SC",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005536",
+      "DESCRICAO": "AGROINDUSTRIAS RIO DO SUL",
+      "DATA": "21/10/2026",
+      "LOCAL": "SANTA CATARINA - SC",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "RBA TV - SC",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005537",
+      "DESCRICAO": "MELIPONÁRIO SORRISO LONTRAS",
+      "DATA": "21/10/2026",
+      "LOCAL": "SANTA CATARINA - SC",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "RBA TV - SC",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005538",
+      "DESCRICAO": "MIRADOURO BELA VISTA",
+      "DATA": "21/10/2026",
+      "LOCAL": "SANTA CATARINA - SC",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "RBA TV - SC",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005539",
+      "DESCRICAO": "ORQUIDÁRIO POUSO REDONDO",
+      "DATA": "21/10/2026",
+      "LOCAL": "SANTA CATARINA - SC",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "RBA TV - SC",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005540",
+      "DESCRICAO": "AVE URUTAU",
+      "DATA": "21/10/2026",
+      "LOCAL": "SANTA CATARINA - SC",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "RBA TV - SC",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005541",
+      "DESCRICAO": "VT FEIRA CONILLON",
+      "DATA": "24/10/2026",
+      "LOCAL": "",
+      "REPORTER": "BRUNO FAUSTINO",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "386",
+      "DURACOES": {}
     }
   ]
 }

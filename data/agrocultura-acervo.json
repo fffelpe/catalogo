@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T19:25:03.990Z",
+  "generatedAt": "2026-10-22T18:51:34.035Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,13 +24,43 @@
     ]
   },
   "resumo": {
-    "materiais": 2083,
-    "vts": 741,
-    "noticias": 371,
-    "coberturas": 974,
-    "coberturaDuplicadosExcluidos": 429
+    "materiais": 2092,
+    "vts": 743,
+    "noticias": 373,
+    "coberturas": 979,
+    "coberturaDuplicadosExcluidos": 430
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005449",
+      "ids": [
+        "1452B005449"
+      ],
+      "descricao": "VT CAFÉ ARBORIZADO",
+      "reporter": "JOÃO RAFAEL",
+      "data": "24/10/2026",
+      "local": "MINAS GERAIS - MG",
+      "pgm": "386",
+      "afiliada": "ANTV /MG"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005541",
+      "ids": [
+        "1452B005541"
+      ],
+      "descricao": "VT FEIRA CONILLON",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "24/10/2026",
+      "local": "",
+      "pgm": "386",
+      "afiliada": ""
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -16687,6 +16717,36 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005533",
+      "ids": [
+        "1452B005533"
+      ],
+      "descricao": "",
+      "reporter": "",
+      "data": "",
+      "local": "",
+      "pgm": "386",
+      "afiliada": ""
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005534",
+      "ids": [
+        "1452B005534"
+      ],
+      "descricao": "",
+      "reporter": "",
+      "data": "",
+      "local": "",
+      "pgm": "386",
+      "afiliada": ""
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B002009",
       "ids": [
         "1452B002009"
@@ -16719,6 +16779,51 @@
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
       "aba": "fonte_agrocultura",
+      "id": "1452B005535",
+      "ids": [
+        "1452B005535"
+      ],
+      "descricao": "ABERTURA COLHEITA CEBOLA",
+      "reporter": "",
+      "data": "21/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "",
+      "afiliada": "RBA TV - SC"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005536",
+      "ids": [
+        "1452B005536"
+      ],
+      "descricao": "AGROINDUSTRIAS RIO DO SUL",
+      "reporter": "",
+      "data": "21/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "",
+      "afiliada": "RBA TV - SC"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005540",
+      "ids": [
+        "1452B005540"
+      ],
+      "descricao": "AVE URUTAU",
+      "reporter": "",
+      "data": "21/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "",
+      "afiliada": "RBA TV - SC"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
       "id": "1452B005531",
       "ids": [
         "1452B005531"
@@ -16729,6 +16834,51 @@
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
       "afiliada": "TVE - ES"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005537",
+      "ids": [
+        "1452B005537"
+      ],
+      "descricao": "MELIPONÁRIO SORRISO LONTRAS",
+      "reporter": "",
+      "data": "21/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "",
+      "afiliada": "RBA TV - SC"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005538",
+      "ids": [
+        "1452B005538"
+      ],
+      "descricao": "MIRADOURO BELA VISTA",
+      "reporter": "",
+      "data": "21/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "",
+      "afiliada": "RBA TV - SC"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005539",
+      "ids": [
+        "1452B005539"
+      ],
+      "descricao": "ORQUIDÁRIO POUSO REDONDO",
+      "reporter": "",
+      "data": "21/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "",
+      "afiliada": "RBA TV - SC"
     },
     {
       "tipo": "cobertura",
@@ -17134,21 +17284,6 @@
       "local": "PARANÁ - PR",
       "pgm": "",
       "afiliada": "CATVE / PR"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005449",
-      "ids": [
-        "1452B005449"
-      ],
-      "descricao": "CAFÉ ARBORIZADO + PLANTAÇÃO DE CAFÉ + LAVOURA DE CAFÉ",
-      "reporter": "JOÃO RAFAEL",
-      "data": "31/08/2026",
-      "local": "MINAS GERAIS - MG",
-      "pgm": "",
-      "afiliada": "ANTV / MG"
     },
     {
       "tipo": "cobertura",
