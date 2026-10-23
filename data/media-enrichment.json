@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T19:13:35.492Z",
+  "generatedAt": "2026-10-23T19:26:21.143Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1051252,172 +1051252,338 @@
       "segments": []
     },
     "2457B018386": {
-      "title": "",
+      "title": "Aulão Show Enem",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "aulão show enem",
+        "educação",
+        "professor",
+        "oliveira",
+        "weverton",
+        "fabiano",
+        "músicas",
+        "aula",
+        "enem",
+        "show",
+        "aprendizagem",
+        "encerramento",
+        "estudantes",
+        "ferramenta",
+        "literatura"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "SOFIA GUNES",
+        "SONORA KAUAN EMERSON- estudante",
+        "SONORA CLARISSA SOUZA- estudante"
+      ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "SERGIPE - SE"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018387": {
-      "title": "",
+      "title": "Cemitérios Foz do Iguaçu",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "cemitérios foz do iguaçu",
+        "cotidiano",
+        "jornal da cultura",
+        "paraná - pr",
+        "cemitérios",
+        "iguaçu"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "PARANÁ - PR"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018388": {
-      "title": "",
+      "title": "Granizo Toledo Parané",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "granizo toledo parané",
+        "meio ambiente",
+        "jornal da cultura",
+        "paraná - pr",
+        "granizo",
+        "parané",
+        "toledo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "PARANÁ - PR"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018389": {
-      "title": "",
+      "title": "Reciclagem de Animais",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "reciclagem de animais",
+        "meio ambiente",
+        "jornal da cultura",
+        "paraná - pr",
+        "reciclagem",
+        "animais"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "PARANÁ - PR"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018390": {
-      "title": "",
+      "title": "Cuidados Brinquedos Squishies",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "cuidados brinquedos squishies",
+        "educação",
+        "magalhães",
+        "sofia",
+        "palmerston",
+        "procon-go",
+        "superint",
+        "aurélio",
+        "goiânia",
+        "vilela",
+        "luísa",
+        "marco",
+        "diferentes",
+        "brinquedo",
+        "qualidade"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "ARIADNNE MANZAN",
+        "ALICE LEAL"
+      ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "GOIÁS - GO"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018391": {
-      "title": "",
+      "title": "Preservação Ambiental",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "preservação ambiental",
+        "meio ambiente",
+        "mesquita",
+        "rafael",
+        "tradicionais",
+        "conhecida",
+        "cuidadora",
+        "moradores",
+        "rodrigues",
+        "capital",
+        "cidades",
+        "encanta",
+        "goiânia",
+        "novatos",
+        "parques"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "QUEILA RIBEIRO",
+        "WANESSA DE CASTRO"
+      ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "GOIÁS - GO"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018392": {
-      "title": "",
+      "title": "Vegetação de Restinga",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "vegetação de restinga",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "vegetação",
+        "restinga"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018393": {
-      "title": "",
+      "title": "Certificação Ambiental",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "certificação ambiental",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "certificação",
+        "ambiental"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018394": {
-      "title": "",
+      "title": "Abstenções nas Eleições",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "abstenções nas eleições",
+        "política",
+        "cientista",
+        "político",
+        "marinho",
+        "marcos",
+        "turno",
+        "presidência",
+        "candidatos",
+        "eleitores",
+        "tendência",
+        "acirrada",
+        "nacional",
+        "primeiro",
+        "disputa"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "RAFAEL MESQUITA"
+      ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018395": {
-      "title": "",
+      "title": "Expectativa Segundo Turno das Eleições",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "expectativa segundo turno das eleições",
+        "política",
+        "mariana",
+        "martins",
+        "quatro",
+        "comerciante",
+        "aposentada",
+        "presidente",
+        "ansiedade",
+        "apreensão",
+        "saberemos",
+        "autônoma",
+        "eleições",
+        "próximos",
+        "cláudio"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "HELENA MACHADO",
+        "LORRAINE DE DEUS",
+        "ANA ZÉLIA SOARES BELÉM"
+      ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1051425,12 +1051591,29 @@
       "title": "",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "comerciante",
+        "cristhian",
+        "agricultura",
+        "producação",
+        "favorecem",
+        "gonçalves",
+        "liderança",
+        "detalhes",
+        "lorraine",
+        "cultivo",
+        "araújo",
+        "garcia",
+        "mantém",
+        "odilon",
+        "renato"
       ],
       "manualKeywords": [],
       "subjects": [],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "TAYARA CRISTINA",
+        "ADELMIR MIRANDA"
+      ],
       "manualPeople": [],
       "places": [],
       "manualPlaces": [],
@@ -1051439,70 +1051622,170 @@
       "segments": []
     },
     "2457B018397": {
-      "title": "",
+      "title": "Cartas Malha Fina — Receita Federal",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "cartas malha fina",
+        "receita federal",
+        "economia",
+        "receita",
+        "site",
+        "hummel",
+        "sucena",
+        "fisioterapeuta",
+        "contribuintes",
+        "planejamento",
+        "informações",
+        "declaração",
+        "verificou",
+        "vice-pres",
+        "corrigir"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "GENILDA PIDDE",
+        "SOFIA MAGALHÃES"
+      ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018398": {
-      "title": "",
+      "title": "Cenário Econômico Nacional",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "cenário econômico nacional",
+        "economia",
+        "magalhães",
+        "sofia",
+        "farmacêutico",
+        "economista",
+        "tributário",
+        "executivo",
+        "ranniery",
+        "clauber",
+        "goiânia",
+        "queiroz",
+        "césar",
+        "empreendedor",
+        "brasileira"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "TERMOZIR SENA",
+        "JOÃO GONDIM"
+      ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018399": {
-      "title": "",
+      "title": "Mudanças em Locais de Votação",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "mudanças em locais de votação",
+        "política",
+        "brunelle",
+        "portela",
+        "goiânia",
+        "votação",
+        "repete",
+        "orientação",
+        "secretário",
+        "alterados",
+        "eleitoral",
+        "endereços",
+        "conferir",
+        "divulgou",
+        "mudanças"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "FRANK WENDELL RIBEIRO"
+      ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
     "2457B018400": {
-      "title": "",
+      "title": "Museus Históricos",
       "manualTitle": "",
       "keywords": [
-        "jornal da cultura"
+        "museus históricos",
+        "cultura / arte",
+        "pedro",
+        "museu",
+        "ludovico",
+        "coord",
+        "nossa",
+        "henrique",
+        "campos",
+        "guarda",
+        "estudante",
+        "colonial",
+        "detalhes",
+        "história",
+        "memórias"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "CLARA ROSA",
+        "GISELE GOMES",
+        "RAFAEL MESQUITA"
+      ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
       "manualOrganizations": [],
       "segments": []
     }
