@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T21:59:10.358Z",
+  "generatedAt": "2026-10-23T18:55:44.945Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,10 +24,10 @@
     ]
   },
   "resumo": {
-    "materiais": 2093,
+    "materiais": 2096,
     "vts": 743,
     "noticias": 376,
-    "coberturas": 977,
+    "coberturas": 980,
     "coberturaDuplicadosExcluidos": 432
   },
   "vts": [
@@ -16824,6 +16824,36 @@
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
       "aba": "fonte_agrocultura",
+      "id": "1452B005543",
+      "ids": [
+        "1452B005543"
+      ],
+      "descricao": "FESTA DO PEQUI",
+      "reporter": "",
+      "data": "23/10/2026",
+      "local": "GOIÁS - GO",
+      "pgm": "",
+      "afiliada": "TV BRASIL CENTRAL - GO"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005545",
+      "ids": [
+        "1452B005545"
+      ],
+      "descricao": "HORTA TERAPEUTICA",
+      "reporter": "",
+      "data": "23/10/2026",
+      "local": "GOIÁS - GO",
+      "pgm": "",
+      "afiliada": "TV BRASIL CENTRAL - GO"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
       "id": "1452B005535",
       "ids": [
         "1452B005535"
@@ -16929,6 +16959,21 @@
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
       "aba": "fonte_agrocultura",
+      "id": "1452B005544",
+      "ids": [
+        "1452B005544"
+      ],
+      "descricao": "RANKING PRODUÇÃO DE TOMATE",
+      "reporter": "",
+      "data": "21/10/2026",
+      "local": "GOIÁS - GO",
+      "pgm": "",
+      "afiliada": "TV BRASIL CENTRAL - GO"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
       "id": "1452B005528",
       "ids": [
         "1452B005528"
@@ -16936,9 +16981,9 @@
       "descricao": "ARBORIZAÇÃO",
       "reporter": "",
       "data": "20/10/2026",
-      "local": "",
+      "local": "SÃO PAULO - SP",
       "pgm": "",
-      "afiliada": ""
+      "afiliada": "TV USP"
     },
     {
       "tipo": "cobertura",

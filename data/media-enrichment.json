@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T21:59:22.395Z",
+  "generatedAt": "2026-10-23T18:56:01.801Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1050531,7 +1050531,11 @@
       "keywords": [
         "arborização",
         "agronegócio",
-        "agrocultura"
+        "agrocultura",
+        "tv usp",
+        "são paulo - sp",
+        "piracicaba",
+        "piracicaba - sp"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1050540,9 +1050544,15 @@
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "PIRACICABA",
+        "PIRACICABA - SP"
+      ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV USP"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1051116,6 +1051126,127 @@
       "manualPlaces": [],
       "organizations": [
         "RBA TV / SC"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005543": {
+      "title": "Festa do Pequi",
+      "manualTitle": "",
+      "keywords": [
+        "festa do pequi",
+        "agronegócio",
+        "ceasa",
+        "comerciante",
+        "geraldinho",
+        "governador",
+        "presidente",
+        "fabrício",
+        "oliveira",
+        "daniel",
+        "estado",
+        "vilela",
+        "pires",
+        "apresentações",
+        "comemorado"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "RAFAEL MESQUITA",
+        "IZABEL SIGNORELI"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL - GO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005544": {
+      "title": "Ranking Produção de Tomate",
+      "manualTitle": "",
+      "keywords": [
+        "ranking produção de tomate",
+        "agronegócio",
+        "comerciante",
+        "cristhian",
+        "agricultura",
+        "producação",
+        "favorecem",
+        "gonçalves",
+        "liderança",
+        "detalhes",
+        "lorraine",
+        "cultivo",
+        "araújo",
+        "garcia",
+        "mantém"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "TAYARA CRISTINA",
+        "ADELMIR MIRANDA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL - GO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005545": {
+      "title": "Horta Terapeutica",
+      "manualTitle": "",
+      "keywords": [
+        "horta terapeutica",
+        "agronegócio",
+        "casa",
+        "reabilitação",
+        "pacientesplantam",
+        "solidariedade",
+        "terapêutica",
+        "condomínio",
+        "hortaliças",
+        "prolongada",
+        "pacientes",
+        "colheita",
+        "estadual",
+        "oliveira",
+        "realizam"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "NOEL CORDEIRO",
+        "CRISTINA BRANDÃO",
+        "SARAH QUEIROZ MOSTRA PRA VOCÊ"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL - GO"
       ],
       "manualOrganizations": [],
       "segments": []

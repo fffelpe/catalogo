@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T21:58:54.997Z",
-  "total": 41515,
+  "generatedAt": "2026-10-23T18:55:24.602Z",
+  "total": 41518,
   "registros": [
     {
       "ID": "2822B019835",
@@ -530748,9 +530748,9 @@
       "ID": "1452B005528",
       "DESCRICAO": "ARBORIZAÇÃO",
       "DATA": "20/10/2026",
-      "LOCAL": "",
+      "LOCAL": "SÃO PAULO - SP",
       "REPORTER": "",
-      "AFILIADA_EMISSORA": "",
+      "AFILIADA_EMISSORA": "TV USP",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
@@ -530942,6 +530942,42 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "386",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005543",
+      "DESCRICAO": "FESTA DO PEQUI",
+      "DATA": "23/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005544",
+      "DESCRICAO": "RANKING PRODUÇÃO DE TOMATE",
+      "DATA": "21/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005545",
+      "DESCRICAO": "HORTA TERAPEUTICA",
+      "DATA": "23/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
       "DURACOES": {}
     }
   ]
