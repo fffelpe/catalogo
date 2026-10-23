@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T19:00:13.561Z",
+  "generatedAt": "2026-10-23T19:36:23.752Z",
   "afiliadas": [
     {
       "id": "AFL001",
@@ -27,7 +27,7 @@
       "id": "AFL004",
       "nome": "TV REDE MINAS",
       "uf": "MINAS GERAIS - MG",
-      "cidade": "",
+      "cidade": "BELO HORIZONTE",
       "ativa": true
     },
     {
@@ -140,6 +140,13 @@
       "nome": "TV ANTARES",
       "uf": "PIAUÍ - PI",
       "cidade": "TERESINA",
+      "ativa": true
+    },
+    {
+      "id": "AFL021",
+      "nome": "TV CULTURA - SP",
+      "uf": "ESPÍRITO SANTO - ES",
+      "cidade": "",
       "ativa": true
     }
   ],
@@ -456,6 +463,13 @@
       "id": "REP046",
       "nome": "MARCUS MENEZES",
       "afiliadaId": "AFL009",
+      "funcao": "REPÓRTER",
+      "ativo": true
+    },
+    {
+      "id": "REP047",
+      "nome": "BRUNO FAUSTINO",
+      "afiliadaId": "AFL021",
       "funcao": "REPÓRTER",
       "ativo": true
     }

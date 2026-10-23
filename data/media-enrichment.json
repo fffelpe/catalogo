@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T19:26:21.143Z",
+  "generatedAt": "2026-10-23T19:37:01.610Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -974367,6 +974367,7 @@
         "agronegócio",
         "agrocultura",
         "são paulo - sp",
+        "espírito santo - es",
         "agrishow"
       ],
       "manualKeywords": [],
@@ -974379,7 +974380,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "SÃO PAULO - SP"
+        "SÃO PAULO - SP",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -984737,6 +984739,7 @@
         "alface hidropônico",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "alface",
         "hidropônico"
       ],
@@ -984748,7 +984751,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -984828,6 +984832,7 @@
       "keywords": [
         "agrocultura",
         "são paulo",
+        "espírito santo - es",
         "amendoim"
       ],
       "manualKeywords": [],
@@ -984838,7 +984843,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "SÃO PAULO"
+        "SÃO PAULO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -984853,6 +984859,7 @@
         "produtores de amendoim",
         "agrocultura",
         "são paulo",
+        "espírito santo - es",
         "amendoim",
         "produtores",
         "plantação"
@@ -984865,7 +984872,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "SÃO PAULO"
+        "SÃO PAULO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -985077,6 +985085,7 @@
       "keywords": [
         "plantação de algodão",
         "agrocultura",
+        "espírito santo - es",
         "algodão",
         "plantação"
       ],
@@ -985087,7 +985096,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -985183,6 +985194,7 @@
         "close algodão",
         "agrocultura",
         "bahia",
+        "espírito santo - es",
         "algodão",
         "plantação"
       ],
@@ -985194,7 +985206,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "BAHIA"
+        "BAHIA",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -985328,6 +985341,7 @@
         "fábrica de algodão",
         "agrocultura",
         "mato grosso",
+        "espírito santo - es",
         "algodão",
         "plantação",
         "fábrica"
@@ -985340,7 +985354,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "MATO GROSSO"
+        "MATO GROSSO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -985703,6 +985718,7 @@
         "café de açaí",
         "agrocultura",
         "pará",
+        "espírito santo - es",
         "açaí",
         "café"
       ],
@@ -985714,7 +985730,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "PARÁ"
+        "PARÁ",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -986084,6 +986101,7 @@
       "keywords": [
         "banana orgânica",
         "agrocultura",
+        "espírito santo - es",
         "orgânica",
         "banana"
       ],
@@ -986094,7 +986112,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -986106,6 +986126,7 @@
       "keywords": [
         "banana moqueca",
         "agrocultura",
+        "espírito santo - es",
         "moqueca",
         "banana"
       ],
@@ -986116,7 +986137,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -986174,6 +986197,7 @@
       "keywords": [
         "agroindustria banana",
         "agrocultura",
+        "espírito santo - es",
         "agroindustria",
         "banana"
       ],
@@ -986184,7 +986208,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -986259,6 +986285,7 @@
       "manualTitle": "",
       "keywords": [
         "agrocultura",
+        "espírito santo - es",
         "banana"
       ],
       "manualKeywords": [],
@@ -986268,7 +986295,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -986369,6 +986398,7 @@
       "keywords": [
         "banana da terra - barbecue de banana",
         "agrocultura",
+        "espírito santo - es",
         "banana",
         "barbecue",
         "terra"
@@ -986380,7 +986410,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -986501,6 +986533,7 @@
         "plantação de cacau",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "cacau",
         "plantação"
       ],
@@ -986512,7 +986545,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -986526,6 +986560,7 @@
         "plantação de cacau",
         "agrocultura",
         "bahia",
+        "espírito santo - es",
         "cacau",
         "chocolate",
         "plantação"
@@ -986538,7 +986573,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "BAHIA"
+        "BAHIA",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -986553,6 +986589,7 @@
         "agricultura no paraná",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "agricultura",
         "vermelha",
         "paraná",
@@ -986567,7 +986604,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -986584,6 +986622,7 @@
         "chocolates",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "cacau",
         "show",
         "plantação",
@@ -986597,7 +986636,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -987530,7 +987570,8 @@
         "preparo de café",
         "café coado",
         "agrocultura",
-        "minas gerais"
+        "minas gerais",
+        "espírito santo - es"
       ],
       "manualKeywords": [],
       "subjects": [],
@@ -987540,7 +987581,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "MINAS GERAIS"
+        "MINAS GERAIS",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -987611,6 +987653,7 @@
         "café especial",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "café",
         "especial",
         "pedra",
@@ -987625,7 +987668,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -987678,6 +987722,7 @@
         "produtores de café",
         "preparo de café",
         "agrocultura",
+        "espírito santo - es",
         "café",
         "produtores",
         "conillon",
@@ -987685,8 +987730,7 @@
         "lavoura",
         "preparo",
         "sitios",
-        "grãos",
-        "ouro"
+        "grãos"
       ],
       "manualKeywords": [],
       "subjects": [],
@@ -987695,7 +987739,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -987709,6 +987755,7 @@
         "grãos de café",
         "navio cargueiro",
         "agrocultura",
+        "espírito santo - es",
         "café",
         "cargueiro",
         "indústria",
@@ -987723,7 +987770,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -987738,6 +987787,7 @@
         "produtor colhendo café",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "café",
         "produtor",
         "plantação",
@@ -987754,7 +987804,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -988122,6 +988173,7 @@
         "produtor de café",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "café",
         "conillon",
         "plantação",
@@ -988136,7 +988188,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -988182,6 +988235,7 @@
         "close café",
         "agrocultura",
         "são paulo",
+        "espírito santo - es",
         "café",
         "cafeicultores",
         "divinolândia",
@@ -988190,8 +988244,7 @@
         "montanha",
         "fachada",
         "xícara",
-        "aprod",
-        "grãos"
+        "aprod"
       ],
       "manualKeywords": [],
       "subjects": [],
@@ -988201,7 +988254,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "SÃO PAULO"
+        "SÃO PAULO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -988218,6 +988272,7 @@
         "café sendo preparado",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "café",
         "preparado",
         "lavagem",
@@ -988233,7 +988288,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -988393,6 +988449,7 @@
         "preparo do café",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "café",
         "cafeicultores",
         "cooperativa",
@@ -988400,8 +988457,7 @@
         "cafesul",
         "fachada",
         "preparo",
-        "estado",
-        "grãos"
+        "estado"
       ],
       "manualKeywords": [],
       "subjects": [],
@@ -988411,7 +988467,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -988429,14 +988486,7 @@
         "preparo de café",
         "cafés premiados",
         "agrocultura",
-        "café",
-        "plantação",
-        "premiados",
-        "florada",
-        "preparo",
-        "cafés",
-        "grãos",
-        "bule"
+        "espírito santo - es"
       ],
       "manualKeywords": [],
       "subjects": [],
@@ -988445,7 +988495,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -988462,14 +988514,7 @@
         "produtor de café",
         "agrocultura",
         "espírito santo",
-        "café",
-        "montanhas",
-        "plantação",
-        "espírito",
-        "produtor",
-        "santos",
-        "pedra",
-        "azul"
+        "espírito santo - es"
       ],
       "manualKeywords": [],
       "subjects": [],
@@ -988479,7 +988524,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -988571,11 +988617,7 @@
         "close café",
         "preparo de café",
         "agrocultura",
-        "café",
-        "plantação",
-        "produtor",
-        "preparo",
-        "grãos"
+        "espírito santo - es"
       ],
       "manualKeywords": [],
       "subjects": [],
@@ -988584,7 +988626,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -988619,6 +988663,7 @@
         "sacas de café",
         "plantação de café",
         "agrocultura",
+        "espírito santo - es",
         "café",
         "produtores",
         "plantação",
@@ -988631,7 +988676,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -988837,6 +988884,7 @@
         "cafezal",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "café",
         "montanhas",
         "plantação"
@@ -988849,7 +988897,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -988889,6 +988938,7 @@
         "grãos de café",
         "xícara de café",
         "agrocultura",
+        "espírito santo - es",
         "café",
         "plantação",
         "xícara",
@@ -988901,7 +988951,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -989186,6 +989238,7 @@
         "preparo de café",
         "grãos de café",
         "agrocultura",
+        "espírito santo - es",
         "café",
         "plantação",
         "preparo",
@@ -989198,7 +989251,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -989482,6 +989537,7 @@
         "grãos de café",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "café",
         "capixabas",
         "montanhas",
@@ -989497,7 +989553,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -989720,7 +989777,8 @@
         "grãos de café",
         "café sendo preparado",
         "agrocultura",
-        "espírito santo"
+        "espírito santo",
+        "espírito santo - es"
       ],
       "manualKeywords": [],
       "subjects": [],
@@ -989730,7 +989788,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -989770,6 +989829,7 @@
         "lavoura de café",
         "close café",
         "agrocultura",
+        "espírito santo - es",
         "café",
         "plantação",
         "lavoura"
@@ -989781,7 +989841,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -989951,6 +990013,7 @@
       "keywords": [
         "cavalo crioulo",
         "agrocultura",
+        "espírito santo - es",
         "crioulo",
         "cavalo"
       ],
@@ -989961,7 +990024,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -990029,6 +990094,7 @@
       "keywords": [
         "cavalos sendo treinado",
         "agrocultura",
+        "espírito santo - es",
         "treinado",
         "cavalos",
         "cavalo",
@@ -990043,7 +990109,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -990073,6 +990141,7 @@
       "keywords": [
         "cavalo árabe",
         "agrocultura",
+        "espírito santo - es",
         "cavalo",
         "árabe"
       ],
@@ -990083,7 +990152,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -990136,6 +990207,7 @@
       "keywords": [
         "cavalo atleta",
         "agrocultura",
+        "espírito santo - es",
         "atleta",
         "cavalo"
       ],
@@ -990146,7 +990218,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -990488,6 +990562,7 @@
       "keywords": [
         "cadeia frango de corte",
         "agrocultura",
+        "espírito santo - es",
         "cadeia",
         "frango",
         "corte"
@@ -990499,7 +990574,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -991207,6 +991284,7 @@
         "inteligência artificial no agronegócio",
         "tecnologia",
         "agrocultura",
+        "espírito santo - es",
         "inteligência",
         "agronegócio",
         "artificial",
@@ -991221,7 +991299,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -993070,6 +993150,7 @@
       "keywords": [
         "receita muqueca",
         "agrocultura",
+        "espírito santo - es",
         "muqueca",
         "receita"
       ],
@@ -993080,7 +993161,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -993113,6 +993196,7 @@
       "keywords": [
         "receita das montanhas",
         "agrocultura",
+        "espírito santo - es",
         "montanhas",
         "receita"
       ],
@@ -993123,7 +993207,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -993469,6 +993555,7 @@
       "keywords": [
         "receita italiana",
         "agrocultura",
+        "espírito santo - es",
         "italiana",
         "receita"
       ],
@@ -993479,7 +993566,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -993491,6 +993580,7 @@
       "keywords": [
         "pavê de noz pecan",
         "agrocultura",
+        "espírito santo - es",
         "pecan",
         "pavê"
       ],
@@ -993501,7 +993591,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -994480,6 +994572,7 @@
         "gado senepol",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "senepol",
         "gado"
       ],
@@ -994492,7 +994585,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -994504,6 +994599,7 @@
       "keywords": [
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "girolando",
         "gado"
       ],
@@ -994516,7 +994612,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -994573,6 +994671,7 @@
         "gado brangus gerais",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "brangus",
         "gado"
       ],
@@ -994585,7 +994684,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -995245,6 +995346,7 @@
         "queijo artesanal",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "artesanal",
         "queijos",
         "queijo"
@@ -995258,7 +995360,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -995298,6 +995402,7 @@
         "rotas dos queijos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "queijos",
         "rotas"
       ],
@@ -995310,7 +995415,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -995629,6 +995736,7 @@
         "rota dos queijos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "queijos",
         "rota"
       ],
@@ -995641,7 +995749,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -995727,6 +995837,7 @@
         "agronegócio",
         "agrocultura",
         "paraná",
+        "espírito santo - es",
         "queijo",
         "rota"
       ],
@@ -995740,7 +995851,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "PARANÁ"
+        "PARANÁ",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -995830,6 +995942,7 @@
         "queijos premiados",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "premiados",
         "queijos"
       ],
@@ -995842,7 +995955,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -996003,6 +996118,7 @@
         "queijo canastra",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "canastra",
         "queijo"
       ],
@@ -996015,7 +996131,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -996484,6 +996602,7 @@
         "soja recorde",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "recorde",
         "soja"
       ],
@@ -996496,7 +996615,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -997742,6 +997863,7 @@
       "keywords": [
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "soja"
       ],
       "manualKeywords": [],
@@ -997753,7 +997875,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -998718,6 +998842,7 @@
       "keywords": [
         "pesca itaipu",
         "agrocultura",
+        "espírito santo - es",
         "itaipu",
         "pesca"
       ],
@@ -998728,7 +998853,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1003184,6 +1003311,7 @@
         "vt rota dos vinhos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "vinhos",
         "rota"
       ],
@@ -1003196,7 +1003324,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1006020,6 +1006150,7 @@
       "keywords": [
         "vt fenômeno pimenta",
         "agrocultura",
+        "espírito santo - es",
         "fenômeno",
         "pimenta"
       ],
@@ -1006030,7 +1006161,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010804,6 +1010937,7 @@
         "vt vocação",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "vocação"
       ],
       "manualKeywords": [],
@@ -1010815,7 +1010949,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010828,6 +1010964,7 @@
         "vt agrishow",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agrishow"
       ],
       "manualKeywords": [],
@@ -1010839,7 +1010976,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010853,6 +1010992,7 @@
         "agronegócio",
         "agrocultura",
         "minas gerais - mg",
+        "espírito santo - es",
         "cafe"
       ],
       "manualKeywords": [],
@@ -1010865,7 +1011005,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "MINAS GERAIS - MG"
+        "MINAS GERAIS - MG",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1010880,6 +1011021,7 @@
         "agronegócio",
         "agrocultura",
         "são paulo - sp",
+        "espírito santo - es",
         "agrishow"
       ],
       "manualKeywords": [],
@@ -1010892,7 +1011034,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "SÃO PAULO - SP"
+        "SÃO PAULO - SP",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1010906,6 +1011049,7 @@
         "vt girassol",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "girassol"
       ],
       "manualKeywords": [],
@@ -1010917,7 +1011061,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010930,6 +1011076,7 @@
         "vt plantio direto",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "plantio",
         "direto"
       ],
@@ -1010942,7 +1011089,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010955,6 +1011104,7 @@
         "vt instituto biológico",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "biológico",
         "instituto"
       ],
@@ -1010967,7 +1011117,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010980,6 +1011132,7 @@
         "vt dessalinizador solar",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "dessalinizador",
         "solar"
       ],
@@ -1010992,7 +1011145,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011032,6 +1011187,7 @@
         "vt café recife",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "recife",
         "café"
       ],
@@ -1011044,7 +1011200,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011057,6 +1011215,7 @@
         "vt manga",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "manga"
       ],
       "manualKeywords": [],
@@ -1011068,7 +1011227,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011081,6 +1011242,7 @@
         "vt startups piracicaba",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "piracicaba",
         "startups"
       ],
@@ -1011093,7 +1011255,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011106,6 +1011270,7 @@
         "vt espumante",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "espumante"
       ],
       "manualKeywords": [],
@@ -1011117,7 +1011282,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011130,6 +1011297,7 @@
         "vt sítio tecnológico",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "tecnológico",
         "sítio"
       ],
@@ -1011142,7 +1011310,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011155,6 +1011325,7 @@
         "vt uva petrolina",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "petrolina"
       ],
       "manualKeywords": [],
@@ -1011166,7 +1011337,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011179,6 +1011352,7 @@
         "vt uva petrolina",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "petrolina"
       ],
       "manualKeywords": [],
@@ -1011190,7 +1011364,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011203,6 +1011379,7 @@
         "vt cafés",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cafés"
       ],
       "manualKeywords": [],
@@ -1011214,7 +1011391,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011227,6 +1011406,7 @@
         "vt algodão",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "algodão"
       ],
       "manualKeywords": [],
@@ -1011238,7 +1011418,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011251,6 +1011433,7 @@
         "vt fazenda ecológica",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "ecológica",
         "fazenda"
       ],
@@ -1011263,7 +1011446,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011276,6 +1011461,7 @@
         "vt genética pecuária",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "genética",
         "pecuária"
       ],
@@ -1011288,7 +1011474,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011301,6 +1011489,7 @@
         "fazenda cabras",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "fazenda",
         "cabras"
       ],
@@ -1011313,7 +1011502,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011326,6 +1011517,7 @@
         "vt cooperativismo tilápia",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cooperativismo",
         "tilápia"
       ],
@@ -1011338,7 +1011530,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011351,6 +1011545,7 @@
         "vt cooperativismo abelhas",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cooperativismo",
         "abelhas"
       ],
@@ -1011363,7 +1011558,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011376,6 +1011573,7 @@
         "vt dia do algodão",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "algodão"
       ],
       "manualKeywords": [],
@@ -1011387,7 +1011585,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011401,6 +1011601,7 @@
         "agronegócio",
         "agrocultura",
         "bahia - ba",
+        "espírito santo - es",
         "algodão",
         "bahia"
       ],
@@ -1011414,7 +1011615,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "BAHIA - BA"
+        "BAHIA - BA",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1011428,6 +1011630,7 @@
         "vt mercosul eu",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mercosul"
       ],
       "manualKeywords": [],
@@ -1011439,7 +1011642,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011452,6 +1011657,7 @@
         "vt leite orgânico",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "orgânico",
         "leite"
       ],
@@ -1011464,7 +1011670,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011477,6 +1011685,7 @@
         "vt vinhos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "vinhos"
       ],
       "manualKeywords": [],
@@ -1011488,7 +1011697,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011501,6 +1011712,7 @@
         "vt espumante",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "espumante"
       ],
       "manualKeywords": [],
@@ -1011512,7 +1011724,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011525,6 +1011739,7 @@
         "vt bem estar animal",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "animal",
         "estar"
       ],
@@ -1011537,7 +1011752,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011550,6 +1011767,7 @@
         "vt expointer",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "expointer"
       ],
       "manualKeywords": [],
@@ -1011561,7 +1011779,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011574,6 +1011794,7 @@
         "vt laticínios",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "laticínios"
       ],
       "manualKeywords": [],
@@ -1011585,7 +1011806,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011598,6 +1011821,7 @@
         "vt instituto terra",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "instituto",
         "terra"
       ],
@@ -1011610,7 +1011834,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011623,6 +1011849,7 @@
         "vt agroturismo",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agroturismo"
       ],
       "manualKeywords": [],
@@ -1011634,7 +1011861,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011647,6 +1011876,7 @@
         "vt mamão",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mamão"
       ],
       "manualKeywords": [],
@@ -1011658,7 +1011888,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011671,6 +1011903,7 @@
         "vt pimenta do reino",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pimenta",
         "reino"
       ],
@@ -1011683,7 +1011916,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011696,6 +1011931,7 @@
         "vt gengibre",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "gengibre"
       ],
       "manualKeywords": [],
@@ -1011707,7 +1011943,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011720,6 +1011958,7 @@
         "vt flores holambra 2",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "holambra",
         "flores"
       ],
@@ -1011732,7 +1011971,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011744,7 +1011985,8 @@
       "keywords": [
         "vt ovo",
         "agronegócio",
-        "agrocultura"
+        "agrocultura",
+        "espírito santo - es"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1011755,7 +1011997,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011768,6 +1012012,7 @@
         "vt produção orgânicos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "orgânicos"
       ],
       "manualKeywords": [],
@@ -1011779,7 +1012024,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011792,6 +1012039,7 @@
         "vt cooperativa mirim",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cooperativa",
         "mirim"
       ],
@@ -1011804,7 +1012052,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011817,6 +1012067,7 @@
         "vt comércio justo",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "comércio",
         "justo"
       ],
@@ -1011829,7 +1012080,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011842,6 +1012095,7 @@
         "vt flores caparaó",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "caparaó",
         "flores"
       ],
@@ -1011854,7 +1012108,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011867,6 +1012123,7 @@
         "vt pó de mulher",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mulher"
       ],
       "manualKeywords": [],
@@ -1011878,7 +1012135,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011891,6 +1012150,7 @@
         "vt programa aquisição",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "aquisição",
         "programa"
       ],
@@ -1011903,7 +1012163,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011916,6 +1012178,7 @@
         "vt um dia na ceasa",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "ceasa"
       ],
       "manualKeywords": [],
@@ -1011927,7 +1012190,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011940,6 +1012205,7 @@
         "vt indicação geográfica",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "geográfica",
         "indicação"
       ],
@@ -1011952,7 +1012218,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011965,6 +1012233,7 @@
         "vt solução verde",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "solução",
         "verde"
       ],
@@ -1011977,7 +1012246,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1011990,6 +1012261,7 @@
         "vt agro não para",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agro"
       ],
       "manualKeywords": [],
@@ -1012001,7 +1012273,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012014,6 +1012288,7 @@
         "vt junina no campo",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "junina",
         "campo"
       ],
@@ -1012026,7 +1012301,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012039,6 +1012316,7 @@
         "energia solar",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "energia",
         "solar"
       ],
@@ -1012051,7 +1012329,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012064,6 +1012344,7 @@
         "renda mel",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "renda"
       ],
       "manualKeywords": [],
@@ -1012075,7 +1012356,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012088,6 +1012371,7 @@
         "vt pecuária neutra",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pecuária",
         "neutra"
       ],
@@ -1012100,7 +1012384,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012113,6 +1012399,7 @@
         "inhame são bento",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "inhame",
         "bento"
       ],
@@ -1012125,7 +1012412,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012138,6 +1012427,7 @@
         "vt pesquisa agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pesquisa",
         "agro"
       ],
@@ -1012150,7 +1012440,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012163,6 +1012455,7 @@
         "vt irrigação eficiente",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "eficiente",
         "irrigação"
       ],
@@ -1012175,7 +1012468,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012188,6 +1012483,7 @@
         "vt agro oriente",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "oriente",
         "agro"
       ],
@@ -1012200,7 +1012496,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012213,6 +1012511,7 @@
         "vt compost barn",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "compost",
         "barn"
       ],
@@ -1012225,7 +1012524,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012238,6 +1012539,7 @@
         "vt risoto de socol",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "risoto",
         "socol"
       ],
@@ -1012250,7 +1012552,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012263,6 +1012567,7 @@
         "vt sustentabilidade",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "sustentabilidade"
       ],
       "manualKeywords": [],
@@ -1012274,7 +1012579,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012287,6 +1012594,7 @@
         "vt carcinicultura",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "carcinicultura"
       ],
       "manualKeywords": [],
@@ -1012298,7 +1012606,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012311,6 +1012621,7 @@
         "vt pizza polenta",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "polenta",
         "pizza"
       ],
@@ -1012323,7 +1012634,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012336,6 +1012649,7 @@
         "vt charcutaria",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "charcutaria"
       ],
       "manualKeywords": [],
@@ -1012347,7 +1012661,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012360,6 +1012676,7 @@
         "vt berrante história",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "berrante",
         "história"
       ],
@@ -1012372,7 +1012689,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012385,6 +1012704,7 @@
         "vt mosteiro agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mosteiro",
         "agro"
       ],
@@ -1012397,7 +1012717,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012410,6 +1012732,7 @@
         "vt pimenta rosa",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pimenta",
         "rosa"
       ],
@@ -1012422,7 +1012745,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012435,6 +1012760,7 @@
         "vt fruticultura",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "fruticultura"
       ],
       "manualKeywords": [],
@@ -1012446,7 +1012772,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012459,6 +1012787,7 @@
         "vt mulheres agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mulheres",
         "agro"
       ],
@@ -1012471,7 +1012800,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012484,6 +1012815,7 @@
         "vt abelhas",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "abelhas"
       ],
       "manualKeywords": [],
@@ -1012495,7 +1012827,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012508,6 +1012842,7 @@
         "vt educacao campo",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "educacao",
         "campo"
       ],
@@ -1012520,7 +1012855,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012533,6 +1012870,7 @@
         "vt refloresta",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "refloresta"
       ],
       "manualKeywords": [],
@@ -1012544,7 +1012882,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012557,6 +1012897,7 @@
         "vt pobreza resgate",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pobreza",
         "resgate"
       ],
@@ -1012569,7 +1012910,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012582,6 +1012925,7 @@
         "vt fairtrade",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "fairtrade"
       ],
       "manualKeywords": [],
@@ -1012593,7 +1012937,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012606,6 +1012952,7 @@
         "vt vacina rural",
         "saúde",
         "agrocultura",
+        "espírito santo - es",
         "vacina",
         "rural"
       ],
@@ -1012618,7 +1012965,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012631,6 +1012980,7 @@
         "vt macadâmia",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "macadâmia"
       ],
       "manualKeywords": [],
@@ -1012642,7 +1012992,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012655,6 +1013007,7 @@
         "vt beiju",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "beiju"
       ],
       "manualKeywords": [],
@@ -1012666,7 +1013019,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012679,6 +1013034,7 @@
         "vt carne de sol",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "carne"
       ],
       "manualKeywords": [],
@@ -1012690,7 +1013046,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012703,6 +1013061,7 @@
         "vt pirarucu es",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pirarucu"
       ],
       "manualKeywords": [],
@@ -1012714,7 +1013073,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012727,6 +1013088,7 @@
         "vt assistência técnica",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "assistência",
         "técnica"
       ],
@@ -1012739,7 +1013101,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012752,6 +1013116,7 @@
         "vt panela de barro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "panela",
         "barro"
       ],
@@ -1012764,7 +1013129,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012777,6 +1013144,7 @@
         "vt 2 juventude_agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "juventude",
         "agro"
       ],
@@ -1012789,7 +1013157,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012802,6 +1013172,7 @@
         "vt inverno capixaba",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "capixaba",
         "inverno"
       ],
@@ -1012814,7 +1013185,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012827,6 +1013200,7 @@
         "vt torta capixaba",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "capixaba",
         "torta"
       ],
@@ -1012839,7 +1013213,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012852,6 +1013228,7 @@
         "vt piscicultura",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "piscicultura"
       ],
       "manualKeywords": [],
@@ -1012863,7 +1013240,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012876,6 +1013255,7 @@
         "vt empreende agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "empreende",
         "agro"
       ],
@@ -1012888,7 +1013268,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012901,6 +1013283,7 @@
         "vt reflorestar",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "reflorestar"
       ],
       "manualKeywords": [],
@@ -1012912,7 +1013295,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012925,6 +1013310,7 @@
         "vt agro fraterno",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "fraterno",
         "agro"
       ],
@@ -1012937,7 +1013323,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012950,6 +1013338,7 @@
         "vt dia do café",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "café"
       ],
       "manualKeywords": [],
@@ -1012961,7 +1013350,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012974,6 +1013365,7 @@
         "vt crédito fundiário",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "fundiário",
         "crédito"
       ],
@@ -1012986,7 +1013378,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1012999,6 +1013393,7 @@
         "vt indios mel",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "indios"
       ],
       "manualKeywords": [],
@@ -1013010,7 +1013405,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013023,6 +1013420,7 @@
         "vt microbacias",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "microbacias"
       ],
       "manualKeywords": [],
@@ -1013034,7 +1013432,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013074,6 +1013474,7 @@
         "vt caminho orgânicos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "orgânicos",
         "caminho"
       ],
@@ -1013086,7 +1013487,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013099,6 +1013502,7 @@
         "vt mangalarga",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mangalarga"
       ],
       "manualKeywords": [],
@@ -1013110,7 +1013514,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013123,6 +1013529,7 @@
         "vt nova avicultura",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "avicultura"
       ],
       "manualKeywords": [],
@@ -1013134,7 +1013541,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013147,6 +1013556,7 @@
         "vt ig caparaó",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "caparaó"
       ],
       "manualKeywords": [],
@@ -1013158,7 +1013568,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013171,6 +1013583,7 @@
         "vt perspectivas 2022",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "perspectivas"
       ],
       "manualKeywords": [],
@@ -1013182,7 +1013595,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013195,6 +1013610,7 @@
         "vt guarapari agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "guarapari",
         "agro"
       ],
@@ -1013207,7 +1013623,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013220,6 +1013638,7 @@
         "vt espumante",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "espumante"
       ],
       "manualKeywords": [],
@@ -1013231,7 +1013650,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013244,6 +1013665,7 @@
         "vt pimenta ardida",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pimenta",
         "ardida"
       ],
@@ -1013256,7 +1013678,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013269,6 +1013693,7 @@
         "vt selo arte",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "arte",
         "selo"
       ],
@@ -1013281,7 +1013706,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013294,6 +1013721,7 @@
         "vt condominio avíncola",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "condominio",
         "avíncola"
       ],
@@ -1013306,7 +1013734,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013319,6 +1013749,7 @@
         "vt chocolate próprio",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "chocolate",
         "próprio"
       ],
@@ -1013331,7 +1013762,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013344,6 +1013777,7 @@
         "vt barragens es",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "barragens"
       ],
       "manualKeywords": [],
@@ -1013355,7 +1013789,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013368,6 +1013804,7 @@
         "vt hortas comunitárias",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "comunitárias",
         "hortas"
       ],
@@ -1013380,7 +1013817,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013393,6 +1013832,7 @@
         "vt cidades fair trade",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cidades",
         "trade",
         "fair"
@@ -1013406,7 +1013846,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013419,6 +1013861,7 @@
         "vt conilon especial",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "especial",
         "conilon"
       ],
@@ -1013431,7 +1013874,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013444,6 +1013889,7 @@
         "vt perfil rebanho",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "rebanho",
         "perfil"
       ],
@@ -1013456,7 +1013902,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013469,6 +1013917,7 @@
         "vt fazendas digitais",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "digitais",
         "fazendas"
       ],
@@ -1013481,7 +1013930,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013494,6 +1013945,7 @@
         "vt agricultores pomeranos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agricultores",
         "pomeranos"
       ],
@@ -1013506,7 +1013958,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013519,6 +1013973,7 @@
         "vtjuçara es",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "vtjuçara"
       ],
       "manualKeywords": [],
@@ -1013530,7 +1013985,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013543,6 +1014000,7 @@
         "vt agro influencers",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "influencers",
         "agro"
       ],
@@ -1013555,7 +1014013,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013568,6 +1014028,7 @@
         "vt silvipastoril",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "silvipastoril"
       ],
       "manualKeywords": [],
@@ -1013579,7 +1014040,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013592,6 +1014055,7 @@
         "vt gengibre",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "gengibre"
       ],
       "manualKeywords": [],
@@ -1013603,7 +1014067,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013616,6 +1014082,7 @@
         "vt boas práticas",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "práticas",
         "boas"
       ],
@@ -1013628,7 +1014095,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013641,6 +1014110,7 @@
         "vt agroligadas",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agroligadas"
       ],
       "manualKeywords": [],
@@ -1013652,7 +1014122,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013665,6 +1014137,7 @@
         "vt vocação agro brasil",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "vocação",
         "brasil",
         "agro"
@@ -1013678,7 +1014151,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013691,6 +1014166,7 @@
         "vt cogumelo cultivo",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cogumelo",
         "cultivo"
       ],
@@ -1013703,7 +1014179,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013716,6 +1014194,7 @@
         "vt robôs agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "robôs",
         "agro"
       ],
@@ -1013728,7 +1014207,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013741,6 +1014222,7 @@
         "vt agro profissões",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "profissões",
         "agro"
       ],
@@ -1013753,7 +1014235,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013766,6 +1014250,7 @@
         "vt rio mangaraí",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mangaraí"
       ],
       "manualKeywords": [],
@@ -1013777,7 +1014262,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013790,6 +1014277,7 @@
         "vt café feira",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "feira",
         "café"
       ],
@@ -1013802,7 +1014290,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013815,6 +1014305,7 @@
         "vt drone fiscaliza",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "fiscaliza",
         "drone"
       ],
@@ -1013827,7 +1014318,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013840,6 +1014333,7 @@
         "vt uva guarapari",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "guarapari"
       ],
       "manualKeywords": [],
@@ -1013851,7 +1014345,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013864,6 +1014360,7 @@
         "vt agro 2023",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agro"
       ],
       "manualKeywords": [],
@@ -1013875,7 +1014372,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013888,6 +1014387,7 @@
         "vt culinária pomerana",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "culinária",
         "pomerana"
       ],
@@ -1013900,7 +1014400,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013913,6 +1014415,7 @@
         "vt turismo rural",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "turismo",
         "rural"
       ],
@@ -1013925,7 +1014428,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013938,6 +1014443,7 @@
         "vt vinho gramado",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "gramado",
         "vinho"
       ],
@@ -1013950,7 +1014456,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013963,6 +1014471,7 @@
         "vt lúpulo pesquisa",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pesquisa",
         "lúpulo"
       ],
@@ -1013975,7 +1014484,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1013988,6 +1014499,7 @@
         "vt azeite gramado",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "gramado",
         "azeite"
       ],
@@ -1014000,7 +1014512,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014013,6 +1014527,7 @@
         "vt tomate terraço",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "terraço",
         "tomate"
       ],
@@ -1014025,7 +1014540,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014038,6 +1014555,7 @@
         "vt leite maior fazenda",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "fazenda",
         "leite",
         "maior"
@@ -1014051,7 +1014569,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014064,6 +1014584,7 @@
         "vt bioinsumos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "bioinsumos"
       ],
       "manualKeywords": [],
@@ -1014075,7 +1014596,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014088,6 +1014611,7 @@
         "vt nutrição animal",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "nutrição",
         "animal"
       ],
@@ -1014100,7 +1014624,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014113,6 +1014639,7 @@
         "vt feira inovameat",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "inovameat",
         "feira"
       ],
@@ -1014125,7 +1014652,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014138,6 +1014667,7 @@
         "vt genética pecuária",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "genética",
         "pecuária"
       ],
@@ -1014150,7 +1014680,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014163,6 +1014695,7 @@
         "vt itaipu agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "itaipu",
         "agro"
       ],
@@ -1014175,7 +1014708,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014216,6 +1014751,7 @@
         "vt terroir brasil",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "terroir",
         "brasil"
       ],
@@ -1014228,7 +1014764,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014241,6 +1014779,7 @@
         "vt nutrição animal",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "nutrição",
         "animal"
       ],
@@ -1014253,7 +1014792,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014266,6 +1014807,7 @@
         "vt pitaya",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pitaya"
       ],
       "manualKeywords": [],
@@ -1014277,7 +1014819,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014290,6 +1014834,7 @@
         "vt gengibre",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "gengibre"
       ],
       "manualKeywords": [],
@@ -1014301,7 +1014846,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014314,6 +1014861,7 @@
         "vt carbono zero",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "carbono",
         "zero"
       ],
@@ -1014326,7 +1014874,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014339,6 +1014889,7 @@
         "vt pereveca",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pereveca"
       ],
       "manualKeywords": [],
@@ -1014350,7 +1014901,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014363,6 +1014916,7 @@
         "vt agrotoken",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agrotoken"
       ],
       "manualKeywords": [],
@@ -1014374,7 +1014928,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014388,6 +1014944,7 @@
         "agronegócio",
         "agrocultura",
         "paraíba - pb",
+        "espírito santo - es",
         "engenhos",
         "tradição"
       ],
@@ -1014401,7 +1014958,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "PARAÍBA - PB"
+        "PARAÍBA - PB",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1014415,6 +1014973,7 @@
         "vt bosque cerejeiras",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cerejeiras",
         "bosque"
       ],
@@ -1014427,7 +1014986,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014440,6 +1015001,7 @@
         "vt colar da pecuária",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pecuária",
         "colar"
       ],
@@ -1014452,7 +1015014,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014465,6 +1015029,7 @@
         "vt lúpulo viana",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "lúpulo",
         "viana"
       ],
@@ -1014477,7 +1015042,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014490,6 +1015057,7 @@
         "vt insumos agrícolas",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agrícolas",
         "insumos"
       ],
@@ -1014502,7 +1015070,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014515,6 +1015085,7 @@
         "vt palmito pupunha",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "palmito",
         "pupunha"
       ],
@@ -1014527,7 +1015098,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014540,6 +1015113,7 @@
         "vt carbono zero rs",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "carbono",
         "zero"
       ],
@@ -1014552,7 +1015126,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014565,6 +1015141,7 @@
         "vt carvão vegetal",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "vegetal",
         "carvão"
       ],
@@ -1014577,7 +1015154,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014590,6 +1015169,7 @@
         "vt queijaria autoatendimento",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "autoatendimento",
         "queijaria"
       ],
@@ -1014602,7 +1015182,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014615,6 +1015197,7 @@
         "vt agro planeja",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "planeja",
         "agro"
       ],
@@ -1014627,7 +1015210,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014640,6 +1015225,7 @@
         "vt gado angus",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "angus",
         "gado"
       ],
@@ -1014652,7 +1015238,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014666,6 +1015254,7 @@
         "agronegócio",
         "agrocultura",
         "rio grande do sul",
+        "espírito santo - es",
         "chocolate",
         "gramado"
       ],
@@ -1014679,7 +1015268,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO GRANDE DO SUL"
+        "RIO GRANDE DO SUL",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1014693,6 +1015283,7 @@
         "vt exportação aérea",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "exportação",
         "aérea"
       ],
@@ -1014705,7 +1015296,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014718,6 +1015311,7 @@
         "vt el niño agronegócio",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "niño"
       ],
       "manualKeywords": [],
@@ -1014729,7 +1015323,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014742,6 +1015338,7 @@
         "vt turismo experiência",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "experiência",
         "turismo"
       ],
@@ -1014754,7 +1015351,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014767,6 +1015366,7 @@
         "vt empreendedorismo rural",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "empreendedorismo",
         "rural"
       ],
@@ -1014779,7 +1015379,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014792,6 +1015394,7 @@
         "vt natal agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "natal",
         "agro"
       ],
@@ -1014804,7 +1015407,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014817,6 +1015422,7 @@
         "vt vinhos ano novo",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "vinhos"
       ],
       "manualKeywords": [],
@@ -1014828,7 +1015434,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014841,6 +1015449,7 @@
         "vt vale empoçado",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "empoçado",
         "vale"
       ],
@@ -1014853,7 +1015462,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014866,6 +1015477,7 @@
         "vt lúpulo carnaval",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "carnaval",
         "lúpulo"
       ],
@@ -1014878,7 +1015490,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014891,6 +1015505,7 @@
         "vt cascavel destaques",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "destaques",
         "cascavel"
       ],
@@ -1014903,7 +1015518,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014916,6 +1015533,7 @@
         "vt agrocone sul",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agrocone"
       ],
       "manualKeywords": [],
@@ -1014927,7 +1015545,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014940,6 +1015560,7 @@
         "vt floricultura sul capixaba",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "floricultura",
         "capixaba"
       ],
@@ -1014952,7 +1015573,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014965,6 +1015588,7 @@
         "vt marisqueiras",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "marisqueiras"
       ],
       "manualKeywords": [],
@@ -1014976,7 +1015600,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1014989,6 +1015615,7 @@
         "vt máquinas agrícolas",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agrícolas",
         "máquinas"
       ],
@@ -1015001,7 +1015628,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015014,6 +1015643,7 @@
         "vt pecuária sustentável",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "sustentável",
         "pecuária"
       ],
@@ -1015026,7 +1015656,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015039,6 +1015671,7 @@
         "vt mulheres do cacau",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mulheres",
         "cacau"
       ],
@@ -1015051,7 +1015684,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015064,6 +1015699,7 @@
         "vt indicador cepeia",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "indicador",
         "cepeia"
       ],
@@ -1015076,7 +1015712,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015089,6 +1015727,7 @@
         "vt horta escolas",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "escolas",
         "horta"
       ],
@@ -1015101,7 +1015740,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015114,6 +1015755,7 @@
         "vt lavoura de carne",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "lavoura",
         "carne"
       ],
@@ -1015126,7 +1015768,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015139,6 +1015783,7 @@
         "vt agricultura natural",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agricultura",
         "natural"
       ],
@@ -1015151,7 +1015796,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015164,6 +1015811,7 @@
         "vt centro excelência",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "excelência",
         "centro"
       ],
@@ -1015176,7 +1015824,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015189,6 +1015839,7 @@
         "vt cria recria",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "recria",
         "cria"
       ],
@@ -1015201,7 +1015852,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015214,6 +1015867,7 @@
         "vt agro a cara do brasil",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "brasil",
         "agro",
         "cara"
@@ -1015227,7 +1015881,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015267,6 +1015923,7 @@
         "vt mulheres qualifica",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "qualifica",
         "mulheres"
       ],
@@ -1015279,7 +1015936,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015292,6 +1015951,7 @@
         "vt ovo caipira",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "caipira"
       ],
       "manualKeywords": [],
@@ -1015303,7 +1015963,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015316,6 +1015978,7 @@
         "vt cacau sustentável",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "sustentável",
         "cacau"
       ],
@@ -1015328,7 +1015991,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015341,6 +1016006,7 @@
         "vt mel vitória",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "meliponicultura",
         "vitória"
       ],
@@ -1015353,7 +1016019,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015366,6 +1016034,7 @@
         "vt biotecnologia",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "biotecnologia"
       ],
       "manualKeywords": [],
@@ -1015377,7 +1016046,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015391,6 +1016062,7 @@
         "agronegócio",
         "agrocultura",
         "mato grosso - mt",
+        "espírito santo - es",
         "usina",
         "cana"
       ],
@@ -1015404,7 +1016076,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "MATO GROSSO - MT"
+        "MATO GROSSO - MT",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1015418,6 +1016091,7 @@
         "vt rio são francisco",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "francisco"
       ],
       "manualKeywords": [],
@@ -1015429,7 +1016103,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015442,6 +1016118,7 @@
         "vt fazenda urbana",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "fazenda",
         "urbana"
       ],
@@ -1015454,7 +1016131,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015467,6 +1016146,7 @@
         "vt produtos de origem",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "produtos",
         "origem"
       ],
@@ -1015479,7 +1016159,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015492,6 +1016174,7 @@
         "vt imigração italiana",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "imigração",
         "italiana"
       ],
@@ -1015504,7 +1016187,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015517,6 +1016202,7 @@
         "vt agro paraná",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "paraná",
         "agro"
       ],
@@ -1015529,7 +1016215,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015542,6 +1016230,7 @@
         "vt prêmio mulheres do agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mulheres",
         "prêmio",
         "agro"
@@ -1015555,7 +1016244,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015568,6 +1016259,7 @@
         "vt pecuária legal",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pecuária",
         "legal"
       ],
@@ -1015580,7 +1016272,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015593,6 +1016287,7 @@
         "vt cultivo cogumelo",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cogumelo",
         "cultivo"
       ],
@@ -1015605,7 +1016300,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015618,6 +1016315,7 @@
         "vt ovos de páscoa",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "páscoa",
         "ovos"
       ],
@@ -1015630,7 +1016328,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015643,6 +1016343,7 @@
         "vt gengibre nacional",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "gengibre",
         "nacional"
       ],
@@ -1015655,7 +1016356,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015668,6 +1016371,7 @@
         "vt natal biscoito",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "biscoito",
         "natal"
       ],
@@ -1015680,7 +1016384,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015693,6 +1016399,7 @@
         "vt espumante nacional",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "espumante",
         "nacional"
       ],
@@ -1015705,7 +1016412,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015718,6 +1016427,7 @@
         "vt perspectivas agro 2025",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "perspectivas",
         "agro"
       ],
@@ -1015730,7 +1016440,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015743,6 +1016455,7 @@
         "vt distrito turistico",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "turistico",
         "distrito"
       ],
@@ -1015755,7 +1016468,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015768,6 +1016483,7 @@
         "vt instituto terra",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "instituto",
         "terra"
       ],
@@ -1015780,7 +1016496,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015793,6 +1016511,7 @@
         "vt vinícola artesanal",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "artesanal",
         "vinícola"
       ],
@@ -1015805,7 +1016524,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015818,6 +1016539,7 @@
         "vt charcutaria",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "charcutaria"
       ],
       "manualKeywords": [],
@@ -1015829,7 +1016551,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015843,6 +1016567,7 @@
         "agronegócio",
         "agrocultura",
         "goiás - go",
+        "espírito santo - es",
         "tecnoshow",
         "goiás"
       ],
@@ -1015856,7 +1016581,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "GOIÁS - GO"
+        "GOIÁS - GO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1015870,6 +1016596,7 @@
         "vt algas agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "algas",
         "agro"
       ],
@@ -1015882,7 +1016609,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015895,6 +1016624,7 @@
         "vt agrishow",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agrishow"
       ],
       "manualKeywords": [],
@@ -1015906,7 +1016636,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015919,6 +1016651,7 @@
         "vt mães do agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agro",
         "mães"
       ],
@@ -1015931,7 +1016664,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015945,6 +1016680,7 @@
         "agronegócio",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "panelas",
         "barro"
       ],
@@ -1015958,7 +1016694,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1015972,6 +1016709,7 @@
         "vt versatilidade milho",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "versatilidade",
         "milho"
       ],
@@ -1015984,7 +1016722,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1015997,6 +1016737,7 @@
         "vt pecuária 360",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pecuária"
       ],
       "manualKeywords": [],
@@ -1016008,7 +1016749,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016021,6 +1016764,7 @@
         "vt cavalos hipismo",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cavalos",
         "hipismo"
       ],
@@ -1016033,7 +1016777,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016046,6 +1016792,7 @@
         "vt produtos agro brasil",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "produtos",
         "brasil",
         "agro"
@@ -1016059,7 +1016806,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016072,6 +1016821,7 @@
         "vt produção de leite",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "leite"
       ],
       "manualKeywords": [],
@@ -1016083,7 +1016833,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016096,6 +1016848,7 @@
         "vt aviação agrícola",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agrícola",
         "aviação"
       ],
@@ -1016108,7 +1016861,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016121,6 +1016876,7 @@
         "vt pizza de polenta",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "polenta",
         "pizza"
       ],
@@ -1016133,7 +1016889,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016146,6 +1016904,7 @@
         "vt revolução horti fruti",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "revolução",
         "fruti",
         "horti"
@@ -1016159,7 +1016918,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016172,6 +1016933,7 @@
         "vt concurso leiteiro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "concurso",
         "leiteiro"
       ],
@@ -1016184,7 +1016946,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016197,6 +1016961,7 @@
         "vt cooperativa morango",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cooperativa",
         "morango"
       ],
@@ -1016209,7 +1016974,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016222,6 +1016989,7 @@
         "vt criação truta",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "criação",
         "truta"
       ],
@@ -1016234,7 +1017002,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016247,6 +1017017,7 @@
         "vt insumos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "insumos"
       ],
       "manualKeywords": [],
@@ -1016258,7 +1017029,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016272,6 +1017045,7 @@
         "agronegócio",
         "agrocultura",
         "espírito santo",
+        "espírito santo - es",
         "pimenta"
       ],
       "manualKeywords": [],
@@ -1016284,7 +1017058,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "ESPÍRITO SANTO"
+        "ESPÍRITO SANTO",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1016298,6 +1017073,7 @@
         "vt ceaflor",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "ceaflor"
       ],
       "manualKeywords": [],
@@ -1016309,7 +1017085,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016322,6 +1017100,7 @@
         "vt produtos biológicos",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "biológicos",
         "produtos"
       ],
@@ -1016334,7 +1017113,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016347,6 +1017128,7 @@
         "vt produção uvas",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "uvas"
       ],
       "manualKeywords": [],
@@ -1016358,7 +1017140,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016371,6 +1017155,7 @@
         "vt novidades drones",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "novidades",
         "drones"
       ],
@@ -1016383,7 +1017168,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016396,6 +1017183,7 @@
         "vt agricultura familiar",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agricultura",
         "familiar"
       ],
@@ -1016408,7 +1017196,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016421,6 +1017211,7 @@
         "vt polêmica leite",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "polêmica",
         "leite"
       ],
@@ -1016433,7 +1017224,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016446,6 +1017239,7 @@
         "vt inovação mangueira",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "mangueira",
         "inovação"
       ],
@@ -1016458,7 +1017252,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016471,6 +1017267,7 @@
         "vt agricultura tropical",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agricultura",
         "tropical"
       ],
@@ -1016483,7 +1017280,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016496,6 +1017295,7 @@
         "vt congresso mulheres",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "congresso",
         "mulheres"
       ],
@@ -1016508,7 +1017308,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [
         "Congresso Nacional"
@@ -1016523,6 +1017325,7 @@
         "vt casca sururu",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "sururu",
         "casca"
       ],
@@ -1016535,7 +1017338,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016548,6 +1017353,7 @@
         "vt cop 30 agrizone",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agrizone"
       ],
       "manualKeywords": [],
@@ -1016559,7 +1017365,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016572,6 +1017380,7 @@
         "vt ciência e agro",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "ciência",
         "agro"
       ],
@@ -1016584,7 +1017393,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016597,6 +1017408,7 @@
         "vt bem estar animal",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "animal",
         "estar"
       ],
@@ -1016609,7 +1017421,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016622,6 +1017436,7 @@
         "vt azeite festas",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "azeite",
         "festas"
       ],
@@ -1016634,7 +1017449,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016647,6 +1017464,7 @@
         "vt colibris ruschi",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "colibris",
         "ruschi"
       ],
@@ -1016659,7 +1017477,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016673,6 +1017493,7 @@
         "agronegócio",
         "agrocultura",
         "paraná - pr",
+        "espírito santo - es",
         "feira"
       ],
       "manualKeywords": [],
@@ -1016685,7 +1017506,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "PARANÁ - PR"
+        "PARANÁ - PR",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1016727,6 +1017549,7 @@
         "agronegócio",
         "agrocultura",
         "rio grande do sul - rs",
+        "espírito santo - es",
         "azeite"
       ],
       "manualKeywords": [],
@@ -1016739,7 +1017562,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO GRANDE DO SUL - RS"
+        "RIO GRANDE DO SUL - RS",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1016754,6 +1017578,7 @@
         "agronegócio",
         "agrocultura",
         "rio grande do sul - rs",
+        "espírito santo - es",
         "gramado",
         "vinho"
       ],
@@ -1016767,7 +1017592,8 @@
       ],
       "manualPeople": [],
       "places": [
-        "RIO GRANDE DO SUL - RS"
+        "RIO GRANDE DO SUL - RS",
+        "ESPÍRITO SANTO - ES"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1016781,6 +1017607,7 @@
         "vt expodireto",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "expodireto"
       ],
       "manualKeywords": [],
@@ -1016792,7 +1017619,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016805,6 +1017634,7 @@
         "vt bicudo do algodão",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "algodão",
         "bicudo"
       ],
@@ -1016817,7 +1017647,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016830,6 +1017662,7 @@
         "vt cacau de linhares",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "linhares",
         "cacau"
       ],
@@ -1016842,7 +1017675,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016855,6 +1017690,7 @@
         "vt maçã vacaria",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "vacaria",
         "maçã"
       ],
@@ -1016867,7 +1017703,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016880,6 +1017718,7 @@
         "vt agro guerra",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "guerra",
         "agro"
       ],
@@ -1016892,7 +1017731,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016905,6 +1017746,7 @@
         "vt tecnoshow",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "tecnoshow"
       ],
       "manualKeywords": [],
@@ -1016916,7 +1017758,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016929,6 +1017773,7 @@
         "vt ruraltur",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "ruraltur"
       ],
       "manualKeywords": [],
@@ -1016940,7 +1017785,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016953,6 +1017800,7 @@
         "vt agrishow",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "agrishow"
       ],
       "manualKeywords": [],
@@ -1016964,7 +1017812,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1016977,6 +1017827,7 @@
         "vt gado angus rs",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "angus",
         "gado"
       ],
@@ -1016989,7 +1017840,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1017002,6 +1017855,7 @@
         "vt abramilho",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "abramilho"
       ],
       "manualKeywords": [],
@@ -1017013,7 +1017867,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1017026,6 +1017882,7 @@
         "vt pimenta rosa",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "pimenta",
         "rosa"
       ],
@@ -1017038,7 +1017895,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1017079,6 +1017938,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "SANTA TERESA / ES"
       ],
       "manualPlaces": [],
@@ -1017124,6 +1017984,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "ITAQUIRAÍ / MS"
       ],
       "manualPlaces": [],
@@ -1017164,7 +1018025,9 @@
         "GUILHERME OLIVEIRA"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1017210,6 +1018073,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "HOLAMBRA / SP"
       ],
       "manualPlaces": [],
@@ -1017251,6 +1018115,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "MUQUI / ES"
       ],
       "manualPlaces": [],
@@ -1017290,6 +1018155,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "VITÓRIA / ES"
       ],
       "manualPlaces": [],
@@ -1017329,6 +1018195,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "PLANALTINA / DF"
       ],
       "manualPlaces": [],
@@ -1017372,6 +1018239,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "LOUVEIRA / SP"
       ],
       "manualPlaces": [],
@@ -1017386,6 +1018254,7 @@
         "vt feira cooabriel",
         "agronegócio",
         "agrocultura",
+        "espírito santo - es",
         "cooabriel",
         "feira"
       ],
@@ -1017398,7 +1018267,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1042200,6 +1043071,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "JUSSARA / GO"
       ],
       "manualPlaces": [],
@@ -1042238,6 +1043110,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "SÃO PAULO / SP"
       ],
       "manualPlaces": [],
@@ -1042253,6 +1043126,7 @@
       "keywords": [
         "vt ruraltur es",
         "agrocultura",
+        "espírito santo - es",
         "ruraltur"
       ],
       "manualKeywords": [],
@@ -1042262,7 +1043136,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1042300,6 +1043176,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "FOZ DO IGUAÇU / PR"
       ],
       "manualPlaces": [],
@@ -1042338,6 +1043215,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "São Paulo / SP"
       ],
       "manualPlaces": [],
@@ -1042382,6 +1043260,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "ESTEIO / RS"
       ],
       "manualPlaces": [],
@@ -1042395,6 +1043274,7 @@
       "keywords": [
         "aviação agrícola",
         "agrocultura",
+        "espírito santo - es",
         "agrícola",
         "aviação"
       ],
@@ -1042405,7 +1043285,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1042447,6 +1043329,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "MONTE CARMELO / MG"
       ],
       "manualPlaces": [],
@@ -1045485,6 +1046368,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "VACARIA / RS"
       ],
       "manualPlaces": [],
@@ -1049119,6 +1050003,7 @@
       "keywords": [
         "vt insumos agro",
         "agrocultura",
+        "espírito santo - es",
         "insumos",
         "agro"
       ],
@@ -1049129,7 +1050014,9 @@
         "BRUNO FAUSTINO"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1049721,6 +1050608,7 @@
       ],
       "manualPeople": [],
       "places": [
+        "ESPÍRITO SANTO - ES",
         "PORTO ALEGRE / RS",
         "Secretário-executivo do Sindilat / RS"
       ],
@@ -1050563,6 +1051451,7 @@
         "condominio amigo dos animais",
         "meio ambiente",
         "jornal da cultura",
+        "tv cultura do rio",
         "rio de janeiro - rj",
         "condominio",
         "animais",
@@ -1050581,7 +1051470,9 @@
         "RIO DE JANEIRO - RJ"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1051010,18 +1051901,44 @@
       "manualTitle": "",
       "keywords": [
         "vt feira conillon",
-        "agrocultura",
-        "conillon",
-        "feira"
+        "presidente",
+        "conilon",
+        "milhões",
+        "sacas",
+        "capixaba",
+        "café",
+        "internacional",
+        "cafeicultora",
+        "planejamento",
+        "agricultura",
+        "agronômico",
+        "secretário",
+        "tecnologia",
+        "atravessa"
       ],
       "manualKeywords": [],
       "subjects": [],
       "manualSubjects": [],
       "people": [
-        "BRUNO FAUSTINO"
+        "BRUNO FAUSTINO",
+        "RODA COMP",
+        "ANA PAULA MARTIN MACHADO",
+        "ALEX CAMPANHRO",
+        "WEBSTER WANDEL",
+        "ESPÍRITO SANTO",
+        "GUILHERME CABRAL",
+        "FRANK MORO",
+        "RENATO THEODORO",
+        "MARCELINO BELLARDT",
+        "LUIZ CARLOS BASTIANELLO",
+        "CIMÁ GUIZANI"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "ESPÍRITO SANTO - ES",
+        "SÃO MATEUS / ES",
+        "GER. DE PLANEJAMENTO DE EXPANSÃO / ES"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1051297,6 +1052214,7 @@
         "cemitérios foz do iguaçu",
         "cotidiano",
         "jornal da cultura",
+        "catve",
         "paraná - pr",
         "cemitérios",
         "iguaçu"
@@ -1051312,7 +1052230,9 @@
         "PARANÁ - PR"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "CATVE"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1051323,6 +1052243,7 @@
         "granizo toledo parané",
         "meio ambiente",
         "jornal da cultura",
+        "catve",
         "paraná - pr",
         "granizo",
         "parané",
@@ -1051339,7 +1052260,9 @@
         "PARANÁ - PR"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "CATVE"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1051350,6 +1052273,7 @@
         "reciclagem de animais",
         "meio ambiente",
         "jornal da cultura",
+        "catve",
         "paraná - pr",
         "reciclagem",
         "animais"
@@ -1051365,7 +1052289,9 @@
         "PARANÁ - PR"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "CATVE"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1051400,10 +1052326,14 @@
       ],
       "manualPeople": [],
       "places": [
-        "GOIÁS - GO"
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -1051438,10 +1052368,14 @@
       ],
       "manualPeople": [],
       "places": [
-        "GOIÁS - GO"
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
