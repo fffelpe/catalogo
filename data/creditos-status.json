@@ -1,9 +1,9 @@
 {
-  "sincronizadoEm": "2026-10-23T18:53:51.800Z",
+  "sincronizadoEm": "2026-10-23T19:24:41.163Z",
   "pastaDrive": "1_9_olIPKl6qlQROGrILAU5Dz1pYYoRik",
-  "totalArquivos": 368,
-  "totalIdsDetectados": 335,
-  "totalSincronizados": 335,
+  "totalArquivos": 378,
+  "totalIdsDetectados": 345,
+  "totalSincronizados": 345,
   "totalIgnorados": 0,
   "totalErros": 0,
   "totalDuplicados": 31,
@@ -21,6 +21,24 @@
   ],
   "ignorados": [],
   "duplicados": [
+    {
+      "id": "1452B005186",
+      "criterio": "conflito: nenhuma escolha automática é permitida",
+      "escolhido": null,
+      "oficiais": [],
+      "arquivos": [
+        {
+          "id": "1eLL3Kd13JV3c2f2HuD8RI99hjLWALaqs",
+          "nome": "1452B005186",
+          "atualizadoEm": "2026-10-23T19:09:03.312Z"
+        },
+        {
+          "id": "188azrnHhuTkvc-Lm1x4eDiiIQZyDcH_A",
+          "nome": "1452B005186",
+          "atualizadoEm": "2026-09-03T18:41:02.731Z"
+        }
+      ]
+    },
     {
       "id": "1452B005465",
       "criterio": "conflito: nenhuma escolha automática é permitida",
@@ -482,24 +500,6 @@
       ]
     },
     {
-      "id": "1452B005186",
-      "criterio": "conflito: nenhuma escolha automática é permitida",
-      "escolhido": null,
-      "oficiais": [],
-      "arquivos": [
-        {
-          "id": "188azrnHhuTkvc-Lm1x4eDiiIQZyDcH_A",
-          "nome": "1452B005186",
-          "atualizadoEm": "2026-09-03T18:41:02.731Z"
-        },
-        {
-          "id": "1eLL3Kd13JV3c2f2HuD8RI99hjLWALaqs",
-          "nome": "1452B005186.pdf",
-          "atualizadoEm": "2026-04-28T18:05:54.000Z"
-        }
-      ]
-    },
-    {
       "id": "1452B004841",
       "criterio": "conflito: nenhuma escolha automática é permitida",
       "escolhido": null,
@@ -591,6 +591,36 @@
     }
   ],
   "conflitos": [
+    {
+      "id": "1452B005186",
+      "motivo": "documentos duplicados sem versão oficial definida",
+      "tipo": "existente",
+      "bloqueante": false,
+      "rejeitado": false,
+      "acao": "crédito anterior preservado; documentos conflitantes não foram aceitos pela sincronização",
+      "oficiais": [],
+      "novosArquivos": [],
+      "arquivos": [
+        {
+          "id": "1eLL3Kd13JV3c2f2HuD8RI99hjLWALaqs",
+          "nome": "1452B005186",
+          "atualizadoEm": "2026-10-23T19:09:03.312Z"
+        },
+        {
+          "id": "188azrnHhuTkvc-Lm1x4eDiiIQZyDcH_A",
+          "nome": "1452B005186",
+          "atualizadoEm": "2026-09-03T18:41:02.731Z"
+        }
+      ],
+      "exemploNomeOficial": "1452B005186 - OFICIAL",
+      "instrucoes": [
+        "Escolha qual dos documentos listados é a versão oficial correta.",
+        "Renomeie somente o documento escolhido para incluir a palavra OFICIAL. Exemplo: \"1452B005186 - OFICIAL\" (mantendo a extensão quando houver).",
+        "Não marque mais de um documento do mesmo Media ID como OFICIAL.",
+        "Opcionalmente, mova ou exclua da pasta de créditos as versões duplicadas que não devem mais participar da sincronização.",
+        "Execute novamente a sincronização. Até a resolução, a versão anterior do crédito permanece preservada."
+      ]
+    },
     {
       "id": "1452B005465",
       "motivo": "documentos duplicados sem versão oficial definida",
@@ -1352,36 +1382,6 @@
       ]
     },
     {
-      "id": "1452B005186",
-      "motivo": "documentos duplicados sem versão oficial definida",
-      "tipo": "existente",
-      "bloqueante": false,
-      "rejeitado": false,
-      "acao": "crédito anterior preservado; documentos conflitantes não foram aceitos pela sincronização",
-      "oficiais": [],
-      "novosArquivos": [],
-      "arquivos": [
-        {
-          "id": "188azrnHhuTkvc-Lm1x4eDiiIQZyDcH_A",
-          "nome": "1452B005186",
-          "atualizadoEm": "2026-09-03T18:41:02.731Z"
-        },
-        {
-          "id": "1eLL3Kd13JV3c2f2HuD8RI99hjLWALaqs",
-          "nome": "1452B005186.pdf",
-          "atualizadoEm": "2026-04-28T18:05:54.000Z"
-        }
-      ],
-      "exemploNomeOficial": "1452B005186 - OFICIAL",
-      "instrucoes": [
-        "Escolha qual dos documentos listados é a versão oficial correta.",
-        "Renomeie somente o documento escolhido para incluir a palavra OFICIAL. Exemplo: \"1452B005186 - OFICIAL\" (mantendo a extensão quando houver).",
-        "Não marque mais de um documento do mesmo Media ID como OFICIAL.",
-        "Opcionalmente, mova ou exclua da pasta de créditos as versões duplicadas que não devem mais participar da sincronização.",
-        "Execute novamente a sincronização. Até a resolução, a versão anterior do crédito permanece preservada."
-      ]
-    },
-    {
       "id": "1452B004841",
       "motivo": "documentos duplicados sem versão oficial definida",
       "tipo": "existente",
@@ -1535,6 +1535,10 @@
   "rejeitadosNovos": [],
   "preservados": [
     {
+      "id": "1452B005186",
+      "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
+    },
+    {
       "id": "1452B005465",
       "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
     },
@@ -1632,10 +1636,6 @@
     },
     {
       "id": "1452B005213",
-      "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
-    },
-    {
-      "id": "1452B005186",
       "motivo": "documentos duplicados sem versão oficial definida; crédito anterior preservado"
     },
     {
