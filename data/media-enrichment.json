@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T19:37:01.610Z",
+  "generatedAt": "2026-10-26T20:01:32.673Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1052047,6 +1052047,40 @@
       "manualOrganizations": [],
       "segments": []
     },
+    "1452B005542": {
+      "title": "Doença de Newcastle — Granja",
+      "manualTitle": "",
+      "keywords": [
+        "doença de newcastle",
+        "granja",
+        "agronegócio",
+        "agrocultura",
+        "rba tv / sc",
+        "santa catarina - sc",
+        "rio do sul",
+        "rio do sul - sc"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "EVANDRO CLÁUDIO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SANTA CATARINA - SC",
+        "RIO DO SUL",
+        "RIO DO SUL - SC"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "RBA TV / SC"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
     "1452B005543": {
       "title": "Festa do Pequi",
       "manualTitle": "",
@@ -1052719,6 +1052753,576 @@
       "manualPlaces": [],
       "organizations": [
         "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1009B065909": {
+      "title": "Pronunciamento de Derrota Flávio Bolsonaro Segundo Turno Eleições — Movimentação E…",
+      "manualTitle": "",
+      "keywords": [
+        "pronunciamento de derrota flávio bolsonaro segundo turno eleições",
+        "movimentação e brasília após o resultado das eleições",
+        "política",
+        "jornal da cultura",
+        "tv cultura",
+        "brasília - df",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MARINA MOTA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1009B065906": {
+      "title": "Terminais de Ônibus — Ônibus nas Eleições",
+      "manualTitle": "",
+      "keywords": [
+        "terminais de ônibus",
+        "ônibus nas eleições",
+        "transporte público no dia das eleições",
+        "política",
+        "jornal da cultura",
+        "tv cultura",
+        "são paulo - sp",
+        "são paulo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "LAÍS DUARTE"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000262": {
+      "title": "Movimentação Hotel de Lula — Anuncio Lula Reeleito no Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "movimentação hotel de lula",
+        "anuncio lula reeleito no segundo turno",
+        "presidente eleito luis inacio lula da silva",
+        "proununciamento de vitória",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "LUIZA MORAES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000261": {
+      "title": "Terminais de Ônibus — Problemas com Transporte Público no Dia da Eleição",
+      "manualTitle": "",
+      "keywords": [
+        "terminais de ônibus",
+        "problemas com transporte público no dia da eleição",
+        "movimentação de pessoas no terminal de ônibus",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "LAÍS DUARTE"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000260": {
+      "title": "Pessoas Indo Votar Atrasadas — Zona Eleitoral",
+      "manualTitle": "",
+      "keywords": [
+        "pessoas indo votar atrasadas",
+        "zona eleitoral",
+        "problemas na votação",
+        "fiscais eleitorais",
+        "mesários na votação",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "SÉRGIO COLACINO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000258": {
+      "title": "Pessoas Indo Votar Atrasadas — Zona Eleitoral",
+      "manualTitle": "",
+      "keywords": [
+        "pessoas indo votar atrasadas",
+        "zona eleitoral",
+        "problemas na votação",
+        "fiscais eleitorais",
+        "mesários na votação",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "SÉRGIO COLACINO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000259": {
+      "title": "Deputado Federal Guilherme Cortez Psol",
+      "manualTitle": "",
+      "keywords": [
+        "deputado federal guilherme cortez psol",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "guilherme",
+        "deputado",
+        "federal",
+        "cortez",
+        "psol"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000257": {
+      "title": "Vice Presidente Geraldo Alckmin Indo Votar — Cabine Eleitoral",
+      "manualTitle": "",
+      "keywords": [
+        "vice presidente geraldo alckmin indo votar",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp",
+        "alckmin",
+        "geraldo",
+        "presidente",
+        "eleitoral",
+        "cabine",
+        "votar",
+        "indo",
+        "vice"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MAYANA LEOCÁDIO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000252": {
+      "title": "Vice Presidente Geraldo Alckmin Indo Votar — Cabine Eleitoral",
+      "manualTitle": "",
+      "keywords": [
+        "vice presidente geraldo alckmin indo votar",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp",
+        "alckmin",
+        "geraldo",
+        "presidente",
+        "eleitoral",
+        "cabine",
+        "votar",
+        "indo",
+        "vice"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MAYANA LEOCÁDIO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000254": {
+      "title": "Segundo Turno Eleições — Pessoas Indo Votar",
+      "manualTitle": "",
+      "keywords": [
+        "segundo turno eleições",
+        "pessoas indo votar",
+        "eleitores",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ANTÔNIO FERREIRA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000256": {
+      "title": "Votação Lula — Lula Indo Votar",
+      "manualTitle": "",
+      "keywords": [
+        "votação lula",
+        "lula indo votar",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VANESSA LORENZINI"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000253": {
+      "title": "Votação Lula — Lula Indo Votar",
+      "manualTitle": "",
+      "keywords": [
+        "votação lula",
+        "lula indo votar",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VANESSA LORENZINI"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000250": {
+      "title": "Votação Lula — Lula Indo Votar",
+      "manualTitle": "",
+      "keywords": [
+        "votação lula",
+        "lula indo votar",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VANESSA LORENZINI"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000255": {
+      "title": "Tarcísio de Freitas — Tarcísio e Sua Esposa",
+      "manualTitle": "",
+      "keywords": [
+        "tarcísio e sua esposa",
+        "votação tarcísio",
+        "tarcísio de freitas indo votar",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ADRIANA CIMINO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000249": {
+      "title": "Eleitores — Pessoas Votando",
+      "manualTitle": "",
+      "keywords": [
+        "eleitores",
+        "pessoas votando",
+        "segundo turno das eleições 2026",
+        "eleições presidenciais",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ANTÔNIO FERREIRA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "3293B000248": {
+      "title": "Eleitores — Pessoas Votando",
+      "manualTitle": "",
+      "keywords": [
+        "eleitores",
+        "pessoas votando",
+        "segundo turno das eleições 2026",
+        "eleições presidenciais",
+        "política",
+        "de olho no voto",
+        "tv cultura",
+        "são paulo / sp",
+        "são paulo",
+        "são paulo - sp"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ANTÔNIO FERREIRA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO / SP",
+        "SÃO PAULO",
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA"
       ],
       "manualOrganizations": [],
       "segments": []

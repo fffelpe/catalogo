@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T18:55:44.945Z",
+  "generatedAt": "2026-10-26T20:01:15.491Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,11 +24,11 @@
     ]
   },
   "resumo": {
-    "materiais": 2096,
+    "materiais": 2097,
     "vts": 743,
     "noticias": 376,
-    "coberturas": 980,
-    "coberturaDuplicadosExcluidos": 432
+    "coberturas": 981,
+    "coberturaDuplicadosExcluidos": 431
   },
   "vts": [
     {
@@ -11227,31 +11227,31 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B005465",
+      "id": "1452B005542",
       "ids": [
-        "1452B005465"
+        "1452B005542"
       ],
-      "descricao": "EXPORTAÇÕES CARNE FRANGO",
-      "reporter": "SAMUEL ROCHA",
+      "descricao": "DOENÇA DE NEWCASTLE + GRANJA",
+      "reporter": "EVANDRO CLÁUDIO",
       "data": "24/10/2026",
-      "local": "PARANÁ - PR",
+      "local": "SANTA CATARINA - SC",
       "pgm": "386",
-      "afiliada": "CATVE / PR"
+      "afiliada": "RBA TV / SC"
     },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B005525",
+      "id": "1452B005520",
       "ids": [
-        "1452B005525"
+        "1452B005520"
       ],
-      "descricao": "IRRADIADOR GAMA + CENA UNESP",
-      "reporter": "FABIANO PEREIRA",
+      "descricao": "ESTIMATIVA GRÃOS",
+      "reporter": "KELLY MARTINS",
       "data": "24/10/2026",
-      "local": "SÃO PAULO - SP",
+      "local": "MATO GROSSO DO SUL - MS",
       "pgm": "386",
-      "afiliada": "TV UNESP / SP"
+      "afiliada": "TVE / MS"
     },
     {
       "tipo": "noticias",
@@ -17019,6 +17019,21 @@
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
       "aba": "fonte_agrocultura",
+      "id": "1452B005525",
+      "ids": [
+        "1452B005525"
+      ],
+      "descricao": "IRRADIADOR GAMA",
+      "reporter": "",
+      "data": "20/10/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "",
+      "afiliada": "TV USP"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
       "id": "1452B005524",
       "ids": [
         "1452B005524"
@@ -17070,21 +17085,6 @@
       ],
       "descricao": "PISCICULTURA",
       "reporter": "ELAINE SILVA",
-      "data": "16/10/2026",
-      "local": "MATO GROSSO DO SUL - MS",
-      "pgm": "",
-      "afiliada": "TVE - MS"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005520",
-      "ids": [
-        "1452B005520"
-      ],
-      "descricao": "SAFRA DE GRÃOS + COLHEITA DE MILHO + GRÃOS DE SOJA + COLHEITA DE SOJA + LAVOURA DE TRIGO",
-      "reporter": "KELLY MARTINS",
       "data": "16/10/2026",
       "local": "MATO GROSSO DO SUL - MS",
       "pgm": "",
@@ -17204,6 +17204,21 @@
         "1452B005468"
       ],
       "descricao": "COLHEITA DE TRIGO",
+      "reporter": "",
+      "data": "15/09/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "",
+      "afiliada": "RBA TV / SC"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005465",
+      "ids": [
+        "1452B005465"
+      ],
+      "descricao": "EXPORTAÇÕES CARNE DE FRANGO",
       "reporter": "",
       "data": "15/09/2026",
       "local": "PARANÁ - PR",
