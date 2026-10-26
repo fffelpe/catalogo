@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T20:01:32.673Z",
+  "generatedAt": "2026-10-26T23:46:51.040Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1053324,6 +1053324,1273 @@
       "organizations": [
         "TV CULTURA"
       ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018401": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando no japão",
+        "política",
+        "jornal da cultura",
+        "japão",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "JAPÃO"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018402": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando em nova york",
+        "política",
+        "jornal da cultura",
+        "estados unidos",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno",
+        "york"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "ESTADOS UNIDOS"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018403": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando em portugal",
+        "política",
+        "jornal da cultura",
+        "portugal",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PORTUGAL"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018404": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando em abu dhabi",
+        "política",
+        "jornal da cultura",
+        "emirados árabes",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "dhabi",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "EMIRADOS ÁRABES"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018405": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando na alemanha",
+        "política",
+        "jornal da cultura",
+        "alemanha",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "ALEMANHA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018406": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando na argentina",
+        "política",
+        "jornal da cultura",
+        "argentina",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "ARGENTINA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018407": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando na china",
+        "política",
+        "jornal da cultura",
+        "china",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "CHINA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018408": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando na indonesia",
+        "política",
+        "jornal da cultura",
+        "indonésia",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "INDONÉSIA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018409": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando em israel",
+        "política",
+        "jornal da cultura",
+        "israel",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "ISRAEL"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018410": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando no líbano",
+        "política",
+        "jornal da cultura",
+        "líbano",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "LÍBANO"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018411": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando em madri",
+        "política",
+        "jornal da cultura",
+        "espanha",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "madri",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "ESPANHA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018412": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando em roma",
+        "política",
+        "jornal da cultura",
+        "itália",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno",
+        "roma"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "ITÁLIA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018413": {
+      "title": "Votação no Exterior — Eleições Presidenciais Segundo Turno",
+      "manualTitle": "",
+      "keywords": [
+        "votação no exterior",
+        "eleições presidenciais segundo turno",
+        "brasileiros votando no exterior",
+        "brasileiros votando em singapura",
+        "política",
+        "jornal da cultura",
+        "singapura",
+        "brasileiros",
+        "exterior",
+        "votando",
+        "presidenciais",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SINGAPURA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018414": {
+      "title": "Problemas Transporte Público em Salvador",
+      "manualTitle": "",
+      "keywords": [
+        "copião problemas transporte público em salvador",
+        "política",
+        "jornal da cultura",
+        "bahia - ba",
+        "transporte",
+        "problemas",
+        "salvador",
+        "público",
+        "copião"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BAHIA - BA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018415": {
+      "title": "Problemas Transporte Público em São Paulo",
+      "manualTitle": "",
+      "keywords": [
+        "copião problemas transporte público em são paulo",
+        "política",
+        "jornal da cultura",
+        "são paulo - sp",
+        "transporte",
+        "problemas",
+        "público",
+        "copião",
+        "paulo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018416": {
+      "title": "Crimes Eleitorais",
+      "manualTitle": "",
+      "keywords": [
+        "crimes eleitorais",
+        "política",
+        "jornal da cultura",
+        "eleitorais",
+        "crimes"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [
+        "Polícia Federal"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018417": {
+      "title": "Problemas Transporte Público em João Pessoa",
+      "manualTitle": "",
+      "keywords": [
+        "problemas transporte público em joão pessoa",
+        "política",
+        "jornal da cultura",
+        "paraíba - pb",
+        "transporte",
+        "problemas",
+        "público",
+        "pessoa",
+        "joão"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARAÍBA - PB"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018418": {
+      "title": "Problemas Transporte Público em Niterói",
+      "manualTitle": "",
+      "keywords": [
+        "problemas transporte público em niterói",
+        "política",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "transporte",
+        "problemas",
+        "niterói",
+        "público"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018419": {
+      "title": "Problemas Transporte Público no Pará",
+      "manualTitle": "",
+      "keywords": [
+        "problemas transporte público no pará",
+        "política",
+        "jornal da cultura",
+        "pará - pa",
+        "transporte",
+        "problemas",
+        "público"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARÁ - PA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018420": {
+      "title": "Pronunciamento Lula Após Problemas com Transportes Públicos",
+      "manualTitle": "",
+      "keywords": [
+        "pronunciamento lula após problemas com transportes públicos",
+        "política",
+        "jornal da cultura",
+        "são paulo - sp",
+        "pronunciamento",
+        "transportes",
+        "problemas",
+        "públicos",
+        "após",
+        "lula"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018421": {
+      "title": "Edson Fachin",
+      "manualTitle": "",
+      "keywords": [
+        "edson fachin votando",
+        "política",
+        "jornal da cultura",
+        "brasília - df",
+        "fachin",
+        "edson",
+        "votando"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018422": {
+      "title": "André Mendonça",
+      "manualTitle": "",
+      "keywords": [
+        "andré mendonça indo votar",
+        "política",
+        "jornal da cultura",
+        "brasília - df",
+        "mendonça",
+        "andré",
+        "votar",
+        "indo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018423": {
+      "title": "Tocantins Segundo Turno Governador",
+      "manualTitle": "",
+      "keywords": [
+        "tocantins segundo turno governador",
+        "política",
+        "jornal da cultura",
+        "tocantins - to",
+        "governador",
+        "tocantins",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "TOCANTINS - TO"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018424": {
+      "title": "Flávio Bolsonaro Votando — Segundo Turnos das Eleições",
+      "manualTitle": "",
+      "keywords": [
+        "flávio bolsonaro votando",
+        "segundo turnos das eleições",
+        "política",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "bolsonaro",
+        "eleições",
+        "votando",
+        "flávio",
+        "turnos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018425": {
+      "title": "Voto Candidatos Espírito Santo",
+      "manualTitle": "",
+      "keywords": [
+        "voto candidatos espírito santo",
+        "política",
+        "jornal da cultura",
+        "espírito santo - es",
+        "candidatos",
+        "espírito",
+        "santo",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018426": {
+      "title": "Voto Douglas Ruas — Governador do Rio de Janeiro Douglas Ruas",
+      "manualTitle": "",
+      "keywords": [
+        "voto douglas ruas",
+        "governador do rio de janeiro douglas ruas",
+        "política",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "douglas",
+        "ruas",
+        "governador",
+        "janeiro",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018427": {
+      "title": "Voto Edson Fachin",
+      "manualTitle": "",
+      "keywords": [
+        "voto edson fachin",
+        "política",
+        "jornal da cultura",
+        "brasília - df",
+        "fachin",
+        "edson",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018428": {
+      "title": "Voto Jerônimo Rodrigues Governador da Bahia",
+      "manualTitle": "",
+      "keywords": [
+        "voto jerônimo rodrigues governador da bahia",
+        "política",
+        "jornal da cultura",
+        "bahia - ba",
+        "governador",
+        "rodrigues",
+        "jerônimo",
+        "bahia",
+        "voto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BAHIA - BA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018429": {
+      "title": "Urnas Eletrônicas — Urnas Eleitorais",
+      "manualTitle": "",
+      "keywords": [
+        "urnas eletrônicas",
+        "urnas eleitorais",
+        "transporte de urnas",
+        "política",
+        "jornal da cultura",
+        "urnas",
+        "eletrônicas",
+        "eleitorais",
+        "transporte"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018430": {
+      "title": "Votação Imagens — Eleitores Votando",
+      "manualTitle": "",
+      "keywords": [
+        "votação imagens",
+        "eleitores votando",
+        "política",
+        "jornal da cultura",
+        "eleitores",
+        "votação",
+        "votando"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018431": {
+      "title": "Eleições Segundo Turno no Amazonas — Votação no Amazonas",
+      "manualTitle": "",
+      "keywords": [
+        "eleições segundo turno no amazonas",
+        "votação no amazonas",
+        "política",
+        "jornal da cultura",
+        "amazonas",
+        "eleições",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018432": {
+      "title": "Confusoes Cartorios Eleitorais",
+      "manualTitle": "",
+      "keywords": [
+        "confusoes cartorios eleitorais",
+        "política",
+        "jornal da cultura",
+        "eleitorais",
+        "cartorios",
+        "confusoes"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018433": {
+      "title": "Comemoração Lula",
+      "manualTitle": "",
+      "keywords": [
+        "copião comemoração lula",
+        "política",
+        "jornal da cultura",
+        "comemoração",
+        "copião",
+        "lula"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018434": {
+      "title": "Segundo Turno Governador do Distrito Federal — Eleições em Brasília",
+      "manualTitle": "",
+      "keywords": [
+        "segundo turno governador do distrito federal",
+        "eleições em brasília",
+        "política",
+        "jornal da cultura",
+        "governador",
+        "brasília",
+        "distrito",
+        "eleições",
+        "federal",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018435": {
+      "title": "Votação Segundo Turno no Espírito Santo — Governador do Espírito Santo",
+      "manualTitle": "",
+      "keywords": [
+        "votação segundo turno no espírito santo",
+        "governador do espírito santo",
+        "política",
+        "jornal da cultura",
+        "espírito",
+        "santo",
+        "governador",
+        "votação",
+        "turno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018436": {
+      "title": "App E-titulo — Urnas Eletrônicas",
+      "manualTitle": "",
+      "keywords": [
+        "app e-titulo",
+        "política",
+        "jornal da cultura",
+        "eletrônicas",
+        "e-titulo",
+        "urnas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018437": {
+      "title": "Governador Eleito de Tocantins — Vicentinho Jr",
+      "manualTitle": "",
+      "keywords": [
+        "vicentinho jr",
+        "política",
+        "jornal da cultura",
+        "governador",
+        "vicentinho",
+        "tocantins",
+        "eleito"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018438": {
+      "title": "Votação na Bahia — Eleitores",
+      "manualTitle": "",
+      "keywords": [
+        "votação na bahia",
+        "eleitores",
+        "pessoas votando",
+        "política",
+        "jornal da cultura",
+        "pessoas",
+        "votação",
+        "votando",
+        "bahia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018439": {
+      "title": "Votação no Espirito Santo — Pessoas Votando",
+      "manualTitle": "",
+      "keywords": [
+        "votação no espirito santo",
+        "pessoas votando",
+        "movimentação de eleitores",
+        "política",
+        "jornal da cultura",
+        "movimentação",
+        "eleitores",
+        "espirito",
+        "pessoas",
+        "votação",
+        "votando",
+        "santo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018441": {
+      "title": "Votação no Mato Grosso do Sul — Pessoas Votando",
+      "manualTitle": "",
+      "keywords": [
+        "votação no mato grosso do sul",
+        "pessoas votando",
+        "movimentação de eleitores",
+        "política",
+        "jornal da cultura",
+        "movimentação",
+        "eleitores",
+        "pessoas",
+        "votação",
+        "votando",
+        "grosso",
+        "mato"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018442": {
+      "title": "Votação no Pará — Eleitores Votando Pessoas Votando",
+      "manualTitle": "",
+      "keywords": [
+        "eleitores votando pessoas votando",
+        "política",
+        "jornal da cultura",
+        "votando",
+        "eleitores",
+        "pessoas",
+        "votação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018443": {
+      "title": "Problemas Locais de Votação — Locais Alagados",
+      "manualTitle": "",
+      "keywords": [
+        "problemas locais de votação",
+        "locais alagados",
+        "escolas desabadas",
+        "chuvas",
+        "temporais",
+        "política",
+        "jornal da cultura",
+        "locais",
+        "desabadas",
+        "problemas",
+        "alagados",
+        "escolas",
+        "votação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018444": {
+      "title": "Ônibus em Salvador — Garagens de Ônibus",
+      "manualTitle": "",
+      "keywords": [
+        "ônibus em salvador",
+        "garagens de ônibus",
+        "política",
+        "jornal da cultura",
+        "ônibus",
+        "garagens",
+        "salvador"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
       "manualOrganizations": [],
       "segments": []
     }
