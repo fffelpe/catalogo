@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T23:46:16.104Z",
-  "total": 41587,
+  "generatedAt": "2026-10-27T19:41:46.045Z",
+  "total": 41592,
   "registros": [
     {
       "ID": "2822B019835",
@@ -531805,6 +531805,66 @@
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005548",
+      "DESCRICAO": "QUEIJOS FINOS",
+      "DATA": "27/10/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "AGROFAG",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005549",
+      "DESCRICAO": "ADUBO",
+      "DATA": "27/10/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "AGROFAG",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005550",
+      "DESCRICAO": "AVEIA",
+      "DATA": "27/10/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "AGROFAG",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005551",
+      "DESCRICAO": "CÃES PASTOREIO",
+      "DATA": "27/10/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "AGROFAG",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005552",
+      "DESCRICAO": "MIRTILO",
+      "DATA": "27/10/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "AGROFAG",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
       "DURACOES": {}
     }

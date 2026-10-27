@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T19:36:23.752Z",
+  "generatedAt": "2026-10-27T19:41:47.721Z",
   "afiliadas": [
     {
       "id": "AFL001",
@@ -147,6 +147,13 @@
       "nome": "TV CULTURA - SP",
       "uf": "ESPÍRITO SANTO - ES",
       "cidade": "",
+      "ativa": true
+    },
+    {
+      "id": "AFL022",
+      "nome": "AGROFAG",
+      "uf": "PARANÁ - PR",
+      "cidade": "CASCAVEL",
       "ativa": true
     }
   ],
@@ -470,6 +477,13 @@
       "id": "REP047",
       "nome": "BRUNO FAUSTINO",
       "afiliadaId": "AFL021",
+      "funcao": "REPÓRTER",
+      "ativo": true
+    },
+    {
+      "id": "REP048",
+      "nome": "SAMUEL ROCHA",
+      "afiliadaId": "AFL022",
       "funcao": "REPÓRTER",
       "ativo": true
     }

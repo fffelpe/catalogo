@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T23:46:51.040Z",
+  "generatedAt": "2026-10-27T19:42:24.402Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -995255,11 +995255,7 @@
         "JOÃO VITOR VANZIN"
       ],
       "manualPeople": [],
-      "places": [
-        "CASCAVEL",
-        "PARANÁ - PR",
-        "CASCAVEL - PR"
-      ],
+      "places": [],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010830,9 +1010826,6 @@
         "vt tecno pequenos",
         "agronegócio",
         "agrocultura",
-        "cascavel",
-        "paraná - pr",
-        "cascavel - pr",
         "pequenos",
         "tecno"
       ],
@@ -1010845,11 +1010838,7 @@
         "SAMUEL ROCHA"
       ],
       "manualPeople": [],
-      "places": [
-        "CASCAVEL",
-        "PARANÁ - PR",
-        "CASCAVEL - PR"
-      ],
+      "places": [],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010921,9 +1010910,7 @@
       ],
       "manualPeople": [],
       "places": [
-        "PARANÁ - PR",
-        "CASCAVEL",
-        "CASCAVEL - PR"
+        "PARANÁ - PR"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1054591,6 +1054578,165 @@
       "places": [],
       "manualPlaces": [],
       "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005548": {
+      "title": "Queijos Finos",
+      "manualTitle": "",
+      "keywords": [
+        "queijos finos",
+        "agronegócio",
+        "agrocultura",
+        "agrofag",
+        "paraná - pr",
+        "cascavel",
+        "cascavel - pr",
+        "queijos",
+        "finos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "AGROFAG"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005549": {
+      "title": "Adubo",
+      "manualTitle": "",
+      "keywords": [
+        "adubo",
+        "agronegócio",
+        "agrocultura",
+        "agrofag",
+        "paraná - pr",
+        "cascavel",
+        "cascavel - pr"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "AGROFAG"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005550": {
+      "title": "Aveia",
+      "manualTitle": "",
+      "keywords": [
+        "aveia",
+        "agronegócio",
+        "agrocultura",
+        "agrofag",
+        "paraná - pr",
+        "cascavel",
+        "cascavel - pr"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "AGROFAG"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005551": {
+      "title": "Cães Pastoreio",
+      "manualTitle": "",
+      "keywords": [
+        "cães pastoreio",
+        "agronegócio",
+        "agrocultura",
+        "agrofag",
+        "paraná - pr",
+        "cascavel",
+        "cascavel - pr",
+        "pastoreio",
+        "cães"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "AGROFAG"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005552": {
+      "title": "Mirtilo",
+      "manualTitle": "",
+      "keywords": [
+        "mirtilo",
+        "agronegócio",
+        "agrocultura",
+        "agrofag",
+        "paraná - pr",
+        "cascavel",
+        "cascavel - pr"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "AGROFAG"
+      ],
       "manualOrganizations": [],
       "segments": []
     }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T20:01:15.491Z",
+  "generatedAt": "2026-10-27T19:42:07.194Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,10 +24,10 @@
     ]
   },
   "resumo": {
-    "materiais": 2097,
+    "materiais": 2102,
     "vts": 743,
     "noticias": 376,
-    "coberturas": 981,
+    "coberturas": 986,
     "coberturaDuplicadosExcluidos": 431
   },
   "vts": [
@@ -16820,6 +16820,81 @@
     }
   ],
   "coberturas": [
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005549",
+      "ids": [
+        "1452B005549"
+      ],
+      "descricao": "ADUBO",
+      "reporter": "",
+      "data": "27/10/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "",
+      "afiliada": "AGROFAG"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005550",
+      "ids": [
+        "1452B005550"
+      ],
+      "descricao": "AVEIA",
+      "reporter": "",
+      "data": "27/10/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "",
+      "afiliada": "AGROFAG"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005551",
+      "ids": [
+        "1452B005551"
+      ],
+      "descricao": "CÃES PASTOREIO",
+      "reporter": "",
+      "data": "27/10/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "",
+      "afiliada": "AGROFAG"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005552",
+      "ids": [
+        "1452B005552"
+      ],
+      "descricao": "MIRTILO",
+      "reporter": "",
+      "data": "27/10/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "",
+      "afiliada": "AGROFAG"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005548",
+      "ids": [
+        "1452B005548"
+      ],
+      "descricao": "QUEIJOS FINOS",
+      "reporter": "",
+      "data": "27/10/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "",
+      "afiliada": "AGROFAG"
+    },
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
