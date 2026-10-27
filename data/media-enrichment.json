@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T19:42:24.402Z",
+  "generatedAt": "2026-10-27T23:15:15.739Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1054587,20 +1054587,29 @@
       "keywords": [
         "queijos finos",
         "agronegócio",
-        "agrocultura",
-        "agrofag",
-        "paraná - pr",
-        "cascavel",
-        "cascavel - pr",
+        "queijaria",
         "queijos",
-        "finos"
+        "finos",
+        "terra",
+        "flor",
+        "scherpinski",
+        "supervisor",
+        "donaduzzi",
+        "analista",
+        "retranca",
+        "biopark",
+        "gerente",
+        "leandro"
       ],
       "manualKeywords": [],
       "subjects": [
         "agronegócio"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "DENILSON MARTINS",
+        "JOÃO VITOR VANZIN"
+      ],
       "manualPeople": [],
       "places": [
         "PARANÁ - PR",
@@ -1054620,18 +1054629,29 @@
       "keywords": [
         "adubo",
         "agronegócio",
-        "agrocultura",
-        "agrofag",
-        "paraná - pr",
-        "cascavel",
-        "cascavel - pr"
+        "nutrientes",
+        "agrônomo",
+        "produtor",
+        "retranca",
+        "dejetos",
+        "lavoura",
+        "sistema",
+        "zanão",
+        "luiz",
+        "desenvolvimento",
+        "fertilizantes",
+        "identificados",
+        "pesquisadores"
       ],
       "manualKeywords": [],
       "subjects": [
         "agronegócio"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "DENILSON MARTINS",
+        "JOÃO VITOR VANZIN"
+      ],
       "manualPeople": [],
       "places": [
         "PARANÁ - PR",
@@ -1054651,18 +1054671,29 @@
       "keywords": [
         "aveia",
         "agronegócio",
-        "agrocultura",
-        "agrofag",
-        "paraná - pr",
-        "cascavel",
-        "cascavel - pr"
+        "abre-áudio",
+        "alimentos",
+        "qualidade",
+        "segurança",
+        "colheita",
+        "produtor",
+        "retranca",
+        "eduardo",
+        "portes",
+        "samuel",
+        "toledo",
+        "marco",
+        "rocha"
       ],
       "manualKeywords": [],
       "subjects": [
         "agronegócio"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "DENILSON MARTINS",
+        "JOÃO VITOR VANZIN"
+      ],
       "manualPeople": [],
       "places": [
         "PARANÁ - PR",
@@ -1054682,20 +1054713,29 @@
       "keywords": [
         "cães pastoreio",
         "agronegócio",
-        "agrocultura",
-        "agrofag",
-        "paraná - pr",
-        "cascavel",
-        "cascavel - pr",
         "pastoreio",
-        "cães"
+        "cães",
+        "veterinário",
+        "abre-áudio",
+        "adestrador",
+        "anderson",
+        "retranca",
+        "criador",
+        "ovelhas",
+        "rogério",
+        "kaefer",
+        "samuel",
+        "rocha"
       ],
       "manualKeywords": [],
       "subjects": [
         "agronegócio"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "DENILSON MARTINS",
+        "JOÃO VITOR VANZIN"
+      ],
       "manualPeople": [],
       "places": [
         "PARANÁ - PR",
@@ -1054715,18 +1054755,26 @@
       "keywords": [
         "mirtilo",
         "agronegócio",
-        "agrocultura",
-        "agrofag",
-        "paraná - pr",
-        "cascavel",
-        "cascavel - pr"
+        "mirtilos",
+        "retranca",
+        "produtora",
+        "cristela",
+        "siebert",
+        "amanda",
+        "pontes",
+        "quatro",
+        "costa",
+        "dalla"
       ],
       "manualKeywords": [],
       "subjects": [
         "agronegócio"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "DENILSON MARTINS",
+        "URIEL MATENDAL"
+      ],
       "manualPeople": [],
       "places": [
         "PARANÁ - PR",
