@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T19:42:07.194Z",
+  "generatedAt": "2026-10-28T18:35:19.874Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,10 +24,10 @@
     ]
   },
   "resumo": {
-    "materiais": 2102,
+    "materiais": 2103,
     "vts": 743,
     "noticias": 376,
-    "coberturas": 986,
+    "coberturas": 987,
     "coberturaDuplicadosExcluidos": 431
   },
   "vts": [
@@ -16864,6 +16864,21 @@
       "local": "PARANÁ - PR",
       "pgm": "",
       "afiliada": "AGROFAG"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "2457B018496",
+      "ids": [
+        "2457B018496"
+      ],
+      "descricao": "DECLARAÇÃO CADASTRO OBRIGATÓRIO DE REBANHOS + GADOS + BOIS + BOVINOS",
+      "reporter": "SARAH QUEIROZ",
+      "data": "27/10/2026",
+      "local": "GOIÁS - GO",
+      "pgm": "",
+      "afiliada": "TV BRASIL CENTRAL - GO"
     },
     {
       "tipo": "cobertura",

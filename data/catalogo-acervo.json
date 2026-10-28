@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T19:41:46.045Z",
-  "total": 41592,
+  "generatedAt": "2026-10-28T18:34:59.423Z",
+  "total": 41595,
   "registros": [
     {
       "ID": "2822B019835",
@@ -531865,6 +531865,42 @@
       "AFILIADA_EMISSORA": "AGROFAG",
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018496",
+      "DESCRICAO": "DECLARAÇÃO CADASTRO OBRIGATÓRIO DE REBANHOS + GADOS + BOIS + BOVINOS",
+      "DATA": "27/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "SARAH QUEIROZ",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL - GO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018494",
+      "DESCRICAO": "VOTAÇÃO EM GOIÂNIA + ELEIÇÕES 2026 + PESSOAS VOTANDO + URNA ELETRÔNICA",
+      "DATA": "25/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018495",
+      "DESCRICAO": "PESSOAS NO PARQUE + PESSOAS FAZENDO EXERCÍCIOS FÍSICOS + PESSOAS CORRENDO + CORRIDA + CAMINHADA + PESSOAS ANDANDO AO AR LIVRE",
+      "DATA": "26/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     }

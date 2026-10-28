@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T23:15:15.739Z",
+  "generatedAt": "2026-10-28T18:35:36.425Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1054784,6 +1054784,125 @@
       "manualPlaces": [],
       "organizations": [
         "AGROFAG"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018496": {
+      "title": "Declaração Cadastro Obrigatório de Rebanhos — Gados",
+      "manualTitle": "",
+      "keywords": [
+        "declaração cadastro obrigatório de rebanhos",
+        "gados",
+        "bois",
+        "bovinos",
+        "agronegócio",
+        "importantes",
+        "obrigatória",
+        "declaração",
+        "pescadores",
+        "produtores",
+        "restrições",
+        "permitido",
+        "mudanças",
+        "novembro",
+        "piracema"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "SARAH QUEIROZ"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL - GO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018494": {
+      "title": "Votação em Goiânia — Eleições 2026",
+      "manualTitle": "",
+      "keywords": [
+        "votação em goiânia",
+        "eleições 2026",
+        "pessoas votando",
+        "urna eletrônica",
+        "política",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018495": {
+      "title": "Pessoas no Parque — Pessoas Fazendo Exercícios Físicos",
+      "manualTitle": "",
+      "keywords": [
+        "pessoas no parque",
+        "pessoas fazendo exercícios físicos",
+        "pessoas correndo",
+        "corrida",
+        "caminhada",
+        "pessoas andando ao ar livre",
+        "saúde",
+        "pedreiro",
+        "politicamente",
+        "representando",
+        "oportunidade",
+        "prestigiados",
+        "candidatos",
+        "definições",
+        "resultados"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "saúde"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "DOUGLAS CARDOSO VIDAL",
+        "ADÃO CURCINO MARTINS",
+        "SOLANGE ALVES",
+        "MAICON CHAVES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
       ],
       "manualOrganizations": [],
       "segments": []
