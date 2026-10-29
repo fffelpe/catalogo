@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T18:34:59.423Z",
-  "total": 41595,
+  "generatedAt": "2026-10-29T18:48:02.441Z",
+  "total": 41599,
   "registros": [
     {
       "ID": "2822B019835",
@@ -531901,6 +531901,54 @@
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "SAÚDE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018497",
+      "DESCRICAO": "AEROPORTO INTERNACIONAL DE PUERTO IGUAZU ARGENTINA",
+      "DATA": "27/10/2026",
+      "LOCAL": "ARGENTINA",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "CATVE",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018498",
+      "DESCRICAO": "VAZÃO DAS CATARATAS EM FOZ DO IGUAÇU",
+      "DATA": "27/10/2026",
+      "LOCAL": "",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "CATVE",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018499",
+      "DESCRICAO": "TEMPORADA CRUZEIROS MARÍTIMOS",
+      "DATA": "27/10/2026",
+      "LOCAL": "",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA DO RIO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018500",
+      "DESCRICAO": "CENÁRIO ECONÔMICO NACIONAL + SUPERMERCADOS + PESSOAS FAZENDO COMPRAS",
+      "DATA": "27/10/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     }

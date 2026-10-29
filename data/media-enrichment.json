@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T18:35:36.425Z",
+  "generatedAt": "2026-10-29T18:48:40.373Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1054894,6 +1054894,124 @@
         "SOLANGE ALVES",
         "MAICON CHAVES"
       ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018497": {
+      "title": "Aeroporto Internacional de Puerto Iguazu Argentina",
+      "manualTitle": "",
+      "keywords": [
+        "aeroporto internacional de puerto iguazu argentina",
+        "política",
+        "jornal da cultura",
+        "catve",
+        "argentina",
+        "internacional",
+        "aeroporto",
+        "iguazu",
+        "puerto"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "ARGENTINA"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "CATVE"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018498": {
+      "title": "Vazão das Cataratas em Foz do Iguaçu",
+      "manualTitle": "",
+      "keywords": [
+        "vazão das cataratas em foz do iguaçu",
+        "lazer",
+        "jornal da cultura",
+        "catve",
+        "cataratas",
+        "iguaçu",
+        "vazão"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [
+        "CATVE"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018499": {
+      "title": "Temporada Cruzeiros Marítimos",
+      "manualTitle": "",
+      "keywords": [
+        "temporada cruzeiros marítimos",
+        "lazer",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "cruzeiros",
+        "marítimos",
+        "temporada"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018500": {
+      "title": "Cenário Econômico Nacional — Supermercados",
+      "manualTitle": "",
+      "keywords": [
+        "cenário econômico nacional",
+        "supermercados",
+        "pessoas fazendo compras",
+        "economia",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
