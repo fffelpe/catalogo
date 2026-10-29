@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T18:48:40.373Z",
+  "generatedAt": "2026-10-29T23:02:54.768Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1055000,18 +1055000,28 @@
         "supermercados",
         "pessoas fazendo compras",
         "economia",
-        "jornal da cultura",
-        "tv brasil central",
-        "goiás - go",
-        "goiânia",
-        "goiânia - go"
+        "linha",
+        "padrão",
+        "inferior",
+        "joão",
+        "brasileira",
+        "econômico",
+        "cenário",
+        "gondim",
+        "sofia",
+        "tbcparceria",
+        "incertezas"
       ],
       "manualKeywords": [],
       "subjects": [
         "economia"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "ULO SILVA",
+        "XECUTIVO TRIBUTÁRIO",
+        "NADA DE EXAGERAR NOS GASTOS"
+      ],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
