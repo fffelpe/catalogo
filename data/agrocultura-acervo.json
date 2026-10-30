@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T18:35:19.874Z",
+  "generatedAt": "2026-10-30T20:22:16.992Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,13 +24,43 @@
     ]
   },
   "resumo": {
-    "materiais": 2103,
-    "vts": 743,
-    "noticias": 376,
-    "coberturas": 987,
-    "coberturaDuplicadosExcluidos": 431
+    "materiais": 2104,
+    "vts": 745,
+    "noticias": 379,
+    "coberturas": 983,
+    "coberturaDuplicadosExcluidos": 435
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005531",
+      "ids": [
+        "1452B005531"
+      ],
+      "descricao": "VT CAFÉ MAMÃO",
+      "reporter": "IZABELA TOSCANO",
+      "data": "31/10/2026",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "387",
+      "afiliada": "TVE / ES"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005554",
+      "ids": [
+        "1452B005554"
+      ],
+      "descricao": "VT COMBATE PRAGAS",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "31/10/2026",
+      "local": "",
+      "pgm": "387",
+      "afiliada": ""
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -11182,6 +11212,51 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005535",
+      "ids": [
+        "1452B005535"
+      ],
+      "descricao": "ABERTURA COLHEITA CEBOLA",
+      "reporter": "GREICE SAUER",
+      "data": "31/10/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "387",
+      "afiliada": "RBA TV / SC"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005465",
+      "ids": [
+        "1452B005465"
+      ],
+      "descricao": "EXPORTAÇÕES CARNE FRANGO + FRIGORÍFICO DE FRANGO + GALINHAS",
+      "reporter": "SAMUEL ROCHA",
+      "data": "31/10/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "387",
+      "afiliada": "CATVE / PR"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005525",
+      "ids": [
+        "1452B005525"
+      ],
+      "descricao": "IRRADIADOR GAMA",
+      "reporter": "FABIANO PEREIRA",
+      "data": "31/10/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "387",
+      "afiliada": "TV USP / SP"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B005496",
       "ids": [
         "1452B005496"
@@ -16944,21 +17019,6 @@
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
       "aba": "fonte_agrocultura",
-      "id": "1452B005535",
-      "ids": [
-        "1452B005535"
-      ],
-      "descricao": "ABERTURA COLHEITA CEBOLA",
-      "reporter": "",
-      "data": "21/10/2026",
-      "local": "SANTA CATARINA - SC",
-      "pgm": "",
-      "afiliada": "RBA TV - SC"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
       "id": "1452B005536",
       "ids": [
         "1452B005536"
@@ -16984,21 +17044,6 @@
       "local": "SANTA CATARINA - SC",
       "pgm": "",
       "afiliada": "RBA TV - SC"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005531",
-      "ids": [
-        "1452B005531"
-      ],
-      "descricao": "CONSÓRCIO CAFÉ COM MAMÃO",
-      "reporter": "",
-      "data": "21/10/2026",
-      "local": "ESPÍRITO SANTO - ES",
-      "pgm": "",
-      "afiliada": "TVE - ES"
     },
     {
       "tipo": "cobertura",
@@ -17104,21 +17149,6 @@
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
       "afiliada": "TVE - ES"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005525",
-      "ids": [
-        "1452B005525"
-      ],
-      "descricao": "IRRADIADOR GAMA",
-      "reporter": "",
-      "data": "20/10/2026",
-      "local": "SÃO PAULO - SP",
-      "pgm": "",
-      "afiliada": "TV USP"
     },
     {
       "tipo": "cobertura",
@@ -17294,21 +17324,6 @@
         "1452B005468"
       ],
       "descricao": "COLHEITA DE TRIGO",
-      "reporter": "",
-      "data": "15/09/2026",
-      "local": "PARANÁ - PR",
-      "pgm": "",
-      "afiliada": "RBA TV / SC"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005465",
-      "ids": [
-        "1452B005465"
-      ],
-      "descricao": "EXPORTAÇÕES CARNE DE FRANGO",
       "reporter": "",
       "data": "15/09/2026",
       "local": "PARANÁ - PR",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T18:48:02.441Z",
-  "total": 41599,
+  "generatedAt": "2026-10-30T20:21:55.686Z",
+  "total": 41600,
   "registros": [
     {
       "ID": "2822B019835",
@@ -531950,6 +531950,18 @@
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "ECONOMIA",
       "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005554",
+      "DESCRICAO": "VT COMBATE PRAGAS",
+      "DATA": "31/10/2026",
+      "LOCAL": "",
+      "REPORTER": "BRUNO FAUSTINO",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "387",
       "DURACOES": {}
     }
   ]
