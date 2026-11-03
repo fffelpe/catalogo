@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T20:22:16.992Z",
+  "generatedAt": "2026-11-03T01:55:16.170Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -26,9 +26,9 @@
   "resumo": {
     "materiais": 2104,
     "vts": 745,
-    "noticias": 379,
-    "coberturas": 983,
-    "coberturaDuplicadosExcluidos": 435
+    "noticias": 378,
+    "coberturas": 984,
+    "coberturaDuplicadosExcluidos": 434
   },
   "vts": [
     {
@@ -11242,21 +11242,6 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B005525",
-      "ids": [
-        "1452B005525"
-      ],
-      "descricao": "IRRADIADOR GAMA",
-      "reporter": "FABIANO PEREIRA",
-      "data": "31/10/2026",
-      "local": "SÃO PAULO - SP",
-      "pgm": "387",
-      "afiliada": "TV USP / SP"
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B005496",
       "ids": [
         "1452B005496"
@@ -17149,6 +17134,21 @@
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
       "afiliada": "TVE - ES"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005525",
+      "ids": [
+        "1452B005525"
+      ],
+      "descricao": "IRRADIADOR GAMA",
+      "reporter": "",
+      "data": "20/10/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "",
+      "afiliada": "TV USP"
     },
     {
       "tipo": "cobertura",
