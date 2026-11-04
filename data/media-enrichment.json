@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T20:22:34.724Z",
+  "generatedAt": "2026-11-04T22:06:45.633Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1055057,6 +1055057,190 @@
       ],
       "manualPlaces": [],
       "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005563": {
+      "title": "Frigorífico de Frango — Granja de Frango",
+      "manualTitle": "",
+      "keywords": [
+        "frigorífico de frango",
+        "granja de frango",
+        "carne de frango",
+        "agronegócio",
+        "agrocultura",
+        "agrofag",
+        "paraná - pr",
+        "cascavel",
+        "cascavel - pr"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "AGROFAG"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005587": {
+      "title": "Vacas — Extração de Leite",
+      "manualTitle": "",
+      "keywords": [
+        "vacas",
+        "extração de leite",
+        "ordenha de vaca",
+        "agronegócio",
+        "indicações",
+        "entrevistado",
+        "citação",
+        "leite",
+        "santo",
+        "data",
+        "gado",
+        "propriedade",
+        "espírito",
+        "ecoporanga",
+        "piquete"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Culturas do Campo",
+        "EXTREMO NORTE EL NINO",
+        "Fagner Fabrete",
+        "Zinolan silva brito",
+        "Izabela Toscano",
+        "TV Marcelo Miranda",
+        "pré dip e pós dip",
+        "Produtor rural",
+        "Lazaro raslan",
+        "Antonio pereira pardim neto",
+        "DO PRODUTO",
+        "MATERIALIZADA COMO PRÊMIOS EM FEIRAS AGROPECUÁRIAS",
+        "Verônica Salazar"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - ES"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005588": {
+      "title": "Florada do Café — Plantação de Café",
+      "manualTitle": "",
+      "keywords": [
+        "florada do café",
+        "plantação de café",
+        "lavoura de café",
+        "cafezal",
+        "agronegócio",
+        "entrevistado",
+        "pesquisador",
+        "professor",
+        "citação",
+        "indicações",
+        "espírito",
+        "santo",
+        "data",
+        "estudos",
+        "comercial"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Culturas do Campo",
+        "CHÁ DE FLOR DO CAFÉ",
+        "KALLEB SILVA",
+        "FÁBIO PARTELLI",
+        "SÃO MATEUS",
+        "Gabriel Cavalini",
+        "TV Veronica Salazar",
+        "FAZENDA EXPERIMENTAL QUE RESULTOU EM NOVIDADES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - ES"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005589": {
+      "title": "Agroflorestas",
+      "manualTitle": "",
+      "keywords": [
+        "agroflorestas",
+        "agronegócio",
+        "entrevistado",
+        "citação",
+        "agrofloresta",
+        "indicações",
+        "sistema",
+        "data",
+        "propriedade",
+        "natureza",
+        "programas",
+        "espírito",
+        "santo",
+        "total",
+        "classificação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "Culturas do Campo",
+        "kalleb silva",
+        "EU SOU NETO DE AGRICULTOR",
+        "OS MEUS PAIS.. QUE ERA O CERTO",
+        "A INSERIR ISSO",
+        "QUANDO CE COMEÇOU.. NA LINHA TAMBÉM",
+        "JULIO MENDONÇA",
+        "UMA ÁRVORE.. MUITAS ARVORES",
+        "ESSA ÁRVORE AQUI",
+        "RENAN BAPTISTA",
+        "Camila Soares",
+        "TV Marcelo Miranda",
+        "RICARDO EUGÊNIO",
+        "EU ACREDITO COMO TÉCNICO... AGRICULTURA FAMILIAR",
+        "QUANDO A GENTE PARTE... MONOCULTURA",
+        "Verônica Salazar"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - ES"
+      ],
       "manualOrganizations": [],
       "segments": []
     }

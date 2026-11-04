@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T20:21:55.686Z",
-  "total": 41600,
+  "generatedAt": "2026-11-04T22:06:05.743Z",
+  "total": 41604,
   "registros": [
     {
       "ID": "2822B019835",
@@ -531962,6 +531962,54 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "",
       "PGM": "387",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005563",
+      "DESCRICAO": "FRIGORÍFICO DE FRANGO + GRANJA DE FRANGO + CARNE DE FRANGO",
+      "DATA": "30/10/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "AGROFAG",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005587",
+      "DESCRICAO": "VACAS + EXTRAÇÃO DE LEITE + ORDENHA DE VACA",
+      "DATA": "04/11/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005588",
+      "DESCRICAO": "FLORADA DO CAFÉ + PLANTAÇÃO DE CAFÉ + LAVOURA DE CAFÉ + CAFEZAL",
+      "DATA": "04/11/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005589",
+      "DESCRICAO": "AGROFLORESTAS",
+      "DATA": "04/11/2026",
+      "LOCAL": "ESPÍRITO SANTO - ES",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TVE - ES",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "AGRONEGÓCIO",
+      "PGM": "",
       "DURACOES": {}
     }
   ]
