@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T22:06:27.694Z",
+  "generatedAt": "2026-11-05T20:16:39.069Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,13 +24,43 @@
     ]
   },
   "resumo": {
-    "materiais": 2108,
-    "vts": 745,
+    "materiais": 2110,
+    "vts": 747,
     "noticias": 378,
     "coberturas": 988,
     "coberturaDuplicadosExcluidos": 423
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005574",
+      "ids": [
+        "1452B005574"
+      ],
+      "descricao": "VT MELHOR CAFÉ BR",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "07/11/2026",
+      "local": "",
+      "pgm": "388",
+      "afiliada": ""
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005577",
+      "ids": [
+        "1452B005577"
+      ],
+      "descricao": "VT NELORE PINTADO",
+      "reporter": "ELAINE SILVA",
+      "data": "07/11/2026",
+      "local": "",
+      "pgm": "388",
+      "afiliada": "TVE/ MS"
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-04T22:06:45.633Z",
+  "generatedAt": "2026-11-05T20:16:56.543Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1055241,6 +1055241,335 @@
       "organizations": [
         "TVE - ES"
       ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018501": {
+      "title": "Gerais Tornado em Maringá no Paraná — Aéreas",
+      "manualTitle": "",
+      "keywords": [
+        "destruição",
+        "meio ambiente",
+        "jornal da cultura",
+        "paraná - pr",
+        "maringá",
+        "tornado",
+        "aéreas",
+        "paraná"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018502": {
+      "title": "Curtos Pessoas no Parque — Pessoas Andando Ao Ar Livre",
+      "manualTitle": "",
+      "keywords": [
+        "takes curtos pessoas no parque",
+        "pessoas andando ao ar livre",
+        "saúde",
+        "amanda",
+        "aposentado",
+        "cristina",
+        "conscientizar",
+        "importância",
+        "informações",
+        "iniciativa",
+        "faria-ger",
+        "população",
+        "sebastião",
+        "campanha",
+        "cuidados"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "saúde"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "TAYARA CRISTINA- GOIÂNIA",
+        "VALÉRIO BATISTA",
+        "FRANCISCO DA SILVA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018503": {
+      "title": "Repartição Pública Pessoas Trabalhando no Computador — Sistema Atende Fácil",
+      "manualTitle": "",
+      "keywords": [
+        "repartição pública pessoas trabalhando no computador",
+        "sistema atende fácil",
+        "política",
+        "conciliação",
+        "processos",
+        "trabalhistas",
+        "sexta-feira",
+        "consumidor",
+        "éestimular",
+        "participam",
+        "vizinhança",
+        "resolução",
+        "tribunais",
+        "detalhes",
+        "nacional"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MARIANA RABELLO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018504": {
+      "title": "Aeroporto Passageiros — Saguão Aeroporto",
+      "manualTitle": "",
+      "keywords": [
+        "aeroporto passageiros",
+        "saguão aeroporto",
+        "gonçalves",
+        "mônica",
+        "cancelamento",
+        "consumerista",
+        "companhias",
+        "obrigações",
+        "passageira",
+        "passageiro",
+        "advogada",
+        "caroline",
+        "direitos",
+        "algumas",
+        "definem"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "MARIANA RABELLO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018505": {
+      "title": "Ministro da Fazenda Dário Durigan",
+      "manualTitle": "",
+      "keywords": [
+        "ministro da fazenda dário durigan",
+        "política",
+        "jornal da cultura",
+        "brasília - df",
+        "ministro",
+        "durigan",
+        "fazenda",
+        "dário"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018509": {
+      "title": "Senador Carlos Portinho",
+      "manualTitle": "",
+      "keywords": [
+        "senador carlos portinho",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "portinho",
+        "senador",
+        "carlos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018510": {
+      "title": "Senador Teresa Leitão",
+      "manualTitle": "",
+      "keywords": [
+        "senador teresa leitão",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "senador",
+        "leitão",
+        "teresa"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018511": {
+      "title": "Senador Marcelo Castro",
+      "manualTitle": "",
+      "keywords": [
+        "senador marcelo castro",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "marcelo",
+        "senador",
+        "castro"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005577": {
+      "title": "Vt Nelore Pintado",
+      "manualTitle": "",
+      "keywords": [
+        "vt nelore pintado",
+        "agrocultura",
+        "tve/ ms",
+        "campo grande",
+        "mato grosso do sul - ms",
+        "campo grande - ms",
+        "pintado",
+        "nelore"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "ELAINE SILVA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "CAMPO GRANDE",
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE/ MS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005574": {
+      "title": "Vt Melhor Café Br",
+      "manualTitle": "",
+      "keywords": [
+        "vt melhor café br",
+        "agrocultura",
+        "espírito santo - es",
+        "melhor",
+        "café"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "BRUNO FAUSTINO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
       "manualOrganizations": [],
       "segments": []
     }

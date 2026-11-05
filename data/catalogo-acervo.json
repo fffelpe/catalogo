@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-04T22:06:05.743Z",
-  "total": 41604,
+  "generatedAt": "2026-11-05T20:16:17.802Z",
+  "total": 41614,
   "registros": [
     {
       "ID": "2822B019835",
@@ -532010,6 +532010,126 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018501",
+      "DESCRICAO": "IMAGENS GERAIS TORNADO EM MARINGÁ NO PARANÁ + IMAGENS AÉREAS + DESTRUIÇÃO",
+      "DATA": "03/11/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018502",
+      "DESCRICAO": "TAKES CURTOS PESSOAS NO PARQUE + PESSOAS ANDANDO AO AR LIVRE",
+      "DATA": "03/11/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SAÚDE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018503",
+      "DESCRICAO": "REPARTIÇÃO PÚBLICA PESSOAS TRABALHANDO NO COMPUTADOR + SISTEMA ATENDE FÁCIL",
+      "DATA": "03/11/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018504",
+      "DESCRICAO": "AEROPORTO PASSAGEIROS + SAGUÃO AEROPORTO",
+      "DATA": "03/11/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018505",
+      "DESCRICAO": "MINISTRO DA FAZENDA DÁRIO DURIGAN",
+      "DATA": "03/11/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018509",
+      "DESCRICAO": "SENADOR CARLOS PORTINHO",
+      "DATA": "03/11/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV SENADO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018510",
+      "DESCRICAO": "SENADOR TERESA LEITÃO",
+      "DATA": "03/11/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV SENADO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018511",
+      "DESCRICAO": "SENADOR MARCELO CASTRO",
+      "DATA": "03/11/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV SENADO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005577",
+      "DESCRICAO": "VT NELORE PINTADO",
+      "DATA": "07/11/2026",
+      "LOCAL": "",
+      "REPORTER": "ELAINE SILVA",
+      "AFILIADA_EMISSORA": "TVE/ MS",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "388",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005574",
+      "DESCRICAO": "VT MELHOR CAFÉ BR",
+      "DATA": "07/11/2026",
+      "LOCAL": "",
+      "REPORTER": "BRUNO FAUSTINO",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "388",
       "DURACOES": {}
     }
   ]
