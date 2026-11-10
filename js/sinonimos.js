@@ -251,17 +251,19 @@ const VocabularioJornalistico = (() => {
     },
 
     hospital: {
+      // UPA e UBS são serviços de saúde distintos, não sinônimos de hospital.
       sinonimos: [
-        "unidade hospitalar"
+        "hospitais",
+        "unidade hospitalar",
+        "unidades hospitalares"
       ],
       relacionados: [
-        "saúde",
-        "saude",
-        "médico",
-        "medico",
-        "paciente",
-        "enfermagem",
-        "pronto-socorro"
+        "saúde", "médico", "médicos", "medicina", "paciente", "pacientes",
+        "enfermagem", "enfermeiro", "consulta", "consultas",
+        "atendimento médico", "pronto-socorro", "emergência",
+        "sus", "sistema único de saúde", "upa", "ubs",
+        "unidade de pronto atendimento", "unidade básica de saúde",
+        "posto de saúde", "internação", "cirurgia", "ambulatório"
       ]
     },
 
@@ -460,13 +462,29 @@ const VocabularioJornalistico = (() => {
         "ensino"
       ],
       relacionados: [
-        "escola",
-        "professor",
-        "aluno",
-        "universidade",
-        "faculdade",
-        "estudante"
+        "escola", "escolas", "professor", "professores", "aluno", "alunos",
+        "universidade", "universidades", "faculdade", "faculdades",
+        "estudante", "estudantes", "sala de aula", "ensino médio"
       ]
+    },
+
+    enem: {
+      termos: ["enem"],
+      sinonimos: [
+        "exame nacional do ensino médio",
+        "exame nacional do ensino medio"
+      ],
+      // Associação contextual: não significa que toda escola esteja ligada ao ENEM.
+      // Esses termos têm peso inferior ao termo principal no ranking.
+      relacionados: [
+        "estudante", "estudantes", "aluno", "alunos", "jovem", "jovens",
+        "escola", "escolas", "faculdade", "faculdades", "universidade",
+        "universidades", "ensino médio", "ensino medio", "vestibular",
+        "prova", "provas", "redação", "redacao", "sala de aula",
+        "educação", "educacao", "ingresso universitário", "sisu",
+        "prouni", "fies", "inep"
+      ],
+      categoria: "assunto"
     },
 
     esporte: {
