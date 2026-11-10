@@ -1,0 +1,111 @@
+{
+  "versao": 1,
+  "descricao": "Casos sinteticos de regressao para busca por imagens. Expandir com consultas reais revisadas editorialmente.",
+  "casos": [
+    {
+      "nome": "ENEM: correspondência exata acima de cena contextual",
+      "consulta": "enem",
+      "registros": [
+        {
+          "ID": "1452B009001",
+          "DESCRICAO": "ESTUDANTES NA ENTRADA DA ESCOLA"
+        },
+        {
+          "ID": "1452B009002",
+          "DESCRICAO": "APLICAÇÃO DO ENEM EM SALAS DE AULA"
+        },
+        {
+          "ID": "1452B009003",
+          "DESCRICAO": "CARROS EM CONGESTIONAMENTO"
+        }
+      ],
+      "primeiro": "1452B009002",
+      "incluir": [
+        "1452B009001"
+      ],
+      "excluir": [
+        "1452B009003"
+      ]
+    },
+    {
+      "nome": "Hospitais: unidades e atendimento recuperados como relacionados",
+      "consulta": "hospitais",
+      "registros": [
+        {
+          "ID": "1452B009011",
+          "DESCRICAO": "CONSULTAS E ATENDIMENTO EM UBS"
+        },
+        {
+          "ID": "1452B009012",
+          "DESCRICAO": "HOSPITAIS RECEBEM NOVOS EQUIPAMENTOS"
+        },
+        {
+          "ID": "1452B009013",
+          "DESCRICAO": "MÉDICOS ATENDEM PACIENTES NA UPA"
+        },
+        {
+          "ID": "1452B009014",
+          "DESCRICAO": "OBRAS EM RODOVIA FEDERAL"
+        }
+      ],
+      "primeiro": "1452B009012",
+      "incluir": [
+        "1452B009011",
+        "1452B009013"
+      ],
+      "excluir": [
+        "1452B009014"
+      ]
+    },
+    {
+      "nome": "Educação: termos próximos não superam menção direta",
+      "consulta": "educação",
+      "registros": [
+        {
+          "ID": "1452B009021",
+          "DESCRICAO": "PROFESSORES E ALUNOS EM ESCOLA"
+        },
+        {
+          "ID": "1452B009022",
+          "DESCRICAO": "INVESTIMENTOS EM EDUCAÇÃO PÚBLICA"
+        },
+        {
+          "ID": "1452B009023",
+          "DESCRICAO": "IMAGENS DE OBRAS EM AEROPORTO"
+        }
+      ],
+      "primeiro": "1452B009022",
+      "incluir": [
+        "1452B009021"
+      ],
+      "excluir": [
+        "1452B009023"
+      ]
+    },
+    {
+      "nome": "Enchente: alagamento associado e pauta exata prioritária",
+      "consulta": "enchente",
+      "registros": [
+        {
+          "ID": "1452B009031",
+          "DESCRICAO": "RUAS ALAGADAS APÓS CHUVA FORTE"
+        },
+        {
+          "ID": "1452B009032",
+          "DESCRICAO": "ENCHENTE ATINGE CASAS NA REGIÃO"
+        },
+        {
+          "ID": "1452B009033",
+          "DESCRICAO": "FEIRA DE PRODUTOS AGRÍCOLAS"
+        }
+      ],
+      "primeiro": "1452B009032",
+      "incluir": [
+        "1452B009031"
+      ],
+      "excluir": [
+        "1452B009033"
+      ]
+    }
+  ]
+}
