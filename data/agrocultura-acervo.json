@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T20:16:39.069Z",
+  "generatedAt": "2026-11-10T00:12:19.037Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,9 +24,9 @@
     ]
   },
   "resumo": {
-    "materiais": 2110,
+    "materiais": 2111,
     "vts": 747,
-    "noticias": 378,
+    "noticias": 379,
     "coberturas": 988,
     "coberturaDuplicadosExcluidos": 423
   },
@@ -11238,6 +11238,21 @@
     }
   ],
   "noticias": [
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005590",
+      "ids": [
+        "1452B005590"
+      ],
+      "descricao": "DESTRUIÇÃO DE TABACOS + PLANTAÇÃO DE TABACOS DESTRUÍDAS",
+      "reporter": "GREICE SAUER",
+      "data": "09/11/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "388",
+      "afiliada": "RBA TV / SC"
+    },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T20:16:56.543Z",
+  "generatedAt": "2026-11-10T00:12:28.860Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1055570,6 +1055570,63 @@
       ],
       "manualPlaces": [],
       "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005590": {
+      "title": "Destruição de Tabacos — Plantação de Tabacos Destruídas",
+      "manualTitle": "",
+      "keywords": [
+        "destruição de tabacos",
+        "plantação de tabacos destruídas",
+        "agronegócio",
+        "campo",
+        "vale",
+        "lavouras",
+        "tabaco",
+        "idem",
+        "valdir",
+        "produtores",
+        "afetados",
+        "lavoura",
+        "sociais",
+        "região",
+        "redes"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "GREICE SAUER",
+        "Santa Terezinha foram os mais",
+        "fumo destruídas pelo granizo na",
+        "vive aqui disse que nunca viu nada",
+        "espera cobrir ao menos o valor",
+        "principalmente com os insumos",
+        "fumo em três hectares nesta",
+        "como se as folhas tivessem sido",
+        "O Leandro compartilhou o drama com",
+        "para sensibilizar autoridades em",
+        "também busca alternativas para",
+        "não tem o seguro",
+        "sete mil",
+        "Os dados são só de quatro dias",
+        "de reais",
+        "juntar forças e recomeçar"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SANTA CATARINA - SC",
+        "RIO DO SUL",
+        "RIO DO SUL - SC"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Defesa Civil",
+        "RBA TV / SC"
+      ],
       "manualOrganizations": [],
       "segments": []
     }
