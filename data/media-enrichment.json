@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T00:12:28.860Z",
+  "generatedAt": "2026-11-10T21:25:54.107Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1055626,6 +1055626,654 @@
       "organizations": [
         "Defesa Civil",
         "RBA TV / SC"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018512": {
+      "title": "Bondinho Pão de Açúcar",
+      "manualTitle": "",
+      "keywords": [
+        "bondinho pão de açúcar",
+        "lazer",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "bondinho",
+        "açúcar"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018513": {
+      "title": "Corredores Ecológicos Marcus Menezes",
+      "manualTitle": "",
+      "keywords": [
+        "corredores ecológicos marcus menezes",
+        "meio ambiente",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "corredores",
+        "ecológicos",
+        "menezes",
+        "marcus"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018514": {
+      "title": "Gilberto Gil Show",
+      "manualTitle": "",
+      "keywords": [
+        "gilberto gil show",
+        "cultura / arte",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "gilberto",
+        "show"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018518": {
+      "title": "Festa Literária de Maricá",
+      "manualTitle": "",
+      "keywords": [
+        "festa literária de maricá",
+        "cultura / arte",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "literária",
+        "maricá",
+        "festa"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018519": {
+      "title": "Ivan Lins Teatro Municipal do Rio de Janeiro",
+      "manualTitle": "",
+      "keywords": [
+        "ivan lins teatro municipal do rio de janeiro",
+        "cultura / arte",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "municipal",
+        "janeiro",
+        "teatro",
+        "ivan",
+        "lins"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018520": {
+      "title": "Reta Final Enem",
+      "manualTitle": "",
+      "keywords": [
+        "reta final enem",
+        "educação",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "final",
+        "enem",
+        "reta"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018521": {
+      "title": "Variação Preço Flores",
+      "manualTitle": "",
+      "keywords": [
+        "variação preço flores",
+        "educação",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "variação",
+        "flores",
+        "preço"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018522": {
+      "title": "Melhorias nos Cemitérios",
+      "manualTitle": "",
+      "keywords": [
+        "melhorias nos cemitérios",
+        "lazer",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "cemitérios",
+        "melhorias"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018523": {
+      "title": "Pousadas Sustentáveis",
+      "manualTitle": "",
+      "keywords": [
+        "pousadas sustentáveis",
+        "lazer",
+        "jornal da cultura",
+        "pernambuco - pe",
+        "sustentáveis",
+        "pousadas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PERNAMBUCO - PE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018524": {
+      "title": "Chineses no Paraguai",
+      "manualTitle": "",
+      "keywords": [
+        "chineses no paraguai",
+        "cotidiano",
+        "jornal da cultura",
+        "catve",
+        "paraná - pr",
+        "chineses",
+        "paraguai"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cotidiano"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "CATVE"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018525": {
+      "title": "Renuncia Presidente do Paraguai",
+      "manualTitle": "",
+      "keywords": [
+        "renuncia presidente do paraguai",
+        "política",
+        "jornal da cultura",
+        "catve",
+        "paraná - pr",
+        "presidente",
+        "paraguai",
+        "renuncia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "CATVE"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018526": {
+      "title": "Prejuizos Tabacos",
+      "manualTitle": "",
+      "keywords": [
+        "prejuizos tabacos",
+        "saúde",
+        "jornal da cultura",
+        "rba tv",
+        "santa catarina - sc",
+        "rio do sul",
+        "rio do sul - sc",
+        "prejuizos",
+        "tabacos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "saúde"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SANTA CATARINA - SC",
+        "RIO DO SUL",
+        "RIO DO SUL - SC"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "RBA TV"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018527": {
+      "title": "Cristo Verde e Azul Instituto da Providência",
+      "manualTitle": "",
+      "keywords": [
+        "cristo verde e azul instituto da providência",
+        "lazer",
+        "jornal da cultura",
+        "providência",
+        "instituto",
+        "cristo",
+        "verde",
+        "azul"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018528": {
+      "title": "Reunião Cnpe",
+      "manualTitle": "",
+      "keywords": [
+        "reunião cnpe",
+        "política",
+        "jornal da cultura",
+        "brasília - df",
+        "reunião",
+        "cnpe"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018529": {
+      "title": "Gratuidade Transportes Mateus Menezes",
+      "manualTitle": "",
+      "keywords": [
+        "gratuidade transportes mateus menezes",
+        "cotidiano",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "transportes",
+        "gratuidade",
+        "menezes",
+        "mateus"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cotidiano"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018530": {
+      "title": "Porta de Entrada Universidade",
+      "manualTitle": "",
+      "keywords": [
+        "porta de entrada universidade",
+        "educação",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "universidade",
+        "entrada",
+        "porta"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018531": {
+      "title": "Enem no Rio de Janeiro",
+      "manualTitle": "",
+      "keywords": [
+        "enem no rio de janeiro",
+        "educação",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "janeiro",
+        "enem"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018532": {
+      "title": "Situação no Paraguai",
+      "manualTitle": "",
+      "keywords": [
+        "situação no paraguai",
+        "política",
+        "jornal da cultura",
+        "paraná - pr",
+        "paraguai",
+        "situação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018533": {
+      "title": "Banda Fundo de Quintal 50 Anos",
+      "manualTitle": "",
+      "keywords": [
+        "banda fundo de quintal 50 anos",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "quintal",
+        "banda",
+        "fundo",
+        "anos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018534": {
+      "title": "Preço Feijão",
+      "manualTitle": "",
+      "keywords": [
+        "preço feijão",
+        "economia",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "feijão",
+        "preço"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018535": {
+      "title": "Prova Enem",
+      "manualTitle": "",
+      "keywords": [
+        "prova enem",
+        "educação",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "prova",
+        "enem"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018537": {
+      "title": "Repercute Redação Enem",
+      "manualTitle": "",
+      "keywords": [
+        "repercute redação enem",
+        "educação",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "repercute",
+        "redação",
+        "enem"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
       ],
       "manualOrganizations": [],
       "segments": []
