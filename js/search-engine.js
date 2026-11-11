@@ -132,6 +132,7 @@ const SearchEngine = (() => {
 
   let cacheRegistros = new WeakMap();
   let cacheProgramas = new WeakMap();
+  let cacheFiltrosPrograma = new WeakMap();
   let cacheIndicesMediaId = new WeakMap();
   let cacheIndicesCampos = new WeakMap();
   let cacheConsultas = new WeakMap();
@@ -660,9 +661,23 @@ const SearchEngine = (() => {
     if (!programa) return registros;
     const programaBusca = normalizar(programa);
 
-    return registros.filter((registro) =>
+    // Mantém a mesma lista filtrada entre consultas. Além de evitar repetir
+    // o filtro, permite reutilizar o índice UF/PGM/ID sobre essa lista.
+    let filtradosPorPrograma = cacheFiltrosPrograma.get(registros);
+    if (!filtradosPorPrograma) {
+      filtradosPorPrograma = new Map();
+      cacheFiltrosPrograma.set(registros, filtradosPorPrograma);
+    }
+    if (filtradosPorPrograma.has(programaBusca)) return filtradosPorPrograma.get(programaBusca);
+
+    const resultado = registros.filter((registro) =>
       programaNormalizado(registro).includes(programaBusca)
     );
+    if (filtradosPorPrograma.size >= 8) {
+      filtradosPorPrograma.delete(filtradosPorPrograma.keys().next().value);
+    }
+    filtradosPorPrograma.set(programaBusca, resultado);
+    return resultado;
   }
 
   function buscarRegistrosPorMediaId(lista, id) {
@@ -858,6 +873,7 @@ const SearchEngine = (() => {
   function limparCache() {
     cacheRegistros = new WeakMap();
     cacheProgramas = new WeakMap();
+    cacheFiltrosPrograma = new WeakMap();
     cacheIndicesMediaId = new WeakMap();
     cacheIndicesCampos = new WeakMap();
     cacheConsultas = new WeakMap();
