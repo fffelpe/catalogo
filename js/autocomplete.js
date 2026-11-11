@@ -8,6 +8,11 @@ const AutocompleteBusca = (() => {
   ]);
 
   let indice = [];
+  // Candidatos rápidos por pares de letras e por inicial/tamanho de palavra.
+  // Índices reconstruídos apenas quando o acervo de sugestões muda.
+  let indiceNormalizado = [];
+  let indiceBigrama = new Map();
+  let indiceFuzzy = new Map();
   let sugestoesAtuais = [];
   let indiceAtivo = -1;
   let configuracao = null;
@@ -36,10 +41,8 @@ const AutocompleteBusca = (() => {
     return anterior[b.length];
   }
 
-  function scoreFuzzy(texto, consulta) {
-    const q = normalizar(consulta);
+  function scoreFuzzyNormalizado(alvo, q) {
     if (q.length < 4) return 0;
-    const alvo = normalizar(texto);
     const termosConsulta = q.split(" ").filter((item) => item.length >= 4);
     const termosAlvo = alvo.split(" ").filter((item) => item.length >= 4);
     if (!termosConsulta.length || !termosAlvo.length) return 0;
@@ -59,6 +62,10 @@ const AutocompleteBusca = (() => {
     }
 
     return total / termosConsulta.length;
+  }
+
+  function scoreFuzzy(texto, consulta) {
+    return scoreFuzzyNormalizado(normalizar(texto), normalizar(consulta));
   }
 
   function escapeHtml(texto) {
@@ -111,14 +118,65 @@ const AutocompleteBusca = (() => {
     }
 
     indice = [...mapa.values()];
+    reconstruirIndices();
+  }
+
+  function reconstruirIndices() {
+    indiceNormalizado = indice.map((item) => normalizar(item.texto));
+    indiceBigrama = new Map();
+    indiceFuzzy = new Map();
+
+    indiceNormalizado.forEach((texto, posicao) => {
+      // Cada sugestão entra uma vez por par, mesmo que a sequência se repita.
+      const pares = new Set();
+      for (let i = 0; i < texto.length - 1; i++) pares.add(texto.slice(i, i + 2));
+      pares.forEach((par) => {
+        if (!indiceBigrama.has(par)) indiceBigrama.set(par, []);
+        indiceBigrama.get(par).push(posicao);
+      });
+
+      const grupos = new Set(
+        texto.split(" ").filter((p) => p.length >= 4).map((p) => p[0] + ":" + p.length)
+      );
+      grupos.forEach((grupo) => {
+        if (!indiceFuzzy.has(grupo)) indiceFuzzy.set(grupo, []);
+        indiceFuzzy.get(grupo).push(posicao);
+      });
+    });
+  }
+
+  function candidatosDiretos(q) {
+    // Se contém a consulta, contém todos os seus pares de letras. O par
+    // menos frequente limita o trabalho sem excluir nenhuma correspondência.
+    let menores = null;
+    for (let i = 0; i < q.length - 1; i++) {
+      const encontrados = indiceBigrama.get(q.slice(i, i + 2));
+      if (!encontrados) return [];
+      if (!menores || encontrados.length < menores.length) menores = encontrados;
+    }
+    return menores || [];
+  }
+
+  function candidatosAproximados(q) {
+    const termo = q.split(" ").find((palavra) => palavra.length >= 4);
+    if (!termo) return [];
+    const tolerancia = termo.length <= 5 ? 1 : 2;
+    const posicoes = new Set();
+    for (let tamanho = Math.max(4, termo.length - tolerancia);
+      tamanho <= termo.length + tolerancia; tamanho++) {
+      (indiceFuzzy.get(termo[0] + ":" + tamanho) || [])
+        .forEach((posicao) => posicoes.add(posicao));
+    }
+    return posicoes;
   }
 
   function obterSugestoes(consulta) {
     const q = normalizar(consulta);
     if (q.length < 2) return [];
 
-    const diretas = indice.map((item) => {
-      const texto = normalizar(item.texto);
+    const diretas = candidatosDiretos(q).map((posicao) => {
+      const item = indice[posicao];
+      const texto = indiceNormalizado[posicao];
       const inicia = texto.startsWith(q);
       const palavraInicia = !inicia && texto.split(" ").some((p) => p.startsWith(q));
       const contem = !inicia && !palavraInicia && texto.includes(q);
@@ -130,9 +188,10 @@ const AutocompleteBusca = (() => {
     if (diretas.length >= LIMITE || q.length < 4) return diretas.slice(0, LIMITE);
 
     const chavesDiretas = new Set(diretas.map((item) => normalizar(item.texto)));
-    const aproximadas = indice.map((item) => {
-      if (chavesDiretas.has(normalizar(item.texto))) return null;
-      const similaridade = scoreFuzzy(item.texto, q);
+    const aproximadas = [...candidatosAproximados(q)].map((posicao) => {
+      const item = indice[posicao];
+      if (chavesDiretas.has(indiceNormalizado[posicao])) return null;
+      const similaridade = scoreFuzzyNormalizado(indiceNormalizado[posicao], q);
       if (similaridade < 0.68) return null;
       return {
         ...item,
