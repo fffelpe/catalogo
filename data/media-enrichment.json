@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T01:25:59.535Z",
+  "generatedAt": "2026-11-13T21:29:06.378Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1056331,6 +1056331,103 @@
       "organizations": [
         "TV BRASIL CENTRAL"
       ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005606": {
+      "title": "Suínocultura — Produção de Suínos",
+      "manualTitle": "",
+      "keywords": [
+        "suínocultura",
+        "criação de porcos",
+        "agronegócio",
+        "agrocultura",
+        "agrofag",
+        "são paulo - sp",
+        "cascavel",
+        "paraná - pr",
+        "cascavel - pr"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "SAMUEL ROCHA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "CASCAVEL",
+        "PARANÁ - PR",
+        "CASCAVEL - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "AGROFAG"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005613": {
+      "title": "Suínocultura — Produção de Suínos",
+      "manualTitle": "",
+      "keywords": [
+        "suínocultura",
+        "criação de porcos",
+        "agronegócio",
+        "agrocultura",
+        "agrofag",
+        "são paulo - sp",
+        "cascavel",
+        "paraná - pr",
+        "cascavel - pr"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "SAMUEL ROCHA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "CASCAVEL",
+        "PARANÁ - PR",
+        "CASCAVEL - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "AGROFAG"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005595": {
+      "title": "Vt Turismo Experiência",
+      "manualTitle": "",
+      "keywords": [
+        "vt turismo experiência",
+        "agrocultura",
+        "espírito santo - es",
+        "experiência",
+        "turismo"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "BRUNO FAUSTINO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
       "manualOrganizations": [],
       "segments": []
     }

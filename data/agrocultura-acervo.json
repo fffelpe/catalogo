@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T00:12:19.037Z",
+  "generatedAt": "2026-11-13T21:28:48.740Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,13 +24,43 @@
     ]
   },
   "resumo": {
-    "materiais": 2111,
-    "vts": 747,
-    "noticias": 379,
-    "coberturas": 988,
-    "coberturaDuplicadosExcluidos": 423
+    "materiais": 2114,
+    "vts": 749,
+    "noticias": 381,
+    "coberturas": 987,
+    "coberturaDuplicadosExcluidos": 424
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005527",
+      "ids": [
+        "1452B005527"
+      ],
+      "descricao": "VT AZEITONA ES",
+      "reporter": "VERÔNICA SALAZAR",
+      "data": "14/11/2026",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "389",
+      "afiliada": "TVE / ES"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005595",
+      "ids": [
+        "1452B005595"
+      ],
+      "descricao": "VT TURISMO EXPERIÊNCIA",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "14/11/2026",
+      "local": "",
+      "pgm": "389",
+      "afiliada": ""
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -11242,6 +11272,36 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005606",
+      "ids": [
+        "1452B005606"
+      ],
+      "descricao": "SUÍNOCULTURA + PRODUÇÃO DE SUÍNOS + CRIAÇÃO DE PORCOS",
+      "reporter": "SAMUEL ROCHA",
+      "data": "13/11/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "389",
+      "afiliada": "AGROFAG"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005613",
+      "ids": [
+        "1452B005613"
+      ],
+      "descricao": "SUÍNOCULTURA + PRODUÇÃO DE SUÍNOS + CRIAÇÃO DE PORCOS",
+      "reporter": "SAMUEL ROCHA",
+      "data": "13/11/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "389",
+      "afiliada": "AGROFAG"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B005590",
       "ids": [
         "1452B005590"
@@ -17281,21 +17341,6 @@
       "descricao": "PROJETO SUÍNOS GOURMET",
       "reporter": "",
       "data": "20/10/2026",
-      "local": "ESPÍRITO SANTO - ES",
-      "pgm": "",
-      "afiliada": "TVE - ES"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005527",
-      "ids": [
-        "1452B005527"
-      ],
-      "descricao": "LAVOURA DE AZEITONA",
-      "reporter": "",
-      "data": "19/10/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
       "afiliada": "TVE - ES"
