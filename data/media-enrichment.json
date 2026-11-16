@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T21:29:06.378Z",
+  "generatedAt": "2026-11-16T21:55:17.979Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1056411,10 +1056411,514 @@
       "manualTitle": "",
       "keywords": [
         "vt turismo experiência",
-        "agrocultura",
-        "espírito santo - es",
+        "crédito",
         "experiência",
-        "turismo"
+        "imigrante",
+        "venda",
+        "hospitalidade",
+        "coordenador",
+        "finalização",
+        "casanostra",
+        "visitantes",
+        "capixabas",
+        "encontram",
+        "histórias",
+        "imigração",
+        "montanhas"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "BRUNO FAUSTINO",
+        "RODA COMP",
+        "MARCO CORTEZ",
+        "RENATA VESCOVI",
+        "REGINA CÉLIA CASAGRANDE",
+        "BRUNO FAUSTINO FOI CONHECER ESSA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES",
+        "TURISTA / MG",
+        "TURISTA / SE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018544": {
+      "title": "Queimadas — Incêndio Florestal",
+      "manualTitle": "",
+      "keywords": [
+        "queimadas",
+        "incêndio florestal",
+        "bombeiros",
+        "jornal da cultura",
+        "pará - pa",
+        "florestal",
+        "incêndio"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARÁ - PA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018545": {
+      "title": "Cursinho Prepararório — Universidades",
+      "manualTitle": "",
+      "keywords": [
+        "cursinho prepararório",
+        "universidades",
+        "faculdade",
+        "alunos em sala de aula",
+        "prova do enem",
+        "simulado do enem",
+        "educação",
+        "jornal da cultura",
+        "pará - pa"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARÁ - PA"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018546": {
+      "title": "Chegada do Presidente Lula As Filipinas",
+      "manualTitle": "",
+      "keywords": [
+        "chegada do presidente lula as filipinas",
+        "política",
+        "jornal da cultura",
+        "presidente",
+        "filipinas",
+        "chegada",
+        "lula"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018547": {
+      "title": "Alunos Estudando — Universidade",
+      "manualTitle": "",
+      "keywords": [
+        "alunos estudando",
+        "universidade",
+        "universitários",
+        "estudantes",
+        "aluno escrevendo",
+        "biblioteca",
+        "educação",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MATEUS MENEZES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018548": {
+      "title": "Preparativos Enem — Estudantes",
+      "manualTitle": "",
+      "keywords": [
+        "preparativos enem",
+        "alunos estudando",
+        "educação",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "preparativos",
+        "estudantes",
+        "estudando",
+        "alunos",
+        "enem"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018549": {
+      "title": "Sala de Aula — Alunos Estudando",
+      "manualTitle": "",
+      "keywords": [
+        "sala de aula",
+        "alunos estudando",
+        "estudantes",
+        "alunos se preparando para o enem",
+        "educação",
+        "jornal da cultura",
+        "rio de janeiro - rj",
+        "alunos",
+        "preparando",
+        "estudando",
+        "aula",
+        "enem",
+        "sala"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018550": {
+      "title": "Alunos Estudando — Alunos Escrevendo",
+      "manualTitle": "",
+      "keywords": [
+        "alunos estudando",
+        "alunos escrevendo",
+        "sala de aula",
+        "estudantes",
+        "enem",
+        "educação",
+        "recife",
+        "professora",
+        "biologia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VICTÓRIA CAMPOS",
+        "mônica medeiros"
+      ],
+      "manualPeople": [],
+      "places": [
+        "PERNAMBUCO - PE"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018552": {
+      "title": "Estudantes — Enem 2026",
+      "manualTitle": "",
+      "keywords": [
+        "estudantes",
+        "enem 2026",
+        "alunos",
+        "educação",
+        "professor",
+        "furlan",
+        "rafael",
+        "jornal da cultura",
+        "mato grosso do sul - ms",
+        "campo grande",
+        "campo grande - ms"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "KELLY MARTINS"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018553": {
+      "title": "Coletiva Ministro Bruno Moretti",
+      "manualTitle": "",
+      "keywords": [
+        "coletiva ministro bruno moretti",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "ministro",
+        "moretti",
+        "bruno"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018554": {
+      "title": "Coletiva Presidente do Senado Davi Alcolumbre",
+      "manualTitle": "",
+      "keywords": [
+        "coletiva presidente do senado davi alcolumbre",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "alcolumbre",
+        "presidente",
+        "senado",
+        "davi"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018555": {
+      "title": "Senador Randolfe Rodrigues",
+      "manualTitle": "",
+      "keywords": [
+        "senador randolfe rodrigues",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "rodrigues",
+        "randolfe",
+        "senador"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018556": {
+      "title": "Senador Rogério Marinho",
+      "manualTitle": "",
+      "keywords": [
+        "senador rogério marinho",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "marinho",
+        "rogério",
+        "senador"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018557": {
+      "title": "Senador Izalci Lucas",
+      "manualTitle": "",
+      "keywords": [
+        "senador izalci lucas",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "senador",
+        "izalci",
+        "lucas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018558": {
+      "title": "Senadora Teresa Leitão",
+      "manualTitle": "",
+      "keywords": [
+        "senadora teresa leitão",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "senadora",
+        "leitão",
+        "teresa"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018559": {
+      "title": "Plenário do Senado Federal — Senador Eduardo Braga",
+      "manualTitle": "",
+      "keywords": [
+        "plenário do senado federal",
+        "senador eduardo braga",
+        "senador rogério marinho",
+        "senadora tereza cristina",
+        "camilo santana",
+        "presidente do senado davi alcolumbre",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005623": {
+      "title": "Vt Sic 2026",
+      "manualTitle": "",
+      "keywords": [
+        "vt sic 2026",
+        "agrocultura",
+        "espírito santo - es"
       ],
       "manualKeywords": [],
       "subjects": [],

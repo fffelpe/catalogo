@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T21:28:48.740Z",
+  "generatedAt": "2026-11-16T21:55:05.078Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,13 +24,28 @@
     ]
   },
   "resumo": {
-    "materiais": 2114,
-    "vts": 749,
-    "noticias": 381,
-    "coberturas": 987,
-    "coberturaDuplicadosExcluidos": 424
+    "materiais": 2115,
+    "vts": 750,
+    "noticias": 382,
+    "coberturas": 986,
+    "coberturaDuplicadosExcluidos": 425
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005623",
+      "ids": [
+        "1452B005623"
+      ],
+      "descricao": "VT SIC 2026",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "21/11/2026",
+      "local": "",
+      "pgm": "390",
+      "afiliada": ""
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -11272,13 +11287,28 @@
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
       "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "id": "1452B005525",
+      "ids": [
+        "1452B005525"
+      ],
+      "descricao": "IRRADIADOR GAMA + CENA USP",
+      "reporter": "FABIANO PEREIRA",
+      "data": "14/11/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "389",
+      "afiliada": "TV UNESP / SP"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
       "id": "1452B005606",
       "ids": [
         "1452B005606"
       ],
       "descricao": "SUÍNOCULTURA + PRODUÇÃO DE SUÍNOS + CRIAÇÃO DE PORCOS",
       "reporter": "SAMUEL ROCHA",
-      "data": "13/11/2026",
+      "data": "14/11/2026",
       "local": "SÃO PAULO - SP",
       "pgm": "389",
       "afiliada": "AGROFAG"
@@ -11293,7 +11323,7 @@
       ],
       "descricao": "SUÍNOCULTURA + PRODUÇÃO DE SUÍNOS + CRIAÇÃO DE PORCOS",
       "reporter": "SAMUEL ROCHA",
-      "data": "13/11/2026",
+      "data": "14/11/2026",
       "local": "SÃO PAULO - SP",
       "pgm": "389",
       "afiliada": "AGROFAG"
@@ -17299,21 +17329,6 @@
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
       "afiliada": "TVE - ES"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005525",
-      "ids": [
-        "1452B005525"
-      ],
-      "descricao": "IRRADIADOR GAMA",
-      "reporter": "",
-      "data": "20/10/2026",
-      "local": "SÃO PAULO - SP",
-      "pgm": "",
-      "afiliada": "TV USP"
     },
     {
       "tipo": "cobertura",
