@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T21:55:05.078Z",
+  "generatedAt": "2026-11-18T01:53:44.316Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,10 +24,10 @@
     ]
   },
   "resumo": {
-    "materiais": 2115,
+    "materiais": 2117,
     "vts": 750,
     "noticias": 382,
-    "coberturas": 986,
+    "coberturas": 988,
     "coberturaDuplicadosExcluidos": 425
   },
   "vts": [
@@ -17015,6 +17015,36 @@
     }
   ],
   "coberturas": [
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005634",
+      "ids": [
+        "1452B005634"
+      ],
+      "descricao": "PLANTAÇÃO DE PÊSSEGOS + COLHEITA DE PÊSSEGOS + CLOSE PÊSSEGO",
+      "reporter": "",
+      "data": "17/11/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "",
+      "afiliada": "RBA TV - SC"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "fonte_agrocultura",
+      "id": "1452B005633",
+      "ids": [
+        "1452B005633"
+      ],
+      "descricao": "PORCOS MOURA + CRIAÇÃO DE PORCOS + LEITÃO + FILHOTES DE PORCOS",
+      "reporter": "",
+      "data": "17/11/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "",
+      "afiliada": "RBA TV - SC"
+    },
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
