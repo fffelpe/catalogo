@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T19:41:47.721Z",
+  "generatedAt": "2026-11-18T21:45:35.373Z",
   "afiliadas": [
     {
       "id": "AFL001",
@@ -109,7 +109,7 @@
     },
     {
       "id": "AFL016",
-      "nome": "AGROFAG",
+      "nome": "TV-FAG",
       "uf": "PARANÁ - PR",
       "cidade": "CASCAVEL",
       "ativa": true
@@ -273,14 +273,14 @@
     {
       "id": "REP018",
       "nome": "SAMUEL ROCHA",
-      "afiliadaId": "AFL016",
+      "afiliadaId": "AFL022",
       "funcao": "REPÓRTER",
       "ativo": true
     },
     {
       "id": "REP019",
       "nome": "AMANDA DALLA COSTA",
-      "afiliadaId": "AFL016",
+      "afiliadaId": "AFL022",
       "funcao": "REPÓRTER",
       "ativo": true
     },
@@ -477,13 +477,6 @@
       "id": "REP047",
       "nome": "BRUNO FAUSTINO",
       "afiliadaId": "AFL021",
-      "funcao": "REPÓRTER",
-      "ativo": true
-    },
-    {
-      "id": "REP048",
-      "nome": "SAMUEL ROCHA",
-      "afiliadaId": "AFL022",
       "funcao": "REPÓRTER",
       "ativo": true
     }

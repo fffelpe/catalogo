@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T01:53:44.316Z",
+  "generatedAt": "2026-11-18T21:45:50.896Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -25,12 +25,27 @@
   },
   "resumo": {
     "materiais": 2117,
-    "vts": 750,
+    "vts": 751,
     "noticias": 382,
-    "coberturas": 988,
-    "coberturaDuplicadosExcluidos": 425
+    "coberturas": 987,
+    "coberturaDuplicadosExcluidos": 426
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005552",
+      "ids": [
+        "1452B005552"
+      ],
+      "descricao": "VT MIRTILO PR",
+      "reporter": "AMANDA DALLA COSTA",
+      "data": "21/11/2026",
+      "local": "PARANÁ - PR",
+      "pgm": "390",
+      "afiliada": "TV-FAG"
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
@@ -209,7 +224,7 @@
       "data": "10/10/2026",
       "local": "",
       "pgm": "384",
-      "afiliada": "CATVE / PR"
+      "afiliada": "TV-FAG"
     },
     {
       "tipo": "vt",
@@ -284,7 +299,7 @@
       "data": "26/09/2026",
       "local": "",
       "pgm": "382",
-      "afiliada": "CATVE / PR"
+      "afiliada": "TV-FAG"
     },
     {
       "tipo": "vt",
@@ -479,7 +494,7 @@
       "data": "09/08/2026",
       "local": "",
       "pgm": "375",
-      "afiliada": "CATVE / PR"
+      "afiliada": "TV-FAG"
     },
     {
       "tipo": "vt",
@@ -11311,7 +11326,7 @@
       "data": "14/11/2026",
       "local": "SÃO PAULO - SP",
       "pgm": "389",
-      "afiliada": "AGROFAG"
+      "afiliada": "TV-FAG"
     },
     {
       "tipo": "noticias",
@@ -11326,7 +11341,7 @@
       "data": "14/11/2026",
       "local": "SÃO PAULO - SP",
       "pgm": "389",
-      "afiliada": "AGROFAG"
+      "afiliada": "TV-FAG"
     },
     {
       "tipo": "noticias",
@@ -11371,7 +11386,7 @@
       "data": "31/10/2026",
       "local": "PARANÁ - PR",
       "pgm": "387",
-      "afiliada": "CATVE / PR"
+      "afiliada": "TV-FAG"
     },
     {
       "tipo": "noticias",
@@ -11611,7 +11626,7 @@
       "data": "19/09/2026",
       "local": "PARANÁ - PR",
       "pgm": "381",
-      "afiliada": "CATVE / PR"
+      "afiliada": "TV-FAG"
     },
     {
       "tipo": "noticias",
@@ -11866,7 +11881,7 @@
       "data": "02/08/2026",
       "local": "PARANÁ - PR",
       "pgm": "374",
-      "afiliada": ""
+      "afiliada": "TV-FAG"
     },
     {
       "tipo": "noticias",
@@ -17164,21 +17179,6 @@
       "local": "GOIÁS - GO",
       "pgm": "",
       "afiliada": "TV BRASIL CENTRAL - GO"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005552",
-      "ids": [
-        "1452B005552"
-      ],
-      "descricao": "MIRTILO",
-      "reporter": "",
-      "data": "27/10/2026",
-      "local": "PARANÁ - PR",
-      "pgm": "",
-      "afiliada": "AGROFAG"
     },
     {
       "tipo": "cobertura",

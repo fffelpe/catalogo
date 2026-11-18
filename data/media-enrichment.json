@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T09:32:16.961Z",
+  "generatedAt": "2026-11-18T21:46:20.642Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -973158,7 +973158,9 @@
         "CASCAVEL - PR"
       ],
       "manualPlaces": [],
-      "organizations": [],
+      "organizations": [
+        "TV-FAG"
+      ],
       "manualOrganizations": [],
       "segments": []
     },
@@ -995255,7 +995257,11 @@
         "JOÃO VITOR VANZIN"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "CASCAVEL",
+        "PARANÁ - PR",
+        "CASCAVEL - PR"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010826,6 +1010832,9 @@
         "vt tecno pequenos",
         "agronegócio",
         "agrocultura",
+        "cascavel",
+        "paraná - pr",
+        "cascavel - pr",
         "pequenos",
         "tecno"
       ],
@@ -1010838,7 +1010847,11 @@
         "SAMUEL ROCHA"
       ],
       "manualPeople": [],
-      "places": [],
+      "places": [
+        "CASCAVEL",
+        "PARANÁ - PR",
+        "CASCAVEL - PR"
+      ],
       "manualPlaces": [],
       "organizations": [],
       "manualOrganizations": [],
@@ -1010910,7 +1010923,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "PARANÁ - PR"
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
       ],
       "manualPlaces": [],
       "organizations": [],
@@ -1025868,13 +1025883,11 @@
         "agronegócio",
         "confinamento",
         "zootecnista",
-        "batista",
         "gerente",
         "silagem",
         "milho",
         "pardo",
-        "ribas",
-        "joão"
+        "ribas"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1025884,7 +1025897,8 @@
       "people": [
         "ELAINE SILVA",
         "AMARILDO PEDRO DA SILVA",
-        "ALLUAN ALVES DE MORAES"
+        "ALLUAN ALVES DE MORAES",
+        "JOÃO BATISTA"
       ],
       "manualPeople": [],
       "places": [
@@ -1055600,27 +1055614,28 @@
       "manualSubjects": [],
       "people": [
         "GREICE SAUER",
-        "Santa Terezinha foram os mais",
-        "fumo destruídas pelo granizo na",
-        "vive aqui disse que nunca viu nada",
-        "espera cobrir ao menos o valor",
-        "principalmente com os insumos",
-        "fumo em três hectares nesta",
-        "como se as folhas tivessem sido",
-        "O Leandro compartilhou o drama com",
-        "para sensibilizar autoridades em",
-        "também busca alternativas para",
-        "não tem o seguro",
-        "sete mil",
-        "Os dados são só de quatro dias",
-        "de reais",
-        "juntar forças e recomeçar"
+        "SANTA TEREZINHA FORAM OS MAIS",
+        "FUMO DESTRUÍDAS PELO GRANIZO NA",
+        "VIVE AQUI DISSE QUE NUNCA VIU NADA",
+        "ESPERA COBRIR AO MENOS O VALOR",
+        "PRINCIPALMENTE COM OS INSUMOS",
+        "FUMO EM TRÊS HECTARES NESTA",
+        "COMO SE AS FOLHAS TIVESSEM SIDO",
+        "O LEANDRO COMPARTILHOU O DRAMA COM",
+        "PARA SENSIBILIZAR AUTORIDADES EM",
+        "TAMBÉM BUSCA ALTERNATIVAS PARA",
+        "NÃO TEM O SEGURO",
+        "SETE MIL",
+        "OS DADOS SÃO SÓ DE QUATRO DIAS",
+        "DE REAIS",
+        "JUNTAR FORÇAS E RECOMEÇAR"
       ],
       "manualPeople": [],
       "places": [
         "SANTA CATARINA - SC",
         "RIO DO SUL",
-        "RIO DO SUL - SC"
+        "RIO DO SUL - SC",
+        "GRANIZO TAMBÉM DESTRUIU TUDO. / DE"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1055886,10 +1055901,10 @@
       ],
       "manualSubjects": [],
       "people": [
-        "Adriana Flor",
-        "Fabiane Vilela",
-        "Gabriel Rabelo",
-        "Karol Vieira"
+        "ADRIANA FLOR",
+        "FABIANE VILELA",
+        "GABRIEL RABELO",
+        "KAROL VIEIRA"
       ],
       "manualPeople": [],
       "places": [
@@ -1055985,28 +1056000,29 @@
       ],
       "manualSubjects": [],
       "people": [
-        "Santa Terezinha foram os mais",
-        "fumo destruídas pelo granizo na",
-        "vive aqui disse que nunca viu nada",
-        "espera cobrir ao menos o valor",
-        "principalmente com os insumos",
-        "fumo em três hectares nesta",
-        "como se as folhas tivessem sido",
-        "O Leandro compartilhou o drama com",
-        "para sensibilizar autoridades em",
-        "também busca alternativas para",
-        "não tem o seguro",
-        "sete mil",
-        "Os dados são só de quatro dias",
-        "de reais",
-        "juntar forças e recomeçar",
-        "Greice Sauer"
+        "SANTA TEREZINHA FORAM OS MAIS",
+        "FUMO DESTRUÍDAS PELO GRANIZO NA",
+        "VIVE AQUI DISSE QUE NUNCA VIU NADA",
+        "ESPERA COBRIR AO MENOS O VALOR",
+        "PRINCIPALMENTE COM OS INSUMOS",
+        "FUMO EM TRÊS HECTARES NESTA",
+        "COMO SE AS FOLHAS TIVESSEM SIDO",
+        "O LEANDRO COMPARTILHOU O DRAMA COM",
+        "PARA SENSIBILIZAR AUTORIDADES EM",
+        "TAMBÉM BUSCA ALTERNATIVAS PARA",
+        "NÃO TEM O SEGURO",
+        "SETE MIL",
+        "OS DADOS SÃO SÓ DE QUATRO DIAS",
+        "DE REAIS",
+        "JUNTAR FORÇAS E RECOMEÇAR",
+        "GREICE SAUER"
       ],
       "manualPeople": [],
       "places": [
         "SANTA CATARINA - SC",
         "RIO DO SUL",
-        "RIO DO SUL - SC"
+        "RIO DO SUL - SC",
+        "GRANIZO TAMBÉM DESTRUIU TUDO. / DE"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1056646,7 +1056662,7 @@
       "manualSubjects": [],
       "people": [
         "VICTÓRIA CAMPOS",
-        "mônica medeiros"
+        "MÔNICA MEDEIROS"
       ],
       "manualPeople": [],
       "places": [
@@ -1056918,19 +1056934,19 @@
       "keywords": [
         "vt sic 2026",
         "café",
-        "brasil",
-        "plataforma",
-        "custo",
-        "global",
         "superintendente",
-        "compradores",
         "brasileiro",
+        "plataforma",
         "presidente",
         "horizonte",
-        "mercado",
         "futuro",
-        "mundo",
-        "belo"
+        "global",
+        "belo",
+        "sustentabilidade",
+        "especialistas",
+        "internacional",
+        "oportunidades",
+        "empreendedor"
       ],
       "manualKeywords": [],
       "subjects": [],
@@ -1056946,6 +1056962,7 @@
         "EVANIL NAKAGAWA",
         "AFONSO ROCHA",
         "PEDRO RIGO",
+        "RODRIGO MARTINHO",
         "BRUNO FAUSTINO FOI CONFERIR DE"
       ],
       "manualPeople": [],
@@ -1056982,8 +1056999,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "Anderson Klug",
-        "Greice Sauer"
+        "ANDERSON KLUG",
+        "GREICE SAUER"
       ],
       "manualPeople": [],
       "places": [
@@ -1057028,6 +1057045,382 @@
       "manualPlaces": [],
       "organizations": [
         "RBA TV - SC"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018599": {
+      "title": "Cartinhas de Natal",
+      "manualTitle": "",
+      "keywords": [
+        "cartinhas de natal",
+        "lazer",
+        "superintendente",
+        "campanha",
+        "correios",
+        "créditos",
+        "madrinha",
+        "gelson",
+        "grande",
+        "campo",
+        "denilcimar",
+        "leonel",
+        "souza"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "LU PEDRUSSI",
+        "ELIANE TONIASSO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE / MS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018600": {
+      "title": "Prêmio Zizé Motta",
+      "manualTitle": "",
+      "keywords": [
+        "prêmio zizé motta",
+        "cultura / arte",
+        "cantora",
+        "atriz",
+        "nascimento",
+        "créditos",
+        "jeniffer",
+        "motta",
+        "zezé",
+        "nbcuniversal",
+        "gerente",
+        "brasil"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "RODRIGO GOMES",
+        "MARCELLO COLTRO",
+        "ÁUREA MARTINS"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018601": {
+      "title": "Outubro Mais Chuvoso",
+      "manualTitle": "",
+      "keywords": [
+        "outubro mais chuvoso",
+        "meio ambiente",
+        "jornal da cultura",
+        "tv cultura do rio",
+        "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj",
+        "chuvoso",
+        "outubro"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VITÓRIA AZEVEDO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA DO RIO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018602": {
+      "title": "Vila de Natal — Material Reciclado",
+      "manualTitle": "",
+      "keywords": [
+        "vila de natal",
+        "material reciclado",
+        "lazer",
+        "jornal da cultura",
+        "catve",
+        "paraná - pr",
+        "reciclado",
+        "material",
+        "natal",
+        "vila"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "CATVE"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018603": {
+      "title": "Corte Plenário — Plenário Senado Federal",
+      "manualTitle": "",
+      "keywords": [
+        "corte plenário",
+        "plenário senado federal",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "plenário",
+        "federal",
+        "senado",
+        "corte"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018604": {
+      "title": "Análise Pec da Segurança Pública — Senador Otto Alencar",
+      "manualTitle": "",
+      "keywords": [
+        "análise pec da segurança pública",
+        "senador otto alencar",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "senador",
+        "espiridião",
+        "segurança",
+        "hamilton",
+        "alencar",
+        "análise",
+        "pública",
+        "mourão",
+        "amim"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018605": {
+      "title": "Senador Randolfe Rodrigues",
+      "manualTitle": "",
+      "keywords": [
+        "senador randolfe rodrigues",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "rodrigues",
+        "randolfe",
+        "senador"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018606": {
+      "title": "Senador Rogério Marinho",
+      "manualTitle": "",
+      "keywords": [
+        "senador rogério marinho",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "marinho",
+        "rogério",
+        "senador"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018607": {
+      "title": "Presidente do Senado Federal Davi Alcolumbre",
+      "manualTitle": "",
+      "keywords": [
+        "presidente do senado federal davi alcolumbre",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "alcolumbre",
+        "presidente",
+        "federal",
+        "senado",
+        "davi"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018608": {
+      "title": "Senador Astronauta Marcos Pontes",
+      "manualTitle": "",
+      "keywords": [
+        "senador astronauta marcos pontes",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "astronauta",
+        "senador",
+        "marcos",
+        "pontes"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018609": {
+      "title": "Senador Izalci Lucas",
+      "manualTitle": "",
+      "keywords": [
+        "senador izalci lucas",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "senador",
+        "izalci",
+        "lucas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
       ],
       "manualOrganizations": [],
       "segments": []
