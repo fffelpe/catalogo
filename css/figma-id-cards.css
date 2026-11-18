@@ -1,0 +1,268 @@
+/* Card de resultados — modelo Tabela de ID'S (Figma).
+   Camada visual: mantém busca, filtros, paginação, cópia e links do catálogo. */
+:root {
+  --figma-card-bg: #f5f5f5;
+  --figma-card-ink: #171717;
+  --figma-card-muted: #525252;
+  --figma-card-border: #d8d8d8;
+}
+.pagina-busca .results-table tbody,
+.pagina-programa .resultados-gerais-wrap > .results-table tbody,
+.pagina-programa .mam-agro-table tbody,
+.pagina-programa .vts-dinamica-table tbody {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  align-items: start !important;
+}
+.pagina-busca .results-table tbody tr.figma-id-card,
+.pagina-programa .results-table tbody tr.figma-id-card {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-areas:
+    "titulo id"
+    "data programa"
+    "local editoria"
+    "reporter afiliada"
+    "duracao duracao"
+    "descricao descricao"
+    "rodape rodape" !important;
+  grid-template-rows: auto !important;
+  align-content: start;
+  gap: 11px 18px !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 18px !important;
+  border: 1px solid var(--figma-card-border) !important;
+  border-radius: 12px !important;
+  background: var(--figma-card-bg) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  color: var(--figma-card-ink) !important;
+}
+.pagina-busca .results-table tbody tr.figma-id-card:hover,
+.pagina-programa .results-table tbody tr.figma-id-card:hover {
+  border-color: #a9b4ae !important;
+  transform: none !important;
+}
+.pagina-busca .results-table tbody tr.figma-id-card td,
+.pagina-programa .results-table tbody tr.figma-id-card td {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  min-width: 0;
+  background: transparent !important;
+  color: var(--figma-card-ink) !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+  text-align: left !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+.pagina-busca .results-table tbody tr.figma-id-card td::before,
+.pagina-programa .results-table tbody tr.figma-id-card td::before {
+  content: none !important;
+}
+.pagina-busca .figma-id-card .figma-card-heading,
+.pagina-programa .figma-id-card .figma-card-heading {
+  grid-area: titulo;
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+  font-weight: 700;
+}
+.pagina-busca .figma-id-card .resultado-id,
+.pagina-programa .figma-id-card .resultado-id {
+  grid-area: id;
+  justify-self: end;
+  min-width: 0;
+}
+.pagina-busca .figma-id-card .id-media-link,
+.pagina-programa .figma-id-card .id-media-link {
+  font-size: 13px !important;
+  color: #171717 !important;
+  font-weight: 600;
+}
+.pagina-busca .figma-id-card .resultado-data,
+.pagina-programa .figma-id-card .resultado-data { grid-area: data; }
+.pagina-busca .figma-id-card .resultado-local,
+.pagina-programa .figma-id-card .resultado-local { grid-area: local; }
+.pagina-busca .figma-id-card .resultado-reporter,
+.pagina-programa .figma-id-card .resultado-reporter { grid-area: reporter; }
+.pagina-busca .figma-id-card .resultado-programa-badge,
+.pagina-programa .figma-id-card .resultado-programa-badge {
+  grid-area: programa;
+  color: #171717 !important;
+  font-size: 12px !important;
+  letter-spacing: normal !important;
+  text-transform: uppercase;
+}
+.pagina-busca .figma-id-card .resultado-programa-badge::before,
+.pagina-programa .figma-id-card .resultado-programa-badge::before { content: "PROGRAMA: "; font-weight: 700; }
+.pagina-busca .figma-id-card td[data-label="Editoria"],
+.pagina-busca .figma-id-card td[data-label="EDITORIA"],
+.pagina-programa .figma-id-card td[data-label="Editoria"],
+.pagina-programa .figma-id-card td[data-label="EDITORIA"] {
+  grid-area: editoria;
+  display: block !important;
+}
+.pagina-busca .figma-id-card td[data-label="Editoria"]::before,
+.pagina-busca .figma-id-card td[data-label="EDITORIA"]::before,
+.pagina-programa .figma-id-card td[data-label="Editoria"]::before,
+.pagina-programa .figma-id-card td[data-label="EDITORIA"]::before { content: "EDITORIA: " !important; display: inline !important; font-weight: 700; }
+.pagina-busca .figma-id-card td[data-label="Afiliada / Emissora"],
+.pagina-programa .figma-id-card td[data-label="Afiliada / Emissora"] {
+  grid-area: afiliada;
+  display: block !important;
+}
+.pagina-busca .figma-id-card td[data-label="Afiliada / Emissora"]::before,
+.pagina-programa .figma-id-card td[data-label="Afiliada / Emissora"]::before { content: "AFILIADA / EMISSORA: " !important; display: inline !important; font-weight: 700; }
+.pagina-busca .figma-id-card .resultado-data::before,
+.pagina-programa .figma-id-card .resultado-data::before { content: "DATA: " !important; display: inline !important; font-weight: 700; }
+.pagina-busca .figma-id-card .resultado-local::before,
+.pagina-programa .figma-id-card .resultado-local::before { content: "LOCAL: " !important; display: inline !important; font-weight: 700; }
+.pagina-busca .figma-id-card .resultado-reporter::before,
+.pagina-programa .figma-id-card .resultado-reporter::before { content: "REPÓRTER: " !important; display: inline !important; font-weight: 700; }
+.pagina-busca .figma-id-card .resultado-duracao,
+.pagina-programa .figma-id-card .resultado-duracao {
+  grid-area: duracao;
+  justify-self: start !important;
+  font-size: 12px !important;
+  text-align: left !important;
+}
+.pagina-busca .figma-id-card .resultado-duracao::before,
+.pagina-programa .figma-id-card .resultado-duracao::before { content: "DURAÇÃO: " !important; display: inline !important; font-weight: 700; }
+.pagina-busca .figma-id-card .resultado-titulo,
+.pagina-programa .figma-id-card .resultado-titulo {
+  grid-area: descricao;
+  min-height: 0 !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+.pagina-busca .figma-id-card .resultado-titulo::before,
+.pagina-programa .figma-id-card .resultado-titulo::before {
+  content: "DESCRIÇÃO:";
+  display: block !important;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.pagina-busca .figma-id-card .resultado-titulo .descricao-resultado,
+.pagina-programa .figma-id-card .resultado-titulo .descricao-resultado {
+  display: block !important;
+  overflow: visible !important;
+  -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+.pagina-busca .figma-id-card .resultado-rodape,
+.pagina-programa .figma-id-card .resultado-rodape {
+  grid-area: rodape;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  padding-top: 8px !important;
+  margin: 0 !important;
+  border-top: 1px solid #dddddd !important;
+  min-height: 0;
+}
+.pagina-busca .figma-id-card .resultado-detalhes,
+.pagina-programa .figma-id-card .resultado-detalhes,
+.pagina-busca .figma-id-card .creditos-detalhes,
+.pagina-programa .figma-id-card .creditos-detalhes,
+.pagina-busca .figma-id-card .btn-play-id,
+.pagina-programa .figma-id-card .btn-play-id { display: none !important; }
+.pagina-busca .figma-id-card .resultado-creditos-slot,
+.pagina-programa .figma-id-card .resultado-creditos-slot { justify-content: flex-end; }
+.figma-creditos-trigger {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 11px;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  background: #fff;
+  color: #245b92;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.figma-creditos-trigger:hover,
+.figma-creditos-trigger:focus-visible {
+  border-color: #245b92;
+  outline: 2px solid transparent;
+  background: #f5f9ff;
+}
+dialog.figma-creditos-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(355px, calc(100vw - 28px));
+  max-width: none;
+  max-height: min(75vh, 530px);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  background: #fff;
+  color: #171717;
+  box-shadow: 0 18px 48px rgba(0,0,0,.22);
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  text-transform: none;
+}
+dialog.figma-creditos-dialog::backdrop { background: rgba(0,0,0,.32); }
+.figma-creditos-dialog .figma-dialog-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 18px 12px;
+  border-bottom: 1px solid #ededed;
+}
+.figma-creditos-dialog .figma-dialog-top strong { display: block; font-size: 14px; }
+.figma-creditos-dialog .figma-dialog-top small { font-size: 11px; color: #525252; }
+.figma-creditos-dialog .figma-dialog-close {
+  border: 0; border-radius: 6px; padding: 4px 10px;
+  background: #f5f5f5; color: #171717; font-size: 20px; cursor: pointer;
+}
+.figma-creditos-dialog .figma-dialog-body {
+  max-height: min(55vh, 395px);
+  overflow-y: auto;
+  padding: 14px 18px 18px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.figma-creditos-dialog .figma-dialog-id {
+  padding-top: 9px; margin-top: 12px;
+  border-top: 1px solid #ededed;
+  font-weight: 700;
+}
+.figma-creditos-dialog .figma-dialog-id:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.figma-creditos-dialog .figma-dialog-field { margin-top: 9px; }
+.figma-creditos-dialog .figma-dialog-field b { display: block; font-size: 11px; }
+.figma-creditos-dialog .figma-dialog-field span { display: block; overflow-wrap: anywhere; }
+.figma-creditos-dialog .figma-dialog-empty { color: #525252; margin: 0; }
+@media (max-width: 950px) {
+  .pagina-busca .results-table tbody,
+  .pagina-programa .resultados-gerais-wrap > .results-table tbody,
+  .pagina-programa .mam-agro-table tbody,
+  .pagina-programa .vts-dinamica-table tbody { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 540px) {
+  .pagina-busca .results-table tbody tr.figma-id-card,
+  .pagina-programa .results-table tbody tr.figma-id-card {
+    grid-template-columns: 1fr !important;
+    grid-template-areas: "titulo" "id" "data" "programa" "local" "editoria" "reporter" "afiliada" "duracao" "descricao" "rodape" !important;
+    padding: 15px !important;
+  }
+  .pagina-busca .figma-id-card .resultado-id,
+  .pagina-programa .figma-id-card .resultado-id { justify-self: start; }
+}
