@@ -63,10 +63,6 @@
   white-space: normal !important;
   overflow-wrap: anywhere;
 }
-.pagina-busca .results-table tbody tr.figma-id-card td::before,
-.pagina-programa .results-table tbody tr.figma-id-card td::before {
-  content: none !important;
-}
 .pagina-busca .figma-id-card .figma-card-heading,
 .pagina-programa .figma-id-card .figma-card-heading {
   grid-area: titulo;
