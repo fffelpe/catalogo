@@ -1,4 +1,74 @@
 {
+  "1452B005646": {
+    "materia": "VT ETANOL MILHO/USINA",
+    "fontes": [
+      {
+        "nome": "ELAINE SILVA",
+        "cargo": "DOURADOS - MS"
+      },
+      {
+        "nome": "NIVALDO GALDINO",
+        "cargo": "GERENTE DE PRODUÇÃO INDUSTRIAL"
+      },
+      {
+        "nome": "DOUGLAS ROCHA MEIRELES",
+        "cargo": "SUPERVISOR DE QUALIDADE"
+      },
+      {
+        "nome": "IMAGENS",
+        "cargo": "JOÃO BASTISTA"
+      }
+    ],
+    "creditos": {},
+    "textoCompleto": "VT ETANOL MILHO/USINA | ELAINE SILVA | DOURADOS - MS | NIVALDO GALDINO | GERENTE DE PRODUÇÃO INDUSTRIAL | DOUGLAS ROCHA MEIRELES | SUPERVISOR DE QUALIDADE | IMAGENS | JOÃO BASTISTA",
+    "arquivo": {
+      "id": "1wPkyNJHT-aN0EM-rmCbj8g24onMPVag_Bw57Quu-pcY",
+      "nome": "1452B005646",
+      "mimeType": "application/vnd.google-apps.document",
+      "atualizadoEm": "2026-11-19T22:14:59.860Z",
+      "url": "https://docs.google.com/document/d/1wPkyNJHT-aN0EM-rmCbj8g24onMPVag_Bw57Quu-pcY/edit?usp=drivesdk"
+    },
+    "origem": "Google Drive",
+    "selecao": {
+      "tipo": "unico",
+      "motivo": "único documento disponível"
+    }
+  },
+  "1452B005645": {
+    "materia": "VT DDGS/GADO DE CORTE",
+    "fontes": [
+      {
+        "nome": "ELAINE SILVA",
+        "cargo": "ITAPORÃ - MS"
+      },
+      {
+        "nome": "LUIZ CARLOS CORRÊA AZAMBUJA",
+        "cargo": "PRODUTOR RURAL"
+      },
+      {
+        "nome": "MARCOS DARLAN",
+        "cargo": "ENGENHEIRO AGRÔNOMO"
+      },
+      {
+        "nome": "IMAGENS",
+        "cargo": "JOÃO BATISTA"
+      }
+    ],
+    "creditos": {},
+    "textoCompleto": "VT DDGS/GADO DE CORTE | ELAINE SILVA | ITAPORÃ - MS | LUIZ CARLOS CORRÊA AZAMBUJA | PRODUTOR RURAL | MARCOS DARLAN | ENGENHEIRO AGRÔNOMO | IMAGENS | JOÃO BATISTA",
+    "arquivo": {
+      "id": "1flqkKhMTUsw7xmoKLjbvo1fI0F8Lh-TtNAD5qYO4zBc",
+      "nome": "1452B005645",
+      "mimeType": "application/vnd.google-apps.document",
+      "atualizadoEm": "2026-11-19T22:14:58.604Z",
+      "url": "https://docs.google.com/document/d/1flqkKhMTUsw7xmoKLjbvo1fI0F8Lh-TtNAD5qYO4zBc/edit?usp=drivesdk"
+    },
+    "origem": "Google Drive",
+    "selecao": {
+      "tipo": "unico",
+      "motivo": "único documento disponível"
+    }
+  },
   "2457B018503": {
     "materia": "JACKSON SANTOS - SEC. NÚCLEO DE CONCILIAÇÃO",
     "fontes": [
