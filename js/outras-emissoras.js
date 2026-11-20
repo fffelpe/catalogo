@@ -59,7 +59,14 @@ async function copiarId(id,botao) {
 function cardDe(registro) {
   const card = el("article","outras-card");
   card.append(el("span","outras-card-emissora",registro.EMISSORA));
-  card.append(el("h3","outras-card-titulo",registro.IMAGEM || "Descrição não informada"));
+  const tituloOriginal = registro.IMAGEM || "Descrição não informada";
+  const tituloExibido = typeof TitulosContextuais !== "undefined"
+    ? (TitulosContextuais.adaptar(tituloOriginal,busca.value) ||
+      TitulosContextuais.resumir(tituloOriginal))
+    : tituloOriginal;
+  const heading = el("h3","outras-card-titulo",tituloExibido);
+  heading.title = tituloOriginal;
+  card.append(heading);
   const id = el("div","outras-card-id");
   id.append(el("strong","",registro.ID || "ID não informado"));
   const valido = idValido(registro.ID);
@@ -99,7 +106,12 @@ function mostrarCards() {
   const visiveis = filtroEmissora ? emissoras.filter((a) => a.nome === filtroEmissora) : emissoras;
   const itens = visiveis.flatMap((a) =>
     a.registros.map((r) => ({...r,EMISSORA:a.nome})));
-  const resultados = pesquisar(itens,busca.value);
+  const resultados = busca.value.trim()
+    ? itens.filter((item) =>
+        pesquisar([item],busca.value).length > 0 ||
+        (typeof TitulosContextuais !== "undefined" &&
+          Boolean(TitulosContextuais.adaptar(item.IMAGEM,busca.value))))
+    : itens;
   cards.replaceChildren();
   status.textContent = `${resultados.length} conteúdo${resultados.length===1?"":"s"} ${filtroEmissora ? "em "+filtroEmissora : "em todas as emissoras"}.`;
   if (!resultados.length) {

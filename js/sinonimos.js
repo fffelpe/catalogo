@@ -172,6 +172,14 @@ const VocabularioJornalistico = (() => {
       ]
     },
 
+    prisao_domiciliar: {
+      termos: ["prisão domiciliar"],
+      sinonimos: ["prisão em casa", "preso em casa", "presa em casa",
+        "detido em casa", "detida em casa", "reclusão domiciliar"],
+      relacionados: ["prisão", "prisao", "domicílio"],
+      categoria: "assunto"
+    },
+
     manifestação: {
       sinonimos: [
         "manifestacao",

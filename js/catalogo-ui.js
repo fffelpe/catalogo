@@ -202,10 +202,12 @@ function renderizarProximaPagina() {
   itens.forEach((item) => {
     const tr = document.createElement("tr");
     const trechoEncontrado = renderizarTrechoEncontrado(item);
+    const tituloAdaptado = typeof TitulosContextuais !== "undefined"
+      ? TitulosContextuais.adaptar(item.DESCRICAO, consultaAtual) : "";
     tr.innerHTML = `
       ${renderizarCelulaId(item.ID)}
       <td data-label="Descrição">
-        <span class="descricao-resultado">${escapeHtml(item.DESCRICAO)}</span>
+        <span class="descricao-resultado" data-titulo-contextual="${escapeHtml(tituloAdaptado)}">${escapeHtml(item.DESCRICAO)}</span>
         ${trechoEncontrado ? `<span class="trecho-encontrado-wrap">${trechoEncontrado}</span>` : ""}
       </td>
       <td data-label="Data">${escapeHtml(item.DATA)}</td>
