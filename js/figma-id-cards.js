@@ -63,6 +63,7 @@
     const descricao = celulaDescricao?.querySelector(".descricao-resultado");
     if (!descricao) return;
     const valorOriginal = texto(descricao.dataset.descricaoCompleta || descricao.textContent);
+    const tituloContextual = texto(descricao.dataset.tituloContextual);
     const tituloOriginal = texto(descricao.dataset.tituloEditorial);
     descricao.dataset.descricaoCompleta = valorOriginal;
     // A área de descrição mantém o conteúdo completo já existente no catálogo.
@@ -70,10 +71,10 @@
     const titulo = document.createElement("td");
     titulo.className = "figma-card-heading";
     titulo.dataset.label = "Título";
-    titulo.textContent = tituloOriginal ||
+    titulo.textContent = tituloContextual || tituloOriginal ||
       (typeof TitulosContextuais !== "undefined"
         ? TitulosContextuais.resumir(valorOriginal) : tituloDaDescricao(valorOriginal));
-    if (descricao.dataset.tituloModo === "busca") {
+    if (tituloContextual || descricao.dataset.tituloModo === "busca") {
       titulo.title = "Título adaptado à pesquisa. Descrição original abaixo.";
       titulo.setAttribute("aria-description", "Título adaptado aos termos pesquisados");
     }
