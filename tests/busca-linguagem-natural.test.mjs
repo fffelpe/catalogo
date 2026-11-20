@@ -86,3 +86,24 @@ test("filtros estruturados continuam compatíveis com consulta em linguagem natu
     'quero imagens de plantações de soja vistas de cima programa:Agrocultura');
   assert.deepEqual(Array.from(resultados, (r) => r.ID), ["1452B005050"]);
 });
+
+test("pedido curto remove termos genéricos e encontra cenas por sinônimo", () => {
+  const busca = carregarBusca();
+  const registros = [
+    { ID: "1452B005060", DESCRICAO: "RUAS ALAGADAS NO CENTRO" },
+    { ID: "1452B005061", DESCRICAO: "IMAGENS DE SHOW EM TEATRO" }
+  ];
+  const ids = busca.pesquisar(registros, "quero imagens de enchentes").map((r) => r.ID);
+  assert.deepEqual(Array.from(ids), ["1452B005060"]);
+});
+
+test("dois conceitos em linguagem natural precisam aparecer juntos quando possível", () => {
+  const busca = carregarBusca();
+  const registros = [
+    { ID: "1452B005070", DESCRICAO: "LAVOURA DE SOJA NO CERRADO" },
+    { ID: "1452B005071", DESCRICAO: "COLHEITA DE SOJA EM CAMINHÕES" },
+    { ID: "1452B005072", DESCRICAO: "IMAGENS DE PLANTAÇÃO DE CAFÉ" }
+  ];
+  const ids = busca.pesquisar(registros, "quero imagens de plantações de soja").map((r) => r.ID);
+  assert.deepEqual(Array.from(ids), ["1452B005070"]);
+});
