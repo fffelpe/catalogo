@@ -4,6 +4,7 @@ import { google } from "googleapis";
 import { extrairMediaIds } from "./media-id.mjs";
 import { construirIndiceLocais, resolverLocal } from "./agrocultura-local.mjs";
 import { classificarAcervoAgrocultura } from "./agrocultura-classificacao.mjs";
+import { listarAbasAnuaisOuLegada, intervaloDaAba } from "./abas-anuais.mjs";
 
 const PLANILHAS = {
   vts: "1Ny0gjt-4du7cJ-ejgahfhdplnCBl58d6RV7kfuLjKM0",
@@ -197,24 +198,27 @@ async function carregarVts() {
 }
 
 async function carregarNoticias() {
-  const [cabecalho = [], ...linhas] =
-    await ler(PLANILHAS.noticias, `'${ABA_NOTICIAS.replaceAll("'", "''")}'!A1:I`);
+  const abas = await listarAbasAnuaisOuLegada(sheets, PLANILHAS.noticias, ABA_NOTICIAS);
   const registros = [];
-
-  for (const linha of linhas) {
-    const registro = registroBase({
-      tipo: "noticias",
-      origem: "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      aba: ABA_NOTICIAS,
-      pgm: coluna(linha, cabecalho, "PGM"),
-      id: coluna(linha, cabecalho, "ID"),
-      data: coluna(linha, cabecalho, "DATA"),
-      descricao: coluna(linha, cabecalho, "ASSUNTO"),
-      local: coluna(linha, cabecalho, "UF"),
-      reporter: coluna(linha, cabecalho, "REPÓRTER"),
-      afiliada: coluna(linha, cabecalho, "AFILIADA / EMISSORA"),
-    });
-    if (registro) registros.push(registro);
+  for (const aba of abas) {
+    const [cabecalho = [], ...linhas] = await ler(
+      PLANILHAS.noticias, intervaloDaAba(aba, "A1:I")
+    );
+    for (const linha of linhas) {
+      const registro = registroBase({
+        tipo: "noticias",
+        origem: "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+        aba,
+        pgm: coluna(linha, cabecalho, "PGM"),
+        id: coluna(linha, cabecalho, "ID"),
+        data: coluna(linha, cabecalho, "DATA"),
+        descricao: coluna(linha, cabecalho, "ASSUNTO"),
+        local: coluna(linha, cabecalho, "UF"),
+        reporter: coluna(linha, cabecalho, "REPÓRTER"),
+        afiliada: coluna(linha, cabecalho, "AFILIADA / EMISSORA"),
+      });
+      if (registro) registros.push(registro);
+    }
   }
   return registros;
 }
@@ -239,23 +243,28 @@ async function carregarImagensCobertura() {
 }
 
 async function carregarFonteAgrocultura() {
+  const abas = await listarAbasAnuaisOuLegada(
+    sheets, PLANILHAS.fonteAgrocultura, ABA_FONTE_AGROCULTURA
+  );
   const registros = [];
-  const [cabecalho = [], ...linhas] =
-    await ler(PLANILHAS.fonteAgrocultura, `'${ABA_FONTE_AGROCULTURA}'!A1:H`);
-
-  for (const linha of linhas) {
-    const registro = registroBase({
-      tipo: "cobertura",
-      origem: "fonte_agrocultura",
-      aba: ABA_FONTE_AGROCULTURA,
-      id: coluna(linha, cabecalho, "ID"),
-      data: coluna(linha, cabecalho, "DATA"),
-      descricao: coluna(linha, cabecalho, "DESCRIÇÃO", "DESCRICAO"),
-      local: coluna(linha, cabecalho, "LOCAL"),
-      reporter: coluna(linha, cabecalho, "REPÓRTER"),
-      afiliada: coluna(linha, cabecalho, "AFILIADA / EMISSORA"),
-    });
-    if (registro) registros.push(registro);
+  for (const aba of abas) {
+    const [cabecalho = [], ...linhas] = await ler(
+      PLANILHAS.fonteAgrocultura, intervaloDaAba(aba, "A1:H")
+    );
+    for (const linha of linhas) {
+      const registro = registroBase({
+        tipo: "cobertura",
+        origem: "fonte_agrocultura",
+        aba,
+        id: coluna(linha, cabecalho, "ID"),
+        data: coluna(linha, cabecalho, "DATA"),
+        descricao: coluna(linha, cabecalho, "DESCRIÇÃO", "DESCRICAO"),
+        local: coluna(linha, cabecalho, "LOCAL"),
+        reporter: coluna(linha, cabecalho, "REPÓRTER"),
+        afiliada: coluna(linha, cabecalho, "AFILIADA / EMISSORA"),
+      });
+      if (registro) registros.push(registro);
+    }
   }
   return registros;
 }
