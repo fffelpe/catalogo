@@ -459,8 +459,14 @@ const SearchEngine = (() => {
 
   function interpretarLinguagemNatural(consulta) {
     const consultaNormalizada = normalizar(consulta);
-    // Consultas curtas continuam no mecanismo tradicional, preservando rankings existentes.
-    if (consultaNormalizada.split(" ").filter(Boolean).length < 5) return [];
+    // Preserva consultas curtas, exceto quando o usuário descreve explicitamente
+    // o que deseja encontrar ("imagens de...", "quero...", "mostre...").
+    const palavras = consultaNormalizada.split(" ").filter(Boolean);
+    const pedidoExplicito = palavras.some((palavra) =>
+      ["imagens", "imagem", "cenas", "cena", "videos", "video",
+        "quero", "preciso", "procuro", "mostre", "filmagens"].includes(palavra)
+    );
+    if (palavras.length < 5 && !(palavras.length >= 3 && pedidoExplicito)) return [];
     let restante = consultaNormalizada;
     const intencoes = [];
 
@@ -481,7 +487,7 @@ const SearchEngine = (() => {
       intencoes.push(criarIntencao(palavra, variacoesPalavra(palavra)));
     }
 
-    return intencoes.length >= 2 ? intencoes : [];
+    return intencoes;
   }
 
   function avaliarIntencoesNaturais(preparado, intencoes) {
@@ -991,7 +997,7 @@ const SearchEngine = (() => {
     // Em pedidos descritivos, múltiplos elementos da cena valem mais do que
     // repetições de uma palavra isolada. Sem combinação suficiente, mantém
     // resultados parciais em vez de devolver a busca vazia.
-    const haCombinacao = contexto.intencoes.length >= 3 &&
+    const haCombinacao = contexto.intencoes.length >= 2 &&
       avaliados.some((item) => item.intencoesEncontradas >= 2);
     const candidatos = haCombinacao
       ? avaliados.filter((item) => item.intencoesEncontradas >= 2)
