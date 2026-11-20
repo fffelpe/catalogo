@@ -47,7 +47,8 @@ test("prisão domiciliar casa com preso em casa mas não inventa prisão em outr
 
 test("correspondências contextuais comuns e filtro de pedidos genéricos", () => {
   const {TitulosContextuais:t}=carregar();
-  assert.equal(t.adaptar("Ruas alagadas no centro","quero imagens de enchentes"),"Enchentes");
+  assert.equal(t.adaptar("Ruas alagadas no centro","quero imagens de enchentes no centro"),"Enchentes no centro");
+  assert.equal(t.adaptar("Ruas alagadas no centro","enchentes"),"");
   assert.equal(t.adaptar("Imagem aérea de plantação de soja",
     "quero imagens de soja com vista de cima"),"Soja com vista de cima");
   assert.equal(t.adaptar("Rua alagada","quero imagens de enchentes com resgate"),"");
