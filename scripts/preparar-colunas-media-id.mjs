@@ -1,5 +1,6 @@
 import process from "node:process";
 import { google } from "googleapis";
+import { selecionarAbasAnuaisOuLegada } from "./abas-anuais.mjs";
 
 const ALVOS = [
   {
@@ -12,6 +13,7 @@ const ALVOS = [
     nome: "fonte_agrocultura",
     spreadsheetId: "1TAXhVqLIT7P3GIxY6SQqEQE95xwjPpSX_0daCTtd8To",
     sheetTitle: "fonte_agrocultura",
+    abasAnuais: true,
     obrigatorio: false,
   },
 ];
@@ -32,46 +34,45 @@ const auth = new google.auth.GoogleAuth({
 });
 const sheets = google.sheets({ version: "v4", auth });
 
-async function prepararColuna({ nome, spreadsheetId, sheetTitle, obrigatorio }) {
+async function prepararColuna({ nome, spreadsheetId, sheetTitle, abasAnuais = false, obrigatorio }) {
   try {
     const metadata = await sheets.spreadsheets.get({
       spreadsheetId,
-      fields: "sheets.properties(sheetId,title,gridProperties(rowCount))",
+      fields: "sheets.properties(sheetId,title,hidden,index,gridProperties(rowCount))",
     });
-    const sheet = (metadata.data.sheets || []).find(
-      (item) => item.properties?.title === sheetTitle
-    );
-    if (!sheet?.properties) throw new Error(`Aba ${sheetTitle} não encontrada.`);
-
-    const rowCount = Number(sheet.properties.gridProperties?.rowCount || 1);
+    const properties = (metadata.data.sheets || []).map((sheet) => sheet.properties || {});
+    const titulos = abasAnuais
+      ? selecionarAbasAnuaisOuLegada(metadata.data.sheets, sheetTitle)
+      : [sheetTitle];
+    const requests = [];
+    for (const titulo of titulos) {
+      const sheet = properties.find((item) => item.title === titulo);
+      if (!sheet || sheet.sheetId === undefined) throw new Error(`Aba ${titulo} não encontrada.`);
+      const rowCount = Number(sheet.gridProperties?.rowCount || 1);
+      requests.push({
+        repeatCell: {
+          range: {
+            sheetId: sheet.sheetId,
+            startRowIndex: 0,
+            endRowIndex: rowCount,
+            startColumnIndex: 0,
+            endColumnIndex: 1,
+          },
+          cell: {
+            userEnteredFormat: { numberFormat: { type: "TEXT", pattern: "@" } },
+          },
+          fields: "userEnteredFormat.numberFormat",
+        },
+      });
+    }
     await sheets.spreadsheets.batchUpdate({
       spreadsheetId,
-      requestBody: {
-        requests: [
-          {
-            repeatCell: {
-              range: {
-                sheetId: sheet.properties.sheetId,
-                startRowIndex: 0,
-                endRowIndex: rowCount,
-                startColumnIndex: 0,
-                endColumnIndex: 1,
-              },
-              cell: {
-                userEnteredFormat: {
-                  numberFormat: { type: "TEXT", pattern: "@" },
-                },
-              },
-              fields: "userEnteredFormat.numberFormat",
-            },
-          },
-        ],
-      },
+      requestBody: { requests },
     });
-    console.log(`${nome}: coluna de Media ID configurada como texto.`);
+    console.log(`${nome}: coluna Media ID formatada como texto em ${titulos.join(", ")}.`);
   } catch (erro) {
     if (obrigatorio) throw erro;
-    const status = erro?.response?.status || erro?.code || "erro";
+    const status = erro?.response?.status || erro?.code || erro?.message || "erro";
     console.warn(`${nome}: não foi possível configurar a coluna como texto (${status}).`);
   }
 }
