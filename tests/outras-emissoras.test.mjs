@@ -23,10 +23,17 @@ test("permite pesquisar descrição, data e ID sem depender de acentos", () => {
   assert.equal(pesquisar(itens,"11/11").length,1);
   assert.equal(pesquisar(itens,"inexistente").length,0);
 });
-test("snapshot inicial registra 6 emissoras e 21 conteúdos", () => {
+test("snapshot publicado possui estrutura válida mesmo após atualizações da planilha", () => {
   const dados=JSON.parse(fs.readFileSync(new URL("../data/outras-emissoras.json",import.meta.url),"utf8"));
-  assert.equal(dados.emissoras.length,6);
-  assert.equal(dados.emissoras.find((a)=>a.nome==="CNN").registros.length,0);
-  assert.equal(dados.emissoras.find((a)=>a.nome==="REDE TV").registros.length,2);
-  assert.equal(dados.emissoras.reduce((n,a)=>n+a.registros.length,0),21);
+  assert.equal(dados.schemaVersion,1);
+  assert.ok(Array.isArray(dados.emissoras));
+  assert.equal(dados.fonte.spreadsheetId,"194DqGYvEiFug_S0Vf5GC2WSlGG79vCX2CMTqrCmPugs");
+  for (const emissora of dados.emissoras) {
+    assert.equal(typeof emissora.nome,"string");
+    assert.ok(emissora.nome.trim());
+    assert.ok(Array.isArray(emissora.registros));
+    for (const item of emissora.registros) {
+      for (const campo of ["ID","IMAGEM","DATA"]) assert.equal(typeof item[campo],"string");
+    }
+  }
 });
