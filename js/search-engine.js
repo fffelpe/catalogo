@@ -36,6 +36,53 @@ const SearchEngine = (() => {
     "DESCRICAO", "EDITORIA", "LOCAL", "REPORTER", "PROGRAMA",
     "KEYWORDS", "SUBJECTS", "PEOPLE", "PLACES", "ORGANIZATIONS"
   ]);
+  
+  // Frases descritivas são interpretadas localmente: sem API externa e sem inventar cenas.
+  // As alternativas representam descrições possíveis da MESMA cena, não imagens verificadas.
+  const PALAVRAS_OPERACIONAIS = new Set([
+    ...STOPWORDS, "imagem", "imagens", "video", "videos", "cena", "cenas",
+    "filmagem", "filmagens", "gravacao", "gravacoes", "material", "materiais",
+    "quero", "queria", "preciso", "procuro", "procurando", "busco", "buscar",
+    "encontrar", "encontre", "mostre", "mostrar", "mostrando", "mostra",
+    "aparece", "aparecem", "aparecendo", "sendo", "esta", "estao", "estavam",
+    "estava", "durante", "quando", "onde", "algum", "alguma", "tem", "haja"
+  ]);
+
+  const CENAS_EQUIVALENTES = [
+    {
+      chave: "enchente",
+      termos: ["enchente", "enchentes", "alagamento", "alagamentos", "inundacao",
+        "inundacoes", "alagada", "alagadas", "alagado", "alagados", "transbordamento"]
+    },
+    {
+      chave: "resgate",
+      termos: ["resgate", "resgates", "resgatar", "resgatando", "resgatadas",
+        "resgatados", "resgatada", "resgatado", "salvamento", "socorro",
+        "socorridas", "socorridos", "socorristas"]
+    },
+    {
+      chave: "pessoas",
+      termos: ["pessoa", "pessoas", "morador", "moradores", "moradora", "moradoras",
+        "populacao", "civis", "vitima", "vitimas", "cidadaos"]
+    },
+    {
+      chave: "plantacao",
+      termos: ["plantacao", "plantacoes", "lavoura", "lavouras", "plantio",
+        "plantios", "cultivo", "cultivos"]
+    },
+    {
+      chave: "vista_aerea",
+      termos: ["vista de cima", "vistas de cima", "visto de cima", "vistos de cima",
+        "vista do alto", "vistas do alto", "vista aerea", "vistas aereas",
+        "visao aerea", "imagem aerea", "imagens aereas", "aerea", "aereas",
+        "aereo", "aereos", "drone", "drones", "sobrevoo", "sobrevoando"]
+    },
+    { chave: "soja", termos: ["soja", "sojas", "sojicultura"] },
+    { chave: "passageiros", termos: ["passageiro", "passageiros", "viajante", "viajantes", "usuarios"] },
+    { chave: "aguardando", termos: ["esperando", "esperam", "espera", "aguardando", "aguardam", "aguarda", "fila", "filas"] },
+    { chave: "estacao", termos: ["estacao", "estacoes", "terminal", "terminais", "plataforma", "plataformas"] },
+    { chave: "trem", termos: ["trem", "trens", "ferrovia", "ferroviario", "ferroviaria", "locomotiva", "metro"] }
+  ];
 
   function tokenizar(texto) {
     return normalizar(texto)
@@ -378,20 +425,109 @@ const SearchEngine = (() => {
     };
   }
 
+  function criarIntencao(chave, termos) {
+    const alternativas = [...new Set(termos.map(normalizar).filter(Boolean))];
+    return {
+      chave,
+      alternativas,
+      padroes: alternativas.map((termo) => ({
+        termo,
+        padrao: criarPadroesTermo(termo).padraoTermo
+      }))
+    };
+  }
+
+  function variacoesPalavra(termo) {
+    const formas = new Set([termo]);
+    if (termo.length >= 5 && termo.endsWith("s")) formas.add(termo.slice(0, -1));
+    if (termo.endsWith("coes")) formas.add(termo.slice(0, -4) + "cao");
+    if (termo.endsWith("oes")) formas.add(termo.slice(0, -3) + "ao");
+    if (termo.endsWith("ais") && termo.length >= 6) formas.add(termo.slice(0, -3) + "al");
+
+    if (typeof VocabularioJornalistico !== "undefined" &&
+        typeof VocabularioJornalistico.encontrarGrupo === "function") {
+      for (const forma of [...formas]) {
+        const grupo = VocabularioJornalistico.encontrarGrupo(forma);
+        if (!grupo) continue;
+        formas.add(grupo.principal);
+        (grupo.termos || []).forEach((item) => formas.add(item));
+        (grupo.sinonimos || []).forEach((item) => formas.add(item));
+      }
+    }
+    return [...formas];
+  }
+
+  function interpretarLinguagemNatural(consulta) {
+    const consultaNormalizada = normalizar(consulta);
+    // Preserva consultas curtas, exceto quando o usuário descreve explicitamente
+    // o que deseja encontrar ("imagens de...", "quero...", "mostre...").
+    const palavras = consultaNormalizada.split(" ").filter(Boolean);
+    const pedidoExplicito = palavras.some((palavra) =>
+      ["imagens", "imagem", "cenas", "cena", "videos", "video",
+        "quero", "preciso", "procuro", "mostre", "filmagens"].includes(palavra)
+    );
+    if (palavras.length < 5 && !(palavras.length >= 3 && pedidoExplicito)) return [];
+    let restante = consultaNormalizada;
+    const intencoes = [];
+
+    for (const grupo of CENAS_EQUIVALENTES) {
+      const formas = [...grupo.termos].map(normalizar).sort((a, b) => b.length - a.length);
+      const encontrados = formas.filter((forma) =>
+        testarPadrao(criarPadroesTermo(forma).padraoTermo, restante)
+      );
+      if (!encontrados.length) continue;
+      intencoes.push(criarIntencao(grupo.chave, formas));
+      for (const forma of encontrados) {
+        restante = restante.replace(criarPadroesTermo(forma).padraoOcorrencias, " ");
+      }
+    }
+
+    for (const palavra of restante.split(" ")) {
+      if (palavra.length < 3 || PALAVRAS_OPERACIONAIS.has(palavra)) continue;
+      intencoes.push(criarIntencao(palavra, variacoesPalavra(palavra)));
+    }
+
+    return intencoes;
+  }
+
+  function avaliarIntencoesNaturais(preparado, intencoes) {
+    if (!intencoes.length) return { quantidade: 0, score: 0, correspondencias: [] };
+    let quantidade = 0;
+    const correspondencias = [];
+    for (const intencao of intencoes) {
+      const encontrado = intencao.padroes.find((item) =>
+        testarPadrao(item.padrao, preparado.textoCompleto)
+      );
+      if (!encontrado) continue;
+      quantidade += 1;
+      correspondencias.push({
+        campo: "DESCRICAO",
+        termo: intencao.chave,
+        encontrado: encontrado.termo,
+        tipo: "linguagem-natural"
+      });
+    }
+    const score = quantidade * 65 + (quantidade / intencoes.length) * 90 +
+      (quantidade === intencoes.length ? 75 : 0);
+    return { quantidade, score, correspondencias };
+  }
+
   function prepararContextoConsulta(consulta) {
     const consultaOriginal = String(consulta || "");
     const consultaNormalizada = normalizar(consultaOriginal);
+    const intencoes = interpretarLinguagemNatural(consultaOriginal);
     const expansoesOriginais = typeof VocabularioJornalistico !== "undefined"
       ? VocabularioJornalistico.expandirConsulta(consultaOriginal)
       : [{ termo: consultaNormalizada, original: consultaOriginal, tipo: "original", peso: 1 }];
 
     const expansoes = (Array.isArray(expansoesOriginais) ? expansoesOriginais : [])
+      .filter((item) => !intencoes.length || !PALAVRAS_OPERACIONAIS.has(normalizar(item.termo)))
       .map(prepararExpansao)
       .filter(Boolean);
 
     const palavrasOriginais = consultaNormalizada
       .split(" ")
-      .filter((palavra) => palavra.length >= 2 && !STOPWORDS.has(palavra))
+      .filter((palavra) => palavra.length >= 2 && !(intencoes.length ? PALAVRAS_OPERACIONAIS : STOPWORDS).has(palavra))
       .map((palavra) => criarPadroesTermo(palavra))
       .filter(Boolean);
 
@@ -402,7 +538,7 @@ const SearchEngine = (() => {
     const palavrasFuzzy = [...new Set(
       consultaNormalizada
         .split(" ")
-        .filter((palavra) => palavra.length >= 4 && !STOPWORDS.has(palavra))
+        .filter((palavra) => palavra.length >= 4 && !(intencoes.length ? PALAVRAS_OPERACIONAIS : STOPWORDS).has(palavra))
     )];
 
     return {
@@ -413,6 +549,7 @@ const SearchEngine = (() => {
       palavrasOriginais,
       palavrasFuzzy,
       conceitos: mapaConceitos(consultaOriginal),
+      intencoes,
       idConsulta
     };
   }
@@ -525,6 +662,7 @@ const SearchEngine = (() => {
 
   function registroPodePontuar(preparado, contexto) {
     if (detectarMediaIdExato(preparado, contexto)) return true;
+    if (contexto.intencoes?.length && avaliarIntencoesNaturais(preparado, contexto.intencoes).quantidade) return true;
 
     const texto = preparado.textoCompleto;
     if (!texto) return false;
@@ -628,6 +766,10 @@ const SearchEngine = (() => {
     score += semantica.score;
     correspondencias.push(...semantica.correspondencias);
 
+    const linguagemNatural = avaliarIntencoesNaturais(preparado, contexto.intencoes || []);
+    score += linguagemNatural.score;
+    correspondencias.push(...linguagemNatural.correspondencias);
+
     const entidades = detectarEntidades(preparado, contexto);
     if (entidades.length) {
       const bonusEntidades = Math.min(90, entidades.length * 24);
@@ -641,7 +783,8 @@ const SearchEngine = (() => {
     }
 
     const segmentMatches = encontrarMatchesSegmentos(registroOriginal, contexto.consultaOriginal);
-    return { score, correspondencias, segmentMatches, entidades };
+    return { score, correspondencias, segmentMatches, entidades,
+      intencoesEncontradas: linguagemNatural.quantidade };
   }
 
   function calcularRelevancia(registroOriginal, consulta) {
@@ -845,13 +988,23 @@ const SearchEngine = (() => {
         indiceOriginal,
         score: relevancia.score,
         correspondencias: relevancia.correspondencias,
+        intencoesEncontradas: relevancia.intencoesEncontradas || 0,
         segmentMatches: relevancia.segmentMatches || [],
         entidades: relevancia.entidades || []
       });
     });
 
-    return memorizarBusca(lista, chaveCache, avaliados
-      .sort((a, b) => b.score - a.score || a.indiceOriginal - b.indiceOriginal)
+    // Em pedidos descritivos, múltiplos elementos da cena valem mais do que
+    // repetições de uma palavra isolada. Sem combinação suficiente, mantém
+    // resultados parciais em vez de devolver a busca vazia.
+    const haCombinacao = contexto.intencoes.length >= 2 &&
+      avaliados.some((item) => item.intencoesEncontradas >= 2);
+    const candidatos = haCombinacao
+      ? avaliados.filter((item) => item.intencoesEncontradas >= 2)
+      : avaliados;
+    return memorizarBusca(lista, chaveCache, candidatos
+      .sort((a, b) => b.intencoesEncontradas - a.intencoesEncontradas ||
+        b.score - a.score || a.indiceOriginal - b.indiceOriginal)
       .map((item) => ({
         ...item.registro,
         _SEARCH_SCORE: item.score,
