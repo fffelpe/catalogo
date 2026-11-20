@@ -69,10 +69,3 @@ test("títulos mudam somente na interface, não no índice ou na planilha", () =
   }
 });
 
-test("cards de outras emissoras também usam títulos resumidos e busca contextual", () => {
-  const html=fs.readFileSync(new URL("../pages/outras-emissoras.html",import.meta.url),"utf8");
-  const js=fs.readFileSync(new URL("../js/outras-emissoras.js",import.meta.url),"utf8");
-  assert.ok(html.includes("titulos-contextuais.js"));
-  assert.match(js,/TitulosContextuais\.resumir\(tituloOriginal\)/);
-  assert.match(js,/TitulosContextuais\.adaptar\(item\.IMAGEM,busca\.value\)/);
-});

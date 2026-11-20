@@ -12,7 +12,7 @@ test("página inicial mostra caixa de pesquisa e navegação por programas", () 
     "Jornal da Cultura", "Jornal da Tarde", "Opinião", "Repórter Eco", "Roda Viva"]) {
     assert.ok(homepage.includes(`programa=${programa}`), `Não encontrado: ${programa}`);
   }
-  assert.match(homepage, /href="pages\/outras-emissoras\.html"/);
+  assert.doesNotMatch(homepage, /outras-emissoras|Imagens de outras emissoras/i);
 });
 
 test("home não carrega buscas populares nem últimos IDs", () => {

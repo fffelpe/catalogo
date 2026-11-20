@@ -100,20 +100,6 @@ jobs:
           echo "### Cadastro de afiliadas e repórteres não atualizado" >> "$GITHUB_STEP_SUMMARY"
           echo "A sincronização da planilha de referência falhou. O snapshot anterior foi preservado. Verifique a permissão da conta de serviço GOOGLE_SERVICE_ACCOUNT_JSON na planilha de afiliadas/repórteres." >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Sincronizar imagens de outras emissoras
-        id: outras_emissoras
-        continue-on-error: true
-        env:
-          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-        run: node scripts/sincronizar-outras-emissoras.mjs
-
-      - name: Avisar quando outras emissoras não sincronizam
-        if: steps.outras_emissoras.outcome == 'failure'
-        run: |
-          echo "::warning title=Outras emissoras::Falha ao ler a planilha; cópia anterior preservada."
-          echo "### Outras emissoras não atualizadas" >> "$GITHUB_STEP_SUMMARY"
-          echo "Verifique o acesso da conta de serviço à planilha de outras emissoras." >> "$GITHUB_STEP_SUMMARY"
-
       - name: Gerar palavras-chave e enriquecimento
         run: npm run sync:keywords
 
@@ -128,14 +114,14 @@ jobs:
         run: npm run sync:agrocultura
 
       - name: Evitar atualização sem mudança de conteúdo
-        run: node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/outras-emissoras.json data/media-enrichment.json data/media-search-index.json
+        run: node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/media-search-index.json
 
       - name: Atualizar indicadores horários da sincronização
         run: node scripts/atualizar-status-sincronizacao.mjs
 
       - name: Publicar snapshots do catálogo
         run: |
-          if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/outras-emissoras.json data/media-enrichment.json data/media-search-index.json data/sincronizacao-status.json)" ]; then
+          if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/media-search-index.json data/sincronizacao-status.json)" ]; then
             echo "Nenhuma alteração nos snapshots do catálogo."
             exit 0
           fi
@@ -144,7 +130,6 @@ jobs:
           cp data/catalogo-acervo.json /tmp/catalogo-snapshots/catalogo-acervo.json
           cp data/agrocultura-acervo.json /tmp/catalogo-snapshots/agrocultura-acervo.json
           cp data/afiliadas-reporteres.json /tmp/catalogo-snapshots/afiliadas-reporteres.json
-          cp data/outras-emissoras.json /tmp/catalogo-snapshots/outras-emissoras.json
           cp data/sincronizacao-status.json /tmp/catalogo-snapshots/sincronizacao-status.json
 
           git config user.name "github-actions[bot]"
@@ -159,15 +144,14 @@ jobs:
             cp /tmp/catalogo-snapshots/catalogo-acervo.json data/catalogo-acervo.json
             cp /tmp/catalogo-snapshots/agrocultura-acervo.json data/agrocultura-acervo.json
             cp /tmp/catalogo-snapshots/afiliadas-reporteres.json data/afiliadas-reporteres.json
-            cp /tmp/catalogo-snapshots/outras-emissoras.json data/outras-emissoras.json
             cp /tmp/catalogo-snapshots/sincronizacao-status.json data/sincronizacao-status.json
 
             # Recalcula depois do reset para preservar qualquer palavra-chave manual
             # que tenha sido adicionada à main enquanto esta execução estava em andamento.
             npm run sync:keywords
-            node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/outras-emissoras.json data/media-enrichment.json data/media-search-index.json
+            node scripts/estabilizar-snapshots.mjs data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/media-search-index.json
 
-            git add data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/outras-emissoras.json data/media-enrichment.json data/media-search-index.json data/sincronizacao-status.json
+            git add data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/media-enrichment.json data/media-search-index.json data/sincronizacao-status.json
 
             if git diff --cached --quiet; then
               echo "Os snapshots já estão atualizados na branch main."
