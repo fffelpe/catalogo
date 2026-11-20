@@ -109,7 +109,12 @@
     const tituloEnriquecido = mediaId && typeof MediaEnrichment !== "undefined"
       ? String(MediaEnrichment.obter?.(mediaId)?.title || "").trim()
       : "";
-    const tituloEditorial = tituloEnriquecido || gerarTituloEditorialLocal(descricaoCompleta);
+    const tituloContextual = String(alvo.dataset.tituloContextual || "").trim();
+    const tituloEditorial = tituloContextual ||
+      (typeof TitulosContextuais !== "undefined"
+        ? TitulosContextuais.resumir(descricaoCompleta)
+        : (tituloEnriquecido || gerarTituloEditorialLocal(descricaoCompleta)));
+    alvo.dataset.tituloModo = tituloContextual ? "busca" : "resumo";
 
     alvo.dataset.descricaoCompleta = descricaoCompleta;
     alvo.dataset.tituloEditorial = tituloEditorial;

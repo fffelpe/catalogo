@@ -70,7 +70,13 @@
     const titulo = document.createElement("td");
     titulo.className = "figma-card-heading";
     titulo.dataset.label = "Título";
-    titulo.textContent = tituloOriginal || tituloDaDescricao(valorOriginal);
+    titulo.textContent = tituloOriginal ||
+      (typeof TitulosContextuais !== "undefined"
+        ? TitulosContextuais.resumir(valorOriginal) : tituloDaDescricao(valorOriginal));
+    if (descricao.dataset.tituloModo === "busca") {
+      titulo.title = "Título adaptado à pesquisa. Descrição original abaixo.";
+      titulo.setAttribute("aria-description", "Título adaptado aos termos pesquisados");
+    }
     tr.prepend(titulo);
     tr.classList.add("figma-id-card");
     preencherAusente(tr, "data", "Data");

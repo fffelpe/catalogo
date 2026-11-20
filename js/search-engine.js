@@ -77,6 +77,12 @@ const SearchEngine = (() => {
         "visao aerea", "imagem aerea", "imagens aereas", "aerea", "aereas",
         "aereo", "aereos", "drone", "drones", "sobrevoo", "sobrevoando"]
     },
+    {
+      chave: "prisao_domiciliar",
+      termos: ["prisao domiciliar", "prisao em casa", "preso em casa", "presa em casa",
+        "detido em casa", "detida em casa", "preso na propria casa", "presa na propria casa",
+        "reclusao domiciliar"]
+    },
     { chave: "soja", termos: ["soja", "sojas", "sojicultura"] },
     { chave: "passageiros", termos: ["passageiro", "passageiros", "viajante", "viajantes", "usuarios"] },
     { chave: "aguardando", termos: ["esperando", "esperam", "espera", "aguardando", "aguardam", "aguarda", "fila", "filas"] },
