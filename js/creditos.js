@@ -57,6 +57,14 @@ const CreditosMedia = {
       .filter((item) => item.id && item.dados);
   },
 
+  // Exibe ações de créditos somente para IDs presentes no snapshot
+  // sincronizado com a pasta de documentos do Google Drive.
+  temCreditos(ids = []) {
+    if (!this.carregado) return false;
+    const lista = Array.isArray(ids) ? ids : this.separarIds(ids);
+    return this.obterVarios(lista).length > 0;
+  },
+
   obterPorValorIds(valor) {
     return this.obterVarios(this.separarIds(valor));
   },

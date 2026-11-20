@@ -109,16 +109,44 @@
       slot.className = "resultado-creditos-slot";
       rodape.prepend(slot);
     }
-    if (!slot.querySelector(".figma-creditos-trigger")) {
-      const botao = document.createElement("button");
+    tr.dataset.figmaCardPronto = "1";
+    atualizarBotaoCreditos(tr);
+  }
+
+  // Só cria o botão quando o índice de documentos de créditos já está carregado
+  // e ao menos um Media ID da linha tem registro associado.
+  function atualizarBotaoCreditos(tr) {
+    const slot = tr?.querySelector(".resultado-creditos-slot");
+    if (!slot) return;
+
+    const ids = idsDaLinha(tr);
+    const disponivel = ids.length > 0 &&
+      typeof CreditosMedia !== "undefined" &&
+      typeof CreditosMedia.temCreditos === "function" &&
+      CreditosMedia.temCreditos(ids);
+
+    let botao = slot.querySelector(".figma-creditos-trigger");
+    if (!disponivel) {
+      botao?.remove();
+      return;
+    }
+
+    if (!botao) {
+      botao = document.createElement("button");
       botao.type = "button";
       botao.className = "figma-creditos-trigger";
       botao.textContent = "VER CRÉDITOS";
       botao.setAttribute("aria-haspopup", "dialog");
-      botao.dataset.ids = idsDaLinha(tr).join(",");
       slot.appendChild(botao);
     }
-    tr.dataset.figmaCardPronto = "1";
+    botao.dataset.ids = ids.join(",");
+  }
+
+  function atualizarBotoesExistentes() {
+    IDS_TABELAS.forEach((id) => {
+      const body = document.getElementById(id);
+      body?.querySelectorAll("tr.figma-id-card").forEach(atualizarBotaoCreditos);
+    });
   }
 
   function observar(body) {
@@ -219,6 +247,15 @@
 
   function iniciar() {
     IDS_TABELAS.forEach((id) => observar(document.getElementById(id)));
+
+    // A leitura do snapshot é assíncrona: cards que já existem são atualizados
+    // quando os créditos chegam, sem mostrar botões incorretos durante o carregamento.
+    if (typeof CreditosMedia !== "undefined" && typeof CreditosMedia.carregar === "function") {
+      CreditosMedia.carregar()
+        .then(atualizarBotoesExistentes)
+        .catch((erro) => console.warn("Créditos indisponíveis para os cards:", erro));
+    }
+
     document.addEventListener("click", (evento) => {
       const botao = evento.target.closest?.(".figma-creditos-trigger");
       if (botao) abrirCreditos(botao);
