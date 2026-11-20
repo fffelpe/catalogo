@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T21:46:20.642Z",
+  "generatedAt": "2026-11-20T21:51:56.232Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1025989,6 +1025989,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "NATÁLIA VICENTE",
         "Culturas do Campo",
         "Maycon Costa",
         "Almir Lorenzon",
@@ -1025997,7 +1025998,6 @@
         "OUTRAS DO OUTRO LADO DO PAÍS",
         "UMAS BEM DIFERENTONAS",
         "E UMA FRUTA BEM PECULIAR",
-        "Natalia Vicente",
         "TIPO DE PLANTAÇÃO",
         "CASA AQUILO QUE ACABOU DE COLHER"
       ],
@@ -1026297,6 +1026297,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "MARIANA MARTINS",
         "RODRIGO RAMOS",
         "MARIANA MARTINS FOI DESCOBRIR"
       ],
@@ -1026534,6 +1026535,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "FLÁVIO GUERRA",
         "ANDRADAS CAPITAL VINHO",
         "CIDADE DO SUL DE MINAS",
         "MINEIRA DO VINHO",
@@ -1027100,8 +1027102,6 @@
       "keywords": [
         "acidente ambiental",
         "meio ambiente",
-        "andressa",
-        "calassi",
         "contaminação",
         "biodiesel",
         "investiga",
@@ -1027112,7 +1027112,9 @@
         "recentes",
         "empresa",
         "goiânia",
-        "luziano"
+        "luziano",
+        "milhões",
+        "multada"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1027120,6 +1027122,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "ANDRESSA CALASSI",
         "REPETE DELEGADO"
       ],
       "manualPeople": [],
@@ -1027972,8 +1027975,8 @@
       "subjects": [],
       "manualSubjects": [],
       "people": [
-        "LUANA PEIXOTO",
-        "RAFAEL MESQUITA"
+        "RAFAEL MESQUITA",
+        "LUANA PEIXOTO"
       ],
       "manualPeople": [],
       "places": [
@@ -1028397,6 +1028400,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "JULIANO CABRAL",
         "VT CENTRO MARISTELA JUST",
         "ZALDO JUST",
         "MARIA CLÁUDIA CALDAS",
@@ -1028432,7 +1028436,7 @@
         "lugar",
         "catedral",
         "ferrovia",
-        "oliveira"
+        "barbosa"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1028440,6 +1028444,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SÍLVIA DE OLIVEIRA",
         "VT SALGUEIRO HISTÓRIA"
       ],
       "manualPeople": [],
@@ -1028459,8 +1028464,6 @@
       "keywords": [
         "baixa umidade cuidados",
         "saúde",
-        "silva",
-        "vitor",
         "pneumologista",
         "necessários",
         "climáticas",
@@ -1028471,7 +1028474,9 @@
         "goiânia",
         "tatiana",
         "alguns",
-        "câmara"
+        "câmara",
+        "chegou",
+        "mostra"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1028479,6 +1028484,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "VITOR SILVA",
         "ANDRÉ AMORIM",
         "FERNANDA MIRANDA",
         "VALESSA GOMES"
@@ -1028503,8 +1028509,6 @@
         "férias turismo seguro",
         "lazer",
         "férias",
-        "silva",
-        "vitor",
         "militaresatuaram",
         "quatrocentos",
         "turísticos",
@@ -1028514,14 +1028518,18 @@
         "bombeiro",
         "operação",
         "positivo",
-        "durante"
+        "durante",
+        "eduardo",
+        "goiânia"
       ],
       "manualKeywords": [],
       "subjects": [
         "lazer"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "VITOR SILVA"
+      ],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
@@ -1029307,9 +1029315,7 @@
         "matriculas eja",
         "educação",
         "oportunidade",
-        "mesquita",
         "ensino",
-        "rafael",
         "fundamental",
         "inscrições",
         "modalidade",
@@ -1029318,7 +1029324,9 @@
         "detalhes",
         "públicas",
         "adultos",
-        "escolas"
+        "escolas",
+        "estudos",
+        "motoboy"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1029326,6 +1029334,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAEL MESQUITA",
         "ISTELA FERREIRA"
       ],
       "manualPeople": [],
@@ -1029524,8 +1029533,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "CREDIOMAR LINO",
         "SARAH QUEIROZ",
+        "CREDIOMAR LINO",
         "SARAH QUEIROZ FOI EM BUSCA"
       ],
       "manualPeople": [],
@@ -1029550,8 +1029559,6 @@
         "linha",
         "inferior",
         "padrão",
-        "silva",
-        "vitor",
         "bets",
         "propagandas",
         "bloquear",
@@ -1029559,14 +1029566,18 @@
         "fala",
         "povo",
         "autoexclusaoapostas",
-        "cinegrafista"
+        "cinegrafista",
+        "informações",
+        "publicidade"
       ],
       "manualKeywords": [],
       "subjects": [
         "economia"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "VITOR VINICIO DA SILVA OLIVEIRA"
+      ],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
@@ -1029586,8 +1029597,6 @@
       "keywords": [
         "comércio feriado",
         "economia",
-        "mesquita",
-        "rafael",
         "fisioterapeuta",
         "funcionamento",
         "empregadores",
@@ -1029598,7 +1029607,9 @@
         "comércio",
         "feriados",
         "polêmica",
-        "aprovam"
+        "aprovam",
+        "depende",
+        "feriado"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1029606,6 +1029617,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAEL MESQUITA",
         "ELAINE BELMIRA",
         "MARISA CARNEIRO"
       ],
@@ -1029628,8 +1029640,6 @@
       "keywords": [
         "repercute aumento etanol gasolina",
         "economia",
-        "queiroz",
-        "sarah",
         "sindiposto",
         "motorista",
         "martins",
@@ -1029640,7 +1029650,9 @@
         "pres",
         "autossuficiente",
         "abastecimento",
-        "combustível"
+        "combustível",
+        "energética",
+        "mecânicos"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1029648,6 +1029660,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SARAH QUEIROZ",
         "FLÁVIA LEMOS",
         "CARLOS FÁBIO ALMEIDA"
       ],
@@ -1029712,8 +1029725,6 @@
       "keywords": [
         "semifinais copa do mundo 2026",
         "esporte",
-        "magalhães",
-        "sofia",
         "brasileiro",
         "andrea",
         "final",
@@ -1029724,7 +1029735,9 @@
         "competição",
         "definição",
         "esperando",
-        "conferir"
+        "conferir",
+        "continua",
+        "torcedor"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1029732,6 +1029745,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SOFIA MAGALHÃES",
         "EDUARDO BARBOSA",
         "JOSÉ ANSELMO"
       ],
@@ -1029774,8 +1029788,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "PRINCESA RODRIGUES- RECEPCIONISTA",
-        "MANU WINDER"
+        "MANU WINDER",
+        "PRINCESA RODRIGUES- RECEPCIONISTA"
       ],
       "manualPeople": [],
       "places": [
@@ -1029898,8 +1029912,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "LEON SAFATLE",
         "VITOR SILVA",
+        "LEON SAFATLE",
         "LOIANA FERNANDES",
         "JOÃO PAULO SILVA"
       ],
@@ -1029942,6 +1029956,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "BRUNELLE PORTELA",
         "MÁRCIO ANDRADE",
         "BRUNELLE PORTELA CONVERSOU COM UM"
       ],
@@ -1029964,8 +1029979,6 @@
       "keywords": [
         "venda remédios por aplicativos",
         "saúde",
-        "araújo",
-        "tayara",
         "empresária",
         "goiânia",
         "marcela",
@@ -1029976,7 +1029989,9 @@
         "aprovação",
         "congresso",
         "nacional",
-        "entrega"
+        "entrega",
+        "liberou",
+        "mudança"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1029984,6 +1029999,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "TAYARA ARAÚJO",
         "NÍNIVE PIGNATI",
         "LUCIANA CALIL"
       ],
@@ -1030027,6 +1030043,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "JEAN DIEGO LUIZ",
         "JEAN DIEGO LUIZ ACOMPANHOU"
       ],
       "manualPeople": [],
@@ -1030050,7 +1030067,6 @@
         "esporte",
         "patrícia",
         "goiânia",
-        "araújo",
         "kaikan",
         "classificação",
         "descendentes",
@@ -1030060,7 +1030076,8 @@
         "enquanto",
         "garantiu",
         "confira",
-        "diretor"
+        "diretor",
+        "estados"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1030068,6 +1030085,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "ANA ARAÚJO",
         "ÁTILO WATANAB",
         "LETÍCIA KUWAE",
         "IDÉRIO WATANABE"
@@ -1030180,9 +1030198,9 @@
         "detalhes",
         "central",
         "dividiu",
-        "queiroz",
         "talento",
-        "brasil"
+        "brasil",
+        "dessa"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1030190,6 +1030208,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SARAH QUEIROZ",
         "CAROL BORGES"
       ],
       "manualPeople": [],
@@ -1030231,6 +1030250,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "TAYARA CRISTINA",
         "LARISSA HELENA",
         "RAMILE CRISTINA",
         "TAYARA CRISTINA PASSOU UMA MANHÃ"
@@ -1030296,8 +1030316,6 @@
       "keywords": [
         "últimos dias muquem",
         "cultura / arte",
-        "queiroz",
-        "sarah",
         "welinton",
         "padre",
         "silva",
@@ -1030308,7 +1030326,9 @@
         "completa",
         "d'abadia",
         "próximo",
-        "receber"
+        "receber",
+        "romeira",
+        "senhora"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1030316,6 +1030336,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SARAH QUEIROZ",
         "AGOSTINHA PEREIRA"
       ],
       "manualPeople": [],
@@ -1030388,10 +1030409,10 @@
         "qualidade",
         "variedade",
         "conferir",
-        "cristina",
         "diversas",
         "especial",
-        "produtos"
+        "produtos",
+        "goiânia"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1030399,6 +1030420,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "TAYARA CRISTINA",
         "CINTIA MACHADO"
       ],
       "manualPeople": [],
@@ -1030421,8 +1030443,6 @@
         "feira literária",
         "educação",
         "estudante",
-        "brunelle",
-        "portela",
         "professor",
         "caroline",
         "goiânia",
@@ -1030432,7 +1030452,9 @@
         "feira",
         "iara",
         "literatura",
-        "totalmente"
+        "totalmente",
+        "inclusive",
+        "literária"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1030440,6 +1030462,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "BRUNELLE PORTELA",
         "CAROL GUIMARÃES",
         "JEFFERSON BARBOSA",
         "LUCAS ALVES"
@@ -1030545,11 +1030568,9 @@
       "keywords": [
         "volei transforma vidas de jovens",
         "esporte",
-        "magalhães",
         "bela",
         "projeto",
         "goiás",
-        "sofia",
         "vista",
         "atleta",
         "transformado",
@@ -1030557,7 +1030578,9 @@
         "esportistas",
         "quilômetros",
         "waldiredson",
-        "associação"
+        "associação",
+        "presidente",
+        "realidades"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1030565,6 +1030588,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SOFIA MAGALHÃES",
         "JOÃO MANUEL",
         "MILLENY VITÓRIA",
         "DANÚBIA CUNHA"
@@ -1030692,8 +1030716,6 @@
         "economia",
         "opiniões",
         "taxa",
-        "cristina",
-        "tayara",
         "concorrência",
         "consumidores",
         "brasileira",
@@ -1030702,7 +1030724,9 @@
         "fabricados",
         "território",
         "blusinhas",
-        "discussão"
+        "discussão",
+        "indústria",
+        "ongaratto"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1030710,6 +1030734,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "TAYARA CRISTINA",
         "MARIA EDUARDA SANTOS SILVA"
       ],
       "manualPeople": [],
@@ -1030861,6 +1030886,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "CIBELLE MOURA",
         "JOSEVALDO VIEIRA"
       ],
       "manualPeople": [],
@@ -1030884,7 +1030910,6 @@
         "cultura / arte",
         "anos",
         "gente",
-        "sofia",
         "sergipana",
         "cultural",
         "educador",
@@ -1030894,7 +1030919,8 @@
         "boletim",
         "cultura",
         "santana",
-        "adrian"
+        "adrian",
+        "esther"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1030902,6 +1030928,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SOFIA GUNES",
         "SONORA JOSÉ ROSÁRIO"
       ],
       "manualPeople": [],
@@ -1031059,9 +1031086,9 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAELLA OLIVEIRA",
         "Jornal da Aperipe",
         "MOUNJARO E OBESIDADE",
-        "Rafaella Oliveira",
         "DOENÇAS CRÔNICAS",
         "EXERCÍCIOS FÍSICOS E ACOMPANHAMENTO MULTIPROFISSIONAL"
       ],
@@ -1031085,7 +1031112,6 @@
         "colecionadores de histórias",
         "cultura / arte",
         "colecionador",
-        "oliveira",
         "colecionadores",
         "encontramos",
         "construção",
@@ -1031096,7 +1031122,8 @@
         "psicóloga",
         "coleções",
         "gerações",
-        "história"
+        "história",
+        "niclésia"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1031104,6 +1031131,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAELLA OLIVEIRA",
         "RAFAELLA OLIVEIRA- ARACAJU",
         "ELMO ROLLEMBERG"
       ],
@@ -1031131,7 +1031159,6 @@
         "anos",
         "importância",
         "tiradentes",
-        "oliveira",
         "retranca",
         "boletim",
         "geovana",
@@ -1031145,6 +1031172,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAELLA OLIVEIRA",
         "RAFAELLA OLIVEIRA- ARACAJU",
         "GERÔNIMO OLIVEIRA- PROFESSOR",
         "LETÍCIA MACHADO",
@@ -1031181,7 +1031209,7 @@
         "elisa",
         "maria",
         "sesc",
-        "oliveira"
+        "produtor"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1031189,6 +1031217,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAELLA OLIVEIRA",
         "RAFAELLA OLIVEIRA- ARACAJU",
         "FLÁVIO TORREÃO",
         "JANAÍNA XAVIER",
@@ -1031215,7 +1031244,6 @@
         "crianças férias jogo de bafo",
         "lazer",
         "anos",
-        "oliveira",
         "aperipe",
         "cardoso",
         "acioli",
@@ -1031226,7 +1031254,8 @@
         "brasileira",
         "campeonato",
         "atravessa",
-        "crianças"
+        "crianças",
+        "gerações"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1031234,6 +1031263,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAELLA OLIVEIRA",
         "KAMILA RIBEIRO- COORDENADORA DE MARKETING DO SHOPPING",
         "MARCELO LOBO"
       ],
@@ -1031276,6 +1031306,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "CIBELLE MOURA",
         "ELMO ROLLEMBERG"
       ],
       "manualPeople": [],
@@ -1031349,7 +1031380,7 @@
       ],
       "manualSubjects": [],
       "people": [
-        "Rafaella Oliveira"
+        "RAFAELLA OLIVEIRA"
       ],
       "manualPeople": [],
       "places": [
@@ -1031565,7 +1031596,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "PARANÁ - PR"
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1031606,7 +1031639,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "PARANÁ - PR"
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1031647,7 +1031682,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "PARANÁ - PR"
+        "PARANÁ - PR",
+        "CASCAVEL",
+        "CASCAVEL - PR"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1031895,11 +1031932,11 @@
       ],
       "manualSubjects": [],
       "people": [
+        "ANY COMETTI",
         "Culturas do Campo",
         "ELE RESPONDE",
         "ENTÃO VAMOS TENTAR FAZER O BOCASHI",
         "NITROGENIO E POTÁSSIO",
-        "Any Cometti",
         "TV Marcelo Miranda",
         "precisamos misturar e homogeneizar os farelos",
         "UM CHEIRO DE FERMENTADO",
@@ -1032714,6 +1032751,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "JEAN DIEGO LUIZ",
         "JEAN DIEGO LUIZ ACOMPANHOU"
       ],
       "manualPeople": [],
@@ -1032738,7 +1032776,6 @@
         "esporte",
         "patrícia",
         "goiânia",
-        "araújo",
         "kaikan",
         "classificação",
         "descendentes",
@@ -1032747,7 +1032784,8 @@
         "japoneses",
         "enquanto",
         "garantiu",
-        "confira"
+        "confira",
+        "diretor"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1032755,6 +1032793,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "ANA ARAÚJO",
         "ÁTILO WATANAB",
         "LETÍCIA KUWAE",
         "IDÉRIO WATANABE"
@@ -1032798,6 +1032837,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAEL MESQUITA",
         "RAFAEL MESQUITA FOI CONFERIR COMO"
       ],
       "manualPeople": [],
@@ -1032819,8 +1032859,6 @@
       "keywords": [
         "estiagem cuidados dengue",
         "saúde",
-        "mesquita",
-        "rafael",
         "felipe",
         "luiz",
         "infectologista",
@@ -1032831,7 +1032869,9 @@
         "mosquito",
         "operador",
         "silveira",
-        "aegypti"
+        "aegypti",
+        "combate",
+        "escolhe"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1032839,6 +1032879,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAEL MESQUITA",
         "DIONÍSIO DOS SANTOS- LAVRADOR",
         "MARINETE LUSTOSA"
       ],
@@ -1032881,6 +1032922,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "MARIANA RABELLO",
         "LUCENE DE CASTRO SILVA",
         "CONCEIÇÃO DE CARVALHO",
         "MARIANA RABELO"
@@ -1032957,8 +1032999,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "JOSÉ CARLOS LÚCIO",
-        "SARAH QUEIROZ"
+        "SARAH QUEIROZ",
+        "JOSÉ CARLOS LÚCIO"
       ],
       "manualPeople": [],
       "places": [
@@ -1033127,8 +1033169,6 @@
       "keywords": [
         "vacina pneumonia",
         "saúde",
-        "mariana",
-        "rabello",
         "imunizante",
         "ministério",
         "pneumonia",
@@ -1033139,14 +1033179,18 @@
         "contra",
         "doença",
         "formas",
-        "graves"
+        "graves",
+        "idosos",
+        "médica"
       ],
       "manualKeywords": [],
       "subjects": [
         "saúde"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "MARIANA RABELLO"
+      ],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
@@ -1033186,6 +1033230,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "BRUNELLE PORTELA",
         "ÇÃO NO PREÇO DOS COMBUSTÍV",
         "DA BRUNELLE PORTELA"
       ],
@@ -1033228,6 +1033273,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "MANU WINDER",
         "ALICE GONZAGA COSTA",
         "GABRIELA SOUZA",
         "ROGÉLIA PINHEIRO",
@@ -1033252,9 +1033298,7 @@
       "keywords": [
         "dicas de turismo em goiás",
         "lazer",
-        "atanázio",
         "prefeito",
-        "alex",
         "movimentação",
         "comerciante",
         "elisvaldo",
@@ -1033264,7 +1033308,9 @@
         "conferir",
         "diversão",
         "jerônimo",
-        "quinzena"
+        "quinzena",
+        "siqueira",
+        "período"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1033272,6 +1033318,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "ALEX ATANÁZIO",
         "TARLEI DE OLIVEIRA PIMENTEL",
         "CORONEL WASHINGTON VAZ"
       ],
@@ -1033439,6 +1033486,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "TAYARA CRISTINA",
         "PRISCILA AGUIAR",
         "TAYARA CRISTINA ACOMPANHOU"
       ],
@@ -1033481,8 +1033529,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "ALEX MORENO",
-        "MANU WINDER"
+        "MANU WINDER",
+        "ALEX MORENO"
       ],
       "manualPeople": [],
       "places": [
@@ -1033579,8 +1033627,6 @@
       "keywords": [
         "aumento casos de gripe",
         "saúde",
-        "portela",
-        "brunelle",
         "goiânia",
         "respiratória",
         "debrunelle",
@@ -1033591,7 +1033637,9 @@
         "síndrome",
         "técnico",
         "vacinal",
-        "contra"
+        "contra",
+        "índice",
+        "suvisa"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1033599,6 +1033647,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "BRUNELLE PORTELA",
         "DIVÂNIA DA SILVA"
       ],
       "manualPeople": [],
@@ -1033682,6 +1033731,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAEL MESQUITA",
         "RAFAEL MESQUITA FOI CONFERIR COMO"
       ],
       "manualPeople": [],
@@ -1033707,15 +1033757,15 @@
         "machado",
         "perrone",
         "thales",
-        "brunelle",
-        "portela",
         "servidor",
         "eje-go",
         "repete",
         "conscientizar",
         "importância",
         "pedagógico",
-        "realizando"
+        "realizando",
+        "eleitoral",
+        "eleitores"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1033723,6 +1033773,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "BRUNELLE PORTELA",
         "CAPITÃO ROGÉRIO SANTOS",
         "FERNANDO BUENO"
       ],
@@ -1033746,9 +1033797,7 @@
         "festival cinema ambiental",
         "cultura / arte",
         "ambiental",
-        "alves",
         "ator",
-        "mazé",
         "cineasta",
         "cinema",
         "personalidades",
@@ -1033757,7 +1033806,9 @@
         "preservação",
         "contribuem",
         "homenagens",
-        "promovendo"
+        "promovendo",
+        "solenidade",
+        "transmitir"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1033765,6 +1033816,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "MAZÉ ALVES",
         "YARA NUNES",
         "ADERSON GOUVEA",
         "JOÃO DUMANS",
@@ -1033841,6 +1033893,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SARAH QUEIROZ",
         "SARAH QUEIROZ EXPLICA"
       ],
       "manualPeople": [],
@@ -1033862,8 +1033915,6 @@
       "keywords": [
         "uso celular torcicolo",
         "cotidiano",
-        "queiroz",
-        "sarah",
         "recepcionista",
         "lorraine",
         "iasmin",
@@ -1033874,7 +1033925,9 @@
         "todo",
         "ortopedista",
         "musculares",
-        "problemas"
+        "problemas",
+        "aparelho",
+        "auxiliar"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1033882,6 +1033935,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SARAH QUEIROZ",
         "EDNA OLIVEIRA SOUZA",
         "BRUNO AUGUSTO EMILIORELLI"
       ],
@@ -1034184,6 +1034238,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "MARIANA RABELLO",
         "DEUSINA GOMES",
         "ANDRÉ SIQUEIRA"
       ],
@@ -1034207,9 +1034262,7 @@
       "keywords": [
         "tre midias urnas eletrônicas",
         "política",
-        "mesquita",
         "cleiton",
-        "rafael",
         "informatizado-tre",
         "goiânia",
         "chefe",
@@ -1034219,14 +1034272,18 @@
         "eletrônicas",
         "eleitorais",
         "cerimônia",
-        "eleitoral"
+        "eleitoral",
+        "realizou",
+        "regional"
       ],
       "manualKeywords": [],
       "subjects": [
         "política"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "RAFAEL MESQUITA"
+      ],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
@@ -1034266,6 +1034323,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SARAH QUEIROZ",
         "SARAH QUEIROZ EXPLICA PRA GENTE"
       ],
       "manualPeople": [],
@@ -1037336,8 +1037394,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "FRANCISCA DA SILVA",
-        "MARIANA RABELLO"
+        "MARIANA RABELLO",
+        "FRANCISCA DA SILVA"
       ],
       "manualPeople": [],
       "places": [
@@ -1037358,9 +1037416,7 @@
       "keywords": [
         "geração de mídias urnas eletrônicas",
         "política",
-        "mesquita",
         "cleiton",
-        "rafael",
         "informatizado-ter",
         "goiânia",
         "chefe",
@@ -1037370,14 +1037426,18 @@
         "procedimento",
         "eletrônicas",
         "eleitorais",
-        "garantindo"
+        "garantindo",
+        "cerimônia",
+        "eleitoral"
       ],
       "manualKeywords": [],
       "subjects": [
         "política"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "RAFAEL MESQUITA"
+      ],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
@@ -1037417,8 +1037477,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "ELIZABETH MARIA DA SILVA",
-        "VITOR SILVA"
+        "VITOR SILVA",
+        "ELIZABETH MARIA DA SILVA"
       ],
       "manualPeople": [],
       "places": [
@@ -1037459,6 +1037519,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SARAH QUEIROZ",
         "MÔNICA GONÇALVES",
         "SARAH QUEIROZ FOI BUSCAR RESPOSTAS"
       ],
@@ -1043364,8 +1043425,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "REPETE LAUDO",
-        "BRUNELLE PORTELA"
+        "BRUNELLE PORTELA",
+        "REPETE LAUDO"
       ],
       "manualPeople": [],
       "places": [
@@ -1043420,8 +1043481,6 @@
       "keywords": [
         "mesário deficiente visual",
         "política",
-        "silva",
-        "vitor",
         "receptora",
         "veimatos",
         "goiânia",
@@ -1043432,7 +1043491,9 @@
         "pres",
         "deficiência",
         "cidadania",
-        "eleitoral"
+        "eleitoral",
+        "exemplo",
+        "impedir"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1043440,6 +1043501,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "VITOR SILVA",
         "CALDEIRA DUARTE MESÁRIO",
         "DANILO CORDEIRO"
       ],
@@ -1043922,7 +1043984,9 @@
         "cultura / arte"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "NAJLA FERNANDES"
+      ],
       "manualPeople": [],
       "places": [
         "PIAUÍ - PI",
@@ -1044008,16 +1044072,16 @@
         "tecnologia",
         "carvalho",
         "peixoto",
-        "josé",
-        "selma",
-        "souza"
+        "josé"
       ],
       "manualKeywords": [],
       "subjects": [
         "política"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "SELMA SOUZA"
+      ],
       "manualPeople": [],
       "places": [
         "SERGIPE - SE",
@@ -1044057,9 +1044121,9 @@
       ],
       "manualSubjects": [],
       "people": [
+        "MEIRE SOUZA",
         "dos conhecimentos dos povos tradicionais",
         "Grande do Norte",
-        "Meire Souza",
         "Carlos Araúna"
       ],
       "manualPeople": [],
@@ -1044300,6 +1044364,7 @@
       "subjects": [],
       "manualSubjects": [],
       "people": [
+        "EVANDRO CLAUDIO",
         "moradora transformou a paixão por",
         "PROPRIEDADE EM AGROLÂNDIA GUARDA",
         "coleção inteirinha da Barsa",
@@ -1045703,8 +1045768,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "ANDRÉ AMORIM",
         "MARIANA RABELLO",
+        "ANDRÉ AMORIM",
         "MARIANA RABELLO FOI ÀS RUAS"
       ],
       "manualPeople": [],
@@ -1045808,8 +1045873,8 @@
         "henrique",
         "assunto",
         "carlos",
-        "flávio",
-        "guerra"
+        "semana",
+        "chama"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1045817,6 +1045882,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "FLÁVIO GUERRA",
         "TRE ORIENTA ELEITORES",
         "TRE-MG ORIENTA ELEITORES",
         "CELULAR NAS ELEIÇÕES",
@@ -1045861,7 +1045927,7 @@
       ],
       "manualSubjects": [],
       "people": [
-        "Flávio Guerra",
+        "FLÁVIO GUERRA",
         "CRIADO POR I.A",
         "RUDA RICCI",
         "PABLO ARAGÃO",
@@ -1045904,10 +1045970,10 @@
       ],
       "manualSubjects": [],
       "people": [
+        "NAIARA GONÇALVES",
         "URNAS PARA A PESSOA COM",
         "JUAREZ MARTINS",
         "Belo Horizonte",
-        "NAIARA GONÇALVES",
         "RAFAEL É EXEMPLO NO QUESITO ACESSIBILIDADE"
       ],
       "manualPeople": [],
@@ -1045928,8 +1045994,6 @@
       "keywords": [
         "votos idosos",
         "política",
-        "rafael",
-        "nasta",
         "obrigação",
         "mendonça",
         "lorena",
@@ -1045940,7 +1046004,9 @@
         "quantidade",
         "eleitoral",
         "eleitores",
-        "horizonte"
+        "horizonte",
+        "creditar",
+        "catorze"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1045948,6 +1046014,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAEL NASTA",
         "ELEIÇÕES VOTO IDOSO",
         "IDOSOS QUEREM VOTAR"
       ],
@@ -1045989,8 +1046056,8 @@
       ],
       "manualSubjects": [],
       "people": [
+        "FLÁVIO GUERRA",
         "VOTO QUILOMBOLA",
-        "Flávio Guerra",
         "VOTAÇÃO AINDA É UM DESAFIO",
         "Belo Horizonte-MG",
         "diretor do TRE-MG"
@@ -1046032,8 +1046099,8 @@
       ],
       "manualSubjects": [],
       "people": [
+        "LORENA MENDONÇA",
         "VOTO INDÍGENA",
-        "Lorena Mendonça",
         "DIFICULDADES NO ACESSO AOS",
         "ATARA MATU PURI",
         "NAIARA GONÇALVES",
@@ -1046403,13 +1046470,16 @@
       ],
       "manualSubjects": [],
       "people": [
+        "JOÃO RAFAEL",
         "José Mauricio dos Santos",
         "Luciano Lopes",
         "João Rafael de Oliveira"
       ],
       "manualPeople": [],
       "places": [
-        "MINAS GERAIS - MG"
+        "MINAS GERAIS - MG",
+        "ANDRADAS",
+        "ANDRADAS - MG"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1046429,14 +1046499,14 @@
         "oliveira",
         "antônio",
         "jardim",
-        "rafael",
         "santo",
-        "joão",
         "apicultura",
         "produzido",
         "alimento",
         "internet",
-        "colmeia"
+        "colmeia",
+        "café",
+        "fica"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1046444,11 +1046514,14 @@
       ],
       "manualSubjects": [],
       "people": [
+        "JOÃO RAFAEL",
         "Christian Van Bellen"
       ],
       "manualPeople": [],
       "places": [
-        "MINAS GERAIS - MG"
+        "MINAS GERAIS - MG",
+        "ANDRADAS",
+        "ANDRADAS - MG"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1046468,14 +1046541,14 @@
         "linha",
         "padrão",
         "inferior",
-        "henrique",
-        "pedro",
         "esportiva",
         "piracema",
         "marcelo",
-        "rabelo",
         "regras",
-        "fiscalização"
+        "fiscalização",
+        "tbcparceria",
+        "impressão",
+        "novembro"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1046483,6 +1046556,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "PEDRO HENRIQUE RABELO ARAÚJO",
         "DF- AVERIGUADOS",
         "UPRINT. FISCALIZAÇÃO-SEMAD",
         "EM GC"
@@ -1048608,7 +1048682,9 @@
         "saúde"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "RAFAEL MESQUITA"
+      ],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
@@ -1048628,10 +1048704,8 @@
       "keywords": [
         "justificativa de voto no app e-titulo",
         "política",
-        "mesquita",
         "duarte",
         "márcio",
-        "rafael",
         "eleitoral",
         "cadastro",
         "goiânia",
@@ -1048640,14 +1048714,18 @@
         "ausência",
         "conferir",
         "eleições",
-        "domingo"
+        "domingo",
+        "motivos",
+        "preciso"
       ],
       "manualKeywords": [],
       "subjects": [
         "política"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "RAFAEL MESQUITA"
+      ],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
@@ -1048755,6 +1048833,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "BRUNELLE PORTELA",
         "ISADORA MOURA",
         "KELLY NAVES"
       ],
@@ -1048860,9 +1048939,7 @@
       "keywords": [
         "escala 6x1",
         "política",
-        "atanázio",
         "brasília",
-        "alex",
         "senado",
         "eleitoreira",
         "considera",
@@ -1048872,7 +1048949,9 @@
         "tramitar",
         "começou",
         "governo",
-        "senador"
+        "senador",
+        "votação",
+        "brasil"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1048880,6 +1048959,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "ALEX ATANÁZIO",
         "DAVI ALCOLUMBRE",
         "DAMARES ALVES"
       ],
@@ -1048924,8 +1049004,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "YURI SENA",
-        "SARAH QUEIROZ"
+        "SARAH QUEIROZ",
+        "YURI SENA"
       ],
       "manualPeople": [],
       "places": [
@@ -1048966,6 +1049046,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "ALEX ATANÁZIO",
         "TERESA CRISTINA",
         "ALEX ATANÁZIO TRAZ AS INFORMAÇÕES"
       ],
@@ -1049033,19 +1049114,19 @@
       "keywords": [
         "brinquedos dia das crianças",
         "lazer",
-        "magalhães",
         "goiânia",
         "tibúcio",
         "bianca",
         "garcia",
         "médica",
-        "sofia",
         "tauna",
         "eletrônicos",
         "preocupação",
         "brinquedos",
         "consultora",
-        "empresário"
+        "empresário",
+        "equatorial",
+        "apostando"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1049053,6 +1049134,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SOFIA MAGALHÃES",
         "DANÚBIO LIMA",
         "LÍVIA MOREIRA"
       ],
@@ -1049075,10 +1049157,8 @@
       "keywords": [
         "crianças crimes cibernéticos",
         "tecnologia",
-        "magalhães",
         "delegada",
         "contra",
-        "sofia",
         "infantojuvenil",
         "adolescentes",
         "compartilhar",
@@ -1049087,14 +1049167,18 @@
         "suspeitos",
         "ampliado",
         "cordeiro",
-        "crianças"
+        "crianças",
+        "infantis",
+        "marcella"
       ],
       "manualKeywords": [],
       "subjects": [
         "tecnologia"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "SOFIA MAGALHÃES"
+      ],
       "manualPeople": [],
       "places": [
         "GOIÁS - GO",
@@ -1049176,8 +1049260,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "IVANILDA RODRIGUES",
         "MARIANA RABELLO",
+        "IVANILDA RODRIGUES",
         "MARIANA RABELLO FOI NA REGIÃO"
       ],
       "manualPeople": [],
@@ -1049332,6 +1049416,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SOFIA GUNES",
         "SOFIA GUNES- ARACAJU",
         "SONORA LUANA TEIXEIRA- EDUCADORA SOCIAL",
         "NETO COSTA"
@@ -1049801,10 +1049886,7 @@
       "keywords": [
         "morro montserrat",
         "cultura / arte",
-        "maria",
-        "fragoso",
         "santos",
-        "luísa",
         "cinegrafista",
         "coordenadora",
         "aparecida",
@@ -1049821,6 +1049903,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "MARIA LUÍSA FRAGOSO",
         "JOSÉ PIMENTEL"
       ],
       "manualPeople": [],
@@ -1050145,10 +1050228,10 @@
       ],
       "manualSubjects": [],
       "people": [
+        "HEMERSON FREITAS",
         "SONORA WALDER GÓES",
         "SONORA JOÃO PAULO CAPOBIANCO",
         "LINK BOMBEIROS",
-        "HEMERSON FREITAS",
         "SONORA SERAFIM CORRÊA",
         "Vice-Governador do Amazonas",
         "HENRI CLAY"
@@ -1050190,7 +1050273,9 @@
         "meio ambiente"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "CARLOS ARAÚJO"
+      ],
       "manualPeople": [],
       "places": [
         "AMAZONAS - AM"
@@ -1050430,22 +1050515,24 @@
         "borges",
         "recife",
         "instituto",
-        "victória",
         "ricardo",
-        "campos",
         "fotografias",
         "esculturas",
         "nordeste",
         "obras",
         "bailarinas",
-        "dezessete"
+        "dezessete",
+        "brennand",
+        "diretora"
       ],
       "manualKeywords": [],
       "subjects": [
         "lazer"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "VICTÓRIA CAMPOS"
+      ],
       "manualPeople": [],
       "places": [
         "PERNAMBUCO - PE",
@@ -1051224,6 +1051311,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "VERÔNICA SALAZAR",
         "DESENVOLVIMENTO HUMANO",
         "SONORA FRANCISCO LEAL BELONI",
         "SOBE SOM",
@@ -1051236,6 +1051324,8 @@
       "manualPeople": [],
       "places": [
         "ESPÍRITO SANTO - ES",
+        "VITÓRIA",
+        "VITÓRIA - ES",
         "TRABALHO / OS",
         "MAS HÁ SEIS ANOS / UM"
       ],
@@ -1051272,11 +1051362,11 @@
       ],
       "manualSubjects": [],
       "people": [
+        "NATÁLIA VICENTE",
         "Culturas do Campo",
         "Maycon Costa",
         "Thaíz Romão",
         "ABRIRAM JUNTOS O PRIMEIRO MELIPONÁRIO DO ESTADO",
-        "Natalia Vicente",
         "TV Veronica Salazar",
         "Hercules Birchler"
       ],
@@ -1051391,10 +1051481,10 @@
       ],
       "manualSubjects": [],
       "people": [
+        "NATÁLIA VICENTE",
         "Culturas do Campo",
         "Fagner Fabrete",
         "TEMPO DE FLORADA",
-        "Natalia Vicente",
         "Leonardo Altoé",
         "TV Marcelo Miranda",
         "Verônica Salazar"
@@ -1051571,10 +1051661,10 @@
       ],
       "manualSubjects": [],
       "people": [
+        "ANY COMETTI",
         "Culturas do Campo",
         "KALEB SILVA",
         "EDUCAÇÃO DOS FILHOS",
-        "Any Cometti",
         "TV Veronica Salazar",
         "plantar pra vender",
         "da hora de vender",
@@ -1051622,10 +1051712,10 @@
       ],
       "manualSubjects": [],
       "people": [
+        "ANY COMETTI",
         "Culturas do Campo",
         "DAVI CABRAL",
         "ALIMENTAÇÃO DO ANIMAL",
-        "Any Cometti",
         "TV Veronica Salazar",
         "os leitões",
         "FICOU EMPOLGADO",
@@ -1052113,7 +1052203,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "GOIÁS - GO"
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1052153,7 +1052245,9 @@
       ],
       "manualPeople": [],
       "places": [
-        "GOIÁS - GO"
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1052188,13 +1052282,16 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SARAH QUEIROZ",
         "NOEL CORDEIRO",
         "CRISTINA BRANDÃO",
         "SARAH QUEIROZ MOSTRA PRA VOCÊ"
       ],
       "manualPeople": [],
       "places": [
-        "GOIÁS - GO"
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
       ],
       "manualPlaces": [],
       "organizations": [
@@ -1052336,8 +1052433,6 @@
       "keywords": [
         "cuidados brinquedos squishies",
         "educação",
-        "magalhães",
-        "sofia",
         "palmerston",
         "procon-go",
         "superint",
@@ -1052348,7 +1052443,9 @@
         "marco",
         "diferentes",
         "brinquedo",
-        "qualidade"
+        "qualidade",
+        "squishies",
+        "formatos"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1052356,6 +1052453,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SOFIA MAGALHÃES",
         "ARIADNNE MANZAN",
         "ALICE LEAL"
       ],
@@ -1052378,8 +1052476,6 @@
       "keywords": [
         "preservação ambiental",
         "meio ambiente",
-        "mesquita",
-        "rafael",
         "tradicionais",
         "conhecida",
         "cuidadora",
@@ -1052390,7 +1052486,9 @@
         "encanta",
         "goiânia",
         "novatos",
-        "parques"
+        "parques",
+        "famosa",
+        "mônica"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1052398,6 +1052496,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAEL MESQUITA",
         "QUEILA RIBEIRO",
         "WANESSA DE CASTRO"
       ],
@@ -1052519,8 +1052618,6 @@
       "keywords": [
         "expectativa segundo turno das eleições",
         "política",
-        "mariana",
-        "martins",
         "quatro",
         "comerciante",
         "aposentada",
@@ -1052531,7 +1052628,9 @@
         "autônoma",
         "eleições",
         "próximos",
-        "cláudio"
+        "cláudio",
+        "domingo",
+        "próximo"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1052539,6 +1052638,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "MARIANA MARTINS",
         "HELENA MACHADO",
         "LORRAINE DE DEUS",
         "ANA ZÉLIA SOARES BELÉM"
@@ -1052616,8 +1052716,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "GENILDA PIDDE",
-        "SOFIA MAGALHÃES"
+        "SOFIA MAGALHÃES",
+        "GENILDA PIDDE"
       ],
       "manualPeople": [],
       "places": [
@@ -1052638,8 +1052738,6 @@
       "keywords": [
         "cenário econômico nacional",
         "economia",
-        "magalhães",
-        "sofia",
         "farmacêutico",
         "economista",
         "tributário",
@@ -1052650,7 +1052748,9 @@
         "queiroz",
         "césar",
         "empreendedor",
-        "brasileira"
+        "brasileira",
+        "incertezas",
+        "acompanhe"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1052658,6 +1052758,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SOFIA MAGALHÃES",
         "TERMOZIR SENA",
         "JOÃO GONDIM"
       ],
@@ -1052680,8 +1052781,6 @@
       "keywords": [
         "mudanças em locais de votação",
         "política",
-        "brunelle",
-        "portela",
         "goiânia",
         "votação",
         "repete",
@@ -1052692,7 +1052791,9 @@
         "endereços",
         "conferir",
         "divulgou",
-        "mudanças"
+        "mudanças",
+        "superior",
+        "tribunal"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1052700,6 +1052801,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "BRUNELLE PORTELA",
         "FRANK WENDELL RIBEIRO"
       ],
       "manualPeople": [],
@@ -1052741,9 +1052843,9 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RAFAEL MESQUITA",
         "CLARA ROSA",
-        "GISELE GOMES",
-        "RAFAEL MESQUITA"
+        "GISELE GOMES"
       ],
       "manualPeople": [],
       "places": [
@@ -1054621,6 +1054723,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SAMUEL ROCHA",
         "DENILSON MARTINS",
         "JOÃO VITOR VANZIN"
       ],
@@ -1054694,10 +1054797,9 @@
         "retranca",
         "eduardo",
         "portes",
-        "samuel",
         "toledo",
         "marco",
-        "rocha"
+        "rural"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1054705,6 +1054807,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SAMUEL ROCHA",
         "DENILSON MARTINS",
         "JOÃO VITOR VANZIN"
       ],
@@ -1054738,8 +1054841,7 @@
         "ovelhas",
         "rogério",
         "kaefer",
-        "samuel",
-        "rocha"
+        "silva"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1054747,6 +1054849,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SAMUEL ROCHA",
         "DENILSON MARTINS",
         "JOÃO VITOR VANZIN"
       ],
@@ -1054774,11 +1054877,8 @@
         "produtora",
         "cristela",
         "siebert",
-        "amanda",
         "pontes",
-        "quatro",
-        "costa",
-        "dalla"
+        "quatro"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1054786,6 +1054886,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "AMANDA DALLA COSTA",
         "DENILSON MARTINS",
         "URIEL MATENDAL"
       ],
@@ -1054903,6 +1055004,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "MARIANA RABELLO",
         "DOUGLAS CARDOSO VIDAL",
         "ADÃO CURCINO MARTINS",
         "SOLANGE ALVES",
@@ -1055022,9 +1055124,9 @@
         "econômico",
         "cenário",
         "gondim",
-        "sofia",
         "tbcparceria",
-        "incertezas"
+        "incertezas",
+        "acompanhe"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1055032,6 +1055134,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SOFIA MAGALHÃES",
         "ULO SILVA",
         "XECUTIVO TRIBUTÁRIO",
         "NADA DE EXAGERAR NOS GASTOS"
@@ -1055133,11 +1055236,11 @@
       ],
       "manualSubjects": [],
       "people": [
+        "IZABELA TOSCANO",
         "Culturas do Campo",
         "EXTREMO NORTE EL NINO",
         "Fagner Fabrete",
         "Zinolan silva brito",
-        "Izabela Toscano",
         "TV Marcelo Miranda",
         "pré dip e pós dip",
         "Produtor rural",
@@ -1055184,12 +1055287,12 @@
       ],
       "manualSubjects": [],
       "people": [
+        "GABRIEL CAVALINI",
         "Culturas do Campo",
         "CHÁ DE FLOR DO CAFÉ",
         "KALLEB SILVA",
         "FÁBIO PARTELLI",
         "SÃO MATEUS",
-        "Gabriel Cavalini",
         "TV Veronica Salazar",
         "FAZENDA EXPERIMENTAL QUE RESULTOU EM NOVIDADES"
       ],
@@ -1055230,6 +1055333,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "CAMILA SOARES",
         "Culturas do Campo",
         "kalleb silva",
         "EU SOU NETO DE AGRICULTOR",
@@ -1055240,7 +1055344,6 @@
         "UMA ÁRVORE.. MUITAS ARVORES",
         "ESSA ÁRVORE AQUI",
         "RENAN BAPTISTA",
-        "Camila Soares",
         "TV Marcelo Miranda",
         "RICARDO EUGÊNIO",
         "EU ACREDITO COMO TÉCNICO... AGRICULTURA FAMILIAR",
@@ -1055295,7 +1055398,6 @@
         "saúde",
         "amanda",
         "aposentado",
-        "cristina",
         "conscientizar",
         "importância",
         "informações",
@@ -1055304,7 +1055406,8 @@
         "população",
         "sebastião",
         "campanha",
-        "cuidados"
+        "cuidados",
+        "nacional"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1055312,6 +1055415,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "TAYARA CRISTINA",
         "TAYARA CRISTINA- GOIÂNIA",
         "VALÉRIO BATISTA",
         "FRANCISCO DA SILVA"
@@ -1055901,10 +1056005,10 @@
       ],
       "manualSubjects": [],
       "people": [
+        "KAROL VIEIRA",
         "ADRIANA FLOR",
         "FABIANE VILELA",
-        "GABRIEL RABELO",
-        "KAROL VIEIRA"
+        "GABRIEL RABELO"
       ],
       "manualPeople": [],
       "places": [
@@ -1056000,6 +1056104,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "GREICE SAUER",
         "SANTA TEREZINHA FORAM OS MAIS",
         "FUMO DESTRUÍDAS PELO GRANIZO NA",
         "VIVE AQUI DISSE QUE NUNCA VIU NADA",
@@ -1056014,8 +1056119,7 @@
         "SETE MIL",
         "OS DADOS SÃO SÓ DE QUATRO DIAS",
         "DE REAIS",
-        "JUNTAR FORÇAS E RECOMEÇAR",
-        "GREICE SAUER"
+        "JUNTAR FORÇAS E RECOMEÇAR"
       ],
       "manualPeople": [],
       "places": [
@@ -1056235,7 +1056339,6 @@
         "proprietário",
         "supermercado",
         "eurípedes",
-        "magalhães",
         "analista",
         "empresas",
         "adriana",
@@ -1056243,7 +1056346,8 @@
         "gusmão",
         "júnior",
         "vilmar",
-        "elias"
+        "elias",
+        "josé"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1056251,6 +1056355,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "SOFIA MAGALHÃES",
         "LÚCIA DE OLIVEIRA"
       ],
       "manualPeople": [],
@@ -1056292,8 +1056397,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "FÁTIMA GAVIOLI",
-        "SOFIA MAGALHÃES"
+        "SOFIA MAGALHÃES",
+        "FÁTIMA GAVIOLI"
       ],
       "manualPeople": [],
       "places": [
@@ -1057028,16 +1057133,16 @@
         "jonas",
         "rural",
         "silva",
-        "pitz",
-        "ananda",
-        "back"
+        "pitz"
       ],
       "manualKeywords": [],
       "subjects": [
         "agronegócio"
       ],
       "manualSubjects": [],
-      "people": [],
+      "people": [
+        "ANANDA BACK"
+      ],
       "manualPeople": [],
       "places": [
         "SANTA CATARINA - SC"
@@ -1057421,6 +1057526,123 @@
       "organizations": [
         "Senado Federal",
         "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005645": {
+      "title": "Pecuária — Vacas",
+      "manualTitle": "",
+      "keywords": [
+        "pecuária",
+        "vacas",
+        "gado no pasto",
+        "cabeças de gados",
+        "ração de gado",
+        "bois",
+        "agronegócio",
+        "engenheiro",
+        "agrônomo",
+        "produtor",
+        "batista",
+        "itaporã",
+        "corte",
+        "rural",
+        "ddgs"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ELAINE SILVA",
+        "LUIZ CARLOS CORRÊA AZAMBUJA",
+        "MARCOS DARLAN"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - MS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005646": {
+      "title": "Etanol de Milho — Fachada Inpasa",
+      "manualTitle": "",
+      "keywords": [
+        "etanol de milho",
+        "fachada inpasa",
+        "usina de etanol de milho",
+        "agronegócio",
+        "industrial",
+        "supervisor",
+        "qualidade",
+        "bastista",
+        "dourados",
+        "gerente",
+        "etanol",
+        "milho",
+        "usina",
+        "joão"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "ELAINE SILVA",
+        "NIVALDO GALDINO",
+        "DOUGLAS ROCHA MEIRELES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE - MS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005644": {
+      "title": "Conab Safra Grãos",
+      "manualTitle": "",
+      "keywords": [
+        "conab safra grãos",
+        "agronegócio",
+        "agrocultura",
+        "tv unesp / sp",
+        "são paulo - sp",
+        "conab",
+        "grãos",
+        "safra"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "MAYARA LUNA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV UNESP / SP"
       ],
       "manualOrganizations": [],
       "segments": []

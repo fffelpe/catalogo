@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T21:45:50.896Z",
+  "generatedAt": "2026-11-20T21:51:40.044Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,11 +24,11 @@
     ]
   },
   "resumo": {
-    "materiais": 2117,
+    "materiais": 2120,
     "vts": 751,
-    "noticias": 382,
+    "noticias": 385,
     "coberturas": 987,
-    "coberturaDuplicadosExcluidos": 426
+    "coberturaDuplicadosExcluidos": 428
   },
   "vts": [
     {
@@ -11301,7 +11301,52 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
+      "id": "1452B005644",
+      "ids": [
+        "1452B005644"
+      ],
+      "descricao": "CONAB SAFRA GRÃOS",
+      "reporter": "MAYARA LUNA",
+      "data": "21/11/2026",
+      "local": "SÃO PAULO - SP",
+      "pgm": "390",
+      "afiliada": "TV UNESP / SP"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2026",
+      "id": "1452B005587",
+      "ids": [
+        "1452B005587"
+      ],
+      "descricao": "EL NIÑO + VACAS + ORDENHA + LEITE + FAZENDA",
+      "reporter": "IZABELA TOSCANO",
+      "data": "21/11/2026",
+      "local": "ESPÍRITO SANTO - ES",
+      "pgm": "390",
+      "afiliada": "TVE / ES"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2026",
+      "id": "1452B005539",
+      "ids": [
+        "1452B005539"
+      ],
+      "descricao": "ORQUIDÁRIOS + ORQUIDEAS",
+      "reporter": "ANANDA BACK",
+      "data": "21/11/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "390",
+      "afiliada": "RBA TV / SC"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2026",
       "id": "1452B005525",
       "ids": [
         "1452B005525"
@@ -11316,7 +11361,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005606",
       "ids": [
         "1452B005606"
@@ -11331,7 +11376,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005613",
       "ids": [
         "1452B005613"
@@ -11346,7 +11391,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005590",
       "ids": [
         "1452B005590"
@@ -11361,7 +11406,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005535",
       "ids": [
         "1452B005535"
@@ -11376,7 +11421,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005465",
       "ids": [
         "1452B005465"
@@ -11391,7 +11436,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005496",
       "ids": [
         "1452B005496"
@@ -11406,7 +11451,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005533",
       "ids": [
         "1452B005533"
@@ -11421,7 +11466,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005534",
       "ids": [
         "1452B005534"
@@ -11436,7 +11481,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005542",
       "ids": [
         "1452B005542"
@@ -11451,7 +11496,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005520",
       "ids": [
         "1452B005520"
@@ -11466,7 +11511,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005483",
       "ids": [
         "1452B005483"
@@ -11481,7 +11526,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005469",
       "ids": [
         "1452B005469"
@@ -11496,7 +11541,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005513",
       "ids": [
         "1452B005513"
@@ -11511,7 +11556,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005518",
       "ids": [
         "1452B005518"
@@ -11526,7 +11571,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005517",
       "ids": [
         "1452B005517"
@@ -11541,7 +11586,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004847",
       "ids": [
         "1452B004847"
@@ -11556,7 +11601,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005492",
       "ids": [
         "1452B005492"
@@ -11571,7 +11616,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005475",
       "ids": [
         "1452B005475"
@@ -11586,7 +11631,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005485",
       "ids": [
         "1452B005485"
@@ -11601,7 +11646,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005484",
       "ids": [
         "1452B005484"
@@ -11616,7 +11661,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005418",
       "ids": [
         "1452B005418"
@@ -11631,7 +11676,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004843",
       "ids": [
         "1452B004843"
@@ -11646,7 +11691,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005425",
       "ids": [
         "1452B005425"
@@ -11661,7 +11706,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005432",
       "ids": [
         "1452B005432"
@@ -11676,7 +11721,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005441",
       "ids": [
         "1452B005441"
@@ -11691,7 +11736,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005447",
       "ids": [
         "1452B005447"
@@ -11706,7 +11751,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005435",
       "ids": [
         "1452B005435"
@@ -11721,7 +11766,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005436",
       "ids": [
         "1452B005436"
@@ -11736,7 +11781,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004678",
       "ids": [
         "1452B004678"
@@ -11751,7 +11796,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005393",
       "ids": [
         "1452B005393"
@@ -11766,7 +11811,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004255",
       "ids": [
         "1452B004255"
@@ -11781,7 +11826,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005411",
       "ids": [
         "1452B005411"
@@ -11796,7 +11841,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004316",
       "ids": [
         "1452B004316"
@@ -11811,7 +11856,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004319",
       "ids": [
         "1452B004319"
@@ -11826,7 +11871,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004841",
       "ids": [
         "1452B004841"
@@ -11841,7 +11886,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005365",
       "ids": [
         "1452B005365"
@@ -11856,7 +11901,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005372",
       "ids": [
         "1452B005372"
@@ -11871,7 +11916,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005356",
       "ids": [
         "1452B005356"
@@ -11886,7 +11931,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005364",
       "ids": [
         "1452B005364"
@@ -11901,7 +11946,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005352",
       "ids": [
         "1452B005352"
@@ -11916,7 +11961,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005353",
       "ids": [
         "1452B005353"
@@ -11931,7 +11976,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005370",
       "ids": [
         "1452B005370"
@@ -11946,7 +11991,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005384",
       "ids": [
         "1452B005384"
@@ -11961,7 +12006,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005367",
       "ids": [
         "1452B005367"
@@ -11976,7 +12021,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004906",
       "ids": [
         "1452B004906"
@@ -11991,7 +12036,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005363",
       "ids": [
         "1452B005363"
@@ -12006,7 +12051,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005350",
       "ids": [
         "1452B005350"
@@ -12021,7 +12066,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005362",
       "ids": [
         "1452B005362"
@@ -12036,7 +12081,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005337",
       "ids": [
         "1452B005337"
@@ -12051,7 +12096,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005320",
       "ids": [
         "1452B005320"
@@ -12066,7 +12111,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005310",
       "ids": [
         "1452B005310"
@@ -12081,7 +12126,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005309",
       "ids": [
         "1452B005309"
@@ -12096,7 +12141,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005308",
       "ids": [
         "1452B005308"
@@ -12111,7 +12156,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005316",
       "ids": [
         "1452B005316"
@@ -12126,7 +12171,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005303",
       "ids": [
         "1452B005303"
@@ -12141,7 +12186,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005295",
       "ids": [
         "1452B005295"
@@ -12156,7 +12201,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005158",
       "ids": [
         "1452B005158"
@@ -12171,7 +12216,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005296",
       "ids": [
         "1452B005296"
@@ -12186,7 +12231,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005060",
       "ids": [
         "1452B005060"
@@ -12201,7 +12246,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005287",
       "ids": [
         "1452B005287"
@@ -12216,7 +12261,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005186",
       "ids": [
         "1452B005186"
@@ -12231,7 +12276,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005213",
       "ids": [
         "1452B005213"
@@ -12246,7 +12291,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005153",
       "ids": [
         "1452B005153"
@@ -12261,7 +12306,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005249",
       "ids": [
         "1452B005249"
@@ -12276,7 +12321,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005160",
       "ids": [
         "1452B005160"
@@ -12291,7 +12336,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1009E105308",
       "ids": [
         "1009E105308"
@@ -12306,7 +12351,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005231",
       "ids": [
         "1452B005231"
@@ -12321,7 +12366,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005232",
       "ids": [
         "1452B005232"
@@ -12336,7 +12381,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005176",
       "ids": [
         "1452B005176"
@@ -12351,7 +12396,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005216",
       "ids": [
         "1452B005216"
@@ -12366,7 +12411,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005214",
       "ids": [
         "1452B005214"
@@ -12381,7 +12426,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005165",
       "ids": [
         "1452B005165"
@@ -12396,7 +12441,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005142",
       "ids": [
         "1452B005142"
@@ -12411,7 +12456,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005143",
       "ids": [
         "1452B005143"
@@ -12426,7 +12471,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005109",
       "ids": [
         "1452B005109"
@@ -12441,7 +12486,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005141",
       "ids": [
         "1452B005141"
@@ -12456,7 +12501,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005080",
       "ids": [
         "1452B005080"
@@ -12471,7 +12516,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005077",
       "ids": [
         "1452B005077"
@@ -12486,7 +12531,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005128",
       "ids": [
         "1452B005128"
@@ -12501,7 +12546,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005134",
       "ids": [
         "1452B005134"
@@ -12516,7 +12561,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005129",
       "ids": [
         "1452B005129"
@@ -12531,7 +12576,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005122",
       "ids": [
         "1452B005122"
@@ -12546,7 +12591,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005078",
       "ids": [
         "1452B005078"
@@ -12561,7 +12606,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005095",
       "ids": [
         "1452B005095"
@@ -12576,7 +12621,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005074",
       "ids": [
         "1452B005074"
@@ -12591,7 +12636,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005021",
       "ids": [
         "1452B005021"
@@ -12606,7 +12651,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005075",
       "ids": [
         "1452B005075"
@@ -12621,7 +12666,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005067",
       "ids": [
         "1452B005067"
@@ -12636,7 +12681,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005066",
       "ids": [
         "1452B005066"
@@ -12651,7 +12696,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005049",
       "ids": [
         "1452B005049"
@@ -12666,7 +12711,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004974",
       "ids": [
         "1452B004974"
@@ -12681,7 +12726,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005048",
       "ids": [
         "1452B005048"
@@ -12696,7 +12741,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005042",
       "ids": [
         "1452B005042"
@@ -12711,7 +12756,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005020",
       "ids": [
         "1452B005020"
@@ -12726,7 +12771,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004973",
       "ids": [
         "1452B004973"
@@ -12741,7 +12786,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005009",
       "ids": [
         "1452B005009"
@@ -12756,7 +12801,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004999",
       "ids": [
         "1452B004999"
@@ -12771,7 +12816,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005008",
       "ids": [
         "1452B005008"
@@ -12786,7 +12831,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005003",
       "ids": [
         "1452B005003"
@@ -12801,7 +12846,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B004998",
       "ids": [
         "1452B004998"
@@ -12816,7 +12861,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2026",
       "id": "1452B005002",
       "ids": [
         "1452B005002"
@@ -12831,7 +12876,22 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
+      "id": "1452B004491",
+      "ids": [
+        "1452B004491"
+      ],
+      "descricao": "APP RURAL",
+      "reporter": "GREICE SAUER",
+      "data": "21/09/2025",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "329",
+      "afiliada": ""
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2025",
       "id": "1452B004601",
       "ids": [
         "1452B004601"
@@ -12846,7 +12906,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004603",
       "ids": [
         "1452B004603"
@@ -12861,7 +12921,52 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
+      "id": "1452B004529",
+      "ids": [
+        "1452B004529"
+      ],
+      "descricao": "CONCURSOS MELHORES CAFÉ",
+      "reporter": "JOÃO RAFAEL",
+      "data": "21/09/2025",
+      "local": "MINAS GERAIS - MG",
+      "pgm": "329",
+      "afiliada": ""
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2025",
+      "id": "1452B004534",
+      "ids": [
+        "1452B004534"
+      ],
+      "descricao": "GENÉTICA ANIMAL",
+      "reporter": "JAQUE MOURA",
+      "data": "21/09/2025",
+      "local": "GOIÁS - GO",
+      "pgm": "329",
+      "afiliada": ""
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2025",
+      "id": "1452B004574",
+      "ids": [
+        "1452B004574"
+      ],
+      "descricao": "ORQUIDEAS",
+      "reporter": "LU PEDRUSSI",
+      "data": "21/09/2025",
+      "local": "MATO GROSSO DO SUL - MS",
+      "pgm": "329",
+      "afiliada": ""
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2025",
       "id": "1452B004543",
       "ids": [
         "1452B004543"
@@ -12876,52 +12981,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B004534",
-      "ids": [
-        "1452B004534"
-      ],
-      "descricao": "GENÉTICA ANIMAL",
-      "reporter": "JAQUE MOURA",
-      "data": "14/09/2025",
-      "local": "GOIÁS - GO",
-      "pgm": "328",
-      "afiliada": ""
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B004529",
-      "ids": [
-        "1452B004529"
-      ],
-      "descricao": "MELHORES CAFÉ 2025",
-      "reporter": "JOÃO RAFAEL",
-      "data": "14/09/2025",
-      "local": "MINAS GERAIS - MG",
-      "pgm": "328",
-      "afiliada": ""
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B004574",
-      "ids": [
-        "1452B004574"
-      ],
-      "descricao": "ORQUIDEAS NOBILIOR",
-      "reporter": "LU PEDRUSSI",
-      "data": "14/09/2025",
-      "local": "MATO GROSSO DO SUL - MS",
-      "pgm": "328",
-      "afiliada": ""
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004530",
       "ids": [
         "1452B004530"
@@ -12936,7 +12996,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004523",
       "ids": [
         "1452B004523"
@@ -12951,7 +13011,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004521",
       "ids": [
         "1452B004521"
@@ -12966,7 +13026,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004515",
       "ids": [
         "1452B004515"
@@ -12981,7 +13041,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004531",
       "ids": [
         "1452B004531"
@@ -12996,7 +13056,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004524",
       "ids": [
         "1452B004524"
@@ -13011,22 +13071,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B004491",
-      "ids": [
-        "1452B004491"
-      ],
-      "descricao": "APP TROMBUDO",
-      "reporter": "GREICE SAUER",
-      "data": "07/09/2025",
-      "local": "SANTA CATARINA - SC",
-      "pgm": "327",
-      "afiliada": ""
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004494",
       "ids": [
         "1452B004494"
@@ -13041,7 +13086,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004505",
       "ids": [
         "1452B004505"
@@ -13056,7 +13101,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004502",
       "ids": [
         "1452B004502"
@@ -13071,7 +13116,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004487",
       "ids": [
         "1452B004487"
@@ -13086,7 +13131,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004469",
       "ids": [
         "1452B004469"
@@ -13101,7 +13146,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004282",
       "ids": [
         "1452B004282"
@@ -13116,7 +13161,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004481",
       "ids": [
         "1452B004481"
@@ -13131,7 +13176,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004472",
       "ids": [
         "1452B004472"
@@ -13146,7 +13191,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004482",
       "ids": [
         "1452B004482"
@@ -13161,7 +13206,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004382",
       "ids": [
         "1452B004382"
@@ -13176,7 +13221,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004441",
       "ids": [
         "1452B004441"
@@ -13191,7 +13236,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004256",
       "ids": [
         "1452B004256"
@@ -13206,7 +13251,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004463",
       "ids": [
         "1452B004463"
@@ -13221,7 +13266,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004374",
       "ids": [
         "1452B004374"
@@ -13236,7 +13281,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004376",
       "ids": [
         "1452B004376"
@@ -13251,7 +13296,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004403",
       "ids": [
         "1452B004403"
@@ -13266,7 +13311,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004375",
       "ids": [
         "1452B004375"
@@ -13281,7 +13326,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004359",
       "ids": [
         "1452B004359"
@@ -13296,7 +13341,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004294",
       "ids": [
         "1452B004294"
@@ -13311,7 +13356,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B003789",
       "ids": [
         "1452B003789"
@@ -13326,7 +13371,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004360",
       "ids": [
         "1452B004360"
@@ -13341,7 +13386,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004369",
       "ids": [
         "1452B004369"
@@ -13356,7 +13401,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004285",
       "ids": [
         "1452B004285"
@@ -13371,7 +13416,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004337",
       "ids": [
         "1452B004337"
@@ -13386,7 +13431,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004346",
       "ids": [
         "1452B004346"
@@ -13401,7 +13446,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004351",
       "ids": [
         "1452B004351"
@@ -13416,7 +13461,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B004347",
       "ids": [
         "1452B004347"
@@ -13431,7 +13476,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1009B059942",
       "ids": [
         "1009B059942"
@@ -13446,7 +13491,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B003785",
       "ids": [
         "1452B003785"
@@ -13461,7 +13506,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2025",
       "id": "1452B003795",
       "ids": [
         "1452B003795"
@@ -13476,7 +13521,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003780",
       "ids": [
         "1452B003780"
@@ -13491,7 +13536,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003751",
       "ids": [
         "1452B003751"
@@ -13506,7 +13551,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003750",
       "ids": [
         "1452B003750"
@@ -13521,7 +13566,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003724",
       "ids": [
         "1452B003724"
@@ -13536,7 +13581,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003723",
       "ids": [
         "1452B003723"
@@ -13551,7 +13596,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003725",
       "ids": [
         "1452B003725"
@@ -13566,7 +13611,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003745",
       "ids": [
         "1452B003745"
@@ -13581,7 +13626,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003753",
       "ids": [
         "1452B003753"
@@ -13596,7 +13641,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003693",
       "ids": [
         "1452B003693"
@@ -13611,7 +13656,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003703",
       "ids": [
         "1452B003703"
@@ -13626,7 +13671,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003706",
       "ids": [
         "1452B003706"
@@ -13641,7 +13686,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003259",
       "ids": [
         "1452B003259"
@@ -13656,7 +13701,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003628",
       "ids": [
         "1452B003628"
@@ -13671,7 +13716,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003630",
       "ids": [
         "1452B003630"
@@ -13686,7 +13731,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003633",
       "ids": [
         "1452B003633"
@@ -13701,7 +13746,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003631",
       "ids": [
         "1452B003631"
@@ -13716,7 +13761,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003632",
       "ids": [
         "1452B003632"
@@ -13731,7 +13776,22 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
+      "id": "1452B003348",
+      "ids": [
+        "1452B003348"
+      ],
+      "descricao": "GERAIS GADO ANGUS",
+      "reporter": "GREICE SAUER",
+      "data": "03/11/2024",
+      "local": "RIO DO SUL / SC",
+      "pgm": "284",
+      "afiliada": ""
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2024",
       "id": "1452B003586",
       "ids": [
         "1452B003586"
@@ -13746,7 +13806,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003571",
       "ids": [
         "1452B003571"
@@ -13761,7 +13821,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002877",
       "ids": [
         "1452B002877"
@@ -13776,22 +13836,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B003348",
-      "ids": [
-        "1452B003348"
-      ],
-      "descricao": "BOI ANGUS",
-      "reporter": "GREICE SAUER",
-      "data": "20/10/2024",
-      "local": "RIO DO SUL - SC",
-      "pgm": "281",
-      "afiliada": ""
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003532",
       "ids": [
         "1452B003532"
@@ -13806,7 +13851,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003466",
       "ids": [
         "1452B003466"
@@ -13821,7 +13866,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003469",
       "ids": [
         "1452B003469"
@@ -13836,7 +13881,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003409",
       "ids": [
         "1452B003409"
@@ -13851,7 +13896,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003399",
       "ids": [
         "1452B003399"
@@ -13866,7 +13911,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003416",
       "ids": [
         "1452B003416"
@@ -13881,7 +13926,22 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
+      "id": "1452B003410",
+      "ids": [
+        "1452B003410"
+      ],
+      "descricao": "PLANTAÇÃO DE CAFÉ",
+      "reporter": "FERNANDA BONILHA",
+      "data": "22/09/2024",
+      "local": "CACOAL - RO",
+      "pgm": "277",
+      "afiliada": ""
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2024",
       "id": "1452B003443",
       "ids": [
         "1452B003443"
@@ -13896,7 +13956,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003404",
       "ids": [
         "1452B003404"
@@ -13911,22 +13971,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B003410",
-      "ids": [
-        "1452B003410"
-      ],
-      "descricao": "LAVOURA DE CAFÉ",
-      "reporter": "FERNANDA BONILHA",
-      "data": "13/09/2024",
-      "local": "CACOAL - RO",
-      "pgm": "276",
-      "afiliada": ""
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003398",
       "ids": [
         "1452B003398"
@@ -13941,7 +13986,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003349",
       "ids": [
         "1452B003349"
@@ -13956,7 +14001,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003400",
       "ids": [
         "1452B003400"
@@ -13971,7 +14016,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003401",
       "ids": [
         "1452B003401"
@@ -13986,7 +14031,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003247",
       "ids": [
         "1452B003247"
@@ -14001,7 +14046,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003258",
       "ids": [
         "1452B003258"
@@ -14016,7 +14061,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003264",
       "ids": [
         "1452B003264"
@@ -14031,7 +14076,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003107",
       "ids": [
         "1452B003107"
@@ -14046,7 +14091,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003189",
       "ids": [
         "1452B003189"
@@ -14061,7 +14106,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003223",
       "ids": [
         "1452B003223"
@@ -14076,7 +14121,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003230",
       "ids": [
         "1452B003230"
@@ -14091,7 +14136,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003154",
       "ids": [
         "1452B003154"
@@ -14106,7 +14151,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003158",
       "ids": [
         "1452B003158"
@@ -14121,7 +14166,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003152",
       "ids": [
         "1452B003152"
@@ -14136,7 +14181,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003151",
       "ids": [
         "1452B003151"
@@ -14151,7 +14196,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003206",
       "ids": [
         "1452B003206"
@@ -14166,7 +14211,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003127",
       "ids": [
         "1452B003127"
@@ -14181,7 +14226,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003117",
       "ids": [
         "1452B003117"
@@ -14196,7 +14241,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003120",
       "ids": [
         "1452B003120"
@@ -14211,7 +14256,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1009E090025",
       "ids": [
         "1009E090025"
@@ -14226,7 +14271,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1009E090047",
       "ids": [
         "1009E090047"
@@ -14241,7 +14286,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003106",
       "ids": [
         "1452B003106"
@@ -14256,7 +14301,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003088",
       "ids": [
         "1452B003088"
@@ -14271,7 +14316,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003053",
       "ids": [
         "1452B003053"
@@ -14286,7 +14331,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003049",
       "ids": [
         "1452B003049"
@@ -14301,7 +14346,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003052",
       "ids": [
         "1452B003052"
@@ -14316,7 +14361,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003054",
       "ids": [
         "1452B003054"
@@ -14331,7 +14376,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003048",
       "ids": [
         "1452B003048"
@@ -14346,7 +14391,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002967",
       "ids": [
         "1452B002967"
@@ -14361,7 +14406,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003013",
       "ids": [
         "1452B003013"
@@ -14376,7 +14421,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003015",
       "ids": [
         "1452B003015"
@@ -14391,7 +14436,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002971",
       "ids": [
         "1452B002971"
@@ -14406,7 +14451,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "2822E022242",
       "ids": [
         "2822E022242"
@@ -14421,7 +14466,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003014",
       "ids": [
         "1452B003014"
@@ -14436,7 +14481,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003026",
       "ids": [
         "1452B003026"
@@ -14451,7 +14496,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002989",
       "ids": [
         "1452B002989"
@@ -14466,7 +14511,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003017",
       "ids": [
         "1452B003017"
@@ -14481,7 +14526,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003000",
       "ids": [
         "1452B003000"
@@ -14496,7 +14541,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002997",
       "ids": [
         "1452B002997"
@@ -14511,7 +14556,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002995",
       "ids": [
         "1452B002995"
@@ -14526,7 +14571,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002994",
       "ids": [
         "1452B002994"
@@ -14541,7 +14586,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002999",
       "ids": [
         "1452B002999"
@@ -14556,7 +14601,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002956",
       "ids": [
         "1452B002956"
@@ -14571,7 +14616,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002966",
       "ids": [
         "1452B002966"
@@ -14586,7 +14631,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002900",
       "ids": [
         "1452B002900"
@@ -14601,7 +14646,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002897",
       "ids": [
         "1452B002897"
@@ -14616,7 +14661,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002955",
       "ids": [
         "1452B002955"
@@ -14631,7 +14676,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002878",
       "ids": [
         "1452B002878"
@@ -14646,7 +14691,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002797",
       "ids": [
         "1452B002797"
@@ -14661,7 +14706,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002823",
       "ids": [
         "1452B002823"
@@ -14676,7 +14721,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002810",
       "ids": [
         "1452B002810"
@@ -14691,7 +14736,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002814",
       "ids": [
         "1452B002814"
@@ -14706,7 +14751,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002825",
       "ids": [
         "1452B002825"
@@ -14721,7 +14766,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002795",
       "ids": [
         "1452B002795"
@@ -14736,7 +14781,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B00276",
       "ids": [
         "1452B00276"
@@ -14751,7 +14796,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002764",
       "ids": [
         "1452B002764"
@@ -14766,7 +14811,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002787",
       "ids": [
         "1452B002787"
@@ -14781,7 +14826,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002770",
       "ids": [
         "1452B002770"
@@ -14796,7 +14841,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002747",
       "ids": [
         "1452B002747"
@@ -14811,7 +14856,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002743",
       "ids": [
         "1452B002743"
@@ -14826,7 +14871,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002746",
       "ids": [
         "1452B002746"
@@ -14841,7 +14886,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002734",
       "ids": [
         "1452B002734"
@@ -14856,7 +14901,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002732",
       "ids": [
         "1452B002732"
@@ -14871,7 +14916,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002669",
       "ids": [
         "1452B002669"
@@ -14886,7 +14931,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002724",
       "ids": [
         "1452B002724"
@@ -14901,7 +14946,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002661",
       "ids": [
         "1452B002661"
@@ -14916,7 +14961,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002648",
       "ids": [
         "1452B002648"
@@ -14931,22 +14976,22 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002623",
       "ids": [
         "1452B002623"
       ],
-      "descricao": "PLANTAÇÃO DE PEQUI",
+      "descricao": "PEQUI SEM ESPINHOS",
       "reporter": "RAFAEL MESQUITA",
-      "data": "18/02/2024",
+      "data": "25/02/2024",
       "local": "GOIÂNIA - GO",
-      "pgm": "246",
+      "pgm": "247",
       "afiliada": ""
     },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003830",
       "ids": [
         "1452B003830"
@@ -14961,7 +15006,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003839",
       "ids": [
         "1452B003839"
@@ -14976,7 +15021,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003836",
       "ids": [
         "1452B003836"
@@ -14991,7 +15036,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003833",
       "ids": [
         "1452B003833"
@@ -15006,7 +15051,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003822",
       "ids": [
         "1452B003822"
@@ -15021,7 +15066,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B003823",
       "ids": [
         "1452B003823"
@@ -15036,7 +15081,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002593",
       "ids": [
         "1452B002593"
@@ -15051,7 +15096,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002595",
       "ids": [
         "1452B002595"
@@ -15066,7 +15111,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002603",
       "ids": [
         "1452B002603"
@@ -15081,7 +15126,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002578",
       "ids": [
         "1452B002578"
@@ -15096,7 +15141,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B002587",
       "ids": [
         "1452B002587"
@@ -15111,7 +15156,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002524",
       "ids": [
         "1452B002524"
@@ -15126,7 +15171,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002539",
       "ids": [
         "1452B002539"
@@ -15141,7 +15186,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002519",
       "ids": [
         "1452B002519"
@@ -15156,7 +15201,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002554",
       "ids": [
         "1452B002554"
@@ -15171,7 +15216,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002522",
       "ids": [
         "1452B002522"
@@ -15186,7 +15231,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002523",
       "ids": [
         "1452B002523"
@@ -15201,7 +15246,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002490",
       "ids": [
         "1452B002490"
@@ -15216,7 +15261,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002481",
       "ids": [
         "1452B002481"
@@ -15231,7 +15276,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002468",
       "ids": [
         "1452B002468"
@@ -15246,7 +15291,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002365",
       "ids": [
         "1452B002365"
@@ -15261,7 +15306,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002422",
       "ids": [
         "1452B002422"
@@ -15276,7 +15321,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002424",
       "ids": [
         "1452B002424"
@@ -15291,7 +15336,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002428",
       "ids": [
         "1452B002428"
@@ -15306,7 +15351,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002404",
       "ids": [
         "1452B002404"
@@ -15321,7 +15366,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002406",
       "ids": [
         "1452B002406"
@@ -15336,7 +15381,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002413",
       "ids": [
         "1452B002413"
@@ -15351,7 +15396,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002371",
       "ids": [
         "1452B002371"
@@ -15366,7 +15411,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002361",
       "ids": [
         "1452B002361"
@@ -15381,7 +15426,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002354",
       "ids": [
         "1452B002354"
@@ -15396,7 +15441,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002348",
       "ids": [
         "1452B002348"
@@ -15411,7 +15456,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002340",
       "ids": [
         "1452B002340"
@@ -15426,7 +15471,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002345",
       "ids": [
         "1452B002345"
@@ -15441,7 +15486,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002338",
       "ids": [
         "1452B002338"
@@ -15456,7 +15501,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002339",
       "ids": [
         "1452B002339"
@@ -15471,7 +15516,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002337",
       "ids": [
         "1452B002337"
@@ -15486,7 +15531,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002300",
       "ids": [
         "1452B002300"
@@ -15501,7 +15546,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002181",
       "ids": [
         "1452B002181"
@@ -15516,7 +15561,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002272",
       "ids": [
         "1452B002272"
@@ -15531,7 +15576,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002288",
       "ids": [
         "1452B002288"
@@ -15546,7 +15591,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002290",
       "ids": [
         "1452B002290"
@@ -15561,7 +15606,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002284",
       "ids": [
         "1452B002284"
@@ -15576,7 +15621,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002168",
       "ids": [
         "1452B002168"
@@ -15591,7 +15636,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002274",
       "ids": [
         "1452B002274"
@@ -15606,7 +15651,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002253",
       "ids": [
         "1452B002253"
@@ -15621,7 +15666,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002273",
       "ids": [
         "1452B002273"
@@ -15636,7 +15681,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002247",
       "ids": [
         "1452B002247"
@@ -15651,7 +15696,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002131",
       "ids": [
         "1452B002131"
@@ -15666,7 +15711,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002246",
       "ids": [
         "1452B002246"
@@ -15681,7 +15726,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002244",
       "ids": [
         "1452B002244"
@@ -15696,7 +15741,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002245",
       "ids": [
         "1452B002245"
@@ -15711,7 +15756,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002067",
       "ids": [
         "1452B002067"
@@ -15726,7 +15771,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002248",
       "ids": [
         "1452B002248"
@@ -15741,7 +15786,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002203",
       "ids": [
         "1452B002203"
@@ -15756,7 +15801,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002194",
       "ids": [
         "1452B002194"
@@ -15771,7 +15816,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002193",
       "ids": [
         "1452B002193"
@@ -15786,7 +15831,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002192",
       "ids": [
         "1452B002192"
@@ -15801,7 +15846,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002160",
       "ids": [
         "1452B002160"
@@ -15816,7 +15861,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002134",
       "ids": [
         "1452B002134"
@@ -15831,7 +15876,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002140",
       "ids": [
         "1452B002140"
@@ -15846,7 +15891,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002099",
       "ids": [
         "1452B002099"
@@ -15861,7 +15906,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002097",
       "ids": [
         "1452B002097"
@@ -15876,7 +15921,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002120",
       "ids": [
         "1452B002120"
@@ -15891,7 +15936,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002119",
       "ids": [
         "1452B002119"
@@ -15906,7 +15951,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002066",
       "ids": [
         "1452B002066"
@@ -15921,7 +15966,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002141",
       "ids": [
         "1452B002141"
@@ -15936,7 +15981,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002122",
       "ids": [
         "1452B002122"
@@ -15951,7 +15996,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002058",
       "ids": [
         "1452B002058"
@@ -15966,7 +16011,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002061",
       "ids": [
         "1452B002061"
@@ -15981,7 +16026,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002063",
       "ids": [
         "1452B002063"
@@ -15996,7 +16041,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002205",
       "ids": [
         "1452B002205"
@@ -16011,7 +16056,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001911",
       "ids": [
         "1452B001911"
@@ -16026,7 +16071,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001913",
       "ids": [
         "1452B001913"
@@ -16041,7 +16086,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001903",
       "ids": [
         "1452B001903"
@@ -16056,7 +16101,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001898",
       "ids": [
         "1452B001898"
@@ -16071,7 +16116,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001904",
       "ids": [
         "1452B001904"
@@ -16086,7 +16131,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001872",
       "ids": [
         "1452B001872"
@@ -16101,7 +16146,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001897",
       "ids": [
         "1452B001897"
@@ -16116,7 +16161,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001893",
       "ids": [
         "1452B001893"
@@ -16131,7 +16176,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001867",
       "ids": [
         "1452B001867"
@@ -16146,7 +16191,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001827",
       "ids": [
         "1452B001827"
@@ -16161,7 +16206,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001830",
       "ids": [
         "1452B001830"
@@ -16176,7 +16221,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001826",
       "ids": [
         "1452B001826"
@@ -16191,7 +16236,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001616",
       "ids": [
         "1452B001616"
@@ -16206,7 +16251,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001822",
       "ids": [
         "1452B001822"
@@ -16221,7 +16266,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001825",
       "ids": [
         "1452B001825"
@@ -16236,7 +16281,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001824",
       "ids": [
         "1452B001824"
@@ -16251,7 +16296,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001856",
       "ids": [
         "1452B001856"
@@ -16266,7 +16311,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001810",
       "ids": [
         "1452B001810"
@@ -16281,7 +16326,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001795",
       "ids": [
         "1452B001795"
@@ -16296,7 +16341,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001809",
       "ids": [
         "1452B001809"
@@ -16311,7 +16356,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001773",
       "ids": [
         "1452B001773"
@@ -16326,7 +16371,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001786",
       "ids": [
         "1452B001786"
@@ -16341,7 +16386,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001770",
       "ids": [
         "1452B001770"
@@ -16356,7 +16401,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001787",
       "ids": [
         "1452B001787"
@@ -16371,7 +16416,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001790",
       "ids": [
         "1452B001790"
@@ -16386,7 +16431,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001788",
       "ids": [
         "1452B001788"
@@ -16401,7 +16446,22 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
+      "id": "1452B001765",
+      "ids": [
+        "1452B001765"
+      ],
+      "descricao": "PRODUÇÃO DE LEITE",
+      "reporter": "CAROL SOARES",
+      "data": "28/05/2023",
+      "local": "PORTO ALEGRE - RS",
+      "pgm": "208",
+      "afiliada": ""
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2023",
       "id": "1452B001777",
       "ids": [
         "1452B001777"
@@ -16416,7 +16476,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001746",
       "ids": [
         "1452B001746"
@@ -16431,7 +16491,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001755",
       "ids": [
         "1452B001755"
@@ -16446,7 +16506,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001757",
       "ids": [
         "1452B001757"
@@ -16461,7 +16521,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001745",
       "ids": [
         "1452B001745"
@@ -16476,7 +16536,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001736",
       "ids": [
         "1452B001736"
@@ -16491,7 +16551,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001717",
       "ids": [
         "1452B001717"
@@ -16506,7 +16566,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001735",
       "ids": [
         "1452B001735"
@@ -16521,7 +16581,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001733",
       "ids": [
         "1452B001733"
@@ -16536,7 +16596,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001719",
       "ids": [
         "1452B001719"
@@ -16551,7 +16611,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001737",
       "ids": [
         "1452B001737"
@@ -16566,7 +16626,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001732",
       "ids": [
         "1452B001732"
@@ -16581,7 +16641,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001718",
       "ids": [
         "1452B001718"
@@ -16596,7 +16656,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001734",
       "ids": [
         "1452B001734"
@@ -16611,7 +16671,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001611",
       "ids": [
         "1452B001611"
@@ -16626,7 +16686,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001675",
       "ids": [
         "1452B001675"
@@ -16641,22 +16701,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
-      "id": "1452B001765",
-      "ids": [
-        "1452B001765"
-      ],
-      "descricao": "PRODUÇÃO DE LEITE",
-      "reporter": "CAROL SOARES",
-      "data": "08/05/2023",
-      "local": "ESTEIO / RS",
-      "pgm": "208",
-      "afiliada": ""
-    },
-    {
-      "tipo": "noticias",
-      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001750",
       "ids": [
         "1452B001750"
@@ -16671,7 +16716,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001620",
       "ids": [
         "1452B001620"
@@ -16686,7 +16731,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001752",
       "ids": [
         "1452B001752"
@@ -16701,7 +16746,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001751",
       "ids": [
         "1452B001751"
@@ -16716,7 +16761,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001621",
       "ids": [
         "1452B001621"
@@ -16731,7 +16776,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001608",
       "ids": [
         "1452B001608"
@@ -16746,7 +16791,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001711",
       "ids": [
         "1452B001711"
@@ -16761,7 +16806,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001606",
       "ids": [
         "1452B001606"
@@ -16776,7 +16821,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001710",
       "ids": [
         "1452B001710"
@@ -16791,7 +16836,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001607",
       "ids": [
         "1452B001607"
@@ -16806,7 +16851,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001707",
       "ids": [
         "1452B001707"
@@ -16821,7 +16866,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001723",
       "ids": [
         "1452B001723"
@@ -16836,7 +16881,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001725",
       "ids": [
         "1452B001725"
@@ -16851,7 +16896,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001721",
       "ids": [
         "1452B001721"
@@ -16866,7 +16911,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001720",
       "ids": [
         "1452B001720"
@@ -16881,7 +16926,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001727",
       "ids": [
         "1452B001727"
@@ -16896,7 +16941,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001722",
       "ids": [
         "1452B001722"
@@ -16911,7 +16956,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001730",
       "ids": [
         "1452B001730"
@@ -16926,7 +16971,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001687",
       "ids": [
         "1452B001687"
@@ -16941,7 +16986,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001667",
       "ids": [
         "1452B001667"
@@ -16956,7 +17001,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001661",
       "ids": [
         "1452B001661"
@@ -16971,7 +17016,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001666",
       "ids": [
         "1452B001666"
@@ -16986,7 +17031,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B001664",
       "ids": [
         "1452B001664"
@@ -17001,7 +17046,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2023",
       "id": "1452B002009",
       "ids": [
         "1452B002009"
@@ -17016,7 +17061,7 @@
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
-      "aba": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE ",
+      "aba": "2024",
       "id": "1452B000637",
       "ids": [
         "1452B000637"
@@ -17033,13 +17078,43 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
+      "id": "1452B005646",
+      "ids": [
+        "1452B005646"
+      ],
+      "descricao": "ETANOL DE MILHO + FACHADA INPASA + TAKE GRÃOS DE MILHO + USINA DE ETANOL DE MILHO",
+      "reporter": "ELAINE SILVA",
+      "data": "18/11/2026",
+      "local": "MATO GROSSO DO SUL - MS",
+      "pgm": "",
+      "afiliada": "TVE - MS"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "2026",
+      "id": "1452B005645",
+      "ids": [
+        "1452B005645"
+      ],
+      "descricao": "PECUÁRIA + VACAS + GADO NO PASTO + CABEÇAS DE GADOS + RAÇÃO DE GADO + BOIS",
+      "reporter": "ELAINE SILVA",
+      "data": "18/11/2026",
+      "local": "MATO GROSSO DO SUL - MS",
+      "pgm": "",
+      "afiliada": "TVE - MS"
+    },
+    {
+      "tipo": "cobertura",
+      "origem": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005634",
       "ids": [
         "1452B005634"
       ],
       "descricao": "PLANTAÇÃO DE PÊSSEGOS + COLHEITA DE PÊSSEGOS + CLOSE PÊSSEGO",
-      "reporter": "",
+      "reporter": "ANANDA BACK",
       "data": "17/11/2026",
       "local": "SANTA CATARINA - SC",
       "pgm": "",
@@ -17048,7 +17123,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005633",
       "ids": [
         "1452B005633"
@@ -17063,13 +17138,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005589",
       "ids": [
         "1452B005589"
       ],
       "descricao": "AGROFLORESTAS",
-      "reporter": "",
+      "reporter": "CAMILA SOARES",
       "data": "04/11/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
@@ -17078,13 +17153,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005588",
       "ids": [
         "1452B005588"
       ],
       "descricao": "FLORADA DO CAFÉ + PLANTAÇÃO DE CAFÉ + LAVOURA DE CAFÉ + CAFEZAL",
-      "reporter": "",
+      "reporter": "GABRIEL CAVALINI",
       "data": "04/11/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
@@ -17093,22 +17168,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005587",
-      "ids": [
-        "1452B005587"
-      ],
-      "descricao": "VACAS + EXTRAÇÃO DE LEITE + ORDENHA DE VACA",
-      "reporter": "",
-      "data": "04/11/2026",
-      "local": "ESPÍRITO SANTO - ES",
-      "pgm": "",
-      "afiliada": "TVE - ES"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005563",
       "ids": [
         "1452B005563"
@@ -17123,7 +17183,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005549",
       "ids": [
         "1452B005549"
@@ -17138,13 +17198,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005550",
       "ids": [
         "1452B005550"
       ],
       "descricao": "AVEIA",
-      "reporter": "",
+      "reporter": "SAMUEL ROCHA",
       "data": "27/10/2026",
       "local": "PARANÁ - PR",
       "pgm": "",
@@ -17153,13 +17213,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005551",
       "ids": [
         "1452B005551"
       ],
       "descricao": "CÃES PASTOREIO",
-      "reporter": "",
+      "reporter": "SAMUEL ROCHA",
       "data": "27/10/2026",
       "local": "PARANÁ - PR",
       "pgm": "",
@@ -17168,7 +17228,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "2457B018496",
       "ids": [
         "2457B018496"
@@ -17183,13 +17243,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005548",
       "ids": [
         "1452B005548"
       ],
       "descricao": "QUEIJOS FINOS",
-      "reporter": "",
+      "reporter": "SAMUEL ROCHA",
       "data": "27/10/2026",
       "local": "PARANÁ - PR",
       "pgm": "",
@@ -17198,13 +17258,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005543",
       "ids": [
         "1452B005543"
       ],
       "descricao": "FESTA DO PEQUI",
-      "reporter": "",
+      "reporter": "RAFAEL MESQUITA",
       "data": "23/10/2026",
       "local": "GOIÁS - GO",
       "pgm": "",
@@ -17213,13 +17273,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005545",
       "ids": [
         "1452B005545"
       ],
       "descricao": "HORTA TERAPEUTICA",
-      "reporter": "",
+      "reporter": "SARAH QUEIROZ",
       "data": "23/10/2026",
       "local": "GOIÁS - GO",
       "pgm": "",
@@ -17228,7 +17288,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005536",
       "ids": [
         "1452B005536"
@@ -17243,7 +17303,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005540",
       "ids": [
         "1452B005540"
@@ -17258,7 +17318,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005537",
       "ids": [
         "1452B005537"
@@ -17273,7 +17333,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005538",
       "ids": [
         "1452B005538"
@@ -17288,28 +17348,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
-      "id": "1452B005539",
-      "ids": [
-        "1452B005539"
-      ],
-      "descricao": "ORQUIDÁRIO POUSO REDONDO",
-      "reporter": "",
-      "data": "21/10/2026",
-      "local": "SANTA CATARINA - SC",
-      "pgm": "",
-      "afiliada": "RBA TV - SC"
-    },
-    {
-      "tipo": "cobertura",
-      "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005544",
       "ids": [
         "1452B005544"
       ],
       "descricao": "RANKING PRODUÇÃO DE TOMATE",
-      "reporter": "",
+      "reporter": "TAYARA CRISTINA",
       "data": "21/10/2026",
       "local": "GOIÁS - GO",
       "pgm": "",
@@ -17318,7 +17363,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005528",
       "ids": [
         "1452B005528"
@@ -17333,13 +17378,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005529",
       "ids": [
         "1452B005529"
       ],
       "descricao": "CAPIM VETIVER",
-      "reporter": "",
+      "reporter": "ANY COMETTI",
       "data": "20/10/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
@@ -17348,13 +17393,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005523",
       "ids": [
         "1452B005523"
       ],
       "descricao": "CAVALO TERAPEUTA",
-      "reporter": "",
+      "reporter": "VERÔNICA SALAZAR",
       "data": "20/10/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
@@ -17363,13 +17408,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005524",
       "ids": [
         "1452B005524"
       ],
       "descricao": "JARDIM DE MEL",
-      "reporter": "",
+      "reporter": "NATÁLIA VICENTE",
       "data": "20/10/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
@@ -17378,13 +17423,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005530",
       "ids": [
         "1452B005530"
       ],
       "descricao": "PROJETO SUÍNOS GOURMET",
-      "reporter": "",
+      "reporter": "ANY COMETTI",
       "data": "20/10/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
@@ -17393,7 +17438,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005526",
       "ids": [
         "1452B005526"
@@ -17408,7 +17453,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005512",
       "ids": [
         "1452B005512"
@@ -17423,7 +17468,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005510",
       "ids": [
         "1452B005510"
@@ -17438,7 +17483,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005511",
       "ids": [
         "1452B005511"
@@ -17453,13 +17498,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005504",
       "ids": [
         "1452B005504"
       ],
       "descricao": "PRODUÇÃO DE MORANGOS",
-      "reporter": "",
+      "reporter": "JOÃO RAFAEL",
       "data": "05/10/2026",
       "local": "MINAS GERAIS - MG",
       "pgm": "",
@@ -17468,13 +17513,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005506",
       "ids": [
         "1452B005506"
       ],
       "descricao": "REGRAS PIRACEMA + PEIXE + PESCA",
-      "reporter": "",
+      "reporter": "PEDRO HENRIQUE RABELO ARAÚJO",
       "data": "05/10/2026",
       "local": "GOIÁS - GO",
       "pgm": "",
@@ -17483,13 +17528,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005505",
       "ids": [
         "1452B005505"
       ],
       "descricao": "ABELHAS MUDANÇAS CLIMÁTICAS",
-      "reporter": "",
+      "reporter": "JOÃO RAFAEL",
       "data": "01/10/2026",
       "local": "MINAS GERAIS - MG",
       "pgm": "",
@@ -17498,7 +17543,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005474",
       "ids": [
         "1452B005474"
@@ -17513,13 +17558,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005468",
       "ids": [
         "1452B005468"
       ],
       "descricao": "COLHEITA DE TRIGO",
-      "reporter": "",
+      "reporter": "AMANDA DALLA COSTA",
       "data": "15/09/2026",
       "local": "PARANÁ - PR",
       "pgm": "",
@@ -17528,13 +17573,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005476",
       "ids": [
         "1452B005476"
       ],
       "descricao": "FERTILIZANTE BOKASHI",
-      "reporter": "",
+      "reporter": "ANY COMETTI",
       "data": "15/09/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
@@ -17543,7 +17588,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005470",
       "ids": [
         "1452B005470"
@@ -17558,7 +17603,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005471",
       "ids": [
         "1452B005471"
@@ -17573,7 +17618,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005472",
       "ids": [
         "1452B005472"
@@ -17588,13 +17633,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005466",
       "ids": [
         "1452B005466"
       ],
       "descricao": "PLANTIO DE MILHO",
-      "reporter": "",
+      "reporter": "SAMUEL ROCHA",
       "data": "15/09/2026",
       "local": "PARANÁ - PR",
       "pgm": "",
@@ -17603,13 +17648,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005467",
       "ids": [
         "1452B005467"
       ],
       "descricao": "PLANTIO DE SOJA",
-      "reporter": "",
+      "reporter": "AMANDA DALLA COSTA",
       "data": "15/09/2026",
       "local": "PARANÁ - PR",
       "pgm": "",
@@ -17618,7 +17663,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005473",
       "ids": [
         "1452B005473"
@@ -17633,7 +17678,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005477",
       "ids": [
         "1452B005477"
@@ -17648,7 +17693,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005478",
       "ids": [
         "1452B005478"
@@ -17663,7 +17708,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005450",
       "ids": [
         "1452B005450"
@@ -17678,7 +17723,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005452",
       "ids": [
         "1452B005452"
@@ -17693,7 +17738,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005451",
       "ids": [
         "1452B005451"
@@ -17918,13 +17963,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B004317",
       "ids": [
         "1452B004317"
       ],
       "descricao": "DIVERSIFICAÇÃO AGRÍCOLA",
-      "reporter": "",
+      "reporter": "NATÁLIA VICENTE",
       "data": "05/08/2026",
       "local": "ESPÍRITO SANTO - ES",
       "pgm": "",
@@ -17933,7 +17978,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B004320",
       "ids": [
         "1452B004320"
@@ -17948,7 +17993,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B004253",
       "ids": [
         "1452B004253"
@@ -18008,13 +18053,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005238",
       "ids": [
         "1452B005238"
       ],
       "descricao": "CAFETERIA PREMIADA + TAKE PESSOAS TOMANDO CAFÉ",
-      "reporter": "",
+      "reporter": "MARIANA MARTINS",
       "data": "14/07/2026",
       "local": "GOIÁS - GO",
       "pgm": "",
@@ -18023,7 +18068,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005311",
       "ids": [
         "1452B005311"
@@ -18038,7 +18083,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2026",
       "id": "1452B005312",
       "ids": [
         "1452B005312"
@@ -18638,7 +18683,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2025",
       "id": "1452B004869",
       "ids": [
         "1452B004869"
@@ -18698,7 +18743,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2025",
       "id": "1452B004854",
       "ids": [
         "1452B004854"
@@ -18713,7 +18758,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2025",
       "id": "1452B004829",
       "ids": [
         "1452B004829"
@@ -18743,7 +18788,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2025",
       "id": "1452B004825",
       "ids": [
         "1452B004825"
@@ -18758,7 +18803,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2025",
       "id": "1452B004824",
       "ids": [
         "1452B004824"
@@ -19058,7 +19103,7 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2025",
       "id": "1452B004823",
       "ids": [
         "1452B004823"
@@ -20408,13 +20453,13 @@
     {
       "tipo": "cobertura",
       "origem": "fonte_agrocultura",
-      "aba": "fonte_agrocultura",
+      "aba": "2025",
       "id": "1452B004561",
       "ids": [
         "1452B004561"
       ],
       "descricao": "UVA + PARREIRAL + PRODUÇÃO DE VINHO + GARRAFAS DE VINHO + FESTA DO VINHO + VINÍCOLA",
-      "reporter": "",
+      "reporter": "FLÁVIO GUERRA",
       "data": "09/09/2025",
       "local": "MINAS GERAIS - MG",
       "pgm": "",
