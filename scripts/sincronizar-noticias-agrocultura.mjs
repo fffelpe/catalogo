@@ -3,6 +3,7 @@ import { google } from "googleapis";
 import { extrairMediaIds } from "./media-id.mjs";
 import { mesclarCamposPreservando } from "./mesclagem-metadados.mjs";
 import { salvarRelatorioConflitos } from "./relatorio-conflitos.mjs";
+import { listarAbasAnuaisOuLegada, intervaloDaAba } from "./abas-anuais.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const PLANILHA_NOTICIAS_ID = "1LIkpJyIxTV7o4Zz1uJ90ZZTDfedTNsihfJB14CsewRw";
@@ -48,45 +49,28 @@ function normalizarLinhaImgs(linha = []) {
   return resultado;
 }
 
-async function descobrirAbaNoticias() {
-  const resposta = await sheets.spreadsheets.get({
-    spreadsheetId: PLANILHA_NOTICIAS_ID,
-    fields: "sheets.properties.title",
-  });
-
-  const encontrada = (resposta.data.sheets || [])
-    .map((aba) => aba.properties?.title)
-    .filter(Boolean)
-    .find((titulo) => titulo.toLocaleUpperCase("pt-BR").startsWith("NOTÍCIAS E OUTRAS NOTÍCIAS"));
-
-  if (!encontrada) throw new Error("Não foi encontrada a aba de notícias na planilha configurada.");
-  return encontrada;
-}
-
 async function carregarNoticias() {
-  const aba = await descobrirAbaNoticias();
-  const range = `'${aba.replaceAll("'", "''")}'!A2:I`;
-  const resposta = await sheets.spreadsheets.values.get({ spreadsheetId: PLANILHA_NOTICIAS_ID, range });
+  const abas = await listarAbasAnuaisOuLegada(
+    sheets, PLANILHA_NOTICIAS_ID, "NOTÍCIAS E OUTRAS NOTÍCIAS"
+  );
   const registros = [];
-
-  for (const linha of resposta.data.values || []) {
-    const ids = idsDoValor(linha[1]);
-    if (!ids.length) continue;
-
-    registros.push([
-      ids.join("\n"),
-      limparTexto(linha[3]),
-      limparTexto(linha[2]),
-      limparTexto(linha[4]),
-      limparTexto(linha[5]),
-      limparTexto(linha[6]),
-      limparTexto(linha[8]) || "AGROCULTURA",
-      limparTexto(linha[7]),
-      limparTexto(linha[0]),
-    ]);
+  for (const aba of abas) {
+    const resposta = await sheets.spreadsheets.values.get({
+      spreadsheetId: PLANILHA_NOTICIAS_ID,
+      range: intervaloDaAba(aba, "A2:I")
+    });
+    for (const linha of resposta.data.values || []) {
+      const ids = idsDoValor(linha[1]);
+      if (!ids.length) continue;
+      registros.push([
+        ids.join("\n"), limparTexto(linha[3]), limparTexto(linha[2]),
+        limparTexto(linha[4]), limparTexto(linha[5]), limparTexto(linha[6]),
+        limparTexto(linha[8]) || "AGROCULTURA", limparTexto(linha[7]),
+        limparTexto(linha[0])
+      ]);
+    }
   }
-
-  console.log(`Notícias/stand-ups: ${registros.length} registros com Media ID encontrados.`);
+  console.log(`Notícias/stand-ups: ${registros.length} registros com Media ID encontrados nas abas ${abas.join(", ")}.`);
   return registros;
 }
 

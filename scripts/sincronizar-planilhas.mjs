@@ -6,6 +6,7 @@ import { ehErroPermissaoGoogle } from "./google-sheets-errors.mjs";
 import { mesclarCamposPreservando } from "./mesclagem-metadados.mjs";
 import { salvarRelatorioConflitos } from "./relatorio-conflitos.mjs";
 import { identificarLinhasDuplicadas } from "./imgs-dedup.mjs";
+import { listarAbasAnuaisOuLegada, intervaloDaAba } from "./abas-anuais.mjs";
 
 const PLANILHA_IMGS_ID = "1EUIj1PImhdTY78Vt3Kw-ASx3RenEZGZ__1NpPpWrRNs";
 const NOME_ABA_IMGS = "imgs";
@@ -26,7 +27,7 @@ function transformarMateriasNaoExibidas(linha = []) {
 }
 
 const FONTES = [
-  { nome: "Agrocultura", spreadsheetId: PLANILHA_AGROCULTURA_ID, range: `${ABA_AGROCULTURA}!A2:H` },
+  { nome: "Agrocultura", spreadsheetId: PLANILHA_AGROCULTURA_ID, abasAnuais: true, abaLegada: ABA_AGROCULTURA, intervalo: "A2:H" },
   { nome: "Repórter Eco", spreadsheetId: "18svdvx85wPpKOhkBlFPr0zRATZ4AFu2TdEO4y4WgkWc", range: "fonte_reporter_eco!A2:H" },
   { nome: "Jornal da Cultura", spreadsheetId: "1dDqdYeslxm0CE_gZkC3nH7sNmUfh4JQry981VSYXmuk", range: "fonte_jc!A2:H" },
   { nome: "De Olho no Voto", spreadsheetId: "1R6vI1r78DoXykV_5oGu_uVq1MVf6lmpEx_XZ8eM1Lbs", range: "Página1!A2:H" },
@@ -89,8 +90,15 @@ function normalizarLinha(linha = [], contexto = "registro") {
 async function carregarFonte(fonte) {
   let linhas;
   try {
-    const resposta = await sheets.spreadsheets.values.get({ spreadsheetId: fonte.spreadsheetId, range: fonte.range });
-    linhas = resposta.data.values || [];
+    const ranges = fonte.abasAnuais
+      ? (await listarAbasAnuaisOuLegada(sheets, fonte.spreadsheetId, fonte.abaLegada))
+        .map((aba) => intervaloDaAba(aba, fonte.intervalo))
+      : [fonte.range];
+    // Se uma aba falhar, não importar apenas parte da fonte.
+    const respostas = await Promise.all(ranges.map((range) =>
+      sheets.spreadsheets.values.get({ spreadsheetId: fonte.spreadsheetId, range })
+    ));
+    linhas = respostas.flatMap((resposta) => resposta.data.values || []);
   } catch (erro) {
     const status = erro?.response?.status || erro?.code || "erro";
     console.warn(`${fonte.nome}: fonte indisponível (${status}); as demais fontes continuarão sendo sincronizadas.`);
@@ -218,19 +226,6 @@ function idsDeValueRanges(valueRanges = []) {
   return resultado;
 }
 
-async function encontrarAbaPorPrefixo(spreadsheetId, prefixo) {
-  const resposta = await sheets.spreadsheets.get({
-    spreadsheetId,
-    fields: "sheets(properties(title))",
-  });
-  const alvo = limparTexto(prefixo).toLocaleUpperCase("pt-BR");
-  const aba = (resposta.data.sheets || []).find((item) =>
-    limparTexto(item.properties?.title).toLocaleUpperCase("pt-BR").startsWith(alvo)
-  );
-  if (!aba?.properties?.title) throw new Error(`Aba iniciada por "${prefixo}" não encontrada.`);
-  return aba.properties.title;
-}
-
 async function carregarIdsJaUtilizadosAgrocultura() {
   const rangesMaterias = [
     ...ABAS_MATERIAS.map((aba) => {
@@ -246,15 +241,18 @@ async function carregarIdsJaUtilizadosAgrocultura() {
   });
   const idsUsados = idsDeValueRanges(respostaMaterias.data.valueRanges || []);
 
-  const tituloNoticias = await encontrarAbaPorPrefixo(PLANILHA_NOTICIAS_ID, PREFIXO_ABA_NOTICIAS);
-  const tituloEscapado = tituloNoticias.replaceAll("'", "''");
-  const respostaNoticias = await sheets.spreadsheets.values.get({
-    spreadsheetId: PLANILHA_NOTICIAS_ID,
-    range: `'${tituloEscapado}'!B2:B`,
-  });
-  (respostaNoticias.data.values || []).forEach((linha) => {
-    separarIds(linha[0] || "").forEach((id) => idsUsados.add(id));
-  });
+  const abasNoticias = await listarAbasAnuaisOuLegada(
+    sheets, PLANILHA_NOTICIAS_ID, PREFIXO_ABA_NOTICIAS
+  );
+  for (const aba of abasNoticias) {
+    const respostaNoticias = await sheets.spreadsheets.values.get({
+      spreadsheetId: PLANILHA_NOTICIAS_ID,
+      range: intervaloDaAba(aba, "B2:B"),
+    });
+    (respostaNoticias.data.values || []).forEach((linha) => {
+      separarIds(linha[0] || "").forEach((id) => idsUsados.add(id));
+    });
+  }
 
   return idsUsados;
 }
@@ -265,17 +263,21 @@ async function removerAgroculturaJaUtilizados() {
   const idsUsados = await carregarIdsJaUtilizadosAgrocultura();
   if (!idsUsados.size) return 0;
 
-  const resposta = await sheets.spreadsheets.values.get({
-    spreadsheetId: PLANILHA_AGROCULTURA_ID,
-    range: `${ABA_AGROCULTURA}!A2:A`,
-  });
-
+  const abasCobertura = await listarAbasAnuaisOuLegada(
+    sheets, PLANILHA_AGROCULTURA_ID, ABA_AGROCULTURA
+  );
   const repetidos = new Set();
-  (resposta.data.values || []).forEach((linha) => {
-    separarIds(linha[0] || "").forEach((id) => {
-      if (idsUsados.has(id)) repetidos.add(id);
+  for (const aba of abasCobertura) {
+    const resposta = await sheets.spreadsheets.values.get({
+      spreadsheetId: PLANILHA_AGROCULTURA_ID,
+      range: intervaloDaAba(aba, "A2:A"),
     });
-  });
+    (resposta.data.values || []).forEach((linha) => {
+      separarIds(linha[0] || "").forEach((id) => {
+        if (idsUsados.has(id)) repetidos.add(id);
+      });
+    });
+  }
 
   console.log(`Agrocultura: ${repetidos.size} ID(s) já utilizados; planilha de origem preservada. Filtro aplicado na exibição.`);
   return repetidos.size;

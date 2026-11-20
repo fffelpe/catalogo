@@ -133,9 +133,6 @@ jobs:
       - name: Atualizar indicadores horários da sincronização
         run: node scripts/atualizar-status-sincronizacao.mjs
 
-      - name: Atualizar indicadores horários da sincronização
-        run: node scripts/atualizar-status-sincronizacao.mjs
-
       - name: Publicar snapshots do catálogo
         run: |
           if [ -z "$(git status --porcelain -- data/catalogo-acervo.json data/agrocultura-acervo.json data/afiliadas-reporteres.json data/outras-emissoras.json data/media-enrichment.json data/media-search-index.json data/sincronizacao-status.json)" ]; then
