@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "fonte": {
+    "spreadsheetId": "194DqGYvEiFug_S0Vf5GC2WSlGG79vCX2CMTqrCmPugs"
+  },
+  "emissoras": [
+    {
+      "nome": "BAND",
+      "registros": [
+        {
+          "ID": "2457B018658",
+          "IMAGEM": "ROGÉRIO MARINHO",
+          "DATA": "04/11/2026"
+        },
+        {
+          "ID": "2457B018659",
+          "IMAGEM": "FLÁVIO BOLSONARO",
+          "DATA": "13/10/2026"
+        }
+      ]
+    },
+    {
+      "nome": "CNN",
+      "registros": []
+    },
+    {
+      "nome": "GLOBO",
+      "registros": [
+        {
+          "ID": "2457B018672",
+          "IMAGEM": "OPERAÇÃO REFIT",
+          "DATA": "11/11/2026"
+        },
+        {
+          "ID": "2457B018673",
+          "IMAGEM": "FUMAÇA EM MANAUS + INCÊNDIO FLORESTAL",
+          "DATA": "13/10/2026"
+        },
+        {
+          "ID": "2457B018674",
+          "IMAGEM": "INCÊNDIO NA UNIVERSIDADE FEDERAL DO PERNAMBUCO",
+          "DATA": "08/10/2026"
+        },
+        {
+          "ID": "2457B018675",
+          "IMAGEM": "LEILÃO DA AGÊNCIA NACIONAL DE PETRÓLEO",
+          "DATA": "07/10/2026"
+        },
+        {
+          "ID": "2457B018676",
+          "IMAGEM": "OPERAÇÃO POLÍCIA FEDERAL",
+          "DATA": "18/11/2026"
+        }
+      ]
+    },
+    {
+      "nome": "JOVEM PAN",
+      "registros": [
+        {
+          "ID": "2457B018660",
+          "IMAGEM": "GERALDO ALCKMIN",
+          "DATA": "16/11/2026"
+        },
+        {
+          "ID": "2457B018661",
+          "IMAGEM": "COMBOIO LULA",
+          "DATA": "05/10/2026"
+        },
+        {
+          "ID": "2457B018662",
+          "IMAGEM": "DÁRIO DURIGAN",
+          "DATA": "27/10/2026"
+        },
+        {
+          "ID": "2457B018663",
+          "IMAGEM": "ANDREI RODRIGUES PF",
+          "DATA": "19/11/2026"
+        },
+        {
+          "ID": "2457B018664",
+          "IMAGEM": "DÁRIO DURIGAN",
+          "DATA": "05/11/2026"
+        },
+        {
+          "ID": "2457B018665",
+          "IMAGEM": "FLÁVIO BOLSONARO EM BRASÍLIA",
+          "DATA": "13/10/2026"
+        },
+        {
+          "ID": "2457B018666",
+          "IMAGEM": "REUNIÃO DO PARTIDO LIBERAL + REUNIÃO DO PL",
+          "DATA": "11/11/2026"
+        },
+        {
+          "ID": "2457B018667",
+          "IMAGEM": "ROGÉRIO MARINHO",
+          "DATA": "04/11/2026"
+        },
+        {
+          "ID": "2457B018668",
+          "IMAGEM": "VALDEMAR COSTA NETO",
+          "DATA": "29/10/2026"
+        }
+      ]
+    },
+    {
+      "nome": "RECORD",
+      "registros": [
+        {
+          "ID": "2457B018669",
+          "IMAGEM": "MINISTRO DA AGRICULTURA ANDRÉ DE PAULA",
+          "DATA": "14/11/2026"
+        },
+        {
+          "ID": "2457B018670",
+          "IMAGEM": "PREFEITO RICARDO NUNES",
+          "DATA": "26/10/2026"
+        },
+        {
+          "ID": "2457B018671",
+          "IMAGEM": "PRESIDENTE LULA",
+          "DATA": "25/10/2026"
+        }
+      ]
+    },
+    {
+      "nome": "REDE TV",
+      "registros": [
+        {
+          "ID": "",
+          "IMAGEM": "CASO ANA ELISA",
+          "DATA": "09/11/2026"
+        },
+        {
+          "ID": "",
+          "IMAGEM": "DEPUTADA ANA ELISA",
+          "DATA": "09/11/2026"
+        }
+      ]
+    }
+  ]
+}
