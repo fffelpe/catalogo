@@ -11,6 +11,11 @@
     "UF",
     "PGM"
   ];
+  const UFS_VALIDAS = new Set([
+    "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO",
+    "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI",
+    "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"
+  ]);
 
   function normalizarTexto(valor) {
     return String(valor ?? "")
@@ -25,7 +30,7 @@
     if (campo === "UF") {
       const local = String(item?.LOCAL || "").trim().toUpperCase();
       const match = local.match(/(?:^|[\s,\/-])([A-Z]{2})\s*$/);
-      return match ? [match[1]] : [];
+      return match && UFS_VALIDAS.has(match[1]) ? [match[1]] : [];
     }
     const valor = String(item?.[campo] ?? "").trim();
     if (!valor) return [];
@@ -47,11 +52,12 @@
       mes = Number(iso[2]);
       dia = Number(iso[3]);
     } else {
-      const br = texto.match(/^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{4})$/);
+      const br = texto.match(/^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{2}|\d{4})$/);
       if (!br) return null;
       dia = Number(br[1]);
       mes = Number(br[2]);
       ano = Number(br[3]);
+      if (br[3].length === 2) ano += ano < 50 ? 2000 : 1900;
     }
 
     if (!Number.isInteger(ano) || !Number.isInteger(mes) || !Number.isInteger(dia)) return null;
