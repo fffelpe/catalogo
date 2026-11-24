@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T00:26:13.046Z",
+  "generatedAt": "2026-11-24T20:43:25.180Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1027270,6 +1027270,7 @@
       "manualTitle": "",
       "keywords": [
         "bordadeiras de goiás",
+        "cultura / arte",
         "bordana",
         "cooperada",
         "oliveira",
@@ -1027282,11 +1027283,12 @@
         "gleydi",
         "celma",
         "grace",
-        "pres",
-        "transformaram"
+        "pres"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [
         "JERÔNIMO VENÂNCIO",
@@ -1027313,6 +1027315,7 @@
       "manualTitle": "",
       "keywords": [
         "cafeteria premiada",
+        "economia",
         "cafeteria",
         "experience",
         "conferir",
@@ -1027325,11 +1027328,12 @@
         "décima",
         "melhor",
         "conta",
-        "goiás",
-        "kaleb"
+        "goiás"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [
         "MARIANA MARTINS",
@@ -1027439,6 +1027443,7 @@
       "manualTitle": "",
       "keywords": [
         "construções acessibilidade",
+        "cotidiano",
         "jornal da cultura",
         "tv brasil central",
         "goiás - go",
@@ -1027448,7 +1027453,9 @@
         "construções"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1027598,6 +1027605,7 @@
       "manualTitle": "",
       "keywords": [
         "estiagem prevenção queimadas",
+        "meio ambiente",
         "bombeiros",
         "preventivas",
         "controlada",
@@ -1027610,11 +1027618,12 @@
         "estadual",
         "realizam",
         "começou",
-        "goiânia",
-        "pacheco"
+        "goiânia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [
         "RAFAEL MESQUITA",
@@ -1027639,6 +1027648,7 @@
       "manualTitle": "",
       "keywords": [
         "exposição siron franco",
+        "cultura / arte",
         "franco",
         "siron",
         "coralina",
@@ -1027651,11 +1027661,12 @@
         "diretor",
         "goiânia",
         "camilo",
-        "gilmar",
-        "alves"
+        "gilmar"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [
         "MANU WINDER",
@@ -1027722,6 +1027733,7 @@
       "manualTitle": "",
       "keywords": [
         "literatura de cordel sus",
+        "saúde",
         "projeto",
         "ludovico",
         "cledma",
@@ -1027734,11 +1027746,12 @@
         "nordestina",
         "comunicar",
         "congresso",
-        "hospitais",
-        "linguagem"
+        "hospitais"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [
         "ANDRESSA CALASSI",
@@ -1027764,6 +1027777,7 @@
       "manualTitle": "",
       "keywords": [
         "mão de obra carcerária",
+        "economia",
         "sede",
         "penal",
         "legislativa",
@@ -1027776,11 +1027790,12 @@
         "tribunal",
         "firmado",
         "militar",
-        "polícia",
-        "reforma"
+        "polícia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [
         "ANDRESSA CALASSI",
@@ -1027804,6 +1027819,7 @@
       "manualTitle": "",
       "keywords": [
         "operação férias prf",
+        "segurança",
         "jornal da cultura",
         "tv brasil central",
         "goiás - go",
@@ -1027813,7 +1027829,9 @@
         "férias"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1027834,6 +1027852,7 @@
       "manualTitle": "",
       "keywords": [
         "palpites final copa do mundo",
+        "esporte",
         "argentina",
         "brasília",
         "conferir",
@@ -1027846,11 +1027865,12 @@
         "goiânia",
         "horário",
         "mundial",
-        "próximo",
-        "torcida"
+        "próximo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "esporte"
+      ],
       "manualSubjects": [],
       "people": [
         "BRUNELLE PORTELA",
@@ -1027916,6 +1027936,7 @@
       "manualTitle": "",
       "keywords": [
         "repercussão jogo do brasil",
+        "esporte",
         "nossa",
         "torcedores",
         "oliveira",
@@ -1027928,11 +1027949,12 @@
         "clima",
         "lojas",
         "vamos",
-        "após",
-        "cair"
+        "após"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "esporte"
+      ],
       "manualSubjects": [],
       "people": [
         "MANU WINDER",
@@ -1027956,6 +1027978,7 @@
       "manualTitle": "",
       "keywords": [
         "safra de girassol",
+        "agronegócio",
         "christiane",
         "inteligência",
         "girassol",
@@ -1027968,11 +1027991,12 @@
         "levantamento",
         "consolida",
         "produtora",
-        "colheita",
-        "nacional"
+        "colheita"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "agronegócio"
+      ],
       "manualSubjects": [],
       "people": [
         "RAFAEL MESQUITA",
@@ -1028039,6 +1028063,7 @@
       "manualTitle": "",
       "keywords": [
         "autódromo ayrton senna",
+        "esporte",
         "autódromo",
         "automobilismo",
         "internacional",
@@ -1028051,11 +1028076,12 @@
         "comemorar",
         "reformado",
         "completa",
-        "crispim",
-        "esporte"
+        "crispim"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "esporte"
+      ],
       "manualSubjects": [],
       "people": [
         "BRUNELLE PORTELA",
@@ -1034692,6 +1034718,7 @@
       "manualTitle": "",
       "keywords": [
         "evento summit mulheres nas profissoes 2026",
+        "economia",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1034702,7 +1034729,9 @@
         "summit"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1034723,6 +1034752,7 @@
       "keywords": [
         "mulheres andando na rua",
         "pessoas andando na rua",
+        "cotidiano",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1034733,7 +1034763,9 @@
         "pessoas"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1034789,6 +1034821,7 @@
       "keywords": [
         "depoimento de mulher sem identificar",
         "mulheres na rua sem identificar",
+        "cotidiano",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1034799,7 +1034832,9 @@
         "mulher"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1034820,6 +1034855,7 @@
       "keywords": [
         "cartilha de boas praticas inteligencia artificial",
         "eleiçoes 2026",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1034832,7 +1034868,9 @@
         "boas"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1034853,6 +1034891,7 @@
       "keywords": [
         "flipelo",
         "festa literaria internacional do pelourinho",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1034863,7 +1034902,9 @@
         "festa"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1034915,6 +1034956,7 @@
       "keywords": [
         "pessoas andando na rua",
         "mulheres andando na rua sem identificar",
+        "cotidiano",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1034925,7 +1034967,9 @@
         "pessoas"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1034948,13 +1034992,16 @@
         "palestra no senado",
         "mulheres assistindo palestra",
         "enfrentamento a violencia contra a mulher",
+        "segurança",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1034976,6 +1035023,7 @@
       "keywords": [
         "escola estadual alfredo paulino",
         "fachada escola publica",
+        "educação",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1034988,7 +1035036,9 @@
         "publica"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035009,6 +1035059,7 @@
       "keywords": [
         "10º flipelo",
         "livros",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035018,7 +1035069,9 @@
         "ruas"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035040,21 +1035093,16 @@
         "reuniao roda viva maria angela",
         "marilia assef",
         "termo de compromisso de participaçao no programa roda viva",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "viva",
-        "participaçao",
-        "compromisso",
-        "programa",
-        "marilia",
-        "reuniao",
-        "angela",
-        "assef"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035075,6 +1035123,7 @@
       "keywords": [
         "pintura de muro",
         "mulheres",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035086,11 +1035135,12 @@
         "pintura",
         "contra",
         "sobre",
-        "arte",
-        "muro"
+        "arte"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035111,6 +1035161,7 @@
       "keywords": [
         "largo sao francisco",
         "faculdade de direito da universidade de sao paulo",
+        "educação",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035123,7 +1035174,9 @@
         "paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035208,6 +1035261,7 @@
       "keywords": [
         "agenda do saneamento para as eleiçoes 2026",
         "tela computador",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035219,7 +1035273,9 @@
         "tela"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035239,6 +1035295,7 @@
       "manualTitle": "",
       "keywords": [
         "pedro uczai passando mal em 11 de agosto",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035254,7 +1035311,9 @@
         "maca"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035279,13 +1035338,16 @@
         "pessoa tomando remedio na veia",
         "pessoas sendo atendidas em laboratorio",
         "pessoas esperando atendimento",
+        "saúde",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035305,6 +1035367,7 @@
       "manualTitle": "",
       "keywords": [
         "coletiva hugo motta",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035313,7 +1035376,9 @@
         "hugo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035335,20 +1035400,16 @@
         "idoso mexendo no computador",
         "pessoas trabalhando em escritorio",
         "mulheres trabalhando em escritorio",
+        "cotidiano",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "trabalhando",
-        "escritorio",
-        "computador",
-        "mulheres",
-        "mexendo",
-        "pessoas",
-        "idoso"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035369,6 +1035430,7 @@
       "keywords": [
         "pessoas trabalhando em escritorio",
         "mulheres trabalhando em escritorio",
+        "cotidiano",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035379,7 +1035441,9 @@
         "pessoas"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035400,20 +1035464,17 @@
       "keywords": [
         "deputado mendonça filho",
         "deputado aluisio mendes",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "brasília - df",
         "são paulo",
-        "são paulo - sp",
-        "deputado",
-        "mendonça",
-        "filho",
-        "entrevista",
-        "aluisio",
-        "mendes"
+        "são paulo - sp"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035434,6 +1035495,7 @@
       "manualTitle": "",
       "keywords": [
         "gliceria tupinamba",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035442,7 +1035504,9 @@
         "gliceria"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035462,6 +1035526,7 @@
       "manualTitle": "",
       "keywords": [
         "gliceria tupinamba",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035470,7 +1035535,9 @@
         "gliceria"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035494,13 +1035561,16 @@
         "ana elisa bechara",
         "mais mulheres na politica",
         "maria elizabeth",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035523,13 +1035593,16 @@
         "jogos de aposta",
         "computador",
         "pixbet",
+        "economia",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035550,6 +1035623,7 @@
       "keywords": [
         "amor e mechas",
         "perucas para pessoas em tratamento de cancer",
+        "saúde",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035562,7 +1035636,9 @@
         "amor"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035584,21 +1035660,16 @@
         "tomografia de pulmao",
         "exame de pulmao e medico olhando exame",
         "instituto de radiologia inrad hcfmusp",
+        "saúde",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "pulmao",
-        "exame",
-        "radiologia",
-        "tomografia",
-        "instituto",
-        "hcfmusp",
-        "olhando",
-        "medico"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035618,6 +1035689,7 @@
       "manualTitle": "",
       "keywords": [
         "festival comkids 2026",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035626,7 +1035698,9 @@
         "comkids"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035648,18 +1035722,16 @@
         "daniel carmona",
         "beth carmona",
         "festival comkids 2026",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "carmona",
-        "festival",
-        "comkids",
-        "daniel",
-        "beth"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035684,13 +1035756,16 @@
         "andando de bicicleta",
         "bicicleta eletrica",
         "pessoas andando",
+        "cotidiano",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035710,6 +1035785,7 @@
       "manualTitle": "",
       "keywords": [
         "exposição tarsila do amaral",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035719,7 +1035795,9 @@
         "amaral"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035740,6 +1035818,7 @@
       "keywords": [
         "sessão câmara de nova friburgo",
         "priscila teixeira e zezinho do caminhão",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035753,7 +1035832,9 @@
         "sessão"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035779,13 +1035860,12 @@
         "crianças sendo vacinadas",
         "jovem sendo vacinada",
         "carteira de vacinaçao",
-        "jornal da cultura",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035806,6 +1035886,7 @@
       "keywords": [
         "festival chines liberdade 2026",
         "pessoas no festival",
+        "cultura / arte",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035816,7 +1035897,9 @@
         "chines"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035840,13 +1035923,16 @@
         "pessoas sendo vacinadas",
         "criança sendo vacinada",
         "mulher sendo vacinada",
+        "saúde",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035867,6 +1035953,7 @@
       "keywords": [
         "kassio nunes marques discurso centro de divulgaçao das eleiçoes",
         "centro de divulgaçao das eleiçoes escritorio",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1035880,7 +1035967,9 @@
         "nunes"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035906,13 +1035995,12 @@
         "senhor fazendo exercicio",
         "idosos fazendo academia",
         "personal trainer",
-        "jornal da cultura",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035938,10 +1036026,13 @@
         "pessoas esperando atendimento em ubs",
         "criança sendo vacinada",
         "fila de vacinaçao",
-        "atendimento"
+        "atendimento",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035966,13 +1036057,16 @@
         "carros",
         "julio cesar acosta navarro",
         "caso marco aurelio cardenas acosta",
+        "segurança",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1035998,10 +1036092,13 @@
         "policia",
         "viatura da policia militar",
         "van da policia militar",
-        "blitz"
+        "blitz",
+        "segurança"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036028,10 +1036125,13 @@
         "engenheiro",
         "pintor",
         "casa decorada",
-        "predios centro de sao paulo"
+        "predios centro de sao paulo",
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036067,7 +1036167,9 @@
         "pessoa com deficiencia fazendo compras"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036095,10 +1036197,13 @@
         "casas bahia loja aberta",
         "fachada loja casas bahia",
         "pao de açucar",
-        "mercado dia"
+        "mercado dia",
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036119,18 +1036224,20 @@
       "keywords": [
         "homem mexendo no computador",
         "idoso mexendo com tecnologia",
+        "tecnologia",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo",
         "mexendo",
         "computador",
-        "tecnologia",
         "homem",
         "idoso"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "tecnologia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036152,21 +1036259,16 @@
         "pessoas andando na avenida paulista",
         "viatura da policia militar",
         "close sinere da policia",
+        "segurança",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "policia",
-        "paulista",
-        "andando",
-        "avenida",
-        "militar",
-        "pessoas",
-        "viatura",
-        "sinere"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036190,13 +1036292,16 @@
         "site gov",
         "site gov agencia nacional de proteçao de dados",
         "site anpd",
+        "tecnologia",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "tecnologia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036217,6 +1036322,7 @@
       "keywords": [
         "pessoas em caixa eletronico em agencia de banco",
         "caixa eletronico",
+        "economia",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1036228,7 +1036334,9 @@
         "banco"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036251,13 +1036359,16 @@
         "maos jovens jogando no celular",
         "adolescente jogando no celular sem identificar",
         "reels instagram",
+        "tecnologia",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "tecnologia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036280,13 +1036391,16 @@
         "pessoas em fila de vacinaçao",
         "pessoas sendo vacinadas",
         "ubs",
+        "saúde",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036312,10 +1036426,13 @@
         "roda de conversa em sala",
         "alunos do ensino medio",
         "alunos do ensino medio sem identificar",
-        "escola publica"
+        "escola publica",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036336,6 +1036453,7 @@
       "keywords": [
         "consulate general os the united states of america",
         "consualdo-geral dos estados unidos em sao paulo fachada",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1036347,11 +1036465,12 @@
         "fachada",
         "general",
         "states",
-        "unidos",
-        "united"
+        "unidos"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036383,10 +1036502,13 @@
         "exame de sangue",
         "medindo pressao",
         "aula de matematica",
-        "estudantes escrevendo"
+        "estudantes escrevendo",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036409,13 +1036531,16 @@
         "alunos ensino medio em sala de aula",
         "adolescentes comendo prato de comida na escola",
         "adolescentes dançando no patio da escola",
+        "educação",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036438,13 +1036563,16 @@
         "internas biblioteca mackenzie",
         "fotos e arquivos biblioteca",
         "alunos e pessoas no patio da faculdade",
+        "educação",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036467,13 +1036595,16 @@
         "internas biblioteca mackenzie",
         "fotos e arquivos biblioteca",
         "comemoraçao 100 anos biblioteca",
+        "educação",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036494,6 +1036625,7 @@
       "keywords": [
         "pessoas trabalhando em escritorio",
         "fundaçao lemann",
+        "educação",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1036505,7 +1036637,9 @@
         "lemann"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036525,6 +1036659,7 @@
       "manualTitle": "",
       "keywords": [
         "palacio da alvorada fachada",
+        "política",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1036534,7 +1036669,9 @@
         "palacio"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036563,10 +1036700,13 @@
         "escola publica",
         "alunos do ensino medio",
         "robotica",
-        "aula de matematica"
+        "aula de matematica",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036587,6 +1036727,7 @@
       "keywords": [
         "projeto para atendimento de mulheres em situaçao de violencia domestica",
         "mulher reviva",
+        "segurança",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1036601,7 +1036742,9 @@
         "reviva"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036623,18 +1036766,16 @@
         "fachada",
         "logo",
         "pessoas comendo",
+        "economia",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "comendo",
-        "externo",
-        "pessoas",
-        "habibs",
-        "noite"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036653,13 +1036794,16 @@
       "title": "",
       "manualTitle": "",
       "keywords": [
+        "meio ambiente",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036680,6 +1036824,7 @@
       "keywords": [
         "um apelo a açao coletiva em defesa cibernetica",
         "apelo de empresas a segurança contra ataques ciberneticos",
+        "tecnologia",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1036691,11 +1036836,12 @@
         "empresas",
         "ataques",
         "contra",
-        "defesa",
-        "açao"
+        "defesa"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "tecnologia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036721,13 +1036867,12 @@
         "bet em celular",
         "pessoa usando o celular",
         "jogando",
-        "jornal da cultura",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036748,6 +1036893,7 @@
       "keywords": [
         "fachada receita federal em sao paulo",
         "delegacia especial da receita federal do brasil de fiscalizaçao",
+        "economia",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1036762,7 +1036908,9 @@
         "paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1036783,6 +1036931,7 @@
       "keywords": [
         "operaçao bomba oculta",
         "bomba de gasolina lacrada pela anp",
+        "segurança",
         "jornal da cultura",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1036794,7 +1036943,9 @@
         "oculta"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1037994,7 +1038145,9 @@
         "close batata frita congelada"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038019,13 +1038172,12 @@
         "calor",
         "pessoas na rua sem identificar",
         "mulheres na rua",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038051,13 +1038203,12 @@
         "close vacina",
         "close aplicando vacina no braço sem identificar",
         "close seringa",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038079,19 +1038230,16 @@
         "fachada a fantástica arca",
         "parque de diversão",
         "parque infantil",
+        "lazer",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "parque",
-        "fantástica",
-        "diversão",
-        "infantil",
-        "fachada",
-        "arca"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "lazer"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038120,10 +1038268,13 @@
         "fachada ee prof luiz gonzaga righini",
         "aula de artesanato",
         "aula de música",
-        "aula de dança"
+        "aula de dança",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038149,13 +1038300,12 @@
         "cachorro idoso caramelo",
         "cachorros idosos",
         "vira latas idosos",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038181,10 +1038331,13 @@
         "cartão de atendimento prioritário pets",
         "cartão de vacina de cachorro",
         "cachorro comendo",
-        "cachorro passeando na rua"
+        "cachorro passeando na rua",
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038204,6 +1038357,7 @@
       "manualTitle": "",
       "keywords": [
         "mulher sem identificar dando depoimento",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1038214,7 +1038368,9 @@
         "dando"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038240,10 +1038396,13 @@
         "exibição filme a melhor mãe do mundo",
         "pessoas em situação de vulnerabilidade assistindo filmes",
         "pessoas comendo pipoca",
-        "obras de arte museu das favelas"
+        "obras de arte museu das favelas",
+        "cultura / arte"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038268,13 +1038427,16 @@
         "close homem lendo livro",
         "homem descendo rampa",
         "prédio",
+        "saúde",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038302,10 +1038464,13 @@
         "placa farmácia central em hospital",
         "máquina de remédio funcionando",
         "máquinário trabalhando",
-        "pessoas trabalhando no computador"
+        "pessoas trabalhando no computador",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038330,13 +1038495,16 @@
         "vista de prédios são paulo",
         "prédios",
         "céu azul",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038363,10 +1038531,13 @@
         "casa em construção",
         "casas simples",
         "casas humildes",
-        "pobreza"
+        "pobreza",
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038388,20 +1038559,16 @@
         "família",
         "palestra saúde mental para adolescentes",
         "alunos fazendo dinâmica",
+        "saúde",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "adolescentes",
-        "dinâmica",
-        "palestra",
-        "fazendo",
-        "alunos",
-        "mental",
-        "saúde"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038423,21 +1038590,16 @@
         "sonoro maria ângela de jesus",
         "evento fpa",
         "discurso maria ângela de jesus",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "ângela",
-        "jesus",
-        "maria",
-        "discurso",
-        "tavares",
-        "evento",
-        "sonoro",
-        "celso"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038459,18 +1038621,16 @@
         "patinete elétrico na rua",
         "bicilceta elétrica no farol",
         "ciclovia",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "bicilceta",
-        "elétrica",
-        "elétrico",
-        "patinete",
-        "farol"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038496,10 +1038656,13 @@
         "engarrafamento",
         "bicicletas passando na ciclovia",
         "moto passando na ciclovia",
-        "gari varrendo a rua"
+        "gari varrendo a rua",
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038521,21 +1038684,16 @@
         "palestra saúde mental para crianças",
         "crianças ouvindo palestra",
         "crianças fazendo atividades juntas",
+        "saúde",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "crianças",
-        "palestra",
-        "atividades",
-        "fazendo",
-        "ouvindo",
-        "juntas",
-        "mental",
-        "saúde"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038562,10 +1038720,13 @@
         "idosos fazendo natação",
         "mulheres fazendo natação",
         "fachada ceu carrão carolina maria de jesus",
-        "idosos fazendo exercício com elástico"
+        "idosos fazendo exercício com elástico",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038591,10 +1038752,13 @@
         "idosos se alongando",
         "idosos fazendo natação",
         "mulheres fazendo natação",
-        "fachada ceu carrão carolina maria de jesus"
+        "fachada ceu carrão carolina maria de jesus",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038630,7 +1038794,9 @@
         "triagem"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038656,13 +1038822,12 @@
         "designer de sobrancelhas trabalhando",
         "mulher negra trabalhando",
         "mulher empreendedora",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038698,7 +1038863,9 @@
         "prédio pixado"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038734,7 +1038901,9 @@
         "homem escolhendo café"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038770,7 +1038939,9 @@
         "close alunos escrevendo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038797,10 +1038968,13 @@
         "hospital",
         "close agulha no braço",
         "mulher fazendo hemodiálise",
-        "aparelho de hemodiálise no hospital"
+        "aparelho de hemodiálise no hospital",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038827,10 +1039001,13 @@
         "hospital",
         "close agulha no braço",
         "mulher fazendo hemodiálise",
-        "aparelho de hemodiálise no hospital"
+        "aparelho de hemodiálise no hospital",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038852,21 +1039029,16 @@
         "sala interna câmara municipal de são paulo",
         "exposição elas escrevem história 2026",
         "fachada câmara municipal de são paulo",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "municipal",
-        "câmara",
-        "paulo",
-        "exposição",
-        "escrevem",
-        "história",
-        "fachada",
-        "sala"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038888,20 +1039060,16 @@
         "exposição elas escrevem história 2026",
         "fachada câmara municipal de são paulo",
         "internas câmara municipal de são paulo",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "municipal",
-        "câmara",
-        "paulo",
-        "exposição",
-        "escrevem",
-        "história",
-        "fachada"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038925,13 +1039093,16 @@
         "menores infratores sem identificar desfocados",
         "close mão escrevendo no caderno",
         "professora escrevendo na lousa",
+        "educação",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038953,21 +1039124,16 @@
         "professor dando aula",
         "menores infratores estudando",
         "menores infratores sem identificar desfocados",
+        "educação",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "infratores",
-        "menores",
-        "identificar",
-        "desfocados",
-        "estudando",
-        "professor",
-        "dando",
-        "aula"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1038993,13 +1039159,12 @@
         "esfigmomanômetro",
         "médica conferindo pressão de paciente sem identificar",
         "médica medindo pressão de paciente",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039021,16 +1039186,16 @@
         "close exame médico",
         "close coronariografia",
         "gato",
+        "saúde",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "coronariografia",
-        "médico",
-        "exame"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039052,20 +1039217,16 @@
         "urna eletrônica 2026",
         "close dedo apertando botão confirma",
         "urna de lona",
+        "política",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "urna",
-        "eletrônica",
-        "apertando",
-        "confirma",
-        "botão",
-        "dedo",
-        "lona"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039090,13 +1039251,16 @@
         "close nota fiscal",
         "biometria",
         "close roteiro",
+        "política",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039125,10 +1039289,13 @@
         "transporte público",
         "pessoas andando",
         "pessoas na rua",
-        "dia normal"
+        "dia normal",
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039158,10 +1039325,13 @@
         "mão infantil segurando fruta",
         "crianças comendo frutas",
         "crianças brincando no parquinho",
-        "menino comendo maça"
+        "menino comendo maça",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039188,10 +1039358,13 @@
         "maquininha",
         "esteticista",
         "esteticista trabalhando",
-        "autonôma"
+        "autonôma",
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039212,6 +1039385,7 @@
       "keywords": [
         "carros passando na avenida",
         "moto passando na avenida",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1039222,7 +1039396,9 @@
         "moto"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039253,10 +1039429,13 @@
         "piscina de natação",
         "musculação",
         "homens fazendo musculação",
-        "instrutor de academia com aluno"
+        "instrutor de academia com aluno",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039276,6 +1039455,7 @@
       "manualTitle": "",
       "keywords": [
         "evento com kids",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1039288,7 +1039468,9 @@
         "vice"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039316,10 +1039498,13 @@
         "mulher mexendo no celular",
         "close mão mexendo no celular",
         "pais brincando com filha",
-        "bebê brincando com os pais"
+        "bebê brincando com os pais",
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039340,6 +1039525,7 @@
       "keywords": [
         "pessoas no celular sem identificar",
         "pessoas mexendo no celular sem identificar",
+        "tecnologia",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1039350,7 +1039536,9 @@
         "mexendo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "tecnologia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039375,13 +1039563,16 @@
         "alunos na aula",
         "close professor escrevendo na lousa",
         "close mão dos alunos",
+        "educação",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039407,13 +1039598,12 @@
         "pessoando andando no metrô",
         "homem pgando remédio na máquina de hiv",
         "fachada estação consolação",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039436,13 +1039626,16 @@
         "carros passando",
         "close sinal vermelho pedestre",
         "avenida",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039468,13 +1039661,12 @@
         "close mãos no volante",
         "homem andando de bicicleta",
         "close sinal verde pedestre",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039498,13 +1039690,16 @@
         "trânsito pequeno",
         "marginal tietê",
         "carros passando",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039528,13 +1039723,16 @@
         "casal conversando na sala",
         "casal fazendo café juntos",
         "casal na cozinha juntos",
+        "saúde",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039555,6 +1039753,7 @@
       "keywords": [
         "evento band eleições 2026",
         "debate governadores de são paulo 2026",
+        "política",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1039566,11 +1039765,12 @@
         "tarcísio",
         "eduardo",
         "freitas",
-        "oinegue",
-        "debate"
+        "oinegue"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039591,13 +1039791,16 @@
       "keywords": [
         "rua salvador",
         "salvador",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039622,13 +1039825,16 @@
         "mulher negra pintando parede",
         "arte de rua",
         "pessoas pintando parede",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039653,13 +1039859,16 @@
         "alexandre mattoso no palco",
         "cleicí patauá no palco",
         "beth carmonia no palco",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039680,6 +1039889,7 @@
       "keywords": [
         "evento tv cultura",
         "evento reporter eco",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1039691,11 +1039901,12 @@
         "cultura",
         "mattoso",
         "angela",
-        "cleicí",
-        "patauá"
+        "cleicí"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039719,13 +1039930,16 @@
         "crianças brincando",
         "criança entrevistando outra criança",
         "filha jogando confete no pai",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039749,13 +1039963,16 @@
         "crianças brincando",
         "criança entrevistando outra criança",
         "filha jogando confete no pai",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039776,6 +1039993,7 @@
       "keywords": [
         "pessoas andando na rua sem identificar",
         "mulheres andando na ruas",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1039787,7 +1040005,9 @@
         "ruas"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039810,13 +1040030,16 @@
         "pessoas na rua",
         "dia nublado",
         "jovens andando",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039852,7 +1040075,9 @@
         "mulher descendo do caminhão"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039876,13 +1040101,16 @@
         "professor dando aula de rap",
         "aula de rap",
         "jovens rimando",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039911,10 +1040139,13 @@
         "close blusa materia rima",
         "jovens aprendendo a fazer rima",
         "jovens rimando",
-        "criança rimando"
+        "criança rimando",
+        "cultura / arte"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039941,10 +1040172,13 @@
         "crianças lendo sem identificar",
         "livros infantis em cima da mesa",
         "biblioteca",
-        "prateleira com livros"
+        "prateleira com livros",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1039973,10 +1040207,13 @@
         "livros infantis em cima da mesa",
         "biblioteca",
         "prateleira com livros",
-        "fachada escola estuadual alfredo paulino"
+        "fachada escola estuadual alfredo paulino",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040002,10 +1040239,13 @@
         "professora dando aula",
         "crianças lendo",
         "alunos levantando a mão",
-        "professora ensinando"
+        "professora ensinando",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040025,6 +1040265,7 @@
       "manualTitle": "",
       "keywords": [
         "coletiva governador tarcísio sobre a greve cptm agosto de 2026",
+        "política",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1040037,7 +1040278,9 @@
         "cptm"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040066,10 +1040309,13 @@
         "mulher fazendo doação de leite sem identificar",
         "médico separando amostras de leite",
         "placa uti neonatal coleta de leite materno",
-        "corredor de hospital"
+        "corredor de hospital",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040097,10 +1040343,13 @@
         "close 100% elétrico",
         "prédios",
         "pessoas na rua",
-        "dia de sol"
+        "dia de sol",
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040124,13 +1040373,16 @@
         "close etiqueta inmetro",
         "letreiro economiza até 38% de energia",
         "geladeira por dentro",
+        "economia",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040152,16 +1040404,16 @@
         "geladeiras",
         "pessoas na rua sem identificar",
         "pessoas andando na rua",
+        "economia",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "pessoas",
-        "identificar",
-        "andando"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040181,6 +1040433,7 @@
       "manualTitle": "",
       "keywords": [
         "greve cptm agosto 2026",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1040193,7 +1040446,9 @@
         "cptm"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040229,7 +1040484,9 @@
         "pessoas entrando na estação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040255,13 +1040512,12 @@
         "mãos teclando",
         "mãos digitando no notebook",
         "planilha excel controle de gasto",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040290,10 +1040546,13 @@
         "close mãos de criança",
         "letreiro \"oficina multiuso\"",
         "crianças jogando bola sem identificar",
-        "crianças lendo sem identificar"
+        "crianças lendo sem identificar",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040313,6 +1040572,7 @@
       "manualTitle": "",
       "keywords": [
         "declaração de óbito",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
@@ -1040325,7 +1040585,9 @@
         "gari"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040361,7 +1040623,9 @@
         "passageiros na porta do ônibus cheio"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040388,10 +1040652,13 @@
         "pais com filhos na ubs sem identificar",
         "close vacina sarampo",
         "enfermeira preparando vacina",
-        "mulher tomando vacina sem idenrificar"
+        "mulher tomando vacina sem idenrificar",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040419,10 +1040686,13 @@
         "close cumbuca com ovos",
         "close cumprimido ômega",
         "close aveia",
-        "close mão segurando abacate"
+        "close mão segurando abacate",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040446,13 +1040716,16 @@
         "alunos estudando",
         "escola pública",
         "alunos anotando",
+        "educação",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040478,10 +1040751,13 @@
         "escola pública",
         "close livro passando página",
         "mesas vazias",
-        "ensino médio"
+        "ensino médio",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040504,13 +1040780,16 @@
         "sol com frio",
         "dia nublado",
         "mulheres na rua",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040533,13 +1040812,16 @@
         "pessoas de mãos dadas",
         "pessoas na rua com blusa de frio",
         "idosos na rua",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040566,10 +1040848,13 @@
         "pessoas jogando futebol",
         "pessoas na quadra",
         "mulher chutando bola",
-        "homem defendendo no gol"
+        "homem defendendo no gol",
+        "esporte"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "esporte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040596,10 +1040881,13 @@
         "pessoas jogando futebol",
         "pessoas na quadra",
         "mulher chutando bola",
-        "homem defendendo no gol"
+        "homem defendendo no gol",
+        "esporte"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "esporte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040625,10 +1040913,13 @@
         "prf encontando carro",
         "prf palestrando",
         "carros em rodovia",
-        "prf parando carro"
+        "prf parando carro",
+        "segurança"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040664,7 +1040955,9 @@
         "mulher em consulta"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040692,10 +1040985,13 @@
         "aerocaps",
         "alenia",
         "detalhes gatos pretos",
-        "close mão acariciando gato preto"
+        "close mão acariciando gato preto",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040723,10 +1041019,13 @@
         "aerocaps",
         "alenia",
         "detalhes gatos pretos",
-        "close mão acariciando gato preto"
+        "close mão acariciando gato preto",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040753,10 +1041052,13 @@
         "limão",
         "prato com cebola e tomate",
         "jarra de suco",
-        "close colocando suco no copo"
+        "close colocando suco no copo",
+        "lazer"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "lazer"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040783,10 +1041085,13 @@
         "limão",
         "prato com cebola e tomate",
         "jarra de suco",
-        "close colocando suco no copo"
+        "close colocando suco no copo",
+        "lazer"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "lazer"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040810,13 +1041115,16 @@
         "carros passando na rua",
         "trânsito",
         "pessoa mexendo no celular sem identificar",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040842,13 +1041150,12 @@
         "estudantes prestando atenção sem identificar",
         "curso",
         "sala de aula",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040874,13 +1041181,12 @@
         "estudantes prestando atenção sem identificar",
         "curso",
         "sala de aula",
-        "jornal da tarde",
-        "tv cultura - sp",
-        "são paulo - sp",
-        "são paulo"
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040910,10 +1041216,13 @@
         "sala de espera de hospital",
         "palhaços cantando para crianças no hospital",
         "close mão infantil batento palma",
-        "crianças no hospital"
+        "crianças no hospital",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040943,10 +1041252,13 @@
         "sala de espera de hospital",
         "palhaços cantando para crianças no hospital",
         "close mão infantil batento palma",
-        "crianças no hospital"
+        "crianças no hospital",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1040982,7 +1041294,9 @@
         "close rolo pintando parede"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041018,7 +1041332,9 @@
         "close rolo pintando parede"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041054,7 +1041370,9 @@
         "close rolo pintando parede"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041078,13 +1041396,16 @@
         "idoso desenhando",
         "close mão desenhando",
         "pasquim",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041114,10 +1041435,13 @@
         "menina segurando partitura sem identificar",
         "alunos tocando",
         "alunos cantando",
-        "close mão tocando violão"
+        "close mão tocando violão",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041144,10 +1041468,13 @@
         "close letra médico",
         "farmacêutico trabalhando",
         "close mão segurando receita",
-        "homem trabalhando"
+        "homem trabalhando",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041174,10 +1041501,13 @@
         "close boca de fogão acendendo",
         "close brigadeiros",
         "jovens trabalhando",
-        "trabalho autônomo"
+        "trabalho autônomo",
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041199,15 +1041529,16 @@
         "comunidade",
         "favela",
         "rua residencial vazia",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "residencial",
-        "vazia"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041229,15 +1041560,16 @@
         "comunidade",
         "favela",
         "rua residencial vazia",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "residencial",
-        "vazia"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041273,7 +1041605,9 @@
         "carrinho de feira"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041295,17 +1041629,16 @@
         "professor",
         "professor dando aula",
         "close aluno escrevendo",
+        "educação",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
-        "são paulo",
-        "escrevendo",
-        "aluno",
-        "dando",
-        "aula"
+        "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041328,13 +1041661,16 @@
         "vista da varanda",
         "close olhos mulher",
         "cachorros",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041357,13 +1041693,16 @@
         "vista da varanda",
         "close olhos mulher",
         "cachorros",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041388,13 +1041727,16 @@
         "close mão passando a mão no cabelo",
         "mulher tomando remédio",
         "mulher se olhando no espelho",
+        "saúde",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041418,13 +1041760,16 @@
         "dia nublado",
         "homem treinando karatê",
         "lagoa",
+        "esporte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "esporte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041447,13 +1041792,16 @@
         "instituto de pesquisa energéticas e nucleares da usp",
         "placa radioativo",
         "porteiro",
+        "tecnologia",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "tecnologia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041480,10 +1041828,13 @@
         "mãe com filha no dentista",
         "consultório odontológico",
         "mãe e filhos na sala de espera",
-        "fachada clínica odontológica"
+        "fachada clínica odontológica",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041510,10 +1041861,13 @@
         "mãe com filha no dentista",
         "consultório odontológico",
         "mãe e filhos na sala de espera",
-        "fachada clínica odontológica"
+        "fachada clínica odontológica",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041536,13 +1041890,16 @@
         "cachorros brincando",
         "adereços de animais de copa do mundo",
         "cachorros brincando juntos",
+        "esporte",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "esporte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041569,10 +1041926,13 @@
         "carro na marginal dia de chuva",
         "visão retrovisor dia chuva",
         "visão limpador de parabrisa dia de chuva",
-        "chuva caindo"
+        "chuva caindo",
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041597,13 +1041957,16 @@
         "dia frio",
         "chão molhado",
         "avenida",
+        "cotidiano",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041627,13 +1041990,16 @@
         "simulado incêndio balão",
         "bombeiro apagando fogo com mangueira de água",
         "balão pegando fogo",
+        "segurança",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041657,13 +1042023,16 @@
         "simulado incêndio balão",
         "bombeiro apagando fogo com mangueira de água",
         "balão pegando fogo",
+        "segurança",
         "jornal da tarde",
         "tv cultura - sp",
         "são paulo - sp",
         "são paulo"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "segurança"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041688,12 +1042057,15 @@
         "meninas treinando",
         "close chuteiras",
         "meninas trocando figurinhas",
+        "esporte",
         "jornal da tarde",
         "tv cultura",
         "são paulo - sp"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "esporte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041715,20 +1042087,15 @@
         "fachada palacio da jvstica",
         "pessoas mexendo no celular sem identificar",
         "bandeira do brasil",
+        "política",
         "jornal da tarde",
         "tv cultura",
-        "são paulo - sp",
-        "fachada",
-        "palacio",
-        "identificar",
-        "bandeira",
-        "celular",
-        "justiça",
-        "jvstica",
-        "mexendo"
+        "são paulo - sp"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041750,20 +1042117,15 @@
         "fachada palacio da jvstica",
         "pessoas mexendo no celular sem identificar",
         "bandeira do brasil",
+        "política",
         "jornal da tarde",
         "tv cultura",
-        "são paulo - sp",
-        "fachada",
-        "palacio",
-        "identificar",
-        "bandeira",
-        "celular",
-        "justiça",
-        "jvstica",
-        "mexendo"
+        "são paulo - sp"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041784,6 +1042146,7 @@
         "joyce autografando livros",
         "banner \"sessão de autógrafos joyce ribeiro",
         "livro \"nem cresci e já sou mãe\"",
+        "cultura / arte",
         "jornal da tarde",
         "tv cultura",
         "são paulo - sp",
@@ -1041794,11 +1042157,12 @@
         "entrevista",
         "banner",
         "cresci",
-        "livros",
-        "sessão"
+        "livros"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041823,10 +1042187,13 @@
         "pessoas caminhando",
         "panfleteiro",
         "pessoas com blusa de frio",
-        "pessoas atravessando faixa de pedreste"
+        "pessoas atravessando faixa de pedreste",
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041851,10 +1042218,13 @@
         "close injeção",
         "homem correndo no parque",
         "homem fazendo exercícios",
-        "aparelho de medir diabetes"
+        "aparelho de medir diabetes",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041878,12 +1042248,15 @@
         "semana do meio ambiente",
         "discurso tarcísio semana do meio ambiente",
         "verde",
+        "meio ambiente",
         "jornal da tarde",
         "tv cultura",
         "são paulo - sp"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041908,12 +1042281,15 @@
         "semana do meio ambiente",
         "discurso tarcísio semana do meio ambiente",
         "verde",
+        "meio ambiente",
         "jornal da tarde",
         "tv cultura",
         "são paulo - sp"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041938,12 +1042314,15 @@
         "semana do meio ambiente",
         "discurso tarcísio semana do meio ambiente",
         "verde",
+        "meio ambiente",
         "jornal da tarde",
         "tv cultura",
         "são paulo - sp"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1041971,10 +1042350,13 @@
         "comércio ambulante",
         "boné do brasil",
         "laços do brasil",
-        "bexigas amarelo e verde"
+        "bexigas amarelo e verde",
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042003,10 +1042385,13 @@
         "criança na ubs",
         "mãe com bebê no colo",
         "recepção de hospital",
-        "recepção de ubs"
+        "recepção de ubs",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042033,10 +1042418,13 @@
         "detalhe sus estampado no jaleco",
         "mulher colocando blusa de frio de máscara",
         "criança na ubs",
-        "mãe com bebê no colo"
+        "mãe com bebê no colo",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042061,12 +1042449,12 @@
         "mão mexendo no celular",
         "tela de celular com chamadas telefonicas",
         "chamadas telefonicas spam",
-        "jornal da tarde",
-        "tv cultura",
-        "são paulo - sp"
+        "tecnologia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "tecnologia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042092,10 +1042480,13 @@
         "mulheres confeiteiras",
         "confeiteira ensinando a fazer doce",
         "mulheres prestando atenção na aula",
-        "confeiteira cozinhando"
+        "confeiteira cozinhando",
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042125,10 +1042516,13 @@
         "simulação alunos votando",
         "urna eleitoral",
         "mão votando",
-        "título de eleitor"
+        "título de eleitor",
+        "política"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042155,10 +1042549,13 @@
         "pessoas fazendo exercícios",
         "pessoas treinando perna",
         "pés correndo na esteira",
-        "instrutor de academia auxiliando"
+        "instrutor de academia auxiliando",
+        "saúde"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042184,10 +1042581,13 @@
         "placa toda criança merece ser criança",
         "crianças sentadas no pufe",
         "criança lendo livro sem identificar",
-        "criança mexendo os pés"
+        "criança mexendo os pés",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042213,10 +1042613,13 @@
         "placa toda criança merece ser criança",
         "crianças sentadas no pufe",
         "criança lendo livro sem identificar",
-        "criança mexendo os pés"
+        "criança mexendo os pés",
+        "educação"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "educação"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042238,20 +1042641,15 @@
         "maquete de prédio",
         "trianom masp",
         "placa fiesp ciesp sesi senai",
+        "economia",
         "jornal da tarde",
         "tv cultura",
-        "são paulo - sp",
-        "paulista",
-        "avenida",
-        "maquete",
-        "trianom",
-        "prédio",
-        "ciesp",
-        "fiesp",
-        "placa"
+        "são paulo - sp"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042273,20 +1042671,15 @@
         "maquete de prédio",
         "trianom masp",
         "placa fiesp ciesp sesi senai",
+        "economia",
         "jornal da tarde",
         "tv cultura",
-        "são paulo - sp",
-        "paulista",
-        "avenida",
-        "maquete",
-        "trianom",
-        "prédio",
-        "ciesp",
-        "fiesp",
-        "placa"
+        "são paulo - sp"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042311,12 +1042704,12 @@
         "pessoas na rua",
         "casal gay andando de mãos dadas na rua sem identificar",
         "placas de prevenção",
-        "jornal da tarde",
-        "tv cultura",
-        "são paulo - sp"
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042341,12 +1042734,12 @@
         "pessoas na rua",
         "casal gay andando de mãos dadas na rua sem identificar",
         "placas de prevenção",
-        "jornal da tarde",
-        "tv cultura",
-        "são paulo - sp"
+        "cotidiano"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042375,10 +1042768,13 @@
         "meninas desenhando no chão da rua",
         "mulher pendurando bandeira do brasil",
         "camisa do brasil",
-        "pessoas mexendo com tinta"
+        "pessoas mexendo com tinta",
+        "lazer"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "lazer"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1042438,12 +1042834,12 @@
         "carros passando na avenida paulista",
         "restaurante por dentro vazio",
         "quarto de hotel por dentro",
-        "jornal da tarde",
-        "tv cultura",
-        "são paulo - sp"
+        "economia"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1044218,6 +1044614,7 @@
       "manualTitle": "",
       "keywords": [
         "aeroporto internacional de foz do iguaçu",
+        "cotidiano",
         "jornal da cultura",
         "paraná - pr",
         "internacional",
@@ -1044225,7 +1044622,9 @@
         "iguaçu"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [
         "RENAN GOUVEIA"
@@ -1044244,6 +1044643,7 @@
       "manualTitle": "",
       "keywords": [
         "urna eletrônica na fronteira de foz do iguaçu",
+        "política",
         "jornal da cultura",
         "paraná - pr",
         "eletrônica",
@@ -1044252,7 +1044652,9 @@
         "urna"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "política"
+      ],
       "manualSubjects": [],
       "people": [
         "RENAN GOUVEIA"
@@ -1044271,11 +1044673,14 @@
       "manualTitle": "",
       "keywords": [
         "regata",
+        "esporte",
         "jornal da cultura",
         "pernambuco - pe"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "esporte"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1044292,6 +1044697,7 @@
       "manualTitle": "",
       "keywords": [
         "ave rara",
+        "meio ambiente",
         "ufsc",
         "catarina",
         "extinção",
@@ -1044304,11 +1044710,12 @@
         "florianópolis",
         "investigação",
         "catarinense",
-        "considerada",
-        "informações"
+        "considerada"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [
         "EXEMPLAR EMPALHADO DA AVE EM",
@@ -1044345,6 +1044752,7 @@
       "manualTitle": "",
       "keywords": [
         "museu agrolândia",
+        "cultura / arte",
         "colecionadora",
         "verdadeiro",
         "espaço",
@@ -1044357,11 +1044765,12 @@
         "estudantes",
         "particular",
         "apontador",
-        "batedeira",
-        "estrutura"
+        "batedeira"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cultura / arte"
+      ],
       "manualSubjects": [],
       "people": [
         "EVANDRO CLAUDIO",
@@ -1044399,6 +1044808,7 @@
       "manualTitle": "",
       "keywords": [
         "harmonia com a natureza",
+        "meio ambiente",
         "biólogo",
         "fardin",
         "flávio",
@@ -1044410,7 +1044820,9 @@
         "rio do sul - sc"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [
         "KELLY MARTINS"
@@ -1044434,19 +1044846,18 @@
       "manualTitle": "",
       "keywords": [
         "arara azul",
+        "meio ambiente",
         "instituto",
         "bióloga",
         "larissa",
         "tinoco",
         "arara",
-        "azul",
-        "jornal da cultura",
-        "mato grosso do sul - ms",
-        "campo grande",
-        "campo grande - ms"
+        "azul"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [
         "KELLY MARTINS"
@@ -1044467,6 +1044878,7 @@
       "manualTitle": "",
       "keywords": [
         "custo dos insumos",
+        "economia",
         "coopavel",
         "gerente",
         "insumos",
@@ -1044479,11 +1044891,12 @@
         "fábrica",
         "magrin",
         "sebold",
-        "sérgio",
-        "alceu"
+        "sérgio"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "economia"
+      ],
       "manualSubjects": [],
       "people": [
         "ANTONIELLA ORLANDI",
@@ -1044504,12 +1044917,15 @@
       "manualTitle": "",
       "keywords": [
         "canetas emagrecedoras",
+        "saúde",
         "jornal da cultura",
         "emagrecedoras",
         "canetas"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "saúde"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1044525,13 +1044941,16 @@
       "keywords": [
         "enchente",
         "chuvas",
+        "meio ambiente",
         "jornal da cultura",
         "paraná - pr",
         "vitória",
         "união"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1055480,6 +1055899,7 @@
       "keywords": [
         "aeroporto passageiros",
         "saguão aeroporto",
+        "cotidiano",
         "gonçalves",
         "mônica",
         "cancelamento",
@@ -1055491,11 +1055911,12 @@
         "advogada",
         "caroline",
         "direitos",
-        "algumas",
-        "definem"
+        "algumas"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "cotidiano"
+      ],
       "manualSubjects": [],
       "people": [
         "MARIANA RABELLO"
@@ -1056576,13 +1056997,16 @@
         "queimadas",
         "incêndio florestal",
         "bombeiros",
+        "meio ambiente",
         "jornal da cultura",
         "pará - pa",
         "florestal",
         "incêndio"
       ],
       "manualKeywords": [],
-      "subjects": [],
+      "subjects": [
+        "meio ambiente"
+      ],
       "manualSubjects": [],
       "people": [],
       "manualPeople": [],
@@ -1057873,6 +1058297,921 @@
       "organizations": [
         "Senado Federal",
         "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018684": {
+      "title": "Perigos Canetas Emagrecedoras Falsas",
+      "manualTitle": "",
+      "keywords": [
+        "perigos canetas emagrecedoras falsas",
+        "saúde",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go",
+        "emagrecedoras",
+        "canetas",
+        "perigos",
+        "falsas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "saúde"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "SOFIA MAGALHÃES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018685": {
+      "title": "Tomates",
+      "manualTitle": "",
+      "keywords": [
+        "takes tomates",
+        "preços tomates",
+        "alta no preço dos tomates",
+        "economia",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "BRUNELLE PORTELA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018686": {
+      "title": "Cinquanta — Chegada Computador Quantico no Brasil",
+      "manualTitle": "",
+      "keywords": [
+        "cinquanta",
+        "chegada computador quantico no brasil",
+        "tecnologia",
+        "jornal da cultura",
+        "tv miramar",
+        "paraíba - pb",
+        "computador",
+        "quantico",
+        "chegada",
+        "brasil"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "tecnologia"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "THAÍSA AURELIANO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "PARAÍBA - PB"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV MIRAMAR"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018687": {
+      "title": "Dicas Turismo nas Férias",
+      "manualTitle": "",
+      "keywords": [
+        "dicas turismo nas férias",
+        "turismo",
+        "lazer",
+        "jornal da cultura",
+        "mato grosso do sul - ms",
+        "campo grande",
+        "campo grande - ms",
+        "férias",
+        "dicas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "KELLY MARTINS"
+      ],
+      "manualPeople": [],
+      "places": [
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018688": {
+      "title": "Imagens Tornado no Rio Grande do Sul — Destruição",
+      "manualTitle": "",
+      "keywords": [
+        "destruição",
+        "meio ambiente",
+        "jornal da cultura",
+        "rio grande do sul - rs",
+        "tornado",
+        "grande"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "RIO GRANDE DO SUL - RS"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020896": {
+      "title": "Papai Noel — Evento Cartinhas de Natal 2026",
+      "manualTitle": "",
+      "keywords": [
+        "papai noel",
+        "evento cartinhas de natal 2026",
+        "evento natal correio 2026",
+        "natal",
+        "lazer",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020895": {
+      "title": "Papai Noel — Evento Cartinhas de Natal 2026",
+      "manualTitle": "",
+      "keywords": [
+        "papai noel",
+        "evento cartinhas de natal 2026",
+        "evento natal correio 2026",
+        "natal",
+        "lazer",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "lazer"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020892": {
+      "title": "Alunos Estudando para O Enem — Ensino Médio",
+      "manualTitle": "",
+      "keywords": [
+        "alunos estudando para o enem",
+        "ensino médio",
+        "adolescentes estudando na biblioteca",
+        "menina estudando no notebook",
+        "menina jogando no celular",
+        "menino estudando no tablet",
+        "cursinho preparatório enem",
+        "sala de aula cheia",
+        "professsor dando aula",
+        "close caderno de questões",
+        "alunos estudando",
+        "educação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020891": {
+      "title": "Sala de Aula — Professor Negro Dando Aula",
+      "manualTitle": "",
+      "keywords": [
+        "sala de aula",
+        "professor negro dando aula",
+        "ensino fundamental",
+        "escola pública",
+        "alunos estudando",
+        "alunos mexendo com peças",
+        "estudantes mexendo com elástico",
+        "letreiro sala de aula 4",
+        "pezinhos alunos no corredor",
+        "placa sala de recurso",
+        "painel sensorial",
+        "alunos autistas",
+        "alunos com tea pintando",
+        "alunos autista na sala de aula",
+        "alunos autista mexendo com blocos"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020890": {
+      "title": "Menina Fazendo Carinho nos Cachorros — Cachorro Brincando",
+      "manualTitle": "",
+      "keywords": [
+        "menina fazendo carinho nos cachorros",
+        "cachorro brincando",
+        "meio ambiente",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo",
+        "brincando",
+        "cachorros",
+        "cachorro",
+        "carinho",
+        "fazendo",
+        "menina"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "meio ambiente"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020885": {
+      "title": "Homem Trabalhando — Homem Mexendo no Celular",
+      "manualTitle": "",
+      "keywords": [
+        "homem trabalhando",
+        "homem mexendo no celular",
+        "homem mexendo no notebook",
+        "mulher trabalhando em escritório",
+        "idosa trabalhando no escritório",
+        "idosa mexendo no notebook",
+        "close mãos digitando",
+        "educação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020887": {
+      "title": "Sala de Aula — Alunos Estudando",
+      "manualTitle": "",
+      "keywords": [
+        "sala de aula",
+        "alunos estudando",
+        "professora escrevendo no quadro",
+        "língua portuguesa",
+        "oitavo ano",
+        "close menina escrevendo no carderno",
+        "profesora dando aula",
+        "alunos escrevendo no caderno",
+        "escola particular",
+        "alunos estudando com ipad",
+        "educação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020883": {
+      "title": "Homem Mexendo no Notebook na Biblioteca — Tela Computador Site Motherly",
+      "manualTitle": "",
+      "keywords": [
+        "homem mexendo no notebook na biblioteca",
+        "tela computador site motherly",
+        "close mão mexendo no celular",
+        "aplicativo motherly",
+        "mulher mexendo no celular",
+        "app motherly",
+        "tecnologia",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "tecnologia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020881": {
+      "title": "Pessoas Mexendo no Celular Sem Identificar",
+      "manualTitle": "",
+      "keywords": [
+        "pessoas mexendo no celular sem identificar",
+        "tecnologia",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo",
+        "identificar",
+        "celular",
+        "mexendo",
+        "pessoas"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "tecnologia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020878": {
+      "title": "Infraestrutura na Favelas — Esgotos na Favela",
+      "manualTitle": "",
+      "keywords": [
+        "infraestrutura na favelas",
+        "esgotos na favela",
+        "lixo na comunidade",
+        "beco na favela",
+        "água passando na favela",
+        "casas na comunidade",
+        "vielas na favela",
+        "idosa andando na favela com dificuldade",
+        "idosa com bengala subindo escadas na favela",
+        "ruas da favela",
+        "gambiarras dentro da favela",
+        "casas simples",
+        "cotidiano"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cotidiano"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020882": {
+      "title": "Professora Dando Aula na Biblioteca — Roda de Conversa na Biblioteca",
+      "manualTitle": "",
+      "keywords": [
+        "professora dando aula na biblioteca",
+        "roda de conversa na biblioteca",
+        "adolescentes tendo aula na biblioteca",
+        "educação",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020876": {
+      "title": "Professora Dando Aula na Biblioteca — Roda de Conversa na Biblioteca",
+      "manualTitle": "",
+      "keywords": [
+        "professora dando aula na biblioteca",
+        "roda de conversa na biblioteca",
+        "educação",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo",
+        "biblioteca",
+        "professora",
+        "conversa",
+        "dando",
+        "aula"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020875": {
+      "title": "Alunos Negros Estudando — Meninos Estudando",
+      "manualTitle": "",
+      "keywords": [
+        "alunos negros estudando",
+        "meninos estudando",
+        "close mão negra escrevendo",
+        "jovens estudando na biblioteca",
+        "menino desenhando o pelé",
+        "meninas estudando",
+        "jovens pintando cartaz",
+        "close mão pintando com giz de cera",
+        "close mão mexendo no notebook",
+        "educação"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020872": {
+      "title": "Pedreiro Trabalhando — Serviço de Obra",
+      "manualTitle": "",
+      "keywords": [
+        "pedreiro trabalhando",
+        "serviço de obra",
+        "homem trabalhando",
+        "furadeira",
+        "prédido em construção",
+        "grua de torre",
+        "operários",
+        "equipamentos de proteção",
+        "viga de ferro",
+        "máquinas de construção civil",
+        "cinto de ferramentas",
+        "porta-ferramentas",
+        "close cinturão de ferramentas",
+        "homem sentado na obra",
+        "cotidiano"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cotidiano"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020866": {
+      "title": "Planta Babosa — Planta Taioba",
+      "manualTitle": "",
+      "keywords": [
+        "planta babosa",
+        "planta taioba",
+        "tomilho",
+        "professora cuidando da horta comunitária",
+        "mulher mexendo com plantas",
+        "planta couve",
+        "planta couve manteiga",
+        "planta açafrão",
+        "planta cebolinha",
+        "horta comunitária",
+        "larva na planta",
+        "tomate",
+        "abelha na flor",
+        "criança mexendo na horta comunitária",
+        "professora com aluna na horta comunitária"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020865": {
+      "title": "Horta Comunitária — Horta Educativa",
+      "manualTitle": "",
+      "keywords": [
+        "horta comunitária",
+        "horta educativa",
+        "crianças comendo legumes que plantaram",
+        "crianças comendo sanduíche",
+        "sanduíche saudável",
+        "professora montando sanduíche de alface",
+        "educação",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020867": {
+      "title": "Prateleira com Panetones",
+      "manualTitle": "",
+      "keywords": [
+        "prateleira com panetones",
+        "economia",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo",
+        "prateleira",
+        "panetones"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020869": {
+      "title": "Massa de Panetone — Pessoas Fazendo Panetone na Fábrica",
+      "manualTitle": "",
+      "keywords": [
+        "massa de panetone",
+        "pessoas fazendo panetone na fábrica",
+        "fases e processos de fazer o panetone",
+        "fábrica de panetone",
+        "esteira de fábrica",
+        "pessoas trabalhando em fábrica",
+        "funcionários trabalahndo",
+        "penetone cru",
+        "mulher embalando panetone na fábrica",
+        "economia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020864": {
+      "title": "Massa de Panetone — Pessoas Fazendo Panetone na Fábrica",
+      "manualTitle": "",
+      "keywords": [
+        "massa de panetone",
+        "pessoas fazendo panetone na fábrica",
+        "fases e processos de fazer o panetone",
+        "fábrica de panetone",
+        "esteira de fábrica",
+        "pessoas trabalhando em fábrica",
+        "funcionários trabalahndo",
+        "penetone cru",
+        "mulher embalando panetone na fábrica",
+        "economia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020863": {
+      "title": "Adolescentes Estudando na Sala de Aula — Ensino Médio Estudando",
+      "manualTitle": "",
+      "keywords": [
+        "adolescentes estudando na sala de aula",
+        "ensino médio estudando",
+        "alunos na sala de aula",
+        "menina escrevendo na folha",
+        "menina lendo",
+        "estudantes escrevendo sem identificar",
+        "educação",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "educação"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020859": {
+      "title": "Mulher no Mercado — Idosa no Mercado",
+      "manualTitle": "",
+      "keywords": [
+        "mulher no mercado",
+        "idosa no mercado",
+        "homem no mercado",
+        "pessoas no mercado",
+        "maça",
+        "homem escolhendo alimentos",
+        "laranja",
+        "bananas",
+        "ovos",
+        "frango",
+        "casal de idosos no mercado",
+        "pão de forma",
+        "economia"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2822B020857": {
+      "title": "Famílias no Cemitério — Cataventos em Cima de Túmulos",
+      "manualTitle": "",
+      "keywords": [
+        "famílias no cemitério",
+        "cataventos em cima de túmulos",
+        "pessoas andando no cemitério",
+        "vela no túmulo",
+        "idosa no cemitério",
+        "cotidiano",
+        "jornal da tarde",
+        "tv cultura - sp",
+        "são paulo - sp",
+        "são paulo"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cotidiano"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "SÃO PAULO - SP",
+        "SÃO PAULO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - SP"
       ],
       "manualOrganizations": [],
       "segments": []

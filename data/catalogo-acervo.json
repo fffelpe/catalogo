@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T00:25:35.115Z",
-  "total": 41678,
+  "generatedAt": "2026-11-24T20:43:01.787Z",
+  "total": 41705,
   "registros": [
     {
       "ID": "2822B019835",
@@ -521550,7 +521550,7 @@
       "REPORTER": "JERÔNIMO VENÂNCIO",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {
         "2457B017781": "0:08:56"
@@ -521564,7 +521564,7 @@
       "REPORTER": "MARIANA MARTINS",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {
         "2457B017782": "0:03:29"
@@ -521606,7 +521606,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {
         "2457B017785": "0:02:42"
@@ -521662,7 +521662,7 @@
       "REPORTER": "RAFAEL MESQUITA",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {
         "2457B017789": "0:02:20"
@@ -521676,7 +521676,7 @@
       "REPORTER": "MANU WINDER",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {
         "2457B017790": "0:02:17"
@@ -521704,7 +521704,7 @@
       "REPORTER": "ANDRESSA CALASSI",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {
         "2457B017792": "0:02:43"
@@ -521718,7 +521718,7 @@
       "REPORTER": "ANDRESSA CALASSI",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {
         "2457B017793": "0:02:23"
@@ -521732,7 +521732,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {
         "2457B017794": "0:02:30"
@@ -521746,7 +521746,7 @@
       "REPORTER": "BRUNELLE PORTELA",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {
         "2457B017795": "0:00:59"
@@ -521774,7 +521774,7 @@
       "REPORTER": "MANU WINDER",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {
         "2457B017802": "0:01:51"
@@ -521788,7 +521788,7 @@
       "REPORTER": "RAFAEL MESQUITA",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "AGRONEGÓCIO",
       "PGM": "",
       "DURACOES": {
         "2457B017803": "0:02:37"
@@ -521816,7 +521816,7 @@
       "REPORTER": "BRUNELLE PORTELA",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {
         "2457B017805": "0:02:47"
@@ -524222,7 +524222,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524234,7 +524234,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524258,7 +524258,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524270,7 +524270,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524282,7 +524282,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524306,7 +524306,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524318,7 +524318,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524330,7 +524330,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524342,7 +524342,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524354,7 +524354,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524366,7 +524366,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524378,7 +524378,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524414,7 +524414,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524426,7 +524426,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524438,7 +524438,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524450,7 +524450,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524462,7 +524462,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524474,7 +524474,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524486,7 +524486,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524498,7 +524498,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524510,7 +524510,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524522,7 +524522,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524534,7 +524534,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524546,7 +524546,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524558,7 +524558,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524570,7 +524570,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524582,7 +524582,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524594,7 +524594,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524606,7 +524606,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524618,7 +524618,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524630,7 +524630,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524642,7 +524642,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524654,7 +524654,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524666,7 +524666,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524678,7 +524678,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524690,7 +524690,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524702,7 +524702,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524714,7 +524714,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524726,7 +524726,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524738,7 +524738,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524750,7 +524750,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524762,7 +524762,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "TECNOLOGIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524774,7 +524774,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524786,7 +524786,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "TECNOLOGIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524798,7 +524798,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524810,7 +524810,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "TECNOLOGIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524822,7 +524822,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524834,7 +524834,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524846,7 +524846,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524858,7 +524858,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524870,7 +524870,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524882,7 +524882,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524894,7 +524894,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524906,7 +524906,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524918,7 +524918,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524930,7 +524930,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524942,7 +524942,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524954,7 +524954,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524966,7 +524966,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524978,7 +524978,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "TECNOLOGIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -524990,7 +524990,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525002,7 +525002,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525014,7 +525014,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525490,7 +525490,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA DO RIO- RJ",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525502,7 +525502,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525514,7 +525514,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525526,7 +525526,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "LAZER",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525538,7 +525538,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525550,7 +525550,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525562,7 +525562,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525574,7 +525574,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525586,7 +525586,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525598,7 +525598,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525610,7 +525610,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525622,7 +525622,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525634,7 +525634,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525646,7 +525646,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525658,7 +525658,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525670,7 +525670,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525682,7 +525682,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525694,7 +525694,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525706,7 +525706,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525718,7 +525718,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525730,7 +525730,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525742,7 +525742,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525754,7 +525754,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525766,7 +525766,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525778,7 +525778,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525790,7 +525790,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525802,7 +525802,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525814,7 +525814,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525826,7 +525826,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525838,7 +525838,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525850,7 +525850,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525862,7 +525862,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525874,7 +525874,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525886,7 +525886,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525898,7 +525898,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525910,7 +525910,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525922,7 +525922,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525934,7 +525934,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525946,7 +525946,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525958,7 +525958,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525970,7 +525970,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525982,7 +525982,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -525994,7 +525994,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "TECNOLOGIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526006,7 +526006,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526018,7 +526018,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526030,7 +526030,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526042,7 +526042,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526054,7 +526054,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526066,7 +526066,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526078,7 +526078,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526090,7 +526090,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526102,7 +526102,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526114,7 +526114,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526126,7 +526126,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526138,7 +526138,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526150,7 +526150,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526162,7 +526162,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526174,7 +526174,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526186,7 +526186,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526198,7 +526198,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526210,7 +526210,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526222,7 +526222,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526234,7 +526234,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526246,7 +526246,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526258,7 +526258,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526270,7 +526270,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526282,7 +526282,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526294,7 +526294,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526306,7 +526306,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526318,7 +526318,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526330,7 +526330,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526342,7 +526342,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526354,7 +526354,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526366,7 +526366,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526378,7 +526378,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526390,7 +526390,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526402,7 +526402,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526414,7 +526414,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526426,7 +526426,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526438,7 +526438,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526450,7 +526450,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526462,7 +526462,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526474,7 +526474,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526486,7 +526486,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526498,7 +526498,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526510,7 +526510,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526522,7 +526522,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526534,7 +526534,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "LAZER",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526546,7 +526546,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "LAZER",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526558,7 +526558,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526570,7 +526570,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526582,7 +526582,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526594,7 +526594,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526606,7 +526606,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526618,7 +526618,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526630,7 +526630,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526642,7 +526642,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526654,7 +526654,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526666,7 +526666,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526678,7 +526678,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526690,7 +526690,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526702,7 +526702,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526714,7 +526714,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526726,7 +526726,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526738,7 +526738,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526750,7 +526750,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526762,7 +526762,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526774,7 +526774,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526786,7 +526786,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526798,7 +526798,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "TECNOLOGIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526810,7 +526810,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526822,7 +526822,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526834,7 +526834,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526846,7 +526846,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526858,7 +526858,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526870,7 +526870,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526882,7 +526882,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA - SP",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SEGURANÇA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526894,7 +526894,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526906,7 +526906,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526918,7 +526918,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526930,7 +526930,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526942,7 +526942,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526954,7 +526954,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526966,7 +526966,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526978,7 +526978,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -526990,7 +526990,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527002,7 +527002,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527014,7 +527014,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527026,7 +527026,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527038,7 +527038,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "TECNOLOGIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527050,7 +527050,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527062,7 +527062,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527074,7 +527074,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527086,7 +527086,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527098,7 +527098,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "EDUCAÇÃO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527110,7 +527110,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527122,7 +527122,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527134,7 +527134,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527146,7 +527146,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527158,7 +527158,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "LAZER",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527182,7 +527182,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "TV CULTURA",
       "PROGRAMA": "JORNAL DA TARDE",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {}
     },
@@ -527864,7 +527864,7 @@
       "REPORTER": "RENAN GOUVEIA",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {
         "2457B018117": "0:02:52"
@@ -527878,7 +527878,7 @@
       "REPORTER": "RENAN GOUVEIA",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "POLÍTICA",
       "PGM": "",
       "DURACOES": {
         "2457B018118": "0:01:57"
@@ -527892,7 +527892,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ESPORTE",
       "PGM": "",
       "DURACOES": {
         "2457B018119": "0:01:58"
@@ -527906,7 +527906,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {
         "2457B018120": "0:04:11"
@@ -527920,7 +527920,7 @@
       "REPORTER": "EVANDRO CLAUDIO",
       "AFILIADA_EMISSORA": "RBA TV",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "CULTURA / ARTE",
       "PGM": "",
       "DURACOES": {
         "2457B018121": "0:04:30"
@@ -527934,7 +527934,7 @@
       "REPORTER": "KELLY MARTINS",
       "AFILIADA_EMISSORA": "RBA TV",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {
         "2457B018122": "0:02:38"
@@ -527948,7 +527948,7 @@
       "REPORTER": "KELLY MARTINS",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {
         "2457B018123": "0:03:31"
@@ -527962,7 +527962,7 @@
       "REPORTER": "ANTONIELLA ORLANDI",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "ECONOMIA",
       "PGM": "",
       "DURACOES": {
         "2457B018124": "0:08:23"
@@ -527976,7 +527976,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "SAÚDE",
       "PGM": "",
       "DURACOES": {
         "2457B018125": "0:03:48"
@@ -527990,7 +527990,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {
         "2457B018126": "0:04:10"
@@ -532114,7 +532114,7 @@
       "REPORTER": "MARIANA RABELLO",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {
         "2457B018504": "00:03:21"
@@ -532561,7 +532561,7 @@
       "REPORTER": "",
       "AFILIADA_EMISSORA": "",
       "PROGRAMA": "JORNAL DA CULTURA",
-      "EDITORIA": "",
+      "EDITORIA": "MEIO AMBIENTE",
       "PGM": "",
       "DURACOES": {
         "2457B018544": "00:01:27"
@@ -533076,6 +533076,330 @@
       "AFILIADA_EMISSORA": "TV SENADO",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018684",
+      "DESCRICAO": "PERIGOS CANETAS EMAGRECEDORAS FALSAS",
+      "DATA": "23/11/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "SOFIA MAGALHÃES",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SAÚDE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018685",
+      "DESCRICAO": "TAKES TOMATES + PREÇOS TOMATES + ALTA NO PREÇO DOS TOMATES",
+      "DATA": "23/11/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "BRUNELLE PORTELA",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018686",
+      "DESCRICAO": "CINQUANTA + CHEGADA COMPUTADOR QUANTICO NO BRASIL",
+      "DATA": "20/11/2026",
+      "LOCAL": "PARAÍBA - PB",
+      "REPORTER": "THAÍSA AURELIANO",
+      "AFILIADA_EMISSORA": "TV MIRAMAR",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "TECNOLOGIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018687",
+      "DESCRICAO": "DICAS TURISMO NAS FÉRIAS + TURISMO",
+      "DATA": "19/11/2026",
+      "LOCAL": "MATO GROSSO DO SUL - MS",
+      "REPORTER": "KELLY MARTINS",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018688",
+      "DESCRICAO": "GERAIS IMAGENS TORNADO NO RIO GRANDE DO SUL + DESTRUIÇÃO",
+      "DATA": "20/11/2026",
+      "LOCAL": "RIO GRANDE DO SUL - RS",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020896",
+      "DESCRICAO": "PAPAI NOEL + EVENTO CARTINHAS DE NATAL 2026 + EVENTO NATAL CORREIO 2026 + NATAL",
+      "DATA": "06/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020895",
+      "DESCRICAO": "PAPAI NOEL + EVENTO CARTINHAS DE NATAL 2026 + EVENTO NATAL CORREIO 2026 + NATAL",
+      "DATA": "06/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "LAZER",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020892",
+      "DESCRICAO": "ALUNOS ESTUDANDO PARA O ENEM + ENSINO MÉDIO + ADOLESCENTES ESTUDANDO NA BIBLIOTECA + MENINA ESTUDANDO NO NOTEBOOK + MENINA JOGANDO NO CELULAR + MENINO ESTUDANDO NO TABLET + CURSINHO PREPARATÓRIO ENEM + SALA DE AULA CHEIA + PROFESSSOR DANDO AULA + CLOSE CADERNO DE QUESTÕES + ALUNOS ESTUDANDO",
+      "DATA": "06/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020891",
+      "DESCRICAO": "SALA DE AULA + PROFESSOR NEGRO DANDO AULA + ENSINO FUNDAMENTAL + ESCOLA PÚBLICA + ALUNOS ESTUDANDO + ALUNOS MEXENDO COM PEÇAS + ESTUDANTES MEXENDO COM ELÁSTICO + LETREIRO SALA DE AULA 4 + PEZINHOS ALUNOS NO CORREDOR + PLACA SALA DE RECURSO + PAINEL SENSORIAL + ALUNOS AUTISTAS + ALUNOS COM TEA PINTANDO + ALUNOS AUTISTA NA SALA DE AULA + ALUNOS AUTISTA MEXENDO COM BLOCOS",
+      "DATA": "06/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020890",
+      "DESCRICAO": "MENINA FAZENDO CARINHO NOS CACHORROS + CACHORRO BRINCANDO",
+      "DATA": "06/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "MEIO AMBIENTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020885",
+      "DESCRICAO": "HOMEM TRABALHANDO + HOMEM MEXENDO NO CELULAR + HOMEM MEXENDO NO NOTEBOOK + MULHER TRABALHANDO EM ESCRITÓRIO + IDOSA TRABALHANDO NO ESCRITÓRIO + IDOSA MEXENDO NO NOTEBOOK + CLOSE MÃOS DIGITANDO",
+      "DATA": "05/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020887",
+      "DESCRICAO": "SALA DE AULA + ALUNOS ESTUDANDO + PROFESSORA ESCREVENDO NO QUADRO + LÍNGUA PORTUGUESA + OITAVO ANO + CLOSE MENINA ESCREVENDO NO CARDERNO + PROFESORA DANDO AULA + ALUNOS ESCREVENDO NO CADERNO + ESCOLA PARTICULAR + ALUNOS ESTUDANDO COM IPAD",
+      "DATA": "05/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020883",
+      "DESCRICAO": "HOMEM MEXENDO NO NOTEBOOK NA BIBLIOTECA + TELA COMPUTADOR SITE MOTHERLY + CLOSE MÃO MEXENDO NO CELULAR + APLICATIVO MOTHERLY + MULHER MEXENDO NO CELULAR + APP MOTHERLY",
+      "DATA": "05/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "TECNOLOGIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020881",
+      "DESCRICAO": "PESSOAS MEXENDO NO CELULAR SEM IDENTIFICAR",
+      "DATA": "04/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "TECNOLOGIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020878",
+      "DESCRICAO": "INFRAESTRUTURA NA FAVELAS + ESGOTOS NA FAVELA + LIXO NA COMUNIDADE + BECO NA FAVELA + ÁGUA PASSANDO NA FAVELA + CASAS NA COMUNIDADE + VIELAS NA FAVELA + IDOSA ANDANDO NA FAVELA COM DIFICULDADE + IDOSA COM BENGALA SUBINDO ESCADAS NA FAVELA + RUAS DA FAVELA + GAMBIARRAS DENTRO DA FAVELA + CASAS SIMPLES",
+      "DATA": "04/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "COTIDIANO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020882",
+      "DESCRICAO": "PROFESSORA DANDO AULA NA BIBLIOTECA + RODA DE CONVERSA NA BIBLIOTECA + ADOLESCENTES TENDO AULA NA BIBLIOTECA",
+      "DATA": "04/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020876",
+      "DESCRICAO": "PROFESSORA DANDO AULA NA BIBLIOTECA + RODA DE CONVERSA NA BIBLIOTECA",
+      "DATA": "04/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020875",
+      "DESCRICAO": "ALUNOS NEGROS ESTUDANDO + MENINOS ESTUDANDO + CLOSE MÃO NEGRA ESCREVENDO + JOVENS ESTUDANDO NA BIBLIOTECA + MENINO DESENHANDO O PELÉ + MENINAS ESTUDANDO + JOVENS PINTANDO CARTAZ + CLOSE MÃO PINTANDO COM GIZ DE CERA + CLOSE MÃO MEXENDO NO NOTEBOOK",
+      "DATA": "04/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020872",
+      "DESCRICAO": "PEDREIRO TRABALHANDO + SERVIÇO DE OBRA + HOMEM TRABALHANDO + FURADEIRA + PRÉDIDO EM CONSTRUÇÃO + GRUA DE TORRE + OPERÁRIOS + EQUIPAMENTOS DE PROTEÇÃO + VIGA DE FERRO + MÁQUINAS DE CONSTRUÇÃO CIVIL + CINTO DE FERRAMENTAS + PORTA-FERRAMENTAS + CLOSE CINTURÃO DE FERRAMENTAS + HOMEM SENTADO NA OBRA",
+      "DATA": "04/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "COTIDIANO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020866",
+      "DESCRICAO": "PLANTA BABOSA + PLANTA TAIOBA + TOMILHO + PROFESSORA CUIDANDO DA HORTA COMUNITÁRIA + MULHER MEXENDO COM PLANTAS + PLANTA COUVE + PLANTA COUVE MANTEIGA + PLANTA AÇAFRÃO + PLANTA CEBOLINHA + HORTA COMUNITÁRIA + LARVA NA PLANTA + TOMATE + ABELHA NA FLOR + CRIANÇA MEXENDO NA HORTA COMUNITÁRIA + PROFESSORA COM ALUNA NA HORTA COMUNITÁRIA + MENINA SEGURANDO INSETO + MENINA REGANDO HORTA COMUNITÁRIA + MENINA COLHENDO TOMATE + MENINA COMENDO TOMATE + CLOSE MÃO INFANTIL SEGURANDO MINHOCA",
+      "DATA": "03/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020865",
+      "DESCRICAO": "HORTA COMUNITÁRIA + HORTA EDUCATIVA + CRIANÇAS COMENDO LEGUMES QUE PLANTARAM + CRIANÇAS COMENDO SANDUÍCHE + SANDUÍCHE SAUDÁVEL + PROFESSORA MONTANDO SANDUÍCHE DE ALFACE",
+      "DATA": "03/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020867",
+      "DESCRICAO": "PRATELEIRA COM PANETONES",
+      "DATA": "03/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020869",
+      "DESCRICAO": "MASSA DE PANETONE + PESSOAS FAZENDO PANETONE NA FÁBRICA + FASES E PROCESSOS DE FAZER O PANETONE + FÁBRICA DE PANETONE + ESTEIRA DE FÁBRICA + PESSOAS TRABALHANDO EM FÁBRICA + FUNCIONÁRIOS TRABALAHNDO + PENETONE CRU + MULHER EMBALANDO PANETONE NA FÁBRICA",
+      "DATA": "03/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020864",
+      "DESCRICAO": "MASSA DE PANETONE + PESSOAS FAZENDO PANETONE NA FÁBRICA + FASES E PROCESSOS DE FAZER O PANETONE + FÁBRICA DE PANETONE + ESTEIRA DE FÁBRICA + PESSOAS TRABALHANDO EM FÁBRICA + FUNCIONÁRIOS TRABALAHNDO + PENETONE CRU + MULHER EMBALANDO PANETONE NA FÁBRICA",
+      "DATA": "03/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020863",
+      "DESCRICAO": "ADOLESCENTES ESTUDANDO NA SALA DE AULA + ENSINO MÉDIO ESTUDANDO + ALUNOS NA SALA DE AULA + MENINA ESCREVENDO NA FOLHA + MENINA LENDO + ESTUDANTES ESCREVENDO SEM IDENTIFICAR",
+      "DATA": "03/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "EDUCAÇÃO",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020859",
+      "DESCRICAO": "MULHER NO MERCADO + IDOSA NO MERCADO + HOMEM NO MERCADO + PESSOAS NO MERCADO + MAÇA + HOMEM ESCOLHENDO ALIMENTOS + LARANJA + BANANAS + OVOS + FRANGO + CASAL DE IDOSOS NO MERCADO + PÃO DE FORMA",
+      "DATA": "02/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2822B020857",
+      "DESCRICAO": "FAMÍLIAS NO CEMITÉRIO + CATAVENTOS EM CIMA DE TÚMULOS + PESSOAS ANDANDO NO CEMITÉRIO + VELA NO TÚMULO + IDOSA NO CEMITÉRIO",
+      "DATA": "02/11/2026",
+      "LOCAL": "SÃO PAULO - SP",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV CULTURA - SP",
+      "PROGRAMA": "JORNAL DA TARDE",
+      "EDITORIA": "COTIDIANO",
       "PGM": "",
       "DURACOES": {}
     }
