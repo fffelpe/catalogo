@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T21:51:56.232Z",
+  "generatedAt": "2026-11-24T00:26:13.046Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1057643,6 +1057643,236 @@
       "manualPlaces": [],
       "organizations": [
         "TV UNESP / SP"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018677": {
+      "title": "Combate A Dengue",
+      "manualTitle": "",
+      "keywords": [
+        "combate a dengue",
+        "saúde",
+        "jornal da cultura",
+        "catve - pr",
+        "paraná - pr",
+        "combate",
+        "dengue"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "saúde"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "PARANÁ - PR"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "CATVE - PR"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018678": {
+      "title": "Feriado de Consciência Negra — Drone",
+      "manualTitle": "",
+      "keywords": [
+        "feriado de consciência negra",
+        "carros nas estradas",
+        "polícia rodoviária federal",
+        "policiais rodoviários",
+        "prf",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018679": {
+      "title": "Novembro Prematuro — Bebês Prematuros",
+      "manualTitle": "",
+      "keywords": [
+        "novembro prematuro",
+        "bebês prematuros",
+        "bebês entubados",
+        "maternidade",
+        "mãe com bebe no colo",
+        "saúde",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "saúde"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018680": {
+      "title": "Feriado de Consciência Negra — Cultura Afro",
+      "manualTitle": "",
+      "keywords": [
+        "feriado de consciência negra",
+        "cultura afro",
+        "afrodescendentes",
+        "cultura / arte",
+        "jornal da cultura",
+        "tv cultura - rj",
+        "rio de janeiro - rj",
+        "niterói",
+        "niterói - rj"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "cultura / arte"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "RODRIGO GOMES"
+      ],
+      "manualPeople": [],
+      "places": [
+        "RIO DE JANEIRO - RJ",
+        "NITERÓI",
+        "NITERÓI - RJ"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV CULTURA - RJ"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018681": {
+      "title": "Subsídio do Diesel — Carros nas Estradas",
+      "manualTitle": "",
+      "keywords": [
+        "subsídio do diesel",
+        "carros nas estradas",
+        "caminhões nas estradas",
+        "economia",
+        "jornal da cultura",
+        "tv brasil central",
+        "goiás - go",
+        "goiânia",
+        "goiânia - go"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "economia"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "GOIÁS - GO",
+        "GOIÂNIA",
+        "GOIÂNIA - GO"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV BRASIL CENTRAL"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018682": {
+      "title": "Senador Alessandro Vieira",
+      "manualTitle": "",
+      "keywords": [
+        "senador alessandro vieira",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "alessandro",
+        "senador",
+        "vieira"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "2457B018683": {
+      "title": "Presidente do Senado Davi Alcolumbre",
+      "manualTitle": "",
+      "keywords": [
+        "presidente do senado davi alcolumbre",
+        "política",
+        "jornal da cultura",
+        "tv senado",
+        "brasília - df",
+        "alcolumbre",
+        "presidente",
+        "senado",
+        "davi"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "política"
+      ],
+      "manualSubjects": [],
+      "people": [],
+      "manualPeople": [],
+      "places": [
+        "BRASÍLIA - DF"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "Senado Federal",
+        "TV SENADO"
       ],
       "manualOrganizations": [],
       "segments": []

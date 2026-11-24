@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T21:51:19.355Z",
-  "total": 41671,
+  "generatedAt": "2026-11-24T00:25:35.115Z",
+  "total": 41678,
   "registros": [
     {
       "ID": "2822B019835",
@@ -532993,6 +532993,90 @@
       "PROGRAMA": "AGROCULTURA",
       "EDITORIA": "AGRONEGÓCIO",
       "PGM": "390",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018677",
+      "DESCRICAO": "COMBATE A DENGUE",
+      "DATA": "19/11/2026",
+      "LOCAL": "PARANÁ - PR",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "CATVE - PR",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SAÚDE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018678",
+      "DESCRICAO": "FERIADO DE CONSCIÊNCIA NEGRA + TAKE DRONE + CARROS NAS ESTRADAS + POLÍCIA RODOVIÁRIA FEDERAL + POLICIAIS RODOVIÁRIOS + PRF",
+      "DATA": "20/11/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018679",
+      "DESCRICAO": "NOVEMBRO PREMATURO + BEBÊS PREMATUROS + BEBÊS ENTUBADOS + MATERNIDADE + MÃE COM BEBE NO COLO",
+      "DATA": "19/11/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "SAÚDE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018680",
+      "DESCRICAO": "FERIADO DE CONSCIÊNCIA NEGRA + CULTURA AFRO + AFRODESCENDENTES",
+      "DATA": "19/11/2026",
+      "LOCAL": "RIO DE JANEIRO - RJ",
+      "REPORTER": "RODRIGO GOMES",
+      "AFILIADA_EMISSORA": "TV CULTURA - RJ",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "CULTURA / ARTE",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018681",
+      "DESCRICAO": "SUBSÍDIO DO DIESEL + CARROS NAS ESTRADAS + CAMINHÕES NAS ESTRADAS",
+      "DATA": "19/11/2026",
+      "LOCAL": "GOIÁS - GO",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "ECONOMIA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018682",
+      "DESCRICAO": "SENADOR ALESSANDRO VIEIRA",
+      "DATA": "18/11/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV SENADO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "2457B018683",
+      "DESCRICAO": "PRESIDENTE DO SENADO DAVI ALCOLUMBRE",
+      "DATA": "18/11/2026",
+      "LOCAL": "BRASÍLIA - DF",
+      "REPORTER": "",
+      "AFILIADA_EMISSORA": "TV SENADO",
+      "PROGRAMA": "JORNAL DA CULTURA",
+      "EDITORIA": "POLÍTICA",
+      "PGM": "",
       "DURACOES": {}
     }
   ]
