@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T20:43:25.180Z",
+  "generatedAt": "2026-11-25T03:47:44.902Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1032088,13 +1032088,14 @@
       "keywords": [
         "evento onu desastres naturais foz do iguaçu",
         "cotidiano",
-        "gouvêa",
         "iguaçu",
-        "renan",
         "comandante-geral",
         "bombeiros",
         "paraná",
-        "corpo"
+        "corpo",
+        "jornal da cultura",
+        "catve - pr",
+        "paraná - pr"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1032102,6 +1032103,7 @@
       ],
       "manualSubjects": [],
       "people": [
+        "RENAN GOUVÊA",
         "Coronel Antônio Geraldo Hiller Lino"
       ],
       "manualPeople": [],
@@ -1058307,15 +1058309,19 @@
       "keywords": [
         "perigos canetas emagrecedoras falsas",
         "saúde",
-        "jornal da cultura",
-        "tv brasil central",
-        "goiás - go",
-        "goiânia",
-        "goiânia - go",
-        "emagrecedoras",
-        "canetas",
-        "perigos",
-        "falsas"
+        "nutróloga",
+        "inspetor",
+        "rustigel",
+        "dayane",
+        "prf-go",
+        "victor",
+        "vilela",
+        "comercializadas",
+        "emagracedoras",
+        "autorização",
+        "apreensões",
+        "rodoviária",
+        "apreensão"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1058346,11 +1058352,17 @@
         "preços tomates",
         "alta no preço dos tomates",
         "economia",
-        "jornal da cultura",
-        "tv brasil central",
-        "goiás - go",
-        "goiânia",
-        "goiânia - go"
+        "estabelecimentos",
+        "consumidor",
+        "encontrou",
+        "pesquisar",
+        "abusivas",
+        "pesquisa",
+        "práticas",
+        "variação",
+        "comprar",
+        "orienta",
+        "produto"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1058358,7 +1058370,8 @@
       ],
       "manualSubjects": [],
       "people": [
-        "BRUNELLE PORTELA"
+        "BRUNELLE PORTELA",
+        "MARCO PALMERSTON SUP. PROCON GOIÁS"
       ],
       "manualPeople": [],
       "places": [
@@ -1058380,13 +1058393,18 @@
         "cinquanta",
         "chegada computador quantico no brasil",
         "tecnologia",
-        "jornal da cultura",
-        "tv miramar",
-        "paraíba - pb",
-        "computador",
-        "quantico",
-        "chegada",
-        "brasil"
+        "governador",
+        "ribeiro",
+        "lucas",
+        "paraíba",
+        "pessoa",
+        "joão",
+        "internacional",
+        "segunda-feira",
+        "computadores",
+        "informações",
+        "tecnologias",
+        "acompanhou"
       ],
       "manualKeywords": [],
       "subjects": [
@@ -1058394,7 +1058412,9 @@
       ],
       "manualSubjects": [],
       "people": [
-        "THAÍSA AURELIANO"
+        "THAÍSA AURELIANO",
+        "CLÁUDIO FURTADO",
+        "ULISSES FERREIRA"
       ],
       "manualPeople": [],
       "places": [
@@ -1059213,6 +1059233,62 @@
       "organizations": [
         "TV CULTURA - SP"
       ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005651": {
+      "title": "Vt Alcool Milho Ms",
+      "manualTitle": "",
+      "keywords": [
+        "vt alcool milho ms",
+        "agrocultura",
+        "tve / ms",
+        "campo grande",
+        "mato grosso do sul - ms",
+        "campo grande - ms",
+        "alcool",
+        "milho"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "ELAINE SILVA"
+      ],
+      "manualPeople": [],
+      "places": [
+        "CAMPO GRANDE",
+        "MATO GROSSO DO SUL - MS",
+        "CAMPO GRANDE - MS"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TVE / MS"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005650": {
+      "title": "Vt Concertina",
+      "manualTitle": "",
+      "keywords": [
+        "vt concertina",
+        "agrocultura",
+        "espírito santo - es",
+        "concertina"
+      ],
+      "manualKeywords": [],
+      "subjects": [],
+      "manualSubjects": [],
+      "people": [
+        "BRUNO FAUSTINO"
+      ],
+      "manualPeople": [],
+      "places": [
+        "ESPÍRITO SANTO - ES"
+      ],
+      "manualPlaces": [],
+      "organizations": [],
       "manualOrganizations": [],
       "segments": []
     }

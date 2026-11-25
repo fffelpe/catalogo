@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T20:43:01.787Z",
-  "total": 41705,
+  "generatedAt": "2026-11-25T03:47:19.580Z",
+  "total": 41707,
   "registros": [
     {
       "ID": "2822B019835",
@@ -523239,7 +523239,7 @@
       "DESCRICAO": "EVENTO ONU DESASTRES NATURAIS FOZ DO IGUAÇU",
       "DATA": "09/07/2026",
       "LOCAL": "PARANÁ - PR",
-      "REPORTER": "",
+      "REPORTER": "RENAN GOUVÊA",
       "AFILIADA_EMISSORA": "CATVE - PR",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "COTIDIANO",
@@ -528461,7 +528461,7 @@
       "DESCRICAO": "BOXE CONSTRUINDO CAMPEÕES",
       "DATA": "30/09/2026",
       "LOCAL": "GOIÁS - GO",
-      "REPORTER": "",
+      "REPORTER": "BRUNELLE PORTELA",
       "AFILIADA_EMISSORA": "TV BRASIL CENTRAL",
       "PROGRAMA": "JORNAL DA CULTURA",
       "EDITORIA": "ESPORTE",
@@ -533401,6 +533401,30 @@
       "PROGRAMA": "JORNAL DA TARDE",
       "EDITORIA": "COTIDIANO",
       "PGM": "",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005651",
+      "DESCRICAO": "VT ALCOOL MILHO MS",
+      "DATA": "28/11/2026",
+      "LOCAL": "",
+      "REPORTER": "ELAINE SILVA",
+      "AFILIADA_EMISSORA": "TVE / MS",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "391",
+      "DURACOES": {}
+    },
+    {
+      "ID": "1452B005650",
+      "DESCRICAO": "VT CONCERTINA",
+      "DATA": "28/11/2026",
+      "LOCAL": "",
+      "REPORTER": "BRUNO FAUSTINO",
+      "AFILIADA_EMISSORA": "",
+      "PROGRAMA": "AGROCULTURA",
+      "EDITORIA": "",
+      "PGM": "391",
       "DURACOES": {}
     }
   ]

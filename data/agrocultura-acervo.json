@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T21:51:40.044Z",
+  "generatedAt": "2026-11-25T03:47:33.983Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,13 +24,43 @@
     ]
   },
   "resumo": {
-    "materiais": 2120,
-    "vts": 751,
+    "materiais": 2122,
+    "vts": 753,
     "noticias": 385,
     "coberturas": 987,
     "coberturaDuplicadosExcluidos": 428
   },
   "vts": [
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "2026",
+      "id": "1452B005651",
+      "ids": [
+        "1452B005651"
+      ],
+      "descricao": "VT ALCOOL MILHO MS",
+      "reporter": "ELAINE SILVA",
+      "data": "28/11/2026",
+      "local": "",
+      "pgm": "391",
+      "afiliada": "TVE / MS"
+    },
+    {
+      "tipo": "vt",
+      "origem": "MATÉRIAS QUE FORAM AO AR_",
+      "aba": "VTS FAUSTINO",
+      "id": "1452B005650",
+      "ids": [
+        "1452B005650"
+      ],
+      "descricao": "VT CONCERTINA",
+      "reporter": "BRUNO FAUSTINO",
+      "data": "28/11/2026",
+      "local": "",
+      "pgm": "391",
+      "afiliada": ""
+    },
     {
       "tipo": "vt",
       "origem": "MATÉRIAS QUE FORAM AO AR_",
