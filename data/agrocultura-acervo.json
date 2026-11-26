@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T03:47:33.983Z",
+  "generatedAt": "2026-11-26T23:08:45.358Z",
   "parcial": false,
   "errosFontes": {
     "vts": null,
@@ -24,9 +24,9 @@
     ]
   },
   "resumo": {
-    "materiais": 2122,
+    "materiais": 2124,
     "vts": 753,
-    "noticias": 385,
+    "noticias": 387,
     "coberturas": 987,
     "coberturaDuplicadosExcluidos": 428
   },
@@ -11328,6 +11328,36 @@
     }
   ],
   "noticias": [
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2026",
+      "id": "1452B005666",
+      "ids": [
+        "1452B005666"
+      ],
+      "descricao": "83ª FEIRA AGROPECUÁRIA DO NORDESTE",
+      "reporter": "VICTÓRIA CAMPOS",
+      "data": "28/11/2026",
+      "local": "PERNAMBUCO - PE",
+      "pgm": "391",
+      "afiliada": "TV NOVA"
+    },
+    {
+      "tipo": "noticias",
+      "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",
+      "aba": "2026",
+      "id": "1452B005659",
+      "ids": [
+        "1452B005659"
+      ],
+      "descricao": "TORNADO RIO GRANDE DO SUL + PERDA LAVOURAS +",
+      "reporter": "PATRÍCIA ALBUQUERQUE",
+      "data": "28/11/2026",
+      "local": "SANTA CATARINA - SC",
+      "pgm": "391",
+      "afiliada": "UB PLAY"
+    },
     {
       "tipo": "noticias",
       "origem": "NOTÍCIAS E OUTRAS NOTÍCIAS QUE FORAM AO AR",

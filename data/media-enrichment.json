@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T03:47:44.902Z",
+  "generatedAt": "2026-11-26T23:08:56.477Z",
   "items": {
     "2822B019835": {
       "title": "Pessoas Andando de Bicicleta — Ciclo Faixa",
@@ -1059289,6 +1059289,72 @@
       ],
       "manualPlaces": [],
       "organizations": [],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005666": {
+      "title": "83ª Feira Agropecuária do Nordeste",
+      "manualTitle": "",
+      "keywords": [
+        "83ª feira agropecuária do nordeste",
+        "agronegócio",
+        "agrocultura",
+        "tv nova",
+        "pernambuco - pe",
+        "agropecuária",
+        "nordeste",
+        "feira"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "VICTÓRIA CAMPOS"
+      ],
+      "manualPeople": [],
+      "places": [
+        "PERNAMBUCO - PE"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "TV NOVA"
+      ],
+      "manualOrganizations": [],
+      "segments": []
+    },
+    "1452B005659": {
+      "title": "Tornado Rio Grande do Sul — Perda Lavouras",
+      "manualTitle": "",
+      "keywords": [
+        "tornado rio grande do sul",
+        "perda lavouras",
+        "agronegócio",
+        "agrocultura",
+        "ub play",
+        "santa catarina - sc",
+        "lavouras",
+        "tornado",
+        "grande",
+        "perda"
+      ],
+      "manualKeywords": [],
+      "subjects": [
+        "agronegócio"
+      ],
+      "manualSubjects": [],
+      "people": [
+        "PATRÍCIA ALBUQUERQUE"
+      ],
+      "manualPeople": [],
+      "places": [
+        "SANTA CATARINA - SC"
+      ],
+      "manualPlaces": [],
+      "organizations": [
+        "UB PLAY"
+      ],
       "manualOrganizations": [],
       "segments": []
     }
