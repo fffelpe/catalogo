@@ -1,4 +1,40 @@
 {
+  "1452B005651": {
+    "materia": "ELAINE SILVA",
+    "fontes": [
+      {
+        "nome": "DOURADOS / MS",
+        "cargo": "NIVALDO GALDINO"
+      },
+      {
+        "nome": "GERENTE DE PRODUÇÃO INDUSTRIAL",
+        "cargo": "LUIZ CARLOS CORRÊA AZAMBUJA"
+      },
+      {
+        "nome": "PRODUTOR RURAL",
+        "cargo": "MARCOS DARLAN"
+      },
+      {
+        "nome": "ENGENHEIRO AGRÔNOMO"
+      }
+    ],
+    "creditos": {
+      "imagens": "JOÃO BATISTA"
+    },
+    "textoCompleto": "ELAINE SILVA | DOURADOS / MS | NIVALDO GALDINO | GERENTE DE PRODUÇÃO INDUSTRIAL | LUIZ CARLOS CORRÊA AZAMBUJA | PRODUTOR RURAL | MARCOS DARLAN | ENGENHEIRO AGRÔNOMO | IMAGENS - JOÃO BATISTA",
+    "arquivo": {
+      "id": "1ODvU56EVMxWym9vR6X_de1EDNU0TsMhN64sNr8MYJkA",
+      "nome": "1452B005651",
+      "mimeType": "application/vnd.google-apps.document",
+      "atualizadoEm": "2026-11-26T21:18:43.417Z",
+      "url": "https://docs.google.com/document/d/1ODvU56EVMxWym9vR6X_de1EDNU0TsMhN64sNr8MYJkA/edit?usp=drivesdk"
+    },
+    "origem": "Google Drive",
+    "selecao": {
+      "tipo": "unico",
+      "motivo": "único documento disponível"
+    }
+  },
   "2457B018684": {
     "materia": "INSPETOR VICTOR RUSTIGEL - PRF-GO",
     "fontes": [
